@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# legacy project
+legacy_nextjs/node_modules
+legacy_nextjs/.next

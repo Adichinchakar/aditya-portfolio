@@ -1,0 +1,94 @@
+
+Running 21 tests using 12 workers
+
+  ✓   1 [chromium] › tests\home.spec.ts:3:5 › has title (1.6s)
+  ✓   4 [chromium] › tests\home.spec.ts:19:5 › hero section exists (1.6s)
+  ✓   2 [chromium] › tests\home.spec.ts:26:5 › aulys showcase exists (1.7s)
+  ✓   3 [chromium] › tests\home.spec.ts:34:5 › contact section exists (1.7s)
+  ✓   7 [chromium] › tests\home.spec.ts:10:5 › experience section exists (1.6s)
+About section: Scrolled to Design Thinking
+  ✓  12 [chromium] › tests\home.spec.ts:62:5 › about section exists (2.8s)
+  ✓   8 [firefox] › tests\home.spec.ts:19:5 › hero section exists (2.9s)
+  ✓   6 [firefox] › tests\home.spec.ts:3:5 › has title (3.0s)
+  ✓  10 [firefox] › tests\home.spec.ts:34:5 › contact section exists (3.2s)
+  ✓  15 [webkit] › tests\home.spec.ts:3:5 › has title (2.4s)
+  ✓  17 [webkit] › tests\home.spec.ts:19:5 › hero section exists (2.5s)
+  ✓  11 [firefox] › tests\home.spec.ts:10:5 › experience section exists (4.4s)
+  ✓   9 [firefox] › tests\home.spec.ts:26:5 › aulys showcase exists (3.9s)
+  ✓  16 [webkit] › tests\home.spec.ts:10:5 › experience section exists (3.9s)
+  ✓  18 [webkit] › tests\home.spec.ts:26:5 › aulys showcase exists (3.7s)
+About section: Scrolled to Design Thinking
+  ✓  14 [firefox] › tests\home.spec.ts:62:5 › about section exists (3.9s)
+  ✓  19 [webkit] › tests\home.spec.ts:34:5 › contact section exists (2.7s)
+About section: Scrolled to Design Thinking
+  ✓  21 [webkit] › tests\home.spec.ts:62:5 › about section exists (3.6s)
+  ✘   5 [chromium] › tests\home.spec.ts:50:5 › work section exists (30.0s)
+  ✘  13 [firefox] › tests\home.spec.ts:50:5 › work section exists (30.1s)
+  ✘  20 [webkit] › tests\home.spec.ts:50:5 › work section exists (30.1s)
+
+
+  1) [chromium] › tests\home.spec.ts:50:5 › work section exists ────────────────────────────────────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.scrollIntoViewIfNeeded: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByText('Aulys Accessibility Suite')[22m
+
+
+      56 |     // Verify at least one project card is visible
+      57 |     const projectTitle = page.getByText('Aulys Accessibility Suite');
+    > 58 |     await projectTitle.scrollIntoViewIfNeeded();
+         |                        ^
+      59 |     await expect(projectTitle).toBeVisible({ timeout: 15000 });
+      60 | });
+      61 |
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:58:24
+
+    Error Context: test-results\home-work-section-exists-chromium\error-context.md
+
+  2) [firefox] › tests\home.spec.ts:50:5 › work section exists ─────────────────────────────────────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.scrollIntoViewIfNeeded: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByText('Aulys Accessibility Suite')[22m
+
+
+      56 |     // Verify at least one project card is visible
+      57 |     const projectTitle = page.getByText('Aulys Accessibility Suite');
+    > 58 |     await projectTitle.scrollIntoViewIfNeeded();
+         |                        ^
+      59 |     await expect(projectTitle).toBeVisible({ timeout: 15000 });
+      60 | });
+      61 |
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:58:24
+
+    Error Context: test-results\home-work-section-exists-firefox\error-context.md
+
+  3) [webkit] › tests\home.spec.ts:50:5 › work section exists ──────────────────────────────────────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.scrollIntoViewIfNeeded: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByText('Aulys Accessibility Suite')[22m
+
+
+      56 |     // Verify at least one project card is visible
+      57 |     const projectTitle = page.getByText('Aulys Accessibility Suite');
+    > 58 |     await projectTitle.scrollIntoViewIfNeeded();
+         |                        ^
+      59 |     await expect(projectTitle).toBeVisible({ timeout: 15000 });
+      60 | });
+      61 |
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:58:24
+
+    Error Context: test-results\home-work-section-exists-webkit\error-context.md
+
+  3 failed
+    [chromium] › tests\home.spec.ts:50:5 › work section exists ─────────────────────────────────────
+    [firefox] › tests\home.spec.ts:50:5 › work section exists ──────────────────────────────────────
+    [webkit] › tests\home.spec.ts:50:5 › work section exists ───────────────────────────────────────
+  18 passed (41.0s)

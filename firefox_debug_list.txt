@@ -1,0 +1,29 @@
+
+Running 1 test using 1 worker
+
+[1A[2K[1/1] [firefox] › tests\home.spec.ts:44:5 › work section exists
+[1A[2K  1) [firefox] › tests\home.spec.ts:44:5 › work section exists ─────────────────────────────────────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.scrollIntoViewIfNeeded: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByText('Aulys Accessibility Suite')[22m
+
+
+      50 |     // Verify at least one project card is visible
+      51 |     const projectTitle = page.getByText('Aulys Accessibility Suite');
+    > 52 |     await projectTitle.scrollIntoViewIfNeeded();
+         |                        ^
+      53 |     console.log('Work section: Scrolled to project title');
+      54 |     const box = await projectTitle.boundingBox();
+      55 |     console.log(`Work section: Bounding box: ${JSON.stringify(box)}`);
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:52:24
+
+    Error Context: test-results\home-work-section-exists-firefox\error-context.md
+
+
+[1A[2K  1 failed
+    [firefox] › tests\home.spec.ts:44:5 › work section exists ──────────────────────────────────────
+
+[36m  Serving HTML report at http://localhost:60441. Press Ctrl+C to quit.[39m

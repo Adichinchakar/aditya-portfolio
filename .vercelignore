@@ -1,0 +1,4 @@
+dist
+.git
+.next
+node_modules

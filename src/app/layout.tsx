@@ -18,8 +18,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aditya Chinchakar | Senior Product Designer & Design Engineer",
-  description: "Founding-caliber design engineer bridging high-fidelity UI and production-ready code. Specialist in AI-native interfaces, Design Systems, and WCAG 2.2 AAA Accessibility.",
+  title: "Aditya Chinchakar | Product Design Engineer",
+  description: "Senior Product Designer & Engineer specializing in AI, Design Systems, and Accessibility (WCAG 2.2). Founder of Aulys.",
+  keywords: "Product Designer, UX Engineer, Design Systems, React, AI Design, Accessibility",
 };
 
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
@@ -36,8 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} antialiased bg-zinc-950 text-zinc-400`}
       >
+        <div className="pointer-events-none fixed inset-0 bg-grain opacity-[0.05] z-50 mix-blend-overlay"></div>
         <SmoothScroll>
           <Header />
           <main className="min-h-screen pt-20">

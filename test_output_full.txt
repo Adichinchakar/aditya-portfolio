@@ -1,0 +1,17 @@
+
+Running 21 tests using 12 workers
+
+Terminate batch job (Y/N)? Terminate batch job (Y/N)?   -   1 [chromium] › tests\home.spec.ts:19:5 › hero section exists
+  -   2 [chromium] › tests\home.spec.ts:26:5 › aulys showcase exists
+  -   3 [chromium] › tests\home.spec.ts:3:5 › has title
+  -   4 [chromium] › tests\home.spec.ts:10:5 › experience section exists
+  -   5 [chromium] › tests\home.spec.ts:44:5 › work section exists
+  -   6 [firefox] › tests\home.spec.ts:3:5 › has title
+  -   7 [chromium] › tests\home.spec.ts:54:5 › about section exists
+  -   8 [firefox] › tests\home.spec.ts:10:5 › experience section exists
+  -   9 [chromium] › tests\home.spec.ts:34:5 › contact section exists
+  -  10 [firefox] › tests\home.spec.ts:19:5 › hero section exists
+  -  11 [firefox] › tests\home.spec.ts:26:5 › aulys showcase exists
+  -  12 [firefox] › tests\home.spec.ts:34:5 › contact section exists
+
+  21 did not run

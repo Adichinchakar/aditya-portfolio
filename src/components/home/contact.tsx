@@ -27,6 +27,7 @@ export function Contact() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6, duration: 0.5 }}
                     viewport={{ once: true }}
+                    className="flex justify-center"
                 >
                     <Button size="lg" className="rounded-full text-xl px-10 py-6 h-auto">
                         Get in Touch

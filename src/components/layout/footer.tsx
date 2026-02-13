@@ -3,37 +3,38 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 export function Footer() {
     return (
-        <footer className="bg-surface py-20 px-6 border-t border-white/5">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
-                <div className="flex flex-col gap-4">
-                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
-                        Let's build <br />
-                        <span className="text-accent">something legendary.</span>
-                    </h2>
-                    <Link
-                        href="mailto:contact@example.com"
-                        className="text-xl text-muted-foreground hover:text-white transition-colors underline decoration-accent decoration-2 underline-offset-4"
-                    >
-                        contact@example.com
-                    </Link>
-                </div>
+        <footer className="py-12 px-6 border-t border-white/5 relative bg-zinc-950">
+            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <p className="text-sm text-muted-foreground text-center md:text-left flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[10px] font-bold text-white">N</span>
+                    © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+                </p>
 
-                <div className="flex flex-col gap-6 items-start md:items-end">
-                    <nav className="flex gap-6">
-                        <Link href="#" aria-label="GitHub Profile" className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-black transition-all">
-                            <Github size={20} />
-                        </Link>
-                        <Link href="#" aria-label="LinkedIn Profile" className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-black transition-all">
-                            <Linkedin size={20} />
-                        </Link>
-                        <Link href="#" aria-label="Twitter Profile" className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-black transition-all">
-                            <Twitter size={20} />
-                        </Link>
-                    </nav>
-                    <p className="text-sm text-muted-foreground">
-                        © {new Date().getFullYear()} Design-to-Code Portfolio.
-                    </p>
-                </div>
+                <nav className="flex gap-6 items-center">
+                    <Link
+                        href="https://github.com/Adichinchakar"
+                        target="_blank"
+                        aria-label="GitHub Profile"
+                        className="text-muted-foreground hover:text-white transition-colors"
+                    >
+                        <Github size={20} />
+                    </Link>
+                    <Link
+                        href="https://linkedin.com/in/adityachinchakar"
+                        target="_blank"
+                        aria-label="LinkedIn Profile"
+                        className="text-muted-foreground hover:text-white transition-colors"
+                    >
+                        <Linkedin size={20} />
+                    </Link>
+                    <Link
+                        href="mailto:adichinchakar@gmail.com"
+                        aria-label="Email Me"
+                        className="text-muted-foreground hover:text-white transition-colors text-sm font-medium"
+                    >
+                        adichinchakar@gmail.com
+                    </Link>
+                </nav>
             </div>
         </footer>
     );

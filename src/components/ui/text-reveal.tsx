@@ -26,19 +26,22 @@ export function TextReveal({ children, className, tag = "p", delay = 0 }: TextRe
             animate={isInView ? "visible" : "hidden"}
             transition={{ staggerChildren: 0.05, delayChildren: delay }}
         >
-            {words.map((word, i) => (
-                <span key={i} className="inline-block whitespace-nowrap mr-[0.2em] overflow-hidden">
-                    <motion.span
-                        className="inline-block"
-                        variants={{
-                            hidden: { y: "100%" },
-                            visible: { y: 0, transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] } },
-                        }}
-                    >
-                        {word}
-                    </motion.span>
-                </span>
-            ))}
+            <span className="sr-only">{children}</span>
+            <span aria-hidden="true">
+                {words.map((word, i) => (
+                    <span key={i} className="inline-block whitespace-nowrap mr-[0.2em] overflow-hidden">
+                        <motion.span
+                            className="inline-block"
+                            variants={{
+                                hidden: { y: "100%" },
+                                visible: { y: 0, transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1] } },
+                            }}
+                        >
+                            {word}
+                        </motion.span>
+                    </span>
+                ))}
+            </span>
         </Tag>
     );
 }

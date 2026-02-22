@@ -2,192 +2,363 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Layers, Box, Component, MousePointer2 } from "lucide-react";
+import { Atom, Component, Layers, ChevronRight, Zap } from "lucide-react";
 
 type Level = "atoms" | "molecules" | "organisms";
 
+const levels: Record<Level, {
+    icon: React.ElementType;
+    color: string;
+    bgColor: string;
+    borderColor: string;
+    label: string;
+    count: string;
+    description: string;
+    insight: string;
+}> = {
+    atoms: {
+        icon: Atom,
+        color: "text-blue-600",
+        bgColor: "bg-blue-50",
+        borderColor: "border-blue-200",
+        label: "Atoms",
+        count: "67 tokens",
+        description: "The indivisible primitives — cannot be broken further. Every pixel decision starts here.",
+        insight: "A single token change cascades to 2,400+ instances across the product.",
+    },
+    molecules: {
+        icon: Component,
+        color: "text-purple-600",
+        bgColor: "bg-purple-50",
+        borderColor: "border-purple-200",
+        label: "Molecules",
+        count: "34 components",
+        description: "Purposeful groups of atoms that serve one clear function. Reusable, predictable.",
+        insight: "Molecules reduced bespoke UI patterns by 78% across the flow builder.",
+    },
+    organisms: {
+        icon: Layers,
+        color: "text-indigo-600",
+        bgColor: "bg-indigo-50",
+        borderColor: "border-indigo-200",
+        label: "Organisms",
+        count: "21 sections",
+        description: "Complex, self-contained UI sections composed from molecules. The product surfaces.",
+        insight: "A full automation workflow canvas built in <3 days using organism-level assembly.",
+    },
+};
+
+// --- Atom Cards ---
+const atomItems = [
+    {
+        label: "Brand Purple",
+        preview: <div className="w-7 h-7 rounded-lg bg-purple-600 ring-2 ring-purple-200" />,
+        token: "--color-brand",
+        value: "#7C3AED",
+    },
+    {
+        label: "Text Primary",
+        preview: <div className="w-7 h-7 rounded-lg bg-zinc-900 ring-2 ring-zinc-200" />,
+        token: "--color-text",
+        value: "#18181B",
+    },
+    {
+        label: "Radius MD",
+        preview: (
+            <div className="w-7 h-7 rounded-lg border-2 border-blue-400 bg-blue-50" />
+        ),
+        token: "--radius-md",
+        value: "8px",
+    },
+    {
+        label: "Space 4",
+        preview: (
+            <div className="flex items-center gap-0">
+                <div className="w-4 h-4 bg-emerald-400 rounded-sm" />
+                <div className="w-1 h-4 bg-emerald-200" />
+                <div className="w-4 h-4 bg-emerald-400 rounded-sm" />
+            </div>
+        ),
+        token: "--space-4",
+        value: "16px",
+    },
+    {
+        label: "Font Weight",
+        preview: <span className="text-sm font-black text-zinc-800 leading-none">Ag</span>,
+        token: "--font-bold",
+        value: "700",
+    },
+    {
+        label: "Shadow SM",
+        preview: (
+            <div className="w-7 h-7 rounded-lg bg-white shadow-md border border-zinc-100" />
+        ),
+        token: "--shadow-sm",
+        value: "0 1px 3px",
+    },
+];
+
+// --- Molecule Preview ---
+function MoleculePreview() {
+    const [pressed, setPressed] = useState(false);
+    return (
+        <div className="grid grid-cols-2 gap-4">
+            {/* Button */}
+            <div className="flex flex-col items-start gap-2">
+                <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Button</div>
+                <button
+                    onMouseDown={() => setPressed(true)}
+                    onMouseUp={() => setPressed(false)}
+                    onMouseLeave={() => setPressed(false)}
+                    className={`px-4 py-2.5 rounded-lg bg-purple-600 text-white text-sm font-semibold shadow-md transition-all duration-150 ${pressed ? "scale-95 shadow-sm" : "hover:bg-purple-700"}`}
+                >
+                    Get Started
+                </button>
+            </div>
+            {/* Input */}
+            <div className="flex flex-col items-start gap-2">
+                <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Input</div>
+                <input
+                    className="w-full px-3 py-2 rounded-lg border border-zinc-200 text-sm text-zinc-700 bg-white focus:outline-none focus:ring-2 focus:ring-purple-500/30 focus:border-purple-400 placeholder:text-zinc-400"
+                    placeholder="Search flows..."
+                    readOnly
+                />
+            </div>
+            {/* Badge */}
+            <div className="flex flex-col items-start gap-2">
+                <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Badge</div>
+                <div className="flex gap-2">
+                    <span className="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold">Active</span>
+                    <span className="px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold">Review</span>
+                </div>
+            </div>
+            {/* Avatar row */}
+            <div className="flex flex-col items-start gap-2">
+                <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">User Row</div>
+                <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 ring-2 ring-white" />
+                    <div>
+                        <div className="text-xs font-semibold text-zinc-800">Aditya C.</div>
+                        <div className="text-[10px] text-zinc-400">Lead Designer</div>
+                    </div>
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 ml-auto ring-1 ring-white" />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// --- Organism Preview ---
+function OrganismPreview() {
+    const [activeTab, setActiveTab] = useState(0);
+    const tabs = ["Flows", "Analytics", "Settings"];
+    return (
+        <div className="w-full rounded-2xl border border-zinc-200 bg-white shadow-sm overflow-hidden">
+            {/* App bar */}
+            <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-100 bg-zinc-50">
+                <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-md bg-purple-600 flex items-center justify-center">
+                        <Zap className="w-3.5 h-3.5 text-white" />
+                    </div>
+                    <span className="text-sm font-bold text-zinc-900">Simplifai</span>
+                </div>
+                <div className="flex gap-1">
+                    {tabs.map((t, i) => (
+                        <button
+                            key={t}
+                            onClick={() => setActiveTab(i)}
+                            className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${activeTab === i ? "bg-white shadow-sm text-purple-700 border border-zinc-200" : "text-zinc-400 hover:text-zinc-600"}`}
+                        >
+                            {t}
+                        </button>
+                    ))}
+                </div>
+            </div>
+            {/* Body */}
+            <div className="p-4 space-y-3">
+                {[
+                    { name: "Lead Qualification", status: "Active", runs: "2.3k" },
+                    { name: "Invoice Processing", status: "Review", runs: "891" },
+                    { name: "Support Routing", status: "Active", runs: "4.1k" },
+                ].map((row, i) => (
+                    <div key={i} className="flex items-center justify-between p-3 rounded-xl border border-zinc-100 hover:border-zinc-200 hover:bg-zinc-50 transition-all">
+                        <div>
+                            <div className="text-xs font-semibold text-zinc-800">{row.name}</div>
+                            <div className="text-[10px] text-zinc-400 mt-0.5">{row.runs} runs this week</div>
+                        </div>
+                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${row.status === "Active" ? "bg-emerald-50 text-emerald-700 border border-emerald-200" : "bg-amber-50 text-amber-700 border border-amber-200"}`}>
+                            {row.status}
+                        </span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export function AtomicExplorer() {
     const [activeLevel, setActiveLevel] = useState<Level>("atoms");
-
-    const levels = {
-        atoms: {
-            title: "Atoms",
-            icon: Box,
-            description: "The fundamental building blocks. Cannot be broken down further.",
-            items: [
-                { id: "avatar", label: "Avatar", class: "w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500" },
-                { id: "label", label: "Label", class: "text-sm font-medium text-zinc-900", content: "Jane Doe" },
-                { id: "status", label: "Status", class: "w-3 h-3 rounded-full bg-green-500 ring-2 ring-zinc-950" },
-                { id: "icon", label: "Icon", class: "text-zinc-600", content: <Layers className="w-4 h-4" /> }
-            ]
-        },
-        molecules: {
-            title: "Molecules",
-            icon: Component,
-            description: "Groups of atoms tailored for specific utility.",
-            items: [
-                {
-                    id: "user-row",
-                    label: "User Row",
-                    component: (
-                        <div className="flex items-center gap-3 p-3 rounded-lg bg-white border border-zinc-200">
-                            <div className="relative">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500" />
-                                <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 ring-2 ring-zinc-900" />
-                            </div>
-                            <div>
-                                <div className="text-sm font-medium text-zinc-900">Jane Doe</div>
-                                <div className="text-xs text-zinc-500">Product Designer</div>
-                            </div>
-                        </div>
-                    )
-                }
-            ]
-        },
-        organisms: {
-            title: "Organisms",
-            icon: Layers,
-            description: "Complex UI sections composed of groups of molecules and/or atoms.",
-            items: [
-                {
-                    id: "team-card",
-                    label: "Team Card",
-                    component: (
-                        <div className="w-full max-w-xs p-5 rounded-2xl bg-white/50 border border-zinc-200 backdrop-blur-sm">
-                            <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-zinc-800 font-medium">Design Team</h3>
-                                <div className="px-2 py-1 rounded-md bg-purple-500/10 text-xs text-purple-400 font-mono">ACTIVE</div>
-                            </div>
-                            <div className="space-y-3">
-                                {[1, 2, 3].map((i) => (
-                                    <div key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-100/50 transition-colors">
-                                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500/50 to-blue-500/50" />
-                                        <div>
-                                            <div className="w-20 h-3 bg-zinc-100 rounded mb-1" />
-                                            <div className="w-12 h-2 bg-zinc-100/50 rounded" />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <button className="w-full mt-4 py-2 rounded-lg bg-black/5 hover:bg-black/10 text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
-                                View All Members
-                            </button>
-                        </div>
-                    )
-                }
-            ]
-        }
-    };
+    const level = levels[activeLevel];
+    const LevelIcon = level.icon;
 
     return (
-        <section className="py-24 px-6 bg-zinc-50">
+        <section className="py-24 px-6 bg-white border-t border-zinc-100">
             <div className="container mx-auto max-w-6xl">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-                    {/* Controls */}
-                    <div>
-                        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium">
-                            <MousePointer2 className="w-3 h-3" />
-                            Interactive
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-6">
-                            Atomic Construction
-                        </h2>
-                        <p className="text-zinc-600 text-lg mb-12">
-                            We decompose complex interfaces into fundamental building blocks, ensuring consistency at every scale.
-                        </p>
+                {/* Header */}
+                <div className="mb-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-widest mb-6"
+                    >
+                        <Atom className="w-3.5 h-3.5" />
+                        Atomic Design System
+                    </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.05 }}
+                        className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 mb-4"
+                    >
+                        Built from the ground up,<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                            one atom at a time.
+                        </span>
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-zinc-500 text-lg max-w-xl font-medium"
+                    >
+                        Every decision is deliberate. Every token reusable. Explore how we went from raw values to full product surfaces.
+                    </motion.p>
+                </div>
 
-                        <div className="space-y-4">
-                            {(Object.keys(levels) as Level[]).map((level) => {
-                                const isActive = activeLevel === level;
-                                const LevelIcon = levels[level].icon;
-                                return (
-                                    <button
-                                        key={level}
-                                        onClick={() => setActiveLevel(level)}
-                                        className={`w-full flex items-center gap-4 p-4 rounded-xl border text-left transition-all duration-300 ${isActive
-                                                ? "bg-white border-purple-500/50 shadow-lg shadow-purple-900/10"
-                                                : "bg-transparent border-zinc-200 hover:bg-white/50 hover:border-zinc-700"
-                                            }`}
-                                    >
-                                        <div className={`p-3 rounded-lg ${isActive ? "bg-purple-500 text-zinc-900" : "bg-zinc-100 text-zinc-600"}`}>
-                                            <LevelIcon className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <h3 className={`font-semibold ${isActive ? "text-zinc-900" : "text-zinc-700"}`}>
-                                                {levels[level].title}
-                                            </h3>
-                                            <p className="text-sm text-zinc-500 mt-1">
-                                                {levels[level].description}
-                                            </p>
-                                        </div>
-                                        {isActive && (
-                                            <div className="ml-auto w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                                        )}
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </div>
+                <div className="grid lg:grid-cols-[340px_1fr] gap-10 items-start">
 
-                    {/* Visualizer */}
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 blur-3xl rounded-full opacity-30" />
-
-                        <div className="relative min-h-[500px] bg-white/50 border border-zinc-200 rounded-3xl p-8 backdrop-blur-xl flex items-center justify-center overflow-hidden">
-                            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
-
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={activeLevel}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 1.1 }}
-                                    transition={{ duration: 0.4 }}
-                                    className="relative z-10 w-full flex flex-col items-center"
+                    {/* Level selector */}
+                    <div className="space-y-3">
+                        {(Object.keys(levels) as Level[]).map((lvl, i) => {
+                            const isActive = activeLevel === lvl;
+                            const LvlIcon = levels[lvl].icon;
+                            return (
+                                <motion.button
+                                    key={lvl}
+                                    initial={{ opacity: 0, x: -15 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.08 }}
+                                    onClick={() => setActiveLevel(lvl)}
+                                    className={`w-full flex items-start gap-4 p-5 rounded-2xl border text-left transition-all duration-300 ${isActive
+                                        ? `${levels[lvl].bgColor} ${levels[lvl].borderColor} shadow-sm`
+                                        : "bg-zinc-50 border-zinc-200 hover:border-zinc-300 hover:bg-white"
+                                        }`}
                                 >
-                                    {activeLevel === "atoms" && (
-                                        <div className="grid grid-cols-2 gap-8">
-                                            {levels.atoms.items.map((item, i) => (
-                                                <motion.div
-                                                    key={item.id}
-                                                    initial={{ opacity: 0, y: 20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ delay: i * 0.1 }}
-                                                    className="flex flex-col items-center gap-3 p-4 rounded-xl bg-zinc-50 border border-zinc-200 hover:border-zinc-600 transition-colors"
-                                                >
-                                                    <div className="h-16 w-16 flex items-center justify-center">
-                                                        {item.content ? item.content : <div className={item.class} />}
-                                                    </div>
-                                                    <span className="text-xs font-mono text-zinc-500">{item.label}</span>
-                                                </motion.div>
-                                            ))}
+                                    <div className={`mt-0.5 w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${isActive ? levels[lvl].bgColor : "bg-white border border-zinc-200"}`}>
+                                        <LvlIcon className={`w-4 h-4 ${isActive ? levels[lvl].color : "text-zinc-400"}`} />
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`font-bold text-sm ${isActive ? "text-zinc-900" : "text-zinc-600"}`}>{levels[lvl].label}</span>
+                                            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${isActive ? `${levels[lvl].bgColor} ${levels[lvl].color} border ${levels[lvl].borderColor}` : "bg-zinc-100 text-zinc-500"}`}>
+                                                {levels[lvl].count}
+                                            </span>
                                         </div>
-                                    )}
+                                        <p className="text-xs text-zinc-500 leading-relaxed">{levels[lvl].description}</p>
+                                    </div>
+                                    {isActive && <ChevronRight className={`w-4 h-4 mt-0.5 flex-shrink-0 ${level.color}`} />}
+                                </motion.button>
+                            );
+                        })}
 
-                                    {activeLevel === "molecules" && (
-                                        <div className="w-full max-w-md">
-                                            {levels.molecules.items.map((item) => (
-                                                <div key={item.id} className="transform scale-125">
-                                                    {item.component}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {activeLevel === "organisms" && (
-                                        <div className="w-full flex justify-center">
-                                            {levels.organisms.items.map((item) => (
-                                                <div key={item.id}>
-                                                    {item.component}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
+                        {/* Insight callout */}
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeLevel}
+                                initial={{ opacity: 0, y: 6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -6 }}
+                                transition={{ duration: 0.2 }}
+                                className={`p-4 rounded-2xl border ${level.bgColor} ${level.borderColor} flex items-start gap-3`}
+                            >
+                                <LevelIcon className={`w-4 h-4 mt-0.5 flex-shrink-0 ${level.color}`} />
+                                <p className={`text-sm font-medium ${level.color.replace("600", "700")}`}>{level.insight}</p>
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
+
+                    {/* Previewer */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="bg-zinc-50 border border-zinc-200 rounded-3xl p-8 min-h-[420px] flex flex-col"
+                        style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #e4e4e7 1px, transparent 0)", backgroundSize: "20px 20px" }}
+                    >
+                        {/* Toolbar */}
+                        <div className="flex items-center gap-2 mb-6">
+                            <div className="flex gap-1.5">
+                                <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                                <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                            </div>
+                            <div className="ml-2 text-xs font-mono text-zinc-400 bg-white px-3 py-1 rounded-lg border border-zinc-200">
+                                design-system / {activeLevel}
+                            </div>
+                        </div>
+
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeLevel}
+                                initial={{ opacity: 0, scale: 0.97 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.97 }}
+                                transition={{ duration: 0.25 }}
+                                className="flex-1"
+                            >
+                                {activeLevel === "atoms" && (
+                                    <div className="grid grid-cols-3 gap-3">
+                                        {atomItems.map((atom, i) => (
+                                            <motion.div
+                                                key={atom.label}
+                                                initial={{ opacity: 0, y: 12 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: i * 0.06 }}
+                                                className="group bg-white rounded-2xl border border-zinc-200 p-4 flex flex-col items-center gap-3 hover:border-blue-300 hover:shadow-md transition-all"
+                                            >
+                                                <div className="h-10 flex items-center justify-center">
+                                                    {atom.preview}
+                                                </div>
+                                                <div className="text-center">
+                                                    <div className="text-xs font-bold text-zinc-700">{atom.label}</div>
+                                                    <div className="text-[10px] font-mono text-blue-500 mt-0.5">{atom.token}</div>
+                                                    <div className="text-[10px] text-zinc-400 mt-0.5">{atom.value}</div>
+                                                </div>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                )}
+                                {activeLevel === "molecules" && (
+                                    <div className="bg-white rounded-2xl border border-zinc-200 p-6">
+                                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-5">Interactive Components</div>
+                                        <MoleculePreview />
+                                    </div>
+                                )}
+                                {activeLevel === "organisms" && (
+                                    <div className="flex flex-col gap-4">
+                                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Flow Dashboard — Full Page Section</div>
+                                        <OrganismPreview />
+                                    </div>
+                                )}
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
 
                 </div>
             </div>

@@ -1,0 +1,119 @@
+﻿
+C:\Users\Admin\Desktop\Portfolio Website\src\app\work\[slug]\page.tsx
+  4:10  warning  'Hero' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\app\work\page.tsx
+   5:10  warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+   6:10  warning  'Hero' is defined but never used                                 @typescript-eslint/no-unused-vars
+  46:75  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai-design-system\component-playground.tsx
+    5:44  warning  'Menu' is defined but never used          @typescript-eslint/no-unused-vars
+   66:74  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   86:76  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  106:75  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai-design-system\component-redlines.tsx
+    5:10  warning  'Check' is defined but never used                                @typescript-eslint/no-unused-vars
+   22:78  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   22:88  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  253:33  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  302:38  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai-design-system\system-governance.tsx
+    4:24  warning  'Zap' is defined but never used                                  @typescript-eslint/no-unused-vars
+    4:39  warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+    4:63  warning  'Award' is defined but never used                                @typescript-eslint/no-unused-vars
+   81:37  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   81:42  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  129:72  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai-design-system\technical-evolution.tsx
+    4:65  warning  'LinkIcon' is defined but never used                             @typescript-eslint/no-unused-vars
+    4:75  warning  'ExternalLink' is defined but never used                         @typescript-eslint/no-unused-vars
+    6:10  warning  'Card' is defined but never used                                 @typescript-eslint/no-unused-vars
+   29:82  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   29:88  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  121:29  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  127:25  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai-design-system\token-graph.tsx
+  4:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai\bento-impact.tsx
+    4:35   warning  'FileText' is defined but never used                                    @typescript-eslint/no-unused-vars
+  116:138  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  116:146  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  117:140  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  117:148  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  118:137  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  118:145  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  121:176  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  122:176  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai\flow-preview.tsx
+  4:15  warning  'GitBranch' is defined but never used      @typescript-eslint/no-unused-vars
+  4:26  warning  'Send' is defined but never used           @typescript-eslint/no-unused-vars
+  4:32  warning  'CheckCircle2' is defined but never used   @typescript-eslint/no-unused-vars
+  4:46  warning  'ArrowRight' is defined but never used     @typescript-eslint/no-unused-vars
+  4:72  warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+  4:87  warning  'Database' is defined but never used       @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai\hero.tsx
+  3:21  warning  'ArrowUpRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai\technical-evolution.tsx
+    4:26   warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+   30:38   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   30:58   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   33:33   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   33:129  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  113:189  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  113:191  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai\user-persona-ia.tsx
+   5:16   warning  'FileText' is defined but never used                             @typescript-eslint/no-unused-vars
+  57:49   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  57:105  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\case-studies\simplifai\user-persona-interactive.tsx
+  119:49  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  119:74  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\about.tsx
+  29:34  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\contact.tsx
+  22:22  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\hero.tsx
+    6:10   warning  'Code' is defined but never used                                 @typescript-eslint/no-unused-vars
+  245:143  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  245:192  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  249:233  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  249:257  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\selected-work.tsx
+  9:8  warning  'Image' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\simplifai-showcase.tsx
+  10:10  warning  'cn' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\skills.tsx
+  4:52  warning  'Workflow' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\home\testimonials.tsx
+  40:74  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  40:94  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\layout\footer.tsx
+  2:28  warning  'Twitter' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\layout\header.tsx
+  54:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Admin\Desktop\Portfolio Website\src\components\layout\smooth-scroll.tsx
+  9:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Ô£û 70 problems (43 errors, 27 warnings)
+

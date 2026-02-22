@@ -29,7 +29,7 @@ export function TextReveal({ children, className, tag = "p", delay = 0 }: TextRe
             <span className="sr-only">{children}</span>
             <span aria-hidden="true">
                 {words.map((word, i) => (
-                    <span key={i} className="inline-block whitespace-nowrap mr-[0.2em] overflow-hidden">
+                    <span key={i} className="inline-block whitespace-nowrap mr-[0.2em] overflow-hidden pb-[0.2em] -mb-[0.2em]">
                         <motion.span
                             className="inline-block"
                             variants={{

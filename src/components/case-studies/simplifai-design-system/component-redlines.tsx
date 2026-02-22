@@ -10,17 +10,21 @@ export function ComponentRedlines() {
     const [hoveredElement, setHoveredElement] = useState<string | null>(null);
 
     return (
-        <section className="py-24 px-6 bg-zinc-50 border-t border-zinc-200 overflow-hidden">
+        <section className="py-24 px-6 bg-zinc-50 border-t border-zinc-100 overflow-hidden">
             <div className="max-w-7xl mx-auto space-y-16">
 
                 {/* Header */}
-                <div className="text-center space-y-6 max-w-3xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-bold text-zinc-900">
-                        The Assembly: Atomic Composition
+                <div className="max-w-3xl space-y-5">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-bold uppercase tracking-widest">
+                        <Ruler className="w-3.5 h-3.5" />
+                        Redlines & Specs
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900">
+                        Designed to spec.<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600">Built to precision.</span>
                     </h2>
-                    <p className="text-lg text-zinc-600">
-                        Every component is a precise assembly of tokens. Our "Redlining" process ensures 100% production readiness,
-                        guaranteeing that design intent translates perfectly to code.
+                    <p className="text-lg text-zinc-500 font-medium max-w-xl">
+                        Every component is a precise assembly of tokens. Hover the node in inspect mode to reveal its full token specification.
                     </p>
                 </div>
 
@@ -38,7 +42,7 @@ export function ComponentRedlines() {
                             </button>
                             <button
                                 onClick={() => setIsInspectMode(true)}
-                                className={`px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${isInspectMode ? "bg-blue-500/20 text-blue-400 border border-blue-500/50" : "text-zinc-600 hover:text-zinc-900"
+                                className={`px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${isInspectMode ? "bg-blue-50 text-blue-700 border border-blue-300" : "text-zinc-600 hover:text-zinc-900"
                                     }`}
                             >
                                 <Ruler className="w-4 h-4" />
@@ -68,7 +72,7 @@ export function ComponentRedlines() {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
-                                        className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-blue-500/10 border border-blue-500/20 text-blue-300 px-4 py-2 rounded-lg text-xs flex items-center gap-2"
+                                        className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-2 rounded-lg text-xs flex items-center gap-2"
                                     >
                                         <MousePointer2 className="w-3 h-3" />
                                         Hover over elements to view token specifications
@@ -99,31 +103,31 @@ export function ComponentRedlines() {
                         </Card>
 
                         {/* WCAG Compliance */}
-                        <Card className="bg-emerald-950/10 border-emerald-900/30 p-6">
+                        <Card className="bg-emerald-50 border-emerald-200 p-6">
                             <div className="flex items-start gap-4">
-                                <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-400">
+                                <div className="p-3 bg-emerald-100 rounded-xl text-emerald-600 border border-emerald-200">
                                     <ShieldCheck className="w-6 h-6" />
                                 </div>
                                 <div className="space-y-1">
-                                    <h4 className="text-emerald-400 font-semibold">WCAG 2.2 AAA Compliant</h4>
-                                    <p className="text-sm text-emerald-400/70 leading-relaxed">
-                                        Automated checks ensure <span className="text-emerald-300">4.5:1 contrast</span> and
-                                        <span className="text-emerald-300"> 44px touch targets</span> on all interactive elements.
+                                    <h4 className="text-emerald-700 font-bold">WCAG 2.2 AAA Compliant</h4>
+                                    <p className="text-sm text-emerald-600 leading-relaxed">
+                                        Automated checks ensure <span className="font-semibold">4.5:1 contrast</span> and
+                                        <span className="font-semibold"> 44px touch targets</span> on all interactive elements.
                                     </p>
                                 </div>
                             </div>
                         </Card>
 
                         {/* Impact Metric */}
-                        <Card className="bg-purple-950/10 border-purple-900/30 p-6">
+                        <Card className="bg-purple-50 border-purple-200 p-6">
                             <div className="flex items-start gap-4">
-                                <div className="p-3 bg-purple-500/10 rounded-xl text-purple-400">
+                                <div className="p-3 bg-purple-100 rounded-xl text-purple-600 border border-purple-200">
                                     <Zap className="w-6 h-6" />
                                 </div>
                                 <div className="space-y-1">
-                                    <h4 className="text-purple-400 font-semibold">Development Velocity</h4>
-                                    <div className="text-3xl font-bold text-zinc-900">42% <span className="text-lg font-normal text-purple-400/60">faster</span></div>
-                                    <p className="text-sm text-purple-400/70">
+                                    <h4 className="text-purple-700 font-bold">Development Velocity</h4>
+                                    <div className="text-3xl font-bold text-zinc-900">42% <span className="text-lg font-normal text-purple-500">faster</span></div>
+                                    <p className="text-sm text-purple-600">
                                         Reduction in UI dev time after implementing the tokenized system.
                                     </p>
                                 </div>
@@ -302,7 +306,7 @@ function TokenSpecs({ id }: { id: string }) {
                 {data.tokens.map((t: any, i: number) => (
                     <li key={i} className="flex justify-between items-center text-sm">
                         <span className="text-zinc-500">{t.label}</span>
-                        <code className="text-blue-400 bg-blue-500/10 px-1.5 py-0.5 rounded text-xs font-mono">{t.value}</code>
+                        <code className="text-blue-700 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded text-xs font-mono">{t.value}</code>
                     </li>
                 ))}
             </ul>

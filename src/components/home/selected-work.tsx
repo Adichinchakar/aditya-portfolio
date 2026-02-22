@@ -1,108 +1,143 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { MouseEvent } from "react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TextReveal } from "@/components/ui/text-reveal";
-import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import Image from "next/image";
 
 const works = [
     {
+        index: "01",
         company: "Simplifai Design System",
         description: "A comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.",
         tags: ["Design Systems", "Architecture", "10x Faster UI"],
         href: "/work/simplifai-design-system",
-        gradient: "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
-        delay: 0
+        spotlight: "rgba(99, 102, 241, 0.12)",
+        border: "group-hover:border-indigo-500/30",
+        delay: 0,
     },
     {
+        index: "02",
         company: "Aulys",
         description: "Intelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.",
         tags: ["AI Agent", "Figma Plugin", "Typescript"],
         href: "/work/simplifai",
-        gradient: "from-emerald-500/20 via-teal-500/20 to-cyan-500/20",
-        delay: 0.1
+        spotlight: "rgba(16, 185, 129, 0.12)",
+        border: "group-hover:border-emerald-500/30",
+        delay: 0.1,
     },
     {
+        index: "03",
         company: "Infosys Learning AI",
         description: "Conversational UX for large-scale learning platforms, simplifying complex educational workflows.",
         tags: ["AI/ML", "UX Strategy", "Enterprise"],
         href: "#work",
-        gradient: "from-orange-500/20 via-rose-500/20 to-pink-500/20",
-        delay: 0.2
+        spotlight: "rgba(249, 115, 22, 0.12)",
+        border: "group-hover:border-orange-500/30",
+        delay: 0.2,
     },
     {
+        index: "04",
         company: "Keywordio Dashboard",
         description: "High-density data visualization dashboards for digital marketing ad performance.",
         tags: ["Data Viz", "B2B SaaS"],
         href: "#work",
-        gradient: "from-violet-500/20 via-fuchsia-500/20 to-pink-500/20",
-        delay: 0.3
-    }
+        spotlight: "rgba(168, 85, 247, 0.12)",
+        border: "group-hover:border-violet-500/30",
+        delay: 0.3,
+    },
 ];
+
+function WorkCard({ work }: { work: typeof works[0] }) {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent<HTMLElement>) {
+        const { left, top } = currentTarget.getBoundingClientRect();
+        mouseX.set(clientX - left);
+        mouseY.set(clientY - top);
+    }
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: work.delay, type: "spring" as const, stiffness: 260, damping: 22 }}
+            viewport={{ once: true, margin: "-100px" }}
+        >
+            <Link href={work.href} className="block group h-full">
+                <article
+                    onMouseMove={handleMouseMove}
+                    className={cn(
+                        "relative h-full overflow-hidden rounded-[2rem] border border-white/40 bg-white/40 backdrop-blur-xl p-8 md:p-10 flex flex-col justify-between transition-all duration-500 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] min-h-[340px]",
+                        work.border
+                    )}
+                >
+                    {/* Cursor spotlight */}
+                    <motion.div
+                        className="pointer-events-none absolute -inset-px rounded-[2rem] opacity-0 transition duration-500 group-hover:opacity-100"
+                        style={{
+                            background: useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, ${work.spotlight}, transparent 80%)`,
+                        }}
+                    />
+
+                    <div className="relative z-10 flex flex-col h-full gap-6">
+                        {/* Top row */}
+                        <div className="flex justify-between items-start">
+                            <span className="text-sm font-bold text-zinc-400 font-mono tracking-widest">{work.index}</span>
+                            <div className="w-10 h-10 rounded-full bg-white/70 border border-white/80 flex items-center justify-center shadow-sm backdrop-blur-md transform group-hover:scale-110 transition-all duration-300">
+                                <ArrowUpRight className="w-4 h-4 text-zinc-700 group-hover:text-zinc-900 transition-colors" />
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1">
+                            <h3 className="text-2xl md:text-3xl font-black tracking-tight text-zinc-900 mb-3 group-hover:text-zinc-950 transition-colors">
+                                {work.company}
+                            </h3>
+                            <p className="text-zinc-500 leading-relaxed font-medium line-clamp-3">
+                                {work.description}
+                            </p>
+                        </div>
+
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2">
+                            {work.tags.map((tag) => (
+                                <span
+                                    key={tag}
+                                    className="px-3 py-1.5 rounded-full bg-white/60 border border-white/80 text-xs font-semibold text-zinc-700 backdrop-blur-md shadow-sm"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </article>
+            </Link>
+        </motion.div>
+    );
+}
 
 export function SelectedWork() {
     return (
         <section id="work" className="py-32 px-6 relative overflow-hidden">
-            {/* Background Glow */}
+            {/* Background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto max-w-6xl space-y-16 relative z-10">
-                <div className="flex justify-between items-end border-b border-zinc-200 pb-8">
-                    <TextReveal tag="h2" className="text-4xl md:text-5xl font-bold tracking-tighter">
-                        Selected Case Studies
+                {/* Header */}
+                <div className="flex justify-between items-end border-b border-zinc-200/60 pb-8">
+                    <TextReveal tag="h2" className="text-4xl md:text-5xl font-black tracking-tighter">
+                        Case Studies
                     </TextReveal>
-                    <span className="font-mono text-zinc-500 hidden sm:block">(0{works.length})</span>
+                    <span className="font-mono text-zinc-400 font-bold hidden sm:block tracking-widest text-sm">(0{works.length})</span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {works.map((work, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: work.delay, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                            viewport={{ once: true, margin: "-100px" }}
-                        >
-                            <Link href={work.href} className="block group h-full">
-                                <Card className="p-1 h-full overflow-hidden transition-all duration-500 border-zinc-200/50 group-hover:border-zinc-700 bg-zinc-50/40 relative">
-                                    {/* Hover gradient backdrop */}
-                                    <div className={cn(
-                                        "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br",
-                                        work.gradient
-                                    )} />
-
-                                    <div className="relative h-full flex flex-col p-8 rounded-xl bg-white/60 backdrop-blur-md border border-zinc-200/50 group-hover:bg-white/40 transition-colors duration-500">
-                                        <div className="flex-1 space-y-4">
-                                            <div className="flex justify-between items-start">
-                                                <h3 className="text-2xl md:text-3xl font-semibold text-zinc-900 tracking-tight">
-                                                    {work.company}
-                                                </h3>
-                                                <div className="w-10 h-10 rounded-full bg-zinc-100/80 flex items-center justify-center transform group-hover:scale-110 group-hover:bg-white transition-all duration-300 shadow-xl">
-                                                    <ArrowUpRight className="w-5 h-5 text-zinc-600 group-hover:text-black transition-colors" />
-                                                </div>
-                                            </div>
-                                            <p className="text-zinc-600 leading-relaxed max-w-sm line-clamp-3">
-                                                {work.description}
-                                            </p>
-                                        </div>
-
-                                        <div className="mt-12 flex flex-wrap gap-2">
-                                            {work.tags.map((tag, tIndex) => (
-                                                <span
-                                                    key={tIndex}
-                                                    className="px-3 py-1.5 rounded-full bg-zinc-50/80 border border-zinc-200/80 text-xs font-medium text-zinc-700 backdrop-blur-md"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </Card>
-                            </Link>
-                        </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {works.map((work) => (
+                        <WorkCard key={work.index} work={work} />
                     ))}
                 </div>
             </div>

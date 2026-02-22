@@ -15,7 +15,7 @@ export function Footer() {
                         href="https://github.com/Adichinchakar"
                         target="_blank"
                         aria-label="GitHub Profile"
-                        className="text-muted-foreground hover:text-zinc-900 transition-colors"
+                        className="text-muted-foreground hover:text-zinc-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-sm"
                     >
                         <Github size={20} />
                     </Link>
@@ -23,14 +23,14 @@ export function Footer() {
                         href="https://linkedin.com/in/adityachinchakar"
                         target="_blank"
                         aria-label="LinkedIn Profile"
-                        className="text-muted-foreground hover:text-zinc-900 transition-colors"
+                        className="text-muted-foreground hover:text-zinc-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-sm"
                     >
                         <Linkedin size={20} />
                     </Link>
                     <Link
                         href="mailto:adichinchakar@gmail.com"
                         aria-label="Email Me"
-                        className="text-muted-foreground hover:text-zinc-900 transition-colors text-sm font-medium"
+                        className="text-muted-foreground hover:text-zinc-900 transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-sm px-1 py-0.5"
                     >
                         adichinchakar@gmail.com
                     </Link>

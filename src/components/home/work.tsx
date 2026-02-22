@@ -9,7 +9,7 @@ import Link from "next/link";
 const projects = [
     {
         title: "Aulys Accessibility Suite",
-        category: "Design Engineering / React 19",
+        category: "0-to-1 Product / Prototyping",
         description: "Production-ready accessibility suite built with React 19, TypeScript 5.9, and Vite 7. Automated WCAG 2.2 AAA compliance.",
         year: "2024",
     },
@@ -28,7 +28,7 @@ const projects = [
     },
     {
         title: "Figma Plugin Engine",
-        category: "Tooling / API",
+        category: "AI-Assisted Workflows",
         description: "Developed custom Figma plugins to bridge the gap between design tokens and production code, automating handoff.",
         year: "2022",
     },

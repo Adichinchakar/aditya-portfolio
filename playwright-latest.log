@@ -1,0 +1,115 @@
+﻿
+Running 21 tests using 12 workers
+
+[1A[2K[1/21] [chromium] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists
+[1A[2K[2/21] [firefox] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists
+[1A[2K[3/21] [firefox] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title
+[1A[2K[4/21] [chromium] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title
+[1A[2K[5/21] [chromium] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists and is interactive
+[1A[2K[6/21] [firefox] ÔÇ║ tests\home.spec.ts:40:5 ÔÇ║ aulys showcase exists
+[1A[2K[7/21] [chromium] ÔÇ║ tests\home.spec.ts:48:5 ÔÇ║ contact section exists
+[1A[2K[8/21] [chromium] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists
+[1A[2K[9/21] [firefox] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists and is interactive
+[1A[2K[10/21] [chromium] ÔÇ║ tests\home.spec.ts:40:5 ÔÇ║ aulys showcase exists
+[1A[2K[11/21] [chromium] ÔÇ║ tests\home.spec.ts:58:5 ÔÇ║ work section exists
+[1A[2K[12/21] [firefox] ÔÇ║ tests\home.spec.ts:48:5 ÔÇ║ contact section exists
+[1A[2K[13/21] [firefox] ÔÇ║ tests\home.spec.ts:58:5 ÔÇ║ work section exists
+[1A[2K[14/21] [firefox] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists
+[1A[2K[15/21] [webkit] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists
+[1A[2K[16/21] [webkit] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title
+[1A[2K[17/21] [webkit] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists and is interactive
+[1A[2K[18/21] [webkit] ÔÇ║ tests\home.spec.ts:48:5 ÔÇ║ contact section exists
+[1A[2K  1) [chromium] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#about')
+    Expected pattern: [32m/Why\s*I\s*Build/[39m
+    Received string:  [31m"PhilosophyWhy I Code.Most designers hand off mockups and hope for the best. I hand off working prototypes because I build them.I operate at the intersection of Design Thinking and Technical Execution. I don't just design interfaces; I build the systems that power them.Let's TalkDownload Resume3+Years Experience5+Products Shipped2Companies1Live Plugin"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#about')[22m
+    [2m    8 ├ù locator resolved to <section id="about" class="py-32 px-6 relative overflow-hidden">ÔÇª</section>[22m
+    [2m      - unexpected value "PhilosophyWhy I Code.Most designers hand off mockups and hope for the best. I hand off working prototypes because I build them.I operate at the intersection of Design Thinking and Technical Execution. I don't just design interfaces; I build the systems that power them.Let's TalkDownload Resume3+Years Experience5+Products Shipped2Companies1Live Plugin"[22m
+
+
+      74 |     await aboutSection.scrollIntoViewIfNeeded();
+      75 |     await expect(aboutSection).toBeVisible();
+    > 76 |     await expect(aboutSection).toContainText(/Why\s*I\s*Build/);
+         |                                ^
+      77 |     const designThinkingText = page.getByText('Product Strategy');
+      78 |     await designThinkingText.scrollIntoViewIfNeeded();
+      79 |     console.log('About section: Scrolled to Product Strategy');
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:76:32
+
+    Error Context: test-results\home-about-section-exists-chromium\error-context.md
+
+
+[1A[2K[19/21] [webkit] ÔÇ║ tests\home.spec.ts:40:5 ÔÇ║ aulys showcase exists
+[1A[2K[20/21] [webkit] ÔÇ║ tests\home.spec.ts:58:5 ÔÇ║ work section exists
+[1A[2K[21/21] [webkit] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists
+[1A[2K  2) [firefox] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#about')
+    Expected pattern: [32m/Why\s*I\s*Build/[39m
+    Received string:  [31m"PhilosophyWhy I Code.Most designers hand off mockups and hope for the best. I hand off working prototypes because I build them.I operate at the intersection of Design Thinking and Technical Execution. I don't just design interfaces; I build the systems that power them.Let's TalkDownload Resume3+Years Experience5+Products Shipped2Companies1Live Plugin"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#about')[22m
+    [2m    8 ├ù locator resolved to <section id="about" class="py-32 px-6 relative overflow-hidden">ÔÇª</section>[22m
+    [2m      - unexpected value "PhilosophyWhy I Code.Most designers hand off mockups and hope for the best. I hand off working prototypes because I build them.I operate at the intersection of Design Thinking and Technical Execution. I don't just design interfaces; I build the systems that power them.Let's TalkDownload Resume3+Years Experience5+Products Shipped2Companies1Live Plugin"[22m
+
+
+      74 |     await aboutSection.scrollIntoViewIfNeeded();
+      75 |     await expect(aboutSection).toBeVisible();
+    > 76 |     await expect(aboutSection).toContainText(/Why\s*I\s*Build/);
+         |                                ^
+      77 |     const designThinkingText = page.getByText('Product Strategy');
+      78 |     await designThinkingText.scrollIntoViewIfNeeded();
+      79 |     console.log('About section: Scrolled to Product Strategy');
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:76:32
+
+    Error Context: test-results\home-about-section-exists-firefox\error-context.md
+
+
+[1A[2K  3) [webkit] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#about')
+    Expected pattern: [32m/Why\s*I\s*Build/[39m
+    Received string:  [31m"PhilosophyWhy I Code.Most designers hand off mockups and hope for the best. I hand off working prototypes because I build them.I operate at the intersection of Design Thinking and Technical Execution. I don't just design interfaces; I build the systems that power them.Let's TalkDownload Resume3+Years Experience5+Products Shipped2Companies1Live Plugin"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#about')[22m
+    [2m    9 ├ù locator resolved to <section id="about" class="py-32 px-6 relative overflow-hidden">ÔÇª</section>[22m
+    [2m      - unexpected value "PhilosophyWhy I Code.Most designers hand off mockups and hope for the best. I hand off working prototypes because I build them.I operate at the intersection of Design Thinking and Technical Execution. I don't just design interfaces; I build the systems that power them.Let's TalkDownload Resume3+Years Experience5+Products Shipped2Companies1Live Plugin"[22m
+
+
+      74 |     await aboutSection.scrollIntoViewIfNeeded();
+      75 |     await expect(aboutSection).toBeVisible();
+    > 76 |     await expect(aboutSection).toContainText(/Why\s*I\s*Build/);
+         |                                ^
+      77 |     const designThinkingText = page.getByText('Product Strategy');
+      78 |     await designThinkingText.scrollIntoViewIfNeeded();
+      79 |     console.log('About section: Scrolled to Product Strategy');
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:76:32
+
+    Error Context: test-results\home-about-section-exists-webkit\error-context.md
+
+
+[1A[2K  3 failed
+    [chromium] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [firefox] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [webkit] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  18 passed (26.4s)
+
+[36m  Serving HTML report at http://localhost:57478. Press Ctrl+C to quit.[39m

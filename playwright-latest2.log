@@ -1,0 +1,97 @@
+﻿
+Running 21 tests using 12 workers
+
+[1A[2K[1/21] [firefox] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists and is interactive
+[1A[2K[2/21] [chromium] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists
+[1A[2K[3/21] [chromium] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists and is interactive
+[1A[2K[4/21] [firefox] ÔÇ║ tests\home.spec.ts:48:5 ÔÇ║ contact section exists
+[1A[2K[5/21] [chromium] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title
+[1A[2K[6/21] [chromium] ÔÇ║ tests\home.spec.ts:48:5 ÔÇ║ contact section exists
+[1A[2K[7/21] [chromium] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists
+[1A[2K[8/21] [firefox] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title
+[1A[2K[9/21] [chromium] ÔÇ║ tests\home.spec.ts:40:5 ÔÇ║ aulys showcase exists
+[1A[2K[10/21] [firefox] ÔÇ║ tests\home.spec.ts:40:5 ÔÇ║ aulys showcase exists
+[1A[2K[11/21] [chromium] ÔÇ║ tests\home.spec.ts:58:5 ÔÇ║ work section exists
+[1A[2K[12/21] [firefox] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists
+[1A[2K  1) [chromium] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: locator.scrollIntoViewIfNeeded: Error: strict mode violation: getByText('Product Strategy') resolved to 2 elements:
+        1) <p class="text-zinc-500 mt-6 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">Driving product strategy and bridging the gap betÔÇª</p> aka getByText('Driving product strategy and')
+        2) <span class="text-blue-600 font-bold">Product Strategy</span> aka getByText('Product Strategy', { exact: true })
+
+    Call log:
+    [2m  - waiting for getByText('Product Strategy')[22m
+
+
+      76 |     await expect(aboutSection).toContainText(/Why\s*I\s*Build/);
+      77 |     const designThinkingText = page.getByText('Product Strategy');
+    > 78 |     await designThinkingText.scrollIntoViewIfNeeded();
+         |                              ^
+      79 |     console.log('About section: Scrolled to Product Strategy');
+      80 |     await expect(designThinkingText).toBeVisible({ timeout: 15000 });
+      81 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:78:30
+
+    Error Context: test-results\home-about-section-exists-chromium\error-context.md
+
+
+[1A[2K[13/21] [firefox] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists
+[1A[2K[14/21] [firefox] ÔÇ║ tests\home.spec.ts:58:5 ÔÇ║ work section exists
+[1A[2K[15/21] [webkit] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists
+[1A[2K[16/21] [webkit] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists and is interactive
+[1A[2K[17/21] [webkit] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title
+[1A[2K[18/21] [webkit] ÔÇ║ tests\home.spec.ts:40:5 ÔÇ║ aulys showcase exists
+[1A[2K[19/21] [webkit] ÔÇ║ tests\home.spec.ts:58:5 ÔÇ║ work section exists
+[1A[2K[20/21] [webkit] ÔÇ║ tests\home.spec.ts:48:5 ÔÇ║ contact section exists
+[1A[2K[21/21] [webkit] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists
+[1A[2K  2) [firefox] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: locator.scrollIntoViewIfNeeded: Error: strict mode violation: getByText('Product Strategy') resolved to 2 elements:
+        1) <p class="text-zinc-500 mt-6 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">Driving product strategy and bridging the gap betÔÇª</p> aka getByText('Driving product strategy and')
+        2) <span class="text-blue-600 font-bold">Product Strategy</span> aka getByText('Product Strategy', { exact: true })
+
+    Call log:
+    [2m  - waiting for getByText('Product Strategy')[22m
+
+
+      76 |     await expect(aboutSection).toContainText(/Why\s*I\s*Build/);
+      77 |     const designThinkingText = page.getByText('Product Strategy');
+    > 78 |     await designThinkingText.scrollIntoViewIfNeeded();
+         |                              ^
+      79 |     console.log('About section: Scrolled to Product Strategy');
+      80 |     await expect(designThinkingText).toBeVisible({ timeout: 15000 });
+      81 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:78:30
+
+    Error Context: test-results\home-about-section-exists-firefox\error-context.md
+
+
+[1A[2K  3) [webkit] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: locator.scrollIntoViewIfNeeded: Error: strict mode violation: getByText('Product Strategy') resolved to 2 elements:
+        1) <p class="text-zinc-500 mt-6 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">Driving product strategy and bridging the gap betÔÇª</p> aka getByText('Driving product strategy and')
+        2) <span class="text-blue-600 font-bold">Product Strategy</span> aka getByText('Product Strategy', { exact: true })
+
+    Call log:
+    [2m  - waiting for getByText('Product Strategy')[22m
+
+
+      76 |     await expect(aboutSection).toContainText(/Why\s*I\s*Build/);
+      77 |     const designThinkingText = page.getByText('Product Strategy');
+    > 78 |     await designThinkingText.scrollIntoViewIfNeeded();
+         |                              ^
+      79 |     console.log('About section: Scrolled to Product Strategy');
+      80 |     await expect(designThinkingText).toBeVisible({ timeout: 15000 });
+      81 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:78:30
+
+    Error Context: test-results\home-about-section-exists-webkit\error-context.md
+
+
+[1A[2K  3 failed
+    [chromium] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [firefox] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [webkit] ÔÇ║ tests\home.spec.ts:71:5 ÔÇ║ about section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  18 passed (24.9s)
+
+[36m  Serving HTML report at http://localhost:61095. Press Ctrl+C to quit.[39m

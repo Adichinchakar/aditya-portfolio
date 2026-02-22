@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Zap, CheckCircle2, Globe2, ArrowRight } from "lucide-react";
@@ -54,9 +55,11 @@ export function AulysShowcase() {
                             </div>
                         </div>
 
-                        <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white gap-2">
-                            View Technical Case Study <ArrowRight className="w-4 h-4" />
-                        </Button>
+                        <Link href="/work/aulys">
+                            <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white gap-2">
+                                View Technical Case Study <ArrowRight className="w-4 h-4" />
+                            </Button>
+                        </Link>
                     </div>
 
                     {/* Visual Mock Side */}

@@ -55,7 +55,7 @@ export function UserPersonaInteractive() {
                         <div>
                             <h2 className="text-3xl font-bold text-zinc-900 mb-4">The User</h2>
                             <p className="text-zinc-600 text-lg">
-                                Sarah, an Operations Lead, was drowning in manual tasks. We mapped her frustrations to specific technical solutions.
+                                Sarah, an Operations Lead, was drowning in manual tasks. We mapped her frustrations to specific product capabilities.
                             </p>
                         </div>
 
@@ -70,11 +70,11 @@ export function UserPersonaInteractive() {
                                         key={point.id}
                                         onClick={() => setActivePoint(point.id)}
                                         className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-300 text-left ${activePoint === point.id
-                                            ? "bg-purple-900/20 border-purple-500/50 shadow-lg shadow-purple-900/10"
-                                            : "bg-white/50 border-zinc-200 hover:border-zinc-700 hover:bg-zinc-100/50"
+                                            ? "bg-purple-50 border-purple-300 shadow-sm"
+                                            : "bg-white/50 border-zinc-200 hover:border-zinc-300 hover:bg-white"
                                             }`}
                                     >
-                                        <div className={`p-2 rounded-lg ${activePoint === point.id ? "bg-purple-500 text-zinc-900" : "bg-zinc-100 text-zinc-600"
+                                        <div className={`p-2 rounded-lg ${activePoint === point.id ? "bg-purple-500 text-white" : "bg-zinc-100 text-zinc-600"
                                             }`}>
                                             <point.icon className="w-5 h-5" />
                                         </div>
@@ -86,7 +86,7 @@ export function UserPersonaInteractive() {
                                         </div>
                                         {activePoint === point.id && (
                                             <motion.div layoutId="arrow" className="ml-auto">
-                                                <ArrowRight className="w-5 h-5 text-purple-400" />
+                                                <ArrowRight className="w-5 h-5 text-purple-500" />
                                             </motion.div>
                                         )}
                                     </button>
@@ -105,38 +105,35 @@ export function UserPersonaInteractive() {
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: -20 }}
                                     transition={{ duration: 0.3 }}
-                                    className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-900 to-zinc-50 p-1"
+                                    className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-[0_4px_24px_rgb(0,0,0,0.06)] p-8"
                                 >
-                                    <div className="bg-zinc-50/80 backdrop-blur-xl rounded-[22px] p-8 h-full min-h-[400px] flex flex-col justify-center">
-
-                                        {/* Pain Context */}
-                                        <div className="mb-8 p-4 rounded-xl bg-red-500/10 border border-red-500/20">
-                                            <div className="flex items-center gap-2 mb-2 text-red-400 text-sm font-semibold uppercase tracking-wider">
-                                                <AlertCircle className="w-4 h-4" />
-                                                The Problem
-                                            </div>
-                                            <p className="text-red-200 text-lg italic">
-                                                "{activeData.description}"
-                                            </p>
+                                    {/* Pain Context */}
+                                    <div className="mb-8 p-4 rounded-xl bg-red-50 border border-red-200">
+                                        <div className="flex items-center gap-2 mb-2 text-red-600 text-sm font-semibold uppercase tracking-wider">
+                                            <AlertCircle className="w-4 h-4" />
+                                            The Problem
                                         </div>
+                                        <p className="text-red-700 text-lg italic font-medium">
+                                            "{activeData.description}"
+                                        </p>
+                                    </div>
 
-                                        {/* Connector */}
-                                        <div className="flex justify-center mb-8">
-                                            <div className="w-[1px] h-12 bg-gradient-to-b from-red-500/50 to-purple-500/50" />
+                                    {/* Connector */}
+                                    <div className="flex justify-center mb-8">
+                                        <div className="w-[1px] h-12 bg-gradient-to-b from-red-400/50 to-purple-400/50" />
+                                    </div>
+
+                                    {/* Solution */}
+                                    <div className="text-center">
+                                        <div className="inline-flex items-center justify-center p-3 rounded-xl bg-purple-50 border border-purple-200 mb-4">
+                                            <activeData.icon className="w-8 h-8 text-purple-500" />
                                         </div>
-
-                                        {/* Solution */}
-                                        <div className="text-center">
-                                            <div className="inline-flex items-center justify-center p-3 rounded-xl bg-purple-500/10 border border-purple-500/20 mb-4">
-                                                <activeData.icon className="w-8 h-8 text-purple-400" />
-                                            </div>
-                                            <h4 className="text-2xl font-bold text-zinc-900 mb-2">
-                                                {activeData.solution}
-                                            </h4>
-                                            <div className="flex items-center justify-center gap-2 text-purple-300">
-                                                <CheckCircle2 className="w-5 h-5" />
-                                                <span className="font-medium">{activeData.impact}</span>
-                                            </div>
+                                        <h4 className="text-2xl font-bold text-zinc-900 mb-3">
+                                            {activeData.solution}
+                                        </h4>
+                                        <div className="flex items-center justify-center gap-2 text-emerald-600">
+                                            <CheckCircle2 className="w-5 h-5" />
+                                            <span className="font-semibold">{activeData.impact}</span>
                                         </div>
                                     </div>
                                 </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Sparkles, ArrowRight, GitBranch, FileCode } from "lucide-react";
+import { GitBranch, FileCode, Mail, Sparkles } from "lucide-react";
 
 export function TechnicalEvolution() {
     return (
@@ -15,13 +15,13 @@ export function TechnicalEvolution() {
                     {/* Left: Narrative */}
                     <div className="space-y-8">
                         <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium mb-6">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 text-sm font-semibold mb-6">
                                 <GitBranch className="w-3.5 h-3.5" />
                                 Growth Arc
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-6">
                                 From Abstract Logic to <br />
-                                <span className="text-indigo-400">DOM Tree Analysis</span>
+                                <span className="text-indigo-500">DOM Tree Analysis</span>
                             </h2>
                             <p className="text-lg text-zinc-600 leading-relaxed">
                                 In Simplifai, I built engines to manage abstract data flows. Visual nodes represented logical steps, detached from the actual code structure.
@@ -29,7 +29,7 @@ export function TechnicalEvolution() {
                             <p className="text-lg text-zinc-600 leading-relaxed mt-4">
                                 This "Abstract Node Logic" was the precursor to <strong className="text-zinc-900">Aulys</strong>. I realized that accessible design engineering required treating HTML elements themselves as nodes in a live tree—scanning the DOM in real-time rather than just defining abstract flows.
                             </p>
-                            <p className="text-lg text-zinc-600 leading-relaxed mt-4 border-l-2 border-indigo-500 pl-6 italic">
+                            <p className="text-lg text-zinc-600 leading-relaxed mt-4 border-l-2 border-indigo-400 pl-6 italic">
                                 "This shift in thinking marked my official transition from pure UX Design to Design Engineering."
                             </p>
                         </div>
@@ -38,7 +38,7 @@ export function TechnicalEvolution() {
                     {/* Right: Animation Demo */}
                     <div className="relative">
                         {/* Card Container */}
-                        <div className="relative rounded-3xl border border-zinc-200 bg-white/50 backdrop-blur-xl p-8 overflow-hidden min-h-[400px] flex items-center justify-center">
+                        <div className="relative rounded-3xl border border-zinc-200 bg-white/70 backdrop-blur-xl p-8 overflow-hidden min-h-[400px] flex items-center justify-center shadow-[0_4px_24px_rgb(0,0,0,0.06)]">
 
                             {/* Animated Flow */}
                             <div className="relative flex items-center gap-12 sm:gap-20">
@@ -49,13 +49,15 @@ export function TechnicalEvolution() {
                                     transition={{ duration: 0.5 }}
                                     className="relative z-10"
                                 >
-                                    <div className="w-24 h-24 rounded-2xl bg-zinc-100 border-2 border-zinc-700 flex flex-col items-center justify-center gap-2 shadow-xl relative group">
-                                        <div className="absolute -top-3 px-3 py-1 bg-zinc-700 rounded-full text-[10px] uppercase font-bold text-zinc-700 tracking-wider">Trigger</div>
-                                        <Mail className="w-8 h-8 text-blue-400" />
-                                        <span className="text-xs font-medium text-zinc-700">Incoming Email</span>
+                                    <div className="w-24 h-24 rounded-2xl bg-white border-2 border-blue-400 flex flex-col items-center justify-center gap-2 shadow-lg relative group">
+                                        <div className="absolute -top-3 px-3 py-1 bg-blue-500 rounded-full text-[10px] uppercase font-bold text-white tracking-wider">
+                                            Trigger
+                                        </div>
+                                        <Mail className="w-8 h-8 text-blue-500" />
+                                        <span className="text-xs font-semibold text-zinc-700">Incoming Email</span>
 
                                         {/* Port */}
-                                        <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-blue-500 rounded-full border-2 border-zinc-200" />
+                                        <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-sm" />
                                     </div>
                                 </motion.div>
 
@@ -65,7 +67,7 @@ export function TechnicalEvolution() {
                                         initial={{ width: "0%" }}
                                         whileInView={{ width: "100%" }}
                                         transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
-                                        className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+                                        className="h-full bg-gradient-to-r from-blue-400 to-purple-400"
                                     />
                                 </div>
 
@@ -76,7 +78,7 @@ export function TechnicalEvolution() {
                                     transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5, repeat: Infinity, repeatDelay: 2 }}
                                     className="absolute top-1/2 -translate-y-1/2 z-20"
                                 >
-                                    <div className="w-4 h-4 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+                                    <div className="w-4 h-4 bg-white border-2 border-purple-400 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.4)]" />
                                 </motion.div>
 
 
@@ -87,13 +89,15 @@ export function TechnicalEvolution() {
                                     transition={{ duration: 0.5, delay: 0.2 }}
                                     className="relative z-10"
                                 >
-                                    <div className="w-24 h-24 rounded-2xl bg-zinc-100 border-2 border-purple-500/50 flex flex-col items-center justify-center gap-2 shadow-[0_0_30px_rgba(168,85,247,0.15)] relative">
-                                        <div className="absolute -top-3 px-3 py-1 bg-purple-600 rounded-full text-[10px] uppercase font-bold text-zinc-900 tracking-wider shadow-lg">Action</div>
-                                        <Sparkles className="w-8 h-8 text-purple-400" />
-                                        <span className="text-xs font-medium text-purple-200">GPT-4 Analysis</span>
+                                    <div className="w-24 h-24 rounded-2xl bg-white border-2 border-purple-400 flex flex-col items-center justify-center gap-2 shadow-[0_0_30px_rgba(168,85,247,0.12)] relative">
+                                        <div className="absolute -top-3 px-3 py-1 bg-purple-600 rounded-full text-[10px] uppercase font-bold text-white tracking-wider shadow-sm">
+                                            Action
+                                        </div>
+                                        <Sparkles className="w-8 h-8 text-purple-500" />
+                                        <span className="text-xs font-semibold text-purple-700">GPT-4 Analysis</span>
 
                                         {/* Port */}
-                                        <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-purple-500 rounded-full border-2 border-zinc-200" />
+                                        <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-purple-500 rounded-full border-2 border-white shadow-sm" />
                                     </div>
                                 </motion.div>
                             </div>
@@ -103,14 +107,14 @@ export function TechnicalEvolution() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 1.5, duration: 0.8 }}
-                                className="absolute bottom-6 bg-zinc-50/90 border border-zinc-200 rounded-lg p-3 font-mono text-xs text-zinc-600 backdrop-blur-md shadow-2xl max-w-[260px]"
+                                className="absolute bottom-6 bg-white border border-zinc-200 rounded-lg p-3 font-mono text-xs text-zinc-600 shadow-lg max-w-[260px]"
                             >
-                                <div className="flex items-center gap-2 mb-2 text-indigo-400 border-b border-zinc-200 pb-1">
+                                <div className="flex items-center gap-2 mb-2 text-indigo-500 border-b border-zinc-100 pb-1">
                                     <FileCode className="w-3 h-3" />
                                     <span>aulys_engine.ts</span>
                                 </div>
-                                <div className="opacity-70">
-                                    <span className="text-purple-400">const</span> tree = <span className="text-blue-400">document</span>.querySelectorAll(<span className="text-green-400">"*"</span>);<br />
+                                <div className="opacity-80">
+                                    <span className="text-purple-600">const</span> tree = <span className="text-blue-600">document</span>.querySelectorAll(<span className="text-green-600">"*"</span>);<br />
                                     tree.forEach(node ={">"} analyze(node));
                                 </div>
                             </motion.div>

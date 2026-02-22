@@ -1,132 +1,200 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Zap, Users, ShieldCheck, FileText, Code } from "lucide-react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { Zap, Users, Smile, Code, Trophy, ShieldCheck } from "lucide-react";
+import { MouseEvent } from "react";
+import { cn } from "@/lib/utils";
+
+const cards = [
+    {
+        id: 1,
+        icon: Zap,
+        label: "Time-to-Market",
+        iconBg: "bg-blue-500/10",
+        iconColor: "text-blue-500",
+        spotlight: "rgba(59, 130, 246, 0.1)",
+        hoverBorder: "hover:border-blue-300/60",
+        metric: "42%",
+        metricSub: "Faster Product Iteration Cycles",
+        note: "Speeding up dev means significantly lower R&D burn.",
+        decorIcon: Zap,
+    },
+    {
+        id: 2,
+        icon: Users,
+        label: "Validation",
+        iconBg: "bg-purple-500/10",
+        iconColor: "text-purple-500",
+        spotlight: "rgba(168, 85, 247, 0.1)",
+        hoverBorder: "hover:border-purple-300/60",
+        metric: "100+",
+        metricSub: "User Studies Conducted",
+        note: "Validated decisions reduce post-launch rework.",
+        decorIcon: Users,
+    },
+    {
+        id: 3,
+        icon: Smile,
+        label: "Client Satisfaction",
+        iconBg: "bg-amber-500/10",
+        iconColor: "text-amber-500",
+        spotlight: "rgba(245, 158, 11, 0.1)",
+        hoverBorder: "hover:border-amber-300/60",
+        metric: "20%",
+        metricSub: "Improvement in CSAT Scores",
+        note: "Happier users directly translated to contract renewals.",
+        decorIcon: Smile,
+    },
+];
+
+function BentoCard({ card, delay }: { card: typeof cards[0]; delay: number }) {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent<HTMLDivElement>) {
+        const { left, top } = currentTarget.getBoundingClientRect();
+        mouseX.set(clientX - left);
+        mouseY.set(clientY - top);
+    }
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay }}
+            viewport={{ once: true }}
+            onMouseMove={handleMouseMove}
+            className={cn(
+                "group relative overflow-hidden rounded-[2rem] bg-white/50 backdrop-blur-xl border border-white/60 p-8 flex flex-col justify-between shadow-[0_4px_20px_rgb(0,0,0,0.04)] transition-all duration-500",
+                card.hoverBorder
+            )}
+        >
+            <motion.div
+                className="pointer-events-none absolute -inset-px rounded-[2rem] opacity-0 transition duration-500 group-hover:opacity-100"
+                style={{
+                    background: useMotionTemplate`radial-gradient(500px circle at ${mouseX}px ${mouseY}px, ${card.spotlight}, transparent 80%)`,
+                }}
+            />
+
+            <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-8">
+                    <div className={cn("p-3 rounded-2xl ring-1 ring-white/50", card.iconBg)}>
+                        <card.icon className={cn("w-5 h-5", card.iconColor)} />
+                    </div>
+                    <span className="text-zinc-500 font-bold tracking-widest uppercase text-xs">{card.label}</span>
+                </div>
+
+                <h3 className="text-6xl md:text-7xl font-black text-zinc-900 mb-2 tracking-tighter">
+                    {card.metric}
+                </h3>
+                <p className="text-xl text-zinc-700 font-semibold mb-8">
+                    {card.metricSub}
+                </p>
+
+                <div className="p-4 bg-white/70 backdrop-blur-md rounded-2xl border border-white/80 inline-flex items-start gap-2 max-w-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 mt-1.5 shrink-0" />
+                    <p className="text-zinc-600 text-sm font-medium">
+                        <span className="text-zinc-900 font-bold">So What?</span>{" "}
+                        {card.note}
+                    </p>
+                </div>
+            </div>
+
+            {/* Decorative background icon */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-[0.04] group-hover:opacity-[0.07] transition-opacity pointer-events-none">
+                <card.decorIcon className="w-64 h-64" />
+            </div>
+        </motion.div>
+    );
+}
 
 export function BentoImpact() {
     return (
-        <section className="py-24 px-6 bg-zinc-50">
-            <div className="container mx-auto max-w-6xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {/* Card 1: Speed (Large Impact) */}
+        <section className="py-32 px-6 bg-zinc-50 relative overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/4 rounded-full blur-[120px] pointer-events-none" />
+
+            <div className="container mx-auto max-w-6xl relative z-10">
+                {/* Section header */}
+                <div className="flex flex-col items-center text-center mb-16">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5 }}
-                        className="lg:col-span-2 bg-white border border-zinc-200 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-zinc-700 transition-colors"
+                        viewport={{ once: true }}
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-600 mb-8 backdrop-blur-md shadow-sm"
                     >
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-blue-500/10 rounded-lg">
-                                    <Zap className="w-5 h-5 text-blue-400" />
-                                </div>
-                                <span className="text-zinc-600 font-medium tracking-wide uppercase text-xs">Development Velocity</span>
-                            </div>
-
-                            <h3 className="text-6xl md:text-7xl font-bold text-zinc-900 mb-2 tracking-tight">
-                                42%
-                            </h3>
-                            <p className="text-xl text-zinc-700 font-medium mb-8">
-                                Faster Development Cycles
-                            </p>
-
-                            <div className="p-4 bg-zinc-50/50 rounded-xl border border-zinc-200/50 backdrop-blur-sm max-w-md">
-                                <p className="text-blue-200 text-sm font-medium flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-                                    So What? <span className="text-zinc-600 font-normal">Speeding up dev means significantly lower R&D burn.</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Background Decoration */}
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <Zap className="w-96 h-96 text-blue-500" />
-                        </div>
+                        <Trophy className="w-3.5 h-3.5 text-amber-500" />
+                        Measurable Impact
                     </motion.div>
-
-                    {/* Card 2: Rigor (User Studies) */}
-                    <motion.div
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="bg-white border border-zinc-200 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-zinc-700 transition-colors"
+                        transition={{ type: "spring" as const, stiffness: 260, damping: 20, delay: 0.05 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900"
                     >
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-purple-500/10 rounded-lg">
-                                    <Users className="w-5 h-5 text-purple-400" />
-                                </div>
-                                <span className="text-zinc-600 font-medium tracking-wide uppercase text-xs">Validation</span>
-                            </div>
-
-                            <h3 className="text-5xl font-bold text-zinc-900 mb-2 tracking-tight">
-                                100+
-                            </h3>
-                            <p className="text-lg text-zinc-700 font-medium mb-8">
-                                User Studies Conducted
-                            </p>
-
-                            <div className="p-4 bg-zinc-50/50 rounded-xl border border-zinc-200/50 backdrop-blur-sm">
-                                <p className="text-purple-200 text-sm font-medium">
-                                    So What? <span className="text-zinc-600 font-normal block mt-1">Validated decisions reduce post-launch rework.</span>
-                                </p>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Card 3: Scale (Design System) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="lg:col-span-3 bg-white border border-zinc-200 rounded-3xl p-8 relative overflow-hidden group hover:border-zinc-700 transition-colors"
-                    >
-                        <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
-                            <div>
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="p-2 bg-green-500/10 rounded-lg">
-                                        <Code className="w-5 h-5 text-green-400" />
-                                    </div>
-                                    <span className="text-zinc-600 font-medium tracking-wide uppercase text-xs">Scalability</span>
-                                </div>
-
-                                <h3 className="text-3xl font-bold text-zinc-900 mb-4">
-                                    Custom Design System
-                                </h3>
-
-                                <div className="p-4 bg-zinc-50/50 rounded-xl border border-zinc-200/50 backdrop-blur-sm inline-block">
-                                    <p className="text-green-200 text-sm font-medium flex items-center gap-2">
-                                        <ShieldCheck className="w-4 h-4" />
-                                        So What? <span className="text-zinc-600 font-normal">Unified UI reduces technical debt & UI bugs.</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Code Snippet Visualization */}
-                            <div className="bg-zinc-50 rounded-xl border border-zinc-200 p-4 font-mono text-xs text-zinc-600 overflow-hidden relative">
-                                <div className="absolute top-0 left-0 w-full h-8 bg-white/50 border-b border-zinc-200 flex items-center px-3 gap-2">
-                                    <div className="w-3 h-3 rounded-full bg-red-500/20" />
-                                    <div className="w-3 h-3 rounded-full bg-yellow-500/20" />
-                                    <div className="w-3 h-3 rounded-full bg-green-500/20" />
-                                    <span className="ml-2 text-zinc-600">theme.ts</span>
-                                </div>
-                                <div className="mt-8 space-y-1">
-                                    <p><span className="text-purple-400">export const</span> <span className="text-yellow-200">theme</span> = {"{"}</p>
-                                    <p className="pl-4"><span className="text-blue-400">colors</span>: {"{"}</p>
-                                    <p className="pl-8"><span className="text-blue-300">primary</span>: <span className="text-green-300">"#3b82f6"</span>,</p>
-                                    <p className="pl-8"><span className="text-blue-300">secondary</span>: <span className="text-green-300">"#18181b"</span>,</p>
-                                    <p className="pl-8"><span className="text-blue-300">accent</span>: <span className="text-green-300">"#8b5cf6"</span>,</p>
-                                    <p className="pl-4">{"},"}</p>
-                                    <p className="pl-4"><span className="text-blue-400">spacing</span>: {"{"}</p>
-                                    <p className="pl-8"><span className="text-blue-300">sm</span>: <span className="text-orange-300">4</span>, <span className="text-zinc-600">// 0.25rem</span></p>
-                                    <p className="pl-8"><span className="text-blue-300">md</span>: <span className="text-orange-300">8</span>, <span className="text-zinc-600">// 0.5rem</span></p>
-                                    <p className="pl-4">{"}"}</p>
-                                    <p>{"}"}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
+                        Results That Speak
+                    </motion.h2>
                 </div>
+
+                {/* 3 equal metric cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    {cards.map((card, i) => (
+                        <BentoCard key={card.id} card={card} delay={i * 0.1} />
+                    ))}
+                </div>
+
+                {/* Full-width Design System card */}
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="rounded-[2rem] bg-white/50 backdrop-blur-xl border border-white/60 p-8 relative overflow-hidden group hover:border-emerald-300/60 transition-all duration-500 shadow-[0_4px_20px_rgb(0,0,0,0.04)]"
+                >
+                    <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
+                        <div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="p-3 rounded-2xl bg-emerald-500/10 ring-1 ring-white/50">
+                                    <Code className="w-5 h-5 text-emerald-500" />
+                                </div>
+                                <span className="text-zinc-500 font-bold tracking-widest uppercase text-xs">Scalability</span>
+                            </div>
+                            <h3 className="text-3xl font-black tracking-tighter text-zinc-900 mb-4">
+                                Custom Design System
+                            </h3>
+                            <div className="p-4 bg-white/70 backdrop-blur-md rounded-2xl border border-white/80 inline-flex items-center gap-2">
+                                <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                                <p className="text-zinc-600 text-sm font-medium">
+                                    <span className="text-zinc-900 font-bold">So What?</span>{" "}
+                                    Unified UI reduces technical debt & bugs.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Code snippet */}
+                        <div className="rounded-2xl bg-[#0d1117] border border-zinc-800/80 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.15)]">
+                            <div className="flex items-center gap-2 px-4 py-3 bg-[#161b22] border-b border-zinc-800/80">
+                                <div className="w-3 h-3 rounded-full bg-red-500/60" />
+                                <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
+                                <div className="w-3 h-3 rounded-full bg-green-500/60" />
+                                <span className="ml-2 text-xs text-zinc-500 font-mono">theme.ts</span>
+                            </div>
+                            <div className="p-5 font-mono text-xs leading-6">
+                                <p><span className="text-purple-400">export const </span><span className="text-yellow-300">theme</span><span className="text-zinc-300"> = {"{"}</span></p>
+                                <p className="pl-4"><span className="text-blue-400">colors</span><span className="text-zinc-300">: {"{"}</span></p>
+                                <p className="pl-8"><span className="text-blue-300">primary</span><span className="text-zinc-400">: </span><span className="text-green-400">"#6366f1"</span><span className="text-zinc-400">,</span></p>
+                                <p className="pl-8"><span className="text-blue-300">accent</span><span className="text-zinc-400">: </span><span className="text-green-400">"#8b5cf6"</span><span className="text-zinc-400">,</span></p>
+                                <p className="pl-4"><span className="text-zinc-300">{"}"}</span><span className="text-zinc-400">,</span></p>
+                                <p className="pl-4"><span className="text-blue-400">spacing</span><span className="text-zinc-300">: {"{"}</span></p>
+                                <p className="pl-8"><span className="text-blue-300">sm</span><span className="text-zinc-400">: </span><span className="text-orange-400">4</span><span className="text-zinc-600">, // 0.25rem</span></p>
+                                <p className="pl-8"><span className="text-blue-300">md</span><span className="text-zinc-400">: </span><span className="text-orange-400">8</span><span className="text-zinc-600">, // 0.5rem</span></p>
+                                <p className="pl-4"><span className="text-zinc-300">{"}"}</span></p>
+                                <p><span className="text-zinc-300">{"}"}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

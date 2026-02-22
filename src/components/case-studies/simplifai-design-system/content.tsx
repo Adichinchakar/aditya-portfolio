@@ -8,6 +8,8 @@ import { ComponentPlayground } from "@/components/case-studies/simplifai-design-
 import { ComponentRedlines } from "@/components/case-studies/simplifai-design-system/component-redlines";
 import { SystemGovernance } from "@/components/case-studies/simplifai-design-system/system-governance";
 import { TechnicalEvolution } from "@/components/case-studies/simplifai-design-system/technical-evolution";
+import { SystemSpecs } from "@/components/case-studies/simplifai/system-specs";
+import { RelatedCaseStudy } from "@/components/case-studies/shared/related-case-study";
 
 export default function SimplifaiDesignSystemPage() {
     return (
@@ -17,12 +19,15 @@ export default function SimplifaiDesignSystemPage() {
             <TokenGraph />
             <ComponentPlayground />
             <ComponentRedlines />
+
+            {/* Engineering detail — tokens & spec annotations */}
+            <SystemSpecs />
+
             <SystemGovernance />
             <TechnicalEvolution />
 
-            <div className="container mx-auto px-6 py-24 text-center">
-                <p className="text-zinc-500">More sections coming soon...</p>
-            </div>
+            {/* Cross-link → Flow Builder */}
+            <RelatedCaseStudy target="flow-builder" />
         </main>
     );
 }

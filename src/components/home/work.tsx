@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const projects = [
     {
@@ -13,10 +14,11 @@ const projects = [
         year: "2024",
     },
     {
-        title: "Infosys Design System",
+        title: "Simplifai Design System",
         category: "Design Architecture",
         description: "Architected a multi-brand design system that accelerated development cycles by 42%. Scaled to 50+ enterprise applications.",
         year: "2023",
+        href: "/work/simplifai-design-system"
     },
     {
         title: "AI-Native Fintech Dashboard",
@@ -52,27 +54,29 @@ export function Work() {
                             transition={{ delay: index * 0.2, duration: 0.8 }}
                             viewport={{ once: true, margin: "-10%" }}
                         >
-                            <Card className="group cursor-pointer h-full min-h-[400px] flex flex-col justify-between hover:bg-white/5">
-                                <div className="p-4 space-y-2">
-                                    <div className="flex justify-between items-start">
-                                        <span className="text-sm font-mono text-accent">{project.category}</span>
-                                        <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1 text-accent" />
+                            <Link href={project.href || "#"} className="block h-full">
+                                <Card className="group cursor-pointer h-full min-h-[400px] flex flex-col justify-between hover:bg-black/5">
+                                    <div className="p-4 space-y-2">
+                                        <div className="flex justify-between items-start">
+                                            <span className="text-sm font-mono text-accent">{project.category}</span>
+                                            <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1 text-accent" />
+                                        </div>
+                                        <h3 className="text-3xl font-bold group-hover:text-accent transition-colors">{project.title}</h3>
                                     </div>
-                                    <h3 className="text-3xl font-bold group-hover:text-accent transition-colors">{project.title}</h3>
-                                </div>
 
-                                {/* Fallback visual since we don't have images yet */}
-                                <div className="w-full h-64 bg-white/5 rounded-lg overflow-hidden relative m-4 group-hover:scale-[1.02] transition-transform duration-500">
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/20 font-bold text-6xl select-none">
-                                        {index + 1}
+                                    {/* Fallback visual since we don't have images yet */}
+                                    <div className="w-full h-64 bg-black/5 rounded-lg overflow-hidden relative m-4 group-hover:scale-[1.02] transition-transform duration-500">
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/20 font-bold text-6xl select-none">
+                                            {index + 1}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="px-4 pb-4">
-                                    <p className="text-muted-foreground">{project.description}</p>
-                                </div>
-                            </Card>
+                                    <div className="px-4 pb-4">
+                                        <p className="text-muted-foreground">{project.description}</p>
+                                    </div>
+                                </Card>
+                            </Link>
                         </motion.article>
                     ))}
                 </div>

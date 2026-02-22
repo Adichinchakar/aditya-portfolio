@@ -46,10 +46,10 @@ test('work section exists', async ({ page }) => {
     const workSection = page.locator('#work');
     await workSection.scrollIntoViewIfNeeded();
     await expect(workSection).toBeVisible();
-    await expect(workSection).toContainText(/Selected\s*Work/);
+    await expect(workSection).toContainText(/Selected\s*Case\s*Studies/);
 
     // Verify at least one project card is visible
-    const projectTitle = page.getByText('Infosys (EdTech AI)');
+    const projectTitle = page.getByText('Infosys Learning AI');
     await projectTitle.scrollIntoViewIfNeeded();
     await expect(projectTitle).toBeVisible({ timeout: 15000 });
 });

@@ -1,0 +1,29 @@
+﻿
+Running 21 tests using 12 workers
+
+  Ô£ô   1 [chromium] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title (3.5s)
+  Ô£ô   7 [chromium] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists (3.2s)
+  Ô£ô   3 [chromium] ÔÇ║ tests\home.spec.ts:34:5 ÔÇ║ contact section exists (3.6s)
+  Ô£ô   8 [chromium] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists (3.4s)
+  Ô£ô   2 [chromium] ÔÇ║ tests\home.spec.ts:26:5 ÔÇ║ aulys showcase exists (3.7s)
+About section: Scrolled to Design Thinking
+  Ô£ô   9 [chromium] ÔÇ║ tests\home.spec.ts:57:5 ÔÇ║ about section exists (3.4s)
+  Ô£ô   4 [firefox] ÔÇ║ tests\home.spec.ts:26:5 ÔÇ║ aulys showcase exists (3.8s)
+  Ô£ô   5 [chromium] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists (4.8s)
+  Ô£ô   6 [firefox] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title (3.6s)
+  Ô£ô  11 [firefox] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists (4.1s)
+  Ô£ô  10 [firefox] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists (4.0s)
+  Ô£ô  12 [firefox] ÔÇ║ tests\home.spec.ts:34:5 ÔÇ║ contact section exists (4.3s)
+  Ô£ô  18 [webkit] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title (3.4s)
+  Ô£ô  14 [webkit] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists (3.9s)
+  Ô£ô  16 [webkit] ÔÇ║ tests\home.spec.ts:26:5 ÔÇ║ aulys showcase exists (5.3s)
+  Ô£ô  17 [webkit] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists (5.6s)
+  Ô£ô  20 [webkit] ÔÇ║ tests\home.spec.ts:34:5 ÔÇ║ contact section exists (4.2s)
+  Ô£ô  13 [firefox] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists (5.9s)
+About section: Scrolled to Design Thinking
+  Ô£ô  15 [firefox] ÔÇ║ tests\home.spec.ts:57:5 ÔÇ║ about section exists (5.9s)
+About section: Scrolled to Design Thinking
+  Ô£ô  21 [webkit] ÔÇ║ tests\home.spec.ts:57:5 ÔÇ║ about section exists (7.7s)
+  Ô£ô  19 [webkit] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists (9.3s)
+
+  21 passed (21.6s)

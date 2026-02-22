@@ -13,21 +13,21 @@ export function Hero() {
             <div className="max-w-3xl w-full flex flex-col items-center text-center space-y-8">
 
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/50 border border-zinc-200 backdrop-blur-sm">
                     <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                     </span>
-                    <span className="text-xs font-medium text-zinc-300">Available for Senior Roles</span>
+                    <span className="text-xs font-medium text-zinc-700">Available for Senior Roles</span>
                 </div>
 
                 {/* Headlines */}
                 <div className="space-y-4">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-100">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-900">
                         Bridging the gap between <br className="hidden md:block" />
-                        <span className="text-zinc-100">Design</span> & <span className="text-zinc-100">Engineering</span>.
+                        <span className="text-zinc-900">Design</span> & <span className="text-zinc-900">Engineering</span>.
                     </h1>
-                    <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
                         Senior Product Designer specializing in Design Systems, WCAG 2.2 Accessibility, and AI Workflows. Currently building tools at Infosys.
                     </p>
                 </div>
@@ -45,30 +45,30 @@ export function Hero() {
                     >
                         {[...Array(4)].map((_, i) => (
                             <React.Fragment key={i}>
-                                <span>React 19</span> <span>•</span>
-                                <span>TypeScript</span> <span>•</span>
-                                <span>Design Systems</span> <span>•</span>
-                                <span>WCAG 2.2</span> <span>•</span>
-                                <span>Figma Plugin API</span> <span>•</span>
-                                <span>AI Agents</span> <span>•</span>
+                                <span>React 19</span> <span className="text-zinc-700 mx-2">/</span>
+                                <span>TypeScript</span> <span className="text-zinc-700 mx-2">/</span>
+                                <span>Design Systems</span> <span className="text-zinc-700 mx-2">/</span>
+                                <span>WCAG 2.2</span> <span className="text-zinc-700 mx-2">/</span>
+                                <span>Figma Plugin API</span> <span className="text-zinc-700 mx-2">/</span>
+                                <span>AI Agents</span> <span className="text-zinc-700 mx-2">/</span>
                             </React.Fragment>
                         ))}
                     </motion.div>
                 </div>
 
                 {/* Designer vs Engineer Toggle Interaction */}
-                <div className="mt-12 p-1 bg-zinc-900/50 border border-zinc-800 rounded-2xl backdrop-blur-sm w-full max-w-md mx-auto">
+                <div className="mt-12 p-1 bg-white/50 border border-zinc-200 rounded-2xl backdrop-blur-sm w-full max-w-md mx-auto">
                     {/* Toggle Switch */}
-                    <div className="flex p-1 bg-zinc-950/50 rounded-xl mb-6 relative">
+                    <div className="flex p-1 bg-zinc-50/50 rounded-xl mb-6 relative">
                         <div
-                            className="absolute inset-y-1 w-1/2 bg-zinc-800 rounded-lg shadow-sm transition-all duration-300 ease-spring"
+                            className="absolute inset-y-1 w-1/2 bg-zinc-100 rounded-lg shadow-sm transition-all duration-300 ease-spring"
                             style={{ left: isEngineer ? '50%' : '4px', width: 'calc(50% - 6px)' }}
                         />
                         <button
                             onClick={() => setIsEngineer(false)}
                             className={cn(
                                 "relative z-10 flex-1 flex items-center justify-center gap-2 py-2 text-sm font-medium transition-colors duration-200",
-                                !isEngineer ? "text-zinc-100" : "text-zinc-500 hover:text-zinc-300"
+                                !isEngineer ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-700"
                             )}
                         >
                             <LayoutTemplate className="w-4 h-4" />
@@ -78,7 +78,7 @@ export function Hero() {
                             onClick={() => setIsEngineer(true)}
                             className={cn(
                                 "relative z-10 flex-1 flex items-center justify-center gap-2 py-2 text-sm font-medium transition-colors duration-200",
-                                isEngineer ? "text-zinc-100" : "text-zinc-500 hover:text-zinc-300"
+                                isEngineer ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-700"
                             )}
                         >
                             <Code className="w-4 h-4" />
@@ -87,7 +87,7 @@ export function Hero() {
                     </div>
 
                     {/* Interaction Visual */}
-                    <div className="h-48 flex items-center justify-center border-t border-zinc-800/50 relative overflow-hidden">
+                    <div className="h-48 flex items-center justify-center border-t border-zinc-200/50 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-50" />
 
                         {/* DESIGNER STATE */}
@@ -107,14 +107,14 @@ export function Hero() {
                             animate={{ opacity: isEngineer ? 1 : 0, scale: isEngineer ? 1 : 0.95, y: isEngineer ? 0 : -10 }}
                             className={cn("absolute w-full px-8 text-left", !isEngineer && "pointer-events-none")}
                         >
-                            <pre className="font-mono text-xs bg-zinc-950/80 p-4 rounded-lg border border-zinc-800 overflow-x-auto">
+                            <pre className="font-mono text-xs bg-zinc-50/80 p-4 rounded-lg border border-zinc-200 overflow-x-auto">
                                 <code>
                                     <span className="text-purple-400">export</span> <span className="text-purple-400">function</span> <span className="text-yellow-200">Button</span>() {"{"}
                                     {"\n"}  <span className="text-purple-400">return</span> (
-                                    {"\n"}    <span className="text-zinc-400">&lt;</span><span className="text-blue-400">button</span>
-                                    {"\n"}      <span className="text-sky-300">className</span>=<span className="text-green-300">"bg-blue-600..."</span><span className="text-zinc-400">&gt;</span>
+                                    {"\n"}    <span className="text-zinc-600">&lt;</span><span className="text-blue-400">button</span>
+                                    {"\n"}      <span className="text-sky-300">className</span>=<span className="text-green-300">"bg-blue-600..."</span><span className="text-zinc-600">&gt;</span>
                                     {"\n"}      Start Project
-                                    {"\n"}    <span className="text-zinc-400">&lt;/</span><span className="text-blue-400">button</span><span className="text-zinc-400">&gt;</span>
+                                    {"\n"}    <span className="text-zinc-600">&lt;/</span><span className="text-blue-400">button</span><span className="text-zinc-600">&gt;</span>
                                     {"\n"}  );
                                     {"\n"}{"}"}
                                 </code>
@@ -126,7 +126,7 @@ export function Hero() {
             </div>
 
             {/* Subtle Background Gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-zinc-900/20 rounded-[100%] blur-[120px] -z-10 pointer-events-none mix-blend-screen" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-white/20 rounded-[100%] blur-[120px] -z-10 pointer-events-none mix-blend-multiply" />
         </section>
     );
 }

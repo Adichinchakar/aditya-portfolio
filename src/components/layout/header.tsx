@@ -28,7 +28,7 @@ export function Header() {
         <header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                isScrolled ? "py-4 bg-background/80 backdrop-blur-md border-b border-white/5" : "py-6 bg-transparent"
+                isScrolled ? "py-4 bg-background/80 backdrop-blur-md border-b border-zinc-100" : "py-6 bg-transparent"
             )}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
@@ -72,7 +72,7 @@ export function Header() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-background border-b border-white/10 p-6 md:hidden flex flex-col gap-4"
+                        className="absolute top-full left-0 right-0 bg-background border-b border-zinc-200 p-6 md:hidden flex flex-col gap-4"
                     >
                         {navLinks.map((link) => (
                             <Link

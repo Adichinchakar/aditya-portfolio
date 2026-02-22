@@ -1,0 +1,115 @@
+﻿
+Running 21 tests using 12 workers
+
+  Ô£ô   2 [chromium] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title (2.8s)
+  Ô£ô   3 [chromium] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists (2.8s)
+  Ô£ô   1 [chromium] ÔÇ║ tests\home.spec.ts:26:5 ÔÇ║ aulys showcase exists (2.9s)
+  Ô£ô   9 [chromium] ÔÇ║ tests\home.spec.ts:34:5 ÔÇ║ contact section exists (2.6s)
+  Ô£ô  10 [chromium] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists (2.6s)
+About section: Scrolled to Design Thinking
+  Ô£ô   8 [chromium] ÔÇ║ tests\home.spec.ts:57:5 ÔÇ║ about section exists (2.8s)
+  Ô£ô   7 [firefox] ÔÇ║ tests\home.spec.ts:26:5 ÔÇ║ aulys showcase exists (3.9s)
+  Ô£ô   6 [firefox] ÔÇ║ tests\home.spec.ts:34:5 ÔÇ║ contact section exists (4.0s)
+  Ô£ô  12 [firefox] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title (3.3s)
+  Ô£ÿ   4 [chromium] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists (7.9s)
+  Ô£ô   5 [firefox] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists (6.0s)
+  Ô£ô  14 [webkit] ÔÇ║ tests\home.spec.ts:3:5 ÔÇ║ has title (3.9s)
+  Ô£ô  15 [webkit] ÔÇ║ tests\home.spec.ts:19:5 ÔÇ║ hero section exists (4.1s)
+  Ô£ô  11 [firefox] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists (5.7s)
+  Ô£ô  17 [webkit] ÔÇ║ tests\home.spec.ts:26:5 ÔÇ║ aulys showcase exists (5.9s)
+  Ô£ô  18 [webkit] ÔÇ║ tests\home.spec.ts:10:5 ÔÇ║ experience section exists (6.0s)
+  Ô£ô  19 [webkit] ÔÇ║ tests\home.spec.ts:34:5 ÔÇ║ contact section exists (4.7s)
+About section: Scrolled to Design Thinking
+  Ô£ô  16 [firefox] ÔÇ║ tests\home.spec.ts:57:5 ÔÇ║ about section exists (6.3s)
+About section: Scrolled to Design Thinking
+  Ô£ô  21 [webkit] ÔÇ║ tests\home.spec.ts:57:5 ÔÇ║ about section exists (7.1s)
+  Ô£ÿ  13 [firefox] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists (11.1s)
+  Ô£ÿ  20 [webkit] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists (9.1s)
+
+
+  1) [chromium] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#work')
+    Expected pattern: [32m/Selected\s*Work/[39m
+    Received string:  [31m"Selected Case StudiesSelectedCaseStudies(04)Simplifai Design SystemA comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.Design SystemsArchitecture10x Faster UIAulysIntelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.AI AgentFigma PluginTypescriptInfosys Learning AIConversational UX for large-scale learning platforms, simplifying complex educational workflows.AI/MLUX StrategyEnterpriseKeywordio DashboardHigh-density data visualization dashboards for digital marketing ad performance.Data VizB2B SaaS"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#work')[22m
+    [2m    8 ├ù locator resolved to <section id="work" class="py-32 px-6 relative overflow-hidden">ÔÇª</section>[22m
+    [2m      - unexpected value "Selected Case StudiesSelectedCaseStudies(04)Simplifai Design SystemA comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.Design SystemsArchitecture10x Faster UIAulysIntelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.AI AgentFigma PluginTypescriptInfosys Learning AIConversational UX for large-scale learning platforms, simplifying complex educational workflows.AI/MLUX StrategyEnterpriseKeywordio DashboardHigh-density data visualization dashboards for digital marketing ad performance.Data VizB2B SaaS"[22m
+
+
+      47 |     await workSection.scrollIntoViewIfNeeded();
+      48 |     await expect(workSection).toBeVisible();
+    > 49 |     await expect(workSection).toContainText(/Selected\s*Work/);
+         |                               ^
+      50 |
+      51 |     // Verify at least one project card is visible
+      52 |     const projectTitle = page.getByText('Infosys (EdTech AI)');
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:49:31
+
+    Error Context: test-results\home-work-section-exists-chromium\error-context.md
+
+  2) [firefox] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#work')
+    Expected pattern: [32m/Selected\s*Work/[39m
+    Received string:  [31m"Selected Case StudiesSelectedCaseStudies(04)Simplifai Design SystemA comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.Design SystemsArchitecture10x Faster UIAulysIntelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.AI AgentFigma PluginTypescriptInfosys Learning AIConversational UX for large-scale learning platforms, simplifying complex educational workflows.AI/MLUX StrategyEnterpriseKeywordio DashboardHigh-density data visualization dashboards for digital marketing ad performance.Data VizB2B SaaS"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#work')[22m
+    [2m    8 ├ù locator resolved to <section id="work" class="py-32 px-6 relative overflow-hidden">ÔÇª</section>[22m
+    [2m      - unexpected value "Selected Case StudiesSelectedCaseStudies(04)Simplifai Design SystemA comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.Design SystemsArchitecture10x Faster UIAulysIntelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.AI AgentFigma PluginTypescriptInfosys Learning AIConversational UX for large-scale learning platforms, simplifying complex educational workflows.AI/MLUX StrategyEnterpriseKeywordio DashboardHigh-density data visualization dashboards for digital marketing ad performance.Data VizB2B SaaS"[22m
+
+
+      47 |     await workSection.scrollIntoViewIfNeeded();
+      48 |     await expect(workSection).toBeVisible();
+    > 49 |     await expect(workSection).toContainText(/Selected\s*Work/);
+         |                               ^
+      50 |
+      51 |     // Verify at least one project card is visible
+      52 |     const projectTitle = page.getByText('Infosys (EdTech AI)');
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:49:31
+
+    Error Context: test-results\home-work-section-exists-firefox\error-context.md
+
+  3) [webkit] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#work')
+    Expected pattern: [32m/Selected\s*Work/[39m
+    Received string:  [31m"Selected Case StudiesSelectedCaseStudies(04)Simplifai Design SystemA comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.Design SystemsArchitecture10x Faster UIAulysIntelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.AI AgentFigma PluginTypescriptInfosys Learning AIConversational UX for large-scale learning platforms, simplifying complex educational workflows.AI/MLUX StrategyEnterpriseKeywordio DashboardHigh-density data visualization dashboards for digital marketing ad performance.Data VizB2B SaaS"[39m
+    Timeout: 5000ms
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#work')[22m
+    [2m    9 ├ù locator resolved to <section id="work" class="py-32 px-6 relative overflow-hidden">ÔÇª</section>[22m
+    [2m      - unexpected value "Selected Case StudiesSelectedCaseStudies(04)Simplifai Design SystemA comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.Design SystemsArchitecture10x Faster UIAulysIntelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.AI AgentFigma PluginTypescriptInfosys Learning AIConversational UX for large-scale learning platforms, simplifying complex educational workflows.AI/MLUX StrategyEnterpriseKeywordio DashboardHigh-density data visualization dashboards for digital marketing ad performance.Data VizB2B SaaS"[22m
+
+
+      47 |     await workSection.scrollIntoViewIfNeeded();
+      48 |     await expect(workSection).toBeVisible();
+    > 49 |     await expect(workSection).toContainText(/Selected\s*Work/);
+         |                               ^
+      50 |
+      51 |     // Verify at least one project card is visible
+      52 |     const projectTitle = page.getByText('Infosys (EdTech AI)');
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\home.spec.ts:49:31
+
+    Error Context: test-results\home-work-section-exists-webkit\error-context.md
+
+  3 failed
+    [chromium] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [firefox] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [webkit] ÔÇ║ tests\home.spec.ts:44:5 ÔÇ║ work section exists ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+  18 passed (24.6s)

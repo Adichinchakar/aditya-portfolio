@@ -8,7 +8,7 @@ import { Zap, CheckCircle2, Globe2, ArrowRight } from "lucide-react";
 export function AulysShowcase() {
     return (
         <section className="container mx-auto px-6 py-24">
-            <div className="relative rounded-3xl overflow-hidden bg-zinc-950 border border-zinc-800 p-8 md:p-12 lg:p-16">
+            <div className="relative rounded-3xl overflow-hidden bg-zinc-50 border border-zinc-200 p-8 md:p-12 lg:p-16">
 
                 {/* Background Glow */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10" />
@@ -22,34 +22,34 @@ export function AulysShowcase() {
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium">
                                 Featured Project
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-100">
+                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900">
                                 Aulys: The AI Accessibility Engine
                             </h2>
-                            <p className="text-lg text-zinc-400 max-w-xl">
+                            <p className="text-lg text-zinc-600 max-w-xl">
                                 Figma Plugin & SaaS Platform • Built with React 19, Vite, & TypeScript.
                             </p>
                         </div>
 
                         <div className="grid sm:grid-cols-3 gap-6">
                             <div className="space-y-2">
-                                <div className="p-2 w-fit rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-100">
+                                <div className="p-2 w-fit rounded-lg bg-white border border-zinc-200 text-zinc-900">
                                     <Zap className="w-5 h-5" />
                                 </div>
-                                <h4 className="font-semibold text-zinc-100">Ultra Fast</h4>
+                                <h4 className="font-semibold text-zinc-900">Ultra Fast</h4>
                                 <p className="text-sm text-zinc-500">Scans 500+ layers in &lt;10s</p>
                             </div>
                             <div className="space-y-2">
-                                <div className="p-2 w-fit rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-100">
+                                <div className="p-2 w-fit rounded-lg bg-white border border-zinc-200 text-zinc-900">
                                     <CheckCircle2 className="w-5 h-5" />
                                 </div>
-                                <h4 className="font-semibold text-zinc-100">Auto Fix</h4>
+                                <h4 className="font-semibold text-zinc-900">Auto Fix</h4>
                                 <p className="text-sm text-zinc-500">Automated WCAG 2.2 Fixes</p>
                             </div>
                             <div className="space-y-2">
-                                <div className="p-2 w-fit rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-100">
+                                <div className="p-2 w-fit rounded-lg bg-white border border-zinc-200 text-zinc-900">
                                     <Globe2 className="w-5 h-5" />
                                 </div>
-                                <h4 className="font-semibold text-zinc-100">Global</h4>
+                                <h4 className="font-semibold text-zinc-900">Global</h4>
                                 <p className="text-sm text-zinc-500">Internationalization (RTL/CJK)</p>
                             </div>
                         </div>
@@ -61,9 +61,9 @@ export function AulysShowcase() {
 
                     {/* Visual Mock Side */}
                     <div className="relative">
-                        <div className="relative bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl overflow-hidden aspect-[4/3] flex flex-col">
+                        <div className="relative bg-white border border-zinc-200 rounded-xl shadow-2xl overflow-hidden aspect-[4/3] flex flex-col">
                             {/* Mock Header */}
-                            <div className="h-10 border-b border-zinc-800 bg-zinc-900/50 backdrop-blur flex items-center px-4 gap-2">
+                            <div className="h-10 border-b border-zinc-200 bg-white/50 backdrop-blur flex items-center px-4 gap-2">
                                 <div className="flex gap-1.5">
                                     <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
                                     <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
@@ -73,15 +73,15 @@ export function AulysShowcase() {
                             </div>
 
                             {/* Mock Body - Animated Scan */}
-                            <div className="flex-1 p-6 space-y-4 bg-zinc-950/50 relative">
+                            <div className="flex-1 p-6 space-y-4 bg-zinc-50/50 relative">
 
                                 {/* Progress Section */}
                                 <div className="space-y-2">
-                                    <div className="flex justify-between text-xs text-zinc-400">
+                                    <div className="flex justify-between text-xs text-zinc-600">
                                         <span>Running Audit...</span>
                                         <span>78%</span>
                                     </div>
-                                    <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
+                                    <div className="h-1 bg-zinc-100 rounded-full overflow-hidden">
                                         <motion.div
                                             className="h-full bg-blue-500"
                                             initial={{ width: "0%" }}
@@ -99,11 +99,11 @@ export function AulysShowcase() {
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: i * 0.5 }}
-                                            className="flex items-center gap-3 p-3 rounded-lg bg-zinc-900 border border-zinc-800/50"
+                                            className="flex items-center gap-3 p-3 rounded-lg bg-white border border-zinc-200/50"
                                         >
                                             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                            <div className="h-2 w-24 bg-zinc-800 rounded" />
-                                            <div className="h-2 w-12 bg-zinc-800/50 rounded ml-auto" />
+                                            <div className="h-2 w-24 bg-zinc-100 rounded" />
+                                            <div className="h-2 w-12 bg-zinc-100/50 rounded ml-auto" />
                                         </motion.div>
                                     ))}
                                     <motion.div
@@ -126,13 +126,13 @@ export function AulysShowcase() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 2.5 }}
-                            className="absolute -bottom-6 -right-6 bg-zinc-900 border border-zinc-800 p-4 rounded-xl shadow-xl flex items-center gap-3"
+                            className="absolute -bottom-6 -right-6 bg-white border border-zinc-200 p-4 rounded-xl shadow-xl flex items-center gap-3"
                         >
                             <div className="p-2 bg-green-500/10 rounded-lg text-green-400">
                                 <CheckCircle2 className="w-5 h-5" />
                             </div>
                             <div>
-                                <div className="text-sm font-semibold text-zinc-100">Audit Complete</div>
+                                <div className="text-sm font-semibold text-zinc-900">Audit Complete</div>
                                 <div className="text-xs text-zinc-500">No errors found</div>
                             </div>
                         </motion.div>

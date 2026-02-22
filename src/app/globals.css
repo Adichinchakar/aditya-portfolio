@@ -6,44 +6,44 @@
   /* Using Inter for headings as requested */
   --font-mono: var(--font-jetbrains-mono);
 
-  --color-background: #09090b;
-  /* Zinc-950 */
-  --color-foreground: #a1a1aa;
-  /* Zinc-400 for body text */
+  --color-background: #fafafa;
+  /* Zinc-50 */
+  --color-foreground: #27272a;
+  /* Zinc-800 for body text */
 
-  --color-heading: #f4f4f5;
-  /* Zinc-100 for headings */
+  --color-heading: #09090b;
+  /* Zinc-950 for headings */
 
-  --color-card: rgba(24, 24, 27, 0.5);
-  /* Zinc-900/50 */
-  --color-card-foreground: #f4f4f5;
+  --color-card: rgba(255, 255, 255, 0.7);
+  /* White with opacity */
+  --color-card-foreground: #09090b;
 
-  --color-popover: #09090b;
-  --color-popover-foreground: #f4f4f5;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #09090b;
 
-  --color-primary: #FAFAFA;
-  --color-primary-foreground: #09090b;
+  --color-primary: #09090b;
+  --color-primary-foreground: #fafafa;
 
-  --color-secondary: #27272a;
-  /* Zinc-800 */
-  --color-secondary-foreground: #FAFAFA;
+  --color-secondary: #f4f4f5;
+  /* Zinc-100 */
+  --color-secondary-foreground: #09090b;
 
-  --color-muted: #27272a;
-  /* Zinc-800 */
-  --color-muted-foreground: #a1a1aa;
-  /* Zinc-400 */
+  --color-muted: #f4f4f5;
+  /* Zinc-100 */
+  --color-muted-foreground: #71717a;
+  /* Zinc-500 */
 
   --color-accent: #2563eb;
   /* Blue-600 */
-  --color-accent-foreground: #FAFAFA;
+  --color-accent-foreground: #fafafa;
 
   --color-destructive: #ef4444;
-  --color-destructive-foreground: #FAFAFA;
+  --color-destructive-foreground: #fafafa;
 
-  --color-border: #27272a;
-  /* Zinc-800 */
-  --color-input: #27272a;
-  /* Zinc-800 */
+  --color-border: #e4e4e7;
+  /* Zinc-200 */
+  --color-input: #e4e4e7;
+  /* Zinc-200 */
   --color-ring: #2563eb;
   /* Blue-600 */
 
@@ -81,8 +81,8 @@
 }
 
 :root {
-  --background: #09090b;
-  --foreground: #a1a1aa;
+  --background: #fafafa;
+  --foreground: #27272a;
 }
 
 body {
@@ -109,16 +109,16 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #fafafa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #e4e4e7;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #d4d4d8;
 }
 
 /* Code blocks */
@@ -176,4 +176,11 @@ html.lenis body {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+.pattern-grid {
+  background-image: linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
 }

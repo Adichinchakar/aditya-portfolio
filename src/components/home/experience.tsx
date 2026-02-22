@@ -88,7 +88,7 @@ export function ExperienceGrid() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ type: "spring" as const, stiffness: 260, damping: 20 }}
-                    className="text-3xl font-bold tracking-tight text-zinc-100"
+                    className="text-3xl font-bold tracking-tight text-zinc-900"
                 >
                     Engineering Experience
                 </motion.h2>
@@ -101,7 +101,7 @@ export function ExperienceGrid() {
                         damping: 20,
                         delay: 0.1,
                     }}
-                    className="text-zinc-400 mt-2 text-lg"
+                    className="text-zinc-600 mt-2 text-lg"
                 >
                     Architecting scalable solutions.
                 </motion.p>
@@ -120,7 +120,7 @@ export function ExperienceGrid() {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className={cn(
-                            "relative group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-md p-8 flex flex-col justify-between transition-colors duration-300",
+                            "relative group overflow-hidden rounded-2xl border border-zinc-200 bg-white/50 backdrop-blur-md p-8 flex flex-col justify-between transition-colors duration-300",
                             exp.colSpan,
                             exp.border
                         )}
@@ -143,13 +143,13 @@ export function ExperienceGrid() {
                             </div>
 
                             <div className="mb-auto">
-                                <h3 className="text-xl font-semibold text-zinc-100 mb-1 group-hover:text-white transition-colors">
+                                <h3 className="text-xl font-semibold text-zinc-900 mb-1 group-hover:text-zinc-900 transition-colors">
                                     {exp.company}
                                 </h3>
-                                <p className="text-zinc-400 text-sm mb-6">{exp.role}</p>
+                                <p className="text-zinc-600 text-sm mb-6">{exp.role}</p>
 
                                 <div className="mb-4">
-                                    <span className="text-3xl font-bold text-zinc-100 block tracking-tight">
+                                    <span className="text-3xl font-bold text-zinc-900 block tracking-tight">
                                         {exp.metric}
                                     </span>
                                     <span className="text-zinc-500 text-xs uppercase tracking-wider font-medium">
@@ -158,7 +158,7 @@ export function ExperienceGrid() {
                                 </div>
                             </div>
 
-                            <p className="text-zinc-400 leading-relaxed text-sm max-w-lg">
+                            <p className="text-zinc-600 leading-relaxed text-sm max-w-lg">
                                 {exp.description}
                             </p>
                         </div>

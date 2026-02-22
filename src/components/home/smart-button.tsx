@@ -45,7 +45,7 @@ export function SmartButton() {
                             initial={{ width: "48px", borderRadius: "24px", opacity: 0 }}
                             animate={{ width: "48px", borderRadius: "50%", opacity: 1 }}
                             exit={{ width: "48px", opacity: 0, scale: 0.8 }}
-                            className="bg-zinc-700 text-white w-12 h-12 flex items-center justify-center rounded-full"
+                            className="bg-zinc-700 text-zinc-900 w-12 h-12 flex items-center justify-center rounded-full"
                         >
                             <Loader2 className="w-5 h-5 animate-spin" />
                         </motion.div>
@@ -57,7 +57,7 @@ export function SmartButton() {
                             initial={{ width: "48px", opacity: 0, scale: 0.8 }}
                             animate={{ width: "auto", borderRadius: "24px", opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="bg-green-500 text-white px-4 py-2 rounded-full flex items-center gap-2 font-medium shadow-lg shadow-green-500/20"
+                            className="bg-green-500 text-zinc-900 px-4 py-2 rounded-full flex items-center gap-2 font-medium shadow-lg shadow-green-500/20"
                         >
                             <Check className="w-4 h-4" />
                             <span>Deployed!</span>
@@ -69,7 +69,7 @@ export function SmartButton() {
             <button
                 onClick={handleReset}
                 className={cn(
-                    "text-zinc-500 hover:text-zinc-300 text-sm flex items-center gap-2 transition-colors",
+                    "text-zinc-500 hover:text-zinc-700 text-sm flex items-center gap-2 transition-colors",
                     status === "idle" && "opacity-0 pointer-events-none"
                 )}
             >

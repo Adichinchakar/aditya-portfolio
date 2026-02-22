@@ -1,9 +1,11 @@
 import { Hero } from "@/components/home/hero";
 import { ExperienceGrid } from "@/components/home/experience";
 import { AulysShowcase } from "@/components/home/aulys-showcase";
+import { SimplifaiShowcase } from "@/components/home/simplifai-showcase";
 import { Testimonials } from "@/components/home/testimonials";
 import { ComponentLab } from "@/components/home/component-lab";
 import { SelectedWork } from "@/components/home/selected-work";
+import { Skills } from "@/components/home/skills";
 import { About } from "@/components/home/about";
 import { Contact } from "@/components/home/contact";
 import { MotionSection } from "@/components/layout/motion-section";
@@ -14,9 +16,11 @@ export default function Home() {
       <MotionSection><Hero /></MotionSection>
       <MotionSection delay={0.1}><AulysShowcase /></MotionSection>
       <MotionSection delay={0.1}><ExperienceGrid /></MotionSection>
+      <SimplifaiShowcase />
       <MotionSection delay={0.1}><Testimonials /></MotionSection>
       <MotionSection delay={0.1}><ComponentLab /></MotionSection>
       <MotionSection delay={0.1}><SelectedWork /></MotionSection>
+      <MotionSection delay={0.1}><Skills /></MotionSection>
       <MotionSection delay={0.1}><About /></MotionSection>
       <MotionSection delay={0.1}><Contact /></MotionSection>
     </div>

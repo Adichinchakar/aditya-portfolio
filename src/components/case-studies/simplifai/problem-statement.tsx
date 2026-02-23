@@ -48,7 +48,7 @@ export function ProblemStatement() {
                     transition={{ duration: 0.5 }}
                     className="flex items-center gap-2.5 mb-8"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/8 border border-red-500/20 text-red-600 text-sm font-semibold backdrop-blur-md">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/8 border border-red-500/20 text-red-700 text-sm font-semibold backdrop-blur-md">
                         <AlertTriangle className="w-3.5 h-3.5" />
                         The Challenge
                     </div>

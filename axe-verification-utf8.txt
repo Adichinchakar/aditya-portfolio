@@ -1,0 +1,861 @@
+﻿
+Running 5 tests using 5 workers
+
+  Ô£ô  5 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Work page (3.7s)
+  Ô£ô  2 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Aulys Case Study page (4.0s)
+
+Accessibility Violations on Home (/):
+1. [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds
+   - Element: <button class="px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700">Invoice Processing</button>
+   - Target: .hover\:text-zinc-700.px-5.py-2:nth-child(2)
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1
+   - Element: <button class="px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700">Support Routing</button>
+   - Target: .hover\:text-zinc-700.px-5.py-2:nth-child(3)
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1
+
+Accessibility Violations on Simplifai Case Study (/work/simplifai):
+1. [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds
+   - Element: <div class="flex items-center gap-2 mb-2 text-red-600 text-sm font-semibold uppercase tracking-wider">
+   - Target: .text-red-600.mb-2.tracking-wider
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.36 (foreground color: #e7000b, background color: #fef2f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <button class="px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700">ÔØî Before</button>
+   - Target: .flex-wrap.gap-4.justify-between > .gap-1.bg-zinc-100.p-1 > .hover\:text-zinc-700.px-5.py-2
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1
+   - Element: <div class="text-[10px] text-zinc-500 mt-0.5 truncate">SMTP ┬À SendGrid ┬À Mailchimp</div>
+   - Target: .py-2\.5.bg-purple-50.border-purple-200:nth-child(1) > .min-w-0 > .mt-0\.5.text-\[10px\].truncate
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <div class="text-[10px] text-zinc-500 mt-0.5 truncate">Slack ┬À Teams ┬À Webhooks</div>
+   - Target: .py-2\.5.bg-purple-50.border-purple-200:nth-child(2) > .min-w-0 > .mt-0\.5.text-\[10px\].truncate
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <div class="text-[10px] text-zinc-500 mt-0.5 truncate">Postgres ┬À Airtable ┬À Sheets</div>
+   - Target: .py-2\.5.bg-purple-50.border-purple-200:nth-child(3) > .min-w-0 > .mt-0\.5.text-\[10px\].truncate
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <button class="px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700">Invoice Processing</button>
+   - Target: .hover\:text-zinc-700.px-5.py-2:nth-child(2)
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1
+   - Element: <button class="px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700">Support Routing</button>
+   - Target: .hover\:text-zinc-700.px-5.py-2:nth-child(3)
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1
+
+Accessibility Violations on Simplifai Design System (/work/simplifai-design-system):
+1. [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds
+   - Element: <p class="text-sm text-emerald-600 leading-relaxed">Automated checks ensure <span class="font-semibold">4.5:1 contrast</span> and<span class="font-semibold"> 44px touch targets</span> on all interactive elements.</p>
+   - Target: .text-emerald-600.leading-relaxed
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <span class="font-semibold">4.5:1 contrast</span>
+   - Target: .text-emerald-600.leading-relaxed > .font-semibold:nth-child(1)
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <span class="font-semibold"> 44px touch targets</span>
+   - Target: .text-emerald-600.leading-relaxed > .font-semibold:nth-child(2)
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <span class="text-lg font-normal text-purple-500">faster</span>
+   - Target: .font-normal.text-lg.text-purple-500
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.83 (foreground color: #ad46ff, background color: #faf5ff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <span>WCAG AAA Compliant</span>
+   - Target: .text-emerald-600.font-medium.gap-2 > span
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.5 (foreground color: #009966, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <span class="text-orange-600 font-semibold">What if the product could govern its own quality?</span>
+   - Target: .text-orange-600.font-semibold
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.59 (foreground color: #f54900, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <button class="px-6 py-2.5 bg-[#2563EB] text-zinc-900/80 rounded-lg font-medium cursor-not-allowed opacity-90 relative">
+   - Target: .bg-\[\#2563EB\]
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 1.65 (foreground color: #575759, background color: #3a72ed, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <p class="text-red-500">Ratio is 3.1:1. Expected 4.5:1 (AA).</p>
+   - Target: .text-red-500
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.8 (foreground color: #fb2c36, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+   - Element: <p class="text-zinc-500 text-sm">Continue the journey</p>
+   - Target: .p-12.space-y-8.bg-zinc-900 > p
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+  Ô£ÿ  1 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Home page (4.4s)
+  Ô£ÿ  4 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Case Study page (4.3s)
+  Ô£ÿ  3 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Design System page (4.4s)
+
+
+  1) [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Home page 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -  1[39m
+    [31m+ Received  + 93[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",[39m
+    [31m+     "help": "Elements must meet minimum color contrast ratio thresholds",[39m
+    [31m+     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",[39m
+    [31m+     "id": "color-contrast",[39m
+    [31m+     "impact": "serious",[39m
+    [31m+     "nodes": Array [[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#f4f4f5",[39m
+    [31m+               "contrastRatio": 4.39,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "bold",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-center gap-1 p-1 rounded-xl bg-zinc-100 border border-zinc-200 mb-4 w-fit flex-wrap\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".gap-1.p-1.bg-zinc-100",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700\">Invoice Processing</button>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".hover\\:text-zinc-700.px-5.py-2:nth-child(2)",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#f4f4f5",[39m
+    [31m+               "contrastRatio": 4.39,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "bold",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-center gap-1 p-1 rounded-xl bg-zinc-100 border border-zinc-200 mb-4 w-fit flex-wrap\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".gap-1.p-1.bg-zinc-100",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700\">Support Routing</button>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".hover\\:text-zinc-700.px-5.py-2:nth-child(3)",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+     ],[39m
+    [31m+     "tags": Array [[39m
+    [31m+       "cat.color",[39m
+    [31m+       "wcag2aa",[39m
+    [31m+       "wcag143",[39m
+    [31m+       "TTv5",[39m
+    [31m+       "TT13.c",[39m
+    [31m+       "EN-301-549",[39m
+    [31m+       "EN-9.1.4.3",[39m
+    [31m+       "ACT",[39m
+    [31m+       "RGAAv4",[39m
+    [31m+       "RGAA-3.2.1",[39m
+    [31m+     ],[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(accessibilityScanResults.violations).toEqual([]);
+         |                                                         ^
+      37 |         });
+      38 |     }
+      39 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\accessibility.spec.ts:36:57
+
+    Error Context: test-results\accessibility-Accessibilit-2d724-WCAG-2-1-AA-Check-Home-page-chromium\error-context.md
+
+  2) [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Case Study page 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -   1[39m
+    [31m+ Received  + 268[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",[39m
+    [31m+     "help": "Elements must meet minimum color contrast ratio thresholds",[39m
+    [31m+     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",[39m
+    [31m+     "id": "color-contrast",[39m
+    [31m+     "impact": "serious",[39m
+    [31m+     "nodes": Array [[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#fef2f2",[39m
+    [31m+               "contrastRatio": 4.36,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#e7000b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.36 (foreground color: #e7000b, background color: #fef2f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"mb-8 p-4 rounded-xl bg-red-50 border border-red-200\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".bg-red-50",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.36 (foreground color: #e7000b, background color: #fef2f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<div class=\"flex items-center gap-2 mb-2 text-red-600 text-sm font-semibold uppercase tracking-wider\">",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-red-600.mb-2.tracking-wider",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#f4f4f5",[39m
+    [31m+               "contrastRatio": 4.39,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "bold",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-center gap-1 p-1 rounded-xl bg-zinc-100 border border-zinc-200\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".flex-wrap.gap-4.justify-between > .gap-1.bg-zinc-100.p-1",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700\">ÔØî Before</button>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".flex-wrap.gap-4.justify-between > .gap-1.bg-zinc-100.p-1 > .hover\\:text-zinc-700.px-5.py-2",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#faf5ff",[39m
+    [31m+               "contrastRatio": 4.49,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "7.5pt (10px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-start gap-2.5 px-3 py-2.5 rounded-xl border bg-purple-50 border-purple-200 w-full\" style=\"opacity: 1; transform: none;\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".py-2\\.5.bg-purple-50.border-purple-200:nth-child(1)",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<div class=\"text-[10px] text-zinc-500 mt-0.5 truncate\">SMTP ┬À SendGrid ┬À Mailchimp</div>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".py-2\\.5.bg-purple-50.border-purple-200:nth-child(1) > .min-w-0 > .mt-0\\.5.text-\\[10px\\].truncate",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#faf5ff",[39m
+    [31m+               "contrastRatio": 4.49,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "7.5pt (10px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-start gap-2.5 px-3 py-2.5 rounded-xl border bg-purple-50 border-purple-200 w-full\" style=\"opacity: 1; transform: none;\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".py-2\\.5.bg-purple-50.border-purple-200:nth-child(2)",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<div class=\"text-[10px] text-zinc-500 mt-0.5 truncate\">Slack ┬À Teams ┬À Webhooks</div>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".py-2\\.5.bg-purple-50.border-purple-200:nth-child(2) > .min-w-0 > .mt-0\\.5.text-\\[10px\\].truncate",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#faf5ff",[39m
+    [31m+               "contrastRatio": 4.49,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "7.5pt (10px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-start gap-2.5 px-3 py-2.5 rounded-xl border bg-purple-50 border-purple-200 w-full\" style=\"opacity: 1; transform: none;\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".py-2\\.5.bg-purple-50.border-purple-200:nth-child(3)",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.49 (foreground color: #71717b, background color: #faf5ff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<div class=\"text-[10px] text-zinc-500 mt-0.5 truncate\">Postgres ┬À Airtable ┬À Sheets</div>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".py-2\\.5.bg-purple-50.border-purple-200:nth-child(3) > .min-w-0 > .mt-0\\.5.text-\\[10px\\].truncate",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#f4f4f5",[39m
+    [31m+               "contrastRatio": 4.39,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "bold",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-center gap-1 p-1 rounded-xl bg-zinc-100 border border-zinc-200 mb-4 w-fit flex-wrap\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".max-w-6xl.container.mx-auto > .gap-1.bg-zinc-100.p-1",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700\">Invoice Processing</button>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".hover\\:text-zinc-700.px-5.py-2:nth-child(2)",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#f4f4f5",[39m
+    [31m+               "contrastRatio": 4.39,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "bold",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"flex items-center gap-1 p-1 rounded-xl bg-zinc-100 border border-zinc-200 mb-4 w-fit flex-wrap\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".max-w-6xl.container.mx-auto > .gap-1.bg-zinc-100.p-1",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 text-zinc-500 hover:text-zinc-700\">Support Routing</button>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".hover\\:text-zinc-700.px-5.py-2:nth-child(3)",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+     ],[39m
+    [31m+     "tags": Array [[39m
+    [31m+       "cat.color",[39m
+    [31m+       "wcag2aa",[39m
+    [31m+       "wcag143",[39m
+    [31m+       "TTv5",[39m
+    [31m+       "TT13.c",[39m
+    [31m+       "EN-301-549",[39m
+    [31m+       "EN-9.1.4.3",[39m
+    [31m+       "ACT",[39m
+    [31m+       "RGAAv4",[39m
+    [31m+       "RGAA-3.2.1",[39m
+    [31m+     ],[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(accessibilityScanResults.violations).toEqual([]);
+         |                                                         ^
+      37 |         });
+      38 |     }
+      39 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\accessibility.spec.ts:36:57
+
+    Error Context: test-results\accessibility-Accessibilit-02fbf-k-Simplifai-Case-Study-page-chromium\error-context.md
+
+  3) [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Design System page 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -   1[39m
+    [31m+ Received  + 344[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",[39m
+    [31m+     "help": "Elements must meet minimum color contrast ratio thresholds",[39m
+    [31m+     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",[39m
+    [31m+     "id": "color-contrast",[39m
+    [31m+     "impact": "serious",[39m
+    [31m+     "nodes": Array [[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#ecfdf5",[39m
+    [31m+               "contrastRatio": 3.46,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#009966",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"backdrop-blur-xl border rounded-xl bg-emerald-50 border-emerald-200 p-6\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".backdrop-blur-xl.bg-emerald-50.border-emerald-200",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<p class=\"text-sm text-emerald-600 leading-relaxed\">Automated checks ensure <span class=\"font-semibold\">4.5:1 contrast</span> and<span class=\"font-semibold\"> 44px touch targets</span> on all interactive elements.</p>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-emerald-600.leading-relaxed",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#ecfdf5",[39m
+    [31m+               "contrastRatio": 3.46,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#009966",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"backdrop-blur-xl border rounded-xl bg-emerald-50 border-emerald-200 p-6\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".backdrop-blur-xl.bg-emerald-50.border-emerald-200",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<span class=\"font-semibold\">4.5:1 contrast</span>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-emerald-600.leading-relaxed > .font-semibold:nth-child(1)",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#ecfdf5",[39m
+    [31m+               "contrastRatio": 3.46,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#009966",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"backdrop-blur-xl border rounded-xl bg-emerald-50 border-emerald-200 p-6\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".backdrop-blur-xl.bg-emerald-50.border-emerald-200",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.46 (foreground color: #009966, background color: #ecfdf5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<span class=\"font-semibold\"> 44px touch targets</span>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-emerald-600.leading-relaxed > .font-semibold:nth-child(2)",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#faf5ff",[39m
+    [31m+               "contrastRatio": 3.83,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#ad46ff",[39m
+    [31m+               "fontSize": "13.5pt (18px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.83 (foreground color: #ad46ff, background color: #faf5ff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"backdrop-blur-xl border rounded-xl bg-purple-50 border-purple-200 p-6\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".backdrop-blur-xl.p-6.bg-purple-50",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.83 (foreground color: #ad46ff, background color: #faf5ff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<span class=\"text-lg font-normal text-purple-500\">faster</span>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".font-normal.text-lg.text-purple-500",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#fafafa",[39m
+    [31m+               "contrastRatio": 3.5,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#009966",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.5 (foreground color: #009966, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"p-8 bg-zinc-50 rounded-2xl border border-zinc-200 relative group\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".space-y-6:nth-child(1) > .p-8.bg-zinc-50.group",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.5 (foreground color: #009966, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<span>WCAG AAA Compliant</span>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-emerald-600.font-medium.gap-2 > span",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#ffffff",[39m
+    [31m+               "contrastRatio": 3.59,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#f54900",[39m
+    [31m+               "fontSize": "12.0pt (16px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.59 (foreground color: #f54900, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<section class=\"py-24 px-6 bg-white border-t border-zinc-100 relative overflow-hidden\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".py-24:nth-child(8)",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.59 (foreground color: #f54900, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<span class=\"text-orange-600 font-semibold\">What if the product could govern its own quality?</span>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-orange-600.font-semibold",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#3a72ed",[39m
+    [31m+               "contrastRatio": 1.65,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#575759",[39m
+    [31m+               "fontSize": "12.0pt (16px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 1.65 (foreground color: #575759, background color: #3a72ed, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<button class=\"px-6 py-2.5 bg-[#2563EB] text-zinc-900/80 rounded-lg font-medium cursor-not-allowed opacity-90 relative\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".bg-\\[\\#2563EB\\]",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"p-8 bg-zinc-50 rounded-2xl border border-orange-200 relative overflow-hidden group\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".border-orange-200.p-8.bg-zinc-50",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 1.65 (foreground color: #575759, background color: #3a72ed, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-6 py-2.5 bg-[#2563EB] text-zinc-900/80 rounded-lg font-medium cursor-not-allowed opacity-90 relative\">",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".bg-\\[\\#2563EB\\]",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#ffffff",[39m
+    [31m+               "contrastRatio": 3.8,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#fb2c36",[39m
+    [31m+               "fontSize": "9.0pt (12px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.8 (foreground color: #fb2c36, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"bg-white border border-red-200 shadow-md text-red-700 text-xs p-3 rounded-xl max-w-[200px]\" style=\"opacity: 1; transform: none;\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".border-red-200",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.8 (foreground color: #fb2c36, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<p class=\"text-red-500\">Ratio is 3.1:1. Expected 4.5:1 (AA).</p>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-red-500",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#18181b",[39m
+    [31m+               "contrastRatio": 3.67,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#71717b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"bg-zinc-900 rounded-3xl p-12 text-center space-y-8\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".p-12.space-y-8.bg-zinc-900",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<p class=\"text-zinc-500 text-sm\">Continue the journey</p>",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".p-12.space-y-8.bg-zinc-900 > p",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+     ],[39m
+    [31m+     "tags": Array [[39m
+    [31m+       "cat.color",[39m
+    [31m+       "wcag2aa",[39m
+    [31m+       "wcag143",[39m
+    [31m+       "TTv5",[39m
+    [31m+       "TT13.c",[39m
+    [31m+       "EN-301-549",[39m
+    [31m+       "EN-9.1.4.3",[39m
+    [31m+       "ACT",[39m
+    [31m+       "RGAAv4",[39m
+    [31m+       "RGAA-3.2.1",[39m
+    [31m+     ],[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(accessibilityScanResults.violations).toEqual([]);
+         |                                                         ^
+      37 |         });
+      38 |     }
+      39 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\accessibility.spec.ts:36:57
+
+    Error Context: test-results\accessibility-Accessibilit-2bcfc-implifai-Design-System-page-chromium\error-context.md
+
+  3 failed
+    [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Home page 
+    [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Case Study page 
+    [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Design System page 
+  2 passed (7.0s)

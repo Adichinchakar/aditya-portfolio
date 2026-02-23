@@ -120,7 +120,7 @@ export function Hero() {
                             Let's Talk
                         </button>
                         <a
-                            href="/resume.pdf"
+                            href="/Aditya_Chinchakar_V1_FoundingDesigner.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-white text-zinc-900 font-semibold flex items-center gap-2 border border-zinc-200/80 shadow-sm backdrop-blur-md hover:bg-zinc-50 hover:scale-105 active:scale-95 transition-all"

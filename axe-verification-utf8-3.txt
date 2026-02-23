@@ -1,0 +1,190 @@
+﻿
+Running 5 tests using 5 workers
+
+  Ô£ô  1 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Work page (4.3s)
+  Ô£ô  4 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Aulys Case Study page (4.5s)
+
+Accessibility Violations on Simplifai Design System (/work/simplifai-design-system):
+1. [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds
+   - Element: <button class="px-6 py-2.5 bg-[#2563EB] text-white rounded-lg font-medium cursor-not-allowed opacity-90 relative">
+   - Target: .bg-\[\#2563EB\]
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.36 (foreground color: #ffffff, background color: #3a72ed, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1
+  Ô£ô  5 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Home page (4.7s)
+
+Accessibility Violations on Simplifai Case Study (/work/simplifai):
+1. [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds
+   - Element: <div class="flex items-center gap-2 mb-2 text-red-600 text-sm font-semibold uppercase tracking-wider">
+   - Target: .text-red-600.mb-2.tracking-wider
+   - Summary: Fix any of the following:
+  Element has insufficient color contrast of 4.36 (foreground color: #e7000b, background color: #fef2f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+  Ô£ÿ  3 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Design System page (4.8s)
+  Ô£ÿ  2 [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Case Study page (5.0s)
+
+
+  1) [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Case Study page 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -  1[39m
+    [31m+ Received  + 58[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",[39m
+    [31m+     "help": "Elements must meet minimum color contrast ratio thresholds",[39m
+    [31m+     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",[39m
+    [31m+     "id": "color-contrast",[39m
+    [31m+     "impact": "serious",[39m
+    [31m+     "nodes": Array [[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#fef2f2",[39m
+    [31m+               "contrastRatio": 4.36,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#e7000b",[39m
+    [31m+               "fontSize": "10.5pt (14px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.36 (foreground color: #e7000b, background color: #fef2f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"mb-8 p-4 rounded-xl bg-red-50 border border-red-200\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".bg-red-50",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.36 (foreground color: #e7000b, background color: #fef2f2, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<div class=\"flex items-center gap-2 mb-2 text-red-600 text-sm font-semibold uppercase tracking-wider\">",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".text-red-600.mb-2.tracking-wider",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+     ],[39m
+    [31m+     "tags": Array [[39m
+    [31m+       "cat.color",[39m
+    [31m+       "wcag2aa",[39m
+    [31m+       "wcag143",[39m
+    [31m+       "TTv5",[39m
+    [31m+       "TT13.c",[39m
+    [31m+       "EN-301-549",[39m
+    [31m+       "EN-9.1.4.3",[39m
+    [31m+       "ACT",[39m
+    [31m+       "RGAAv4",[39m
+    [31m+       "RGAA-3.2.1",[39m
+    [31m+     ],[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(accessibilityScanResults.violations).toEqual([]);
+         |                                                         ^
+      37 |         });
+      38 |     }
+      39 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\accessibility.spec.ts:36:57
+
+    Error Context: test-results\accessibility-Accessibilit-02fbf-k-Simplifai-Case-Study-page-chromium\error-context.md
+
+  2) [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Design System page 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  -  1[39m
+    [31m+ Received  + 64[39m
+
+    [32m- Array [][39m
+    [31m+ Array [[39m
+    [31m+   Object {[39m
+    [31m+     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",[39m
+    [31m+     "help": "Elements must meet minimum color contrast ratio thresholds",[39m
+    [31m+     "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",[39m
+    [31m+     "id": "color-contrast",[39m
+    [31m+     "impact": "serious",[39m
+    [31m+     "nodes": Array [[39m
+    [31m+       Object {[39m
+    [31m+         "all": Array [],[39m
+    [31m+         "any": Array [[39m
+    [31m+           Object {[39m
+    [31m+             "data": Object {[39m
+    [31m+               "bgColor": "#3a72ed",[39m
+    [31m+               "contrastRatio": 4.36,[39m
+    [31m+               "expectedContrastRatio": "4.5:1",[39m
+    [31m+               "fgColor": "#ffffff",[39m
+    [31m+               "fontSize": "12.0pt (16px)",[39m
+    [31m+               "fontWeight": "normal",[39m
+    [31m+               "messageKey": null,[39m
+    [31m+             },[39m
+    [31m+             "id": "color-contrast",[39m
+    [31m+             "impact": "serious",[39m
+    [31m+             "message": "Element has insufficient color contrast of 4.36 (foreground color: #ffffff, background color: #3a72ed, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+             "relatedNodes": Array [[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<button class=\"px-6 py-2.5 bg-[#2563EB] text-white rounded-lg font-medium cursor-not-allowed opacity-90 relative\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".bg-\\[\\#2563EB\\]",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+               Object {[39m
+    [31m+                 "html": "<div class=\"p-8 bg-zinc-50 rounded-2xl border border-orange-200 relative overflow-hidden group\">",[39m
+    [31m+                 "target": Array [[39m
+    [31m+                   ".border-orange-200.p-8.bg-zinc-50",[39m
+    [31m+                 ],[39m
+    [31m+               },[39m
+    [31m+             ],[39m
+    [31m+           },[39m
+    [31m+         ],[39m
+    [31m+         "failureSummary": "Fix any of the following:[39m
+    [31m+   Element has insufficient color contrast of 4.36 (foreground color: #ffffff, background color: #3a72ed, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",[39m
+    [31m+         "html": "<button class=\"px-6 py-2.5 bg-[#2563EB] text-white rounded-lg font-medium cursor-not-allowed opacity-90 relative\">",[39m
+    [31m+         "impact": "serious",[39m
+    [31m+         "none": Array [],[39m
+    [31m+         "target": Array [[39m
+    [31m+           ".bg-\\[\\#2563EB\\]",[39m
+    [31m+         ],[39m
+    [31m+       },[39m
+    [31m+     ],[39m
+    [31m+     "tags": Array [[39m
+    [31m+       "cat.color",[39m
+    [31m+       "wcag2aa",[39m
+    [31m+       "wcag143",[39m
+    [31m+       "TTv5",[39m
+    [31m+       "TT13.c",[39m
+    [31m+       "EN-301-549",[39m
+    [31m+       "EN-9.1.4.3",[39m
+    [31m+       "ACT",[39m
+    [31m+       "RGAAv4",[39m
+    [31m+       "RGAA-3.2.1",[39m
+    [31m+     ],[39m
+    [31m+   },[39m
+    [31m+ ][39m
+
+      34 |             }
+      35 |
+    > 36 |             expect(accessibilityScanResults.violations).toEqual([]);
+         |                                                         ^
+      37 |         });
+      38 |     }
+      39 | });
+        at C:\Users\Admin\Desktop\Portfolio Website\tests\accessibility.spec.ts:36:57
+
+    Error Context: test-results\accessibility-Accessibilit-2bcfc-implifai-Design-System-page-chromium\error-context.md
+
+  2 failed
+    [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Case Study page 
+    [chromium] ÔÇ║ tests\accessibility.spec.ts:14:13 ÔÇ║ Accessibility Checks (WCAG 2.1 AA) ÔÇ║ Check Simplifai Design System page 
+  3 passed (7.7s)

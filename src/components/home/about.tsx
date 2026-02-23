@@ -6,9 +6,9 @@ import { Lightbulb } from "lucide-react";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 
 const stats = [
-    { value: "3+", label: "Years Experience" },
-    { value: "5+", label: "Products Shipped" },
-    { value: "2", label: "Companies" },
+    { value: "7+", label: "Years Experience" },
+    { value: "10+", label: "Products Shipped" },
+    { value: "5+", label: "Companies" },
     { value: "1", label: "Live Plugin" },
 ];
 
@@ -86,7 +86,7 @@ export function About() {
                                     </svg>
                                 </button>
                                 <a
-                                    href="/resume.pdf"
+                                    href="/Aditya_Chinchakar_V1_FoundingDesigner.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-zinc-900 font-medium hover:bg-zinc-50 border border-zinc-200/80 transition-colors shadow-sm"

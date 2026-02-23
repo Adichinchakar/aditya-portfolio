@@ -17,26 +17,32 @@ const works = [
         spotlight: "rgba(99, 102, 241, 0.12)",
         border: "group-hover:border-indigo-500/30",
         delay: 0,
+        role: "Lead Architect",
+        metric: "42% Faster Dev Cycle",
     },
     {
         index: "02",
         company: "Aulys",
         description: "Intelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.",
         tags: ["AI Agent", "Figma Plugin", "Typescript"],
-        href: "/work/simplifai",
+        href: "/work/aulys",
         spotlight: "rgba(16, 185, 129, 0.12)",
         border: "group-hover:border-emerald-500/30",
         delay: 0.1,
+        role: "Frontend Engineer",
+        metric: "WCAG 2.2 AAA Compliance",
     },
     {
         index: "03",
-        company: "Infosys Learning AI",
-        description: "Conversational UX for large-scale learning platforms, simplifying complex educational workflows.",
-        tags: ["AI/ML", "UX Strategy", "Enterprise"],
-        href: "#work",
+        company: "Simplifai Workflow Engine",
+        description: "Node-based visual builder for complex enterprise AI automations. Democratizing logic creation without code.",
+        tags: ["Node Builder", "UX Strategy", "Enterprise"],
+        href: "/work/simplifai",
         spotlight: "rgba(249, 115, 22, 0.12)",
         border: "group-hover:border-orange-500/30",
         delay: 0.2,
+        role: "Product Designer",
+        metric: "Zero-Code Automation",
     },
     {
         index: "04",
@@ -47,6 +53,8 @@ const works = [
         spotlight: "rgba(168, 85, 247, 0.12)",
         border: "group-hover:border-violet-500/30",
         delay: 0.3,
+        role: "Product Designer",
+        metric: "Data Visualization",
     },
 ];
 
@@ -97,9 +105,21 @@ function WorkCard({ work }: { work: typeof works[0] }) {
                             <h3 className="text-2xl md:text-3xl font-black tracking-tight text-zinc-900 mb-3 group-hover:text-zinc-950 transition-colors">
                                 {work.company}
                             </h3>
-                            <p className="text-zinc-500 leading-relaxed font-medium line-clamp-3">
+                            <p className="text-zinc-500 leading-relaxed font-medium line-clamp-3 mb-6">
                                 {work.description}
                             </p>
+
+                            {/* Impact Info */}
+                            <div className="flex flex-col gap-2 mb-6">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider w-16">Role</span>
+                                    <span className="text-sm font-semibold text-zinc-700">{work.role}</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider w-16">Impact</span>
+                                    <span className="text-sm border border-zinc-200 bg-white/50 px-2 py-0.5 rounded-md font-semibold text-zinc-800 backdrop-blur-sm shadow-sm">{work.metric}</span>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Tags */}

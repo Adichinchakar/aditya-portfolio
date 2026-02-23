@@ -110,7 +110,7 @@ export function ComponentRedlines() {
                                 </div>
                                 <div className="space-y-1">
                                     <h4 className="text-emerald-700 font-bold">WCAG 2.2 AAA Compliant</h4>
-                                    <p className="text-sm text-emerald-600 leading-relaxed">
+                                    <p className="text-sm text-emerald-700 leading-relaxed">
                                         Automated checks ensure <span className="font-semibold">4.5:1 contrast</span> and
                                         <span className="font-semibold"> 44px touch targets</span> on all interactive elements.
                                     </p>
@@ -126,7 +126,7 @@ export function ComponentRedlines() {
                                 </div>
                                 <div className="space-y-1">
                                     <h4 className="text-purple-700 font-bold">Development Velocity</h4>
-                                    <div className="text-3xl font-bold text-zinc-900">42% <span className="text-lg font-normal text-purple-500">faster</span></div>
+                                    <div className="text-3xl font-bold text-zinc-900">42% <span className="text-lg font-normal text-purple-700">faster</span></div>
                                     <p className="text-sm text-purple-600">
                                         Reduction in UI dev time after implementing the tokenized system.
                                     </p>

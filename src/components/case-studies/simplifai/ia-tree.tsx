@@ -14,11 +14,11 @@ type View = "before" | "after";
 
 // ─── Before: chaos tiles ────────────────────────────────────────────────────
 const beforeTools = [
-    { label: "CRM Tool", icon: Users, color: "text-red-600", bg: "bg-red-50", border: "border-red-200", arrow: "→ email" },
-    { label: "Email Platform", icon: Mail, color: "text-orange-600", bg: "bg-orange-50", border: "border-orange-200", arrow: "→ Slack" },
-    { label: "Analytics Dashboard", icon: BarChart2, color: "text-yellow-600", bg: "bg-yellow-50", border: "border-yellow-200", arrow: "→ spreadsheet" },
-    { label: "Slack Alerts", icon: MessageSquare, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200", arrow: "→ CRM" },
-    { label: "Data Warehouse", icon: Database, color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200", arrow: "→ email" },
+    { label: "CRM Tool", icon: Users, color: "text-red-700", bg: "bg-red-50", border: "border-red-200", arrow: "→ email" },
+    { label: "Email Platform", icon: Mail, color: "text-orange-700", bg: "bg-orange-50", border: "border-orange-200", arrow: "→ Slack" },
+    { label: "Analytics Dashboard", icon: BarChart2, color: "text-yellow-700", bg: "bg-yellow-50", border: "border-yellow-200", arrow: "→ spreadsheet" },
+    { label: "Slack Alerts", icon: MessageSquare, color: "text-blue-700", bg: "bg-blue-50", border: "border-blue-200", arrow: "→ CRM" },
+    { label: "Data Warehouse", icon: Database, color: "text-purple-700", bg: "bg-purple-50", border: "border-purple-200", arrow: "→ email" },
     { label: "Manual Spreadsheets", icon: Activity, color: "text-zinc-500", bg: "bg-zinc-50", border: "border-zinc-200", arrow: "→ dashboard" },
 ];
 
@@ -152,7 +152,7 @@ export function IATree() {
                                 onClick={() => setView(v)}
                                 className={`px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${view === v
                                     ? "bg-white text-zinc-900 shadow-sm border border-zinc-200"
-                                    : "text-zinc-500 hover:text-zinc-700"
+                                    : "text-zinc-600 hover:text-zinc-800"
                                     }`}
                             >
                                 {v === "before" ? "❌ Before" : "✅ After"}
@@ -163,7 +163,7 @@ export function IATree() {
                     <div className="flex items-center gap-3 flex-wrap">
                         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200">
                             <span className="text-emerald-700 font-black text-sm">68%</span>
-                            <span className="text-emerald-600 text-xs font-medium">fewer navigation steps</span>
+                            <span className="text-emerald-700 text-xs font-medium">fewer navigation steps</span>
                         </div>
                         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200">
                             <span className="text-blue-700 font-black text-sm">6 apps</span>
@@ -205,7 +205,7 @@ export function IATree() {
                                         </div>
                                         <div className="min-w-0">
                                             <div className={`text-xs font-bold ${tool.color} truncate`}>{tool.label}</div>
-                                            <div className="text-[10px] text-zinc-400 font-mono mt-1 flex items-center gap-1">
+                                            <div className="text-[10px] text-zinc-500 font-mono mt-1 flex items-center gap-1">
                                                 <AlertCircle className="w-2.5 h-2.5 text-red-400 shrink-0" />
                                                 manually {tool.arrow}
                                             </div>
@@ -240,114 +240,119 @@ export function IATree() {
                         >
                             {/* Hint */}
                             <div className="flex items-center gap-2 mb-8">
-                                <p className="text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                                <p className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
                                     Redesigned IA — Simplifai Dashboard
                                 </p>
-                                <div className="ml-auto flex items-center gap-1.5 text-[11px] text-zinc-400 font-medium">
+                                <div className="ml-auto flex items-center gap-1.5 text-[11px] text-zinc-500 font-medium">
                                     <MousePointer2 className="w-3 h-3" />
                                     Click a section to explore
                                 </div>
                             </div>
 
-                            {/* Root */}
-                            <div className="flex flex-col items-center">
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                                    className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-zinc-900 text-white font-bold text-sm shadow-lg border border-zinc-700"
-                                >
-                                    <div className="w-7 h-7 rounded-lg bg-purple-600 flex items-center justify-center">
-                                        <Zap className="w-4 h-4 text-white" />
-                                    </div>
-                                    Simplifai Dashboard
-                                </motion.div>
+                            {/* Root Tree Wrapper for Mobile Scroll */}
+                            <div className="overflow-x-auto -mx-8 px-8 md:mx-0 md:px-0 pb-4">
+                                <div className="min-w-[650px] md:min-w-0">
+                                    {/* Root */}
+                                    <div className="flex flex-col items-center">
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                                            className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-zinc-900 text-white font-bold text-sm shadow-lg border border-zinc-700"
+                                        >
+                                            <div className="w-7 h-7 rounded-lg bg-purple-600 flex items-center justify-center">
+                                                <Zap className="w-4 h-4 text-white" />
+                                            </div>
+                                            Simplifai Dashboard
+                                        </motion.div>
 
-                                {/* Vertical stem from root */}
-                                <div className="w-px h-7 bg-zinc-300" />
+                                        {/* Vertical stem from root */}
+                                        <div className="w-px h-7 bg-zinc-300" />
 
-                                {/* Horizontal bar spanning 4 cols */}
-                                <div className="relative w-full">
-                                    {/* The spanning line */}
-                                    <div className="absolute top-0 left-[12.5%] right-[12.5%] h-px bg-zinc-300" />
+                                        {/* Horizontal bar spanning 4 cols */}
+                                        <div className="relative w-full">
+                                            {/* The spanning line */}
+                                            <div className="absolute top-0 left-[12.5%] right-[12.5%] h-px bg-zinc-300" />
 
-                                    {/* 4 branch columns */}
-                                    <div className="grid grid-cols-4 gap-3 pt-0">
-                                        {iaTree.map((node, i) => {
-                                            const isOpen = expandedNode === node.id;
-                                            return (
-                                                <div key={node.id} className="flex flex-col items-center gap-0">
-                                                    {/* Vertical stem from bar line */}
-                                                    <motion.div
-                                                        initial={{ scaleY: 0 }}
-                                                        animate={{ scaleY: 1 }}
-                                                        transition={{ delay: i * 0.07 + 0.1, duration: 0.3 }}
-                                                        style={{ originY: 0 }}
-                                                        className="w-px h-7 bg-zinc-300"
-                                                    />
-
-                                                    {/* L2 clickable node */}
-                                                    <motion.button
-                                                        initial={{ opacity: 0, y: 12 }}
-                                                        animate={{ opacity: 1, y: 0 }}
-                                                        transition={{ delay: i * 0.07 + 0.15, type: "spring", stiffness: 260, damping: 20 }}
-                                                        onClick={() => toggle(node.id)}
-                                                        className={`w-full rounded-2xl border p-4 flex flex-col items-center gap-2 text-center transition-all duration-200 ${isOpen
-                                                            ? `${node.bg} ${node.border} shadow-md scale-[1.03]`
-                                                            : `bg-white border-zinc-200 hover:${node.bg} hover:${node.border} hover:shadow-sm`
-                                                            }`}
-                                                    >
-                                                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${isOpen ? `bg-white` : "bg-zinc-50 border border-zinc-200"}`}>
-                                                            <node.icon className={`w-5 h-5 ${isOpen ? node.color : "text-zinc-400"}`} />
-                                                        </div>
-                                                        <span className={`text-xs font-bold ${isOpen ? node.color : "text-zinc-600"}`}>
-                                                            {node.label}
-                                                        </span>
-                                                        <ChevronDown
-                                                            className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? `${node.color} rotate-180` : "text-zinc-300"}`}
-                                                        />
-                                                    </motion.button>
-
-                                                    {/* Expand: description + children */}
-                                                    <AnimatePresence>
-                                                        {isOpen && (
+                                            {/* 4 branch columns */}
+                                            <div className="grid grid-cols-4 gap-3 pt-0">
+                                                {iaTree.map((node, i) => {
+                                                    const isOpen = expandedNode === node.id;
+                                                    return (
+                                                        <div key={node.id} className="flex flex-col items-center gap-0">
+                                                            {/* Vertical stem from bar line */}
                                                             <motion.div
-                                                                initial={{ opacity: 0, height: 0 }}
-                                                                animate={{ opacity: 1, height: "auto" }}
-                                                                exit={{ opacity: 0, height: 0 }}
-                                                                transition={{ duration: 0.28 }}
-                                                                className="w-full overflow-hidden"
-                                                            >
-                                                                {/* Stem to children */}
-                                                                <div className="flex justify-center">
-                                                                    <div className="w-px h-4 bg-zinc-300" />
-                                                                </div>
+                                                                initial={{ scaleY: 0 }}
+                                                                animate={{ scaleY: 1 }}
+                                                                transition={{ delay: i * 0.07 + 0.1, duration: 0.3 }}
+                                                                style={{ originY: 0 }}
+                                                                className="w-px h-7 bg-zinc-300"
+                                                            />
 
-                                                                <div className="flex flex-col gap-2">
-                                                                    {node.children.map((child, j) => (
-                                                                        <motion.div
-                                                                            key={child.label}
-                                                                            initial={{ opacity: 0, x: -8 }}
-                                                                            animate={{ opacity: 1, x: 0 }}
-                                                                            transition={{ delay: j * 0.06 }}
-                                                                            className={`flex items-start gap-2.5 px-3 py-2.5 rounded-xl border ${node.bg} ${node.border} w-full`}
-                                                                        >
-                                                                            <div className={`p-1 rounded-lg bg-white border ${node.border} shrink-0`}>
-                                                                                <child.icon className={`w-3 h-3 ${node.color}`} />
-                                                                            </div>
-                                                                            <div className="min-w-0">
-                                                                                <div className={`text-[11px] font-bold ${node.color} truncate`}>{child.label}</div>
-                                                                                <div className="text-[10px] text-zinc-400 mt-0.5 truncate">{child.detail}</div>
-                                                                            </div>
-                                                                        </motion.div>
-                                                                    ))}
+                                                            {/* L2 clickable node */}
+                                                            <motion.button
+                                                                initial={{ opacity: 0, y: 12 }}
+                                                                animate={{ opacity: 1, y: 0 }}
+                                                                transition={{ delay: i * 0.07 + 0.15, type: "spring", stiffness: 260, damping: 20 }}
+                                                                onClick={() => toggle(node.id)}
+                                                                className={`w-full rounded-2xl border p-4 flex flex-col items-center gap-2 text-center transition-all duration-200 ${isOpen
+                                                                    ? `${node.bg} ${node.border} shadow-md scale-[1.03]`
+                                                                    : `bg-white border-zinc-200 hover:${node.bg} hover:${node.border} hover:shadow-sm`
+                                                                    }`}
+                                                            >
+                                                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${isOpen ? `bg-white` : "bg-zinc-50 border border-zinc-200"}`}>
+                                                                    <node.icon className={`w-5 h-5 ${isOpen ? node.color : "text-zinc-400"}`} />
                                                                 </div>
-                                                            </motion.div>
-                                                        )}
-                                                    </AnimatePresence>
-                                                </div>
-                                            );
-                                        })}
+                                                                <span className={`text-xs font-bold ${isOpen ? node.color : "text-zinc-600"}`}>
+                                                                    {node.label}
+                                                                </span>
+                                                                <ChevronDown
+                                                                    className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? `${node.color} rotate-180` : "text-zinc-300"}`}
+                                                                />
+                                                            </motion.button>
+
+                                                            {/* Expand: description + children */}
+                                                            <AnimatePresence>
+                                                                {isOpen && (
+                                                                    <motion.div
+                                                                        initial={{ opacity: 0, height: 0 }}
+                                                                        animate={{ opacity: 1, height: "auto" }}
+                                                                        exit={{ opacity: 0, height: 0 }}
+                                                                        transition={{ duration: 0.28 }}
+                                                                        className="w-full overflow-hidden"
+                                                                    >
+                                                                        {/* Stem to children */}
+                                                                        <div className="flex justify-center">
+                                                                            <div className="w-px h-4 bg-zinc-300" />
+                                                                        </div>
+
+                                                                        <div className="flex flex-col gap-2">
+                                                                            {node.children.map((child, j) => (
+                                                                                <motion.div
+                                                                                    key={child.label}
+                                                                                    initial={{ opacity: 0, x: -8 }}
+                                                                                    animate={{ opacity: 1, x: 0 }}
+                                                                                    transition={{ delay: j * 0.06 }}
+                                                                                    className={`flex items-start gap-2.5 px-3 py-2.5 rounded-xl border ${node.bg} ${node.border} w-full`}
+                                                                                >
+                                                                                    <div className={`p-1 rounded-lg bg-white border ${node.border} shrink-0`}>
+                                                                                        <child.icon className={`w-3 h-3 ${node.color}`} />
+                                                                                    </div>
+                                                                                    <div className="min-w-0">
+                                                                                        <div className={`text-[11px] font-bold ${node.color} truncate`}>{child.label}</div>
+                                                                                        <div className="text-[10px] text-zinc-600 mt-0.5 truncate">{child.detail}</div>
+                                                                                    </div>
+                                                                                </motion.div>
+                                                                            ))}
+                                                                        </div>
+                                                                    </motion.div>
+                                                                )}
+                                                            </AnimatePresence>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

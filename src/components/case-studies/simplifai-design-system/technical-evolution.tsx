@@ -59,7 +59,7 @@ export function TechnicalEvolution() {
                                 <button className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold shadow-sm hover:bg-blue-700 transition-colors">
                                     Confirm Action
                                 </button>
-                                <div className="flex items-center gap-2 text-emerald-600 text-sm font-medium">
+                                <div className="flex items-center gap-2 text-emerald-700 text-sm font-medium">
                                     <Check className="w-4 h-4" />
                                     <span>WCAG AAA Compliant</span>
                                 </div>
@@ -78,7 +78,7 @@ export function TechnicalEvolution() {
                             <p className="text-zinc-500 leading-relaxed">
                                 Small deviations—a hex code here, a hardcoded margin there—were breaking accessibility silently.
                                 <br /><br />
-                                This realization sparked a question: <span className="text-orange-600 font-semibold">What if the product could govern its own quality?</span>
+                                This realization sparked a question: <span className="text-orange-700 font-semibold">What if the product could govern its own quality?</span>
                             </p>
                         </div>
 
@@ -92,7 +92,7 @@ export function TechnicalEvolution() {
 
                             <div className="flex flex-col items-center justify-center h-40 gap-4 relative">
                                 {/* "Broken" button */}
-                                <button className="px-6 py-2.5 bg-[#2563EB] text-zinc-900/80 rounded-lg font-medium cursor-not-allowed opacity-90 relative">
+                                <button className="px-6 py-2.5 bg-blue-700 text-white rounded-lg font-medium cursor-not-allowed relative">
                                     Confirm Action
                                     <motion.div
                                         initial={{ scale: 0, opacity: 0 }}
@@ -115,7 +115,7 @@ export function TechnicalEvolution() {
                                         <ShieldCheck className="w-3 h-3" />
                                         Contrast Violation
                                     </div>
-                                    <p className="text-red-500">Ratio is 3.1:1. Expected 4.5:1 (AA).</p>
+                                    <p className="text-red-700">Ratio is 3.1:1. Expected 4.5:1 (AA).</p>
                                 </motion.div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ export function TechnicalEvolution() {
                         See How I Built Aulys
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </Link>
-                    <p className="text-zinc-500 text-sm">Continue the journey</p>
+                    <p className="text-zinc-400 text-sm">Continue the journey</p>
                 </div>
 
             </div>

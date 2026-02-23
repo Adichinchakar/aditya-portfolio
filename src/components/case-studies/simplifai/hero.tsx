@@ -44,7 +44,7 @@ function MetricCard({
                     <div className="p-2 rounded-lg bg-zinc-100/60 group-hover:bg-white/80 transition-colors">
                         <Icon className="w-5 h-5 text-zinc-600" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest">{label}</span>
+                    <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">{label}</span>
                 </div>
                 <div className="text-4xl font-black text-zinc-900 mb-1 tracking-tighter">{value}</div>
                 <div className="text-sm text-zinc-500 font-medium">{sub}</div>
@@ -61,7 +61,7 @@ export function Hero() {
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/6 rounded-full blur-[120px] pointer-events-none -z-10" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-900 mb-12 transition-colors group">
+                <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 mb-12 transition-colors group">
                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     <span className="text-sm font-semibold tracking-wide">Back to Portfolio</span>
                 </Link>
@@ -85,7 +85,7 @@ export function Hero() {
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-8 leading-[1.05]">
                             Accelerating Time-to-Value by 40%:
                             <br />
-                            <span className="text-zinc-400 font-bold">
+                            <span className="text-zinc-500 font-bold">
                                 Re-engineering the AI Workflow.
                             </span>
                         </h1>

@@ -86,8 +86,8 @@ export function UserPersonaIA() {
                             key={t.id}
                             onClick={() => setTab(t.id)}
                             className={`px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${tab === t.id
-                                    ? "bg-white text-zinc-900 shadow-sm border border-zinc-200"
-                                    : "text-zinc-500 hover:text-zinc-700"
+                                ? "bg-white text-zinc-900 shadow-sm border border-zinc-200"
+                                : "text-zinc-500 hover:text-zinc-700"
                                 }`}
                         >
                             {t.label}
@@ -147,7 +147,7 @@ export function UserPersonaIA() {
                                             <ul className="space-y-2.5">
                                                 <li className="flex items-start gap-2.5 text-sm text-zinc-700">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
-                                                    Manual data entry errors causing <span className="font-bold text-red-600 ml-1">20% rework</span>.
+                                                    Manual data entry errors causing <span className="font-bold text-red-700 ml-1">20% rework</span>.
                                                 </li>
                                                 <li className="flex items-start gap-2.5 text-sm text-zinc-700">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
@@ -187,7 +187,7 @@ export function UserPersonaIA() {
                                     {[
                                         { value: "8", label: "Enterprise clients interviewed", color: "text-blue-600", bg: "bg-blue-50 border-blue-200" },
                                         { value: "72%", label: "Wanted self-service editing", color: "text-emerald-600", bg: "bg-emerald-50 border-emerald-200" },
-                                        { value: "3.2 hrs", label: "Lost daily to context switching", color: "text-red-600", bg: "bg-red-50 border-red-200" },
+                                        { value: "3.2 hrs", label: "Lost daily to context switching", color: "text-red-700", bg: "bg-red-50 border-red-200" },
                                         { value: "100+", label: "User studies conducted", color: "text-purple-600", bg: "bg-purple-50 border-purple-200" },
                                     ].map((s) => (
                                         <div key={s.label} className={`rounded-2xl border p-5 ${s.bg}`}>
@@ -228,7 +228,7 @@ export function UserPersonaIA() {
                                     job: "I want to know immediately what broke and why",
                                     outcome: "So I can fix it without calling an engineer",
                                     icon: AlertCircle,
-                                    color: "text-red-600",
+                                    color: "text-red-700",
                                     bg: "bg-red-50",
                                     border: "border-red-200",
                                 },
@@ -298,8 +298,8 @@ export function UserPersonaIA() {
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: i * 0.07 }}
                                             className={`flex items-start gap-3 p-3 rounded-xl ${item.type === "actual"
-                                                    ? "bg-white/60 border border-red-200"
-                                                    : "bg-white/40"
+                                                ? "bg-white/60 border border-red-200"
+                                                : "bg-white/40"
                                                 }`}
                                         >
                                             <span className="text-xs text-zinc-400 font-mono shrink-0 mt-0.5">{item.time}</span>
@@ -333,8 +333,8 @@ export function UserPersonaIA() {
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: i * 0.07 }}
                                             className={`flex items-start gap-3 p-3 rounded-xl ${item.type === "actual"
-                                                    ? "bg-white/70 border border-emerald-200"
-                                                    : "bg-white/40"
+                                                ? "bg-white/70 border border-emerald-200"
+                                                : "bg-white/40"
                                                 }`}
                                         >
                                             <span className="text-xs text-zinc-400 font-mono shrink-0 mt-0.5">{item.time}</span>

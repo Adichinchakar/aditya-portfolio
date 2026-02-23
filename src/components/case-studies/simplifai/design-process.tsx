@@ -15,10 +15,10 @@ const steps = [
         description:
             "Embedded within the Simplifai team for 3 weeks, interviewing operations leads across 8 enterprise clients. Uncovered the core tension: users needed power without complexity.",
         tags: ["User Interviews", "Journey Mapping", "Competitive Audit"],
-        color: "text-blue-500",
+        color: "text-blue-700",
         bg: "bg-blue-500/8",
         border: "border-blue-500/20",
-        activeBg: "bg-blue-500",
+        activeBg: "bg-blue-600",
     },
     {
         id: "wireframes",
@@ -29,10 +29,10 @@ const steps = [
         description:
             "Explored three distinct interaction models for the flow builder. Ultimately selected a canvas-first approach with inline property panels — reducing context switches by 60%.",
         tags: ["Lo-Fi Sketches", "Usability Testing", "A/B Concepts"],
-        color: "text-purple-500",
+        color: "text-purple-700",
         bg: "bg-purple-500/8",
         border: "border-purple-500/20",
-        activeBg: "bg-purple-500",
+        activeBg: "bg-purple-600",
     },
     {
         id: "system",
@@ -43,10 +43,10 @@ const steps = [
         description:
             "Established the Simplifai Design System from scratch — semantic tokens, component library, and a documentation site. Reduced engineer handoff time from 3 weeks to 5 days.",
         tags: ["Component Library", "Token Architecture", "Figma → React"],
-        color: "text-emerald-500",
+        color: "text-emerald-700",
         bg: "bg-emerald-500/8",
         border: "border-emerald-500/20",
-        activeBg: "bg-emerald-500",
+        activeBg: "bg-emerald-600",
     },
     {
         id: "ship",
@@ -57,10 +57,10 @@ const steps = [
         description:
             "Shipped the new flow builder to 3 enterprise pilots. Real-time collaboration, guided onboarding templates, and a no-code condition builder eliminated the dependency on engineering for configuration.",
         tags: ["Pilot Rollout", "Analytics Review", "Iteration"],
-        color: "text-amber-500",
+        color: "text-amber-700",
         bg: "bg-amber-500/8",
         border: "border-amber-500/20",
-        activeBg: "bg-amber-500",
+        activeBg: "bg-amber-600",
     },
 ];
 
@@ -77,7 +77,7 @@ export function DesignProcess() {
                 {/* Section header */}
                 <div className="flex items-center gap-3 mb-12">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-600 backdrop-blur-md shadow-sm">
-                        <PenLine className="w-3.5 h-3.5 text-purple-500" />
+                        <PenLine className="w-3.5 h-3.5 text-purple-600" />
                         Design Process
                     </div>
                 </div>
@@ -117,7 +117,7 @@ export function DesignProcess() {
                             >
                                 <step.icon className="w-4 h-4" />
                             </div>
-                            <div className="text-[11px] font-bold text-zinc-400 mb-1 tracking-widest uppercase">
+                            <div className="text-[11px] font-bold text-zinc-500 mb-1 tracking-widest uppercase">
                                 {step.num}
                             </div>
                             <div

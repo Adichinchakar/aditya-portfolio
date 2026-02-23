@@ -6,6 +6,8 @@ import SimplifaiPage from "@/components/case-studies/simplifai/content";
 import AulysPage from "@/components/case-studies/aulys/content";
 import SimplifaiDesignSystemPage from "@/components/case-studies/simplifai-design-system/content";
 
+import { NextCaseStudy } from "@/components/case-studies/next-case-study";
+
 const CASE_STUDIES = {
     "simplifai": {
         component: SimplifaiPage,
@@ -29,6 +31,9 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
     const Component = study.component;
 
     return (
-        <Component />
+        <>
+            <Component />
+            <NextCaseStudy currentSlug={slug} />
+        </>
     );
 }

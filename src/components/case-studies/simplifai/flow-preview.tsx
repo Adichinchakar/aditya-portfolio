@@ -105,7 +105,7 @@ function FlowCanvas({ useCase, activeNode, setActiveNode }: { useCase: UseCase; 
     const getNode = (id: string) => data.nodes.find(n => n.id === id)!;
 
     return (
-        <div className="relative w-full overflow-x-auto">
+        <div className="relative w-full overflow-x-auto" tabIndex={0} role="region" aria-label="Interactive flow canvas">
             <div style={{ width: CANVAS_W, height: CANVAS_H }} className="relative mx-auto">
                 {/* Dot grid */}
                 <div
@@ -245,7 +245,7 @@ export function FlowPreview() {
                             onClick={() => { setActiveCase(key); setActiveNode(null); }}
                             className={`px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${activeCase === key
                                 ? "bg-white text-zinc-900 shadow-sm border border-zinc-200"
-                                : "text-zinc-500 hover:text-zinc-700"
+                                : "text-zinc-600 hover:text-zinc-800"
                                 }`}
                         >
                             {uc.label}
@@ -262,9 +262,9 @@ export function FlowPreview() {
                             <span className="text-xs font-mono text-zinc-600">Simplifai Flow Engine v2.0</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="text-xs text-zinc-400 font-medium">{data.nodes.length} nodes</span>
+                            <span className="text-xs text-zinc-500 font-medium">{data.nodes.length} nodes</span>
                             <span className="text-zinc-200">•</span>
-                            <span className="text-xs text-zinc-400 font-medium">{data.connections.length} connections</span>
+                            <span className="text-xs text-zinc-500 font-medium">{data.connections.length} connections</span>
                         </div>
                     </div>
 
@@ -301,7 +301,7 @@ export function FlowPreview() {
                                     key="hint"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    className="text-xs text-zinc-400 font-medium"
+                                    className="text-xs text-zinc-500 font-medium"
                                 >
                                     Hover over any node to see details
                                 </motion.p>

@@ -6,62 +6,64 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
     {
-        quote: "Aditya's AI tools reduced our assessment time by 70%. He doesn't just design; he solves business problems.",
-        role: "Stakeholder",
-        company: "Infosys",
+        quote: "Aditya is a strong design contributor, advancing our design system, ensuring consistency, and bringing ideas to life. His extensive Figma expertise has helped the team upskill.",
+        name: "Gautam Parasnis",
+        role: "Chief Digital Officer",
+        company: "Imagine Learning",
+        initials: "GP",
+        color: "bg-gradient-to-br from-emerald-400 to-teal-600"
     },
     {
-        quote: "Reduced user onboarding friction by 40%. One of the few designers who understands the API as well as the UI.",
+        quote: "Aditya managed the end-to-end design for our Automation Product with precision and creativity. His contributions to the Design System were instrumental in enhancing consistency.",
+        name: "Rishikesh Kulkarni",
         role: "Product Manager",
         company: "Simplifai",
+        initials: "RK",
+        color: "bg-gradient-to-br from-blue-400 to-indigo-600"
     },
     {
-        quote: "His motion design work directly contributed to a 15% increase in customer inquiries.",
-        role: "Client",
-        company: "Shell",
-    },
-    {
-        quote: "Aditya's design system accelerated our dev cycles by 42%. A true force multiplier.",
-        role: "Team Member",
-        company: "Independent",
+        quote: "His UX skills are truly outstanding, with a deep understanding of user behaviour and a knack for crafting intuitive, seamless experiences. An invaluable asset to any team!",
+        name: "Anushka Bennur",
+        role: "Product Designer",
+        company: "Simplifai",
+        initials: "AB",
+        color: "bg-gradient-to-br from-rose-400 to-pink-600"
     },
     {
         quote: "Aditya's AI tools reduced our assessment time by 70%. He doesn't just design; he solves business problems.",
-        role: "Stakeholder",
+        name: "Pradeep S.",
+        role: "Senior Delivery Manager",
         company: "Infosys",
+        initials: "PS",
+        color: "bg-gradient-to-br from-amber-400 to-orange-600"
     },
     {
-        quote: "Reduced user onboarding friction by 40%. One of the few designers who understands the API as well as the UI.",
-        role: "Product Manager",
-        company: "Simplifai",
-    },
-    {
-        quote: "His motion design work directly contributed to a 15% increase in customer inquiries.",
-        role: "Client",
+        quote: "His motion design work directly contributed to a 15% increase in customer inquiries and engagement.",
+        name: "Enterprise Client",
+        role: "Digital Team",
         company: "Shell",
-    },
-    {
-        quote: "Aditya's design system accelerated our dev cycles by 42%. A true force multiplier.",
-        role: "Team Member",
-        company: "Independent",
+        initials: "SH",
+        color: "bg-gradient-to-br from-zinc-600 to-zinc-800"
     },
 ];
+
+const duplicatedTestimonials = [...testimonials, ...testimonials];
 
 export function Testimonials() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-20 overflow-hidden relative" ref={ref}>
+        <section className="py-24 overflow-hidden relative" ref={ref}>
             {/* Section header */}
-            <div className="container mx-auto px-6 mb-14 text-center">
+            <div className="container mx-auto px-6 mb-16 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-600 mb-6 backdrop-blur-md shadow-sm"
+                    className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-50/50 border border-blue-100 text-sm font-semibold text-blue-700 mb-6 backdrop-blur-md shadow-sm"
                 >
-                    <Quote className="w-3.5 h-3.5 text-blue-500" />
+                    <Quote className="w-3.5 h-3.5" />
                     Social Proof
                 </motion.div>
                 <motion.h2
@@ -75,22 +77,37 @@ export function Testimonials() {
             </div>
 
             {/* Edge fades */}
-            <div className="absolute left-0 top-0 bottom-0 w-28 bg-gradient-to-r from-zinc-50 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-zinc-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-zinc-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-zinc-50 to-transparent z-10 pointer-events-none" />
 
-            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-                {testimonials.map((t, i) => (
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused] py-4">
+                {duplicatedTestimonials.map((t, i) => (
                     <div
                         key={i}
-                        className="w-[360px] shrink-0 mx-4 p-8 rounded-[2rem] bg-white/50 backdrop-blur-xl border border-white/60 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col gap-5"
+                        className="w-[320px] md:w-[420px] shrink-0 mx-3 md:mx-4 p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col gap-6 relative overflow-hidden group"
                     >
-                        <Quote className="w-8 h-8 text-blue-400/50" />
-                        <p className="text-zinc-700 text-base leading-relaxed font-medium flex-1">
-                            &ldquo;{t.quote}&rdquo;
-                        </p>
-                        <div>
-                            <p className="text-zinc-900 text-sm font-bold">{t.role}</p>
-                            <p className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mt-0.5">{t.company}</p>
+                        {/* Subtle gradient hover effect */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100/40 rounded-full blur-3xl -mr-10 -mt-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                        {/* Header: User Info */}
+                        <div className="flex items-center gap-4 relative z-10">
+                            <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-sm ${t.color}`}>
+                                {t.initials}
+                            </div>
+                            <div className="flex flex-col min-w-0">
+                                <h4 className="text-zinc-900 font-bold text-base leading-tight truncate">{t.name}</h4>
+                                <p className="text-zinc-500 text-[13px] font-medium truncate mt-0.5">
+                                    {t.role} <span className="text-zinc-300 mx-1">•</span> {t.company}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Quote */}
+                        <div className="relative flex-1">
+                            <Quote className="absolute -top-1 -left-1 w-8 h-8 text-zinc-900/5 rotate-180" />
+                            <p className="text-zinc-700 text-[15px] leading-[1.6] font-medium relative z-10 pl-4 border-l-2 border-zinc-200 group-hover:border-blue-200 transition-colors duration-300">
+                                &ldquo;{t.quote}&rdquo;
+                            </p>
                         </div>
                     </div>
                 ))}

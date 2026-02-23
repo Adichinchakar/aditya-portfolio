@@ -97,7 +97,7 @@ export function SimplifaiShowcase() {
                             <p className="text-zinc-600 mb-4">
                                 The node logic developed here directly informed the architecture of the Aulys Accessibility Scanner.
                             </p>
-                            <Link href="/work/simplifai#technical-evolution" className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center gap-1">
+                            <Link href="/work/simplifai#technical-evolution" className="text-purple-600 hover:text-purple-700 text-sm font-medium flex items-center gap-1">
                                 Read about the technical evolution <ArrowRight className="w-3 h-3" />
                             </Link>
                         </div>

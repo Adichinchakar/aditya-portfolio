@@ -11,7 +11,6 @@ const navLinks = [
     { href: "https://aulys-app.vercel.app/", label: "Aulys", isExternal: true },
     { href: "/#work", label: "Case Studies" },
     { href: "/#about", label: "About" },
-    { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {

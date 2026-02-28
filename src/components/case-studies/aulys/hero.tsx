@@ -1,8 +1,9 @@
 import React from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { ArrowLeft, Zap, ShieldCheck } from "lucide-react";
+import { Zap, ShieldCheck, Users, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { MouseEvent } from "react";
+import { ArrowLeft } from "lucide-react";
 
 function MetricCard({
     icon: Icon,
@@ -31,23 +32,25 @@ function MetricCard({
     return (
         <div
             onMouseMove={handleMouseMove}
-            className={`group relative overflow-hidden rounded-[1.5rem] bg-white/40 backdrop-blur-xl border border-white/40 p-6 shadow-[0_4px_20px_rgb(0,0,0,0.05)] transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] ${hoverBorder}`}
+            className={`group relative overflow-hidden rounded-[1.25rem] bg-white/40 backdrop-blur-xl border border-white/40 p-5 shadow-[0_4px_20px_rgb(0,0,0,0.05)] transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] ${hoverBorder}`}
         >
             <motion.div
-                className="pointer-events-none absolute -inset-px rounded-[1.5rem] opacity-0 transition duration-500 group-hover:opacity-100"
+                className="pointer-events-none absolute -inset-px rounded-[1.25rem] opacity-0 transition duration-500 group-hover:opacity-100"
                 style={{
-                    background: useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, ${spotlight}, transparent 80%)`,
+                    background: useMotionTemplate`radial-gradient(350px circle at ${mouseX}px ${mouseY}px, ${spotlight}, transparent 80%)`,
                 }}
+                aria-hidden="true"
             />
             <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex justify-between items-start mb-3">
                     <div className="p-2 rounded-lg bg-zinc-100/60 group-hover:bg-white/80 transition-colors">
-                        <Icon className="w-5 h-5 text-zinc-600" />
+                        <Icon className="w-4 h-4 text-zinc-600" aria-hidden="true" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">{label}</span>
+                    {/* aria-hidden on decorative label — the value itself conveys meaning */}
+                    <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest" aria-hidden="true">{label}</span>
                 </div>
-                <div className="text-4xl font-black text-zinc-900 mb-1 tracking-tighter">{value}</div>
-                <div className="text-sm text-zinc-500 font-medium">{sub}</div>
+                <div className="text-3xl font-black text-zinc-900 mb-0.5 tracking-tighter">{value}</div>
+                <div className="text-xs text-zinc-600 font-medium">{sub}</div>
             </div>
         </div>
     );
@@ -56,13 +59,17 @@ function MetricCard({
 export function Hero() {
     return (
         <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-zinc-50 min-h-[90vh] flex flex-col justify-center">
-            {/* Ambient Background */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500/8 rounded-full blur-[140px] pointer-events-none -z-10" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/6 rounded-full blur-[120px] pointer-events-none -z-10" />
+            {/* Ambient Background — decorative, hidden from AT */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500/8 rounded-full blur-[140px] pointer-events-none -z-10" aria-hidden="true" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/6 rounded-full blur-[120px] pointer-events-none -z-10" aria-hidden="true" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <Link href="/work" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 mb-12 transition-colors group">
-                    <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                {/* Back link with explicit focus ring */}
+                <Link
+                    href="/work"
+                    className="inline-flex items-center gap-2 text-zinc-600 hover:text-zinc-900 mb-12 transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-md px-2 py-1 -ml-2"
+                >
+                    <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" aria-hidden="true" />
                     <span className="text-sm font-semibold tracking-wide">Back to Case Studies</span>
                 </Link>
 
@@ -72,35 +79,50 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring" as const, stiffness: 260, damping: 22 }}
                     >
-                        {/* Pill badge */}
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-700 text-sm font-semibold mb-8 backdrop-blur-md">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+                        {/* Pill badge — ping dot is purely decorative */}
+                        <div
+                            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-700 text-sm font-semibold mb-8 backdrop-blur-md"
+                            aria-label="Case study type: Figma Plugin, 0 to 1 Product"
+                        >
+                            <span className="relative flex h-2 w-2" aria-hidden="true">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
                             </span>
-                            Engineering · Case Study
+                            Figma Plugin · 0→1 Product
                         </div>
 
-                        {/* Heading */}
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-8 leading-[1.05]">
+                        {/* H1 — singular on this page */}
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
                             Aulys:<br />
                             <span className="text-zinc-500 font-bold">
                                 The AI Accessibility Engine.
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-zinc-500 max-w-lg mb-8 leading-relaxed font-medium">
-                            Making WCAG 2.2 compliance achievable for every organization through an automated Figma plugin and a continuous integration SaaS platform.
+                        <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-6 leading-relaxed font-medium">
+                            Making WCAG 2.2 compliance achievable for every design team — through an automated Figma plugin I designed, built, and shipped solo.
                         </p>
 
+                        {/* Role + timeline strip */}
+                        <div className="flex flex-wrap items-center gap-3 mb-8">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 text-white text-xs font-bold tracking-wide">
+                                Product Designer · Solo Builder
+                            </span>
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-semibold">
+                                Oct 2024 – Present
+                            </span>
+                        </div>
+
+                        {/* CTA with explicit focus ring */}
                         <Link
                             href="https://aulys-app.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-500 hover:-translate-y-0.5 transition-all w-fit"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-500 hover:-translate-y-0.5 transition-all w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                            aria-label="View Aulys Live Plugin (opens in new tab)"
                         >
-                            View Live App
-                            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            View Live Plugin
+                            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
                         </Link>
@@ -112,32 +134,50 @@ export function Hero() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ type: "spring" as const, stiffness: 240, damping: 22, delay: 0.15 }}
                         className="relative"
+                        aria-label="Plugin beta performance metrics"
                     >
                         <div className="relative rounded-[2rem] border border-white/50 bg-white/30 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.1)]">
-                            <div className="bg-zinc-50/60 rounded-[1.5rem] p-8 border border-white/60 backdrop-blur-sm">
-                                <div className="flex items-center justify-between mb-8">
-                                    <h3 className="text-zinc-900 font-bold tracking-tight">Performance Overview</h3>
-                                    <div className="flex gap-2">
+                            <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm">
+                                {/* H2 within this section — maintains hierarchy H1 → H2 */}
+                                <div className="flex items-center justify-between mb-6">
+                                    <h2 className="text-zinc-900 font-bold tracking-tight text-sm">Beta Performance</h2>
+                                    <div className="flex gap-2" aria-hidden="true">
                                         <div className="w-2 h-2 rounded-full bg-red-400/40" />
                                         <div className="w-2 h-2 rounded-full bg-yellow-400/40" />
                                         <div className="w-2 h-2 rounded-full bg-green-500" />
                                     </div>
                                 </div>
 
-                                <div className="grid gap-4">
+                                <div className="grid grid-cols-2 gap-3">
                                     <MetricCard
-                                        icon={Zap}
-                                        label="Speed"
-                                        value="<10s"
-                                        sub="To scan 500+ Figma layers"
+                                        icon={Users}
+                                        label="Beta"
+                                        value="30"
+                                        sub="Active testers in beta"
                                         spotlight="rgba(59, 130, 246, 0.12)"
                                         hoverBorder="group-hover:border-blue-500/30"
                                     />
                                     <MetricCard
+                                        icon={LayoutGrid}
+                                        label="Scale"
+                                        value="500+"
+                                        sub="Frames already scanned"
+                                        spotlight="rgba(139, 92, 246, 0.12)"
+                                        hoverBorder="group-hover:border-purple-500/30"
+                                    />
+                                    <MetricCard
+                                        icon={Zap}
+                                        label="Speed"
+                                        value="<10s"
+                                        sub="Per 500-layer document"
+                                        spotlight="rgba(245, 158, 11, 0.12)"
+                                        hoverBorder="group-hover:border-amber-500/30"
+                                    />
+                                    <MetricCard
                                         icon={ShieldCheck}
                                         label="Coverage"
-                                        value="100%"
-                                        sub="WCAG 2.2 criteria support"
+                                        value="WCAG"
+                                        sub="2.2 AA/AAA all criteria"
                                         spotlight="rgba(16, 185, 129, 0.12)"
                                         hoverBorder="group-hover:border-emerald-500/30"
                                     />
@@ -146,7 +186,7 @@ export function Hero() {
                         </div>
 
                         {/* Decorative glow */}
-                        <div className="absolute -top-10 -right-10 w-48 h-48 bg-blue-500/20 rounded-full blur-[60px] pointer-events-none -z-10" />
+                        <div className="absolute -top-10 -right-10 w-48 h-48 bg-blue-500/20 rounded-full blur-[60px] pointer-events-none -z-10" aria-hidden="true" />
                     </motion.div>
                 </div>
             </div>

@@ -112,7 +112,7 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
                                                 Prefer async? Drop me a line directly. I usually respond within 24 hours.
                                             </p>
                                             <a
-                                                href="mailto:contact@example.com"
+                                                href="mailto:adichinchakar@gmail.com"
                                                 className="inline-flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700"
                                             >
                                                 adityachinchakar@gmail.com <ArrowRight className="w-4 h-4" />

@@ -10,7 +10,6 @@ import { IATree } from "@/components/case-studies/simplifai/ia-tree";
 import { Hero } from "@/components/case-studies/simplifai/hero";
 import { ProblemStatement } from "@/components/case-studies/simplifai/problem-statement";
 import { DesignProcess } from "@/components/case-studies/simplifai/design-process";
-import { RelatedCaseStudy } from "@/components/case-studies/shared/related-case-study";
 import { MouseEvent } from "react";
 import { cn } from "@/lib/utils";
 
@@ -153,9 +152,6 @@ export default function SimplifaiPage() {
 
             {/* Results */}
             <BentoImpact />
-
-            {/* Cross-link → Design System */}
-            <RelatedCaseStudy target="design-system" />
         </div>
     );
 }

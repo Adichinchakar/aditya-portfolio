@@ -1,22 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AlertTriangle, PaintBucket, EyeOff } from "lucide-react";
+import { AlertTriangle, AlertCircle, EyeOff } from "lucide-react";
 
 export function ProblemStatement() {
     return (
         <section className="py-24 px-6 bg-white relative">
-            <div className="container mx-auto max-w-4xl">
+            <div className="container mx-auto max-w-5xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="mb-16"
                 >
+                    {/* Chapter label */}
+                    <p className="text-xs font-mono font-bold text-blue-500 uppercase tracking-[0.2em] mb-4">
+                        01 — Problem
+                    </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
                         The Accessibility Crisis
                     </h2>
-                    <p className="text-xl text-zinc-500 leading-relaxed max-w-2xl">
-                        Designing for everyone is a noble goal, but the reality is harsh: manual WCAG compliance checks are tedious, error-prone, and slow. Accessibility was consistently treated as an afterthought rather than a foundation.
+                    {/* Stat callout */}
+                    <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-red-50 border border-red-100 mb-6">
+                        <span className="text-2xl font-black text-red-600">96.3%</span>
+                        <span className="text-sm text-red-700 font-medium leading-snug max-w-xs">
+                            of the top 1 million websites fail basic WCAG compliance — <span className="font-bold">WebAIM 2024</span>
+                        </span>
+                    </div>
+                    <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
+                        Designers want to build inclusively. But for teams working fast in Figma, WCAG compliance sits at the end of the pipeline — expensive, error-prone, and always late.
                     </p>
                 </motion.div>
 
@@ -24,22 +35,22 @@ export function ProblemStatement() {
                     {[
                         {
                             icon: AlertTriangle,
-                            title: "Human Error",
-                            desc: "Checking contrast ratios and touch targets manually across hundreds of screens leads to inevitable oversights.",
+                            title: "Human Error at Scale",
+                            desc: "Checking contrast ratios, touch targets, and focus indicators manually across hundreds of screens leads to inevitable, costly oversights.",
                             color: "text-amber-500",
                             bg: "bg-amber-500/10"
                         },
                         {
-                            icon: PaintBucket,
-                            title: "Friction in Design",
-                            desc: "Designers lack real-time feedback, often shipping non-compliant handoffs to engineering teams.",
+                            icon: AlertCircle,
+                            title: "No Real-Time Feedback",
+                            desc: "Designers have zero visibility into compliance issues while designing. Non-compliant handoffs reach engineering teams with no warning.",
                             color: "text-red-500",
                             bg: "bg-red-500/10"
                         },
                         {
                             icon: EyeOff,
-                            title: "Reactive Fixing",
-                            desc: "Accessibility is usually tested post-deployment. Finding issues late in the cycle exponentially increases fixing costs.",
+                            title: "Reactive, Not Preventive",
+                            desc: "Accessibility is tested post-deployment. Finding issues after launch is 6× more expensive than catching them at the design stage.",
                             color: "text-purple-500",
                             bg: "bg-purple-500/10"
                         }

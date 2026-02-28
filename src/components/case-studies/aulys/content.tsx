@@ -3,10 +3,12 @@
 import React from "react";
 import { Hero } from "@/components/case-studies/aulys/hero";
 import { ProblemStatement } from "@/components/case-studies/aulys/problem-statement";
+import { TheInsight } from "@/components/case-studies/aulys/insight";
 import { TheStory } from "@/components/case-studies/aulys/the-story";
 import { SystemSpecs } from "@/components/case-studies/aulys/system-specs";
 import { BentoImpact } from "@/components/case-studies/aulys/bento-impact";
-import { RelatedCaseStudy } from "@/components/case-studies/shared/related-case-study";
+import { Learnings } from "@/components/case-studies/aulys/learnings";
+import { WcagBadge } from "@/components/case-studies/aulys/wcag-badge";
 
 export default function AulysPage() {
     return (
@@ -14,20 +16,26 @@ export default function AulysPage() {
             {/* Hero */}
             <Hero />
 
-            {/* Problem Statement */}
+            {/* 01 — Problem */}
             <ProblemStatement />
 
-            {/* The Story Grid */}
+            {/* 02 — The Insight */}
+            <TheInsight />
+
+            {/* 03 — How I Built It */}
             <TheStory />
 
-            {/* System Specifications */}
+            {/* 04 — Architecture */}
             <SystemSpecs />
 
-            {/* Impact Details */}
+            {/* 05 — Impact */}
             <BentoImpact />
 
-            {/* Cross-link → Simplifai */}
-            <RelatedCaseStudy target="flow-builder" />
+            {/* 06 — Reflection */}
+            <Learnings />
+
+            {/* WCAG 2.1 AA Compliance Badge — Living proof */}
+            <WcagBadge />
         </div>
     );
 }

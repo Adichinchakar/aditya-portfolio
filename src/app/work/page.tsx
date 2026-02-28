@@ -7,6 +7,14 @@ import { Hero } from "@/components/home/hero"; // Reuse Hero or create a variant
 
 const PROJECTS = [
     {
+        slug: "aulys",
+        title: "Aulys Accessibility",
+        category: "Engineering",
+        description: "Automated accessibility scanning engine and dashboard.",
+        tags: ["Accessibility", "Performance", "Dashboard"],
+        year: "2023"
+    },
+    {
         slug: "simplifai",
         title: "Simplifai Flow Automation",
         category: "Product Design",
@@ -15,12 +23,28 @@ const PROJECTS = [
         year: "2024"
     },
     {
-        slug: "aulys",
-        title: "Aulys Accessibility",
-        category: "Engineering",
-        description: "Automated accessibility scanning engine and dashboard.",
-        tags: ["Accessibility", "Performance", "Dashboard"],
+        slug: "simplifai-design-system",
+        title: "Simplifai Design System",
+        category: "Design Systems",
+        description: "Enterprise-scale design system with 50+ components.",
+        tags: ["Design Tokens", "React", "Storybook"],
         year: "2023"
+    },
+    {
+        slug: "medsecure",
+        title: "MedSecure",
+        category: "Healthcare · Blockchain",
+        description: "Blockchain medical records platform giving every Indian patient a sovereign, tamper-proof health identity.",
+        tags: ["Hyperledger Fabric", "IPFS", "PWA", "ABDM"],
+        year: "2024"
+    },
+    {
+        slug: "nexus-banking",
+        title: "Nexus Fintech App",
+        category: "UX Strategy · Architecture",
+        description: "Solving the 'Super-App' paradox with Intent-Led architecture.",
+        tags: ["FinTech", "UX Research", "Systems Design"],
+        year: "2024"
     }
 ];
 

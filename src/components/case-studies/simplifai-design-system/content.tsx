@@ -9,7 +9,6 @@ import { ComponentRedlines } from "@/components/case-studies/simplifai-design-sy
 import { SystemGovernance } from "@/components/case-studies/simplifai-design-system/system-governance";
 import { TechnicalEvolution } from "@/components/case-studies/simplifai-design-system/technical-evolution";
 import { SystemSpecs } from "@/components/case-studies/simplifai/system-specs";
-import { RelatedCaseStudy } from "@/components/case-studies/shared/related-case-study";
 
 export default function SimplifaiDesignSystemPage() {
     return (
@@ -25,9 +24,6 @@ export default function SimplifaiDesignSystemPage() {
 
             <SystemGovernance />
             <TechnicalEvolution />
-
-            {/* Cross-link → Flow Builder */}
-            <RelatedCaseStudy target="flow-builder" />
         </main>
     );
 }

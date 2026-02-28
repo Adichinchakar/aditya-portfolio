@@ -36,7 +36,7 @@ export function Header() {
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
-                    <Link href="/" className="text-2xl font-bold tracking-tighter hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1 -ml-2">
+                    <Link href="/" className="text-2xl font-bold tracking-tighter text-zinc-900 hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1 -ml-2">
                         PORTFOLIO.
                     </Link>
 
@@ -48,14 +48,14 @@ export function Header() {
                                 href={link.href}
                                 target={link.isExternal ? "_blank" : undefined}
                                 rel={link.isExternal ? "noopener noreferrer" : undefined}
-                                className="text-sm font-medium hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-3 py-1.5"
+                                className="text-sm font-medium text-zinc-600 hover:text-zinc-900 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-3 py-1.5"
                             >
                                 {link.label}
                             </Link>
                         ))}
                         <button
                             onClick={() => setIsContactSheetOpen(true)}
-                            className="px-5 py-2 rounded-full bg-white text-black text-sm font-semibold border border-zinc-200/80 hover:bg-zinc-50 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                            className="px-5 py-2 rounded-full bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-700 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                         >
                             Let's Talk
                         </button>

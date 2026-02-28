@@ -25,6 +25,14 @@ export function DynamicIsland() {
                     damping: 30,
                 }}
                 className="bg-black text-white cursor-pointer relative overflow-hidden flex items-center shadow-xl"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setExpanded(!expanded);
+                    }
+                }}
             >
                 <AnimatePresence mode="wait">
                     {!expanded ? (
@@ -70,10 +78,11 @@ export function DynamicIsland() {
                             </div>
 
                             <div className="flex items-center justify-center gap-8 mt-2">
-                                <button className="text-white/50 hover:text-white transition-colors" onClick={(e) => e.stopPropagation()}>
+                                <button aria-label="Rewind" className="text-white/50 hover:text-white transition-colors" onClick={(e) => e.stopPropagation()}>
                                     <Rewind className="w-6 h-6 fill-current" />
                                 </button>
                                 <button
+                                    aria-label={isPlaying ? "Pause" : "Play"}
                                     className="text-white hover:scale-110 transition-transform"
                                     onClick={(e) => {
                                         e.stopPropagation();
@@ -82,7 +91,7 @@ export function DynamicIsland() {
                                 >
                                     {isPlaying ? <Pause className="w-8 h-8 fill-current" /> : <Play className="w-8 h-8 fill-current translate-x-0.5" />}
                                 </button>
-                                <button className="text-white/50 hover:text-white transition-colors" onClick={(e) => e.stopPropagation()}>
+                                <button aria-label="Fast Forward" className="text-white/50 hover:text-white transition-colors" onClick={(e) => e.stopPropagation()}>
                                     <FastForward className="w-6 h-6 fill-current" />
                                 </button>
                             </div>

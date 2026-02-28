@@ -5,8 +5,9 @@ import { use } from "react";
 import SimplifaiPage from "@/components/case-studies/simplifai/content";
 import AulysPage from "@/components/case-studies/aulys/content";
 import SimplifaiDesignSystemPage from "@/components/case-studies/simplifai-design-system/content";
-
-import { NextCaseStudy } from "@/components/case-studies/next-case-study";
+import MedSecurePage from "@/components/case-studies/medsecure/content";
+import NexusBankingPage from "@/components/case-studies/nexus-banking/content";
+import { NextCaseStudyHero } from "@/components/case-studies/next-case-study-hero";
 
 const CASE_STUDIES = {
     "simplifai": {
@@ -17,6 +18,12 @@ const CASE_STUDIES = {
     },
     "simplifai-design-system": {
         component: SimplifaiDesignSystemPage,
+    },
+    "medsecure": {
+        component: MedSecurePage,
+    },
+    "nexus-banking": {
+        component: NexusBankingPage,
     },
 };
 
@@ -33,7 +40,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
     return (
         <>
             <Component />
-            <NextCaseStudy currentSlug={slug} />
+            <NextCaseStudyHero currentSlug={slug} />
         </>
     );
 }

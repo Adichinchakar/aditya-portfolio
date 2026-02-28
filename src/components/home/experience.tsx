@@ -94,7 +94,7 @@ function ExperienceListCard({ exp }: { exp: typeof experiences[0] }) {
     return (
         <motion.article
             variants={itemVariants}
-            className="group relative bg-white border border-zinc-200 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8 md:gap-12 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300 overflow-hidden"
+            className="group relative bg-white border border-zinc-200 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300 overflow-hidden"
         >
             {/* Subtle background gradient on hover */}
             <div className={cn("absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br from-transparent to-current", exp.color)} />
@@ -150,11 +150,11 @@ export function ExperienceGrid() {
 
     return (
         <section
-            className="container mx-auto px-6 py-32"
+            className="container mx-auto px-6 py-24"
             aria-label="Work Experience"
             ref={ref}
         >
-            <div className="flex flex-col items-center mb-24 text-center">
+            <div className="flex flex-col items-center mb-14 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
@@ -186,7 +186,7 @@ export function ExperienceGrid() {
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
-                className="flex flex-col gap-8 max-w-5xl mx-auto"
+                className="flex flex-col gap-5 max-w-5xl mx-auto"
             >
                 {experiences.map((exp) => (
                     <ExperienceListCard key={exp.id} exp={exp} />

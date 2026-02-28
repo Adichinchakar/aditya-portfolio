@@ -110,11 +110,11 @@ export function SocialProof() {
 
     return (
         <section
-            className="container mx-auto px-6 pt-24 pb-32 overflow-hidden"
+            className="container mx-auto px-6 py-24 overflow-hidden"
             aria-label="Certifications and Awards"
             ref={ref}
         >
-            <div className="max-w-7xl mx-auto flex flex-col items-center mb-16 text-center">
+            <div className="max-w-7xl mx-auto flex flex-col items-center mb-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
@@ -142,68 +142,70 @@ export function SocialProof() {
                 </motion.p>
             </div>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="max-w-5xl mx-auto flex flex-col gap-6">
 
-                {/* 1. Hero Award Bento Box (Takes up Left side/Top) */}
+                {/* 1. Hero Award Bento Box (Top) */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ type: "spring", stiffness: 260, damping: 24, delay: 0.1 }}
-                    className="lg:col-span-5 relative group bg-gradient-to-br from-[#FFFBF2] to-[#FFF9F0] border border-amber-200/60 rounded-[2.5rem] p-10 flex flex-col justify-between overflow-hidden sm:min-h-[480px] shadow-[0_8px_40px_rgb(245,158,11,0.06)]"
+                    className="relative group bg-gradient-to-br from-[#FFFBF2] to-[#FFF9F0] border border-amber-200/60 rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between overflow-hidden shadow-[0_8px_40px_rgb(245,158,11,0.06)]"
                 >
                     {/* Background glow & decoration */}
                     <div className="absolute -top-32 -right-32 w-80 h-80 bg-amber-400/20 rounded-full blur-3xl pointer-events-none transition-transform duration-700 group-hover:scale-110" />
 
-                    <div className="flex justify-between items-start relative z-10 mb-8">
-                        <div className="p-4 rounded-2xl bg-white shadow-sm border border-amber-100 text-amber-500">
-                            <Trophy className="w-8 h-8" />
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start relative z-10 gap-6">
+                        <div className="flex justify-between items-start w-full md:w-auto md:order-2">
+                            <div className="flex items-center gap-2 bg-white/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-100">
+                                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                                <span className="text-xs font-bold uppercase tracking-widest text-amber-700">1st Place</span>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2 bg-white/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-100">
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                            <span className="text-xs font-bold uppercase tracking-widest text-amber-700">1st Place</span>
-                        </div>
-                    </div>
 
-                    <div className="relative z-10 mt-auto">
-                        <div className="flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-amber-600/80 mb-3">
-                            <span>Simplifai</span>
-                            <span className="w-1 h-1 rounded-full bg-amber-300" />
-                            <span>2022</span>
+                        <div className="md:order-1">
+                            <div className="w-fit p-4 rounded-2xl bg-white shadow-sm border border-amber-100 text-amber-500 mb-8">
+                                <Trophy className="w-8 h-8" />
+                            </div>
+                            <div className="flex items-center gap-3 text-sm font-bold tracking-widest uppercase text-amber-600/80 mb-3">
+                                <span>Simplifai</span>
+                                <span className="w-1 h-1 rounded-full bg-amber-300" />
+                                <span>2022</span>
+                            </div>
+                            <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 leading-[1.1] mb-6">
+                                Hackathon 2.0 <br className="hidden md:block" /> Winner
+                            </h3>
+                            <p className="text-lg text-amber-900/70 font-medium leading-relaxed max-w-lg">
+                                Awarded 1st place for designing an innovative AI-driven workflow builder that reduced setup time by 40%.
+                            </p>
                         </div>
-                        <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 leading-[1.1] mb-6">
-                            Hackathon 2.0 <br /> Winner
-                        </h3>
-                        <p className="text-lg text-amber-900/70 font-medium leading-relaxed max-w-md">
-                            Awarded 1st place for designing an innovative AI-driven workflow builder that reduced setup time by 40%.
-                        </p>
                     </div>
                 </motion.div>
 
-                {/* 2. Certifications Marquee Area (Right Side) */}
+                {/* 2. Certifications Marquee Area (Bottom) */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ type: "spring", stiffness: 260, damping: 24, delay: 0.2 }}
-                    className="lg:col-span-7 bg-white/40 backdrop-blur-3xl border border-white/60 rounded-[2.5rem] p-8 lg:p-10 shadow-[0_8px_40px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col justify-center relative min-h-[480px]"
+                    className="bg-white/40 backdrop-blur-3xl border border-white/60 rounded-[2.5rem] py-8 lg:py-10 shadow-[0_8px_40px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col justify-center relative"
                 >
                     {/* Gradient Masks for smooth scroll fading */}
-                    <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white/90 to-transparent z-10 pointer-events-none" />
-                    <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white/90 to-transparent z-10 pointer-events-none" />
+                    <div className="absolute top-0 bottom-0 left-0 w-12 md:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+                    <div className="absolute top-0 bottom-0 right-0 w-12 md:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-                    <div className="flex items-center gap-4 mb-10 pl-6">
+                    <div className="flex items-center gap-4 mb-8 px-8 lg:px-10">
                         <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-sm shrink-0">
                             <Award className="w-5 h-5" />
                         </div>
-                        <h3 className="text-2xl font-bold text-zinc-900 tracking-tight">10 Professional Certifications</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">10 Professional Certifications</h3>
                     </div>
 
                     {/* Infinite Marquee Rows */}
-                    <div className="flex flex-col gap-5 relative z-0">
+                    <div className="flex flex-col gap-4 md:gap-5 relative z-0">
                         {/* Row 1 (Scrolling Left) */}
                         <div className="group/marquee flex overflow-hidden">
-                            <div className="flex animate-[marquee_40s_linear_infinite] group-hover/marquee:[animation-play-state:paused] gap-5 px-5">
+                            <div className="flex animate-[marquee_40s_linear_infinite] group-hover/marquee:[animation-play-state:paused] gap-4 md:gap-5 px-4 md:px-5">
                                 {/* Duplicate the array directly to make it infinite loop seamlessly */}
-                                {[...rowOne, ...rowOne].map((cert, index) => (
+                                {[...rowOne, ...rowOne, ...rowOne].map((cert, index) => (
                                     <CertCard key={index} cert={cert} />
                                 ))}
                             </div>
@@ -211,8 +213,8 @@ export function SocialProof() {
 
                         {/* Row 2 (Scrolling Right) */}
                         <div className="group/marquee flex overflow-hidden">
-                            <div className="flex animate-[marquee-reverse_35s_linear_infinite] group-hover/marquee:[animation-play-state:paused] gap-5 px-5">
-                                {[...rowTwo, ...rowTwo].map((cert, index) => (
+                            <div className="flex animate-[marquee-reverse_35s_linear_infinite] group-hover/marquee:[animation-play-state:paused] gap-4 md:gap-5 px-4 md:px-5">
+                                {[...rowTwo, ...rowTwo, ...rowTwo].map((cert, index) => (
                                     <CertCard key={index} cert={cert} />
                                 ))}
                             </div>

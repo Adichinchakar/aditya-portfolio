@@ -27,14 +27,14 @@ export function About() {
     const [isContactSheetOpen, setIsContactSheetOpen] = useState(false);
 
     return (
-        <section id="about" className="py-32 px-6 relative overflow-hidden" ref={ref}>
+        <section id="about" className="py-24 px-6 relative overflow-hidden" ref={ref}>
             {/* Ambient orbs */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
                 {/* Pill badge */}
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-10">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}

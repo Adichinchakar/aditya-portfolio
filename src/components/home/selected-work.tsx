@@ -10,51 +10,63 @@ import Link from "next/link";
 const works = [
     {
         index: "01",
-        company: "Simplifai Design System",
-        description: "A comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.",
-        tags: ["Design Systems", "Architecture", "10x Faster UI"],
-        href: "/work/simplifai-design-system",
-        spotlight: "rgba(99, 102, 241, 0.12)",
-        border: "group-hover:border-indigo-500/30",
-        delay: 0,
-        role: "Lead Architect",
-        metric: "42% Faster Dev Cycle",
-    },
-    {
-        index: "02",
         company: "Aulys",
         description: "Intelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.",
         tags: ["AI Agent", "Figma Plugin", "Typescript"],
         href: "/work/aulys",
         spotlight: "rgba(16, 185, 129, 0.12)",
         border: "group-hover:border-emerald-500/30",
-        delay: 0.1,
+        delay: 0,
         role: "Frontend Engineer",
         metric: "WCAG 2.2 AAA Compliance",
     },
     {
-        index: "03",
+        index: "02",
         company: "Simplifai Workflow Engine",
         description: "Node-based visual builder for complex enterprise AI automations. Democratizing logic creation without code.",
         tags: ["Node Builder", "UX Strategy", "Enterprise"],
         href: "/work/simplifai",
         spotlight: "rgba(249, 115, 22, 0.12)",
         border: "group-hover:border-orange-500/30",
-        delay: 0.2,
+        delay: 0.1,
         role: "Product Designer",
         metric: "Zero-Code Automation",
     },
     {
+        index: "03",
+        company: "Simplifai Design System",
+        description: "A comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.",
+        tags: ["Design Systems", "Architecture", "10x Faster UI"],
+        href: "/work/simplifai-design-system",
+        spotlight: "rgba(99, 102, 241, 0.12)",
+        border: "group-hover:border-indigo-500/30",
+        delay: 0.2,
+        role: "Lead Architect",
+        metric: "42% Faster Dev Cycle",
+    },
+    {
         index: "04",
-        company: "Keywordio Dashboard",
-        description: "High-density data visualization dashboards for digital marketing ad performance.",
-        tags: ["Data Viz", "B2B SaaS"],
-        href: "#work",
-        spotlight: "rgba(168, 85, 247, 0.12)",
-        border: "group-hover:border-violet-500/30",
+        company: "MedSecure",
+        description: "Blockchain medical records platform giving every Indian patient a sovereign, tamper-proof health identity — online or offline.",
+        tags: ["Blockchain", "Healthcare", "ABDM"],
+        href: "/work/medsecure",
+        spotlight: "rgba(0, 94, 184, 0.12)",
+        border: "group-hover:border-blue-600/30",
         delay: 0.3,
-        role: "Product Designer",
-        metric: "Data Visualization",
+        role: "Product Lead",
+        metric: "34% Fewer Medical Errors",
+    },
+    {
+        index: "05",
+        company: "Nexus Fintech App",
+        description: "Solving the 'Super-App' paradox with an Intent-Led architectural strategy, focusing on trust and reduced cognitive bloat.",
+        tags: ["FinTech", "UX Strategy", "Architecture"],
+        href: "/work/nexus-banking",
+        spotlight: "rgba(59, 130, 246, 0.12)",
+        border: "group-hover:border-blue-500/30",
+        delay: 0.4,
+        role: "Principal Designer",
+        metric: "UX Case Study",
     },
 ];
 
@@ -79,7 +91,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
                 <article
                     onMouseMove={handleMouseMove}
                     className={cn(
-                        "relative h-full overflow-hidden rounded-[2rem] border border-white/40 bg-white/40 backdrop-blur-xl p-8 md:p-10 flex flex-col justify-between transition-all duration-500 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] min-h-[340px]",
+                        "relative h-full overflow-hidden rounded-[2rem] border border-white/40 bg-white/40 backdrop-blur-xl p-7 md:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] min-h-[280px]",
                         work.border
                     )}
                 >
@@ -140,23 +152,25 @@ function WorkCard({ work }: { work: typeof works[0] }) {
     );
 }
 
-export function SelectedWork() {
+export function SelectedWork({ title = "Case Studies", excludeHref }: { title?: string; excludeHref?: string }) {
+    const displayedWorks = excludeHref ? works.filter(w => w.href !== excludeHref) : works;
+
     return (
-        <section id="work" className="py-32 px-6 relative overflow-hidden">
+        <section id="work" className="py-24 px-6 relative overflow-hidden">
             {/* Background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="container mx-auto max-w-6xl space-y-16 relative z-10">
+            <div className="container mx-auto max-w-6xl space-y-12 relative z-10">
                 {/* Header */}
                 <div className="flex justify-between items-end border-b border-zinc-200/60 pb-8">
                     <TextReveal tag="h2" className="text-4xl md:text-5xl font-black tracking-tighter">
-                        Case Studies
+                        {title}
                     </TextReveal>
-                    <span className="font-mono text-zinc-400 font-bold hidden sm:block tracking-widest text-sm">(0{works.length})</span>
+                    <span className="font-mono text-zinc-400 font-bold hidden sm:block tracking-widest text-sm">(0{displayedWorks.length})</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {works.map((work) => (
+                    {displayedWorks.map((work) => (
                         <WorkCard key={work.index} work={work} />
                     ))}
                 </div>

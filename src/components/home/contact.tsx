@@ -20,7 +20,7 @@ export function Contact() {
     }
 
     return (
-        <section id="contact" className="py-32 px-6 relative overflow-hidden">
+        <section id="contact" className="py-24 px-6 relative overflow-hidden">
             {/* Ambient glow orbs */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/8 rounded-full blur-[120px] pointer-events-none" />
@@ -32,10 +32,10 @@ export function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring" as const, stiffness: 240, damping: 22 }}
                     viewport={{ once: true }}
-                    className="rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/50 shadow-[0_20px_60px_rgb(0,0,0,0.08)] p-12 md:p-20 flex flex-col items-center text-center gap-10"
+                    className="rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/50 shadow-[0_20px_60px_rgb(0,0,0,0.08)] p-10 md:p-14 flex flex-col items-center text-center gap-7"
                 >
                     {/* Heading */}
-                    <TextReveal tag="h2" className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+                    <TextReveal tag="h2" className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none">
                         Ready to ship faster?
                     </TextReveal>
 
@@ -45,9 +45,9 @@ export function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="text-xl md:text-2xl text-zinc-500 max-w-2xl font-medium leading-relaxed"
+                        className="text-base md:text-lg text-zinc-500 max-w-xl font-medium leading-relaxed"
                     >
-                        I&apos;m looking for a Product Design or Founding Product role where I can shape the product vision, scale systems, and accelerate time-to-market.
+                        Looking for a Product Design or Founding Product role where I can shape product vision and accelerate time-to-market.
                     </motion.p>
 
                     {/* CTA Button */}

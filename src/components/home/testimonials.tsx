@@ -54,9 +54,9 @@ export function Testimonials() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-24 overflow-hidden relative" ref={ref}>
+        <section className="py-20 overflow-hidden relative" ref={ref}>
             {/* Section header */}
-            <div className="container mx-auto px-6 mb-16 text-center">
+            <div className="container mx-auto px-6 mb-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}

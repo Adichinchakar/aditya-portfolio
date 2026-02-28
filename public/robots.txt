@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://adityachinchakar.com/sitemap.xml
+
+# Disallow admin or private pages (if any)
+Disallow: /api/
+Disallow: /_next/

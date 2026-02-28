@@ -37,7 +37,7 @@ const projects = [
 export function Work() {
     return (
         <section id="work" className="py-32 px-6">
-            <div className="container mx-auto space-y-20">
+            <div className="container mx-auto space-y-20 max-w-6xl">
                 <div className="flex justify-between items-end">
                     <TextReveal tag="h2" className="text-5xl md:text-7xl font-bold tracking-tighter">
                         Selected Work

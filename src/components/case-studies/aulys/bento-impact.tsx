@@ -7,7 +7,7 @@ export function BentoImpact() {
         <section className="py-24 px-6 bg-zinc-50">
             <div className="container mx-auto max-w-5xl">
                 <div className="mb-16">
-                    <p className="text-xs font-mono font-bold text-blue-500 uppercase tracking-[0.2em] mb-4">
+                    <p className="text-xs font-mono font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">
                         05 — Impact
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">

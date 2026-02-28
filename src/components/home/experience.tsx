@@ -150,7 +150,7 @@ export function ExperienceGrid() {
 
     return (
         <section
-            className="container mx-auto px-6 py-24"
+            className="container mx-auto px-6 py-24 max-w-6xl"
             aria-label="Work Experience"
             ref={ref}
         >
@@ -186,7 +186,7 @@ export function ExperienceGrid() {
                 variants={containerVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
-                className="flex flex-col gap-5 max-w-5xl mx-auto"
+                className="flex flex-col gap-5"
             >
                 {experiences.map((exp) => (
                     <ExperienceListCard key={exp.id} exp={exp} />

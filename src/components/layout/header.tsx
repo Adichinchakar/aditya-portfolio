@@ -36,7 +36,7 @@ export function Header() {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold tracking-tighter text-zinc-900 hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1 -ml-2">
-                        PORTFOLIO.
+                        <span className="font-black tracking-tight text-zinc-900">Aditya</span><span className="font-light tracking-tight text-zinc-400">Chinchakar</span>
                     </Link>
 
                     {/* Desktop Nav */}

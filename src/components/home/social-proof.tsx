@@ -110,11 +110,11 @@ export function SocialProof() {
 
     return (
         <section
-            className="container mx-auto px-6 py-24 overflow-hidden"
+            className="container mx-auto px-6 py-24 overflow-hidden max-w-6xl"
             aria-label="Certifications and Awards"
             ref={ref}
         >
-            <div className="max-w-7xl mx-auto flex flex-col items-center mb-10 text-center">
+            <div className="flex flex-col items-center mb-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
@@ -142,7 +142,7 @@ export function SocialProof() {
                 </motion.p>
             </div>
 
-            <div className="max-w-5xl mx-auto flex flex-col gap-6">
+            <div className="flex flex-col gap-6">
 
                 {/* 1. Hero Award Bento Box (Top) */}
                 <motion.div
@@ -196,7 +196,7 @@ export function SocialProof() {
                         <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-sm shrink-0">
                             <Award className="w-5 h-5" />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">10 Professional Certifications</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">10 Verified Credentials</h3>
                     </div>
 
                     {/* Infinite Marquee Rows */}

@@ -86,7 +86,7 @@ export function NextCaseStudyHero({ currentSlug }: { currentSlug: string }) {
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30">
                 <Link
                     href="/#work" // For now, links back to the homepage grid. Can be upgraded to a full-screen menu later.
-                    className="group flex items-center gap-2 text-zinc-500 hover:text-white text-sm font-medium transition-colors"
+                    className="group flex items-center gap-2 text-zinc-400 hover:text-white text-sm font-medium transition-colors"
                 >
                     <Grid className="w-4 h-4" />
                     <span>View All Projects</span>

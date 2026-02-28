@@ -118,7 +118,7 @@ export function SimplifaiShowcase() {
                 <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-purple-500/6 rounded-full blur-[100px]" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+            <div className="container mx-auto px-6 relative z-10 max-w-6xl">
 
                 {/* ── Eyebrow ── */}
                 <motion.div

@@ -2,8 +2,9 @@
 
 import { MouseEvent, useRef } from "react";
 import { motion, useInView, useMotionTemplate, useMotionValue } from "framer-motion";
-import { Bot, Paintbrush, Sparkles, Layout, PenTool } from "lucide-react";
+import { Bot, Paintbrush, Sparkles, Layout, PenTool, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const skillsData = [
     {
@@ -15,6 +16,7 @@ const skillsData = [
         skills: ["Design Systems", "Figma Auto Layout", "Micro-interactions", "Prototyping", "Motion Design"],
         border: "group-hover:border-violet-500/30",
         label: "Core Craft",
+        proof: { label: "Simplifai DS → 42% faster dev cycles", href: "/work/simplifai-design-system" },
     },
     {
         category: "UX Strategy & Product",
@@ -25,6 +27,7 @@ const skillsData = [
         skills: ["User Research", "Journey Mapping", "Wireframing", "A/B Testing", "Information Architecture"],
         border: "group-hover:border-amber-500/30",
         label: "Product Thinking",
+        proof: { label: "MedSecure → 34% fewer medical errors", href: "/work/medsecure" },
     },
     {
         category: "Design Engineering",
@@ -35,6 +38,7 @@ const skillsData = [
         skills: ["React & Next.js", "Framer Motion", "TypeScript", "Tailwind CSS", "Figma Plugin API"],
         border: "group-hover:border-blue-500/30",
         label: "Builds What I Design",
+        proof: { label: "Aulys Plugin → WCAG 2.2 AAA compliance", href: "/work/aulys" },
     },
     {
         category: "AI & Agentic Workflows",
@@ -45,6 +49,7 @@ const skillsData = [
         skills: ["Prompt Engineering", "Custom AI Agents", "LLM Integration", "Automated Workflows", "AI-Augmented Design"],
         border: "group-hover:border-emerald-500/30",
         label: "Emerging Edge",
+        proof: { label: "Infosys → 70% faster assessment cycles", href: "/work/infosys" },
     },
 ];
 
@@ -102,6 +107,15 @@ function SkillCard({ item, index }: { item: typeof skillsData[0]; index: number 
                     </li>
                 ))}
             </ul>
+
+            {/* Proof link */}
+            <Link
+                href={item.proof.href}
+                className={cn("inline-flex items-center gap-1 text-xs font-bold mt-auto pt-2 border-t border-white/60 hover:underline underline-offset-4 transition-colors", item.color)}
+            >
+                {item.proof.label}
+                <ArrowUpRight className="w-3 h-3" />
+            </Link>
         </motion.div>
     );
 }

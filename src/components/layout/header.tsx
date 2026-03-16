@@ -8,8 +8,9 @@ import { Menu, X } from "lucide-react";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 
 const navLinks = [
-    { href: "https://aulys-app.vercel.app/", label: "Aulys", isExternal: true },
+    { href: "https://aulys-app.vercel.app/", label: "Live Plugin ↗", isExternal: true },
     { href: "/#work", label: "Case Studies" },
+    { href: "/Aditya_Chinchakar_V1_FoundingDesigner.pdf", label: "Resume", isExternal: true },
     { href: "/#about", label: "About" },
 ];
 

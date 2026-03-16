@@ -17,7 +17,7 @@ const works = [
         spotlight: "rgba(16, 185, 129, 0.12)",
         border: "group-hover:border-emerald-500/30",
         delay: 0,
-        role: "Frontend Engineer",
+        role: "Design Engineer",
         metric: "WCAG 2.2 AAA Compliance",
     },
     {
@@ -29,7 +29,7 @@ const works = [
         spotlight: "rgba(249, 115, 22, 0.12)",
         border: "group-hover:border-orange-500/30",
         delay: 0.1,
-        role: "Product Designer",
+        role: "Senior Product Designer",
         metric: "Zero-Code Automation",
     },
     {
@@ -66,7 +66,19 @@ const works = [
         border: "group-hover:border-blue-500/30",
         delay: 0.4,
         role: "Principal Designer",
-        metric: "UX Case Study",
+        metric: "Strategy Case Study",
+    },
+    {
+        index: "06",
+        company: "Infosys × Imagine Learning",
+        description: "GenAI-powered assessment tools for enterprise education. Designed rubric generators and recommendation engines serving 5+ product teams.",
+        tags: ["GenAI", "Enterprise", "Design Systems"],
+        href: "/work/infosys",
+        spotlight: "rgba(99, 102, 241, 0.12)",
+        border: "group-hover:border-indigo-500/30",
+        delay: 0.5,
+        role: "Senior Product Designer",
+        metric: "70% Faster Assessments",
     },
 ];
 
@@ -87,7 +99,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
             transition={{ delay: work.delay, type: "spring" as const, stiffness: 260, damping: 22 }}
             viewport={{ once: true, margin: "-100px" }}
         >
-            <Link href={work.href} className="block group h-full">
+            <Link href={work.href} className="block group h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-[2rem]">
                 <article
                     onMouseMove={handleMouseMove}
                     className={cn(
@@ -108,7 +120,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
                         <div className="flex justify-between items-start">
                             <span className="text-sm font-bold text-zinc-400 font-mono tracking-widest">{work.index}</span>
                             <div className="w-10 h-10 rounded-full bg-white/70 border border-white/80 flex items-center justify-center shadow-sm backdrop-blur-md transform group-hover:scale-110 transition-all duration-300">
-                                <ArrowUpRight className="w-4 h-4 text-zinc-700 group-hover:text-zinc-900 transition-colors" />
+                                <ArrowUpRight className="w-4 h-4 text-zinc-700 group-hover:text-zinc-900 transition-colors" aria-hidden="true" />
                             </div>
                         </div>
 

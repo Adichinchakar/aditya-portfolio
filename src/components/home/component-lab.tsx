@@ -104,31 +104,37 @@ export function ComponentLab() {
     let highlighted = code
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(new RegExp(`\\\\b(${keywords.join('|')})\\\\b`, 'g'), '<span class="text-purple-400">$1</span>')
-      .replace(new RegExp(`\\\\b(${hooks.join('|')})\\\\b`, 'g'), '<span class="text-yellow-300">$1</span>')
-      .replace(new RegExp(`\\\\b(${components.join('|')})(\\\\.|\\\\b)`, 'g'), '<span class="text-green-400">$1</span>$2')
+      .replace(new RegExp(`\\b(${keywords.join('|')})\\b`, 'g'), '<span class="text-purple-400">$1</span>')
+      .replace(new RegExp(`\\b(${hooks.join('|')})\\b`, 'g'), '<span class="text-yellow-300">$1</span>')
+      .replace(new RegExp(`\\b(${components.join('|')})(\\.|\\b)`, 'g'), '<span class="text-green-400">$1</span>$2')
       .replace(/("[^"]*")/g, '<span class="text-orange-300">$1</span>');
 
-    return highlighted.split('\\n');
+    return highlighted.split('\n');
   };
 
-  const highlightedLines = highlightCode(activeComponent.code);
+  // Defer highlighting to client only — avoids SSR/client HTML mismatch
+  const [highlightedLines, setHighlightedLines] = useState<string[]>(() =>
+    activeComponent.code.split('\n')
+  );
+  useEffect(() => {
+    setHighlightedLines(highlightCode(activeComponent.code));
+  }, [activeComponent.code]);
 
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden bg-zinc-50/50" ref={ref}>
+    <section className="py-14 px-6 relative overflow-hidden bg-zinc-50/50" ref={ref}>
       {/* Premium background effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-10">
+        <div className="flex flex-col items-center text-center mb-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-600 mb-8 backdrop-blur-md shadow-sm"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-600 mb-4 backdrop-blur-md shadow-sm"
           >
             <Layers className="w-3.5 h-3.5 text-blue-500" />
             Interactive Demo
@@ -137,7 +143,7 @@ export function ComponentLab() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ type: "spring" as const, stiffness: 260, damping: 20 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-zinc-900"
+            className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900"
           >
             Engineered Micro-interactions
           </motion.h2>
@@ -145,10 +151,9 @@ export function ComponentLab() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.1 }}
-            className="text-zinc-500 mt-5 text-lg font-medium max-w-2xl mx-auto"
+            className="text-zinc-500 mt-3 text-base max-w-xl mx-auto"
           >
             Great design is not just how it looks, but how it feels.
-            I focus on the microscopic details that make software feel alive.
           </motion.p>
         </div>
 
@@ -157,10 +162,10 @@ export function ComponentLab() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ type: "spring" as const, stiffness: 260, damping: 24, delay: 0.1 }}
-          className="bg-white/40 backdrop-blur-2xl border border-white/60 rounded-[2.5rem] p-4 lg:p-6 shadow-[0_8px_40px_rgb(0,0,0,0.04)]"
+          className="bg-white/40 backdrop-blur-2xl border border-white/60 rounded-[2rem] p-3 lg:p-4 shadow-[0_8px_40px_rgb(0,0,0,0.04)]"
         >
           {/* Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-6 p-2 bg-white/50 rounded-2xl mx-auto w-fit border border-zinc-100">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-4 p-1.5 bg-white/50 rounded-2xl mx-auto w-fit border border-zinc-100">
             {COMPONENTS.map((tab) => (
               <button
                 key={tab.id}
@@ -182,12 +187,12 @@ export function ComponentLab() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
             {/* Live Playground */}
-            <div className="min-h-[460px] relative rounded-3xl bg-zinc-50/50 border border-zinc-200/60 overflow-hidden flex flex-col items-center justify-center p-8 pattern-dots pattern-zinc-200 pattern-bg-transparent pattern-size-4 pattern-opacity-100">
-              <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-zinc-200 text-xs font-semibold text-zinc-500 shadow-sm backdrop-blur-md">
-                <MousePointer2 className="w-3.5 h-3.5" />
-                Playground
+            <div className="min-h-[300px] relative rounded-2xl bg-zinc-50/50 border border-zinc-200/60 overflow-hidden flex flex-col items-center justify-center p-6 pattern-dots pattern-zinc-200 pattern-bg-transparent pattern-size-4 pattern-opacity-100">
+              <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/80 border border-zinc-200 text-xs font-medium text-zinc-400 shadow-sm backdrop-blur-md">
+                <MousePointer2 className="w-3 h-3" />
+                Click to interact
               </div>
 
               <AnimatePresence mode="wait">
@@ -205,7 +210,7 @@ export function ComponentLab() {
             </div>
 
             {/* Syntax-highlighted code block */}
-            <div className="min-h-[460px] rounded-3xl bg-[#0d1117] border border-zinc-800/80 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.25)] flex flex-col pt-1">
+            <div className="min-h-[300px] rounded-2xl bg-[#0d1117] border border-zinc-800/80 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.25)] flex flex-col pt-1">
               {/* Fake titlebar */}
               <div className="flex items-center gap-2 px-5 py-3.5 bg-[#0d1117] border-b border-zinc-800/80 shrink-0">
                 <div className="w-3 h-3 rounded-full bg-zinc-700/60" />
@@ -228,7 +233,7 @@ export function ComponentLab() {
               </div>
 
               {/* Code */}
-              <div className="p-6 overflow-auto flex-1 relative bg-gradient-to-br from-[#0d1117] to-[#161b22]">
+              <div className="p-4 overflow-auto flex-1 relative bg-gradient-to-br from-[#0d1117] to-[#161b22]">
                 <AnimatePresence mode="wait">
                   <motion.pre
                     key={activeTab}

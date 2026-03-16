@@ -39,8 +39,8 @@ const testimonials = [
     },
     {
         quote: "His motion design work directly contributed to a 15% increase in customer inquiries and engagement.",
-        name: "Enterprise Client",
-        role: "Digital Team",
+        name: "Shell Project Lead",
+        role: "Strategic Partner",
         company: "Shell",
         initials: "SH",
         color: "bg-gradient-to-br from-zinc-600 to-zinc-800"
@@ -54,7 +54,7 @@ export function Testimonials() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-20 overflow-hidden relative" ref={ref}>
+        <section className="py-24 overflow-hidden relative" ref={ref} aria-label="Client testimonials" role="region">
             {/* Section header */}
             <div className="container mx-auto px-6 mb-10 text-center">
                 <motion.div
@@ -63,7 +63,7 @@ export function Testimonials() {
                     transition={{ duration: 0.5 }}
                     className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-50/50 border border-blue-100 text-sm font-semibold text-blue-700 mb-6 backdrop-blur-md shadow-sm"
                 >
-                    <Quote className="w-3.5 h-3.5" />
+                    <Quote className="w-3.5 h-3.5" aria-hidden="true" />
                     Social Proof
                 </motion.div>
                 <motion.h2

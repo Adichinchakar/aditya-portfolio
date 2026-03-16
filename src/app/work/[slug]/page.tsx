@@ -1,34 +1,70 @@
-"use client";
-
 import { notFound } from "next/navigation";
-import { use } from "react";
+import type { Metadata } from "next";
 import SimplifaiPage from "@/components/case-studies/simplifai/content";
 import AulysPage from "@/components/case-studies/aulys/content";
 import SimplifaiDesignSystemPage from "@/components/case-studies/simplifai-design-system/content";
 import MedSecurePage from "@/components/case-studies/medsecure/content";
 import NexusBankingPage from "@/components/case-studies/nexus-banking/content";
+import InfosysPage from "@/components/case-studies/infosys/content";
 import { NextCaseStudyHero } from "@/components/case-studies/next-case-study-hero";
 
 const CASE_STUDIES = {
     "simplifai": {
         component: SimplifaiPage,
+        title: "Simplifai Workflow Engine — Case Study | Aditya Chinchakar",
+        description: "Node-based visual builder for complex enterprise AI automations. Redesigned the core automation engine, reducing onboarding time by 40% and increasing user adoption by 73%.",
     },
     "aulys": {
         component: AulysPage,
+        title: "Aulys Accessibility Engine — Case Study | Aditya Chinchakar",
+        description: "AI-powered Figma plugin for WCAG 2.2 compliance automation. Designed and built solo — 500+ frames scanned, under 10 seconds per document.",
     },
     "simplifai-design-system": {
         component: SimplifaiDesignSystemPage,
+        title: "Simplifai Design System — Case Study | Aditya Chinchakar",
+        description: "Enterprise design system scaling across 5+ product teams. Semantic token architecture and automated Figma to React handoff pipelines. 42% faster dev cycles.",
     },
     "medsecure": {
         component: MedSecurePage,
+        title: "MedSecure Blockchain Medical Records — Case Study | Aditya Chinchakar",
+        description: "Blockchain medical records platform giving every Indian patient a sovereign health identity. Reduced medical errors by 34% in pilot hospitals.",
     },
     "nexus-banking": {
         component: NexusBankingPage,
+        title: "Nexus Fintech App — Strategy Case Study | Aditya Chinchakar",
+        description: "Solving the Super-App paradox with an Intent-Led architectural strategy for Tier-1 Neobanks. An unsolicited UX audit and strategic proposal.",
+    },
+    "infosys": {
+        component: InfosysPage,
+        title: "Infosys × Imagine Learning — Case Study | Aditya Chinchakar",
+        description: "GenAI-powered assessment tools for enterprise-scale educational platforms. Designed rubric generators and recommendation engines serving 5+ product teams, cutting assessment time by 70%.",
     },
 };
 
-export default function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = use(params);
+export async function generateMetadata(
+    { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+    const { slug } = await params;
+    const study = CASE_STUDIES[slug as keyof typeof CASE_STUDIES];
+    if (!study) return {};
+    return {
+        title: study.title,
+        description: study.description,
+        openGraph: {
+            title: study.title,
+            description: study.description,
+            url: `https://adityachinchakar.com/work/${slug}`,
+            type: "article",
+        },
+        twitter: {
+            title: study.title,
+            description: study.description,
+        },
+    };
+}
+
+export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     const study = CASE_STUDIES[slug as keyof typeof CASE_STUDIES];
 
     if (!study) {

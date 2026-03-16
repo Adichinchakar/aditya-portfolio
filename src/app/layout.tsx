@@ -4,6 +4,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,20 +36,11 @@ export const metadata: Metadata = {
     siteName: "Aditya Chinchakar",
     title: "Aditya Chinchakar | Product Design Engineer",
     description: "Senior Product Designer & Engineer specializing in AI, Design Systems, and Accessibility (WCAG 2.2). Founder of Aulys.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Aditya Chinchakar - Product Design Engineer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Aditya Chinchakar | Product Design Engineer",
     description: "Senior Product Designer & Engineer specializing in AI, Design Systems, and Accessibility (WCAG 2.2). Founder of Aulys.",
-    images: ["/og-image.png"],
     creator: "@adityachinchakar",
   },
   robots: {
@@ -64,6 +56,34 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Aditya Chinchakar",
+  url: "https://adityachinchakar.com",
+  jobTitle: "Senior Product Designer",
+  description: "Senior Product Designer specializing in AI, design systems, and 0-to-1 product building. Founder of Aulys. Currently at Infosys.",
+  email: "adichinchakar@gmail.com",
+  sameAs: [
+    "https://linkedin.com/in/adityachinchakar",
+    "https://github.com/Adichinchakar",
+  ],
+  knowsAbout: [
+    "Product Design", "Design Systems", "AI UX", "React", "Next.js",
+    "Accessibility", "WCAG 2.2", "Figma", "Design Ops", "0-to-1 Products",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Infosys",
+    url: "https://www.infosys.com",
+  },
+  hasCredential: [
+    { "@type": "EducationalOccupationalCredential", name: "AI Associate", credentialCategory: "certification", recognizedBy: { "@type": "Organization", name: "Salesforce" } },
+    { "@type": "EducationalOccupationalCredential", name: "Design Accessibility", credentialCategory: "certification", recognizedBy: { "@type": "Organization", name: "Uxcel" } },
+  ],
+  award: "Simplifai Hackathon 2.0 Winner — 1st place, AI-driven workflow builder",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,6 +91,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} antialiased bg-zinc-50 text-zinc-600`}
         suppressHydrationWarning
@@ -90,6 +116,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );

@@ -25,6 +25,15 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
         };
     }, [isOpen]);
 
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") onClose();
+        };
+        document.addEventListener("keydown", handleKeyDown);
+        return () => document.removeEventListener("keydown", handleKeyDown);
+    }, [isOpen, onClose]);
+
     if (!mounted) return null;
 
     return (
@@ -54,9 +63,10 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
                             <h2 className="text-xl font-bold tracking-tight text-zinc-900">Let's Talk</h2>
                             <button
                                 onClick={onClose}
-                                className="p-2 rounded-full hover:bg-zinc-100 text-zinc-500 hover:text-zinc-900 transition-colors"
+                                className="p-2 rounded-full hover:bg-zinc-100 text-zinc-500 hover:text-zinc-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                aria-label="Close contact panel"
                             >
-                                <X className="w-5 h-5" />
+                                <X className="w-5 h-5" aria-hidden="true" />
                             </button>
                         </div>
 
@@ -64,7 +74,7 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
                         <div className="p-6 space-y-8">
                             <div className="space-y-2">
                                 <p className="text-zinc-500 font-medium">
-                                    How would you like to connect? I'm currently open for new opportunities in Product Design and Frontend Engineering.
+                                    How would you like to connect? I'm currently open to remote Lead / Staff Designer and Head of Design roles.
                                 </p>
                             </div>
 
@@ -85,7 +95,7 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
                                                 Grab 30 minutes on my calendar to discuss a role, project, or just jam on design systems.
                                             </p>
                                             <a
-                                                href="https://cal.com/" // Placeholder for actual cal link
+                                                href="https://cal.com/aditya-chinchakar-dl7rkm"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700"
@@ -115,7 +125,7 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
                                                 href="mailto:adichinchakar@gmail.com"
                                                 className="inline-flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700"
                                             >
-                                                adityachinchakar@gmail.com <ArrowRight className="w-4 h-4" />
+                                                adichinchakar@gmail.com <ArrowRight className="w-4 h-4" />
                                             </a>
                                         </div>
                                     </div>

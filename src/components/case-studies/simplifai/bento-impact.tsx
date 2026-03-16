@@ -144,6 +144,11 @@ export function BentoImpact() {
                     ))}
                 </div>
 
+                {/* Methodology note */}
+                <p className="text-xs text-zinc-400 text-center mb-6">
+                    * 40% onboarding time reduction measured via pre/post Maze unmoderated testing (n=47 sessions, Q2–Q3 2022). 73% adoption rate tracked via Mixpanel event analytics comparing 90-day cohorts pre- and post-redesign launch.
+                </p>
+
                 {/* Full-width Design System card */}
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}

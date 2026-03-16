@@ -79,17 +79,21 @@ export function Hero() {
                     >
                         {/* Pill badge */}
                         <div
-                            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-8 backdrop-blur-md"
-                            aria-label="Case study type: UX Strategy & Architecture"
+                            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-semibold mb-8 backdrop-blur-md"
+                            aria-label="Case study type: Strategy Case Study · Conceptual"
                         >
                             <span className="relative flex h-2 w-2" aria-hidden="true">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 motion-reduce:animate-none" />
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75 motion-reduce:animate-none" />
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
                             </span>
-                            UX Strategy & Architecture
+                            Strategy Case Study · Conceptual
                         </div>
 
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white mb-6 leading-[1.05]">
+                        <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-sm text-amber-300 font-medium mb-6">
+                            ⚡ Strategic deep-dive: This is an unsolicited UX audit and architectural proposal for Tier-1 Neobanks. No production deployment. Metrics shown are strategic targets, not validated outcomes.
+                        </div>
+
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white mb-6 leading-[1.05]">
                             Nexus:<br />
                             <span className="text-zinc-500 font-bold">
                                 Intent-Led FinTech.

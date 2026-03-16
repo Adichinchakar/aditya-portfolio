@@ -7,7 +7,7 @@ import { TextReveal } from "@/components/ui/text-reveal";
 import { Copy, Check, Github, Linkedin } from "lucide-react";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 
-const EMAIL = "adityachinchakar@gmail.com";
+const EMAIL = "adichinchakar@gmail.com";
 
 export function Contact() {
     const [copied, setCopied] = useState(false);
@@ -36,7 +36,7 @@ export function Contact() {
                 >
                     {/* Heading */}
                     <TextReveal tag="h2" className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none">
-                        Ready to ship faster?
+                        Let's build something great.
                     </TextReveal>
 
                     {/* Sub text */}
@@ -47,7 +47,7 @@ export function Contact() {
                         viewport={{ once: true }}
                         className="text-base md:text-lg text-zinc-500 max-w-xl font-medium leading-relaxed"
                     >
-                        Looking for a Product Design or Founding Product role where I can shape product vision and accelerate time-to-market.
+                        Open to remote Lead / Staff Designer and Head of Design roles. If you're building something ambitious and care about craft, I'd love to talk.
                     </motion.p>
 
                     {/* CTA Button */}
@@ -80,10 +80,11 @@ export function Contact() {
                         {/* Copy email chip */}
                         <button
                             onClick={handleCopy}
-                            className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-700 backdrop-blur-md shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300"
+                            aria-label={copied ? "Email address copied" : "Copy email address to clipboard"}
+                            className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-700 backdrop-blur-md shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                         >
                             <span>{EMAIL}</span>
-                            <span className="w-5 h-5 flex items-center justify-center text-zinc-500 group-hover:text-zinc-800 transition-colors">
+                            <span className="w-5 h-5 flex items-center justify-center text-zinc-500 group-hover:text-zinc-800 transition-colors" aria-hidden="true">
                                 {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
                             </span>
                         </button>
@@ -91,7 +92,7 @@ export function Contact() {
                         {/* Social links */}
                         <div className="flex items-center gap-4">
                             <a
-                                href="https://github.com/"
+                                href="https://github.com/Adichinchakar"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-zinc-500 hover:text-zinc-900 hover:bg-white/90 transition-all duration-300 shadow-sm backdrop-blur-md"
@@ -100,7 +101,7 @@ export function Contact() {
                                 <Github className="w-4 h-4" />
                             </a>
                             <a
-                                href="https://linkedin.com/"
+                                href="https://linkedin.com/in/adityachinchakar"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/60 border border-white/80 flex items-center justify-center text-zinc-500 hover:text-zinc-900 hover:bg-white/90 transition-all duration-300 shadow-sm backdrop-blur-md"

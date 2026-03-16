@@ -6,7 +6,7 @@ export function Footer() {
         <footer className="py-12 px-6 border-t border-zinc-200 relative bg-zinc-50">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <p className="text-sm text-zinc-500 text-center md:text-left flex items-center gap-2">
-                    <span className="w-6 h-6 rounded-full bg-zinc-900 flex items-center justify-center text-[10px] font-bold text-white">N</span>
+                    <span className="w-6 h-6 rounded-full bg-zinc-900 flex items-center justify-center text-[10px] font-bold text-white">AC</span>
                     © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
                 </p>
 

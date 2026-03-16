@@ -38,59 +38,11 @@ const certifications = [
         bg: "bg-violet-50",
         border: "border-violet-100",
     },
-    {
-        title: "Responsive Web Design in Adobe XD",
-        issuer: "Google",
-        date: "Aug 2022",
-        color: "text-rose-600",
-        bg: "bg-rose-50",
-        border: "border-rose-100",
-    },
-    {
-        title: "Create High-Fidelity Designs",
-        issuer: "Google",
-        date: "Jul 2022",
-        color: "text-pink-600",
-        bg: "bg-pink-50",
-        border: "border-pink-100",
-    },
-    {
-        title: "Conduct UX Research",
-        issuer: "Google",
-        date: "Jul 2022",
-        color: "text-amber-600",
-        bg: "bg-amber-50",
-        border: "border-amber-100",
-    },
-    {
-        title: "Build Low-Fidelity Prototypes",
-        issuer: "Google",
-        date: "Jun 2022",
-        color: "text-orange-600",
-        bg: "bg-orange-50",
-        border: "border-orange-100",
-    },
-    {
-        title: "Foundations of UX Design",
-        issuer: "Google",
-        date: "Apr 2022",
-        color: "text-teal-600",
-        bg: "bg-teal-50",
-        border: "border-teal-100",
-    },
-    {
-        title: "Start the UX Design Process",
-        issuer: "Google",
-        date: "Apr 2022",
-        color: "text-cyan-600",
-        bg: "bg-cyan-50",
-        border: "border-cyan-100",
-    },
 ];
 
 // Split into two arrays for counter-scrolling marquee effect
-const rowOne = certifications.slice(0, 5);
-const rowTwo = certifications.slice(5, 10);
+const rowOne = certifications.slice(0, 2);
+const rowTwo = certifications.slice(2, 4);
 
 const awards = [
     {
@@ -196,7 +148,7 @@ export function SocialProof() {
                         <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-sm shrink-0">
                             <Award className="w-5 h-5" />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">10 Verified Credentials</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">4 Industry Credentials</h3>
                     </div>
 
                     {/* Infinite Marquee Rows */}

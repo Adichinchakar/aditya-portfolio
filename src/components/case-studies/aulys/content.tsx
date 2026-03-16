@@ -5,6 +5,7 @@ import { Hero } from "@/components/case-studies/aulys/hero";
 import { ProblemStatement } from "@/components/case-studies/aulys/problem-statement";
 import { TheInsight } from "@/components/case-studies/aulys/insight";
 import { TheStory } from "@/components/case-studies/aulys/the-story";
+import { DesignArtifacts } from "@/components/case-studies/aulys/design-artifacts";
 import { SystemSpecs } from "@/components/case-studies/aulys/system-specs";
 import { BentoImpact } from "@/components/case-studies/aulys/bento-impact";
 import { Learnings } from "@/components/case-studies/aulys/learnings";
@@ -24,6 +25,9 @@ export default function AulysPage() {
 
             {/* 03 — How I Built It */}
             <TheStory />
+
+            {/* 03.5 — Design */}
+            <DesignArtifacts />
 
             {/* 04 — Architecture */}
             <SystemSpecs />

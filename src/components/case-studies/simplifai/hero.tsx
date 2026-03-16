@@ -61,9 +61,9 @@ export function Hero() {
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/6 rounded-full blur-[120px] pointer-events-none -z-10" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 mb-12 transition-colors group">
+                <Link href="/work" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 mb-12 transition-colors group">
                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                    <span className="text-sm font-semibold tracking-wide">Back to Portfolio</span>
+                    <span className="text-sm font-semibold tracking-wide">Back to Case Studies</span>
                 </Link>
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -82,7 +82,7 @@ export function Hero() {
                         </div>
 
                         {/* Upgraded heading */}
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-8 leading-[1.05]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-8 leading-[1.05]">
                             Accelerating Time-to-Value by 40%:
                             <br />
                             <span className="text-zinc-500 font-bold">

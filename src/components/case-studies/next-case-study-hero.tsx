@@ -44,6 +44,9 @@ export function NextCaseStudyHero({ currentSlug }: { currentSlug: string }) {
                 {nextStudy.slug === "simplifai-design-system" && <div className="absolute inset-0 bg-indigo-500/10 mix-blend-screen" />}
                 {nextStudy.slug === "aulys" && <div className="absolute inset-0 bg-emerald-500/10 mix-blend-screen" />}
                 {nextStudy.slug === "simplifai" && <div className="absolute inset-0 bg-purple-500/10 mix-blend-screen" />}
+                {nextStudy.slug === "medsecure" && <div className="absolute inset-0 bg-blue-500/10 mix-blend-screen" />}
+                {nextStudy.slug === "nexus-banking" && <div className="absolute inset-0 bg-amber-500/8 mix-blend-screen" />}
+                {nextStudy.slug === "infosys" && <div className="absolute inset-0 bg-violet-500/10 mix-blend-screen" />}
             </motion.div>
 
             {/* Content Overlay */}
@@ -85,7 +88,7 @@ export function NextCaseStudyHero({ currentSlug }: { currentSlug: string }) {
             {/* View All Projects Overlay Trigger */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30">
                 <Link
-                    href="/#work" // For now, links back to the homepage grid. Can be upgraded to a full-screen menu later.
+                    href="/work"
                     className="group flex items-center gap-2 text-zinc-400 hover:text-white text-sm font-medium transition-colors"
                 >
                     <Grid className="w-4 h-4" />

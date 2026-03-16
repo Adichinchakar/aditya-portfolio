@@ -27,6 +27,11 @@ export const CASE_STUDIES = [
         title: "Nexus Fintech App",
         description: "Solving the 'Super-App' paradox with an Intent-Led architectural strategy.",
     },
+    {
+        slug: "infosys",
+        title: "Infosys × Imagine Learning",
+        description: "GenAI-powered assessment tools for enterprise-scale educational platforms.",
+    },
 ];
 
 // The NextCaseStudy component was removed in favor of NextCaseStudyHero

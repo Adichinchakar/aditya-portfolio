@@ -92,7 +92,7 @@ export function Hero() {
                         </div>
 
                         {/* H1 — singular on this page */}
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
                             Aulys:<br />
                             <span className="text-zinc-500 font-bold">
                                 The AI Accessibility Engine.

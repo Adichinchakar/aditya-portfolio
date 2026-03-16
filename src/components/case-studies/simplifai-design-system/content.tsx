@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Hero } from "@/components/case-studies/simplifai-design-system/hero";
+import { ProblemContext } from "@/components/case-studies/simplifai-design-system/problem-context";
 import { AtomicExplorer } from "@/components/case-studies/simplifai-design-system/atomic-explorer";
 import { TokenGraph } from "@/components/case-studies/simplifai-design-system/token-graph";
 import { ComponentPlayground } from "@/components/case-studies/simplifai-design-system/component-playground";
@@ -14,6 +15,7 @@ export default function SimplifaiDesignSystemPage() {
     return (
         <main className="bg-zinc-50 min-h-screen">
             <Hero />
+            <ProblemContext />
             <AtomicExplorer />
             <TokenGraph />
             <ComponentPlayground />

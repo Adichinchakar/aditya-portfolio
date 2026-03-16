@@ -15,11 +15,11 @@ export function Hero() {
             <div className="absolute top-8 left-0 w-full px-6 z-50">
                 <div className="container mx-auto max-w-6xl">
                     <Link
-                        href="/"
+                        href="/work"
                         className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-900 transition-colors group"
                     >
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                        <span className="text-sm font-semibold tracking-wide">Back to Portfolio</span>
+                        <span className="text-sm font-semibold tracking-wide">Back to Case Studies</span>
                     </Link>
                 </div>
             </div>
@@ -39,7 +39,7 @@ export function Hero() {
                         Design System · Case Study
                     </div>
 
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tighter mb-8 leading-[1.05]">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-zinc-900 tracking-tighter mb-8 leading-[1.05]">
                         Simplifai{" "}
                         <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">

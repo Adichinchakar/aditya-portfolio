@@ -64,6 +64,9 @@ export function Impact() {
                     <p className="text-xl text-zinc-600 max-w-2xl leading-relaxed">
                         Tested across 3 hospitals, 2 PHCs, and 1,200 patients over 6 months. Here&apos;s what the data showed.
                     </p>
+                    <p className="text-xs text-zinc-400 mt-3">
+                        * Error rate baseline from 6-month pre-implementation incident logs at each facility; post period Jan–Jun 2024. Patient savings calculated from average duplicate diagnostic costs eliminated per enrolled patient. Pilot conducted independently by partnering healthcare institutions (Delhi NCR &amp; Pune).
+                    </p>
                 </motion.div>
 
                 {/* Bento Grid */}

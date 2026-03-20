@@ -162,7 +162,7 @@ function RoleMatcher() {
                                 "flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
                                 activeRole === i
                                     ? colorMap[r.color].tab
-                                    : "bg-zinc-100/80 text-zinc-500 border-transparent hover:bg-zinc-200/80 hover:text-zinc-700"
+                                    : "bg-zinc-100/80 text-zinc-600 border-transparent hover:bg-zinc-200/80 hover:text-zinc-800"
                             )}
                         >
                             <r.icon className="w-3 h-3" />
@@ -181,9 +181,9 @@ function RoleMatcher() {
                         transition={{ duration: 0.18, ease: "easeOut" }}
                         className={cn("rounded-2xl p-5 border relative z-10", colors.bg, colors.border)}
                     >
-                        <h3 className={cn("text-base md:text-lg font-black tracking-tight mb-2", colors.text)}>
+                        <p className={cn("text-base md:text-lg font-black tracking-tight mb-2", colors.text)}>
                             {role.headline}
-                        </h3>
+                        </p>
                         <p className="text-sm text-zinc-600 leading-relaxed mb-4">
                             {role.proof}
                         </p>

@@ -112,9 +112,10 @@ export function ComponentLab() {
     return highlighted.split('\n');
   };
 
-  // Defer highlighting to client only — avoids SSR/client HTML mismatch
+  // Initialize with escaped HTML so server and client initial render match
+  const escapeLine = (line: string) => line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const [highlightedLines, setHighlightedLines] = useState<string[]>(() =>
-    activeComponent.code.split('\n')
+    activeComponent.code.split('\n').map(escapeLine)
   );
   useEffect(() => {
     setHighlightedLines(highlightCode(activeComponent.code));

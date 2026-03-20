@@ -29,7 +29,7 @@ export function Footer() {
                     </Link>
                     <a
                         href="mailto:adichinchakar@gmail.com"
-                        aria-label="Email Me"
+                        aria-label="Send email to adichinchakar@gmail.com"
                         className="text-zinc-500 hover:text-zinc-900 transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-sm px-1 py-0.5"
                     >
                         adichinchakar@gmail.com

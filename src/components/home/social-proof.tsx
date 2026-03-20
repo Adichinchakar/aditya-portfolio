@@ -123,9 +123,9 @@ export function SocialProof() {
                                 <span className="w-1 h-1 rounded-full bg-amber-300" />
                                 <span>2022</span>
                             </div>
-                            <h3 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 leading-[1.1] mb-6">
+                            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 leading-[1.1] mb-6">
                                 Hackathon 2.0 <br className="hidden md:block" /> Winner
-                            </h3>
+                            </h2>
                             <p className="text-lg text-amber-900/70 font-medium leading-relaxed max-w-lg">
                                 Awarded 1st place for designing an innovative AI-driven workflow builder that reduced setup time by 40%.
                             </p>
@@ -148,7 +148,7 @@ export function SocialProof() {
                         <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 shadow-sm shrink-0">
                             <Award className="w-5 h-5" />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">4 Industry Credentials</h3>
+                        <h2 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">4 Industry Credentials</h2>
                     </div>
 
                     {/* Infinite Marquee Rows */}
@@ -188,9 +188,9 @@ function CertCard({ cert }: { cert: any }) {
             <div className={cn("absolute -bottom-8 -right-8 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500", cert.bg)} />
 
             <div>
-                <h4 className="font-bold text-zinc-900 leading-snug mb-3 group-hover:text-black transition-colors line-clamp-2 pr-4 text-[17px]">
+                <p className="font-bold text-zinc-900 leading-snug mb-3 group-hover:text-black transition-colors line-clamp-2 pr-4 text-[17px]">
                     {cert.title}
-                </h4>
+                </p>
             </div>
 
             <div className="flex items-center justify-between mt-auto">

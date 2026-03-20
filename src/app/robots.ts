@@ -10,6 +10,5 @@ export default function robots(): MetadataRoute.Robots {
             },
         ],
         sitemap: "https://adityachinchakar.com/sitemap.xml",
-        host: "https://adityachinchakar.com",
     };
 }

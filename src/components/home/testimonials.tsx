@@ -96,7 +96,7 @@ export function Testimonials() {
                                     {t.initials}
                                 </div>
                                 <div className="flex flex-col min-w-0">
-                                    <h4 className="text-zinc-900 font-bold text-base leading-tight truncate">{t.name}</h4>
+                                    <p className="text-zinc-900 font-bold text-base leading-tight truncate">{t.name}</p>
                                     <p className="text-zinc-500 text-[13px] font-medium truncate mt-0.5">
                                         {t.role} <span className="text-zinc-300 mx-1">•</span> {t.company}
                                     </p>

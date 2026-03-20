@@ -285,9 +285,9 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                         className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-zinc-900 leading-[1.1]"
                     >
-                        I design{" "}<br className="hidden md:block" />
+                        Bridging the gap between <br className="hidden md:block" />
                         <span className="relative inline-block">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">AI products.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">Design</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"
@@ -306,9 +306,9 @@ export function Hero() {
                                 </defs>
                             </motion.svg>
                         </span>
-                        {" "}Then I{" "}
+                        {" "}&{" "}
                         <span className="relative inline-block">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">build them</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">AI-Driven Execution</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"

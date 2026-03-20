@@ -247,7 +247,8 @@ export default function InfosysPage() {
                                     width={1920}
                                     height={944}
                                     className="w-full h-auto block"
-                                    quality={95}
+                                    quality={90}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                                 />
                             </div>
                             <p className="text-sm text-zinc-500 mt-3 ml-1">
@@ -285,7 +286,8 @@ export default function InfosysPage() {
                                     width={1920}
                                     height={944}
                                     className="w-full h-auto block"
-                                    quality={95}
+                                    quality={90}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                                 />
                             </div>
                             <p className="text-sm text-zinc-500 mt-3 ml-1">

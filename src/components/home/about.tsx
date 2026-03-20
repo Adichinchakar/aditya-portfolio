@@ -2,7 +2,8 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Zap, BookOpen, FlaskConical } from "lucide-react";
+import Link from "next/link";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 
 const stats = [
@@ -104,9 +105,10 @@ export function About() {
                         </motion.div>
                     </div>
 
-                    {/* Right — Stats bento grid */}
-                    <div className="lg:col-span-5 relative w-full flex">
-                        <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full content-stretch">
+                    {/* Right — Stats + Currently */}
+                    <div className="lg:col-span-5 relative w-full flex flex-col gap-4">
+                        {/* Stats grid */}
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4">
                             {stats.map((stat, i) => (
                                 <motion.div
                                     key={stat.label}
@@ -114,14 +116,55 @@ export function About() {
                                     variants={cardVariants}
                                     initial="hidden"
                                     animate={isInView ? "visible" : "hidden"}
-                                    className={`rounded-[1.5rem] bg-white/60 backdrop-blur-xl border border-white/60 p-6 sm:p-8 flex flex-col justify-center shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 min-h-[140px] sm:min-h-[160px] lg:min-h-0 ${i === 1 || i === 2 ? "bg-white/40" : ""
-                                        }`}
+                                    className={`rounded-[1.5rem] bg-white/60 backdrop-blur-xl border border-white/60 p-6 sm:p-8 flex flex-col justify-center shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 min-h-[120px] ${i === 1 || i === 2 ? "bg-white/40" : ""}`}
                                 >
-                                    <span className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black tracking-tighter text-zinc-900">{stat.value}</span>
-                                    <span className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest mt-2 sm:mt-4 leading-relaxed">{stat.label}</span>
+                                    <span className="text-4xl sm:text-5xl font-black tracking-tighter text-zinc-900">{stat.value}</span>
+                                    <span className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest mt-2 leading-relaxed">{stat.label}</span>
                                 </motion.div>
                             ))}
                         </div>
+
+                        {/* Currently card */}
+                        <motion.div
+                            custom={4}
+                            variants={cardVariants}
+                            initial="hidden"
+                            animate={isInView ? "visible" : "hidden"}
+                            className="rounded-[1.5rem] bg-zinc-900 border border-zinc-800 p-6 flex flex-col gap-4 shadow-[0_4px_20px_rgb(0,0,0,0.12)]"
+                        >
+                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Currently</span>
+                            <div className="space-y-3">
+                                <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-emerald-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                                        <Zap className="w-3.5 h-3.5 text-emerald-400" />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-0.5">Building</p>
+                                        <Link href="/work/aulys" className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                                            Aulys — WCAG 2.2 Figma plugin ↗
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-blue-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                                        <BookOpen className="w-3.5 h-3.5 text-blue-400" />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-0.5">Reading</p>
+                                        <p className="text-sm font-semibold text-white">The Design of Everyday Things</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-violet-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                                        <FlaskConical className="w-3.5 h-3.5 text-violet-400" />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-0.5">Exploring</p>
+                                        <p className="text-sm font-semibold text-white">AI-native UX patterns & agent interfaces</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

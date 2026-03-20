@@ -16,6 +16,9 @@ const works = [
         href: "/work/aulys",
         spotlight: "rgba(16, 185, 129, 0.12)",
         border: "group-hover:border-emerald-500/30",
+        accent: "from-emerald-400 to-teal-500",
+        accentBg: "bg-emerald-950",
+        readTime: "12 min read",
         delay: 0,
         role: "Design Engineer",
         metric: "WCAG 2.2 AAA Compliance",
@@ -28,9 +31,12 @@ const works = [
         href: "/work/simplifai",
         spotlight: "rgba(249, 115, 22, 0.12)",
         border: "group-hover:border-orange-500/30",
+        accent: "from-orange-400 to-amber-500",
+        accentBg: "bg-orange-950",
+        readTime: "15 min read",
         delay: 0.1,
         role: "Senior Product Designer",
-        metric: "Zero-Code Automation",
+        metric: "73% User Adoption Increase",
     },
     {
         index: "03",
@@ -40,6 +46,9 @@ const works = [
         href: "/work/simplifai-design-system",
         spotlight: "rgba(99, 102, 241, 0.12)",
         border: "group-hover:border-indigo-500/30",
+        accent: "from-indigo-400 to-violet-500",
+        accentBg: "bg-indigo-950",
+        readTime: "10 min read",
         delay: 0.2,
         role: "Lead Architect",
         metric: "42% Faster Dev Cycle",
@@ -52,6 +61,9 @@ const works = [
         href: "/work/medsecure",
         spotlight: "rgba(0, 94, 184, 0.12)",
         border: "group-hover:border-blue-600/30",
+        accent: "from-blue-500 to-cyan-400",
+        accentBg: "bg-blue-950",
+        readTime: "14 min read",
         delay: 0.3,
         role: "Product Lead",
         metric: "34% Fewer Medical Errors",
@@ -64,6 +76,9 @@ const works = [
         href: "/work/nexus-banking",
         spotlight: "rgba(59, 130, 246, 0.12)",
         border: "group-hover:border-blue-500/30",
+        accent: "from-amber-400 to-yellow-500",
+        accentBg: "bg-zinc-900",
+        readTime: "8 min read",
         delay: 0.4,
         role: "Principal Designer",
         metric: "Strategy Case Study",
@@ -76,6 +91,9 @@ const works = [
         href: "/work/infosys",
         spotlight: "rgba(99, 102, 241, 0.12)",
         border: "group-hover:border-indigo-500/30",
+        accent: "from-violet-500 to-purple-600",
+        accentBg: "bg-violet-950",
+        readTime: "10 min read",
         delay: 0.5,
         role: "Senior Product Designer",
         metric: "70% Faster Assessments",
@@ -115,11 +133,22 @@ function WorkCard({ work }: { work: typeof works[0] }) {
                         }}
                     />
 
+                    {/* Accent header strip */}
+                    <div className={`relative h-24 rounded-t-[2rem] overflow-hidden ${work.accentBg} -mx-7 -mt-7 md:-mx-8 md:-mt-8 mb-6 px-7 md:px-8 flex items-end pb-4`}>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${work.accent} opacity-30`} />
+                        {/* Abstract dot grid */}
+                        <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px'}} />
+                        <div className="relative z-10 flex justify-between items-end w-full">
+                            <span className={`text-xs font-mono font-bold bg-gradient-to-r ${work.accent} bg-clip-text text-transparent tracking-widest`}>{work.index}</span>
+                            <span className="text-[10px] font-semibold text-white/50 tracking-wide">{work.readTime}</span>
+                        </div>
+                    </div>
+
                     <div className="relative z-10 flex flex-col h-full gap-6">
                         {/* Top row */}
                         <div className="flex justify-between items-start">
-                            <span className="text-sm font-bold text-zinc-400 font-mono tracking-widest">{work.index}</span>
-                            <div className="w-10 h-10 rounded-full bg-white/70 border border-white/80 flex items-center justify-center shadow-sm backdrop-blur-md transform group-hover:scale-110 transition-all duration-300">
+                            <span className="sr-only">{work.index}</span>
+                            <div className="ml-auto w-10 h-10 rounded-full bg-white/70 border border-white/80 flex items-center justify-center shadow-sm backdrop-blur-md transform group-hover:scale-110 transition-all duration-300">
                                 <ArrowUpRight className="w-4 h-4 text-zinc-700 group-hover:text-zinc-900 transition-colors" aria-hidden="true" />
                             </div>
                         </div>

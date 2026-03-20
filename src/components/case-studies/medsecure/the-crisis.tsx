@@ -9,15 +9,15 @@ const PROBLEMS = [
         icon: FileX2,
         title: "Scattered Paper Records",
         desc: "85% of India's medical records still exist on paper — lost in floods, fires, or simply left behind when a patient moves cities.",
-        color: "text-red-500",
-        bg: "bg-red-50",
+        color: "text-red-400",
+        bg: "bg-red-50/60",
     },
     {
         icon: Database,
         title: "Hospital Data Silos",
         desc: "Every hospital runs its own proprietary system. An AIIMS patient record cannot be accessed at a district hospital 2km away.",
-        color: "text-orange-500",
-        bg: "bg-orange-50",
+        color: "text-orange-400",
+        bg: "bg-orange-50/60",
     },
     {
         icon: Globe,
@@ -29,9 +29,9 @@ const PROBLEMS = [
 ];
 
 const CONSEQUENCES = [
-    { icon: AlertCircle, text: "Duplicate tests ordered because history is unavailable — wasting ₹2,400+ per patient visit", color: "text-red-600" },
-    { icon: Lock, text: "Patient data sold on the dark web — 6,900+ cyberattacks per week on Indian healthcare sector", color: "text-red-600" },
-    { icon: HardDrive, text: "Emergency physicians make critical decisions blind — no allergy or medication history available", color: "text-red-600" },
+    { icon: AlertCircle, text: "Duplicate tests ordered because history is unavailable — wasting ₹2,400+ per patient visit", color: "text-red-400" },
+    { icon: Lock, text: "Patient data sold on the dark web — 6,900+ cyberattacks per week on Indian healthcare sector", color: "text-red-400" },
+    { icon: HardDrive, text: "Emergency physicians make critical decisions blind — no allergy or medication history available", color: "text-red-400" },
 ];
 
 export function TheCrisis() {
@@ -48,12 +48,12 @@ export function TheCrisis() {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <p className="text-xs font-mono font-bold text-red-500 uppercase tracking-[0.2em] mb-4">
+                    <p className="text-xs font-mono font-bold text-red-400 uppercase tracking-[0.2em] mb-4">
                         01 — The Crisis
                     </p>
                     <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 mb-6 max-w-2xl">
                         India's Healthcare Data Is{" "}
-                        <span className="text-red-500">Broken by Design.</span>
+                        <span className="text-red-400">Broken by Design.</span>
                     </h2>
                 </motion.div>
 
@@ -109,12 +109,12 @@ export function TheCrisis() {
                         className="space-y-6"
                     >
                         {/* Big stat */}
-                        <div className="rounded-3xl bg-red-600 text-white p-10 text-center relative overflow-hidden">
-                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1),transparent)]" aria-hidden="true" />
+                        <div className="rounded-3xl bg-zinc-900 text-white p-10 text-center relative overflow-hidden">
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(239,68,68,0.08),transparent)]" aria-hidden="true" />
                             <div className="relative z-10">
                                 <div className="text-8xl font-black tracking-tighter mb-2">₹2.4L</div>
-                                <div className="text-red-100 font-semibold text-lg mb-1">Crore Lost Annually</div>
-                                <div className="text-red-200 text-sm">to duplicate medical tests because records aren't shared between hospitals</div>
+                                <div className="text-zinc-300 font-semibold text-lg mb-1">Crore Lost Annually</div>
+                                <div className="text-zinc-400 text-sm">to duplicate medical tests because records aren't shared between hospitals</div>
                             </div>
                         </div>
 

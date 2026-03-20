@@ -36,7 +36,8 @@ const posts: Post[] = [
         readTime: "8 min",
         tags: ["FinTech", "UX Strategy", "Product Architecture"],
         platform: "medium",
-        status: "coming-soon",
+        status: "published",
+        href: "/writing/super-app-paradox-neobanks",
     },
     {
         title: "How I Built a Production Figma Plugin Solo: Every Technical Decision",
@@ -45,7 +46,8 @@ const posts: Post[] = [
         readTime: "10 min",
         tags: ["Figma API", "Accessibility", "0→1 Build", "Engineering"],
         platform: "medium",
-        status: "coming-soon",
+        status: "published",
+        href: "/writing/figma-plugin-solo-build",
     },
     {
         title: "Designing for Bharat: What Rural UX Research Taught Me About Assumptions",
@@ -54,7 +56,8 @@ const posts: Post[] = [
         readTime: "7 min",
         tags: ["UX Research", "India", "Inclusion", "Mobile Design"],
         platform: "linkedin",
-        status: "coming-soon",
+        status: "published",
+        href: "/writing/designing-for-bharat",
     },
     {
         title: "Design Systems Are Products: How We Cut Dev Cycles by 42%",
@@ -63,7 +66,8 @@ const posts: Post[] = [
         readTime: "9 min",
         tags: ["Design Systems", "Engineering", "Process", "Design Ops"],
         platform: "medium",
-        status: "coming-soon",
+        status: "published",
+        href: "/writing/design-systems-are-products",
     },
     {
         title: "The AI UX Problem Nobody Talks About: Trust Over Intelligence",
@@ -168,59 +172,61 @@ export default function WritingPage() {
                         const platform = platformConfig[post.platform];
                         const isComingSoon = post.status === "coming-soon";
 
-                        return (
-                            <article
-                                key={i}
-                                className="group bg-white rounded-2xl border border-zinc-100 p-6 md:p-8 hover:border-zinc-300 hover:shadow-sm transition-all duration-200"
-                            >
-                                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                                    <div className="flex-1 min-w-0">
-                                        {/* Meta row */}
-                                        <div className="flex flex-wrap items-center gap-2 mb-3">
-                                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${platform.bg} ${platform.color} ${platform.border}`}>
-                                                {platform.label}
+                        const isInternal = !isComingSoon && post.href?.startsWith("/");
+                        const cardClass = "group bg-white rounded-2xl border border-zinc-100 p-6 md:p-8 hover:border-zinc-300 hover:shadow-sm transition-all duration-200";
+                        const cardInner = (
+                            <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                                <div className="flex-1 min-w-0">
+                                    {/* Meta row */}
+                                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${platform.bg} ${platform.color} ${platform.border}`}>
+                                            {platform.label}
+                                        </span>
+                                        {isComingSoon && (
+                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full border bg-amber-50 text-amber-700 border-amber-200">
+                                                Coming soon
                                             </span>
-                                            {isComingSoon && (
-                                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full border bg-amber-50 text-amber-700 border-amber-200">
-                                                    Coming soon
-                                                </span>
-                                            )}
-                                            <span className="text-xs text-zinc-400">{post.date}</span>
-                                            <span className="text-zinc-300 text-xs">·</span>
-                                            <span className="text-xs text-zinc-400">{post.readTime} read</span>
-                                        </div>
-
-                                        {/* Title */}
-                                        <h2 className="text-lg font-bold text-zinc-900 mb-2 leading-snug group-hover:text-zinc-700 transition-colors">
-                                            {isComingSoon ? (
-                                                <span>{post.title}</span>
-                                            ) : (
-                                                <Link href={post.href ?? "#"} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                                                    {post.title} <ArrowUpRight className="inline w-4 h-4 mb-0.5" />
-                                                </Link>
-                                            )}
-                                        </h2>
-
-                                        {/* Excerpt */}
-                                        <p className="text-sm text-zinc-500 leading-relaxed mb-4">
-                                            {post.excerpt}
-                                        </p>
-
-                                        {/* Tags */}
-                                        <div className="flex flex-wrap gap-1.5">
-                                            {post.tags.map((tag) => (
-                                                <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-zinc-50 border border-zinc-100 text-zinc-500">
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
+                                        )}
+                                        <span className="text-xs text-zinc-400">{post.date}</span>
+                                        <span className="text-zinc-300 text-xs">·</span>
+                                        <span className="text-xs text-zinc-400">{post.readTime} read</span>
                                     </div>
 
-                                    {/* Number */}
-                                    <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-50 border border-zinc-100 flex-shrink-0 text-lg font-black text-zinc-200">
-                                        {String(i + 1).padStart(2, "0")}
+                                    {/* Title */}
+                                    <h2 className="text-lg font-bold text-zinc-900 mb-2 leading-snug group-hover:text-zinc-700 transition-colors">
+                                        {post.title}
+                                        {!isComingSoon && !isInternal && <ArrowUpRight className="inline w-4 h-4 mb-0.5 ml-1" />}
+                                    </h2>
+
+                                    {/* Excerpt */}
+                                    <p className="text-sm text-zinc-500 leading-relaxed mb-4">
+                                        {post.excerpt}
+                                    </p>
+
+                                    {/* Tags */}
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {post.tags.map((tag) => (
+                                            <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-zinc-50 border border-zinc-100 text-zinc-500">
+                                                {tag}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
+
+                                {/* Number */}
+                                <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-50 border border-zinc-100 flex-shrink-0 text-lg font-black text-zinc-200">
+                                    {String(i + 1).padStart(2, "0")}
+                                </div>
+                            </div>
+                        );
+
+                        return isInternal ? (
+                            <Link key={i} href={post.href as string} className={`${cardClass} block`}>
+                                {cardInner}
+                            </Link>
+                        ) : (
+                            <article key={i} className={cardClass}>
+                                {cardInner}
                             </article>
                         );
                     })}

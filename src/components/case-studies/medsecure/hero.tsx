@@ -11,9 +11,9 @@ const CRISIS_STATS = [
         label: "Deaths/year",
         sub: "Due to medical errors",
         icon: AlertTriangle,
-        color: "text-red-400",
-        bg: "bg-red-500/10",
-        border: "border-red-500/20",
+        color: "text-rose-400",
+        bg: "bg-rose-500/8",
+        border: "border-rose-500/15",
     },
     {
         value: "6,900+",

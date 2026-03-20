@@ -20,9 +20,9 @@ export function ProblemStatement() {
                         The Accessibility Crisis
                     </h2>
                     {/* Stat callout */}
-                    <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-red-50 border border-red-100 mb-6">
-                        <span className="text-2xl font-black text-red-600">96.3%</span>
-                        <span className="text-sm text-red-700 font-medium leading-snug max-w-xs">
+                    <div className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-zinc-100 border border-zinc-200 mb-6">
+                        <span className="text-2xl font-black text-zinc-900">96.3%</span>
+                        <span className="text-sm text-zinc-600 font-medium leading-snug max-w-xs">
                             of the top 1 million websites fail basic WCAG compliance — <span className="font-bold">WebAIM 2024</span>
                         </span>
                     </div>
@@ -44,8 +44,8 @@ export function ProblemStatement() {
                             icon: AlertCircle,
                             title: "No Real-Time Feedback",
                             desc: "Designers have zero visibility into compliance issues while designing. Non-compliant handoffs reach engineering teams with no warning.",
-                            color: "text-red-500",
-                            bg: "bg-red-500/10"
+                            color: "text-rose-400",
+                            bg: "bg-rose-500/8"
                         },
                         {
                             icon: EyeOff,

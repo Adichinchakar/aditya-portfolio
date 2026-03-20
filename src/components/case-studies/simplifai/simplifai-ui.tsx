@@ -318,7 +318,7 @@ function ExecutionMonitor() {
                         </div>
                         {r.expanded && (
                             <div className="mx-6 mb-3 rounded-xl bg-[#0d1117] p-3 border border-zinc-800">
-                                <div className="text-[9px] font-bold uppercase tracking-widest text-zinc-500 mb-2">Execution Trace</div>
+                                <div className="text-[9px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Execution Trace</div>
                                 <div className="space-y-1 text-[10px] font-mono">
                                     <div className="text-blue-400">→ Webhook received: POST /webhook/lead {"{ email: \"j.smith@corp.com\" }"}</div>
                                     <div className="text-zinc-400">→ Clearbit enrich: matched ✓ · Company: Corp Inc · Size: 500-1000</div>

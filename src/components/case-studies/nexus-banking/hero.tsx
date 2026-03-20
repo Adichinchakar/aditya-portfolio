@@ -95,7 +95,7 @@ export function Hero() {
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white mb-6 leading-[1.05]">
                             Nexus:<br />
-                            <span className="text-zinc-500 font-bold">
+                            <span className="text-zinc-400 font-bold">
                                 Intent-Led FinTech.
                             </span>
                         </h1>

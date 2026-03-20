@@ -9,7 +9,7 @@ const OLD_JOURNEY = [
         title: "Paper Lost in Transit",
         desc: "Ramesh travels 150km to AIIMS, but forgets his previous X-ray films.",
         icon: FileWarning,
-        color: "text-red-500 bg-red-500/10 border-red-500/20",
+        color: "text-red-400 bg-red-500/8 border-red-500/15",
     },
     {
         title: "Repeated Tests",
@@ -21,7 +21,7 @@ const OLD_JOURNEY = [
         title: "Diagnosis Delayed",
         desc: "Waiting 3 days for new test results. Critical treatment is postponed.",
         icon: HelpCircle,
-        color: "text-orange-500 bg-orange-500/10 border-orange-500/20",
+        color: "text-orange-400 bg-orange-500/8 border-orange-500/15",
     },
 ];
 
@@ -86,7 +86,7 @@ export function JourneyMap() {
 
                         <div className="flex flex-col md:flex-row gap-8 relative z-10">
                             <div className="md:w-48 shrink-0 flex items-center md:justify-end pr-8 md:border-r-2 border-red-200">
-                                <h3 className="text-2xl font-black text-red-500 tracking-tight">Before</h3>
+                                <h3 className="text-2xl font-black text-red-400 tracking-tight">Before</h3>
                             </div>
 
                             <div className="grid md:grid-cols-3 gap-6 flex-1">

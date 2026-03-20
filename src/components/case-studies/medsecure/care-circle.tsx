@@ -58,7 +58,7 @@ const INITIAL_MEMBERS: FamilyMember[] = [
         name: "Ananya Sharma",
         relation: "Sister",
         avatar: "A",
-        avatarBg: "bg-rose-500",
+        avatarBg: "bg-rose-300",
         status: "revoked",
         permissions: { view_history: false, approve_procedures: false, emergency_access: false, share_records: false },
     },

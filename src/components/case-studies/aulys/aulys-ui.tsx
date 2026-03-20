@@ -172,9 +172,9 @@ function ResultsPanel() {
     ];
 
     const sevColor: Record<string, string> = {
-        critical: "bg-red-100 text-red-700",
-        serious: "bg-amber-100 text-amber-700",
-        moderate: "bg-blue-100 text-blue-700",
+        critical: "bg-red-50 text-red-600",
+        serious: "bg-amber-50 text-amber-600",
+        moderate: "bg-blue-50 text-blue-600",
     };
 
     return (
@@ -195,12 +195,12 @@ function ResultsPanel() {
                         <div key={i} className="rounded-xl border border-zinc-100 overflow-hidden">
                             <div className="flex items-center justify-between px-3 py-2.5 bg-zinc-50">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0" />
+                                    <div className="w-2 h-2 rounded-full bg-red-400 flex-shrink-0" />
                                     <span className="text-xs font-bold text-zinc-700">{g.criterion}</span>
                                 </div>
                                 <div className="flex items-center gap-1.5">
                                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${sevColor[g.sev]}`}>{g.sev}</span>
-                                    <span className="text-xs font-bold text-red-500">{g.count}</span>
+                                    <span className="text-xs font-bold text-red-400">{g.count}</span>
                                 </div>
                             </div>
                             <div className="px-3 pb-2 pt-1 space-y-1">

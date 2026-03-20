@@ -39,7 +39,7 @@ function MetricCard({
             <div className="relative z-10">
                 <div className="text-3xl font-black text-white mb-1 tracking-tighter">{value}</div>
                 <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest">{label}</div>
-                {sub && <div className="text-xs text-zinc-500 mt-1">{sub}</div>}
+                {sub && <div className="text-xs text-zinc-400 mt-1">{sub}</div>}
             </div>
         </div>
     );
@@ -82,7 +82,7 @@ export function Hero() {
                                 AI-Augmented
                             </span>
                             <br />
-                            <span className="text-zinc-500 font-bold text-4xl sm:text-5xl md:text-6xl">
+                            <span className="text-zinc-400 font-bold text-4xl sm:text-5xl md:text-6xl">
                                 Learning Design.
                             </span>
                         </h1>

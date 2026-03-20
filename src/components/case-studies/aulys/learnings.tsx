@@ -29,17 +29,17 @@ export function Learnings() {
                             icon: BookOpen,
                             color: "text-blue-500",
                             bg: "bg-blue-500/10",
-                            label: "Learned",
-                            heading: "Vibe coding accelerates, but structure scales",
-                            body: "Using AI-assisted coding let me ship fast. But without upfront component architecture decisions, I hit refactoring walls at scale. I'd invest 2 extra days in structure planning before coding now."
+                            label: "Design Constraint",
+                            heading: "Figma plugin API shapes every interaction decision",
+                            body: "The plugin runtime has no background threads — every scan must complete synchronously within a 60fps canvas budget. This ruled out streaming results, forced a batch-scan model, and made the progressive reveal of violations (grouped, not streamed) a technical necessity, not just a UX preference."
                         },
                         {
                             icon: Wrench,
                             color: "text-amber-500",
                             bg: "bg-amber-500/10",
-                            label: "Would change",
-                            heading: "Beta feedback loop should've been earlier",
-                            body: "I spent 3 weeks perfecting the Polychrom contrast algorithm before getting my first tester. Earlier, rougher beta access would have redirected that effort toward the features users actually cared about."
+                            label: "What didn't work",
+                            heading: "V1 had drag-to-reorder violations — too complex",
+                            body: "The first violations list let users drag-and-drop to reprioritize issues. In beta testing with junior designers (primary target users), this interaction pattern caused confusion — they expected the list to be sorted by severity, not be a task manager. Removed it in v2 and defaulted to severity-ordered, read-only grouping. Fix rate improved."
                         },
                         {
                             icon: Compass,

@@ -40,11 +40,11 @@ export function IntentArchitecture() {
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <div className="bg-white p-4 rounded-xl border border-zinc-200">
                                     <h4 className="font-bold text-zinc-900 mb-2">Daily Velocity</h4>
-                                    <p className="text-sm text-zinc-500">Checking, cards, P2P transfers. Minimalist, high contrast, zero promotional banners.</p>
+                                    <p className="text-sm text-zinc-500">Checking, cards, P2P transfers. Minimalist, high contrast, zero promotional banners — optimized for sub-30-second task completion.</p>
                                 </div>
                                 <div className="bg-white p-4 rounded-xl border border-zinc-200">
-                                    <h4 className="font-bold text-zinc-900 mb-2">Wealth Generation</h4>
-                                    <p className="text-sm text-zinc-500">Crypto, vaults, equities. Denser layouts for charts and richer data visualization.</p>
+                                    <h4 className="font-bold text-zinc-900 mb-2">Wealth Layer</h4>
+                                    <p className="text-sm text-zinc-500">Vaults, equities, crypto. Denser chart layouts with explicit risk labels — never co-mingled with daily liquid funds in the same balance total.</p>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ export function IntentArchitecture() {
                     {/* Pillar 2 */}
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="md:w-1/3">
-                            <div className="w-12 h-12 bg-red-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-red-500/20">
+                            <div className="w-12 h-12 bg-red-50 text-red-600 border border-red-100 rounded-2xl flex items-center justify-center mb-6">
                                 <ShieldCheck className="w-6 h-6" />
                             </div>
                             <h3 className="text-2xl font-bold text-zinc-900 mb-4">2. High-Fidelity Crisis UX</h3>
@@ -77,7 +77,7 @@ export function IntentArchitecture() {
                     {/* Pillar 3 */}
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="md:w-1/3">
-                            <div className="w-12 h-12 bg-blue-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                            <div className="w-12 h-12 bg-blue-50 text-blue-600 border border-blue-100 rounded-2xl flex items-center justify-center mb-6">
                                 <Fingerprint className="w-6 h-6" />
                             </div>
                             <h3 className="text-2xl font-bold text-zinc-900 mb-4">3. Progressive Disclosure</h3>
@@ -86,7 +86,7 @@ export function IntentArchitecture() {
                             <p className="text-zinc-600 mb-4">
                                 Stop throwing features at the user; let them pull what they need. Empower users to curate their own financial dashboard.
                             </p>
-                            <ul className="space-y-3">
+                            <ul className="space-y-3 mb-5">
                                 <li className="flex items-start gap-3">
                                     <div className="mt-1 w-5 h-5 rounded-full bg-blue-100 flex flex-shrink-0 items-center justify-center">
                                         <div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -97,15 +97,18 @@ export function IntentArchitecture() {
                                     <div className="mt-1 w-5 h-5 rounded-full bg-blue-100 flex flex-shrink-0 items-center justify-center">
                                         <div className="w-2 h-2 bg-blue-500 rounded-full" />
                                     </div>
-                                    <span className="text-zinc-700 font-medium">Hide the rest in a deep, categorized architecture.</span>
+                                    <span className="text-zinc-700 font-medium">Archive the rest in a deep, categorized "Discover" section — surfaced by behavior, not homepage real estate.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <div className="mt-1 w-5 h-5 rounded-full bg-emerald-100 flex flex-shrink-0 items-center justify-center">
                                         <div className="w-2 h-2 bg-emerald-500 rounded-full" />
                                     </div>
-                                    <span className="text-emerald-700 font-bold">Result: 60% reduction in cognitive bloat while empowering ownership.</span>
+                                    <span className="text-emerald-700 font-bold">Directional target: −60% UI complexity score (Figma token audit method).</span>
                                 </li>
                             </ul>
+                            <div className="p-3 bg-amber-50 border border-amber-100 rounded-xl text-xs text-amber-700 font-medium leading-relaxed">
+                                <strong>Design tension acknowledged:</strong> Progressive disclosure reduces promotional surface area — a real business constraint. The hypothesis is that reduced bounce on primary flows raises LTV more than cross-sell impressions on a cluttered home screen. This would need revenue modeling to validate before shipping.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,7 +124,7 @@ function AlertCircle(props: any) {
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            viewBox="0 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"

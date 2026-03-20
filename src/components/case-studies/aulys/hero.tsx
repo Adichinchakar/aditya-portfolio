@@ -177,7 +177,7 @@ export function Hero() {
                                         icon={ShieldCheck}
                                         label="Coverage"
                                         value="WCAG"
-                                        sub="2.2 AA/AAA all criteria"
+                                        sub="2.2 AA full · AAA selective"
                                         spotlight="rgba(16, 185, 129, 0.12)"
                                         hoverBorder="group-hover:border-emerald-500/30"
                                     />

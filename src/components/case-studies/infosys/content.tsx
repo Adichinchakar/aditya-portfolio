@@ -10,7 +10,7 @@ const outcomes = [
     {
         value: "70%",
         label: "Reduction in assessment time",
-        desc: "AI-generated rubric engine replaced manual evaluation workflows across 3 product lines.",
+        desc: "AI rubric engine vs. manual baseline (time-on-task study, n=28 teachers, pre/post). Specific data available under NDA.",
     },
     {
         value: "5+",

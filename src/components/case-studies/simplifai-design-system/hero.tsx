@@ -48,7 +48,7 @@ export function Hero() {
                     </h1>
 
                     <p className="text-xl text-zinc-500 max-w-2xl leading-relaxed font-medium">
-                        Scaling AI-native interfaces with a semantic token architecture and automated Figma → React handoff pipelines.
+                        Scaling AI-native interfaces with a semantic token architecture and a token-driven Figma → React sync pipeline — one library serving 5 product teams.
                     </p>
                 </motion.div>
             </div>

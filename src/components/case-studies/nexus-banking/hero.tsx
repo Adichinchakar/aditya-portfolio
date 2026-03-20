@@ -101,7 +101,7 @@ export function Hero() {
                         </h1>
 
                         <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-6 leading-relaxed font-medium">
-                            Solving the "Super-App Paradox." Redesigning the cognitive architecture of modern Neobanks to prioritize trust over horizontal feature sprawl.
+                            A heuristic audit of Tier-1 Neobanks. The core finding: horizontal feature expansion increases cognitive load on primary financial flows — and that's a design problem with a design solution.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-3 mb-8">
@@ -145,7 +145,7 @@ export function Hero() {
                                         icon={Zap}
                                         label="Velocity"
                                         value="+40%"
-                                        sub="Task Completion Speed"
+                                        sub="Primary Flow Completion Rate"
                                         spotlight="rgba(59, 130, 246, 0.15)"
                                         hoverBorder="group-hover:border-blue-500/30"
                                     />
@@ -153,7 +153,7 @@ export function Hero() {
                                         icon={LayoutGrid}
                                         label="Cognitive"
                                         value="-60%"
-                                        sub="Dashboard Visual Bloat"
+                                        sub="UI Complexity Score"
                                         spotlight="rgba(168, 85, 247, 0.15)"
                                         hoverBorder="group-hover:border-purple-500/30"
                                     />

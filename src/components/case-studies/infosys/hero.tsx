@@ -132,7 +132,7 @@ export function Hero() {
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-3">
-                                    <MetricCard value="70%" label="Assessment Time Reduction" sub="AI rubric engine" />
+                                    <MetricCard value="70%" label="Assessment Time Reduction" sub="vs. manual baseline · n=28 teachers" />
                                     <MetricCard value="5+" label="Product Teams" sub="Design system served" />
                                     <MetricCard value="3" label="AI Tools Shipped" sub="In production" />
                                     <MetricCard value="NDA" label="Full Details" sub="Available on request" />

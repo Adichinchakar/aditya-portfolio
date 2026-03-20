@@ -208,7 +208,7 @@ export function SystemGovernance() {
                         {[
                             { label: "Time to adopt", value: "< 1 sprint", desc: "For new devs to be productive" },
                             { label: "Visual regression", value: "0 regressions", desc: "Across 6 months post-launch" },
-                            { label: "Dev velocity", value: "+42%", desc: "Faster UI build time" },
+                            { label: "Dev velocity", value: "+42%", desc: "Faster UI build time — measured vs. pre-system sprint velocity (avg over 4 sprints)" },
                         ].map((stat, i) => (
                             <motion.div
                                 key={stat.label}

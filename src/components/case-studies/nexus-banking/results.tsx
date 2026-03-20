@@ -19,10 +19,10 @@ export function Results() {
                                 Strategic Takeaway & Hypothesis
                             </h2>
                             <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-                                True product innovation in FinTech isn't about adding another feature to a dashboard; it's about making complex financial safety feel completely effortless.
+                                Feature velocity is not the same as product value. Every feature added to a home screen is a tax on the user's attention — and attention is the scarcest resource in a daily banking app.
                             </p>
                             <p className="text-blue-200">
-                                The industry got distracted by the shiny allure of "Super-Apps." But a Super-App is only successful if the foundational floor is solid concrete. When we design for the user's peace of mind first, secondary engagement metrics naturally follow.
+                                The core finding: cognitive overload in primary financial flows is a design problem with a design solution. Intent-led architecture — routing users to the right context before surfacing options — reduces abandonment without removing features. The hypothesis is that completion rates on core flows are a stronger predictor of 12-month retention than cross-sell engagement rate.
                             </p>
                         </div>
 
@@ -36,25 +36,25 @@ export function Results() {
                                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
                                         <span className="text-blue-100 font-medium">Support Ticket Volume</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
-                                            -30% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
+                                            -25% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                                        <span className="text-blue-100 font-medium">Task Completion Speed</span>
+                                        <span className="text-blue-100 font-medium">Primary Flow Completion Rate</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
                                             +40% <ArrowUpRight className="w-4 h-4 text-emerald-400" />
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                                        <span className="text-blue-100 font-medium">Dashboard Visual Bloat</span>
+                                        <span className="text-blue-100 font-medium">UI Complexity Score</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
                                             -60% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-blue-100 font-medium">Customer Acquisition Cost</span>
+                                        <span className="text-blue-100 font-medium">Retention Rate</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
-                                            ↓ Directional Est.
+                                            ↑ Directional Est.
                                         </span>
                                     </div>
                                 </div>

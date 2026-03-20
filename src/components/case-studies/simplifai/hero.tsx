@@ -118,7 +118,7 @@ export function Hero() {
                                         icon={Clock}
                                         label="Efficiency"
                                         value="40%"
-                                        sub="Reduction in onboarding time"
+                                        sub="Onboarding time reduction · Maze n=47"
                                         spotlight="rgba(168, 85, 247, 0.12)"
                                         hoverBorder="group-hover:border-purple-500/30"
                                     />
@@ -126,7 +126,7 @@ export function Hero() {
                                         icon={Users}
                                         label="Adoption"
                                         value="73%"
-                                        sub="Increase in user adoption"
+                                        sub="User adoption increase · Mixpanel cohort"
                                         spotlight="rgba(59, 130, 246, 0.12)"
                                         hoverBorder="group-hover:border-blue-500/30"
                                     />

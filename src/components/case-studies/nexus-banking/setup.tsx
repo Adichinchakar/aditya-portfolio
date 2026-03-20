@@ -32,13 +32,16 @@ export function Setup() {
 
                     <div className="prose prose-lg text-zinc-600">
                         <p className="lead text-xl text-zinc-800 font-medium mb-6">
-                            In the aggressive race to become the ultimate financial "Super-App," modern FinTech platforms have heavily prioritized horizontal feature expansion—crypto, commodities trading, lifestyle subscriptions, and travel—over vertical, core-banking stability.
+                            In the race to become the ultimate financial "Super-App," Tier-1 Neobanks have aggressively layered crypto, commodities, lifestyle subscriptions, and travel features onto checking account foundations — without restructuring the underlying information architecture to carry that weight.
                         </p>
                         <p className="mb-6">
-                            As a UX leader observing this landscape, my hypothesis was that this aggressive expansion was creating a fundamental degradation in consumer trust. To validate this, I led an extensive qualitative data synthesis, analyzing thousands of App Store, Trustpilot, and Reddit reviews of top-tier Neobanks.
+                            This audit started from a specific hypothesis: <strong className="text-zinc-800">horizontal feature expansion increases cognitive load on primary financial flows</strong>, measurable through task abandonment rate and time-on-task for core actions (balance check, P2P transfer, account freeze resolution). To pressure-test this, I conducted a structured heuristic evaluation of Revolut, Jupiter, and Fi Money against Nielsen's 10 usability principles, supplemented by sentiment analysis across App Store and Trustpilot reviews — categorized by flow type and failure mode.
                         </p>
-                        <p>
-                            The data revealed a stark contrast between corporate KPIs ("increased feature adoption") and user reality ("I don't know where my money is"). Users are experiencing severe cognitive overload, a fragmented Information Architecture (IA), and panic during system failures. This strategic deep-dive deconstructs these friction points and proposes a systemic realignment.
+                        <p className="mb-4">
+                            The pattern was consistent: support ticket spikes correlate with feature launches, not outages. Users aren't failing because the product is broken — they're failing because the navigation model no longer matches their intent.
+                        </p>
+                        <p className="text-sm text-zinc-400 font-mono border-l-2 border-zinc-200 pl-4">
+                            Methodology note: This is an unsolicited competitive audit. Validation would require instrumented A/B testing in production — estimated feasibility: 8-week sprint with analytics infrastructure in place.
                         </p>
                     </div>
                 </motion.div>

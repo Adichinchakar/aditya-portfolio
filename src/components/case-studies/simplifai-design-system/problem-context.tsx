@@ -14,7 +14,7 @@ const afterGains = [
     "Single source of truth — one Figma library",
     "Semantic token layer: color, spacing, radius, type",
     "42% faster product iteration cycles",
-    "Automated Figma → React handoff pipeline",
+    "Token-driven Figma → React sync via Style Dictionary + auto-generated PRs",
     "Design and engineering speaking the same language",
 ];
 

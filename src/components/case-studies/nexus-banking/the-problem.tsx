@@ -20,7 +20,7 @@ export function TheProblem() {
                         The UX Audit: Signal vs. Noise
                     </h2>
                     <p className="text-xl text-zinc-600 max-w-2xl mx-auto">
-                        When analyzing user sentiment, three critical failure points emerged that completely invalidate a sleek, shiny UI.
+                        Heuristic evaluation against Nielsen's 10 principles surfaced three compounding failure modes — each solvable at the design layer, independent of backend reliability.
                     </p>
                 </motion.div>
 
@@ -36,12 +36,12 @@ export function TheProblem() {
                         <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mb-6 text-red-600">
                             <AlertCircle className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-zinc-900 mb-4">The Trust Deficit</h3>
+                        <h3 className="text-xl font-bold text-zinc-900 mb-4">Crisis UX Failure</h3>
                         <p className="text-zinc-600 mb-6">
-                            Users report sudden account freezes triggered by over-sensitive fraud models. When funds are locked, users are thrown into a generic "bot-loop" support chat with zero transparency.
+                            Account freezes from over-sensitive fraud models drop users into a generic support bot with no status visibility, no ETA, and no escalation path. This is a solvable UX problem — not a trust problem. The product works; the crisis flow doesn't.
                         </p>
                         <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-sm italic text-zinc-500">
-                            "A beautiful interface is instantly meaningless if the user feels abandoned during a financial emergency."
+                            "Your account is frozen. We'll get back to you." — with zero queue time, zero human ETA, zero card status shown.
                         </div>
                     </motion.div>
 
@@ -58,10 +58,10 @@ export function TheProblem() {
                         </div>
                         <h3 className="text-xl font-bold text-zinc-900 mb-4">Architectural Bloat</h3>
                         <p className="text-zinc-600 mb-6">
-                            Merging standard fiat checking, high-yield vaults, and highly volatile crypto into a single, endlessly scrolling "Hub" creates dangerous ambiguity and massive cognitive load.
+                            Checking accounts, high-yield vaults, and volatile crypto coexist in a single scrolling "Hub" with no visual hierarchy between them. Each new feature launch appends to the bottom — never restructures the top. This is an IA problem with a measurable cost: task abandonment on primary flows increases with every non-core feature added to the home screen.
                         </p>
                         <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-sm italic text-zinc-500">
-                            "We are treating a high-stakes financial dashboard like a social media feed. This violates minimalist design heuristics."
+                            Heuristic #8 (Aesthetic minimalism): "Every extra unit of information competes with the relevant units of information and diminishes their relative visibility."
                         </div>
                     </motion.div>
 
@@ -76,12 +76,12 @@ export function TheProblem() {
                         <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                             <SplitSquareHorizontal className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-zinc-900 mb-4">Broken Mental Models</h3>
+                        <h3 className="text-xl font-bold text-zinc-900 mb-4">Flattened Intent Hierarchy</h3>
                         <p className="text-zinc-600 mb-6">
-                            Cash meant for this week's groceries sits visually adjacent to a rapidly fluctuating crypto portfolio. Visual hierarchies are flattened across highly disparate asset classes.
+                            Grocery spending cash and a fluctuating crypto portfolio render at the same visual weight. Users who open the app to check their balance are interrupted by market tickers. The IA conflates two fundamentally different user intents — daily liquidity management and wealth generation — into a single undifferentiated surface.
                         </p>
                         <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-sm italic text-zinc-500">
-                            "Daily liquidity and long-term volatile wealth generation require fundamentally different optical treatments to context-switch the brain."
+                            The fix isn't removing features — it's routing users to the right context before showing them anything. Intent-first navigation over feature-first navigation.
                         </div>
                     </motion.div>
                 </div>

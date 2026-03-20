@@ -36,7 +36,7 @@ const STATS = [
         icon: ShieldCheck,
         value: "0",
         label: "Data Breaches in Pilot",
-        desc: "Hyperledger Fabric's permissioned architecture prevented all 6,900+ weekly attack attempts during trial.",
+        desc: "Zero data breaches across 6-month pilot. Permissioned Hyperledger architecture with no public-facing endpoints.",
         color: "text-violet-400",
         bg: "bg-violet-500/10",
         featured: false,
@@ -112,7 +112,7 @@ export function Impact() {
                     >
                         <ShieldCheck className="w-8 h-8 text-emerald-700 mb-6" aria-hidden="true" />
                         <div className="text-5xl font-black text-emerald-900 mb-2 tracking-tight">0</div>
-                        <p className="text-emerald-800 font-medium text-sm">Data breaches in 6-month pilot — across 6,900+ weekly attack attempts.</p>
+                        <p className="text-emerald-800 font-medium text-sm">Data breaches recorded across 6-month pilot period. Permissioned Hyperledger architecture with no public-facing endpoints.</p>
                     </motion.div>
 
                     {/* Users addressed */}

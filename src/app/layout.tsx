@@ -23,24 +23,47 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://adityachinchakar.com"),
-  title: "Aditya Chinchakar | Product Design Engineer",
-  description: "Senior Product Designer & Engineer specializing in AI, Design Systems, and Accessibility (WCAG 2.2). Founder of Aulys.",
-  keywords: "Product Designer, UX Engineer, Design Systems, React, AI Design, Accessibility",
-  authors: [{ name: "Aditya Chinchakar" }],
+  title: {
+    default: "Aditya Chinchakar | Senior Product Designer — AI, Design Systems & 0→1 Products",
+    template: "%s | Aditya Chinchakar",
+  },
+  description: "Senior Product Designer with 6+ years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys. Portfolio of work in AI UX, WCAG accessibility, and enterprise product design.",
+  keywords: [
+    "Senior Product Designer",
+    "Founding Designer",
+    "Product Designer India",
+    "UX Designer Portfolio",
+    "Design Systems Lead",
+    "AI UX Designer",
+    "WCAG Accessibility Designer",
+    "Figma Plugin Developer",
+    "Product Designer Infosys",
+    "0 to 1 Product Designer",
+    "Staff Product Designer",
+    "Design Lead Portfolio",
+    "Enterprise UX Designer",
+    "Product Designer AI",
+    "React Product Designer",
+    "Aditya Chinchakar",
+  ],
+  authors: [{ name: "Aditya Chinchakar", url: "https://adityachinchakar.com" }],
   creator: "Aditya Chinchakar",
   publisher: "Aditya Chinchakar",
+  alternates: {
+    canonical: "https://adityachinchakar.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://adityachinchakar.com",
-    siteName: "Aditya Chinchakar",
-    title: "Aditya Chinchakar | Product Design Engineer",
-    description: "Senior Product Designer & Engineer specializing in AI, Design Systems, and Accessibility (WCAG 2.2). Founder of Aulys.",
+    siteName: "Aditya Chinchakar — Product Designer",
+    title: "Aditya Chinchakar | Senior Product Designer — AI, Design Systems & 0→1 Products",
+    description: "Senior Product Designer with 6+ years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aditya Chinchakar | Product Design Engineer",
-    description: "Senior Product Designer & Engineer specializing in AI, Design Systems, and Accessibility (WCAG 2.2). Founder of Aulys.",
+    title: "Aditya Chinchakar | Senior Product Designer",
+    description: "Senior Product Designer shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys.",
     creator: "@adityachinchakar",
   },
   robots: {
@@ -58,30 +81,87 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Aditya Chinchakar",
-  url: "https://adityachinchakar.com",
-  jobTitle: "Senior Product Designer",
-  description: "Senior Product Designer specializing in AI, design systems, and 0-to-1 product building. Founder of Aulys. Currently at Infosys.",
-  email: "adichinchakar@gmail.com",
-  sameAs: [
-    "https://linkedin.com/in/adityachinchakar",
-    "https://github.com/Adichinchakar",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://adityachinchakar.com/#person",
+      name: "Aditya Chinchakar",
+      url: "https://adityachinchakar.com",
+      jobTitle: "Senior Product Designer",
+      description: "Senior Product Designer with 6+ years shipping AI products, design systems, and 0-to-1 builds. Founder of Aulys. Currently at Infosys.",
+      email: "adichinchakar@gmail.com",
+      image: "https://adityachinchakar.com/opengraph-image",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "IN",
+        addressRegion: "India",
+      },
+      sameAs: [
+        "https://linkedin.com/in/adityachinchakar",
+        "https://github.com/Adichinchakar",
+        "https://medium.com/@adichinchakar",
+      ],
+      knowsAbout: [
+        "Product Design", "UX Design", "Design Systems", "AI UX Design",
+        "React", "Next.js", "TypeScript", "Figma", "WCAG 2.2 Accessibility",
+        "Design Ops", "0-to-1 Product Development", "Enterprise UX",
+        "FinTech UX", "Healthcare UX", "Design Leadership",
+      ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Senior Product Designer",
+        occupationLocation: { "@type": "Country", name: "India" },
+        skills: "Product Design, Design Systems, AI UX, Accessibility, React, Figma",
+      },
+      worksFor: {
+        "@type": "Organization",
+        name: "Infosys",
+        url: "https://www.infosys.com",
+      },
+      founder: {
+        "@type": "Organization",
+        name: "Aulys",
+        url: "https://aulys-app.vercel.app",
+        description: "AI-powered Figma plugin for WCAG 2.2 accessibility compliance automation",
+      },
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "AI Associate",
+          credentialCategory: "certification",
+          recognizedBy: { "@type": "Organization", name: "Salesforce" },
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Design Accessibility",
+          credentialCategory: "certification",
+          recognizedBy: { "@type": "Organization", name: "Uxcel" },
+        },
+      ],
+      award: "Simplifai Hackathon 2.0 Winner — 1st place, AI-driven workflow builder",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://adityachinchakar.com/#website",
+      url: "https://adityachinchakar.com",
+      name: "Aditya Chinchakar — Product Designer Portfolio",
+      description: "Portfolio of Senior Product Designer Aditya Chinchakar. Case studies in AI UX, design systems, accessibility, and 0→1 product development.",
+      author: { "@id": "https://adityachinchakar.com/#person" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "ItemList",
+      name: "Product Design Case Studies",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Simplifai AI Workflow Engine", url: "https://adityachinchakar.com/work/simplifai" },
+        { "@type": "ListItem", position: 2, name: "Aulys WCAG Accessibility Plugin", url: "https://adityachinchakar.com/work/aulys" },
+        { "@type": "ListItem", position: 3, name: "Simplifai Design System", url: "https://adityachinchakar.com/work/simplifai-design-system" },
+        { "@type": "ListItem", position: 4, name: "MedSecure Blockchain Medical Records", url: "https://adityachinchakar.com/work/medsecure" },
+        { "@type": "ListItem", position: 5, name: "Nexus FinTech UX Audit", url: "https://adityachinchakar.com/work/nexus-banking" },
+        { "@type": "ListItem", position: 6, name: "Infosys × Imagine Learning AI Design", url: "https://adityachinchakar.com/work/infosys" },
+      ],
+    },
   ],
-  knowsAbout: [
-    "Product Design", "Design Systems", "AI UX", "React", "Next.js",
-    "Accessibility", "WCAG 2.2", "Figma", "Design Ops", "0-to-1 Products",
-  ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Infosys",
-    url: "https://www.infosys.com",
-  },
-  hasCredential: [
-    { "@type": "EducationalOccupationalCredential", name: "AI Associate", credentialCategory: "certification", recognizedBy: { "@type": "Organization", name: "Salesforce" } },
-    { "@type": "EducationalOccupationalCredential", name: "Design Accessibility", credentialCategory: "certification", recognizedBy: { "@type": "Organization", name: "Uxcel" } },
-  ],
-  award: "Simplifai Hackathon 2.0 Winner — 1st place, AI-driven workflow builder",
 };
 
 export default function RootLayout({

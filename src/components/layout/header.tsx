@@ -9,9 +9,10 @@ import { ContactSheet } from "@/components/ui/contact-sheet";
 
 const navLinks = [
     { href: "https://aulys-app.vercel.app/", label: "Live Plugin ↗", isExternal: true },
-    { href: "/#work", label: "Case Studies" },
+    { href: "/work", label: "Work" },
+    { href: "/writing", label: "Writing" },
+    { href: "/about", label: "About" },
     { href: "/Aditya_Chinchakar_V1_FoundingDesigner.pdf", label: "Resume", isExternal: true },
-    { href: "/#about", label: "About" },
 ];
 
 export function Header() {

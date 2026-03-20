@@ -30,7 +30,7 @@ function FlowDashboard() {
     ];
 
     return (
-        <div className="flex bg-white" style={{ height: 320 }}>
+        <div className="flex bg-white" style={{ height: 400 }}>
             {/* Sidebar */}
             <div className="w-[200px] border-r border-zinc-100 bg-zinc-50 flex flex-col flex-shrink-0">
                 {/* Brand */}
@@ -123,7 +123,7 @@ function FlowDashboard() {
 // ── Screen 2: Flow Builder ───────────────────────────────────────────────────
 function FlowBuilder() {
     return (
-        <div className="flex flex-col bg-white" style={{ height: 320 }}>
+        <div className="flex flex-col bg-white" style={{ height: 400 }}>
             {/* Toolbar */}
             <div className="flex items-center justify-between px-4 py-2 border-b border-zinc-200 bg-white flex-shrink-0">
                 <div className="flex items-center gap-2 text-sm font-semibold text-zinc-700">
@@ -271,7 +271,7 @@ function ExecutionMonitor() {
     };
 
     return (
-        <div className="flex flex-col bg-white" style={{ height: 320 }}>
+        <div className="flex flex-col bg-white" style={{ height: 400 }}>
             {/* Filter bar */}
             <div className="flex items-center gap-3 px-6 py-3 border-b border-zinc-100 bg-white flex-shrink-0">
                 <div className="flex items-center gap-2 text-xs text-zinc-400 border border-zinc-200 rounded-lg px-3 py-1.5">

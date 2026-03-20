@@ -86,7 +86,7 @@ export function Hero() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
                             </span>
-                            Strategy Case Study · Conceptual
+                            UX Audit · Speculative Design
                         </div>
 
                         <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-sm text-amber-300 font-medium mb-6">

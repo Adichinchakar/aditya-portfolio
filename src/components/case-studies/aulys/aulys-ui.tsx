@@ -8,10 +8,43 @@ const GREEN = "#10B981";
 // Realistic plugin chrome matching the production Aulys plugin
 function PluginChrome({ activeTab, children }: { activeTab: string; children: React.ReactNode }) {
     const tabs = [
-        { name: "Audit", icon: "✓" },
-        { name: "Tokens", icon: "⊞" },
-        { name: "History", icon: "◷" },
-        { name: "Settings", icon: "⚙" },
+        {
+            name: "Audit",
+            icon: (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.5 7l2.5 2.5 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            ),
+        },
+        {
+            name: "Tokens",
+            icon: (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <rect x="1.5" y="1.5" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                    <rect x="8.5" y="1.5" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                    <rect x="1.5" y="8.5" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                    <rect x="8.5" y="8.5" width="4" height="4" rx="1" stroke="currentColor" strokeWidth="1.3" />
+                </svg>
+            ),
+        },
+        {
+            name: "History",
+            icon: (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.3" />
+                    <path d="M7 4v3.5l2 2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            ),
+        },
+        {
+            name: "Settings",
+            icon: (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <circle cx="7" cy="7" r="2" stroke="currentColor" strokeWidth="1.3" />
+                    <path d="M7 1.5V3M7 11v1.5M1.5 7H3M11 7h1.5M3.2 3.2l1 1M9.8 9.8l1 1M3.2 10.8l1-1M9.8 4.2l1-1" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+                </svg>
+            ),
+        },
     ];
 
     return (
@@ -49,7 +82,7 @@ function PluginChrome({ activeTab, children }: { activeTab: string; children: Re
             <div className="grid grid-cols-4 border-t border-zinc-200 bg-white">
                 {tabs.map((t) => (
                     <button key={t.name} className={`flex flex-col items-center gap-1 py-2.5 text-[10px] font-medium transition-colors ${t.name === activeTab ? "text-emerald-600" : "text-zinc-400"}`}>
-                        <span className="text-sm">{t.icon}</span>
+                        <span>{t.icon}</span>
                         {t.name}
                     </button>
                 ))}

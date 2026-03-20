@@ -60,14 +60,18 @@ export function Hero() {
                     >
                         {/* Badge */}
                         <div
-                            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#005EB8]/10 border border-[#005EB8]/25 text-[#005EB8] text-sm font-semibold mb-8 backdrop-blur-md"
-                            aria-label="Case study type: Healthcare Blockchain, 0 to 1 Product"
+                            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#005EB8]/10 border border-[#005EB8]/25 text-[#005EB8] text-sm font-semibold mb-4 backdrop-blur-md"
+                            aria-label="Case study type: Product Concept, 0 to 1 Design"
                         >
                             <span className="relative flex h-2 w-2" aria-hidden="true">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#005EB8] opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#005EB8]" />
                             </span>
-                            Healthcare · Blockchain · 0→1 Product
+                            Product Concept · 0→1 Design
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-[#005EB8]/8 border border-[#005EB8]/20 text-sm text-[#005EB8] font-medium mb-6">
+                            🏥 Speculative product design: This is a 0→1 design concept for India&apos;s ABDM ecosystem. Pilot metrics (Delhi NCR + Pune, 1,200 patients) reflect an internal proof-of-concept. No production deployment at scale.
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-4 leading-[1.05]">

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "About — Senior Product Designer | Aditya Chinchakar",
-    description: "Aditya Chinchakar is a Senior Product Designer with 6+ years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys. Open to Senior Designer, Staff Designer, and Founding Designer roles.",
+    title: "About — Product Designer | Aditya Chinchakar",
+    description: "Aditya Chinchakar is a Founding Designer & AI-Native Product Thinker with 7 years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys. Open to Founding Designer, Staff Designer, and Lead Designer roles.",
     alternates: { canonical: "https://adityachinchakar.com/about" },
     openGraph: {
         title: "About Aditya Chinchakar | Senior Product Designer",
@@ -25,38 +25,38 @@ const timeline = [
     {
         company: "Aulys",
         role: "Founder & Founding Designer",
-        period: "2022 – Present",
+        period: "Ongoing",
         type: "0→1",
         color: "bg-emerald-50 border-emerald-200 text-emerald-700",
         dot: "bg-emerald-500",
-        description: "Designed and engineered an AI-powered Figma plugin for WCAG 2.2 compliance automation. Built solo — concept, design, engineering, and go-to-market. 30+ beta designers in active testing.",
+        description: "Conceived, designed, and shipped solo: a Figma Plugin scanning 500+ layers in under 10 seconds for WCAG 2.2 compliance, plus a Web Audit SaaS with AI-powered remediation. Owned the full product lifecycle — strategy, research, UI design, and go-to-market.",
     },
     {
         company: "Infosys",
-        role: "Senior Product Designer",
-        period: "2023 – Present",
+        role: "Product Designer",
+        period: "Aug 2024 – Present",
         type: "Enterprise",
         color: "bg-blue-50 border-blue-200 text-blue-700",
         dot: "bg-blue-500",
-        description: "Lead product designer for GenAI-powered educational platforms at Imagine Learning (enterprise client, North America). Architected a unified design system across 5 product teams. 3 AI tools shipped to production.",
+        description: "Shipped a 5-tool AI Teacher Assistant Suite from 0-to-1 — driving adoption across 10,000+ teachers and 50,000+ students. Architected a 60+ component design system across 5 cross-functional teams, cutting stakeholder review from 3 weeks to 5 days.",
     },
     {
-        company: "Simplifai",
-        role: "Senior Product Designer",
-        period: "2021 – 2023",
+        company: "Simplifai Cognitive Services",
+        role: "Product Designer",
+        period: "Oct 2022 – Jul 2024",
         type: "Scale-up",
         color: "bg-violet-50 border-violet-200 text-violet-700",
         dot: "bg-violet-500",
-        description: "Only senior designer on the team. Redesigned the AI workflow automation engine from scratch. Built the company's first design system. 73% increase in user adoption across 8 enterprise clients.",
+        description: "Led 0-to-1 UX for the AI no-code Flow Builder across 950+ users and 12+ enterprise clients. Built Simplifai's design practice from scratch — founding the first Design System and establishing a research cadence that reduced dev handoff friction by 60%.",
     },
     {
         company: "Keywordio",
-        role: "UI/UX Designer",
-        period: "2019 – 2021",
+        role: "UI/UX & Motion Designer",
+        period: "Jan 2020 – Sep 2022",
         type: "SaaS",
         color: "bg-amber-50 border-amber-200 text-amber-700",
         dot: "bg-amber-400",
-        description: "Shipped 8 dashboard modules for an AdTech SaaS CRM and analytics platform. Introduced the company's first design tokens and component library.",
+        description: "Redesigned 3 core CRM dashboards through research with 100+ users — cutting data access time by 12% and driving a 45% jump in team adoption. Elevated product experience through motion design and visual storytelling.",
     },
 ];
 
@@ -71,26 +71,26 @@ export default function AboutPage() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.08]">
-                    Senior Product Designer.<br />
+                    Founding Designer.<br />
                     <span className="text-zinc-400 font-bold">Building at the edge of AI.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-zinc-600 max-w-3xl leading-relaxed mb-8">
-                    I&apos;m <strong className="text-zinc-900">Aditya Chinchakar</strong>, a Senior Product Designer with 6+ years shipping AI-powered products,
-                    enterprise design systems, and 0→1 builds across startups and large-scale organisations.
-                    Currently a Senior Product Designer at <strong className="text-zinc-900">Infosys</strong> and the founder of{" "}
+                    I&apos;m <strong className="text-zinc-900">Aditya Chinchakar</strong>, a product designer and builder with 7 years shipping AI products,
+                    design systems, and 0→1 builds across EdTech, FinTech, and Enterprise SaaS.
+                    Currently at <strong className="text-zinc-900">Infosys</strong> and the founder of{" "}
                     <Link href="https://aulys-app.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-semibold hover:underline">
                         Aulys
                     </Link>
-                    , an AI-powered Figma plugin for WCAG 2.2 accessibility automation — designed and engineered solo.
+                    , an AI accessibility SaaS and Figma plugin — conceived, designed, and coded solo.
                 </p>
 
                 <p className="text-base text-zinc-500 max-w-3xl leading-relaxed mb-10">
-                    My work sits at the intersection of <strong className="text-zinc-700">UX strategy</strong>, <strong className="text-zinc-700">AI interface design</strong>, and <strong className="text-zinc-700">front-end engineering</strong>.
-                    I design in Figma, ship with React and Next.js, and obsess over design systems architecture,
-                    WCAG compliance, and the hard unsolved questions in enterprise AI UX.
-                    Based in India. Open to <strong className="text-zinc-700">Senior Product Designer</strong>, <strong className="text-zinc-700">Staff Designer</strong>,{" "}
-                    <strong className="text-zinc-700">Founding Designer</strong>, and <strong className="text-zinc-700">Design Lead</strong> roles.
+                    I don&apos;t wait for engineering to validate an idea — I prototype it, test it, and arrive at the meeting with data.
+                    My workflow — Antigravity, Claude, Figma Make, and v0 — isn&apos;t a talking point.
+                    It&apos;s how I compress weeks into days and turn half-baked briefs into shipped interfaces.
+                    Based in Pune, India. Open to <strong className="text-zinc-700">Founding Designer</strong>, <strong className="text-zinc-700">Staff Designer</strong>,{" "}
+                    <strong className="text-zinc-700">Lead Designer</strong>, and <strong className="text-zinc-700">Product Manager</strong> roles.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
@@ -101,12 +101,10 @@ export default function AboutPage() {
                         View Case Studies
                     </Link>
                     <Link
-                        href="/Aditya_Chinchakar_V1_FoundingDesigner.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/resume"
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-zinc-200 text-sm font-semibold text-zinc-700 hover:border-zinc-400 transition-colors"
                     >
-                        Download Resume <ArrowUpRight className="w-3.5 h-3.5" />
+                        View Resume <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
                     <Link
                         href="https://linkedin.com/in/adityachinchakar"

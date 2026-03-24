@@ -10,8 +10,7 @@ import { ContactSheet } from "@/components/ui/contact-sheet";
 const navLinks = [
     { href: "/work", label: "Work" },
     { href: "/writing", label: "Writing" },
-    { href: "/about", label: "About" },
-    { href: "/Aditya_Chinchakar_V1_FoundingDesigner.pdf", label: "Resume", isExternal: true },
+    { href: "/resume", label: "Resume" },
 ];
 
 export function Header() {
@@ -66,8 +65,6 @@ export function Header() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                target={link.isExternal ? "_blank" : undefined}
-                                rel={link.isExternal ? "noopener noreferrer" : undefined}
                                 className="text-sm font-medium text-zinc-600 hover:text-zinc-900 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-3 py-1.5"
                             >
                                 {link.label}
@@ -117,8 +114,6 @@ export function Header() {
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    target={link.isExternal ? "_blank" : undefined}
-                                    rel={link.isExternal ? "noopener noreferrer" : undefined}
                                     className="text-lg font-medium hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-3 py-2"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >

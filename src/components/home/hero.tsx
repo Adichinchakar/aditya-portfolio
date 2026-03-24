@@ -352,14 +352,12 @@ export function Hero() {
                             Let&apos;s Talk
                             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
-                        <a
-                            href="/Aditya_Chinchakar_V1_FoundingDesigner.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            href="/resume"
                             className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-white text-zinc-900 font-semibold flex items-center gap-2 border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 hover:scale-105 active:scale-95 transition-all"
                         >
-                            Download Resume
-                        </a>
+                            View Resume
+                        </Link>
                     </motion.div>
 
                     {/* Trust signals */}

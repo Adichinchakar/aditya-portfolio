@@ -89,17 +89,15 @@ export function About() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
                                     </button>
-                                    <a
-                                        href="/Aditya_Chinchakar_V1_FoundingDesigner.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <Link
+                                        href="/resume"
                                         className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-white text-zinc-900 font-medium hover:bg-zinc-50 border border-zinc-200/80 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 group"
                                     >
-                                        Download Resume
+                                        View Resume
                                         <svg className="w-4 h-4 text-zinc-500 group-hover:text-zinc-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
-                                    </a>
+                                    </Link>
                                 </motion.div>
                             </div>
                         </motion.div>

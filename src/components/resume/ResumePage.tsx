@@ -254,6 +254,11 @@ export function ResumePage({ data }: ResumePageProps) {
                                             >
                                                 <span className="font-medium text-zinc-900">{cert.name}</span>
                                                 <span className="text-xs text-zinc-400 mt-0.5">{cert.issuer}</span>
+                                                {'issued' in cert && cert.issued && (
+                                                    <span className="text-xs text-zinc-400 mt-0.5">
+                                                        {cert.issued}{('expires' in cert && cert.expires) ? ` · Exp ${cert.expires}` : ""}
+                                                    </span>
+                                                )}
                                             </motion.span>
                                         ))}
                                     </div>

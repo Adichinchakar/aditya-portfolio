@@ -109,6 +109,7 @@ export const resumeData = {
     certifications: [
         { name: "Google UX Design Certificate", issuer: "Google" },
         { name: "Uxcel Accessibility Specialist", issuer: "Uxcel" },
+        { name: "AI Associate", issuer: "Salesforce", issued: "Sep 2024", expires: "Sep 2029", credentialId: "4944767" },
     ],
     pdfUrl: "/Aditya_Chinchakar_V2_Strategic.pdf",
 };

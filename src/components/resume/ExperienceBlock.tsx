@@ -38,8 +38,8 @@ export function ExperienceBlock({ company, role, period, location, highlights, i
 
             {/* Highlights */}
             <ul className="space-y-2">
-                {highlights.map((item, i) => (
-                    <li key={i} className="flex gap-2.5 text-sm text-zinc-600 leading-relaxed">
+                {highlights.map((item) => (
+                    <li key={item} className="flex gap-2.5 text-sm text-zinc-600 leading-relaxed">
                         <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-zinc-400" />
                         {item}
                     </li>

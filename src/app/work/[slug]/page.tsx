@@ -6,6 +6,7 @@ import SimplifaiDesignSystemPage from "@/components/case-studies/simplifai-desig
 import MedSecurePage from "@/components/case-studies/medsecure/content";
 import NexusBankingPage from "@/components/case-studies/nexus-banking/content";
 import InfosysPage from "@/components/case-studies/infosys/content";
+import OrbitPage from "@/components/case-studies/orbit/content";
 import { NextCaseStudyHero } from "@/components/case-studies/next-case-study-hero";
 
 const CASE_STUDIES = {
@@ -38,6 +39,11 @@ const CASE_STUDIES = {
         component: InfosysPage,
         title: "Infosys × Imagine Learning — Case Study | Aditya Chinchakar",
         description: "GenAI-powered assessment tools for enterprise-scale educational platforms. Designed rubric generators and recommendation engines serving 5+ product teams, cutting assessment time by 70%.",
+    },
+    "orbit": {
+        component: OrbitPage,
+        title: "Orbit — Spatial Onboarding for Apple Vision Pro | Aditya Chinchakar",
+        description: "AI agent-guided enterprise onboarding on Apple Vision Pro. Collapses 3 weeks of context-building into 3 hours through spatial mapping and gaze-first navigation.",
     },
 };
 

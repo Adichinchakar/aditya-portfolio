@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Geist, JetBrains_Mono } from "next/font/google";
+import { Inter, Geist, JetBrains_Mono, Epilogue } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { Header } from "@/components/layout/header";
@@ -20,6 +20,12 @@ const geist = Geist({
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+});
+
+const epilogue = Epilogue({
+  variable: "--font-epilogue",
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -189,7 +195,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} antialiased bg-zinc-50 text-zinc-600`}
+        className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} ${epilogue.variable} antialiased bg-zinc-50 text-zinc-600`}
         suppressHydrationWarning
       >
         <div className="pointer-events-none fixed inset-0 bg-grain opacity-[0.05] z-50 mix-blend-overlay" aria-hidden="true" />

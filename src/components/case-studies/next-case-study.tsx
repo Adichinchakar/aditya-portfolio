@@ -3,6 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 export const CASE_STUDIES = [
     {
+        slug: "orbit",
+        title: "Orbit",
+        description: "AI agent-guided spatial onboarding for Apple Vision Pro.",
+    },
+    {
         slug: "aulys",
         title: "Aulys Accessibility",
         description: "Intelligent layout and design compliance automation tool for Figma.",

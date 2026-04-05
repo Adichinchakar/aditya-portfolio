@@ -4,6 +4,7 @@
   --font-sans: var(--font-geist);
   --font-heading: var(--font-geist);
   --font-mono: var(--font-jetbrains-mono);
+  --font-epilogue: var(--font-epilogue);
 
   /* Premium Light Mode Palette */
   --color-background: #fafafa;

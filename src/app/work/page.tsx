@@ -9,6 +9,18 @@ import { TextReveal } from "@/components/ui/text-reveal";
 
 const PROJECTS = [
     {
+        slug: "orbit",
+        title: "Orbit",
+        category: "Spatial UX · Apple Vision Pro",
+        description: "AI agent-guided enterprise onboarding for Apple Vision Pro. Collapses 3 weeks of org context into 3 hours through spatial mapping and gaze-first navigation.",
+        tags: ["Spatial UX", "Vision Pro", "AI Agent"],
+        year: "2025",
+        role: "Lead Designer",
+        metric: "60% Faster Onboarding",
+        spotlight: "rgba(139, 92, 246, 0.12)",
+        border: "group-hover:border-violet-500/30",
+    },
+    {
         slug: "aulys",
         title: "Aulys",
         category: "AI Agent · Figma Plugin",

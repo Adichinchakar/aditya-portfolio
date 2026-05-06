@@ -81,8 +81,11 @@ export function Hero() {
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-6 leading-relaxed font-medium">
-                            Giving every Indian patient a sovereign, tamper-proof medical identity — ABHA ID as the patient identifier, Hyperledger Fabric as the consent and audit ledger, IPFS for off-chain record storage. Accessible in their own language, even offline.
+                        <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-3 leading-relaxed font-medium">
+                            A 65-year-old farmer in rural Punjab and a 28-year-old in South Mumbai share India's healthcare system. They share almost nothing else — language, connectivity, literacy, or access. Designing for both, simultaneously, is the problem.
+                        </p>
+                        <p className="text-sm text-zinc-500 max-w-lg mb-6 leading-relaxed">
+                            MedSecure is a sovereign medical identity for every Indian patient — ABHA ID as the identifier, Hyperledger Fabric for consent and audit, IPFS for off-chain storage. Accessible in 8 languages, usable offline, piloted across 1,200 patients in Delhi NCR and Pune.
                         </p>
 
                         {/* Meta pills */}

@@ -73,10 +73,13 @@ export function Learnings() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="p-8 rounded-[2rem] bg-zinc-900 text-white text-center"
+                    className="p-8 rounded-[2rem] bg-zinc-900 text-white"
                 >
-                    <p className="text-xl font-bold max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-xl font-bold max-w-2xl leading-relaxed mb-4">
                         Aulys is still evolving. The CI/CD platform is in active development — and with 30 beta designers giving live feedback, it&apos;s going in the right direction.
+                    </p>
+                    <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
+                        What Aulys proved: a solo designer-founder, using AI tools for execution, can ship a real accessibility product with real users — in less time than most teams take to write a PRD. The constraint wasn&apos;t capability. It was knowing exactly what problem to solve and refusing to scope-creep past it.
                     </p>
                 </motion.div>
             </div>

@@ -21,8 +21,11 @@ export function TheInsight() {
                         The Real Blocker Wasn&apos;t Awareness.{" "}
                         <span className="text-zinc-600">It Was Friction.</span>
                     </h2>
-                    <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
+                    <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl mb-4">
                         Designers I spoke to already <em>knew</em> WCAG mattered. What they lacked was a tool that surfaced problems <strong className="text-zinc-700">inside their existing workflow</strong> — not as an afterthought.
+                    </p>
+                    <p className="text-base text-zinc-600 leading-relaxed max-w-2xl">
+                        I mapped the journey from "designer spots accessibility issue" to "issue gets fixed." There were <strong>7 steps and 3 tool-switches</strong> — browser DevTools, external contrast checker, WCAG documentation, back to Figma. Every switch was a dropout point. The fix wasn't better tooling. It was <em>fewer tools</em>.
                     </p>
                 </motion.div>
 

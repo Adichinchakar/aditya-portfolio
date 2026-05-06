@@ -25,9 +25,18 @@ export function TheStory() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-zinc-300 max-w-2xl mx-auto"
+                        className="text-xl text-zinc-300 max-w-2xl mx-auto mb-4"
                     >
                         I started with a focused Figma Plugin solving a single, painful problem: contrast checking inline. Once beta users validated it, a larger architectural vision took shape.
+                    </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.18 }}
+                        className="text-sm text-zinc-400 max-w-xl mx-auto"
+                    >
+                        I directed AI tools for all engineering execution — compressing what would have been a 6-month MVP into 10 weeks. Every product decision, architecture choice, and UX direction was mine. The AI was the builder; I was the product owner.
                     </motion.p>
                 </div>
 

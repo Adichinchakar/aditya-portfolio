@@ -73,23 +73,33 @@ export function Hero() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500" />
                             </span>
-                            AI-Augmented Design · Enterprise · 0→1
+                            Enterprise · Fortune 500 · Senior Product Designer
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white mb-6 leading-[1.05]">
                             Infosys:<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">
-                                AI-Augmented
+                                Enterprise UX
                             </span>
                             <br />
                             <span className="text-zinc-400 font-bold text-4xl sm:text-5xl md:text-6xl">
-                                Learning Design.
+                                at 500K Scale.
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-6 leading-relaxed font-medium">
-                            Designing GenAI rubric engines and recommendation systems for enterprise-scale educational platforms at Imagine Learning — a K-12 EdTech platform serving students across the US.
+                        <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-3 leading-relaxed font-medium">
+                            Two flagship products. One challenge: designing for hundreds of thousands of users with competing needs, constrained tech, and stakeholders at every layer of a Fortune Global 500 organisation.
                         </p>
+                        <div className="space-y-2 mb-6">
+                            <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/8">
+                                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
+                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">TalentBridge</span> — Internal talent marketplace connecting 500,000+ Infosys employees across delivery units, geographies, and skill domains. Multi-persona: employee, manager, HR, admin.</p>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/8">
+                                <span className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 shrink-0" />
+                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">Imagine Learning (GenAI)</span> — AI rubric engines and adaptive recommendation UX for K-12 EdTech at scale across US schools.</p>
+                            </div>
+                        </div>
 
                         <div className="flex flex-wrap items-center gap-3 mb-6">
                             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 text-white text-xs font-bold tracking-wide border border-white/5">
@@ -101,15 +111,12 @@ export function Hero() {
                             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 text-zinc-400 text-xs font-semibold border border-white/5">
                                 Infosys · Fortune Global 500
                             </span>
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 text-zinc-400 text-xs font-semibold border border-white/5">
-                                5+ Product Teams
-                            </span>
                         </div>
 
                         <div className="flex items-center gap-3 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
                             <Lock className="w-4 h-4 text-amber-400 shrink-0" aria-hidden="true" />
                             <p className="text-sm text-amber-300 font-medium">
-                                Full case study available under NDA. Contact me directly for a confidential walkthrough.
+                                Full artifacts and process documentation available under NDA. Contact me to schedule a walkthrough.
                             </p>
                         </div>
                     </motion.div>

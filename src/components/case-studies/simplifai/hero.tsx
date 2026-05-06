@@ -72,26 +72,28 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring" as const, stiffness: 260, damping: 22 }}
                     >
-                        {/* Pill badge — fixed text color for light background */}
+                        {/* Pill badge */}
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-700 text-sm font-semibold mb-8 backdrop-blur-md">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500" />
                             </span>
-                            Product Strategy · Case Study
+                            B2B SaaS · Enterprise AI · 2 Years
                         </div>
 
-                        {/* Upgraded heading */}
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-8 leading-[1.05]">
-                            Accelerating Time-to-Value by 40%:
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
+                            Redesigning the AI Workflow
                             <br />
                             <span className="text-zinc-500 font-bold">
-                                Re-engineering the AI Workflow.
+                                for Non-Technical Teams.
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-zinc-500 max-w-lg mb-10 leading-relaxed font-medium">
-                            Redesigning the core automation engine to enable non-technical teams to build complex AI agents without writing code.
+                        <p className="text-lg md:text-xl text-zinc-500 max-w-lg mb-3 leading-relaxed font-medium">
+                            Simplifai builds AI automation for enterprise operations — teams that need complex RPA workflows without writing code. I led product design for 2 years across 5+ enterprise clients, reshaping how non-technical users build, monitor, and debug AI agents.
+                        </p>
+                        <p className="text-sm text-zinc-400 max-w-lg mb-10 leading-relaxed">
+                            The core challenge: when an RPA workflow fails at 2am, who does the ops manager call — and what do they even look at? Designing for that moment defined the product.
                         </p>
                     </motion.div>
 

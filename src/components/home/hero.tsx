@@ -272,7 +272,7 @@ export function Hero() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                     </span>
                     <span className="text-sm font-medium text-zinc-600 group-hover:text-zinc-900 transition-colors">
-                        Open to Remote · Lead / Staff Designer
+                        Open to Remote Opportunities · Senior Product Designer
                     </span>
                     <ChevronRight className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 transition-colors group-hover:translate-x-0.5" />
                 </motion.div>
@@ -285,9 +285,10 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                         className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-zinc-900 leading-[1.1]"
                     >
-                        Bridging the gap between <br className="hidden md:block" />
+                        I design{" "}
+                        <br className="hidden md:block" />
                         <span className="relative inline-block">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">Design</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">enterprise products</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"
@@ -306,9 +307,9 @@ export function Hero() {
                                 </defs>
                             </motion.svg>
                         </span>
-                        {" "}&{" "}
+                        {" "}and ship them{" "}
                         <span className="relative inline-block">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">AI-Driven Execution</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">at founder speed</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"
@@ -336,7 +337,7 @@ export function Hero() {
                         className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed"
                     >
                         Senior Product Designer & Founder · Infosys & Aulys.<br className="hidden sm:block" />
-                        AI Products · Design Systems · WCAG · 0→1 Builds.
+                        Open to select engagements · AI Products · Design Systems · 0→1 Builds.
                     </motion.p>
 
                     <motion.div
@@ -369,7 +370,7 @@ export function Hero() {
                     >
                         <div className="flex items-center gap-1.5">
                             <Sparkles className="w-4 h-4 text-violet-500" />
-                            <span>7+ Years Experience</span>
+                            <span>9+ Years Experience</span>
                         </div>
                         <div className="hidden sm:block w-1 h-1 rounded-full bg-zinc-300" />
                         <div className="flex items-center gap-1.5">

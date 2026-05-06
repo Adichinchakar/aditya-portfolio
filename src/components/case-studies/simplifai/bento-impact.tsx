@@ -131,10 +131,19 @@ export function BentoImpact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring" as const, stiffness: 260, damping: 20, delay: 0.05 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900"
+                        className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 mb-4"
                     >
                         Results That Speak
                     </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-base text-zinc-500 max-w-2xl leading-relaxed"
+                    >
+                        The before: enterprise ops managers raised 5+ support tickets per week for routine workflow changes. The after: they configured, monitored, and debugged automations without touching engineering. That shift is what these numbers measure.
+                    </motion.p>
                 </div>
 
                 {/* 3 equal metric cards */}

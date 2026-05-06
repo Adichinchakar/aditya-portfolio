@@ -82,31 +82,34 @@ export function Hero() {
                         {/* Pill badge — ping dot is purely decorative */}
                         <div
                             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-700 text-sm font-semibold mb-8 backdrop-blur-md"
-                            aria-label="Case study type: Figma Plugin, 0 to 1 Product"
+                            aria-label="Case study type: Figma Plugin, real product, in beta"
                         >
                             <span className="relative flex h-2 w-2" aria-hidden="true">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
                             </span>
-                            Figma Plugin · 0→1 Product
+                            Figma Plugin · Solo Built · Live in Beta
                         </div>
 
                         {/* H1 — singular on this page */}
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
                             Aulys:<br />
                             <span className="text-zinc-500 font-bold">
-                                The AI Accessibility Engine.
+                                AI Accessibility, Inside Figma.
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-6 leading-relaxed font-medium">
-                            Making WCAG 2.2 compliance achievable for every design team — through an automated Figma plugin I designed, built, and shipped solo.
+                        <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-3 leading-relaxed font-medium">
+                            96.3% of the web fails basic accessibility. I built Aulys to fix that at the source — a real-time WCAG 2.2 scanner embedded directly in Figma, with AI-powered one-click remediation.
+                        </p>
+                        <p className="text-sm text-zinc-500 max-w-lg mb-6 leading-relaxed">
+                            Product strategy, UX, and all decisions are mine. I directed AI tools for execution — compressing a 6-month MVP to 10 weeks without sacrificing depth.
                         </p>
 
                         {/* Role + timeline strip */}
                         <div className="flex flex-wrap items-center gap-3 mb-8">
                             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 text-white text-xs font-bold tracking-wide">
-                                Product Designer · Solo Builder
+                                Product Designer · Founder · Solo Builder
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-100 text-zinc-700 text-xs font-semibold">
                                 Oct 2024 – Present

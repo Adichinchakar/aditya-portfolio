@@ -6,6 +6,14 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
     {
+        quote: "Aditya's AI tools reduced our assessment time by 70%. He doesn't just design; he solves business problems.",
+        name: "Pradeep S.",
+        role: "Senior Delivery Manager",
+        company: "Infosys",
+        initials: "PS",
+        color: "bg-gradient-to-br from-amber-400 to-orange-600"
+    },
+    {
         quote: "Aditya is a strong design contributor, advancing our design system, ensuring consistency, and bringing ideas to life. His extensive Figma expertise has helped the team upskill.",
         name: "Gautam Parasnis",
         role: "Chief Digital Officer",
@@ -28,14 +36,6 @@ const testimonials = [
         company: "Simplifai",
         initials: "AB",
         color: "bg-gradient-to-br from-rose-400 to-pink-600"
-    },
-    {
-        quote: "Aditya's AI tools reduced our assessment time by 70%. He doesn't just design; he solves business problems.",
-        name: "Pradeep S.",
-        role: "Senior Delivery Manager",
-        company: "Infosys",
-        initials: "PS",
-        color: "bg-gradient-to-br from-amber-400 to-orange-600"
     },
     {
         quote: "His motion design work directly contributed to a 15% increase in customer inquiries and engagement.",

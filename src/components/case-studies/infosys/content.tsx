@@ -131,6 +131,83 @@ export default function InfosysPage() {
                 </div>
             </section>
 
+            {/* TalentBridge Section */}
+            <section className="py-24 px-6 bg-zinc-900 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.08),transparent_60%)]" aria-hidden="true" />
+                <div className="container mx-auto max-w-5xl relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-12"
+                    >
+                        <p className="text-xs font-mono font-bold text-indigo-400 uppercase tracking-[0.2em] mb-4">
+                            02.5 — Featured Project
+                        </p>
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+                            TalentBridge: Making 500K People Visible
+                        </h2>
+                        <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">
+                            Infosys doesn&apos;t have a talent shortage. It has a talent <em>visibility</em> problem. Project managers can&apos;t find people with the right skills because those people are invisible — siloed inside delivery units, tagged by role title, not actual capability.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="p-8 rounded-[2rem] bg-zinc-950 border border-white/8"
+                        >
+                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">The Problem</p>
+                            <p className="text-base text-zinc-300 leading-relaxed mb-4">
+                                A project manager in Bangalore needs someone with React + financial domain experience available in 3 weeks. That person exists in Mumbai. There is no system that surfaces them. The PM posts the role externally instead.
+                            </p>
+                            <p className="text-sm text-zinc-500 leading-relaxed">
+                                This happens thousands of times a year — not from lack of talent, but from a design problem: the internal talent system was built for HR record-keeping, not for managers who think in terms of skills, availability, and project fit.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="p-8 rounded-[2rem] bg-zinc-950 border border-white/8"
+                        >
+                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">The Design Challenge</p>
+                            <p className="text-sm text-zinc-400 leading-relaxed mb-4">Four personas. One system. Completely different mental models:</p>
+                            <div className="space-y-3">
+                                {[
+                                    { role: "Employee", need: "Career visibility — I want the right projects to find me" },
+                                    { role: "Manager", need: "Skill search — I need to staff a project in 72 hours" },
+                                    { role: "HR", need: "Compliance + bench visibility — who is unallocated right now?" },
+                                    { role: "Admin", need: "Data integrity — are skill tags accurate and auditable?" },
+                                ].map((p, i) => (
+                                    <div key={i} className="flex items-start gap-3">
+                                        <span className="text-xs font-bold text-indigo-400 shrink-0 pt-0.5 w-16">{p.role}</span>
+                                        <p className="text-xs text-zinc-500 leading-relaxed">{p.need}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.15 }}
+                        className="p-6 rounded-2xl bg-amber-500/8 border border-amber-500/15 flex items-start gap-4"
+                    >
+                        <Lock className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
+                        <p className="text-sm text-amber-300 leading-relaxed">
+                            Full process documentation — personas, wireframes, IA maps, component decisions, and post-launch analytics — available in a confidential walkthrough. NDA required.
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Hard Problems */}
             <section className="py-24 px-6 bg-zinc-950 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(99,102,241,0.06),transparent_60%)]" aria-hidden="true" />
@@ -142,13 +219,13 @@ export default function InfosysPage() {
                         className="mb-12"
                     >
                         <p className="text-xs font-mono font-bold text-indigo-400 uppercase tracking-[0.2em] mb-4">
-                            02.5 — Design Challenges
+                            03 — Design Challenges
                         </p>
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
                             The Hard Problems
                         </h2>
                         <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">
-                            Three design tensions that defined the engagement — shareable without violating NDA.
+                            Three design tensions from the Imagine Learning engagement — shareable without violating NDA.
                         </p>
                     </motion.div>
 

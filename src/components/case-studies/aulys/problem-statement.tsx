@@ -26,9 +26,24 @@ export function ProblemStatement() {
                             of the top 1 million websites fail basic WCAG compliance — <span className="font-bold">WebAIM 2024</span>
                         </span>
                     </div>
-                    <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
+                    <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl mb-6">
                         Designers want to build inclusively. But for teams working fast in Figma, WCAG compliance sits at the end of the pipeline — expensive, error-prone, and always late.
                     </p>
+                    {/* Business stakes */}
+                    <div className="flex flex-wrap gap-3">
+                        <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-rose-50 border border-rose-200">
+                            <span className="text-lg font-black text-rose-700">$250K+</span>
+                            <span className="text-xs text-rose-600 font-semibold leading-snug">avg. ADA lawsuit settlement<br />per incident</span>
+                        </div>
+                        <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-amber-50 border border-amber-200">
+                            <span className="text-lg font-black text-amber-700">6×</span>
+                            <span className="text-xs text-amber-600 font-semibold leading-snug">costlier to fix post-launch<br />vs. at design stage</span>
+                        </div>
+                        <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-blue-50 border border-blue-200">
+                            <span className="text-lg font-black text-blue-700">4,600+</span>
+                            <span className="text-xs text-blue-600 font-semibold leading-snug">ADA digital accessibility<br />lawsuits filed in 2023</span>
+                        </div>
+                    </div>
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-6">

@@ -61,7 +61,22 @@ export function BentoImpact() {
                         <Globe className="w-8 h-8 text-emerald-700 mb-6" aria-hidden="true" />
                         <div className="text-3xl font-black text-emerald-900 mb-2 tracking-tight">RTL + CJK</div>
                         <p className="text-emerald-800 font-medium text-sm">
-                            Validated multilingual typography support — covering Arabic, Hebrew, Japanese, and Chinese scripts.
+                            Validated multilingual typography support — Arabic, Hebrew, Japanese, and Chinese. An edge case most accessibility tools skip entirely.
+                        </p>
+                    </motion.div>
+
+                    {/* Tester signal */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.25 }}
+                        className="bg-zinc-900 text-white p-10 rounded-[2rem] flex flex-col justify-center"
+                    >
+                        <div className="text-4xl font-black mb-2 tracking-tighter">#1</div>
+                        <p className="text-zinc-200 font-semibold text-sm mb-2">Most valued feature by beta testers</p>
+                        <p className="text-zinc-400 text-xs leading-relaxed">
+                            AI-powered one-click fix suggestions — cited by testers as the feature that made them actually <em>act</em> on violations rather than log and ignore them.
                         </p>
                     </motion.div>
 

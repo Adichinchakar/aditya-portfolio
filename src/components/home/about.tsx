@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 
 const stats = [
-    { value: "7+", label: "Years Experience" },
+    { value: "9+", label: "Years Experience" },
     { value: "10+", label: "Products Shipped" },
     { value: "5+", label: "Companies" },
     { value: "1", label: "Live Plugin" },
@@ -149,7 +149,7 @@ export function About() {
                                     </div>
                                     <div>
                                         <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-0.5">Reading</p>
-                                        <p className="text-sm font-semibold text-white">The Design of Everyday Things</p>
+                                        <p className="text-sm font-semibold text-white">The Alignment Problem — Brian Christian</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">

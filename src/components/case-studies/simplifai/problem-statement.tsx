@@ -72,11 +72,41 @@ export function ProblemStatement() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-lg text-zinc-500 font-medium mb-16 max-w-2xl"
+                    className="text-lg text-zinc-500 font-medium mb-6 max-w-2xl"
                 >
                     Simplifai needed a complete reimagination of its core workflow product —
                     turning a developer-only tool into a platform any operations team could own.
                 </motion.p>
+
+                {/* Before state callout */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.15 }}
+                    className="p-6 rounded-2xl bg-zinc-900 text-white mb-16 max-w-3xl"
+                >
+                    <p className="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest mb-3">The Before State</p>
+                    <p className="text-base text-zinc-200 leading-relaxed mb-4">
+                        When I joined, building a basic automation workflow required a developer. The UI was built for engineers — ops managers, who would eventually own these workflows, couldn&apos;t read the interface without help. Every change request became a support ticket. Enterprise clients with tight SLAs were raising issues daily.
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                        <div className="text-center">
+                            <p className="text-2xl font-black text-red-400">5+</p>
+                            <p className="text-xs text-zinc-400 font-semibold">support tickets per client/week<br />for routine config changes</p>
+                        </div>
+                        <div className="w-px bg-zinc-700" />
+                        <div className="text-center">
+                            <p className="text-2xl font-black text-amber-400">3 days</p>
+                            <p className="text-xs text-zinc-400 font-semibold">avg. time for ops team to onboard<br />to a new automation workflow</p>
+                        </div>
+                        <div className="w-px bg-zinc-700" />
+                        <div className="text-center">
+                            <p className="text-2xl font-black text-zinc-300">0</p>
+                            <p className="text-xs text-zinc-400 font-semibold">self-service actions<br />available to non-technical users</p>
+                        </div>
+                    </div>
+                </motion.div>
 
                 {/* Problem Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

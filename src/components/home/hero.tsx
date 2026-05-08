@@ -16,7 +16,7 @@ const roles = [
         icon: Layers,
         color: "indigo" as const,
         headline: "Led design org across 5+ product teams",
-        proof: "Built design systems, OKR-driven design ops, and cross-functional processes at Infosys and Simplifai. Comfortable owning roadmap, direction, and mentorship.",
+        proof: "At Infosys I owned design across 5 product teams — set the OKRs, built the system, and mentored 3 designers. I know what it takes to run a design function, not just contribute to one.",
         tags: ["Design Systems", "Design Ops", "Team Mentoring"],
         caseStudy: { label: "Simplifai DS → 42% Faster Dev Cycle", href: "/work/simplifai-design-system" },
     },
@@ -26,7 +26,7 @@ const roles = [
         icon: Sparkles,
         color: "violet" as const,
         headline: "Platform-level impact across multiple product lines",
-        proof: "Designed AI tools and platform-level systems scaling across teams. Cut assessment time 70% at Infosys; shipped WCAG 2.2 AAA-compliant tools at Aulys.",
+        proof: "My work at Infosys cut teacher assessment time by 70%. At Aulys, I shipped WCAG 2.2 AAA compliance into Figma — a tool no one had built before. Platform decisions, not screen decisions.",
         tags: ["AI Tooling", "Platform Design", "WCAG 2.2 AAA"],
         caseStudy: { label: "Aulys Plugin → WCAG 2.2 AAA Compliance", href: "/work/aulys" },
     },
@@ -36,7 +36,7 @@ const roles = [
         icon: Zap,
         color: "amber" as const,
         headline: "Ships design and code. Owns the full function.",
-        proof: "Full-stack designer who writes React + TypeScript. Taken 3 products from 0→1. Can own hiring, process, vision, and execution — ready to build and lead a design org from scratch.",
+        proof: "I write React. I've shipped 3 products solo. I can hire your first designer, set the process, and still make pixels look right on Friday afternoon. I don't need hand-holding — I need a problem worth solving.",
         tags: ["React + Next.js", "0→1 Products", "Design Leadership"],
         caseStudy: { label: "MedSecure → 34% Fewer Medical Errors", href: "/work/medsecure" },
     },
@@ -46,7 +46,7 @@ const roles = [
         icon: Terminal,
         color: "emerald" as const,
         headline: "Took Aulys from 0→1 as sole designer, engineer, and PM.",
-        proof: "Built a live Figma plugin from scratch — designed the WCAG 2.2 algorithm, wrote the TypeScript plugin, and onboarded 30 beta designers in 6 months. No team. No runway.",
+        proof: "Aulys exists because I built it alone — the algorithm, the TypeScript plugin, the onboarding, the beta. 30 designers. 6 months. Zero funding. If you're hiring someone who moves fast and cares about quality at the same time, that's the proof.",
         tags: ["0→1 Product", "Figma Plugin API", "Solo Execution"],
         caseStudy: { label: "Aulys Plugin → 500+ Frames Under 10 Seconds", href: "/work/aulys" },
     },
@@ -272,7 +272,7 @@ export function Hero() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                     </span>
                     <span className="text-sm font-medium text-zinc-600 group-hover:text-zinc-900 transition-colors">
-                        Open to Remote Opportunities · Senior Product Designer
+                        Available Now · Remote Worldwide (IST +5:30) · Full-Time & Contract
                     </span>
                     <ChevronRight className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 transition-colors group-hover:translate-x-0.5" />
                 </motion.div>

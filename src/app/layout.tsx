@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -102,8 +103,8 @@ const jsonLd = {
       "@id": "https://adityachinchakar.com/#person",
       name: "Aditya Chinchakar",
       url: "https://adityachinchakar.com",
-      jobTitle: "Founding Designer",
-      description: "Founding Designer & AI-Native Product Thinker with 7 years shipping AI-powered EdTech, FinTech, and Enterprise SaaS products. Founder of Aulys — an AI accessibility SaaS and Figma plugin, conceived, designed, and coded solo. Currently at Infosys.",
+      jobTitle: "Senior Product Designer — Available for Hire",
+      description: "Senior Product Designer with 9+ years shipping AI-powered EdTech, FinTech, and Enterprise SaaS products. Founder of Aulys — an AI accessibility SaaS and Figma plugin, conceived, designed, and coded solo. Immediately available for full-time and contract roles worldwide.",
       email: "adichinchakar@gmail.com",
       image: "https://adityachinchakar.com/opengraph-image",
       address: {
@@ -130,11 +131,10 @@ const jsonLd = {
         occupationLocation: { "@type": "City", name: "Pune, India" },
         skills: "Product Design, AI UX Design, Design Systems, Accessibility (WCAG 2.2), React, Next.js, Figma",
       },
-      worksFor: {
-        "@type": "Organization",
-        name: "Infosys",
-        url: "https://www.infosys.com",
-      },
+      alumniOf: [
+        { "@type": "Organization", name: "Infosys", url: "https://www.infosys.com" },
+        { "@type": "Organization", name: "Simplifai", url: "https://simplifai.ai" },
+      ],
       founder: {
         "@type": "Organization",
         name: "Aulys",
@@ -169,7 +169,7 @@ const jsonLd = {
         itemOffered: {
           "@type": "Service",
           name: "Senior Product Designer — Freelance & Contract",
-          description: "AI UX design, enterprise product design, design systems architecture, 0→1 product development, and design leadership for remote clients worldwide.",
+          description: "AI UX design, enterprise product design, design systems architecture, 0→1 product development, and design leadership for remote clients worldwide. Immediately available for full-time or contract roles.",
           serviceType: "Product Design Consulting",
         },
         availability: "https://schema.org/InStock",
@@ -237,6 +237,7 @@ export default function RootLayout({
         </SmoothScroll>
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   );

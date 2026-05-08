@@ -25,15 +25,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const staticRoutes: MetadataRoute.Sitemap = [
         { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-        { url: `${BASE_URL}/work`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
-        { url: `${BASE_URL}/resume`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-        { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+        { url: `${BASE_URL}/work`, lastModified: new Date("2025-04-15"), changeFrequency: "monthly", priority: 0.95 },
+        { url: `${BASE_URL}/resume`, lastModified: new Date("2025-05-01"), changeFrequency: "monthly", priority: 0.9 },
+        { url: `${BASE_URL}/about`, lastModified: new Date("2025-04-01"), changeFrequency: "monthly", priority: 0.85 },
         { url: `${BASE_URL}/writing`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     ];
 
     const caseStudyRoutes: MetadataRoute.Sitemap = CASE_STUDY_SLUGS.map((slug) => ({
         url: `${BASE_URL}/work/${slug}`,
-        lastModified: now,
+        lastModified: new Date("2025-04-15"),
         changeFrequency: "monthly" as const,
         priority: 0.8,
     }));

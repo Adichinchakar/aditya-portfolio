@@ -11,7 +11,7 @@ const works = [
     {
         index: "01",
         company: "Aulys",
-        description: "Intelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.",
+        description: "I found out 96% of the web fails accessibility — then built a Figma plugin that scans 500 layers in under 10 seconds and tells you exactly what to fix.",
         tags: ["AI Agent", "Figma Plugin", "Typescript"],
         href: "/work/aulys",
         spotlight: "rgba(16, 185, 129, 0.12)",
@@ -26,7 +26,7 @@ const works = [
     {
         index: "02",
         company: "Simplifai Workflow Engine",
-        description: "Node-based visual builder for complex enterprise AI automations. Democratizing logic creation without code.",
+        description: "Enterprise teams were building AI workflows in spreadsheets. I redesigned the entire product experience — adoption went from stuck to 73% in one quarter.",
         tags: ["Node Builder", "UX Strategy", "Enterprise"],
         href: "/work/simplifai",
         spotlight: "rgba(249, 115, 22, 0.12)",
@@ -41,7 +41,7 @@ const works = [
     {
         index: "03",
         company: "Simplifai Design System",
-        description: "A comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.",
+        description: "Five product teams, one design system. Built 60+ components with clear usage rules — dev cycle dropped 42%. Designers stopped arguing about buttons.",
         tags: ["Design Systems", "Architecture", "10x Faster UI"],
         href: "/work/simplifai-design-system",
         spotlight: "rgba(99, 102, 241, 0.12)",
@@ -71,7 +71,7 @@ const works = [
     {
         index: "05",
         company: "Nexus Fintech App",
-        description: "Solving the 'Super-App' paradox with an Intent-Led architectural strategy, focusing on trust and reduced cognitive bloat.",
+        description: "Super-apps fail because they try to be everything. I spent 6 weeks mapping why — and designed an intent-led architecture that puts context before features.",
         tags: ["FinTech", "UX Strategy", "Architecture"],
         href: "/work/nexus-banking",
         spotlight: "rgba(59, 130, 246, 0.12)",
@@ -86,7 +86,7 @@ const works = [
     {
         index: "06",
         company: "Infosys × Imagine Learning",
-        description: "GenAI-powered assessment tools for enterprise education. Designed rubric generators and recommendation engines serving 5+ product teams.",
+        description: "Teachers at a 50-state US school network were spending 3 hours building one assessment. I designed AI tools that cut that to 20 minutes — across 5 product teams.",
         tags: ["GenAI", "Enterprise", "Design Systems"],
         href: "/work/infosys",
         spotlight: "rgba(99, 102, 241, 0.12)",

@@ -61,17 +61,18 @@ export function About() {
                             </h2>
                             <div className="space-y-6 text-lg md:text-xl text-zinc-600 leading-relaxed font-medium">
                                 <p>
-                                    Most designers hand off mockups and hope for the best.{" "}
+                                    Most designers stop at handoff.{" "}
                                     <span className="text-zinc-900 font-bold bg-blue-500/10 px-2 py-0.5 rounded-md inline-block mt-1">
-                                        I leverage AI and product intuition to deliver working prototypes.
+                                        I stay until it ships — writing code, running research, and making decisions no one else wants to make.
                                     </span>
                                 </p>
                                 <p>
-                                    I operate at the intersection of{" "}
-                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">Product Strategy</span>,{" "}
-                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">UX Design</span>, and{" "}
-                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">Rapid Execution</span>.
-                                    I don't just design interfaces; I orchestrate how they come to life.
+                                    I&apos;ve taken three products from zero to live users —{" "}
+                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">alone</span>.
+                                    {" "}Not because I had to, but because I wanted to know what it actually takes.
+                                    That shapes every{" "}
+                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">design decision</span>{" "}
+                                    I make in a team.
                                 </p>
 
                                 <motion.div

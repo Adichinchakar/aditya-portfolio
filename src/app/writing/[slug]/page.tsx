@@ -484,6 +484,196 @@ const posts: Post[] = [
             },
         ],
     },
+    {
+        slug: "ai-ux-trust-over-intelligence",
+        title: "The AI UX Problem Nobody Talks About: Trust Over Intelligence",
+        excerpt: "GPT-4 is smarter than any human, but users still don't trust it for high-stakes decisions. Designing AI interfaces that earn trust requires a fundamentally different mental model — and it starts with calibrated uncertainty.",
+        date: "Nov 2024",
+        readTime: "6 min",
+        tags: ["AI Design", "Trust", "Mental Models", "Enterprise UX"],
+        content: [
+            {
+                type: "p",
+                content: "At Simplifai, we shipped an AI feature that suggested automation workflows to users based on their historical patterns. It was genuinely good — our accuracy on workflow suggestions was around 78%. By any ML benchmark, that's solid. By user adoption metrics, it was a failure. Less than 12% of users accepted the suggestions without modifying them. Most dismissed them entirely.",
+            },
+            {
+                type: "p",
+                content: "The AI wasn't wrong. The interface was. We had built a smart system that communicated like an oracle: here is the answer. Users, especially in enterprise contexts, don't want oracles. They want collaborators they can interrogate.",
+            },
+            {
+                type: "h2",
+                content: "Intelligence and Trust Are Not the Same Thing",
+            },
+            {
+                type: "p",
+                content: "There's a widespread assumption in AI product design that if the model is accurate enough, trust will follow. This is wrong — and it's the most expensive mistake AI product teams make.",
+            },
+            {
+                type: "p",
+                content: "Trust is not a function of accuracy. It's a function of legibility, predictability, and control. A system can be 95% accurate and completely untrustworthy if users can't understand why it made a decision, can't predict when it will be wrong, and can't correct it easily when it is.",
+            },
+            {
+                type: "blockquote",
+                content: "Users don't need AI to be right all the time. They need to know when it's likely to be wrong — and to feel in control when it is.",
+            },
+            {
+                type: "h2",
+                content: "The Three Trust Signals AI Interfaces Must Communicate",
+            },
+            {
+                type: "p",
+                content: "After rethinking the Simplifai AI features and running similar decisions through the Aulys design process, I landed on three signals that determine whether users trust an AI recommendation enough to act on it.",
+            },
+            {
+                type: "ul",
+                items: [
+                    "Confidence level — not as a percentage (users don't know what 78% confident means), but as a qualitative signal: 'High confidence based on 12 previous workflows' vs. 'Low confidence — I haven't seen this pattern before.' Users make different decisions with this information.",
+                    "Reasoning visibility — what the AI looked at to produce this recommendation. Not a technical explanation, but a human-readable summary: 'I noticed you approve most expense requests under $500 without review.' This lets users audit the premise, not just the conclusion.",
+                    "Reversibility — how easy is it to undo? If users know an AI action is easily reversible, they'll try it. If they're not sure, they won't. The escape hatch must be more visible than the action itself.",
+                ],
+            },
+            {
+                type: "h2",
+                content: "What We Changed at Simplifai",
+            },
+            {
+                type: "p",
+                content: "We redesigned the workflow suggestion feature around these three signals. Instead of 'Here is a suggested automation,' users saw: 'Based on your last 14 document approvals, I'd automate this step. Confidence: high. Undo anytime from the automation history panel.'",
+            },
+            {
+                type: "p",
+                content: "Acceptance rate went from 12% to 41% in the first month after the redesign. We hadn't changed the model. We'd changed the conversation.",
+            },
+            {
+                type: "h2",
+                content: "The Aulys Version of This Problem",
+            },
+            {
+                type: "p",
+                content: "I ran into the same issue from the other side building Aulys. The plugin scans Figma frames and flags WCAG violations, then offers AI-powered remediation — one-click fixes for contrast failures, missing alt text, focus order issues.",
+            },
+            {
+                type: "p",
+                content: "In early beta, users accepted the AI remediation suggestions about 20% of the time. Exit interviews revealed the pattern: 'I don't know what it's going to change. What if it breaks something?' The AI was offering a solution without showing its work.",
+            },
+            {
+                type: "p",
+                content: "The fix: before applying any remediation, the plugin now shows a diff-style preview — 'This will change your button fill from #6B7280 to #4B5563 (contrast ratio: 3.1:1 → 4.8:1).' Users can see exactly what will change and why. Acceptance rate climbed to 67%.",
+            },
+            {
+                type: "h2",
+                content: "The Broader Design Principle",
+            },
+            {
+                type: "p",
+                content: "Every AI interface is implicitly making a claim: 'I know something you don't, and you should act on it.' That claim needs to be earned — not through accuracy alone, but through transparency about how the AI reached its conclusion, honesty about its uncertainty, and a clear path for the user to course-correct.",
+            },
+            {
+                type: "p",
+                content: "The AI products that will win long-term aren't the ones with the highest accuracy. They're the ones that make users feel competent and in control — that use AI to augment human judgment rather than replace it. That's a design problem, not a model problem.",
+            },
+            {
+                type: "callout",
+                label: "See it in practice",
+                content: "The Simplifai AI workflow features and Aulys remediation flow are both covered in detail in their respective case studies at adityachinchakar.com/work/simplifai and adityachinchakar.com/work/aulys.",
+            },
+        ],
+    },
+    {
+        slug: "senior-designer-to-founder",
+        title: "From Senior Designer to Founder: What Building 0→1 Actually Looks Like",
+        excerpt: "Everyone puts '0→1' in job descriptions. Almost nobody has done it. Here's what it actually means — the loneliness of no design system, the bad calls you make without a PM, and the one thing nobody tells you about building solo.",
+        date: "Oct 2024",
+        readTime: "5 min",
+        tags: ["Founder", "Career", "Leadership", "0→1"],
+        content: [
+            {
+                type: "p",
+                content: "When I decided to build Aulys — a WCAG accessibility plugin for Figma — I had seven years of product design experience. I had worked on 0→1 projects before, in the sense that they were new products. What I had not done was build something from nothing, by myself, with no team and no process to inherit.",
+            },
+            {
+                type: "p",
+                content: "The gap between those two things is larger than anyone tells you.",
+            },
+            {
+                type: "h2",
+                content: "What '0→1' Usually Means on a Resume",
+            },
+            {
+                type: "p",
+                content: "At most companies, '0→1' means you joined a product in its early stages. There was already a PM. There was already an engineering team. There was probably a design system, or at least a UI kit. There was a process for research, a Slack channel for design feedback, a sprint cadence. The product was early-stage, but the infrastructure was there.",
+            },
+            {
+                type: "p",
+                content: "That's not 0→1. That's early-stage. 0→1 is when there is genuinely nothing — no brief, no team, no process — and you have to build all of it while also building the product.",
+            },
+            {
+                type: "h2",
+                content: "What Actually Happens When There's No PM",
+            },
+            {
+                type: "p",
+                content: "You make product decisions. All of them. And you make them confidently, because there's no one to push back. This is where most solo builders go wrong, including me.",
+            },
+            {
+                type: "p",
+                content: "In Aulys's first version, I built drag-to-reorder for the violations panel — letting designers reprioritize which WCAG issues to fix first. I thought it was good UX. I was wrong. Beta users found it confusing and asked me to remove it. The insight that should have stopped me from building it — 'severity order is objective, making it reorderable implies it's subjective' — is the kind of thing a good PM surfaces in a 10-minute conversation. Without a PM, that conversation doesn't happen until you've already shipped the wrong thing.",
+            },
+            {
+                type: "blockquote",
+                content: "The hardest part of building alone isn't the work. It's the absence of the people who would have told you the work was wrong.",
+            },
+            {
+                type: "h2",
+                content: "What Actually Happens When There's No Design System",
+            },
+            {
+                type: "p",
+                content: "You rebuild the same button six times. The first time, you're setting up the project. The second time, you've changed the brand slightly. The third time, you realized the hover state doesn't match what you did on the other screen. The fourth through sixth times are variations of not remembering exactly what you decided before.",
+            },
+            {
+                type: "p",
+                content: "I spent a week in month three pulling everything back into a coherent component library. That week was entirely recoverable time — work I had already done, redone. I now understand, viscerally, why the first thing I do when joining a team is ask about design system health. The cost of not having one is real and it compounds.",
+            },
+            {
+                type: "h2",
+                content: "The One Thing Nobody Tells You",
+            },
+            {
+                type: "p",
+                content: "The hardest part of building 0→1 is not building — it's deciding what not to build.",
+            },
+            {
+                type: "p",
+                content: "When you're building alone, every idea is your idea. There's no filter between 'that's interesting' and 'that's on the roadmap.' The feature graveyard in my Figma file is larger than the shipped product. Every hour I spent on features that didn't make it was an hour not spent making the shipped features better.",
+            },
+            {
+                type: "p",
+                content: "The discipline I eventually developed: write down the user problem first, then ask whether this feature is the simplest thing that solves that problem. If the answer is 'no, but it's a really interesting approach,' the feature doesn't ship.",
+            },
+            {
+                type: "h2",
+                content: "What It Changed",
+            },
+            {
+                type: "p",
+                content: "I understand PMs now in a way I never did before. Not as stakeholders who translate business requirements into briefs — but as people who hold the line between the team's enthusiasm and the user's actual problem. That's an incredibly hard job. I was bad at it when I had to do it myself.",
+            },
+            {
+                type: "p",
+                content: "I understand engineers differently too. When a developer pushes back on a design decision, I now know they're often right — not because the design is wrong, but because the implementation assumption embedded in the design is wrong. I ask different questions now. 'What would make this hard to build?' is a design question, not just an engineering one.",
+            },
+            {
+                type: "p",
+                content: "Building Aulys was the most useful thing I've done for my career — not because of what it produced, but because of what it required me to learn in order to build it.",
+            },
+            {
+                type: "callout",
+                label: "Aulys case study",
+                content: "The full story of building Aulys — every technical decision, every wrong turn, and what shipping solo actually looks like — is at adityachinchakar.com/work/aulys.",
+            },
+        ],
+    },
 ];
 
 export async function generateStaticParams() {

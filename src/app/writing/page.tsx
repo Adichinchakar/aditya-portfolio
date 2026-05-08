@@ -76,7 +76,8 @@ const posts: Post[] = [
         readTime: "6 min",
         tags: ["AI Design", "Trust", "Mental Models", "Enterprise UX"],
         platform: "linkedin",
-        status: "coming-soon",
+        status: "published",
+        href: "/writing/ai-ux-trust-over-intelligence",
     },
     {
         title: "From Senior Designer to Founder: What Building 0→1 Actually Looks Like",
@@ -85,7 +86,8 @@ const posts: Post[] = [
         readTime: "5 min",
         tags: ["Founder", "Career", "Leadership", "0→1"],
         platform: "linkedin",
-        status: "coming-soon",
+        status: "published",
+        href: "/writing/senior-designer-to-founder",
     },
 ];
 

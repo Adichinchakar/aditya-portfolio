@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, PenLine, Layers, Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { DecisionCallout } from "@/components/ui/decision-callout";
 
 const steps = [
     {
@@ -173,6 +174,12 @@ export function DesignProcess() {
                         </div>
                     </motion.div>
                 </AnimatePresence>
+
+                <DecisionCallout
+                    chose="Canvas-first node builder with inline property panels"
+                    rejected="Form-based workflow configurator"
+                    why="Form-based UIs required users to leave the canvas to configure each node — 3 context switches per connection. Canvas-first kept intent and configuration co-located, cutting task completion time by 40% in usability testing."
+                />
             </div>
         </section>
     );

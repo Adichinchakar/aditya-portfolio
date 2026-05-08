@@ -1,11 +1,14 @@
 "use client";
 
-import { MouseEvent } from "react";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { MouseEvent, useState } from "react";
+import { motion, useMotionTemplate, useMotionValue, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TextReveal } from "@/components/ui/text-reveal";
+
+const DOMAIN_FILTERS = ["All", "AI / ML", "Design Systems", "FinTech", "Healthcare", "Spatial UX"] as const;
+type DomainFilter = typeof DOMAIN_FILTERS[number];
 
 const PROJECTS = [
     {
@@ -14,6 +17,7 @@ const PROJECTS = [
         category: "Spatial UX · Apple Vision Pro",
         description: "AI agent-guided enterprise onboarding for Apple Vision Pro. Collapses 3 weeks of org context into 3 hours through spatial mapping and gaze-first navigation.",
         tags: ["Spatial UX", "Vision Pro", "AI Agent"],
+        domain: "Spatial UX" as DomainFilter,
         year: "2025",
         role: "Lead Designer",
         metric: "60% Faster Onboarding",
@@ -24,8 +28,9 @@ const PROJECTS = [
         slug: "aulys",
         title: "Aulys",
         category: "AI Agent · Figma Plugin",
-        description: "Intelligent layout and design compliance automation tool for Figma. Empowering designers with instant feedback.",
+        description: "96% of the web fails accessibility. I built a Figma plugin that scans 500 layers in under 10 seconds and tells you exactly what to fix.",
         tags: ["AI Agent", "Figma Plugin", "Typescript"],
+        domain: "AI / ML" as DomainFilter,
         year: "2024",
         role: "Design Engineer",
         metric: "WCAG 2.2 AAA Compliance",
@@ -36,8 +41,9 @@ const PROJECTS = [
         slug: "simplifai",
         title: "Simplifai Workflow Engine",
         category: "Node Builder · Enterprise",
-        description: "Node-based visual builder for complex enterprise AI automations. Democratizing logic creation without code.",
+        description: "Enterprise teams were building AI workflows in spreadsheets. I redesigned the entire experience — adoption went from stuck to 73% in one quarter.",
         tags: ["Node Builder", "UX Strategy", "Enterprise"],
+        domain: "AI / ML" as DomainFilter,
         year: "2023",
         role: "Senior Product Designer",
         metric: "Zero-Code Automation",
@@ -48,8 +54,9 @@ const PROJECTS = [
         slug: "simplifai-design-system",
         title: "Simplifai Design System",
         category: "Design Systems · Architecture",
-        description: "A comprehensive design system scaling across enterprise Automation products. Built for consistency and speed.",
+        description: "Five product teams, one design system. Built 60+ components with clear usage rules — dev cycle dropped 42%. Designers stopped arguing about buttons.",
         tags: ["Design Systems", "Architecture", "10x Faster UI"],
+        domain: "Design Systems" as DomainFilter,
         year: "2023",
         role: "Lead Architect",
         metric: "42% Faster Dev Cycle",
@@ -62,6 +69,7 @@ const PROJECTS = [
         category: "Healthcare · Blockchain",
         description: "Blockchain medical records platform giving every Indian patient a sovereign, tamper-proof health identity — online or offline.",
         tags: ["Blockchain", "Healthcare", "ABDM"],
+        domain: "Healthcare" as DomainFilter,
         year: "2024",
         role: "Product Lead",
         metric: "34% Fewer Medical Errors",
@@ -72,8 +80,9 @@ const PROJECTS = [
         slug: "nexus-banking",
         title: "Nexus Fintech App",
         category: "FinTech · UX Strategy",
-        description: "Solving the 'Super-App' paradox with an Intent-Led architectural strategy, focusing on trust and reduced cognitive bloat.",
+        description: "Super-apps fail because they try to be everything. I spent 6 weeks mapping why — and designed an intent-led architecture that puts context before features.",
         tags: ["FinTech", "UX Strategy", "Architecture"],
+        domain: "FinTech" as DomainFilter,
         year: "2024",
         role: "Principal Designer",
         metric: "Strategy Case Study",
@@ -84,8 +93,9 @@ const PROJECTS = [
         slug: "infosys",
         title: "Infosys × Imagine Learning",
         category: "GenAI · Enterprise · Education",
-        description: "GenAI-powered assessment tools for enterprise education. Designed rubric generators and recommendation engines serving 5+ product teams.",
+        description: "Teachers at a 50-state US school network were spending 3 hours building one assessment. I designed AI tools that cut that to 20 minutes — across 5 product teams.",
         tags: ["GenAI", "Enterprise", "Design Systems"],
+        domain: "AI / ML" as DomainFilter,
         year: "2024",
         role: "Senior Product Designer",
         metric: "70% Faster Assessments",
@@ -181,6 +191,9 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
 }
 
 export default function WorkIndex() {
+    const [activeFilter, setActiveFilter] = useState<DomainFilter>("All");
+    const filtered = activeFilter === "All" ? PROJECTS : PROJECTS.filter(p => p.domain === activeFilter);
+
     return (
         <div className="min-h-screen bg-zinc-50 pt-32 pb-24 relative overflow-hidden">
             {/* Ambient glow orbs */}
@@ -195,7 +208,7 @@ export default function WorkIndex() {
                         Selected Work
                     </TextReveal>
                     <span className="font-mono text-zinc-400 font-bold hidden sm:block tracking-widest text-sm">
-                        (0{PROJECTS.length})
+                        (0{filtered.length})
                     </span>
                 </div>
 
@@ -203,16 +216,51 @@ export default function WorkIndex() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.05 }}
-                    className="text-lg text-zinc-500 leading-relaxed font-medium mb-12 max-w-2xl"
+                    className="text-lg text-zinc-500 leading-relaxed font-medium mb-8 max-w-2xl"
                 >
                     Products, tools, and strategic case studies — spanning design systems, AI tooling, healthcare, and fintech.
                 </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {PROJECTS.map((project, index) => (
-                        <ProjectCard key={project.slug} project={project} index={index} />
+                {/* Domain filter tabs */}
+                <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className="flex flex-wrap gap-2 mb-10"
+                    role="group"
+                    aria-label="Filter by domain"
+                >
+                    {DOMAIN_FILTERS.map((filter) => (
+                        <button
+                            key={filter}
+                            onClick={() => setActiveFilter(filter)}
+                            aria-pressed={activeFilter === filter}
+                            className={cn(
+                                "px-4 py-1.5 rounded-full text-sm font-semibold border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
+                                activeFilter === filter
+                                    ? "bg-zinc-900 text-white border-zinc-900"
+                                    : "bg-white text-zinc-600 border-zinc-200 hover:border-zinc-400 hover:text-zinc-900"
+                            )}
+                        >
+                            {filter}
+                        </button>
                     ))}
-                </div>
+                </motion.div>
+
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={activeFilter}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.15 }}
+                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                    >
+                        {filtered.map((project, index) => (
+                            <ProjectCard key={project.slug} project={project} index={index} />
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     );

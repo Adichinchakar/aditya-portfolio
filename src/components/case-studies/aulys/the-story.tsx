@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Layers, Cloud, ArrowRight } from "lucide-react";
+import { DecisionCallout } from "@/components/ui/decision-callout";
 
 export function TheStory() {
     return (
@@ -38,6 +39,14 @@ export function TheStory() {
                     >
                         I directed AI tools for all engineering execution — compressing what would have been a 6-month MVP into 10 weeks. Every product decision, architecture choice, and UX direction was mine. The AI was the builder; I was the product owner.
                     </motion.p>
+                </div>
+
+                <div className="mb-12">
+                    <DecisionCallout
+                        chose="Chunked traversal — process nodes in batches of 50, yield between batches"
+                        rejected="Single-pass full-page scan"
+                        why="Single-pass blocked Figma's UI thread for 3–4 seconds on complex frames — the canvas froze and users closed the plugin. Chunked approach takes the same total time but stays non-blocking throughout."
+                    />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 relative">

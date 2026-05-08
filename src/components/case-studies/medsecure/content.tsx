@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, Lightbulb } from "lucide-react";
+import { DecisionCallout } from "@/components/ui/decision-callout";
 import { Hero } from "@/components/case-studies/medsecure/hero";
 import { TheCrisis } from "@/components/case-studies/medsecure/the-crisis";
 import { Personas } from "@/components/case-studies/medsecure/personas";
@@ -44,6 +45,17 @@ export default function MedSecurePage() {
             <DesignArtifacts />
             <CareCircle />
             <TechnicalArchitecture />
+
+            <div className="px-6 py-8 bg-zinc-50">
+                <div className="container mx-auto max-w-4xl">
+                    <DecisionCallout
+                        chose="Offline-First PWA with ServiceWorker local cache"
+                        rejected="Cloud-only real-time sync"
+                        why="In the Delhi NCR pilot, ~40% of PHC visits occurred in areas with intermittent 2G/3G. Cloud-only failed silently — doctors saw blank screens mid-consultation. ServiceWorker caches critical records locally and syncs on reconnect, making connectivity a non-blocking constraint instead of a hard dependency."
+                    />
+                </div>
+            </div>
+
             <LiveTransaction />
             <Impact />
 

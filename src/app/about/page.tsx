@@ -3,12 +3,12 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "About — Product Designer | Aditya Chinchakar",
-    description: "Aditya Chinchakar is a Founding Designer & AI-Native Product Thinker with 7 years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys. Open to Founding Designer, Staff Designer, and Lead Designer roles.",
+    title: "About — Aditya Chinchakar | Senior Product Designer Available for Hire",
+    description: "Aditya Chinchakar is a Senior Product Designer with 9+ years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Immediately available for Founding Designer, Staff Designer, and Lead Designer roles worldwide.",
     alternates: { canonical: "https://adityachinchakar.com/about" },
     openGraph: {
-        title: "About Aditya Chinchakar | Senior Product Designer",
-        description: "6+ years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Currently at Infosys.",
+        title: "About Aditya Chinchakar | Senior Product Designer — Available Now",
+        description: "9+ years shipping AI products, design systems, and 0→1 builds. Founder of Aulys. Immediately available for hire.",
         url: "https://adityachinchakar.com/about",
         type: "profile",
     },
@@ -34,7 +34,7 @@ const timeline = [
     {
         company: "Infosys",
         role: "Product Designer",
-        period: "Aug 2024 – Present",
+        period: "Aug 2024 – Aug 2026 · Notice Period",
         type: "Enterprise",
         color: "bg-blue-50 border-blue-200 text-blue-700",
         dot: "bg-blue-500",
@@ -70,25 +70,27 @@ export default function AboutPage() {
                     Open to opportunities
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.08]">
-                    Founding Designer.<br />
-                    <span className="text-zinc-400 font-bold">Building at the edge of AI.</span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-zinc-900 mb-4 leading-[1.08]">
+                    I design things<br />
+                    <span className="text-zinc-400 font-bold">that actually ship.</span>
                 </h1>
+                <p className="text-sm font-mono text-zinc-400 mb-8 tracking-wide">Nine years. Three 0→1 products. One live plugin with 30 beta users.</p>
 
-                <p className="text-lg md:text-xl text-zinc-600 max-w-3xl leading-relaxed mb-8">
-                    I&apos;m <strong className="text-zinc-900">Aditya Chinchakar</strong>, a product designer and builder with 7 years shipping AI products,
-                    design systems, and 0→1 builds across EdTech, FinTech, and Enterprise SaaS.
-                    Currently at <strong className="text-zinc-900">Infosys</strong> and the founder of{" "}
+                <p className="text-lg md:text-xl text-zinc-600 max-w-3xl leading-relaxed mb-6">
+                    I&apos;m <strong className="text-zinc-900">Aditya Chinchakar</strong> — Senior Product Designer and founder of{" "}
                     <Link href="https://aulys-app.vercel.app" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-semibold hover:underline">
                         Aulys
                     </Link>
-                    , an AI accessibility SaaS and Figma plugin — conceived, designed, and coded solo.
+                    , a WCAG 2.2 accessibility plugin I conceived, designed, and coded solo. Previously at Infosys and Simplifai.
+                    <strong className="text-zinc-900"> Immediately available</strong> for full-time and contract roles worldwide.
+                </p>
+
+                <p className="text-base text-zinc-500 max-w-3xl leading-relaxed mb-6">
+                    I got into design because I was bad at accepting &ldquo;that&apos;s just how it is.&rdquo; A broken hospital registration form making a sick person type their name four times. An enterprise dashboard where the search bar didn&apos;t work on the most important page. Things that were obviously wrong and obviously fixable. That&apos;s still what drives me — finding what&apos;s broken and fixing it properly, not just making it prettier.
                 </p>
 
                 <p className="text-base text-zinc-500 max-w-3xl leading-relaxed mb-10">
                     I don&apos;t wait for engineering to validate an idea — I prototype it, test it, and arrive at the meeting with data.
-                    My workflow — Antigravity, Claude, Figma Make, and v0 — isn&apos;t a talking point.
-                    It&apos;s how I compress weeks into days and turn half-baked briefs into shipped interfaces.
                     Based in Pune, India. Open to <strong className="text-zinc-700">Founding Designer</strong>, <strong className="text-zinc-700">Staff Designer</strong>,{" "}
                     <strong className="text-zinc-700">Lead Designer</strong>, and <strong className="text-zinc-700">Product Manager</strong> roles.
                 </p>
@@ -164,7 +166,35 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* What I value */}
+            {/* What I'm like to work with */}
+            <section className="container mx-auto max-w-4xl px-6 py-16 border-t border-zinc-200" aria-labelledby="working-with-heading">
+                <h2 id="working-with-heading" className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 mb-8">
+                    What I&apos;m like to work with
+                </h2>
+                <div className="grid sm:grid-cols-3 gap-6">
+                    {[
+                        {
+                            title: "I disagree out loud",
+                            desc: "Design shouldn't be a service function. I push back when the brief is wrong, flag when a metric will optimize for the wrong thing, and say so in the room — not in a Slack message two days later.",
+                        },
+                        {
+                            title: "I own the outcome, not the deliverable",
+                            desc: "My job ends when the product works for users, not when I hand off the Figma file. I follow features into production, read the data, and come back with changes when the data says something's wrong.",
+                        },
+                        {
+                            title: "High trust + high standards",
+                            desc: "Tell me what the problem is and what success looks like. Let me figure out the path. I'll show my work and explain every decision — but I don't do well when the path is pre-decided and design is just decoration.",
+                        },
+                    ].map((v) => (
+                        <div key={v.title} className="bg-white rounded-2xl border border-zinc-100 p-6">
+                            <h3 className="text-sm font-bold text-zinc-900 mb-2">{v.title}</h3>
+                            <p className="text-sm text-zinc-500 leading-relaxed">{v.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* How I work */}
             <section className="container mx-auto max-w-4xl px-6 py-16 border-t border-zinc-200" aria-labelledby="values-heading">
                 <h2 id="values-heading" className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 mb-8">
                     How I work

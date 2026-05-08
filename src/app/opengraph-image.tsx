@@ -56,7 +56,7 @@ export default async function Image() {
                         borderRadius: 999,
                         background: "rgba(34,197,94,0.12)",
                         border: "1px solid rgba(34,197,94,0.25)",
-                        width: "fit-content",
+                        width: "auto",
                     }}
                 >
                     <div

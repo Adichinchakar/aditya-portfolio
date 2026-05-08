@@ -115,7 +115,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
                         borderRadius: 999,
                         background: `${study.accent}18`,
                         border: `1px solid ${study.accent}35`,
-                        width: "fit-content",
+                        width: "auto",
                     }}
                 >
                     <span style={{ color: study.accent, fontSize: 13, fontWeight: 700, letterSpacing: "0.08em" }}>

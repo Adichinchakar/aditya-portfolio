@@ -14,11 +14,12 @@ function parseStatValue(val: string) {
 
 function AnimatedCounter({ value, isInView }: { value: string; isInView: boolean }) {
     const { prefix, num, suffix } = parseStatValue(value);
-    const count = useMotionValue(0);
+    const count = useMotionValue(num);
     const rounded = useTransform(count, Math.round);
 
     useEffect(() => {
         if (!isInView) return;
+        count.set(0);
         const ctrl = animate(count, num, { duration: 1.8, ease: "easeOut" });
         return ctrl.stop;
     }, [isInView, count, num]);

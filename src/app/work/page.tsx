@@ -10,7 +10,20 @@ import { TextReveal } from "@/components/ui/text-reveal";
 const DOMAIN_FILTERS = ["All", "AI / ML", "Design Systems", "FinTech", "Healthcare", "Spatial UX"] as const;
 type DomainFilter = typeof DOMAIN_FILTERS[number];
 
-const PROJECTS = [
+const PROJECTS: Array<{
+    slug: string;
+    title: string;
+    category: string;
+    description: string;
+    tags: string[];
+    domain: DomainFilter;
+    year: string;
+    role: string;
+    metric: string;
+    spotlight: string;
+    border: string;
+    concept?: boolean;
+}> = [
     {
         slug: "orbit",
         title: "Orbit",
@@ -75,6 +88,7 @@ const PROJECTS = [
         metric: "34% Fewer Medical Errors",
         spotlight: "rgba(0, 94, 184, 0.12)",
         border: "group-hover:border-blue-600/30",
+        concept: true,
     },
     {
         slug: "nexus-banking",
@@ -88,6 +102,7 @@ const PROJECTS = [
         metric: "Strategy Case Study",
         spotlight: "rgba(59, 130, 246, 0.12)",
         border: "group-hover:border-blue-500/30",
+        concept: true,
     },
     {
         slug: "infosys",
@@ -169,6 +184,12 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                                     <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider w-16">Impact</span>
                                     <span className="text-sm border border-zinc-200 bg-white/50 px-2 py-0.5 rounded-md font-semibold text-zinc-800 backdrop-blur-sm shadow-sm">{project.metric}</span>
                                 </div>
+                                {project.concept && (
+                                    <div className="flex items-center gap-2 mt-1">
+                                        <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider w-16">Type</span>
+                                        <span className="text-xs border border-amber-300 bg-amber-50 px-2.5 py-1 rounded-full font-bold text-amber-700 tracking-wide">Concept Project · Speculative Design</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
 

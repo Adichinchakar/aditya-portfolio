@@ -294,7 +294,7 @@ export function Hero() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                     </span>
                     <span className="text-sm font-medium text-zinc-600 group-hover:text-zinc-900 transition-colors">
-                        Available Now · Remote Worldwide (IST +5:30) · Full-Time & Contract
+                        Available from August 2026 · Open to full-time remote roles globally
                     </span>
                     <ChevronRight className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 transition-colors group-hover:translate-x-0.5" />
                 </motion.div>
@@ -378,7 +378,7 @@ export function Hero() {
                         className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed"
                     >
                         Product Designer & Founder · Aulys · ex-Infosys<br className="hidden sm:block" />
-                        Open to select engagements · AI Products · Design Systems · 0→1 Builds.
+                        Available from August 2026 · Open to full-time remote roles globally
                     </motion.p>
 
                     <motion.div

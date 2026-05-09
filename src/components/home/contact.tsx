@@ -47,7 +47,7 @@ export function Contact() {
                         viewport={{ once: true }}
                         className="text-base md:text-lg text-zinc-500 max-w-xl font-medium leading-relaxed"
                     >
-                        Open to remote Lead / Staff Designer and Head of Design roles. If you're building something ambitious and care about craft, I'd love to talk.
+                        Available August 2026 · Open to remote Lead, Staff Designer, Head of Design, and Founding Designer roles worldwide. If you're building something ambitious and care about craft, I'd love to talk.
                     </motion.p>
 
                     {/* CTA Button */}

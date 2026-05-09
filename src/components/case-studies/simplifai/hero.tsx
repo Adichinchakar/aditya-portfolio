@@ -55,7 +55,7 @@ function MetricCard({
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-zinc-50 min-h-[90vh] flex flex-col justify-center">
+        <section className="relative pt-32 pb-24 px-6 overflow-hidden bg-zinc-50">
             {/* Ambient Background */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-500/8 rounded-full blur-[140px] pointer-events-none -z-10" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/6 rounded-full blur-[120px] pointer-events-none -z-10" />

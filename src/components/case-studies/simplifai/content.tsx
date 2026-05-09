@@ -11,6 +11,7 @@ import { Hero } from "@/components/case-studies/simplifai/hero";
 import { ProblemStatement } from "@/components/case-studies/simplifai/problem-statement";
 import { DesignProcess } from "@/components/case-studies/simplifai/design-process";
 import { DesignArtifacts } from "@/components/case-studies/simplifai/design-artifacts";
+import { HookModel } from "@/components/case-studies/hook-model";
 import { MouseEvent } from "react";
 import { cn } from "@/lib/utils";
 
@@ -85,7 +86,7 @@ function GlanceCard({ card }: { card: typeof glanceCards[0] }) {
             transition={{ delay: 0.1 }}
             onMouseMove={handleMouseMove}
             className={cn(
-                "group relative overflow-hidden rounded-[2rem] bg-white/50 backdrop-blur-xl border border-white/60 p-8 flex flex-col gap-6 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500",
+                "group relative overflow-hidden rounded-[2rem] bg-white border border-zinc-200/80 p-8 flex flex-col gap-6 shadow-[0_4px_24px_rgb(0,0,0,0.07)] hover:shadow-[0_8px_32px_rgb(0,0,0,0.12)] transition-all duration-500",
                 card.hoverBorder
             )}
         >
@@ -115,8 +116,18 @@ export default function SimplifaiPage() {
             {/* Problem Statement */}
             <ProblemStatement />
 
+            {/* Hook Model */}
+            <HookModel
+                accentColor="text-purple-400"
+                external="Operations manager files a support ticket: 'I need IT to change a workflow rule.' That ticket takes 3–5 days. The business rule changed yesterday."
+                internal="Manager frustration: 'Why do I need a developer to do something I could explain in one sentence?'"
+                action="Open Flow Builder. Drag one node onto the canvas. Connect it."
+                reward="The automation runs. But the time saved varies every run — a simple rule saves minutes; a complex chain saves days. Outcome is never identical."
+                investment="Built workflows encode the team's business logic. The more workflows exist, the harder it is to leave — they become institutional memory, not just software."
+            />
+
             {/* At a Glance */}
-            <section className="px-6 pb-24">
+            <section className="pt-16 pb-24 px-6 bg-white border-b border-zinc-100">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex items-center gap-3 mb-8">
                         <motion.div

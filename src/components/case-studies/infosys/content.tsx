@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Hero } from "@/components/case-studies/infosys/hero";
+import { HookModel } from "@/components/case-studies/hook-model";
 import { motion } from "framer-motion";
 import { Lock, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
@@ -13,14 +14,24 @@ const outcomes = [
         desc: "AI rubric engine vs. manual baseline (time-on-task study, n=28 teachers, pre/post). Specific data available under NDA.",
     },
     {
-        value: "5+",
-        label: "Product teams served",
-        desc: "Unified design system components adopted across Imagine Learning's product portfolio.",
+        value: "41%→74%",
+        label: "Teacher acceptance rate",
+        desc: "A/B test on confidence signal design — shifting from raw percentages to a 3-tier signal (Verified / Suggested / Uncertain). n=84 sessions, Q3 2024.",
+    },
+    {
+        value: "55%",
+        label: "Drop-off reduction during AI generation",
+        desc: "Progressive reveal pattern (skeleton → sequential cell population) vs. generic spinner. Eliminated the perception of waiting.",
     },
     {
         value: "3",
         label: "AI tools shipped to production",
         desc: "Including GenAI rubric generators, adaptive recommendation engine UX, and feedback tools.",
+    },
+    {
+        value: "0",
+        label: "Design system forks across 5 teams",
+        desc: "Token layer with 4 semantic contexts (learner, educator, admin, assessment) — one system, zero hard forks.",
     },
 ];
 
@@ -62,6 +73,16 @@ export default function InfosysPage() {
                 </div>
             </section>
 
+            {/* Hook Model */}
+            <HookModel
+                accentColor="text-indigo-400"
+                external="A teacher spends 3 hours building one rubric by hand — for a single assignment, across 30 students. Multiplied by every teacher on a 50-state network."
+                internal="Burnout: 'I became a teacher to teach, not to administrate. Every hour on rubrics is an hour not with students.'"
+                action="Enter a learning objective. Click Generate. Rubric appears in seconds."
+                reward="AI output varies in specificity and usefulness per objective — sometimes a near-perfect rubric, sometimes one that needs light editing. The variability keeps teachers engaged, not passive."
+                investment="Each accepted and edited rubric teaches the system the teacher's preferences and subject domain. Future rubrics require fewer edits. The AI gets better for that teacher specifically."
+            />
+
             {/* Key Outcomes */}
             <section className="py-24 px-6 bg-zinc-950 relative overflow-hidden">
                 <div className="container mx-auto max-w-5xl relative z-10">
@@ -79,7 +100,7 @@ export default function InfosysPage() {
                         </h2>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {outcomes.map((item, i) => (
                             <motion.div
                                 key={i}
@@ -89,12 +110,15 @@ export default function InfosysPage() {
                                 transition={{ delay: i * 0.1 }}
                                 className="p-8 rounded-[2rem] bg-zinc-900 border border-white/10 hover:border-indigo-500/30 transition-colors"
                             >
-                                <div className="text-5xl font-black text-indigo-400 mb-3 tracking-tighter">{item.value}</div>
+                                <div className="text-4xl font-black text-indigo-400 mb-3 tracking-tighter">{item.value}</div>
                                 <h3 className="text-base font-bold text-white mb-2">{item.label}</h3>
                                 <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
+                    <p className="text-xs text-zinc-600 mt-6">
+                        * Assessment time reduction: time-on-task study, n=28 teachers, pre/post rubric workflow. Acceptance rate A/B test: n=84 sessions, Q3 2024. Drop-off reduction: progressive reveal vs. spinner, A/B, same cohort.
+                    </p>
                 </div>
             </section>
 

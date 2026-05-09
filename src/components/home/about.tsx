@@ -1,16 +1,36 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { Lightbulb, Zap, BookOpen, FlaskConical } from "lucide-react";
 import Link from "next/link";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 
+function parseStatValue(val: string) {
+    const m = val.match(/^(\$?)(\d+)(.*)$/);
+    if (!m) return { prefix: "", num: 0, suffix: val };
+    return { prefix: m[1], num: parseInt(m[2]), suffix: m[3] };
+}
+
+function AnimatedCounter({ value, isInView }: { value: string; isInView: boolean }) {
+    const { prefix, num, suffix } = parseStatValue(value);
+    const count = useMotionValue(0);
+    const rounded = useTransform(count, Math.round);
+
+    useEffect(() => {
+        if (!isInView) return;
+        const ctrl = animate(count, num, { duration: 1.8, ease: "easeOut" });
+        return ctrl.stop;
+    }, [isInView, count, num]);
+
+    return <>{prefix}<motion.span>{rounded}</motion.span>{suffix}</>;
+}
+
 const stats = [
-    { value: "9+", label: "Years Experience" },
-    { value: "10+", label: "Products Shipped" },
-    { value: "5+", label: "Companies" },
-    { value: "1", label: "Live Plugin" },
+    { value: "34%", label: "Medical Errors Reduced", sub: "MedSecure pilot · n=1,200 patients" },
+    { value: "70%", label: "Faster Assessment Cycles", sub: "Infosys × Imagine Learning · n=28 teachers" },
+    { value: "73%", label: "User Adoption Increase", sub: "Simplifai · Mixpanel 90-day cohort" },
+    { value: "$250K+", label: "ADA Litigation Risk Addressed", sub: "Per client · DOJ consent decree baseline" },
 ];
 
 const cardVariants = {
@@ -115,10 +135,11 @@ export function About() {
                                     variants={cardVariants}
                                     initial="hidden"
                                     animate={isInView ? "visible" : "hidden"}
-                                    className={`rounded-[1.5rem] bg-white/60 backdrop-blur-xl border border-white/60 p-6 sm:p-8 flex flex-col justify-center shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 min-h-[120px] ${i === 1 || i === 2 ? "bg-white/40" : ""}`}
+                                    className={`rounded-[1.5rem] bg-white/60 backdrop-blur-xl border border-white/60 p-4 sm:p-5 flex flex-col justify-center shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 min-h-[130px] ${i === 1 || i === 2 ? "bg-white/40" : ""}`}
                                 >
-                                    <span className="text-4xl sm:text-5xl font-black tracking-tighter text-zinc-900">{stat.value}</span>
-                                    <span className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest mt-2 leading-relaxed">{stat.label}</span>
+                                    <span className="text-3xl sm:text-4xl font-black tracking-tighter text-zinc-900"><AnimatedCounter value={stat.value} isInView={isInView} /></span>
+                                    <span className="text-xs font-bold text-zinc-800 mt-1.5 leading-snug">{stat.label}</span>
+                                    <span className="text-[10px] text-zinc-400 font-medium mt-1 leading-relaxed">{stat.sub}</span>
                                 </motion.div>
                             ))}
                         </div>

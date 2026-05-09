@@ -45,6 +45,19 @@ const cards = [
         note: "Happier users directly translated to contract renewals.",
         decorIcon: Smile,
     },
+    {
+        id: 4,
+        icon: Trophy,
+        label: "UX Architecture",
+        iconBg: "bg-emerald-500/10",
+        iconColor: "text-emerald-500",
+        spotlight: "rgba(16, 185, 129, 0.1)",
+        hoverBorder: "hover:border-emerald-300/60",
+        metric: "28%",
+        metricSub: "Adoption Jump from One Architecture Decision",
+        note: "Switching canvas-first to linear step-builder wasn't a feature — it was a structural insight. Architecture is UX.",
+        decorIcon: Trophy,
+    },
 ];
 
 function BentoCard({ card, delay }: { card: typeof cards[0]; delay: number }) {
@@ -146,8 +159,8 @@ export function BentoImpact() {
                     </motion.p>
                 </div>
 
-                {/* 3 equal metric cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                {/* Metric cards — 2×2 on desktop */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     {cards.map((card, i) => (
                         <BentoCard key={card.id} card={card} delay={i * 0.1} />
                     ))}
@@ -155,7 +168,7 @@ export function BentoImpact() {
 
                 {/* Methodology note */}
                 <p className="text-xs text-zinc-400 text-center mb-6">
-                    * 40% onboarding time reduction measured via pre/post Maze unmoderated testing (n=47 sessions, Q2–Q3 2022). 73% adoption rate tracked via Mixpanel event analytics comparing 90-day cohorts pre- and post-redesign launch.
+                    * 40% onboarding time reduction measured via pre/post Maze unmoderated testing (n=47 sessions, Q2–Q3 2022). 73% adoption rate tracked via Mixpanel event analytics comparing 90-day cohorts pre- and post-redesign launch. 28% adoption jump measured within 3 weeks of switching from canvas-first to linear step-builder architecture (Q4 2022 cohort).
                 </p>
 
                 {/* Full-width Design System card */}

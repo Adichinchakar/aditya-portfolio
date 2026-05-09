@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { Magnetic } from "@/components/ui/magnetic";
 import { cn } from "@/lib/utils";
 import { LayoutTemplate, Sparkles, ChevronRight, Terminal, Layers, Zap, ArrowUpRight } from "lucide-react";
 import { ContactSheet } from "@/components/ui/contact-sheet";
@@ -279,15 +280,22 @@ export function Hero() {
 
                 {/* Headline + subtext + CTAs */}
                 <div className="space-y-6">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                        className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-zinc-900 leading-[1.1]"
-                    >
-                        I design{" "}
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-zinc-900 leading-[1.1]">
+                        <motion.span
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                            className="inline"
+                        >
+                            I design{" "}
+                        </motion.span>
                         <br className="hidden md:block" />
-                        <span className="relative inline-block">
+                        <motion.span
+                            initial={{ opacity: 0, y: 24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" }}
+                            className="relative inline-block"
+                        >
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">enterprise products</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
@@ -306,9 +314,21 @@ export function Hero() {
                                     </linearGradient>
                                 </defs>
                             </motion.svg>
-                        </span>
-                        {" "}and ship them{" "}
-                        <span className="relative inline-block">
+                        </motion.span>
+                        <motion.span
+                            initial={{ opacity: 0, y: 24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
+                            className="inline"
+                        >
+                            {" "}and ship them{" "}
+                        </motion.span>
+                        <motion.span
+                            initial={{ opacity: 0, y: 24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.55, delay: 0.5, ease: "easeOut" }}
+                            className="relative inline-block"
+                        >
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">at founder speed</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
@@ -327,8 +347,8 @@ export function Hero() {
                                     </linearGradient>
                                 </defs>
                             </motion.svg>
-                        </span>.
-                    </motion.h1>
+                        </motion.span>.
+                    </h1>
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -346,19 +366,23 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full px-4 sm:px-0"
                     >
-                        <button
-                            onClick={() => setIsContactSheetOpen(true)}
-                            className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-zinc-900 text-white font-semibold flex items-center gap-2 hover:bg-zinc-700 hover:scale-105 active:scale-95 transition-all shadow-md group"
-                        >
-                            Let&apos;s Talk
-                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        <Link
-                            href="/resume"
-                            className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-white text-zinc-900 font-semibold flex items-center gap-2 border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 hover:scale-105 active:scale-95 transition-all"
-                        >
-                            View Resume
-                        </Link>
+                        <Magnetic strength={0.25}>
+                            <button
+                                onClick={() => setIsContactSheetOpen(true)}
+                                className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-zinc-900 text-white font-semibold flex items-center gap-2 hover:bg-zinc-700 active:scale-95 transition-all shadow-md group"
+                            >
+                                Let&apos;s Talk
+                                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </button>
+                        </Magnetic>
+                        <Magnetic strength={0.25}>
+                            <Link
+                                href="/resume"
+                                className="w-full sm:w-auto justify-center px-8 py-3.5 rounded-full bg-white text-zinc-900 font-semibold flex items-center gap-2 border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:scale-95 transition-all"
+                            >
+                                View Resume
+                            </Link>
+                        </Magnetic>
                     </motion.div>
 
                     {/* Trust signals */}

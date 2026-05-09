@@ -1,7 +1,7 @@
 "use client";
 
 import { MouseEvent } from "react";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -103,11 +103,22 @@ const works = [
 function WorkCard({ work }: { work: typeof works[0] }) {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
+    const rotateX = useMotionValue(0);
+    const rotateY = useMotionValue(0);
+    const springRotX = useSpring(rotateX, { stiffness: 120, damping: 20 });
+    const springRotY = useSpring(rotateY, { stiffness: 120, damping: 20 });
 
     function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent<HTMLElement>) {
-        const { left, top } = currentTarget.getBoundingClientRect();
+        const { left, top, width, height } = currentTarget.getBoundingClientRect();
         mouseX.set(clientX - left);
         mouseY.set(clientY - top);
+        rotateX.set(((clientY - top) / height - 0.5) * -8);
+        rotateY.set(((clientX - left) / width - 0.5) * 8);
+    }
+
+    function handleMouseLeave() {
+        rotateX.set(0);
+        rotateY.set(0);
     }
 
     return (
@@ -116,10 +127,12 @@ function WorkCard({ work }: { work: typeof works[0] }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: work.delay, type: "spring" as const, stiffness: 260, damping: 22 }}
             viewport={{ once: true, margin: "-100px" }}
+            style={{ rotateX: springRotX, rotateY: springRotY, transformPerspective: 1200 }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
         >
             <Link href={work.href} className="block group h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-[2rem]">
                 <article
-                    onMouseMove={handleMouseMove}
                     className={cn(
                         "relative h-full overflow-hidden rounded-[2rem] border border-white/40 bg-white/40 backdrop-blur-xl p-7 md:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] min-h-[280px]",
                         work.border

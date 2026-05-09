@@ -72,8 +72,16 @@ export function Testimonials() {
                     transition={{ type: "spring" as const, stiffness: 260, damping: 20, delay: 0.05 }}
                     className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900"
                 >
-                    What People Say
+                    What They Say About The Work
                 </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ type: "spring" as const, stiffness: 260, damping: 20, delay: 0.1 }}
+                    className="text-zinc-500 mt-3 text-base font-medium"
+                >
+                    From CDO, PM, and delivery leads who shipped with me
+                </motion.p>
             </div>
 
             {/* Edge fades */}

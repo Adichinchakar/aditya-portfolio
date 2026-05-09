@@ -37,7 +37,7 @@ const CRISIS_STATS = [
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-zinc-50 min-h-[90vh] flex flex-col justify-center">
+        <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-zinc-50">
             {/* Ambient glows */}
             <div className="absolute top-0 right-0 w-[900px] h-[900px] bg-[#005EB8]/6 rounded-full blur-[160px] pointer-events-none -z-10" aria-hidden="true" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none -z-10" aria-hidden="true" />

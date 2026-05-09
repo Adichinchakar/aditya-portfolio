@@ -14,6 +14,7 @@ import { Impact } from "@/components/case-studies/medsecure/impact";
 import { InclusiveDesign } from "@/components/case-studies/medsecure/inclusive-design";
 import { JourneyMap } from "@/components/case-studies/medsecure/journey-map";
 import { LiveTransaction } from "@/components/case-studies/medsecure/live-transaction";
+import { HookModel } from "@/components/case-studies/hook-model";
 
 const learnings = [
     {
@@ -39,6 +40,17 @@ export default function MedSecurePage() {
         <div className="min-h-screen bg-zinc-50 text-zinc-800 selection:bg-[#005EB8]/30">
             <Hero />
             <TheCrisis />
+
+            {/* Hook Model */}
+            <HookModel
+                accentColor="text-blue-400"
+                external="An adverse drug event: the wrong medication administered at point-of-care because the doctor had no access to the patient's allergy history."
+                internal="Doctor uncertainty in the consultation room: 'I don't have this patient's full history. I'm making a decision blind.'"
+                action="Scan the patient's ABHA QR code — the complete, verified health record appears instantly, online or offline."
+                reward="Every patient scan reveals different history: different medications, different conditions, different flags. No two records are the same. That unpredictability keeps the system active."
+                investment="Every consultation visit adds data to the patient's record. The more complete the record, the more the doctor trusts it — and the more the patient expects it at every visit. Switching cost becomes clinical risk."
+            />
+
             <JourneyMap />
             <InclusiveDesign />
             <Personas />

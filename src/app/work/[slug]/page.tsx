@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 import SimplifaiPage from "@/components/case-studies/simplifai/content";
 import AulysPage from "@/components/case-studies/aulys/content";
 import SimplifaiDesignSystemPage from "@/components/case-studies/simplifai-design-system/content";
@@ -81,6 +82,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
     return (
         <>
+            <ScrollProgress />
             <Component />
             <NextCaseStudyHero currentSlug={slug} />
         </>

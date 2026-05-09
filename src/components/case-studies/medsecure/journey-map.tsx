@@ -48,7 +48,7 @@ const NEW_JOURNEY = [
 
 export function JourneyMap() {
     return (
-        <section className="py-32 px-6 bg-zinc-50 border-t border-zinc-200">
+        <section className="py-32 px-6 bg-zinc-50 border-t border-zinc-200 overflow-x-hidden">
             <div className="container mx-auto max-w-5xl">
                 <div className="text-center mb-20">
                     <motion.div
@@ -85,7 +85,7 @@ export function JourneyMap() {
                         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-red-100 -translate-y-1/2 hidden md:block" />
 
                         <div className="flex flex-col md:flex-row gap-8 relative z-10">
-                            <div className="md:w-48 shrink-0 flex items-center md:justify-end pr-8 md:border-r-2 border-red-200">
+                            <div className="md:w-48 shrink-0 flex items-center md:justify-end md:pr-8 md:border-r-2 border-red-200">
                                 <h3 className="text-2xl font-black text-red-400 tracking-tight">Before</h3>
                             </div>
 
@@ -119,7 +119,7 @@ export function JourneyMap() {
                         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-emerald-100 -translate-y-1/2 hidden md:block" />
 
                         <div className="flex flex-col md:flex-row gap-8 relative z-10">
-                            <div className="md:w-48 shrink-0 flex items-center md:justify-end pr-8 md:border-r-2 border-emerald-200">
+                            <div className="md:w-48 shrink-0 flex items-center md:justify-end md:pr-8 md:border-r-2 border-emerald-200">
                                 <h3 className="text-2xl font-black text-emerald-500 tracking-tight">MedSecure</h3>
                             </div>
 

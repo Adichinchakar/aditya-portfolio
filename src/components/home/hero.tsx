@@ -169,14 +169,14 @@ function RoleMatcher() {
                 </div>
 
                 {/* Role tabs */}
-                <div className="flex flex-wrap gap-2 mb-5 relative z-10">
+                <div className="flex flex-nowrap gap-1.5 mb-5 relative z-10 overflow-x-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
                     {roles.map((r, i) => (
                         <button
                             key={r.id}
                             onClick={() => setActiveRole(i)}
                             aria-pressed={activeRole === i}
                             className={cn(
-                                "flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
+                                "flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
                                 activeRole === i
                                     ? colorMap[r.color].tab
                                     : "bg-zinc-100/80 text-zinc-600 border-transparent hover:bg-zinc-200/80 hover:text-zinc-800"

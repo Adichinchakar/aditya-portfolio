@@ -138,7 +138,7 @@ function RoleMatcher() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35, type: "spring", stiffness: 220, damping: 24 }}
-            className="w-full max-w-xl mx-auto"
+            className="w-full max-w-2xl mx-auto"
         >
             <div className="relative bg-white/80 border border-zinc-200/80 rounded-[2rem] p-6 backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgb(0,0,0,0.1)] overflow-hidden">
 

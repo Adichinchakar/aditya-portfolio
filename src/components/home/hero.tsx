@@ -319,7 +319,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
-                            className="inline"
+                            className="inline font-black text-zinc-900"
                         >
                             {" "}and ship them{" "}
                         </motion.span>
@@ -329,7 +329,7 @@ export function Hero() {
                             transition={{ duration: 0.55, delay: 0.5, ease: "easeOut" }}
                             className="relative inline-block"
                         >
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">at founder speed</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">at engineer velocity</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"
@@ -356,7 +356,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                         className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed"
                     >
-                        Senior Product Designer & Founder · Infosys & Aulys.<br className="hidden sm:block" />
+                        Product Designer & Founder · Aulys · ex-Infosys<br className="hidden sm:block" />
                         Open to select engagements · AI Products · Design Systems · 0→1 Builds.
                     </motion.p>
 

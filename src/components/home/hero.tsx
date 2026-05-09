@@ -12,12 +12,22 @@ import Link from "next/link";
 
 const roles = [
     {
+        id: "founding-designer",
+        label: "Founding Designer",
+        icon: Terminal,
+        color: "emerald" as const,
+        headline: "Built Aulys 0→1. Solo designer, zero funding.",
+        proof: "I took Aulys from idea to 30 live users — designed the product, directed the AI-assisted build, shipped the Figma plugin, ran the beta. 6 months. No team. No funding. That kind of ownership shapes how I work inside a team too.",
+        tags: ["0→1 Product", "Figma Plugin API", "AI-Directed Build"],
+        caseStudy: { label: "Aulys → 500+ Frames Scanned Under 10 Seconds", href: "/work/aulys" },
+    },
+    {
         id: "lead-designer",
         label: "Lead Designer",
         icon: Layers,
         color: "indigo" as const,
-        headline: "Led design org across 5+ product teams",
-        proof: "At Infosys I owned design across 5 product teams — set the OKRs, built the system, and mentored 3 designers. I know what it takes to run a design function, not just contribute to one.",
+        headline: "Design system that served 5 product teams.",
+        proof: "At Simplifai I built the design language from scratch — token architecture, 60+ components, documented usage rules. Five teams, one source of truth. Dev cycles dropped 42%. Designers stopped debating buttons.",
         tags: ["Design Systems", "Design Ops", "Team Mentoring"],
         caseStudy: { label: "Simplifai DS → 42% Faster Dev Cycle", href: "/work/simplifai-design-system" },
     },
@@ -26,30 +36,20 @@ const roles = [
         label: "Staff Designer",
         icon: Sparkles,
         color: "violet" as const,
-        headline: "Platform-level impact across multiple product lines",
-        proof: "My work at Infosys cut teacher assessment time by 70%. At Aulys, I shipped WCAG 2.2 AAA compliance into Figma — a tool no one had built before. Platform decisions, not screen decisions.",
+        headline: "Platform decisions, not screen decisions.",
+        proof: "At Infosys I designed across 5 product teams — set the direction, not just the pixels. Cut teacher assessment time by 70%. At Aulys, shipped WCAG 2.2 AAA compliance into Figma — a capability that didn't exist before.",
         tags: ["AI Tooling", "Platform Design", "WCAG 2.2 AAA"],
-        caseStudy: { label: "Aulys Plugin → WCAG 2.2 AAA Compliance", href: "/work/aulys" },
+        caseStudy: { label: "Infosys × Imagine Learning → 70% Faster Assessments", href: "/work/infosys" },
     },
     {
         id: "head-of-design",
         label: "Head of Design",
         icon: Zap,
         color: "amber" as const,
-        headline: "Ships design and code. Owns the full function.",
-        proof: "I write React. I've shipped 3 products solo. I can hire your first designer, set the process, and still make pixels look right on Friday afternoon. I don't need hand-holding — I need a problem worth solving.",
-        tags: ["React + Next.js", "0→1 Products", "Design Leadership"],
+        headline: "Owns the full function. Gets it to market.",
+        proof: "I use AI to build in production — real Figma plugins, real repos, real users. Shipped 3 products solo this way. I can hire your first designer, set the process, and still care about the pixels on Friday. I don't need hand-holding — I need a problem worth solving.",
+        tags: ["AI-Directed Build", "0→1 Products", "Design Leadership"],
         caseStudy: { label: "MedSecure → 34% Fewer Medical Errors", href: "/work/medsecure" },
-    },
-    {
-        id: "founding-designer",
-        label: "Founding Designer",
-        icon: Terminal,
-        color: "emerald" as const,
-        headline: "Took Aulys from 0→1 as sole designer, engineer, and PM.",
-        proof: "Aulys exists because I built it alone — the algorithm, the TypeScript plugin, the onboarding, the beta. 30 designers. 6 months. Zero funding. If you're hiring someone who moves fast and cares about quality at the same time, that's the proof.",
-        tags: ["0→1 Product", "Figma Plugin API", "Solo Execution"],
-        caseStudy: { label: "Aulys Plugin → 500+ Frames Under 10 Seconds", href: "/work/aulys" },
     },
 ];
 
@@ -58,34 +58,50 @@ const colorMap = {
     indigo: {
         bg: "bg-indigo-50/80",
         border: "border-indigo-100",
+        leftBorder: "border-l-indigo-400",
         text: "text-indigo-700",
-        tag: "bg-white text-indigo-700 border-indigo-200",
+        tag: "bg-indigo-100 text-indigo-700 border-indigo-200",
         tab: "bg-indigo-50 text-indigo-700 border-indigo-200 shadow-sm",
         glow: "bg-indigo-400/20",
+        iconBg: "bg-indigo-100",
+        iconColor: "text-indigo-600",
+        headlineGrad: "from-indigo-700 to-violet-600",
     },
     violet: {
         bg: "bg-violet-50/80",
         border: "border-violet-100",
+        leftBorder: "border-l-violet-400",
         text: "text-violet-700",
-        tag: "bg-white text-violet-700 border-violet-200",
+        tag: "bg-violet-100 text-violet-700 border-violet-200",
         tab: "bg-violet-50 text-violet-700 border-violet-200 shadow-sm",
         glow: "bg-violet-400/20",
+        iconBg: "bg-violet-100",
+        iconColor: "text-violet-600",
+        headlineGrad: "from-violet-700 to-purple-600",
     },
     amber: {
         bg: "bg-amber-50/80",
         border: "border-amber-100",
+        leftBorder: "border-l-amber-400",
         text: "text-amber-700",
-        tag: "bg-white text-amber-700 border-amber-200",
+        tag: "bg-amber-100 text-amber-700 border-amber-200",
         tab: "bg-amber-50 text-amber-700 border-amber-200 shadow-sm",
         glow: "bg-amber-400/20",
+        iconBg: "bg-amber-100",
+        iconColor: "text-amber-600",
+        headlineGrad: "from-amber-700 to-orange-600",
     },
     emerald: {
         bg: "bg-emerald-50/80",
         border: "border-emerald-100",
+        leftBorder: "border-l-emerald-400",
         text: "text-emerald-700",
-        tag: "bg-white text-emerald-700 border-emerald-200",
+        tag: "bg-emerald-100 text-emerald-700 border-emerald-200",
         tab: "bg-emerald-50 text-emerald-700 border-emerald-200 shadow-sm",
         glow: "bg-emerald-400/20",
+        iconBg: "bg-emerald-100",
+        iconColor: "text-emerald-600",
+        headlineGrad: "from-emerald-700 to-teal-600",
     },
 };
 
@@ -180,15 +196,20 @@ function RoleMatcher() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.18, ease: "easeOut" }}
-                        className={cn("rounded-2xl p-5 border relative z-10", colors.bg, colors.border)}
+                        className={cn("rounded-2xl p-5 border border-l-4 relative z-10", colors.bg, colors.border, colors.leftBorder)}
                     >
-                        <p className={cn("text-base md:text-lg font-black tracking-tight mb-2", colors.text)}>
+                        {/* Role icon */}
+                        <div className={cn("w-9 h-9 rounded-xl flex items-center justify-center mb-3 shadow-sm", colors.iconBg)}>
+                            <role.icon className={cn("w-4.5 h-4.5", colors.iconColor)} />
+                        </div>
+
+                        <p className={cn("text-base md:text-lg font-black tracking-tight mb-2 text-transparent bg-clip-text bg-gradient-to-r", colors.headlineGrad)}>
                             {role.headline}
                         </p>
                         <p className="text-sm text-zinc-600 leading-relaxed mb-4">
                             {role.proof}
                         </p>
-                        <div className="flex flex-wrap gap-2 mb-4 justify-center">
+                        <div className="flex flex-wrap gap-2 mb-4">
                             {role.tags.map(tag => (
                                 <span
                                     key={tag}
@@ -321,7 +342,7 @@ export function Hero() {
                             transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
                             className="inline font-black text-zinc-900"
                         >
-                            {" "}and ship them{" "}
+                            {" "}and own them{" "}
                         </motion.span>
                         <motion.span
                             initial={{ opacity: 0, y: 24 }}
@@ -329,7 +350,7 @@ export function Hero() {
                             transition={{ duration: 0.55, delay: 0.5, ease: "easeOut" }}
                             className="relative inline-block"
                         >
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">at engineer velocity</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">end to end</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"

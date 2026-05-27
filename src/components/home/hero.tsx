@@ -303,7 +303,7 @@ export function Hero() {
                 <div className="space-y-6">
                     <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-zinc-900 leading-[1.1]">
                         <motion.span
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 1, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                             className="inline"
@@ -312,7 +312,7 @@ export function Hero() {
                         </motion.span>
                         <br className="hidden md:block" />
                         <motion.span
-                            initial={{ opacity: 0, y: 24 }}
+                            initial={{ opacity: 1, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" }}
                             className="relative inline-block"
@@ -337,7 +337,7 @@ export function Hero() {
                             </motion.svg>
                         </motion.span>
                         <motion.span
-                            initial={{ opacity: 0, y: 24 }}
+                            initial={{ opacity: 1, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
                             className="inline font-black text-zinc-900"
@@ -345,7 +345,7 @@ export function Hero() {
                             {" "}Now I'm building{" "}
                         </motion.span>
                         <motion.span
-                            initial={{ opacity: 0, y: 24 }}
+                            initial={{ opacity: 1, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.55, delay: 0.5, ease: "easeOut" }}
                             className="relative inline-block"
@@ -372,7 +372,7 @@ export function Hero() {
                     </h1>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 1, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                         className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed"
@@ -382,7 +382,7 @@ export function Hero() {
                     </motion.p>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 1, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full px-4 sm:px-0"

@@ -1,7 +1,7 @@
 "use client";
 
 import { MouseEvent, useState } from "react";
-import { motion, useMotionTemplate, useMotionValue, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -121,13 +121,10 @@ const PROJECTS: Array<{
 ];
 
 function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: number }) {
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
     function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent<HTMLElement>) {
         const { left, top } = currentTarget.getBoundingClientRect();
-        mouseX.set(clientX - left);
-        mouseY.set(clientY - top);
+        currentTarget.style.setProperty("--mouse-x", `${clientX - left}px`);
+        currentTarget.style.setProperty("--mouse-y", `${clientY - top}px`);
     }
 
     return (
@@ -145,10 +142,10 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                     )}
                 >
                     {/* Cursor spotlight */}
-                    <motion.div
+                    <div
                         className="pointer-events-none absolute -inset-px rounded-[2rem] opacity-0 transition duration-500 group-hover:opacity-100"
                         style={{
-                            background: useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, ${project.spotlight}, transparent 80%)`,
+                            background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${project.spotlight}, transparent 80%)`,
                         }}
                     />
 

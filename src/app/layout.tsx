@@ -11,22 +11,26 @@ import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geist = Geist({
   variable: "--font-geist",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const epilogue = Epilogue({
   variable: "--font-epilogue",
   subsets: ["latin"],
   weight: ["700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {

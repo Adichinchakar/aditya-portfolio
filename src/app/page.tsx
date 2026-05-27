@@ -11,8 +11,9 @@ const Contact = dynamic(() => import("@/components/home/contact").then((m) => ({
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <MotionSection><Hero /></MotionSection>
-      <MotionSection delay={0.1}><SelectedWork /></MotionSection>
+      {/* Hero and SelectedWork are above-fold — no MotionSection opacity:0 wrapper */}
+      <Hero />
+      <SelectedWork />
       <MotionSection delay={0.1}><About /></MotionSection>
       <MotionSection delay={0.1}><Testimonials /></MotionSection>
       <MotionSection delay={0.1}><ComponentLab /></MotionSection>

@@ -135,7 +135,7 @@ function RoleMatcher() {
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35, type: "spring", stiffness: 220, damping: 24 }}
             className="w-full max-w-2xl mx-auto"
@@ -283,7 +283,7 @@ export function Hero() {
 
                 {/* Availability badge */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 1, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     onClick={() => setIsContactSheetOpen(true)}
@@ -408,7 +408,7 @@ export function Hero() {
 
                     {/* Trust signals */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 1, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
                         className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-6 text-sm font-medium text-zinc-500"
@@ -435,7 +435,7 @@ export function Hero() {
 
                 {/* Skills marquee — strategic + leadership focused */}
                 <motion.div
-                    initial={{ opacity: 0 }}
+                    initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.8 }}
                     className="w-full relative overflow-hidden py-4 mask-linear-fade mt-8 flex"

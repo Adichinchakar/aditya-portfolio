@@ -294,7 +294,7 @@ export function Hero() {
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
                     </span>
                     <span className="text-sm font-medium text-zinc-600 group-hover:text-zinc-900 transition-colors">
-                        Available from August 2026 · Open to full-time remote roles globally
+                        Currently in notice period · Available from August 2026 · Open to remote, hybrid, and onsite roles globally
                     </span>
                     <ChevronRight className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 transition-colors group-hover:translate-x-0.5" />
                 </motion.div>
@@ -308,7 +308,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                             className="inline"
                         >
-                            I design{" "}
+                            I've shipped{" "}
                         </motion.span>
                         <br className="hidden md:block" />
                         <motion.span
@@ -317,7 +317,7 @@ export function Hero() {
                             transition={{ duration: 0.55, delay: 0.22, ease: "easeOut" }}
                             className="relative inline-block"
                         >
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">enterprise products</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">AI products to 50,000+ users</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"
@@ -342,7 +342,7 @@ export function Hero() {
                             transition={{ duration: 0.55, delay: 0.36, ease: "easeOut" }}
                             className="inline font-black text-zinc-900"
                         >
-                            {" "}and own them{" "}
+                            {" "}Now I'm building{" "}
                         </motion.span>
                         <motion.span
                             initial={{ opacity: 0, y: 24 }}
@@ -350,7 +350,7 @@ export function Hero() {
                             transition={{ duration: 0.55, delay: 0.5, ease: "easeOut" }}
                             className="relative inline-block"
                         >
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">end to end</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">the next one</span>
                             <motion.svg
                                 className="absolute -bottom-2 left-0 w-full h-[0.2em]"
                                 viewBox="0 0 100 10"
@@ -378,7 +378,7 @@ export function Hero() {
                         className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed"
                     >
                         Product Designer & Founder · Aulys · ex-Infosys<br className="hidden sm:block" />
-                        Available from August 2026 · Open to full-time remote roles globally
+                        Currently in notice period · Available from August 2026 · Open to remote, hybrid, and onsite roles globally
                     </motion.p>
 
                     <motion.div

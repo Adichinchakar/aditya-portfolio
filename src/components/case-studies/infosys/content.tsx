@@ -119,6 +119,16 @@ export default function InfosysPage() {
                     <p className="text-xs text-zinc-600 mt-6">
                         * Assessment time reduction: time-on-task study, n=28 teachers, pre/post rubric workflow. Acceptance rate A/B test: n=84 sessions, Q3 2024. Drop-off reduction: progressive reveal vs. spinner, A/B, same cohort.
                     </p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mt-8 p-6 rounded-2xl bg-indigo-500/8 border border-indigo-500/20"
+                    >
+                        <p className="text-sm text-indigo-300 leading-relaxed">
+                            <span className="font-bold text-indigo-200">Certificate of Recognition</span> — awarded by Jason Fournier, SVP, Imagine Learning (Infosys client). Recognised for AI tool delivery across the Imagine Learning product suite.
+                        </p>
+                    </motion.div>
                 </div>
             </section>
 

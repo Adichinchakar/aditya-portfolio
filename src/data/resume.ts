@@ -14,7 +14,7 @@ export const resumeData = {
         linkedin: "linkedin.com/in/adityachinchakar",
         location: "Pune, India · Open to Remote",
     },
-    openTo: ["Founding Designer", "Staff Designer", "Lead Designer", "Product Manager"],
+    openTo: ["Founding Designer", "Staff Designer", "Lead Designer", "Product Manager", "Design Lead (UAE)"],
     skills: [
         {
             category: "Product",
@@ -72,7 +72,7 @@ export const resumeData = {
             period: "Oct 2022 — Sep 2024",
             location: "Pune, India",
             highlights: [
-                "Led 0-to-1 discovery and UX for the AI no-code Flow Builder — ran 25+ JTBD interviews and designed a progressive disclosure experience that reduced onboarding time by 40% across 5,000+ users and 100+ enterprise clients.",
+                "Led 0-to-1 discovery and UX for the AI no-code Flow Builder — ran 25+ JTBD interviews and designed a progressive disclosure experience that reduced onboarding time by 40% across 950+ users and 12+ enterprise clients.",
                 "Built Simplifai's design practice from scratch — founded the first Design System (50+ components), established a research cadence, and created a dev handoff process that reduced friction by 60% across 12 designers and 15 engineers.",
                 "Defined interaction models for complex automation workflows including conditional logic, API integrations, and error handling — shipping features that worked intuitively without sacrificing backend logic.",
             ],

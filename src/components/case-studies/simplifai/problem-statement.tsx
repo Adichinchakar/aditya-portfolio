@@ -40,6 +40,16 @@ export function ProblemStatement() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-red-500/4 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
+                <motion.p
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-base text-zinc-500 font-medium mb-8"
+                >
+                    Simplifai is an Oslo-based AI automation company. I joined as their first and only designer.
+                </motion.p>
+
                 {/* Section Label */}
                 <motion.div
                     initial={{ opacity: 0, y: 12 }}

@@ -39,7 +39,7 @@ const experiences = [
         period: "2022 - 2024",
         metric: "73% User Adoption Increase",
         metricDesc: "Led UX for Flow Builder — the core enterprise AI automation engine.",
-        description: "Only designer on the team. Redesigned the node-based workflow builder from scratch, ran 25+ JTBD interviews across 100+ enterprise clients, and built the company's first design system — cutting dev handoff time by 60%.",
+        description: "Only designer on the team. Redesigned the node-based workflow builder from scratch, ran 25+ JTBD interviews across 12+ enterprise clients, and built the company's first design system — cutting dev handoff time by 60%.",
         icon: Zap,
         color: "text-purple-600",
         bg: "bg-purple-50",

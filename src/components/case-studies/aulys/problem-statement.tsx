@@ -44,6 +44,9 @@ export function ProblemStatement() {
                             <span className="text-xs text-blue-600 font-semibold leading-snug">ADA digital accessibility<br />lawsuits filed in 2023</span>
                         </div>
                     </div>
+                    <p className="text-base text-zinc-600 leading-relaxed mt-6 max-w-2xl">
+                        In the UAE, Cabinet Decision No. 11/2023 mandates digital accessibility compliance for government and enterprise platforms — making Aulys directly relevant to teams operating in or entering the UAE market.
+                    </p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-6">

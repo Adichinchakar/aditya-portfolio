@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     default: "Aditya Chinchakar | Senior Product Designer — Freelance AI UX & Enterprise Design",
     template: "%s | Aditya Chinchakar",
   },
-  description: "Senior Product Designer & Founder with 9+ years shipping AI-powered enterprise products. Available for freelance and contract engagements. Founder of Aulys (WCAG 2.2 Figma Plugin). Fortune 500 experience at Infosys. Enterprise AI, design systems, 0→1 product design.",
+  description: "Senior Product Designer & Founder with 9+ years shipping AI-powered enterprise products. Open to remote, hybrid, and onsite roles globally. Founder of Aulys (WCAG 2.2 Figma Plugin). Currently on notice period · Available August 2026. Enterprise AI, design systems, 0→1 product design.",
   keywords: [
     "Freelance Senior Product Designer",
     "Contract UX Designer",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     url: "https://adityachinchakar.com",
     siteName: "Aditya Chinchakar — Senior Product Designer",
     title: "Aditya Chinchakar | Senior Product Designer — Freelance AI UX & Enterprise Design",
-    description: "9+ years shipping AI enterprise products. Available for freelance & contract. Founder of Aulys (WCAG 2.2 Figma Plugin). Fortune 500 experience at Infosys.",
+    description: "9+ years shipping AI enterprise products. Currently on notice period · Available August 2026. Open to remote, hybrid, and onsite roles globally. Founder of Aulys (WCAG 2.2 Figma Plugin).",
   },
   twitter: {
     card: "summary_large_image",

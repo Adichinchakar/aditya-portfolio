@@ -39,8 +39,8 @@ const testimonials = [
     },
     {
         quote: "His motion design work directly contributed to a 15% increase in customer inquiries and engagement.",
-        name: "Shell Project Lead",
-        role: "Strategic Partner",
+        name: "Shell Campaign Lead",
+        role: "Motion & Brand · Shell Petroleum",
         company: "Shell",
         initials: "SH",
         color: "bg-gradient-to-br from-zinc-600 to-zinc-800"

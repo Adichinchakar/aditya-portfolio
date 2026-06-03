@@ -30,6 +30,16 @@ interface Post {
 
 const posts: Post[] = [
     {
+        title: "UAE Digital Accessibility Law: What Cabinet Decision No. 11/2023 Means for Product Teams",
+        excerpt: "The UAE mandated WCAG 2.1 AA compliance for all government and enterprise digital platforms. Most product teams don't know what it requires, how to audit for it, or where the real cost of non-compliance sits. A practical breakdown.",
+        date: "Jun 2025",
+        readTime: "8 min",
+        tags: ["Accessibility", "UAE", "WCAG", "Compliance"],
+        platform: "portfolio",
+        status: "published",
+        href: "/writing/wcag-uae-cabinet-decision",
+    },
+    {
         title: "The Super-App Paradox: Why Feature Bloat Is Killing Neobanks",
         excerpt: "An unsolicited UX audit of India's Tier-1 neobanks reveals a consistent pattern: the more features they add, the less users trust them. Here's the cognitive architecture fix — and why intent-led design is the only way out.",
         date: "Mar 2025",

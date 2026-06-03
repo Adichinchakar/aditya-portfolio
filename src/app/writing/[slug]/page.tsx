@@ -674,6 +674,133 @@ const posts: Post[] = [
             },
         ],
     },
+    {
+        slug: "wcag-uae-cabinet-decision",
+        title: "UAE Digital Accessibility Law: What Cabinet Decision No. 11/2023 Means for Product Teams",
+        excerpt: "The UAE mandated WCAG 2.1 AA compliance for all government and enterprise digital platforms. Most product teams don't know what it requires, how to audit for it, or where the real cost of non-compliance sits. A practical breakdown.",
+        date: "Jun 2025",
+        readTime: "8 min",
+        tags: ["Accessibility", "UAE", "WCAG", "Compliance"],
+        content: [
+            {
+                type: "p",
+                content: "In March 2023, the UAE Cabinet issued Decision No. 11/2023 on the regulation of the technology sector. Buried inside it — alongside provisions on data sovereignty and digital infrastructure — was a direct mandate: government bodies and enterprises operating digital platforms in the UAE must meet international accessibility standards.",
+            },
+            {
+                type: "p",
+                content: "The referenced standard is WCAG 2.1 Level AA. The same standard that governs ADA compliance in the US, EN 301 549 in the EU, and AODA in Canada. Most product teams working in or entering the UAE market haven't read the decision. Most designers I've spoken to in the region have never heard of it.",
+            },
+            {
+                type: "h2",
+                content: "What the Law Actually Requires",
+            },
+            {
+                type: "p",
+                content: "WCAG 2.1 AA is organised around four principles: Perceivable, Operable, Understandable, Robust. In practice, for digital product teams, this translates to a specific checklist of 50 success criteria. The ones that fail most often in audits:",
+            },
+            {
+                type: "ul",
+                items: [
+                    "1.4.3 Contrast Minimum — Text must have a contrast ratio of at least 4.5:1 against its background. Most design systems use zinc-400 on white by default. It fails.",
+                    "1.1.1 Non-text Content — Every image, icon, and UI graphic needs a text alternative. 'Decorative' images need an empty alt attribute, not a missing one.",
+                    "2.4.7 Focus Visible — Keyboard focus must be visible at all times. Removing the default outline without replacing it is a WCAG AA failure.",
+                    "4.1.2 Name, Role, Value — Interactive elements must expose their role to assistive technology. A div styled as a button is not a button.",
+                    "1.3.1 Info and Relationships — Structure conveyed visually must also be conveyed programmatically. A heading styled with large bold text is not a heading without the h1-h6 tag.",
+                ],
+            },
+            {
+                type: "h2",
+                content: "Who It Applies To",
+            },
+            {
+                type: "p",
+                content: "The decision's scope covers government digital services directly, but the enterprise implications are broader. Any platform providing services to government entities, operating under a UAE trade licence, or serving consumers in the UAE sits within the compliance zone. This includes:",
+            },
+            {
+                type: "ul",
+                items: [
+                    "SaaS platforms sold to UAE government or semi-government bodies (health, education, municipal services)",
+                    "Enterprise portals and internal tools used by UAE-based employees",
+                    "Consumer apps available in the UAE App Store or Google Play",
+                    "E-commerce and fintech platforms serving UAE residents",
+                ],
+            },
+            {
+                type: "p",
+                content: "In practice, enforcement is still nascent compared to the US (where 4,600+ ADA digital lawsuits were filed in 2023 alone). But procurement teams at UAE government entities are starting to include WCAG compliance as a vendor requirement in RFPs. Non-compliant platforms lose contracts.",
+            },
+            {
+                type: "h2",
+                content: "The Cost of Finding Out Late",
+            },
+            {
+                type: "p",
+                content: "Accessibility remediation is cheap at the design stage and expensive everywhere else. Nielsen Norman Group's data puts the cost multiplier at 6x: a violation found in design costs 1 unit to fix. The same violation found post-launch costs 6.",
+            },
+            {
+                type: "p",
+                content: "The reason isn't technical — it's organisational. A contrast fix in Figma takes two minutes. The same fix in production requires a developer ticket, a code review, a QA pass, a staging deployment, and a production release. On an enterprise team, that's a two-week cycle for a two-minute problem.",
+            },
+            {
+                type: "blockquote",
+                content: "Most accessibility debt isn't created by developers who can't code accessible interfaces. It's created by designers who hand off inaccessible specs and by product managers who don't include accessibility criteria in definition-of-done.",
+            },
+            {
+                type: "h2",
+                content: "How to Audit Your Product Now",
+            },
+            {
+                type: "p",
+                content: "A basic accessibility audit for WCAG 2.1 AA doesn't require an expert or an expensive tool. Here's the minimum viable audit process:",
+            },
+            {
+                type: "ul",
+                items: [
+                    "Run axe DevTools (free Chrome extension) on every page. It catches roughly 30% of WCAG violations automatically — the mechanical ones like missing alt text, insufficient contrast, and missing form labels.",
+                    "Tab through your entire product using only the keyboard. Every interactive element must be reachable and operable. If your focus indicator is invisible, flag it.",
+                    "Turn on a screen reader (NVDA on Windows, VoiceOver on Mac — both free) and navigate your core user flows. Listen for what gets announced. If a button says 'button' with no label, that's a failure.",
+                    "Check every page at 400% zoom in Chrome. Content should reflow, not overflow. Text should remain readable.",
+                ],
+            },
+            {
+                type: "p",
+                content: "Automated tools catch the low-hanging fruit. Manual keyboard and screen reader testing catches the structural failures that automated tools miss — illogical reading order, unlabelled regions, modal focus traps.",
+            },
+            {
+                type: "h2",
+                content: "Shifting Left: Making Accessibility a Design Constraint",
+            },
+            {
+                type: "p",
+                content: "The most effective accessibility programmes I've seen treat WCAG compliance as a design constraint, not a QA gate. The shift is conceptual: accessibility isn't a checklist you run at the end; it's a property you design into every component from the start.",
+            },
+            {
+                type: "p",
+                content: "Practically, this means: your design system's colour tokens should have contrast ratios baked in. Your component library's interactive elements should have focus states as a default, not an edge case. Your design reviews should include an accessibility pass before handoff, not after.",
+            },
+            {
+                type: "p",
+                content: "Teams that shift left on accessibility don't just pass audits — they ship faster, because they're not cycling back through production to fix violations that should have been caught in Figma.",
+            },
+            {
+                type: "h2",
+                content: "What This Means for UAE Market Entry",
+            },
+            {
+                type: "p",
+                content: "If your product is entering the UAE market, WCAG 2.1 AA compliance is becoming table stakes for enterprise and government sales. Procurement teams ask for it in RFPs. Legal teams flag it in due diligence. And as enforcement matures, the risk profile of non-compliance grows.",
+            },
+            {
+                type: "p",
+                content: "The positive framing: UAE has one of the highest smartphone penetration rates in the world and a significant population of users who benefit from accessibility features — older adults, people with visual impairments, users in low-bandwidth situations. Accessible design isn't just legal risk mitigation. It's a larger addressable market.",
+            },
+            {
+                type: "callout",
+                label: "On Aulys",
+                content: "Aulys is a WCAG 2.2 accessibility scanner built directly into Figma. It scans 500+ layers in under 10 seconds and flags contrast, focus, alt text, and touch target violations at the design stage — before a single line of code is written. Built specifically for teams who need to ship compliant interfaces at speed. adityachinchakar.com/work/aulys",
+            },
+        ],
+    },
 ];
 
 export async function generateStaticParams() {

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import {
     Zap, BrainCircuit, GitBranch, Send, Mail, Database,
     MessageSquare, Users, FileText, BarChart2, ArrowRight, Sparkles,

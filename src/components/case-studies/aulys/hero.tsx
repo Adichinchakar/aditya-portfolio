@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import { Zap, ShieldCheck, Users, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { MouseEvent } from "react";

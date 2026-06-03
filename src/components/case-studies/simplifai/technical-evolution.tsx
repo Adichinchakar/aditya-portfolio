@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { GitBranch, FileCode, Mail, Sparkles } from "lucide-react";
 
 export function TechnicalEvolution() {

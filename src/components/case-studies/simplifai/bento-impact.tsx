@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import { Zap, Users, Smile, Code, Trophy, ShieldCheck } from "lucide-react";
 import { MouseEvent } from "react";
 import { cn } from "@/lib/utils";

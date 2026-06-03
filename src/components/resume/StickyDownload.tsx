@@ -1,7 +1,7 @@
 "use client";
 
 import { Download } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 
 interface StickyDownloadProps {
     pdfUrl: string;

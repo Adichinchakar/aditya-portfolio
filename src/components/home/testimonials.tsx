@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "@/lib/motion";
 import { Quote } from "lucide-react";
 
 const testimonials = [

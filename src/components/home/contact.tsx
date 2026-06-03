@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { Copy, Check, Github, Linkedin } from "lucide-react";

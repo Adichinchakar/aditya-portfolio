@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { Download, Mail, Globe, MapPin, Linkedin, ArrowLeft } from "lucide-react";
 import { ExperienceBlock } from "@/components/resume/ExperienceBlock";

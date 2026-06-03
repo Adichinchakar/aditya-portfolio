@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Lightbulb, MessageSquareQuote } from "lucide-react";
 
 export function TheInsight() {

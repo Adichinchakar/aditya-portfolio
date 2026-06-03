@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { GitBranch, Box, Monitor, MessageSquare, Layers } from "lucide-react";
 
 const ARTIFACTS = [

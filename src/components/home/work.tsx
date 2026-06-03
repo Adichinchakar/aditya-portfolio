@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { TextReveal } from "@/components/ui/text-reveal";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 

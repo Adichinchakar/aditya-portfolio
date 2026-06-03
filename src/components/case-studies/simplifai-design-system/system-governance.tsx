@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Users, Clock, LayoutGrid, GitMerge, Check, Zap, Award, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 

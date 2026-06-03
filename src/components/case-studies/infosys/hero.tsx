@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import Link from "next/link";
 import { ArrowLeft, Lock } from "lucide-react";
 import { MouseEvent } from "react";

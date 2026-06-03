@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "@/lib/motion";
 import { Magnetic } from "@/components/ui/magnetic";
 import { cn } from "@/lib/utils";
 import { LayoutTemplate, Sparkles, ChevronRight, Terminal, Layers, Zap, ArrowUpRight } from "lucide-react";

@@ -3,7 +3,7 @@
 import React from "react";
 import { Hero } from "@/components/case-studies/infosys/hero";
 import { HookModel } from "@/components/case-studies/hook-model";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Lock, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 

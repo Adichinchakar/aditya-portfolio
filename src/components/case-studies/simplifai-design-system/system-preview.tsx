@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 
 const tokenColors = [
     { name: "color.interactive.primary", hex: "#7C3AED", label: "Primary", shade: "violet-700" },

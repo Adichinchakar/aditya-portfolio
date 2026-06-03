@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "@/lib/motion";
 import { SmartButton } from "@/components/home/smart-button";
 import { DynamicIsland } from "@/components/home/dynamic-island";
 import { PaymentCard } from "@/components/home/payment-card";

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import {
     ArrowRight, Sparkles, Zap, BrainCircuit, GitBranch, Send,
     TrendingDown, Users, Smile, ChevronRight

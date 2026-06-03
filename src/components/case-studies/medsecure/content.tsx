@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { AlertTriangle, Lightbulb } from "lucide-react";
 import { DecisionCallout } from "@/components/ui/decision-callout";
 import { Hero } from "@/components/case-studies/medsecure/hero";

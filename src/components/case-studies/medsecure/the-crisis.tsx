@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { FileX2, Database, Globe, AlertCircle, Lock, HardDrive } from "lucide-react";
 
 const PROBLEMS = [

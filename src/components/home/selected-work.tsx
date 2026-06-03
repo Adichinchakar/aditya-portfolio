@@ -1,7 +1,7 @@
 "use client";
 
 import { MouseEvent } from "react";
-import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from "@/lib/motion";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TextReveal } from "@/components/ui/text-reveal";

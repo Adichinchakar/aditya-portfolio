@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { Atom, Component, Layers, ChevronRight, Zap } from "lucide-react";
 
 type Level = "atoms" | "molecules" | "organisms";

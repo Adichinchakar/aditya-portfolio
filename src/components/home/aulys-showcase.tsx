@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { Zap, CheckCircle2, Globe2, ArrowRight, AlertCircle, CheckCheck, Eye, Type, Contrast } from "lucide-react";
 
 // ── Accessibility Audit Simulation Data ────────────────────────────────────────

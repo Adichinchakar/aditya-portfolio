@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 
 const BLUE = "#005EB8";
 const BLUE_LIGHT = "#EBF3FB";

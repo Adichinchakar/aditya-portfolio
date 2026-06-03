@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { Check, Info, MousePointer2, Ruler, ShieldCheck, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 

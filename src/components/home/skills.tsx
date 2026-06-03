@@ -1,7 +1,7 @@
 "use client";
 
 import { MouseEvent, useRef } from "react";
-import { motion, useInView, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useInView, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import { Bot, Paintbrush, Sparkles, Layout, PenTool, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";

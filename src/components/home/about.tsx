@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate } from "@/lib/motion";
 import { Lightbulb, Zap, BookOpen, FlaskConical } from "lucide-react";
 import Link from "next/link";
 import { ContactSheet } from "@/components/ui/contact-sheet";

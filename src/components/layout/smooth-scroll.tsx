@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import React from "react";
-import { MotionConfig } from "framer-motion";
+import { LazyMotion, domAnimation, MotionConfig } from "framer-motion";
 
 // Lazy-loaded — keeps Lenis out of the critical JS path
 const ReactLenis = dynamic(
@@ -12,11 +12,13 @@ const ReactLenis = dynamic(
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
     return (
-        <MotionConfig reducedMotion="user">
-            <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                {children as any}
-            </ReactLenis>
-        </MotionConfig>
+        <LazyMotion features={domAnimation} strict>
+            <MotionConfig reducedMotion="user">
+                <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                    {children as any}
+                </ReactLenis>
+            </MotionConfig>
+        </LazyMotion>
     );
 }

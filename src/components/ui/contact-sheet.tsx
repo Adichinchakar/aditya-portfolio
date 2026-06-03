@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { X, Mail, Calendar, ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 

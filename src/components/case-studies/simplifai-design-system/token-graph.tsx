@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { Palette, Type, Box, CornerUpRight, ArrowRight } from "lucide-react";
 
 type TokenId = "c-brand" | "c-surface" | "c-text" | "t-heading" | "t-body" | "s-gap" | "s-radius";

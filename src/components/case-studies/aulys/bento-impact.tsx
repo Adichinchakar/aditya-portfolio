@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Users, Globe, LayoutGrid, TrendingUp } from "lucide-react";
 
 export function BentoImpact() {

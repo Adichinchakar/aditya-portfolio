@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, MouseEvent } from "react";
-import { motion, useInView, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useInView, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import { Bot, Zap, Layout, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 

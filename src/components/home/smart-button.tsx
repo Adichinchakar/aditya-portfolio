@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useTransform } from "@/lib/motion";
 import { Check, Loader2, RefreshCcw, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useRef } from "react";

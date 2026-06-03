@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Layers, Cloud, ArrowRight } from "lucide-react";
 import { DecisionCallout } from "@/components/ui/decision-callout";
 

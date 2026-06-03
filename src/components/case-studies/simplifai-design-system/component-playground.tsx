@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { Moon, Sun, AlignJustify, AlignCenterHorizontal, Maximize2, Bell, Search, Zap, MoreVertical } from "lucide-react";
 
 type Theme = "light" | "dark";

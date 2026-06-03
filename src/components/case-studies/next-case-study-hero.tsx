@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "@/lib/motion";
 import Link from "next/link";
 import { ArrowRight, Grid } from "lucide-react";
 import { useRef } from "react";

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Layers, Puzzle, Map } from "lucide-react";
 
 export function ProblemStatement() {

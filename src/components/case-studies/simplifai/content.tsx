@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Clock, Layout, Wrench, BookOpen, AlertTriangle, Lightbulb } from "lucide-react";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import { FlowPreview } from "@/components/case-studies/simplifai/flow-preview";
 import { BentoImpact } from "@/components/case-studies/simplifai/bento-impact";
 import { UserPersonaInteractive } from "@/components/case-studies/simplifai/user-persona-interactive";

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { ArrowRight, Layers, ShieldCheck, Fingerprint } from "lucide-react";
 
 export function IntentArchitecture() {

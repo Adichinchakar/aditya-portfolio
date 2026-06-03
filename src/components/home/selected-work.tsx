@@ -220,7 +220,7 @@ export function SelectedWork({ title = "Case Studies", excludeHref }: { title?: 
                     <TextReveal tag="h2" className="text-4xl md:text-5xl font-black tracking-tighter">
                         {title}
                     </TextReveal>
-                    <span className="font-mono text-zinc-400 font-bold hidden sm:block tracking-widest text-sm">(0{displayedWorks.length})</span>
+                    <span className="font-mono text-zinc-600 font-bold hidden sm:block tracking-widest text-sm">(0{displayedWorks.length})</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

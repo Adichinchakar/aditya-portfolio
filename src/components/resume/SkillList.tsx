@@ -16,7 +16,7 @@ export function SkillList({ category, items, index }: SkillListProps) {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
         >
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-3">{category}</h3>
+            <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-3">{category}</p>
             <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
                     <span

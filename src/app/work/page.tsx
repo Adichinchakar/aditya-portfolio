@@ -152,7 +152,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                     <div className="relative z-10 flex flex-col h-full gap-6">
                         {/* Top row */}
                         <div className="flex justify-between items-start">
-                            <span className="text-sm font-bold text-zinc-400 font-mono tracking-widest">
+                            <span className="text-sm font-bold text-zinc-600 font-mono tracking-widest">
                                 {String(index + 1).padStart(2, "0")}
                             </span>
                             <div className="w-10 h-10 rounded-full bg-white/70 border border-white/80 flex items-center justify-center shadow-sm backdrop-blur-md transform group-hover:scale-110 transition-all duration-300">
@@ -226,7 +226,7 @@ export default function WorkIndex() {
                     <TextReveal tag="h1" className="text-4xl md:text-5xl font-black tracking-tighter">
                         Selected Work
                     </TextReveal>
-                    <span className="font-mono text-zinc-400 font-bold hidden sm:block tracking-widest text-sm">
+                    <span className="font-mono text-zinc-600 font-bold hidden sm:block tracking-widest text-sm">
                         (0{filtered.length})
                     </span>
                 </div>

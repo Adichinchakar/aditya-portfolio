@@ -42,7 +42,7 @@ export function ResumePage({ data }: ResumePageProps) {
                     <div className="max-w-3xl mx-auto flex items-center justify-between">
                         <Link
                             href="/"
-                            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md"
                         >
                             <ArrowLeft className="w-3.5 h-3.5" />
                             Back
@@ -68,7 +68,7 @@ export function ResumePage({ data }: ResumePageProps) {
                         <div className="px-10 pt-12 pb-10 border-b border-zinc-100">
                             <motion.p
                                 {...fadeUpProps(0)}
-                                className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-500 mb-3"
+                                className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-700 mb-3"
                             >
                                 {data.title}
                             </motion.p>

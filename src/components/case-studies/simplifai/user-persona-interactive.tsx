@@ -61,7 +61,7 @@ export function UserPersonaInteractive() {
 
                         {/* Interactive Pain Points */}
                         <div className="space-y-4">
-                            <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider">
+                            <h3 className="text-sm font-semibold text-zinc-600 uppercase tracking-wider">
                                 Select a Pain Point
                             </h3>
                             <div className="flex flex-col gap-3">
@@ -109,11 +109,11 @@ export function UserPersonaInteractive() {
                                 >
                                     {/* Pain Context */}
                                     <div className="mb-8 p-4 rounded-xl bg-red-50 border border-red-200">
-                                        <div className="flex items-center gap-2 mb-2 text-red-700 text-sm font-semibold uppercase tracking-wider">
+                                        <div className="flex items-center gap-2 mb-2 text-red-800 text-sm font-semibold uppercase tracking-wider">
                                             <AlertCircle className="w-4 h-4" />
                                             The Problem
                                         </div>
-                                        <p className="text-red-700 text-lg italic font-medium">
+                                        <p className="text-red-800 text-lg italic font-medium">
                                             "{activeData.description}"
                                         </p>
                                     </div>
@@ -131,7 +131,7 @@ export function UserPersonaInteractive() {
                                         <h4 className="text-2xl font-bold text-zinc-900 mb-3">
                                             {activeData.solution}
                                         </h4>
-                                        <div className="flex items-center justify-center gap-2 text-emerald-700">
+                                        <div className="flex items-center justify-center gap-2 text-emerald-800">
                                             <CheckCircle2 className="w-5 h-5" />
                                             <span className="font-semibold">{activeData.impact}</span>
                                         </div>

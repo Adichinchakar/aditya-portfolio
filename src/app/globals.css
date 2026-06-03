@@ -163,6 +163,17 @@ html.lenis body {
   }
 }
 
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes dash {
+  0% { stroke-dashoffset: 8; }
+  100% { stroke-dashoffset: 0; }
+}
+
 @keyframes marquee-reverse {
   0% {
     transform: translateX(-50%);

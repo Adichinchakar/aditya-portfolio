@@ -9,6 +9,7 @@ const CASE_STUDY_SLUGS = [
     "medsecure",
     "nexus-banking",
     "infosys",
+    "orbit",
 ];
 
 const WRITING_SLUGS = [

@@ -76,10 +76,10 @@ const useCases: Record<UseCase, { label: string; story: string; metric: string; 
 type ActiveNode = string | null;
 
 const nodeStyles: Record<NodeType, { card: string; icon: string; badge: string }> = {
-    trigger: { card: "bg-white border-2 border-purple-400 shadow-[0_0_16px_rgba(168,85,247,0.18)]", icon: "bg-purple-50 text-purple-600", badge: "bg-purple-100 text-purple-700" },
+    trigger: { card: "bg-white border-2 border-purple-400 shadow-[0_0_16px_rgba(168,85,247,0.18)]", icon: "bg-purple-50 text-purple-600", badge: "bg-purple-200 text-purple-700" },
     ai: { card: "bg-white border-2 border-indigo-400 shadow-[0_0_16px_rgba(99,102,241,0.18)]", icon: "bg-indigo-50 text-indigo-600", badge: "bg-indigo-100 text-indigo-700" },
     condition: { card: "bg-white border-2 border-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.15)]", icon: "bg-amber-50 text-amber-600", badge: "bg-amber-100 text-amber-700" },
-    action: { card: "bg-white border-2 border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.15)]", icon: "bg-emerald-50 text-emerald-600", badge: "bg-emerald-100 text-emerald-700" },
+    action: { card: "bg-white border-2 border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.15)]", icon: "bg-emerald-50 text-emerald-600", badge: "bg-emerald-100 text-emerald-800" },
 };
 
 function FlowCanvas({ useCase, activeNode, setActiveNode }: { useCase: UseCase; activeNode: ActiveNode; setActiveNode: (id: ActiveNode) => void }) {
@@ -210,7 +210,7 @@ export function FlowPreview() {
                     <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 mb-3">
                         The Flow Builder
                     </h2>
-                    <p className="text-lg text-zinc-500 font-medium max-w-2xl">
+                    <p className="text-lg text-zinc-600 font-medium max-w-2xl">
                         A node-based canvas that democratizes complex automation. Built with a custom React engine — no engineering required.
                     </p>
                 </div>
@@ -232,7 +232,7 @@ export function FlowPreview() {
                     <div className="flex items-center gap-3 shrink-0 relative z-10 bg-white/10 rounded-xl px-5 py-3 border border-white/10">
                         <div>
                             <div className="text-white font-black text-2xl">{data.metric}</div>
-                            <div className="text-zinc-400 text-xs font-medium">{data.metricLabel}</div>
+                            <div className="text-zinc-600 text-xs font-medium">{data.metricLabel}</div>
                         </div>
                     </div>
                 </motion.div>
@@ -262,9 +262,9 @@ export function FlowPreview() {
                             <span className="text-xs font-mono text-zinc-600">Simplifai Flow Engine v2.0</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="text-xs text-zinc-500 font-medium">{data.nodes.length} nodes</span>
+                            <span className="text-xs text-zinc-600 font-medium">{data.nodes.length} nodes</span>
                             <span className="text-zinc-200">•</span>
-                            <span className="text-xs text-zinc-500 font-medium">{data.connections.length} connections</span>
+                            <span className="text-xs text-zinc-600 font-medium">{data.connections.length} connections</span>
                         </div>
                     </div>
 
@@ -301,7 +301,7 @@ export function FlowPreview() {
                                     key="hint"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    className="text-xs text-zinc-500 font-medium"
+                                    className="text-xs text-zinc-600 font-medium"
                                 >
                                     Hover over any node to see details
                                 </motion.p>
@@ -323,10 +323,10 @@ export function FlowPreview() {
                     </p>
                     <div className="flex items-center gap-2 shrink-0">
                         <span className="text-2xl font-black text-zinc-900">92%</span>
-                        <span className="text-xs text-zinc-500 font-medium leading-tight">task completion<br />rate (usability test)</span>
+                        <span className="text-xs text-zinc-600 font-medium leading-tight">task completion<br />rate (usability test)</span>
                         <ArrowRight className="w-4 h-4 text-zinc-300" />
                         <span className="text-2xl font-black text-zinc-900">41%</span>
-                        <span className="text-xs text-zinc-500 font-medium leading-tight">before<br />redesign</span>
+                        <span className="text-xs text-zinc-600 font-medium leading-tight">before<br />redesign</span>
                     </div>
                 </motion.div>
 

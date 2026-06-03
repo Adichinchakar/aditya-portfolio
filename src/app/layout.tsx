@@ -202,6 +202,7 @@ const jsonLd = {
         { "@type": "ListItem", position: 4, name: "MedSecure — Blockchain Medical Records UX", url: "https://adityachinchakar.com/work/medsecure" },
         { "@type": "ListItem", position: 5, name: "Nexus FinTech UX Audit", url: "https://adityachinchakar.com/work/nexus-banking" },
         { "@type": "ListItem", position: 6, name: "Infosys × Imagine Learning — AI Teacher Suite", url: "https://adityachinchakar.com/work/infosys" },
+        { "@type": "ListItem", position: 7, name: "Orbit — Spatial Onboarding for Apple Vision Pro", url: "https://adityachinchakar.com/work/orbit" },
       ],
     },
   ],

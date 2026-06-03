@@ -31,9 +31,9 @@ const componentStats = [
 ];
 
 const qualityBadges = [
-    { icon: ShieldCheck, label: "WCAG 2.2 AA", color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" },
+    { icon: ShieldCheck, label: "WCAG 2.2 AA", color: "text-emerald-800", bg: "bg-emerald-50 border-emerald-200" },
     { icon: Zap, label: "Framer Motion animated", color: "text-purple-700", bg: "bg-purple-50 border-purple-200" },
-    { icon: Code2, label: "Figma → React tokens", color: "text-blue-700", bg: "bg-blue-50 border-blue-200" },
+    { icon: Code2, label: "Figma → React tokens", color: "text-blue-800", bg: "bg-blue-50 border-blue-200" },
     { icon: CheckCircle, label: "100% TypeScript", color: "text-zinc-700", bg: "bg-zinc-100 border-zinc-200" },
 ];
 
@@ -73,7 +73,7 @@ export function SystemSpecs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-zinc-500 font-medium max-w-2xl"
+                        className="text-lg text-zinc-600 font-medium max-w-2xl"
                     >
                         The Simplifai Design System was built with semantic design tokens synced directly from Figma to React — creating a single source of truth across design and code.
                     </motion.p>
@@ -144,12 +144,12 @@ export function SystemSpecs() {
                                             />
                                         ) : (
                                             <span className="w-4 h-4 rounded border border-zinc-200 bg-zinc-100 shrink-0 flex items-center justify-center">
-                                                <span className="text-[7px] font-bold text-zinc-400">{token.type[0]}</span>
+                                                <span className="text-[7px] font-bold text-zinc-600">{token.type[0]}</span>
                                             </span>
                                         )}
                                         <span className="font-mono text-xs text-indigo-600 font-semibold">{token.name}</span>
                                     </div>
-                                    <span className="font-mono text-xs text-zinc-500 truncate max-w-[160px] text-right">{token.value}</span>
+                                    <span className="font-mono text-xs text-zinc-600 truncate max-w-[160px] text-right">{token.value}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -163,7 +163,7 @@ export function SystemSpecs() {
                         transition={{ delay: 0.15 }}
                         className="rounded-2xl border border-zinc-200 bg-zinc-50 p-8 flex flex-col gap-6 shadow-[0_4px_20px_rgb(0,0,0,0.04)]"
                     >
-                        <p className="text-xs uppercase tracking-widest text-zinc-400 font-bold">Component Annotation</p>
+                        <p className="text-xs uppercase tracking-widest text-zinc-600 font-bold">Component Annotation</p>
 
                         {/* The annotated button */}
                         <div className="relative flex justify-center items-center py-12 rounded-xl bg-white border border-zinc-200">
@@ -214,7 +214,7 @@ export function SystemSpecs() {
                                 {/* Bottom annotation — WCAG */}
                                 <div className="flex flex-col items-center">
                                     <div className="h-6 w-px border-l border-dashed border-zinc-300 mb-1" />
-                                    <div className="bg-white border border-emerald-200 px-3 py-1.5 rounded-full text-[11px] font-mono font-semibold text-emerald-700 shadow-sm flex items-center gap-1.5">
+                                    <div className="bg-white border border-emerald-200 px-3 py-1.5 rounded-full text-[11px] font-mono font-semibold text-emerald-800 shadow-sm flex items-center gap-1.5">
                                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                                         WCAG 2.2 AA — 7.2:1 contrast
                                     </div>
@@ -230,7 +230,7 @@ export function SystemSpecs() {
                                 { label: "Font weight", value: "600" },
                             ].map((s) => (
                                 <div key={s.label} className="rounded-xl bg-white border border-zinc-200 p-3 text-center">
-                                    <div className="text-xs text-zinc-400 font-medium mb-1">{s.label}</div>
+                                    <div className="text-xs text-zinc-600 font-medium mb-1">{s.label}</div>
                                     <div className="font-mono text-xs font-bold text-zinc-800">{s.value}</div>
                                 </div>
                             ))}

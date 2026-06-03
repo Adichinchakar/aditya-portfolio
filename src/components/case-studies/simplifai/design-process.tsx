@@ -16,7 +16,7 @@ const steps = [
         description:
             "Embedded within the Simplifai team for 3 weeks, interviewing operations leads across 8 enterprise clients. Uncovered the core tension: users needed power without complexity.",
         tags: ["User Interviews", "Journey Mapping", "Competitive Audit"],
-        color: "text-blue-700",
+        color: "text-blue-800",
         bg: "bg-blue-500/8",
         border: "border-blue-500/20",
         activeBg: "bg-blue-600",
@@ -44,7 +44,7 @@ const steps = [
         description:
             "Established the Simplifai Design System from scratch — semantic tokens, component library, and a documentation site. Reduced engineer handoff time from 3 weeks to 5 days.",
         tags: ["Component Library", "Token Architecture", "Figma → React"],
-        color: "text-emerald-700",
+        color: "text-emerald-800",
         bg: "bg-emerald-500/8",
         border: "border-emerald-500/20",
         activeBg: "bg-emerald-600",
@@ -118,7 +118,7 @@ export function DesignProcess() {
                             >
                                 <step.icon className="w-4 h-4" />
                             </div>
-                            <div className="text-[11px] font-bold text-zinc-500 mb-1 tracking-widest uppercase">
+                            <div className="text-[11px] font-bold text-zinc-600 mb-1 tracking-widest uppercase">
                                 {step.num}
                             </div>
                             <div

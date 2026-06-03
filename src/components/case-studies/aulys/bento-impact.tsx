@@ -88,7 +88,7 @@ export function BentoImpact() {
                         transition={{ delay: 0.3 }}
                         className="md:col-span-2 bg-white border border-zinc-200 p-10 rounded-[2rem]"
                     >
-                        <TrendingUp className="w-8 h-8 text-zinc-500 mb-6" aria-hidden="true" />
+                        <TrendingUp className="w-8 h-8 text-zinc-600 mb-6" aria-hidden="true" />
                         <h3 className="text-2xl font-bold text-zinc-900 mb-4">What&apos;s Next: CI/CD Platform</h3>
                         <p className="text-lg text-zinc-700 leading-relaxed mb-6">
                             Beta feedback made one thing clear: teams want accessibility baked into their <strong>deployment pipeline</strong>, not just the design stage. The Phase 2 SaaS platform — currently ~50% built — will integrate Playwright and axe-core to scan live deployments and block non-compliant builds automatically.

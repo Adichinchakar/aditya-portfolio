@@ -48,7 +48,7 @@ export function UserPersonaIA() {
                     viewport={{ once: true }}
                     className="flex items-center gap-2 mb-6"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-semibold">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-sm font-semibold">
                         <User className="w-3.5 h-3.5" />
                         Chapter 1 — The User
                     </div>
@@ -70,7 +70,7 @@ export function UserPersonaIA() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="text-lg text-zinc-500 font-medium mb-12 max-w-2xl"
+                    className="text-lg text-zinc-600 font-medium mb-12 max-w-2xl"
                 >
                     100+ user interviews across 8 enterprise clients. One archetype emerged as the primary user: the non-technical operations lead.
                 </motion.p>
@@ -87,7 +87,7 @@ export function UserPersonaIA() {
                             onClick={() => setTab(t.id)}
                             className={`px-5 py-2 rounded-lg text-sm font-bold transition-all duration-300 ${tab === t.id
                                 ? "bg-white text-zinc-900 shadow-sm border border-zinc-200"
-                                : "text-zinc-500 hover:text-zinc-700"
+                                : "text-zinc-600 hover:text-zinc-700"
                                 }`}
                         >
                             {t.label}
@@ -126,7 +126,7 @@ export function UserPersonaIA() {
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {[
                                             { label: "5+ tools daily", color: "bg-zinc-100 text-zinc-700 border-zinc-200" },
-                                            { label: "20% rework rate", color: "bg-red-50 text-red-700 border-red-200" },
+                                            { label: "20% rework rate", color: "bg-red-50 text-red-800 border-red-200" },
                                             { label: "3 hrs/day on manual tasks", color: "bg-orange-50 text-orange-700 border-orange-200" },
                                         ].map((b) => (
                                             <span
@@ -140,14 +140,14 @@ export function UserPersonaIA() {
 
                                     <div className="space-y-5">
                                         <div>
-                                            <div className="flex items-center gap-2 text-sm text-zinc-500 uppercase tracking-wider font-bold mb-3">
+                                            <div className="flex items-center gap-2 text-sm text-zinc-600 uppercase tracking-wider font-bold mb-3">
                                                 <AlertCircle className="w-4 h-4 text-red-500" />
                                                 Pain Points
                                             </div>
                                             <ul className="space-y-2.5">
                                                 <li className="flex items-start gap-2.5 text-sm text-zinc-700">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
-                                                    Manual data entry errors causing <span className="font-bold text-red-700 ml-1">20% rework</span>.
+                                                    Manual data entry errors causing <span className="font-bold text-red-800 ml-1">20% rework</span>.
                                                 </li>
                                                 <li className="flex items-start gap-2.5 text-sm text-zinc-700">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
@@ -187,7 +187,7 @@ export function UserPersonaIA() {
                                     {[
                                         { value: "8", label: "Enterprise clients interviewed", color: "text-blue-600", bg: "bg-blue-50 border-blue-200" },
                                         { value: "72%", label: "Wanted self-service editing", color: "text-emerald-600", bg: "bg-emerald-50 border-emerald-200" },
-                                        { value: "3.2 hrs", label: "Lost daily to context switching", color: "text-red-700", bg: "bg-red-50 border-red-200" },
+                                        { value: "3.2 hrs", label: "Lost daily to context switching", color: "text-red-800", bg: "bg-red-50 border-red-200" },
                                         { value: "100+", label: "User studies conducted", color: "text-purple-600", bg: "bg-purple-50 border-purple-200" },
                                     ].map((s) => (
                                         <div key={s.label} className={`rounded-2xl border p-5 ${s.bg}`}>
@@ -210,7 +210,7 @@ export function UserPersonaIA() {
                             transition={{ duration: 0.3 }}
                             className="space-y-5"
                         >
-                            <p className="text-sm text-zinc-500 font-medium mb-6">
+                            <p className="text-sm text-zinc-600 font-medium mb-6">
                                 Jobs To Be Done — what Sarah is actually trying to accomplish when she uses the product.
                             </p>
                             {[
@@ -228,7 +228,7 @@ export function UserPersonaIA() {
                                     job: "I want to know immediately what broke and why",
                                     outcome: "So I can fix it without calling an engineer",
                                     icon: AlertCircle,
-                                    color: "text-red-700",
+                                    color: "text-red-800",
                                     bg: "bg-red-50",
                                     border: "border-red-200",
                                 },
@@ -263,10 +263,10 @@ export function UserPersonaIA() {
                                             <item.icon className={`w-4 h-4 ${item.color}`} />
                                         </div>
                                         <div className="flex flex-wrap gap-2 items-center text-sm font-medium text-zinc-700 leading-relaxed">
-                                            <span className="text-zinc-400 font-semibold">{item.context},</span>
+                                            <span className="text-zinc-600 font-semibold">{item.context},</span>
                                             <span className="font-bold text-zinc-900">{item.job}</span>
-                                            <ArrowRight className="w-3.5 h-3.5 text-zinc-400" />
-                                            <span className="italic text-zinc-500">{item.outcome}</span>
+                                            <ArrowRight className="w-3.5 h-3.5 text-zinc-600" />
+                                            <span className="italic text-zinc-600">{item.outcome}</span>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -288,7 +288,7 @@ export function UserPersonaIA() {
                             <div className="rounded-2xl border border-red-200 bg-red-50 p-6">
                                 <div className="flex items-center gap-2 mb-5">
                                     <Clock className="w-4 h-4 text-red-500" />
-                                    <span className="text-sm font-bold text-red-700 uppercase tracking-widest">Before Simplifai</span>
+                                    <span className="text-sm font-bold text-red-800 uppercase tracking-widest">Before Simplifai</span>
                                 </div>
                                 <div className="space-y-3">
                                     {dayBefore.map((item, i) => (
@@ -302,9 +302,9 @@ export function UserPersonaIA() {
                                                 : "bg-white/40"
                                                 }`}
                                         >
-                                            <span className="text-xs text-zinc-400 font-mono shrink-0 mt-0.5">{item.time}</span>
+                                            <span className="text-xs text-zinc-600 font-mono shrink-0 mt-0.5">{item.time}</span>
                                             <div className="flex-1 min-w-0">
-                                                <p className={`text-sm font-semibold ${item.type === "actual" ? "text-zinc-800" : "text-red-700"}`}>
+                                                <p className={`text-sm font-semibold ${item.type === "actual" ? "text-zinc-800" : "text-red-800"}`}>
                                                     {item.task}
                                                 </p>
                                                 <p className={`text-xs mt-0.5 font-bold ${item.type === "actual" ? "text-emerald-600" : "text-red-500"}`}>
@@ -315,7 +315,7 @@ export function UserPersonaIA() {
                                     ))}
                                 </div>
                                 <div className="mt-4 p-3 rounded-xl bg-red-100 border border-red-200">
-                                    <p className="text-xs text-red-700 font-bold">⚠️ Only ~1.5 hrs of actual strategic work</p>
+                                    <p className="text-xs text-red-800 font-bold">⚠️ Only ~1.5 hrs of actual strategic work</p>
                                 </div>
                             </div>
 
@@ -323,7 +323,7 @@ export function UserPersonaIA() {
                             <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
                                 <div className="flex items-center gap-2 mb-5">
                                     <CheckCircle className="w-4 h-4 text-emerald-500" />
-                                    <span className="text-sm font-bold text-emerald-700 uppercase tracking-widest">After Simplifai</span>
+                                    <span className="text-sm font-bold text-emerald-800 uppercase tracking-widest">After Simplifai</span>
                                 </div>
                                 <div className="space-y-3">
                                     {dayAfter.map((item, i) => (
@@ -337,9 +337,9 @@ export function UserPersonaIA() {
                                                 : "bg-white/40"
                                                 }`}
                                         >
-                                            <span className="text-xs text-zinc-400 font-mono shrink-0 mt-0.5">{item.time}</span>
+                                            <span className="text-xs text-zinc-600 font-mono shrink-0 mt-0.5">{item.time}</span>
                                             <div className="flex-1 min-w-0">
-                                                <p className={`text-sm font-semibold ${item.type === "actual" ? "text-zinc-800" : "text-emerald-700"}`}>
+                                                <p className={`text-sm font-semibold ${item.type === "actual" ? "text-zinc-800" : "text-emerald-800"}`}>
                                                     {item.task}
                                                 </p>
                                                 <p className={`text-xs mt-0.5 font-bold ${item.type === "actual" ? "text-emerald-600" : "text-emerald-500"}`}>
@@ -350,7 +350,7 @@ export function UserPersonaIA() {
                                     ))}
                                 </div>
                                 <div className="mt-4 p-3 rounded-xl bg-emerald-100 border border-emerald-200">
-                                    <p className="text-xs text-emerald-700 font-bold">🚀 5 hours freed up for strategic work daily</p>
+                                    <p className="text-xs text-emerald-800 font-bold">🚀 5 hours freed up for strategic work daily</p>
                                 </div>
                             </div>
                         </motion.div>

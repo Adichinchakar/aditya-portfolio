@@ -4,6 +4,7 @@ import { PieChart, ShieldAlert, Zap, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { MouseEvent } from "react";
 import { ArrowLeft } from "lucide-react";
+import { AfterDashboard } from "./nexus-ui";
 
 function MetricCard({
     icon: Icon,
@@ -86,7 +87,7 @@ export function Hero() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
                             </span>
-                            UX Audit · Speculative Design
+                            UX Audit · Speculative Design · 4 min read
                         </div>
 
                         <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-sm text-amber-300 font-medium mb-6">
@@ -124,47 +125,10 @@ export function Hero() {
                     >
                         <div className="relative rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.5)]">
                             <div className="bg-zinc-900/60 rounded-[1.5rem] p-6 border border-white/5 backdrop-blur-sm">
-                                <div className="flex items-center justify-between mb-6">
-                                    <h2 className="text-white font-bold tracking-tight text-sm">Strategic KPI Targets</h2>
-                                    <div className="flex gap-2" aria-hidden="true">
-                                        <div className="w-2 h-2 rounded-full bg-zinc-700" />
-                                        <div className="w-2 h-2 rounded-full bg-blue-500" />
+                                <div className="pointer-events-none origin-top h-[380px] overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-zinc-950">
+                                    <div className="scale-[0.95] origin-top">
+                                        <AfterDashboard />
                                     </div>
-                                </div>
-
-                                <div className="grid grid-cols-2 gap-3">
-                                    <MetricCard
-                                        icon={ShieldAlert}
-                                        label="Trust"
-                                        value="-25%"
-                                        sub="Support Ticket Volume"
-                                        spotlight="rgba(239, 68, 68, 0.15)"
-                                        hoverBorder="group-hover:border-red-500/30"
-                                    />
-                                    <MetricCard
-                                        icon={Zap}
-                                        label="Velocity"
-                                        value="+40%"
-                                        sub="Primary Flow Completion Rate"
-                                        spotlight="rgba(59, 130, 246, 0.15)"
-                                        hoverBorder="group-hover:border-blue-500/30"
-                                    />
-                                    <MetricCard
-                                        icon={LayoutGrid}
-                                        label="Cognitive"
-                                        value="-60%"
-                                        sub="UI Complexity Score"
-                                        spotlight="rgba(168, 85, 247, 0.15)"
-                                        hoverBorder="group-hover:border-purple-500/30"
-                                    />
-                                    <MetricCard
-                                        icon={PieChart}
-                                        label="Business"
-                                        value="LTV"
-                                        sub="Increased Retention Rate"
-                                        spotlight="rgba(16, 185, 129, 0.15)"
-                                        hoverBorder="group-hover:border-emerald-500/30"
-                                    />
                                 </div>
                             </div>
                         </div>

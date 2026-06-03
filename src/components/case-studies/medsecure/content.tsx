@@ -15,6 +15,62 @@ import { InclusiveDesign } from "@/components/case-studies/medsecure/inclusive-d
 import { JourneyMap } from "@/components/case-studies/medsecure/journey-map";
 import { LiveTransaction } from "@/components/case-studies/medsecure/live-transaction";
 import { HookModel } from "@/components/case-studies/hook-model";
+import { ConceptValidation } from "@/components/case-studies/medsecure/concept-validation";
+import { ExecutiveSummary } from "@/components/case-studies/executive-summary";
+import { Layout, Clock, Wrench } from "lucide-react";
+
+const summaryItems = [
+    {
+        id: "role",
+        icon: Layout,
+        iconBg: "bg-blue-500/10",
+        iconColor: "text-blue-500",
+        spotlight: "rgba(59, 130, 246, 0.10)",
+        hoverBorder: "hover:border-blue-300/50",
+        label: "My Role",
+        content: (
+            <p className="text-lg font-semibold text-zinc-900 leading-snug">
+                Lead Product Designer — shaped the patient-provider UX, offline architecture, and ABDM integration.
+            </p>
+        ),
+    },
+    {
+        id: "timeline",
+        icon: Clock,
+        iconBg: "bg-emerald-500/10",
+        iconColor: "text-emerald-500",
+        spotlight: "rgba(16, 185, 129, 0.10)",
+        hoverBorder: "hover:border-emerald-300/50",
+        label: "Timeline & Scope",
+        content: (
+            <>
+                <p className="text-lg font-semibold text-zinc-900">12 Weeks</p>
+                <p className="text-zinc-400 text-sm font-medium mt-1">2023 · Healthcare Pilot · Delhi NCR</p>
+            </>
+        ),
+    },
+    {
+        id: "tools",
+        icon: Wrench,
+        iconBg: "bg-purple-500/10",
+        iconColor: "text-purple-500",
+        spotlight: "rgba(168, 85, 247, 0.10)",
+        hoverBorder: "hover:border-purple-300/50",
+        label: "Tools",
+        content: (
+            <div className="flex flex-wrap gap-2">
+                {["Figma", "React Native", "Blockchain", "ABDM Guidelines"].map((tool) => (
+                    <span
+                        key={tool}
+                        className="px-3 py-1.5 rounded-full bg-white/70 border border-zinc-200 text-xs font-semibold text-zinc-700 shadow-sm"
+                    >
+                        {tool}
+                    </span>
+                ))}
+            </div>
+        ),
+    },
+];
 
 const learnings = [
     {
@@ -39,6 +95,7 @@ export default function MedSecurePage() {
     return (
         <div className="min-h-screen bg-zinc-50 text-zinc-800 selection:bg-[#005EB8]/30">
             <Hero />
+            <ExecutiveSummary items={summaryItems} />
             <TheCrisis />
 
             {/* Hook Model */}
@@ -55,6 +112,7 @@ export default function MedSecurePage() {
             <InclusiveDesign />
             <Personas />
             <DesignArtifacts />
+            <ConceptValidation />
             <CareCircle />
             <TechnicalArchitecture />
 

@@ -14,12 +14,12 @@ type View = "before" | "after";
 
 // ─── Before: chaos tiles ────────────────────────────────────────────────────
 const beforeTools = [
-    { label: "CRM Tool", icon: Users, color: "text-red-700", bg: "bg-red-50", border: "border-red-200", arrow: "→ email" },
+    { label: "CRM Tool", icon: Users, color: "text-red-800", bg: "bg-red-50", border: "border-red-200", arrow: "→ email" },
     { label: "Email Platform", icon: Mail, color: "text-orange-700", bg: "bg-orange-50", border: "border-orange-200", arrow: "→ Slack" },
     { label: "Analytics Dashboard", icon: BarChart2, color: "text-yellow-700", bg: "bg-yellow-50", border: "border-yellow-200", arrow: "→ spreadsheet" },
-    { label: "Slack Alerts", icon: MessageSquare, color: "text-blue-700", bg: "bg-blue-50", border: "border-blue-200", arrow: "→ CRM" },
+    { label: "Slack Alerts", icon: MessageSquare, color: "text-blue-800", bg: "bg-blue-50", border: "border-blue-200", arrow: "→ CRM" },
     { label: "Data Warehouse", icon: Database, color: "text-purple-700", bg: "bg-purple-50", border: "border-purple-200", arrow: "→ email" },
-    { label: "Manual Spreadsheets", icon: Activity, color: "text-zinc-500", bg: "bg-zinc-50", border: "border-zinc-200", arrow: "→ dashboard" },
+    { label: "Manual Spreadsheets", icon: Activity, color: "text-zinc-600", bg: "bg-zinc-50", border: "border-zinc-200", arrow: "→ dashboard" },
 ];
 
 // ─── After: structured IA tree ────────────────────────────────────────────────
@@ -43,7 +43,7 @@ const iaTree = [
         id: "analytics",
         label: "Analytics",
         icon: BarChart2,
-        color: "text-blue-700",
+        color: "text-blue-800",
         bg: "bg-blue-50",
         border: "border-blue-200",
         accent: "bg-blue-600",
@@ -58,7 +58,7 @@ const iaTree = [
         id: "integrations",
         label: "Integrations",
         icon: Plug,
-        color: "text-emerald-700",
+        color: "text-emerald-800",
         bg: "bg-emerald-50",
         border: "border-emerald-200",
         accent: "bg-emerald-600",
@@ -137,7 +137,7 @@ export function IATree() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="text-lg text-zinc-500 font-medium mb-12 max-w-2xl"
+                    className="text-lg text-zinc-600 font-medium mb-12 max-w-2xl"
                 >
                     IA research revealed users were context-switching between 6 disconnected tools to complete a
                     single workflow. We collapsed everything into a single, hierarchical model.
@@ -162,13 +162,13 @@ export function IATree() {
 
                     <div className="flex items-center gap-3 flex-wrap">
                         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200">
-                            <span className="text-emerald-700 font-black text-sm">68%</span>
-                            <span className="text-emerald-700 text-xs font-medium">fewer navigation steps</span>
+                            <span className="text-emerald-800 font-black text-sm">68%</span>
+                            <span className="text-emerald-800 text-xs font-medium">fewer navigation steps</span>
                         </div>
                         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200">
-                            <span className="text-blue-700 font-black text-sm">6 apps</span>
+                            <span className="text-blue-800 font-black text-sm">6 apps</span>
                             <ArrowRight className="w-3 h-3 text-blue-500" />
-                            <span className="text-blue-700 font-black text-sm">1 dashboard</span>
+                            <span className="text-blue-800 font-black text-sm">1 dashboard</span>
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@ export function IATree() {
                                         </div>
                                         <div className="min-w-0">
                                             <div className={`text-xs font-bold ${tool.color} truncate`}>{tool.label}</div>
-                                            <div className="text-[10px] text-zinc-500 font-mono mt-1 flex items-center gap-1">
+                                            <div className="text-[10px] text-zinc-600 font-mono mt-1 flex items-center gap-1">
                                                 <AlertCircle className="w-2.5 h-2.5 text-red-400 shrink-0" />
                                                 manually {tool.arrow}
                                             </div>
@@ -216,7 +216,7 @@ export function IATree() {
 
                             <div className="p-4 rounded-2xl bg-red-100 border border-red-200 flex items-start gap-3">
                                 <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                                <p className="text-sm text-red-700 font-medium">
+                                <p className="text-sm text-red-800 font-medium">
                                     <span className="font-bold">Result:</span> No single source of truth.
                                     Users spent an average of <span className="font-bold">3.2 hours/day</span> context-switching between tools — zero visibility into workflow status.
                                 </p>
@@ -240,10 +240,10 @@ export function IATree() {
                         >
                             {/* Hint */}
                             <div className="flex items-center gap-2 mb-8">
-                                <p className="text-xs uppercase tracking-widest text-zinc-500 font-bold">
+                                <p className="text-xs uppercase tracking-widest text-zinc-600 font-bold">
                                     Redesigned IA — Simplifai Dashboard
                                 </p>
-                                <div className="ml-auto flex items-center gap-1.5 text-[11px] text-zinc-500 font-medium">
+                                <div className="ml-auto flex items-center gap-1.5 text-[11px] text-zinc-600 font-medium">
                                     <MousePointer2 className="w-3 h-3" />
                                     Click a section to explore
                                 </div>
@@ -301,7 +301,7 @@ export function IATree() {
                                                                     }`}
                                                             >
                                                                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${isOpen ? `bg-white` : "bg-zinc-50 border border-zinc-200"}`}>
-                                                                    <node.icon className={`w-5 h-5 ${isOpen ? node.color : "text-zinc-400"}`} />
+                                                                    <node.icon className={`w-5 h-5 ${isOpen ? node.color : "text-zinc-600"}`} />
                                                                 </div>
                                                                 <span className={`text-xs font-bold ${isOpen ? node.color : "text-zinc-600"}`}>
                                                                     {node.label}
@@ -367,7 +367,7 @@ export function IATree() {
                                 <div className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center mt-0.5 shrink-0">
                                     <span className="text-white text-[10px] font-black">✓</span>
                                 </div>
-                                <p className="text-sm text-emerald-700 font-medium">
+                                <p className="text-sm text-emerald-800 font-medium">
                                     <span className="font-bold">Result:</span> Everything a user needs is accessible within{" "}
                                     <span className="font-bold">2 clicks</span> from the dashboard.
                                     Zero context switching. <span className="font-bold">68% fewer navigation steps</span> measured in usability testing.

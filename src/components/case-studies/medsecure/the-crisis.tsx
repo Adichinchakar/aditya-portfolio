@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "@/lib/motion";
-import { FileX2, Database, Globe, AlertCircle, Lock, HardDrive } from "lucide-react";
+import { FileX2, Database, Globe, AlertCircle, Lock, HardDrive, Lightbulb, ArrowRight } from "lucide-react";
 
 const PROBLEMS = [
     {
@@ -141,6 +141,44 @@ export function TheCrisis() {
                             </cite>
                         </blockquote>
                     </motion.div>
+                </div>
+
+                {/* The Insight Pivot */}
+                <div className="mt-8 bg-zinc-900 p-8 md:p-12 rounded-[2rem] border border-zinc-800 shadow-xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-[80px] pointer-events-none" />
+                    
+                    <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+                        <div className="flex-1">
+                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">The Surface Problem</p>
+                            <h3 className="text-xl font-bold text-white mb-3">"We need a better EHR system for hospitals."</h3>
+                            <p className="text-zinc-400 leading-relaxed text-sm">
+                                The immediate instinct in digital health is to build another, better Electronic Health Record (EHR) system and convince hospitals to switch to it. But asking thousands of fragmented, competing hospitals to abandon their legacy systems and agree on a single standard is a losing battle.
+                            </p>
+                        </div>
+                        
+                        <div className="hidden md:flex items-center justify-center pt-8">
+                            <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 border-4 border-zinc-900 shadow-sm">
+                                <ArrowRight className="w-5 h-5" />
+                            </div>
+                        </div>
+
+                        <div className="flex md:hidden items-center justify-center w-full my-[-1rem]">
+                            <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 border-4 border-zinc-900 shadow-sm">
+                                <ArrowRight className="w-4 h-4 rotate-90" />
+                            </div>
+                        </div>
+
+                        <div className="flex-1 bg-red-500/5 p-6 rounded-2xl border border-red-500/20">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Lightbulb className="w-5 h-5 text-red-400" />
+                                <p className="text-xs font-bold text-red-400 uppercase tracking-widest">The Deep Insight</p>
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-3">Decentralize the record. Empower the patient.</h3>
+                            <p className="text-zinc-300 leading-relaxed text-sm">
+                                We realized the patient is the only entity present at every single medical event. Instead of forcing hospitals to integrate with each other, we give the patient a digital vault. <em>The patient</em> becomes the interoperability layer. MedSecure doesn't replace hospital systems; it bridges them through the user.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

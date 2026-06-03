@@ -12,8 +12,7 @@ import { ProblemStatement } from "@/components/case-studies/simplifai/problem-st
 import { DesignProcess } from "@/components/case-studies/simplifai/design-process";
 import { DesignArtifacts } from "@/components/case-studies/simplifai/design-artifacts";
 import { HookModel } from "@/components/case-studies/hook-model";
-import { MouseEvent } from "react";
-import { cn } from "@/lib/utils";
+import { ExecutiveSummary } from "@/components/case-studies/executive-summary";
 
 const glanceCards = [
     {
@@ -41,7 +40,7 @@ const glanceCards = [
         content: (
             <>
                 <p className="text-lg font-semibold text-zinc-900">2 Years</p>
-                <p className="text-zinc-400 text-sm font-medium mt-1">2021 – 2023 · B2B SaaS · 5+ enterprise clients</p>
+                <p className="text-zinc-600 text-sm font-medium mt-1">2021 – 2023 · B2B SaaS · 5+ enterprise clients</p>
             </>
         ),
     },
@@ -68,44 +67,7 @@ const glanceCards = [
     },
 ];
 
-function GlanceCard({ card }: { card: typeof glanceCards[0] }) {
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
 
-    function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent<HTMLDivElement>) {
-        const { left, top } = currentTarget.getBoundingClientRect();
-        mouseX.set(clientX - left);
-        mouseY.set(clientY - top);
-    }
-
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            onMouseMove={handleMouseMove}
-            className={cn(
-                "group relative overflow-hidden rounded-[2rem] bg-white border border-zinc-200/80 p-8 flex flex-col gap-6 shadow-[0_4px_24px_rgb(0,0,0,0.07)] hover:shadow-[0_8px_32px_rgb(0,0,0,0.12)] transition-all duration-500",
-                card.hoverBorder
-            )}
-        >
-            <motion.div
-                className="pointer-events-none absolute -inset-px rounded-[2rem] opacity-0 transition duration-500 group-hover:opacity-100"
-                style={{
-                    background: useMotionTemplate`radial-gradient(500px circle at ${mouseX}px ${mouseY}px, ${card.spotlight}, transparent 80%)`,
-                }}
-            />
-            <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center ring-1 ring-white/50 shadow-sm backdrop-blur-sm group-hover:scale-110 transition-transform duration-300", card.iconBg)}>
-                <card.icon className={cn("w-6 h-6", card.iconColor)} />
-            </div>
-            <div className="relative z-10">
-                <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-3">{card.label}</h4>
-                {card.content}
-            </div>
-        </motion.div>
-    );
-}
 
 export default function SimplifaiPage() {
     return (
@@ -127,28 +89,7 @@ export default function SimplifaiPage() {
             />
 
             {/* At a Glance */}
-            <section className="pt-16 pb-24 px-6 bg-white border-b border-zinc-100">
-                <div className="container mx-auto max-w-6xl">
-                    <div className="flex items-center gap-3 mb-8">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/60 border border-white/80 text-sm font-semibold text-zinc-600 backdrop-blur-md shadow-sm"
-                        >
-                            <BookOpen className="w-3.5 h-3.5 text-blue-500" />
-                            At a Glance
-                        </motion.div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {glanceCards.map((card) => (
-                            <GlanceCard key={card.id} card={card} />
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <ExecutiveSummary items={glanceCards} />
 
             {/* User Persona & Pain Points */}
             <UserPersonaInteractive />
@@ -167,7 +108,7 @@ export default function SimplifaiPage() {
                     >
                         <p className="text-xs font-mono font-bold text-purple-600 uppercase tracking-[0.2em] mb-4">03 — Design Leadership</p>
                         <h2 className="text-4xl font-black tracking-tighter text-zinc-900 mb-4">Beyond the Screen</h2>
-                        <p className="text-lg text-zinc-500 max-w-2xl">
+                        <p className="text-lg text-zinc-600 max-w-2xl">
                             As the only senior designer on the product team, I owned the design function end-to-end — not just the pixels.
                         </p>
                     </motion.div>

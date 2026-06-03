@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { OrgMapScreen } from "./orbit-ui";
 
 export function Hero() {
     return (
@@ -47,7 +48,7 @@ export function Hero() {
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d0bcff]" />
                             </span>
                             <span className="text-[10px] tracking-[0.2em] font-bold text-[#d0bcff] uppercase">
-                                Spatial UX · Concept · Apple Vision Pro
+                                Spatial Design · Apple Vision Pro · 5 min read
                             </span>
                         </div>
 
@@ -95,41 +96,10 @@ export function Hero() {
                             className="relative p-[1px] rounded-2xl"
                             style={{ background: "linear-gradient(135deg, rgba(208,188,255,0.2) 0%, rgba(14,14,14,0) 60%)" }}
                         >
-                            <div className="bg-white/5 backdrop-blur-3xl rounded-2xl p-10 border border-white/[0.07] shadow-[0_20px_50px_rgba(208,188,255,0.06)]">
-                                {/* Header */}
-                                <div className="flex items-center justify-between mb-12">
-                                    <h2 className="text-[10px] tracking-[0.3em] font-bold text-white/40 uppercase">Projected Impact</h2>
-                                    <div className="flex gap-1.5" aria-hidden="true">
-                                        <div className="w-2 h-2 rounded-full bg-red-500/40" />
-                                        <div className="w-2 h-2 rounded-full bg-yellow-500/40" />
-                                        <div className="w-2 h-2 rounded-full bg-[#d0bcff]/60" />
-                                    </div>
-                                </div>
-
-                                {/* Metrics — clean minimal Stitch style */}
-                                <div className="grid grid-cols-2 gap-x-10 gap-y-10">
-                                    {[
-                                        { value: "60%", label: "Productivity Gain" },
-                                        { value: "40%", label: "Fewer IT Tickets" },
-                                        { value: "3h", label: "Onboarding (vs 3 wks)" },
-                                        { value: "visionOS", label: "Native Platform" },
-                                    ].map((m, i) => (
-                                        <div key={i} className="flex flex-col gap-2 group">
-                                            <span className="text-4xl font-bold text-[#d0bcff] transition-transform duration-500 group-hover:-translate-y-1 leading-none tracking-tight">
-                                                {m.value}
-                                            </span>
-                                            <span className="text-[10px] tracking-widest text-white/40 uppercase leading-tight">{m.label}</span>
-                                            <div className="w-8 h-px bg-[#d0bcff]/20 mt-1" />
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* HUD stripe */}
-                                <div className="mt-12 flex items-center gap-4">
-                                    <div className="h-px flex-grow bg-gradient-to-r from-[#d0bcff]/30 to-transparent" />
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#d0bcff]/50" />
-                                        <span className="text-[9px] tracking-widest text-white/25 uppercase">Enterprise Standard V.01</span>
+                            <div className="bg-white/5 backdrop-blur-3xl rounded-2xl p-6 border border-white/[0.07] shadow-[0_20px_50px_rgba(208,188,255,0.06)]">
+                                <div className="pointer-events-none origin-top h-[380px] overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-zinc-950/50">
+                                    <div className="scale-[1] origin-top h-[380px]">
+                                        <OrgMapScreen />
                                     </div>
                                 </div>
                             </div>

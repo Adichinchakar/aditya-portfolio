@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "@/lib/motion";
 import { TrendingDown, IndianRupee, Users, ShieldCheck, Award, BarChart3, AlertTriangle } from "lucide-react";
+import { AnimatedNumber } from "@/components/ui/animated-number";
 
 const STATS = [
     {
@@ -81,7 +82,9 @@ export function Impact() {
                         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/15 rounded-full blur-[80px]" aria-hidden="true" />
                         <div className="relative z-10">
                             <TrendingDown className="w-10 h-10 text-emerald-400 mb-8" aria-hidden="true" />
-                            <div className="text-8xl font-black tracking-tighter text-emerald-400 mb-2">34%</div>
+                            <div className="text-8xl font-black tracking-tighter text-emerald-400 mb-2">
+                                <AnimatedNumber value={34} />%
+                            </div>
                             <h3 className="text-2xl font-bold mb-3">Reduction in Medical Errors</h3>
                             <p className="text-zinc-400 max-w-md leading-relaxed">
                                 Across pilot hospitals in Delhi NCR and Pune. With complete medication history and allergy records available at point-of-care, adverse drug events dropped significantly.
@@ -98,7 +101,9 @@ export function Impact() {
                         className="bg-[#005EB8] text-white rounded-[2rem] p-10 flex flex-col justify-center"
                     >
                         <IndianRupee className="w-8 h-8 text-blue-100 mb-6" aria-hidden="true" />
-                        <div className="text-5xl font-black mb-2 tracking-tighter">₹6,200</div>
+                        <div className="text-5xl font-black mb-2 tracking-tighter">
+                            ₹<AnimatedNumber value={6200} />
+                        </div>
                         <p className="text-blue-100 font-medium">Average patient savings per year from eliminated duplicate diagnostics.</p>
                     </motion.div>
 
@@ -124,7 +129,9 @@ export function Impact() {
                         className="bg-amber-50 border border-amber-200 rounded-[2rem] p-10 flex flex-col justify-center"
                     >
                         <Users className="w-8 h-8 text-amber-700 mb-6" aria-hidden="true" />
-                        <div className="text-5xl font-black text-amber-900 mb-2 tracking-tight">1,200</div>
+                        <div className="text-5xl font-black text-amber-900 mb-2 tracking-tight">
+                            <AnimatedNumber value={1200} />
+                        </div>
                         <p className="text-amber-800 font-medium text-sm">Patients onboarded in 6 months. Zero required in-person enrollment — ABHA ID only.</p>
                     </motion.div>
 

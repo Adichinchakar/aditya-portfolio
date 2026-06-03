@@ -40,7 +40,7 @@ export function SystemSpecs() {
                     <h2 className="text-2xl font-bold font-mono tracking-tight text-zinc-900 mb-4 uppercase">
                         System Specifications
                     </h2>
-                    <p className="text-zinc-500 max-w-xl">
+                    <p className="text-zinc-600 max-w-xl">
                         A distributed architecture designed for high-concurrency accessibility auditing and real-time design validation. Each choice was made deliberately.
                     </p>
                 </motion.div>
@@ -56,7 +56,7 @@ export function SystemSpecs() {
                             className="border-t border-zinc-200 pt-6"
                         >
                             <h3 className="text-lg font-semibold text-zinc-900 mb-1">{spec.category}</h3>
-                            <p className="text-xs text-zinc-500 mb-4 leading-relaxed">{spec.rationale}</p>
+                            <p className="text-xs text-zinc-600 mb-4 leading-relaxed">{spec.rationale}</p>
                             <div className="flex flex-wrap gap-2">
                                 {spec.technologies.map(tech => (
                                     <motion.span

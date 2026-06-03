@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import { AlertTriangle, Layers, EyeOff, Clock } from "lucide-react";
+import { AlertTriangle, Layers, EyeOff, Clock, Lightbulb, ArrowRight } from "lucide-react";
 
 const problems = [
     {
@@ -45,7 +45,7 @@ export function ProblemStatement() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-base text-zinc-500 font-medium mb-8"
+                    className="text-base text-zinc-600 font-medium mb-8"
                 >
                     Simplifai is an Oslo-based AI automation company. I joined as their first and only designer.
                 </motion.p>
@@ -58,7 +58,7 @@ export function ProblemStatement() {
                     transition={{ duration: 0.5 }}
                     className="flex items-center gap-2.5 mb-8"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/8 border border-red-500/20 text-red-700 text-sm font-semibold backdrop-blur-md">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/8 border border-red-500/20 text-red-800 text-sm font-semibold backdrop-blur-md">
                         <AlertTriangle className="w-3.5 h-3.5" />
                         The Challenge
                     </div>
@@ -82,7 +82,7 @@ export function ProblemStatement() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-lg text-zinc-500 font-medium mb-6 max-w-2xl"
+                    className="text-lg text-zinc-600 font-medium mb-6 max-w-2xl"
                 >
                     Simplifai needed a complete reimagination of its core workflow product —
                     turning a developer-only tool into a platform any operations team could own.
@@ -96,24 +96,24 @@ export function ProblemStatement() {
                     transition={{ duration: 0.5, delay: 0.15 }}
                     className="p-6 rounded-2xl bg-zinc-900 text-white mb-16 max-w-3xl"
                 >
-                    <p className="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest mb-3">The Before State</p>
+                    <p className="text-xs font-mono font-bold text-zinc-600 uppercase tracking-widest mb-3">The Before State</p>
                     <p className="text-base text-zinc-200 leading-relaxed mb-4">
                         When I joined, building a basic automation workflow required a developer. The UI was built for engineers — ops managers, who would eventually own these workflows, couldn&apos;t read the interface without help. Every change request became a support ticket. Enterprise clients with tight SLAs were raising issues daily.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <div className="text-center">
                             <p className="text-2xl font-black text-red-400">5+</p>
-                            <p className="text-xs text-zinc-400 font-semibold">support tickets per client/week<br />for routine config changes</p>
+                            <p className="text-xs text-zinc-600 font-semibold">support tickets per client/week<br />for routine config changes</p>
                         </div>
                         <div className="w-px bg-zinc-700" />
                         <div className="text-center">
                             <p className="text-2xl font-black text-amber-400">3 days</p>
-                            <p className="text-xs text-zinc-400 font-semibold">avg. time for ops team to onboard<br />to a new automation workflow</p>
+                            <p className="text-xs text-zinc-600 font-semibold">avg. time for ops team to onboard<br />to a new automation workflow</p>
                         </div>
                         <div className="w-px bg-zinc-700" />
                         <div className="text-center">
                             <p className="text-2xl font-black text-zinc-300">0</p>
-                            <p className="text-xs text-zinc-400 font-semibold">self-service actions<br />available to non-technical users</p>
+                            <p className="text-xs text-zinc-600 font-semibold">self-service actions<br />available to non-technical users</p>
                         </div>
                     </div>
                 </motion.div>
@@ -134,10 +134,48 @@ export function ProblemStatement() {
                             </div>
                             <div>
                                 <h3 className="text-base font-bold text-zinc-900 mb-2">{problem.label}</h3>
-                                <p className="text-sm text-zinc-500 leading-relaxed font-medium">{problem.description}</p>
+                                <p className="text-sm text-zinc-600 leading-relaxed font-medium">{problem.description}</p>
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                {/* The Insight Pivot */}
+                <div className="mt-16 bg-white p-8 md:p-12 rounded-[2rem] border border-zinc-200 shadow-xl shadow-zinc-200/20 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-[80px] pointer-events-none" />
+                    
+                    <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+                        <div className="flex-1">
+                            <p className="text-xs font-bold text-zinc-600 uppercase tracking-widest mb-4">The Surface Problem</p>
+                            <h3 className="text-xl font-bold text-zinc-900 mb-3">"The UI is too complicated for non-engineers."</h3>
+                            <p className="text-zinc-600 leading-relaxed text-sm">
+                                The immediate assumption was that we just needed to simplify the interface—bigger buttons, fewer options, and better tooltips. But that wouldn't solve the core bottleneck: operations teams still had to translate their business logic into a structure that the system (and the developers) could understand.
+                            </p>
+                        </div>
+                        
+                        <div className="hidden md:flex items-center justify-center pt-8">
+                            <div className="w-12 h-12 rounded-full bg-purple-200 flex items-center justify-center text-purple-600 border-4 border-white shadow-sm">
+                                <ArrowRight className="w-5 h-5" />
+                            </div>
+                        </div>
+
+                        <div className="flex md:hidden items-center justify-center w-full my-[-1rem]">
+                            <div className="w-10 h-10 rounded-full bg-purple-200 flex items-center justify-center text-purple-600 border-4 border-white shadow-sm">
+                                <ArrowRight className="w-4 h-4 rotate-90" />
+                            </div>
+                        </div>
+
+                        <div className="flex-1 bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Lightbulb className="w-5 h-5 text-purple-600" />
+                                <p className="text-xs font-bold text-purple-600 uppercase tracking-widest">The Deep Insight</p>
+                            </div>
+                            <h3 className="text-xl font-bold text-zinc-900 mb-3">The mental model was broken, not just the UI.</h3>
+                            <p className="text-zinc-700 leading-relaxed text-sm">
+                                We didn't need to simplify a developer tool for business users. We needed to <em>re-architect</em> the system to map directly to how operations teams already mapped their processes (whiteboards, flowcharts, step-by-step instructions) rather than how code executes.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

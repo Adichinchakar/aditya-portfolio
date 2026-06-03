@@ -78,7 +78,7 @@ export function Learnings() {
                     <p className="text-xl font-bold max-w-2xl leading-relaxed mb-4">
                         Aulys is still evolving. The CI/CD platform is in active development — and with 30 beta designers giving live feedback, it&apos;s going in the right direction.
                     </p>
-                    <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
+                    <p className="text-sm text-zinc-600 max-w-2xl leading-relaxed">
                         What Aulys proved: a solo designer-founder, using AI tools for execution, can ship a real accessibility product with real users — in less time than most teams take to write a PRD. The constraint wasn&apos;t capability. It was knowing exactly what problem to solve and refusing to scope-creep past it.
                     </p>
                 </motion.div>

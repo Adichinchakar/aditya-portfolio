@@ -104,7 +104,7 @@ function BeforeDashboard() {
     );
 }
 
-function AfterDashboard() {
+export function AfterDashboard() {
     return (
         <BrowserFrame url="neobank.app/home" label="After — Trust-First Redesign" variant="after">
             {/* Clean 4-item nav */}

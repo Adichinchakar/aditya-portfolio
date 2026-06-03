@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "@/lib/motion";
 import { ArrowUpRight } from "lucide-react";
+import { AnimatedNumber } from "@/components/ui/animated-number";
 
 export function Results() {
     return (
@@ -36,19 +37,19 @@ export function Results() {
                                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
                                         <span className="text-blue-100 font-medium">Support Ticket Volume</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
-                                            -25% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
+                                            -<AnimatedNumber value={25} />% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
                                         <span className="text-blue-100 font-medium">Primary Flow Completion Rate</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
-                                            +40% <ArrowUpRight className="w-4 h-4 text-emerald-400" />
+                                            +<AnimatedNumber value={40} />% <ArrowUpRight className="w-4 h-4 text-emerald-400" />
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center border-b border-white/10 pb-4">
                                         <span className="text-blue-100 font-medium">UI Complexity Score</span>
                                         <span className="text-2xl font-black text-white flex items-center gap-1">
-                                            -60% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
+                                            -<AnimatedNumber value={60} />% <ArrowUpRight className="w-4 h-4 text-emerald-400 rotate-180" />
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">

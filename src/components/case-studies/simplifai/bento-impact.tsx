@@ -94,7 +94,7 @@ function BentoCard({ card, delay }: { card: typeof cards[0]; delay: number }) {
                     <div className={cn("p-3 rounded-2xl ring-1 ring-white/50", card.iconBg)}>
                         <card.icon className={cn("w-5 h-5", card.iconColor)} />
                     </div>
-                    <span className="text-zinc-500 font-bold tracking-widest uppercase text-xs">{card.label}</span>
+                    <span className="text-zinc-600 font-bold tracking-widest uppercase text-xs">{card.label}</span>
                 </div>
 
                 <h3 className="text-6xl md:text-7xl font-black text-zinc-900 mb-2 tracking-tighter">
@@ -153,7 +153,7 @@ export function BentoImpact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="text-base text-zinc-500 max-w-2xl leading-relaxed"
+                        className="text-base text-zinc-600 max-w-2xl leading-relaxed"
                     >
                         The before: enterprise ops managers raised 5+ support tickets per week for routine workflow changes. The after: they configured, monitored, and debugged automations without touching engineering. That shift is what these numbers measure.
                     </motion.p>
@@ -167,7 +167,7 @@ export function BentoImpact() {
                 </div>
 
                 {/* Methodology note */}
-                <p className="text-xs text-zinc-400 text-center mb-6">
+                <p className="text-xs text-zinc-600 text-center mb-6">
                     * 40% onboarding time reduction measured via pre/post Maze unmoderated testing (n=47 sessions, Q2–Q3 2022). 73% adoption rate tracked via Mixpanel event analytics comparing 90-day cohorts pre- and post-redesign launch. 28% adoption jump measured within 3 weeks of switching from canvas-first to linear step-builder architecture (Q4 2022 cohort).
                 </p>
 
@@ -185,7 +185,7 @@ export function BentoImpact() {
                                 <div className="p-3 rounded-2xl bg-emerald-500/10 ring-1 ring-white/50">
                                     <Code className="w-5 h-5 text-emerald-500" />
                                 </div>
-                                <span className="text-zinc-500 font-bold tracking-widest uppercase text-xs">Scalability</span>
+                                <span className="text-zinc-600 font-bold tracking-widest uppercase text-xs">Scalability</span>
                             </div>
                             <h3 className="text-3xl font-black tracking-tighter text-zinc-900 mb-4">
                                 Custom Design System
@@ -205,17 +205,17 @@ export function BentoImpact() {
                                 <div className="w-3 h-3 rounded-full bg-red-500/60" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
                                 <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                                <span className="ml-2 text-xs text-zinc-500 font-mono">theme.ts</span>
+                                <span className="ml-2 text-xs text-zinc-600 font-mono">theme.ts</span>
                             </div>
                             <div className="p-5 font-mono text-xs leading-6">
                                 <p><span className="text-purple-400">export const </span><span className="text-yellow-300">theme</span><span className="text-zinc-300"> = {"{"}</span></p>
                                 <p className="pl-4"><span className="text-blue-400">colors</span><span className="text-zinc-300">: {"{"}</span></p>
-                                <p className="pl-8"><span className="text-blue-300">primary</span><span className="text-zinc-400">: </span><span className="text-green-400">"#6366f1"</span><span className="text-zinc-400">,</span></p>
-                                <p className="pl-8"><span className="text-blue-300">accent</span><span className="text-zinc-400">: </span><span className="text-green-400">"#8b5cf6"</span><span className="text-zinc-400">,</span></p>
-                                <p className="pl-4"><span className="text-zinc-300">{"}"}</span><span className="text-zinc-400">,</span></p>
+                                <p className="pl-8"><span className="text-blue-300">primary</span><span className="text-zinc-600">: </span><span className="text-green-400">"#6366f1"</span><span className="text-zinc-600">,</span></p>
+                                <p className="pl-8"><span className="text-blue-300">accent</span><span className="text-zinc-600">: </span><span className="text-green-400">"#8b5cf6"</span><span className="text-zinc-600">,</span></p>
+                                <p className="pl-4"><span className="text-zinc-300">{"}"}</span><span className="text-zinc-600">,</span></p>
                                 <p className="pl-4"><span className="text-blue-400">spacing</span><span className="text-zinc-300">: {"{"}</span></p>
-                                <p className="pl-8"><span className="text-blue-300">sm</span><span className="text-zinc-400">: </span><span className="text-orange-400">4</span><span className="text-zinc-600">, // 0.25rem</span></p>
-                                <p className="pl-8"><span className="text-blue-300">md</span><span className="text-zinc-400">: </span><span className="text-orange-400">8</span><span className="text-zinc-600">, // 0.5rem</span></p>
+                                <p className="pl-8"><span className="text-blue-300">sm</span><span className="text-zinc-600">: </span><span className="text-orange-400">4</span><span className="text-zinc-600">, // 0.25rem</span></p>
+                                <p className="pl-8"><span className="text-blue-300">md</span><span className="text-zinc-600">: </span><span className="text-orange-400">8</span><span className="text-zinc-600">, // 0.5rem</span></p>
                                 <p className="pl-4"><span className="text-zinc-300">{"}"}</span></p>
                                 <p><span className="text-zinc-300">{"}"}</span></p>
                             </div>

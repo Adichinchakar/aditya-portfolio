@@ -35,7 +35,7 @@ export function TheStory() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.18 }}
-                        className="text-sm text-zinc-400 max-w-xl mx-auto"
+                        className="text-sm text-zinc-600 max-w-xl mx-auto"
                     >
                         I directed AI tools for all engineering execution — compressing what would have been a 6-month MVP into 10 weeks. Every product decision, architecture choice, and UX direction was mine. The AI was the builder; I was the product owner.
                     </motion.p>

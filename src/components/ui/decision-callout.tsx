@@ -10,7 +10,7 @@ export function DecisionCallout({ chose, rejected, why }: DecisionCalloutProps) 
     return (
         <div className="my-10 rounded-2xl border border-zinc-200 bg-zinc-50 overflow-hidden">
             <div className="px-6 py-3 border-b border-zinc-200 bg-white">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400">Key Decision</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600">Key Decision</span>
             </div>
             <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-zinc-200">
                 <div className="p-5">

@@ -197,7 +197,7 @@ function PhoneFrame({ headerBg = BLUE, children }: { headerBg?: string; children
 }
 
 // ── Screen 1: Patient Home ───────────────────────────────────────────────────
-function PatientHome() {
+export function PatientHome() {
     const records = [
         { Icon: DropletIcon, iconBg: "#fce7e7", iconColor: "#f87171", name: "Blood Test", org: "Apollo Hospitals", date: "15 Mar", badge: "New", badgeBg: "#dcfce7", badgeColor: "#15803d" },
         { Icon: PillIcon, iconBg: "#fefce8", iconColor: "#ca8a04", name: "Prescription", org: "Dr. Mehta Clinic", date: "10 Mar", badge: "Viewed", badgeBg: "#f1f5f9", badgeColor: "#64748b" },

@@ -3,6 +3,7 @@ import { motion, useMotionTemplate, useMotionValue } from "@/lib/motion";
 import { ArrowLeft, Clock, Users } from "lucide-react";
 import Link from "next/link";
 import { MouseEvent } from "react";
+import { BrowserFrame, FlowBuilder } from "./simplifai-ui";
 
 function MetricCard({
     icon: Icon,
@@ -44,10 +45,10 @@ function MetricCard({
                     <div className="p-2 rounded-lg bg-zinc-100/60 group-hover:bg-white/80 transition-colors">
                         <Icon className="w-5 h-5 text-zinc-600" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">{label}</span>
+                    <span className="text-xs font-mono text-zinc-600 uppercase tracking-widest">{label}</span>
                 </div>
                 <div className="text-4xl font-black text-zinc-900 mb-1 tracking-tighter">{value}</div>
-                <div className="text-sm text-zinc-500 font-medium">{sub}</div>
+                <div className="text-sm text-zinc-600 font-medium">{sub}</div>
             </div>
         </div>
     );
@@ -61,7 +62,7 @@ export function Hero() {
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/6 rounded-full blur-[120px] pointer-events-none -z-10" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <Link href="/work" className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 mb-12 transition-colors group">
+                <Link href="/work" className="inline-flex items-center gap-2 text-zinc-600 hover:text-zinc-900 mb-12 transition-colors group">
                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     <span className="text-sm font-semibold tracking-wide">Back to Case Studies</span>
                 </Link>
@@ -78,21 +79,21 @@ export function Hero() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500" />
                             </span>
-                            B2B SaaS · Enterprise AI · 2 Years
+                            B2B SaaS · Enterprise AI · 2 Years · 8 min read
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
                             Redesigning the AI Workflow
                             <br />
-                            <span className="text-zinc-500 font-bold">
+                            <span className="text-zinc-600 font-bold">
                                 for Non-Technical Teams.
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-zinc-500 max-w-lg mb-3 leading-relaxed font-medium">
+                        <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-3 leading-relaxed font-medium">
                             Simplifai builds AI automation for enterprise operations — teams that need complex RPA workflows without writing code. I led product design for 2 years across 5+ enterprise clients, reshaping how non-technical users build, monitor, and debug AI agents.
                         </p>
-                        <p className="text-sm text-zinc-400 max-w-lg mb-10 leading-relaxed">
+                        <p className="text-sm text-zinc-600 max-w-lg mb-10 leading-relaxed">
                             The core challenge: when an RPA workflow fails at 2am, who does the ops manager call — and what do they even look at? Designing for that moment defined the product.
                         </p>
                     </motion.div>
@@ -105,33 +106,13 @@ export function Hero() {
                         className="relative"
                     >
                         <div className="relative rounded-[2rem] border border-white/50 bg-white/30 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.1)]">
-                            <div className="bg-zinc-50/60 rounded-[1.5rem] p-8 border border-white/60 backdrop-blur-sm">
-                                <div className="flex items-center justify-between mb-8">
-                                    <h3 className="text-zinc-900 font-bold tracking-tight">Impact Overview</h3>
-                                    <div className="flex gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-red-400/40" />
-                                        <div className="w-2 h-2 rounded-full bg-yellow-400/40" />
-                                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                            <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm">
+                                <div className="pointer-events-none origin-top h-[380px] overflow-hidden rounded-xl border border-white/10 shadow-2xl">
+                                    <div className="scale-[0.95] origin-top">
+                                        <BrowserFrame url="app.simplifai.ai/flows/lead-qualification">
+                                            <FlowBuilder />
+                                        </BrowserFrame>
                                     </div>
-                                </div>
-
-                                <div className="grid gap-4">
-                                    <MetricCard
-                                        icon={Clock}
-                                        label="Efficiency"
-                                        value="40%"
-                                        sub="Onboarding time reduction · Maze n=47"
-                                        spotlight="rgba(168, 85, 247, 0.12)"
-                                        hoverBorder="group-hover:border-purple-500/30"
-                                    />
-                                    <MetricCard
-                                        icon={Users}
-                                        label="Adoption"
-                                        value="73%"
-                                        sub="User adoption increase · Mixpanel cohort"
-                                        spotlight="rgba(59, 130, 246, 0.12)"
-                                        hoverBorder="group-hover:border-blue-500/30"
-                                    />
                                 </div>
                             </div>
                         </div>

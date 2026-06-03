@@ -116,7 +116,7 @@ export default function InfosysPage() {
                             </motion.div>
                         ))}
                     </div>
-                    <p className="text-xs text-zinc-600 mt-6">
+                    <p className="text-xs text-zinc-400 mt-6">
                         * Assessment time reduction: time-on-task study, n=28 teachers, pre/post rubric workflow. Acceptance rate A/B test: n=84 sessions, Q3 2024. Drop-off reduction: progressive reveal vs. spinner, A/B, same cohort.
                     </p>
                     <motion.div
@@ -193,11 +193,11 @@ export default function InfosysPage() {
                             viewport={{ once: true }}
                             className="p-8 rounded-[2rem] bg-zinc-950 border border-white/8"
                         >
-                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">The Problem</p>
+                            <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4">The Problem</p>
                             <p className="text-base text-zinc-300 leading-relaxed mb-4">
                                 A project manager in Bangalore needs someone with React + financial domain experience available in 3 weeks. That person exists in Mumbai. There is no system that surfaces them. The PM posts the role externally instead.
                             </p>
-                            <p className="text-sm text-zinc-500 leading-relaxed">
+                            <p className="text-sm text-zinc-400 leading-relaxed">
                                 This happens thousands of times a year — not from lack of talent, but from a design problem: the internal talent system was built for HR record-keeping, not for managers who think in terms of skills, availability, and project fit.
                             </p>
                         </motion.div>
@@ -209,7 +209,7 @@ export default function InfosysPage() {
                             transition={{ delay: 0.1 }}
                             className="p-8 rounded-[2rem] bg-zinc-950 border border-white/8"
                         >
-                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">The Design Challenge</p>
+                            <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4">The Design Challenge</p>
                             <p className="text-sm text-zinc-400 leading-relaxed mb-4">Four personas. One system. Completely different mental models:</p>
                             <div className="space-y-3">
                                 {[
@@ -220,7 +220,7 @@ export default function InfosysPage() {
                                 ].map((p, i) => (
                                     <div key={i} className="flex items-start gap-3">
                                         <span className="text-xs font-bold text-indigo-400 shrink-0 pt-0.5 w-16">{p.role}</span>
-                                        <p className="text-xs text-zinc-500 leading-relaxed">{p.need}</p>
+                                        <p className="text-xs text-zinc-400 leading-relaxed">{p.need}</p>
                                     </div>
                                 ))}
                             </div>
@@ -298,7 +298,7 @@ export default function InfosysPage() {
                                 <h3 className={`text-base font-bold ${item.accentColor}`}>{item.challenge}</h3>
                                 <p className="text-sm text-zinc-400 leading-relaxed flex-1">{item.context}</p>
                                 <div className="pt-4 border-t border-white/5">
-                                    <p className="text-xs text-zinc-500 font-semibold uppercase tracking-widest mb-1">Outcome</p>
+                                    <p className="text-xs text-zinc-400 font-semibold uppercase tracking-widest mb-1">Outcome</p>
                                     <p className="text-sm text-zinc-300 font-medium">{item.outcome}</p>
                                 </div>
                             </motion.div>
@@ -344,7 +344,7 @@ export default function InfosysPage() {
                                         <div className="w-3 h-3 rounded-full bg-emerald-500/60" />
                                     </div>
                                     <div className="flex-1 mx-4">
-                                        <div className="bg-zinc-800 rounded-md px-3 py-1 text-xs text-zinc-500 font-mono max-w-xs mx-auto text-center">
+                                        <div className="bg-zinc-800 rounded-md px-3 py-1 text-xs text-zinc-400 font-mono max-w-xs mx-auto text-center">
                                             imagine.infosys.com/rubric-generator
                                         </div>
                                     </div>
@@ -362,7 +362,7 @@ export default function InfosysPage() {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                                 />
                             </div>
-                            <p className="text-sm text-zinc-500 mt-3 ml-1">
+                            <p className="text-sm text-zinc-400 mt-3 ml-1">
                                 AI Rubric Generator — generates assessment criteria from a learning objective in seconds, with contextual AI suggestions.
                             </p>
                         </motion.div>
@@ -383,7 +383,7 @@ export default function InfosysPage() {
                                         <div className="w-3 h-3 rounded-full bg-emerald-500/60" />
                                     </div>
                                     <div className="flex-1 mx-4">
-                                        <div className="bg-zinc-800 rounded-md px-3 py-1 text-xs text-zinc-500 font-mono max-w-xs mx-auto text-center">
+                                        <div className="bg-zinc-800 rounded-md px-3 py-1 text-xs text-zinc-400 font-mono max-w-xs mx-auto text-center">
                                             imagine.infosys.com/recommendations
                                         </div>
                                     </div>
@@ -401,7 +401,7 @@ export default function InfosysPage() {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                                 />
                             </div>
-                            <p className="text-sm text-zinc-500 mt-3 ml-1">
+                            <p className="text-sm text-zinc-400 mt-3 ml-1">
                                 Adaptive Recommendation Engine — surfaces personalised content per student based on ML-identified skill gaps.
                             </p>
                         </motion.div>
@@ -469,11 +469,11 @@ export default function InfosysPage() {
                                     <div className="text-sm font-semibold text-zinc-200">{item.label}</div>
                                 </div>
                                 <div>
-                                    <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-1">Finding</div>
+                                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-1">Finding</div>
                                     <p className="text-sm text-zinc-400 leading-relaxed">{item.finding}</p>
                                 </div>
                                 <div>
-                                    <div className="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-1">Decision</div>
+                                    <div className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-1">Decision</div>
                                     <p className="text-sm text-zinc-300 font-medium leading-relaxed">{item.decision}</p>
                                 </div>
                             </motion.div>

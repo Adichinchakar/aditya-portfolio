@@ -47,7 +47,7 @@ function MetricCard({
                         <Icon className="w-4 h-4 text-zinc-600" aria-hidden="true" />
                     </div>
                     {/* aria-hidden on decorative label — the value itself conveys meaning */}
-                    <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest" aria-hidden="true">{label}</span>
+                    <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest" aria-hidden="true">{label}</span>
                 </div>
                 <div className="text-3xl font-black text-zinc-900 mb-0.5 tracking-tighter">{value}</div>
                 <div className="text-xs text-zinc-600 font-medium">{sub}</div>
@@ -94,7 +94,7 @@ export function Hero() {
                         {/* H1 — singular on this page */}
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-6 leading-[1.05]">
                             Aulys:<br />
-                            <span className="text-zinc-500 font-bold">
+                            <span className="text-zinc-600 font-bold">
                                 AI Accessibility, Inside Figma.
                             </span>
                         </h1>
@@ -102,7 +102,7 @@ export function Hero() {
                         <p className="text-lg md:text-xl text-zinc-600 max-w-lg mb-3 leading-relaxed font-medium">
                             96.3% of the web fails basic accessibility. I built Aulys to fix that at the source — a real-time WCAG 2.2 scanner embedded directly in Figma, with AI-powered one-click remediation.
                         </p>
-                        <p className="text-sm text-zinc-500 max-w-lg mb-6 leading-relaxed">
+                        <p className="text-sm text-zinc-600 max-w-lg mb-6 leading-relaxed">
                             Product strategy, UX, and all decisions are mine. I directed AI tools for execution — compressing a 6-month MVP to 10 weeks without sacrificing depth.
                         </p>
 

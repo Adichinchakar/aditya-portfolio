@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { ArrowLeft, Shield, AlertTriangle, Wifi } from "lucide-react";
+import { PatientHome } from "./medsecure-ui";
 
 const CRISIS_STATS = [
     {
@@ -67,7 +68,7 @@ export function Hero() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#005EB8] opacity-75 motion-reduce:animate-none" />
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#005EB8]" />
                             </span>
-                            Product Concept · 0→1 Design
+                            Product Concept · 0→1 Design · 5 min read
                         </div>
 
                         <div className="p-4 rounded-xl bg-[#005EB8]/8 border border-[#005EB8]/20 text-sm text-[#005EB8] font-medium mb-6">
@@ -120,40 +121,9 @@ export function Hero() {
                         aria-label="India healthcare crisis statistics"
                     >
                         <div className="relative rounded-[2rem] border border-white/50 bg-white/30 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.1)]">
-                            <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm">
-                                <div className="flex items-center justify-between mb-6">
-                                    <h2 className="text-zinc-900 font-bold tracking-tight text-sm">India Healthcare Crisis</h2>
-                                    <div className="flex gap-1.5" aria-hidden="true">
-                                        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                                    </div>
-                                </div>
-
-                                <div className="space-y-4">
-                                    {CRISIS_STATS.map((stat) => (
-                                        <div
-                                            key={stat.value}
-                                            className={`flex items-center gap-4 p-4 rounded-2xl border ${stat.border} ${stat.bg}`}
-                                        >
-                                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-white/60`}>
-                                                <stat.icon className={`w-5 h-5 ${stat.color}`} aria-hidden="true" />
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <div className="text-2xl font-black text-zinc-900 tracking-tighter leading-none">
-                                                    {stat.value}
-                                                </div>
-                                                <div className="text-xs font-bold text-zinc-700 mt-0.5">{stat.label}</div>
-                                                <div className="text-xs text-zinc-500 font-medium">{stat.sub}</div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className="mt-6 pt-4 border-t border-zinc-200">
-                                    <p className="text-xs text-zinc-500 font-medium">
-                                        Source: Government of India Health Report · CERT-In 2024 · World Bank
-                                    </p>
+                            <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm flex justify-center items-center">
+                                <div className="scale-[0.8] origin-center">
+                                    <PatientHome />
                                 </div>
                             </div>
                         </div>

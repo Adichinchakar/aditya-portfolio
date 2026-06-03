@@ -53,6 +53,13 @@ const CASE_STUDIES: Record<string, {
         metric: "70% reduction in assessment time",
         accent: "#8b5cf6",
     },
+    orbit: {
+        title: "Spatial Onboarding",
+        company: "Orbit",
+        category: "Apple Vision Pro · AI",
+        metric: "3 weeks → 3 hours context-building",
+        accent: "#ec4899",
+    },
 };
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {

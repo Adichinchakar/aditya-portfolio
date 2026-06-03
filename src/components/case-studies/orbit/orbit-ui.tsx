@@ -23,7 +23,7 @@ function Waveform({ color = "#d0bcff", bars = 5, height = 14 }: { color?: string
 }
 
 /* ─── Screen 1: Spatial Org Map ─────────────────────── */
-function OrgMapScreen() {
+export function OrgMapScreen() {
     const teams = [
         { name: "Engineering", count: "12 members", x: 50, y: 44, focused: true, color: "#d0bcff" },
         { name: "Design", count: "8 members", x: 22, y: 28, focused: false, color: "#a78bfa" },

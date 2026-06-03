@@ -73,11 +73,11 @@ export function HookModel({
                         </div>
                         <div className="space-y-4 flex-1">
                             <div>
-                                <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1.5">External</div>
+                                <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-1.5">External</div>
                                 <p className="text-sm text-zinc-300 leading-relaxed font-medium">{external}</p>
                             </div>
                             <div className="border-t border-white/5 pt-4">
-                                <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1.5">Internal</div>
+                                <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-1.5">Internal</div>
                                 <p className="text-sm text-zinc-300 leading-relaxed font-medium">{internal}</p>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ export function HookModel({
                             <div className={`text-xs font-bold uppercase tracking-widest ${accentColor}`}>Action</div>
                         </div>
                         <div className="flex-1">
-                            <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1.5">Simplest behavior</div>
+                            <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-1.5">Simplest behavior</div>
                             <p className="text-sm text-zinc-300 leading-relaxed font-medium">{action}</p>
                         </div>
                         <div className="text-[10px] text-zinc-600 italic">Friction removed by design</div>
@@ -103,7 +103,7 @@ export function HookModel({
                             <div className={`text-xs font-bold uppercase tracking-widest ${accentColor}`}>Variable Reward</div>
                         </div>
                         <div className="flex-1">
-                            <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1.5">Unpredictable outcome</div>
+                            <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-1.5">Unpredictable outcome</div>
                             <p className="text-sm text-zinc-300 leading-relaxed font-medium">{reward}</p>
                         </div>
                         <div className="text-[10px] text-zinc-600 italic">Variability drives return visits</div>
@@ -116,7 +116,7 @@ export function HookModel({
                             <div className={`text-xs font-bold uppercase tracking-widest ${accentColor}`}>Investment</div>
                         </div>
                         <div className="flex-1">
-                            <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1.5">What raises switching cost</div>
+                            <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-1.5">What raises switching cost</div>
                             <p className="text-sm text-zinc-300 leading-relaxed font-medium">{investment}</p>
                         </div>
                         <div className="text-[10px] text-zinc-600 italic">Loads the next trigger</div>

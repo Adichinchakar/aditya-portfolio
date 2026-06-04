@@ -238,21 +238,9 @@ function RoleMatcher() {
 export function Hero() {
     const [isContactSheetOpen, setIsContactSheetOpen] = useState(false);
 
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    const springX = useSpring(mouseX, { stiffness: 50, damping: 20 });
-    const springY = useSpring(mouseY, { stiffness: 50, damping: 20 });
-
     useEffect(() => {
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        const handleMouseMove = (e: MouseEvent) => {
-            mouseX.set((e.clientX / window.innerWidth - 0.5) * 20);
-            mouseY.set((e.clientY / window.innerHeight - 0.5) * 20);
-        };
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, [mouseX, mouseY]);
+        // Removed mouse move parallax for performance
+    }, []);
 
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-24 pb-32 overflow-hidden selection:bg-blue-100 bg-background">
@@ -260,24 +248,10 @@ export function Hero() {
             {/* Grid */}
             <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:32px_32px] opacity-40" />
 
-            {/* Floating orbs — hidden for reduced motion, decorative only */}
-            <motion.div
-                aria-hidden="true"
-                style={{
-                    x: useTransform(springX, (v) => v * -2),
-                    y: useTransform(springY, (v) => v * -2),
-                }}
-                className="motion-reduce:hidden absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-300/40 rounded-full blur-[130px] -z-10 pointer-events-none mix-blend-multiply"
-            />
-            <motion.div
-                aria-hidden="true"
-                style={{
-                    x: useTransform(springX, (v) => v * 2),
-                    y: useTransform(springY, (v) => v * 2),
-                }}
-                className="motion-reduce:hidden absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[700px] h-[700px] bg-blue-300/30 rounded-full blur-[140px] -z-10 pointer-events-none mix-blend-multiply"
-            />
-            <div aria-hidden="true" className="motion-reduce:hidden absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-rose-200/30 rounded-full blur-[100px] -z-10 pointer-events-none mix-blend-multiply" />
+            {/* Static Ambient Gradients — Optimized for Performance (No heavy blurs or mix-blend-modes) */}
+            <div className="absolute top-0 left-1/4 w-[50vw] h-[50vw] bg-violet-200/20 rounded-full blur-3xl -z-10 pointer-events-none transform -translate-y-1/2 -translate-x-1/2" aria-hidden="true" />
+            <div className="absolute bottom-0 right-1/4 w-[60vw] h-[60vw] bg-blue-200/20 rounded-full blur-3xl -z-10 pointer-events-none transform translate-y-1/2 translate-x-1/2" aria-hidden="true" />
+            <div className="absolute top-1/3 right-1/4 w-[30vw] h-[30vw] bg-rose-200/20 rounded-full blur-3xl -z-10 pointer-events-none" aria-hidden="true" />
 
             <div className="max-w-4xl w-full flex flex-col items-center text-center space-y-10 z-10">
 
@@ -440,11 +414,7 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.8 }}
                     className="w-full relative overflow-hidden py-4 mask-linear-fade mt-8 flex"
                 >
-                    <motion.div
-                        className="flex whitespace-nowrap gap-6 text-sm font-semibold tracking-wide text-zinc-400 items-center justify-start min-w-full"
-                        animate={{ x: [0, -1200] }}
-                        transition={{ repeat: Infinity, ease: "linear", duration: 45 }}
-                    >
+                    <div className="flex whitespace-nowrap gap-6 text-sm font-semibold tracking-wide text-zinc-400 items-center justify-start min-w-max animate-marquee">
                         {[...Array(4)].map((_, i) => (
                             <React.Fragment key={i}>
                                 {unifiedSkills.map((tech, j) => (
@@ -455,7 +425,7 @@ export function Hero() {
                                 ))}
                             </React.Fragment>
                         ))}
-                    </motion.div>
+                    </div>
                 </motion.div>
             </div>
 

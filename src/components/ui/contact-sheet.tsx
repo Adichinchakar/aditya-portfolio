@@ -123,6 +123,9 @@ export function ContactSheet({ isOpen, onClose }: ContactSheetProps) {
                                             </p>
                                             <a
                                                 href="mailto:adichinchakar@gmail.com"
+                                                onClick={() => {
+                                                    import("@/lib/analytics").then(m => m.trackEvent("click_email", { source: "contact_sheet" }));
+                                                }}
                                                 className="inline-flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-700"
                                             >
                                                 adichinchakar@gmail.com <ArrowRight className="w-4 h-4" />

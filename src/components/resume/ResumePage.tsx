@@ -7,6 +7,7 @@ import { ExperienceBlock } from "@/components/resume/ExperienceBlock";
 import { SkillList } from "@/components/resume/SkillList";
 import { StickyDownload } from "@/components/resume/StickyDownload";
 import { resumeData } from "@/data/resume";
+import { trackEvent } from "@/lib/analytics";
 
 type ResumeData = typeof resumeData;
 
@@ -52,6 +53,7 @@ export function ResumePage({ data }: ResumePageProps) {
                             download
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackEvent("download_resume", { source: "resume_top_nav" })}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-700 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                         >
                             <Download className="w-3.5 h-3.5" />
@@ -92,6 +94,7 @@ export function ResumePage({ data }: ResumePageProps) {
                             >
                                 <a
                                     href={`mailto:${data.contact.email}`}
+                                    onClick={() => trackEvent("click_email", { source: "resume_hero" })}
                                     className="inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-blue-600 transition-colors"
                                 >
                                     <Mail className="w-3.5 h-3.5 shrink-0" />
@@ -101,6 +104,7 @@ export function ResumePage({ data }: ResumePageProps) {
                                     href={`https://${data.contact.website}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={() => trackEvent("click_social", { platform: "website", source: "resume_hero" })}
                                     className="inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-blue-600 transition-colors"
                                 >
                                     <Globe className="w-3.5 h-3.5 shrink-0" />
@@ -110,6 +114,7 @@ export function ResumePage({ data }: ResumePageProps) {
                                     href={`https://${data.contact.linkedin}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={() => trackEvent("click_social", { platform: "linkedin", source: "resume_hero" })}
                                     className="inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-blue-600 transition-colors"
                                 >
                                     <Linkedin className="w-3.5 h-3.5 shrink-0" />
@@ -271,7 +276,11 @@ export function ResumePage({ data }: ResumePageProps) {
                         <div className="px-10 py-8 bg-zinc-50 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                             <p className="text-sm text-zinc-500">
                                 Want to work together?{" "}
-                                <a href={`mailto:${data.contact.email}`} className="text-zinc-900 font-medium hover:text-blue-600 transition-colors underline underline-offset-2">
+                                <a 
+                                    href={`mailto:${data.contact.email}`} 
+                                    onClick={() => trackEvent("click_email", { source: "resume_bottom" })}
+                                    className="text-zinc-900 font-medium hover:text-blue-600 transition-colors underline underline-offset-2"
+                                >
                                     Let&apos;s connect →
                                 </a>
                             </p>
@@ -280,6 +289,7 @@ export function ResumePage({ data }: ResumePageProps) {
                                 download
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => trackEvent("download_resume", { source: "resume_bottom" })}
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900 text-white text-sm font-semibold hover:bg-zinc-700 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                             >
                                 <Download className="w-3.5 h-3.5" />

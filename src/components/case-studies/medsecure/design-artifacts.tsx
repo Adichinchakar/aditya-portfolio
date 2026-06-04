@@ -21,7 +21,7 @@ export function DesignArtifacts() {
                         Designing for Bharat
                     </h2>
                     <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
-                        Three screens from the patient app — built for low-literacy, multilingual, and inclusive-first use across rural and urban India. Icon-first navigation, large touch targets, ABHA ID integration.
+                        Five screens from the patient app — built for low-literacy, multilingual, and inclusive-first use across rural and urban India. Icon-first navigation, large touch targets, ABHA ID integration.
                     </p>
                 </motion.div>
 

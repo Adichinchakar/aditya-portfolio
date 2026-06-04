@@ -98,17 +98,17 @@ export function ProblemStatement() {
                 >
                     <p className="text-xs font-mono font-bold text-zinc-600 uppercase tracking-widest mb-3">The Before State</p>
                     <p className="text-base text-zinc-200 leading-relaxed mb-4">
-                        When I joined, building a basic automation workflow required a developer. The UI was built for engineers — ops managers, who would eventually own these workflows, couldn&apos;t read the interface without help. Every change request became a support ticket. Enterprise clients with tight SLAs were raising issues daily.
+                        When I joined, building a basic automation workflow required a developer. The UI was built for engineers — ops managers, who would eventually own these workflows, couldn&apos;t read the interface without help. Routine change requests kept turning into support tickets, and that friction showed up most with enterprise clients.
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <div className="text-center">
-                            <p className="text-2xl font-black text-red-400">5+</p>
-                            <p className="text-xs text-zinc-600 font-semibold">support tickets per client/week<br />for routine config changes</p>
+                            <p className="text-2xl font-black text-red-400">Recurring</p>
+                            <p className="text-xs text-zinc-600 font-semibold">support tickets<br />for routine config changes</p>
                         </div>
                         <div className="w-px bg-zinc-700" />
                         <div className="text-center">
-                            <p className="text-2xl font-black text-amber-400">3 days</p>
-                            <p className="text-xs text-zinc-600 font-semibold">avg. time for ops team to onboard<br />to a new automation workflow</p>
+                            <p className="text-2xl font-black text-amber-400">Days</p>
+                            <p className="text-xs text-zinc-600 font-semibold">for an ops team to onboard<br />to a new automation workflow</p>
                         </div>
                         <div className="w-px bg-zinc-700" />
                         <div className="text-center">

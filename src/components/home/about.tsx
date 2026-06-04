@@ -28,9 +28,9 @@ function AnimatedCounter({ value, isInView }: { value: string; isInView: boolean
 }
 
 const stats = [
-    { value: "34%", label: "Medical Errors Reduced", sub: "MedSecure pilot · n=1,200 patients" },
-    { value: "70%", label: "Faster Assessment Cycles", sub: "Infosys × Imagine Learning · n=28 teachers" },
-    { value: "73%", label: "User Adoption Increase", sub: "Simplifai · Mixpanel 90-day cohort" },
+    { value: "34%", label: "Projected Medical-Error Reduction", sub: "MedSecure · concept projection" },
+    { value: "70%", label: "Faster Assessment Cycles", sub: "GenAI EdTech · usability testing" },
+    { value: "73%", label: "User Adoption Increase", sub: "Simplifai · product analytics" },
     { value: "$250K+", label: "ADA Litigation Risk Addressed", sub: "Per client · DOJ consent decree baseline" },
 ];
 

@@ -49,7 +49,7 @@ const awards = [
         title: "Hackathon 2.0 Winner",
         issuer: "Simplifai",
         date: "2022",
-        description: "Awarded 1st place for designing an innovative AI-driven workflow builder that reduced setup time by 40%.",
+        description: "Awarded 1st place for designing an innovative AI-driven workflow builder that markedly reduced setup time.",
         color: "text-amber-600",
         bg: "bg-amber-50",
         border: "border-amber-100",
@@ -127,7 +127,7 @@ export function SocialProof() {
                                 Hackathon 2.0 <br className="hidden md:block" /> Winner
                             </h2>
                             <p className="text-lg text-amber-900/70 font-medium leading-relaxed max-w-lg">
-                                Awarded 1st place for designing an innovative AI-driven workflow builder that reduced setup time by 40%.
+                                Awarded 1st place for designing an innovative AI-driven workflow builder that markedly reduced setup time.
                             </p>
                         </div>
                     </div>

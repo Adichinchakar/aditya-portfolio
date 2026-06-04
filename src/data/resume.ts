@@ -94,7 +94,7 @@ export const resumeData = {
             period: "Aug 2019 — Jan 2020",
             location: "Pune, India",
             highlights: [
-                "Created motion graphics for Shell Petroleum campaigns — increased customer inquiries by 15% and new business acquisitions by 10%.",
+                "Created motion graphics for a global energy major's campaigns — driving a measurable lift in customer inquiries and new business acquisitions.",
                 "Designed visual identity for the company, improving brand recognition by 30%; delivered marketing motion campaigns with 15% increase in click-through rates.",
             ],
         },

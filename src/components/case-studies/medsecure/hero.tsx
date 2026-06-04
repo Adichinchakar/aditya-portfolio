@@ -72,7 +72,7 @@ export function Hero() {
                         </div>
 
                         <div className="p-4 rounded-xl bg-[#005EB8]/8 border border-[#005EB8]/20 text-sm text-[#005EB8] font-medium mb-6">
-                            🏥 Speculative product design: This is a 0→1 design concept for India&apos;s ABDM ecosystem. Pilot metrics (Delhi NCR + Pune, 1,200 patients) reflect an internal proof-of-concept. No production deployment at scale.
+                            🏥 Speculative product design: This is a 0→1 design concept for India&apos;s ABDM ecosystem. Figures shown are projections from a proof-of-concept and prototype testing, not a deployed clinical pilot. No production deployment at scale.
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-zinc-900 mb-4 leading-[1.05]">
@@ -86,7 +86,7 @@ export function Hero() {
                             A 65-year-old farmer in rural Punjab and a 28-year-old in South Mumbai share India's healthcare system. They share almost nothing else — language, connectivity, literacy, or access. Designing for both, simultaneously, is the problem.
                         </p>
                         <p className="text-sm text-zinc-500 max-w-lg mb-6 leading-relaxed">
-                            MedSecure is a sovereign medical identity for every Indian patient — ABHA ID as the identifier, Hyperledger Fabric for consent and audit, IPFS for off-chain storage. Accessible in 8 languages, usable offline, piloted across 1,200 patients in Delhi NCR and Pune.
+                            MedSecure is a sovereign medical identity for every Indian patient — ABHA ID as the identifier, Hyperledger Fabric for consent and audit, IPFS for off-chain storage. Accessible in 8 languages, usable offline, validated through prototype testing with representative users.
                         </p>
 
                         {/* Meta pills */}
@@ -122,8 +122,10 @@ export function Hero() {
                     >
                         <div className="relative rounded-[2rem] border border-white/50 bg-white/30 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.1)]">
                             <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm flex justify-center items-center">
-                                <div className="scale-[0.8] origin-center">
-                                    <PatientHome />
+                                <div className="pointer-events-none origin-top overflow-hidden rounded-xl border border-slate-200/50 shadow-2xl bg-white w-full h-[300px] sm:h-[380px] md:h-[450px] lg:h-[400px] xl:h-[450px] relative">
+                                    <div className="absolute top-0 left-0 w-[900px] origin-top-left scale-[0.4] sm:scale-[0.55] md:scale-[0.7] lg:scale-[0.55] xl:scale-[0.65]">
+                                        <PatientHome />
+                                    </div>
                                 </div>
                             </div>
                         </div>

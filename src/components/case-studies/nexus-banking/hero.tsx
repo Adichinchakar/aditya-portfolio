@@ -125,8 +125,8 @@ export function Hero() {
                     >
                         <div className="relative rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.5)]">
                             <div className="bg-zinc-900/60 rounded-[1.5rem] p-6 border border-white/5 backdrop-blur-sm">
-                                <div className="pointer-events-none origin-top h-[380px] overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-zinc-950">
-                                    <div className="scale-[0.95] origin-top">
+                                <div className="pointer-events-none origin-top overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-zinc-950 w-full h-[300px] sm:h-[380px] md:h-[450px] lg:h-[400px] xl:h-[450px] relative">
+                                    <div className="absolute top-0 left-0 w-[900px] origin-top-left scale-[0.4] sm:scale-[0.55] md:scale-[0.7] lg:scale-[0.55] xl:scale-[0.65]">
                                         <AfterDashboard />
                                     </div>
                                 </div>

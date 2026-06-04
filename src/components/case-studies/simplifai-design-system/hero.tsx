@@ -62,8 +62,8 @@ export function Hero() {
                     >
                         <div className="relative rounded-[2rem] border border-white/50 bg-white/30 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.1)]">
                             <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm">
-                                <div className="pointer-events-none origin-top h-[380px] overflow-hidden">
-                                    <div className="scale-[0.8] origin-top">
+                                <div className="pointer-events-none origin-top overflow-hidden rounded-xl border border-slate-200/50 shadow-2xl bg-white w-full h-[300px] sm:h-[380px] md:h-[450px] lg:h-[400px] xl:h-[450px] relative">
+                                    <div className="absolute top-0 left-0 w-[900px] origin-top-left scale-[0.4] sm:scale-[0.55] md:scale-[0.7] lg:scale-[0.55] xl:scale-[0.65]">
                                         <SystemPreview />
                                     </div>
                                 </div>

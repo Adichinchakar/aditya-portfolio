@@ -108,7 +108,7 @@ export function Hero() {
                         <div className="relative rounded-[2rem] border border-white/50 bg-white/30 backdrop-blur-xl overflow-hidden p-2 shadow-[0_20px_60px_rgb(0,0,0,0.1)]">
                             <div className="bg-zinc-50/60 rounded-[1.5rem] p-6 border border-white/60 backdrop-blur-sm">
                                 <div className="pointer-events-none origin-top h-[380px] overflow-hidden rounded-xl border border-white/10 shadow-2xl">
-                                    <div className="scale-[0.95] origin-top">
+                                    <div className="w-[850px] scale-[0.6] origin-top-left sm:scale-[0.65]">
                                         <BrowserFrame url="app.simplifai.ai/flows/lead-qualification">
                                             <FlowBuilder />
                                         </BrowserFrame>

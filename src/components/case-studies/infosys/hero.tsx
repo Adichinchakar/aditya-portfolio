@@ -93,11 +93,11 @@ export function Hero() {
                         <div className="space-y-2 mb-6">
                             <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/8">
                                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
-                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">TalentBridge</span> — Internal talent marketplace connecting 500,000+ Infosys employees across delivery units, geographies, and skill domains. Multi-persona: employee, manager, HR, admin.</p>
+                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">Enterprise talent platform</span> — An internal marketplace matching a global workforce to projects across delivery units, geographies, and skill domains. Multi-persona: employee, manager, HR, admin.</p>
                             </div>
                             <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/8">
                                 <span className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 shrink-0" />
-                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">Imagine Learning (GenAI)</span> — AI rubric engines and adaptive recommendation UX for K-12 EdTech at scale across US schools.</p>
+                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">GenAI for EdTech</span> — AI rubric engines and adaptive recommendation UX for K-12 education at scale.</p>
                             </div>
                         </div>
 
@@ -113,10 +113,10 @@ export function Hero() {
                             </span>
                         </div>
 
-                        <div className="flex items-center gap-3 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
-                            <Lock className="w-4 h-4 text-amber-400 shrink-0" aria-hidden="true" />
-                            <p className="text-sm text-amber-300 font-medium">
-                                Full artifacts and process documentation available under NDA. Contact me to schedule a walkthrough.
+                        <div className="flex items-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
+                            <Lock className="w-4 h-4 text-zinc-400 shrink-0" aria-hidden="true" />
+                            <p className="text-sm text-zinc-300 font-medium">
+                                Selected work shown. I&rsquo;m happy to walk through the deeper process and artifacts on a call.
                             </p>
                         </div>
                     </motion.div>
@@ -139,10 +139,10 @@ export function Hero() {
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-3">
-                                    <MetricCard value="70%" label="Assessment Time Reduction" sub="vs. manual baseline · n=28 teachers" />
+                                    <MetricCard value="~70%" label="Faster Assessment" sub="vs. manual baseline" />
                                     <MetricCard value="5+" label="Product Teams" sub="Design system served" />
                                     <MetricCard value="3" label="AI Tools Shipped" sub="In production" />
-                                    <MetricCard value="NDA" label="Full Details" sub="Available on request" />
+                                    <MetricCard value="Multi" label="Persona Scope" sub="Employee · Manager · HR" />
                                 </div>
                             </div>
                         </div>

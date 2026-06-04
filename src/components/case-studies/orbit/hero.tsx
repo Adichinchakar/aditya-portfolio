@@ -97,8 +97,8 @@ export function Hero() {
                             style={{ background: "linear-gradient(135deg, rgba(208,188,255,0.2) 0%, rgba(14,14,14,0) 60%)" }}
                         >
                             <div className="bg-white/5 backdrop-blur-3xl rounded-2xl p-6 border border-white/[0.07] shadow-[0_20px_50px_rgba(208,188,255,0.06)]">
-                                <div className="pointer-events-none origin-top h-[380px] overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-zinc-950/50">
-                                    <div className="scale-[1] origin-top h-[380px]">
+                                <div className="pointer-events-none origin-top overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-zinc-950/50 w-full h-[300px] sm:h-[380px] md:h-[450px] lg:h-[400px] xl:h-[450px] relative">
+                                    <div className="absolute top-0 left-0 w-[900px] origin-top-left scale-[0.4] sm:scale-[0.55] md:scale-[0.7] lg:scale-[0.55] xl:scale-[0.65]">
                                         <OrgMapScreen />
                                     </div>
                                 </div>

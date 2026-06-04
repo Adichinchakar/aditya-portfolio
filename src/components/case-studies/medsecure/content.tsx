@@ -45,7 +45,7 @@ const summaryItems = [
         content: (
             <>
                 <p className="text-lg font-semibold text-zinc-900">12 Weeks</p>
-                <p className="text-zinc-400 text-sm font-medium mt-1">2023 · Healthcare Pilot · Delhi NCR</p>
+                <p className="text-zinc-400 text-sm font-medium mt-1">2023 · Healthcare Concept · India</p>
             </>
         ),
     },
@@ -79,7 +79,7 @@ const learnings = [
         iconColor: "text-amber-500",
         iconBg: "bg-amber-500/10",
         heading: "What didn't work: V1 enrollment flow",
-        body: "The initial ABHA enrollment UX assumed patients had reliable OTP delivery. In the Delhi NCR pilot, ~30% of rural users failed the first enrollment attempt because of SMS delivery delays on BSNL networks. We had over-indexed on the tech architecture and under-indexed on last-mile connectivity constraints. V2 added a QR-scan fallback via PHC kiosks, which cut enrollment failure to under 4%.",
+        body: "The initial ABHA enrollment UX assumed patients had reliable OTP delivery. In prototype testing with rural users, a large share failed the first enrollment attempt because of SMS delivery delays on low-bandwidth networks. The design had over-indexed on the tech architecture and under-indexed on last-mile connectivity constraints. V2 added a QR-scan fallback via PHC kiosks, which cut enrollment failure dramatically.",
     },
     {
         type: "learning",
@@ -87,7 +87,7 @@ const learnings = [
         iconColor: "text-blue-500",
         iconBg: "bg-blue-500/10",
         heading: "If I started over: validate the consent model earlier",
-        body: "The family-consent (CareCircle) feature was designed in week 3 and tested only in week 10. In practice, patients had deeply varying expectations about who should control record access — a 65-year-old farmer in Pune vs. a 28-year-old in Delhi. I'd run consent-model interviews in the first research sprint, not the last. This would have surfaced the 'proxy guardian' edge case before it became a pilot pain point.",
+        body: "The family-consent (CareCircle) feature was designed in week 3 and tested only in week 10. In practice, patients had deeply varying expectations about who should control record access — a 65-year-old farmer in a rural district vs. a 28-year-old in a metro. I'd run consent-model interviews in the first research sprint, not the last. This would have surfaced the 'proxy guardian' edge case far earlier.",
     },
 ];
 
@@ -121,7 +121,7 @@ export default function MedSecurePage() {
                     <DecisionCallout
                         chose="Offline-First PWA with ServiceWorker local cache"
                         rejected="Cloud-only real-time sync"
-                        why="In the Delhi NCR pilot, ~40% of PHC visits occurred in areas with intermittent 2G/3G. Cloud-only failed silently — doctors saw blank screens mid-consultation. ServiceWorker caches critical records locally and syncs on reconnect, making connectivity a non-blocking constraint instead of a hard dependency."
+                        why="In low-connectivity regions, a large share of PHC visits occur in areas with intermittent 2G/3G. Cloud-only would fail silently — doctors seeing blank screens mid-consultation. ServiceWorker caches critical records locally and syncs on reconnect, making connectivity a non-blocking constraint instead of a hard dependency."
                     />
                 </div>
             </div>

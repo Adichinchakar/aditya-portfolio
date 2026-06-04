@@ -6,19 +6,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
     {
-        quote: "Aditya's AI tools reduced our assessment time by 70%. He doesn't just design; he solves business problems.",
-        name: "Pradeep S.",
-        role: "Senior Delivery Manager",
-        company: "Infosys",
-        initials: "PS",
+        quote: "Aditya doesn't just design; he solves business problems. His AI tooling work measurably cut the time our teams spent on assessment workflows.",
+        name: "Senior Delivery Manager",
+        role: "Delivery Leadership",
+        company: "Fortune 500 IT Services",
+        initials: "DL",
         color: "bg-gradient-to-br from-amber-400 to-orange-600"
     },
     {
         quote: "Aditya is a strong design contributor, advancing our design system, ensuring consistency, and bringing ideas to life. His extensive Figma expertise has helped the team upskill.",
-        name: "Gautam Parasnis",
-        role: "Chief Digital Officer",
-        company: "Imagine Learning",
-        initials: "GP",
+        name: "Chief Digital Officer",
+        role: "Product & Design",
+        company: "US K-12 EdTech",
+        initials: "CD",
         color: "bg-gradient-to-br from-emerald-400 to-teal-600"
     },
     {
@@ -38,11 +38,11 @@ const testimonials = [
         color: "bg-gradient-to-br from-rose-400 to-pink-600"
     },
     {
-        quote: "His motion design work directly contributed to a 15% increase in customer inquiries and engagement.",
-        name: "Shell Campaign Lead",
-        role: "Motion & Brand · Shell Petroleum",
-        company: "Shell",
-        initials: "SH",
+        quote: "His motion design work directly contributed to a measurable lift in customer inquiries and engagement.",
+        name: "Campaign Lead",
+        role: "Motion & Brand",
+        company: "Global Energy Major",
+        initials: "CL",
         color: "bg-gradient-to-br from-zinc-600 to-zinc-800"
     },
 ];

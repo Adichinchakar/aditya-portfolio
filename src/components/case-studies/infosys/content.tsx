@@ -5,21 +5,21 @@ import { Hero } from "@/components/case-studies/infosys/hero";
 import { HookModel } from "@/components/case-studies/hook-model";
 import { motion } from "@/lib/motion";
 import { Lock, Linkedin, Mail } from "lucide-react";
-import Image from "next/image";
+import { InfosysUI } from "@/components/case-studies/infosys/infosys-ui";
 
 const outcomes = [
     {
-        value: "70%",
-        label: "Reduction in assessment time",
-        desc: "AI rubric engine vs. manual baseline (time-on-task study, n=28 teachers, pre/post). Specific data available under NDA.",
+        value: "~70%",
+        label: "Faster assessment workflows",
+        desc: "AI rubric engine vs. a manual baseline, measured in a pre/post time-on-task study with participating teachers.",
     },
     {
-        value: "41%→74%",
-        label: "Teacher acceptance rate",
-        desc: "A/B test on confidence signal design — shifting from raw percentages to a 3-tier signal (Verified / Suggested / Uncertain). n=84 sessions, Q3 2024.",
+        value: "Acceptance roughly doubled",
+        label: "Teacher trust in AI output",
+        desc: "Reframing the confidence signal from raw percentages to a 3-tier signal (Verified / Suggested / Uncertain) sharply lifted acceptance in usability testing.",
     },
     {
-        value: "55%",
+        value: "Major",
         label: "Drop-off reduction during AI generation",
         desc: "Progressive reveal pattern (skeleton → sequential cell population) vs. generic spinner. Eliminated the perception of waiting.",
     },
@@ -37,7 +37,7 @@ const outcomes = [
 
 const contributions = [
     "Designed UX for GenAI-powered rubric generation engines — reducing manual evaluation from hours to minutes",
-    "Led design system expansion for Imagine Learning — adding AI-specific interaction patterns and states",
+    "Led design system expansion for the EdTech client — adding AI-specific interaction patterns and states",
     "Created end-to-end flows for adaptive content recommendation systems",
     "Ran design sprints with cross-functional teams (ML engineers, curriculum designers, product managers)",
     "Established accessibility standards (WCAG 2.2) across all AI-facing features",
@@ -49,7 +49,7 @@ export default function InfosysPage() {
         <div className="min-h-screen bg-zinc-950 text-zinc-200 selection:bg-indigo-500/30">
             <Hero />
 
-            {/* Scope & NDA */}
+            {/* Scope */}
             <section className="py-24 px-6 bg-zinc-900 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.06),transparent_60%)]" aria-hidden="true" />
                 <div className="container mx-auto max-w-4xl relative z-10">
@@ -57,16 +57,15 @@ export default function InfosysPage() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex items-start gap-6 p-8 rounded-[2rem] bg-amber-500/10 border border-amber-500/20"
+                        className="flex items-start gap-6 p-8 rounded-[2rem] bg-white/5 border border-white/10"
                     >
-                        <Lock className="w-6 h-6 text-amber-400 shrink-0 mt-1" />
+                        <Lock className="w-6 h-6 text-zinc-400 shrink-0 mt-1" />
                         <div>
-                            <h2 className="text-xl font-bold text-amber-300 mb-3">Scope & NDA</h2>
+                            <h2 className="text-xl font-bold text-white mb-3">Scope</h2>
                             <p className="text-zinc-300 leading-relaxed">
-                                This work is covered under a Non-Disclosure Agreement with Infosys and Imagine Learning.
-                                Key outcomes and high-level contributions are publicly shareable — design artifacts,
-                                full case study documentation, and detailed process notes are available for sharing
-                                in a confidential context. Contact me directly to schedule a walkthrough.
+                                What&rsquo;s shown here is a high-level view: the problems, the design decisions, and
+                                directional outcomes. I keep client-specific artifacts and detailed process notes out of
+                                a public portfolio — I&rsquo;m glad to walk through more depth privately on a call.
                             </p>
                         </div>
                     </motion.div>
@@ -117,7 +116,7 @@ export default function InfosysPage() {
                         ))}
                     </div>
                     <p className="text-xs text-zinc-400 mt-6">
-                        * Assessment time reduction: time-on-task study, n=28 teachers, pre/post rubric workflow. Acceptance rate A/B test: n=84 sessions, Q3 2024. Drop-off reduction: progressive reveal vs. spinner, A/B, same cohort.
+                        * Figures are directional, drawn from usability and time-on-task testing during the engagement. Underlying study detail is omitted here.
                     </p>
                     <motion.div
                         initial={{ opacity: 0, y: 16 }}
@@ -126,7 +125,7 @@ export default function InfosysPage() {
                         className="mt-8 p-6 rounded-2xl bg-indigo-500/8 border border-indigo-500/20"
                     >
                         <p className="text-sm text-indigo-300 leading-relaxed">
-                            <span className="font-bold text-indigo-200">Certificate of Recognition</span> — awarded by Jason Fournier, SVP, Imagine Learning (Infosys client). Recognised for AI tool delivery across the Imagine Learning product suite.
+                            <span className="font-bold text-indigo-200">Certificate of Recognition</span> — from the client&rsquo;s executive sponsor, for AI tool delivery across the product suite.
                         </p>
                     </motion.div>
                 </div>
@@ -179,10 +178,10 @@ export default function InfosysPage() {
                             02.5 — Featured Project
                         </p>
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
-                            TalentBridge: Making 500K People Visible
+                            Enterprise Talent Platform: Making Skills Visible
                         </h2>
                         <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">
-                            Infosys doesn&apos;t have a talent shortage. It has a talent <em>visibility</em> problem. Project managers can&apos;t find people with the right skills because those people are invisible — siloed inside delivery units, tagged by role title, not actual capability.
+                            A large services organisation rarely has a talent shortage — it has a talent <em>visibility</em> problem. Project managers can&apos;t find people with the right skills because those people are invisible: siloed inside delivery units, tagged by role title, not actual capability.
                         </p>
                     </motion.div>
 
@@ -232,11 +231,11 @@ export default function InfosysPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.15 }}
-                        className="p-6 rounded-2xl bg-amber-500/8 border border-amber-500/15 flex items-start gap-4"
+                        className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-4"
                     >
-                        <Lock className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
-                        <p className="text-sm text-amber-300 leading-relaxed">
-                            Full process documentation — personas, wireframes, IA maps, component decisions, and post-launch analytics — available in a confidential walkthrough. NDA required.
+                        <Lock className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" aria-hidden="true" />
+                        <p className="text-sm text-zinc-300 leading-relaxed">
+                            Deeper process work — personas, wireframes, IA maps, and component decisions — is something I prefer to walk through privately rather than publish.
                         </p>
                     </motion.div>
                 </div>
@@ -259,7 +258,7 @@ export default function InfosysPage() {
                             The Hard Problems
                         </h2>
                         <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">
-                            Three design tensions from the Imagine Learning engagement — shareable without violating NDA.
+                            Three design tensions from the GenAI EdTech engagement.
                         </p>
                     </motion.div>
 
@@ -268,14 +267,14 @@ export default function InfosysPage() {
                             {
                                 challenge: "AI Confidence ≠ User Trust",
                                 context: "The rubric engine outputs confidence scores, but showing raw percentages caused teachers to either over-trust (80% feels like a guarantee) or dismiss (60% feels unreliable). Designed a 3-tier signal system (Verified / Suggested / Uncertain) that anchored decisions in pedagogical context, not probability.",
-                                outcome: "Teacher acceptance rate increased from 41% to 74% in A/B testing.",
+                                outcome: "Teacher acceptance of AI output roughly doubled in usability testing.",
                                 borderColor: "border-indigo-500/20",
                                 accentColor: "text-indigo-400",
                             },
                             {
                                 challenge: "GenAI Latency UX",
                                 context: "Rubric generation takes 3-8 seconds — far longer than users expect from 'AI'. A generic spinner caused drop-off. Designed a progressive reveal: skeleton rubric structure appears immediately, then cells populate sequentially, creating a perception of real-time generation.",
-                                outcome: "Drop-off during generation reduced by 55%.",
+                                outcome: "Drop-off during generation fell sharply.",
                                 borderColor: "border-violet-500/20",
                                 accentColor: "text-violet-400",
                             },
@@ -308,106 +307,7 @@ export default function InfosysPage() {
             </section>
 
             {/* Design Artifacts */}
-            <section className="py-24 px-6 bg-zinc-950 relative overflow-hidden">
-                <div className="container mx-auto max-w-5xl relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-12"
-                    >
-                        <p className="text-xs font-mono font-bold text-indigo-400 uppercase tracking-[0.2em] mb-4">
-                            03 — Work Samples
-                        </p>
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
-                            The Product We Built
-                        </h2>
-                        <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl">
-                            High-fidelity screens from the AI tooling suite. Full documentation available under NDA.
-                        </p>
-                    </motion.div>
-
-                    <div className="space-y-6">
-                        {/* Screen 1 — Rubric Generator */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 24 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-80px" }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                        >
-                            <div className="rounded-[1.5rem] overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] bg-zinc-900">
-                                {/* Browser chrome */}
-                                <div className="flex items-center gap-2 px-4 py-3 bg-zinc-900 border-b border-white/5">
-                                    <div className="flex gap-1.5">
-                                        <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                                        <div className="w-3 h-3 rounded-full bg-amber-500/60" />
-                                        <div className="w-3 h-3 rounded-full bg-emerald-500/60" />
-                                    </div>
-                                    <div className="flex-1 mx-4">
-                                        <div className="bg-zinc-800 rounded-md px-3 py-1 text-xs text-zinc-400 font-mono max-w-xs mx-auto text-center">
-                                            imagine.infosys.com/rubric-generator
-                                        </div>
-                                    </div>
-                                    <span className="text-[10px] font-mono text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded-full">
-                                        AI Rubric Generator
-                                    </span>
-                                </div>
-                                <Image
-                                    src="/images/infosys-rubric-generator.png"
-                                    alt="AI Rubric Generator interface showing learning objective input, generated rubric table with criteria and performance levels, and AI suggestions panel"
-                                    width={1920}
-                                    height={944}
-                                    className="w-full h-auto block"
-                                    quality={90}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                                />
-                            </div>
-                            <p className="text-sm text-zinc-400 mt-3 ml-1">
-                                AI Rubric Generator — generates assessment criteria from a learning objective in seconds, with contextual AI suggestions.
-                            </p>
-                        </motion.div>
-
-                        {/* Screen 2 — Recommendations Dashboard */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 24 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-80px" }}
-                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-                        >
-                            <div className="rounded-[1.5rem] overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] bg-zinc-900">
-                                {/* Browser chrome */}
-                                <div className="flex items-center gap-2 px-4 py-3 bg-zinc-900 border-b border-white/5">
-                                    <div className="flex gap-1.5">
-                                        <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                                        <div className="w-3 h-3 rounded-full bg-amber-500/60" />
-                                        <div className="w-3 h-3 rounded-full bg-emerald-500/60" />
-                                    </div>
-                                    <div className="flex-1 mx-4">
-                                        <div className="bg-zinc-800 rounded-md px-3 py-1 text-xs text-zinc-400 font-mono max-w-xs mx-auto text-center">
-                                            imagine.infosys.com/recommendations
-                                        </div>
-                                    </div>
-                                    <span className="text-[10px] font-mono text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded-full">
-                                        Adaptive Recommendations
-                                    </span>
-                                </div>
-                                <Image
-                                    src="/images/infosys-recommendations.png"
-                                    alt="Student recommendations dashboard showing progress tracking, AI-identified skill gaps, and adaptive content recommendations per student"
-                                    width={1920}
-                                    height={944}
-                                    className="w-full h-auto block"
-                                    quality={90}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                                />
-                            </div>
-                            <p className="text-sm text-zinc-400 mt-3 ml-1">
-                                Adaptive Recommendation Engine — surfaces personalised content per student based on ML-identified skill gaps.
-                            </p>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
+            <InfosysUI />
 
             {/* Design Iterations */}
             <section className="py-24 px-6 bg-zinc-900 relative overflow-hidden">
@@ -450,7 +350,7 @@ export default function InfosysPage() {
                             {
                                 round: "Round 3",
                                 label: "3-tier signal (Verified / Suggested / Uncertain)",
-                                finding: "Teachers engaged differently at each tier — Verified rubrics were approved 2× faster; Uncertain triggered review. Acceptance rate: 41% → 74%.",
+                                finding: "Teachers engaged differently at each tier — Verified rubrics were approved far faster; Uncertain triggered review. Acceptance roughly doubled.",
                                 decision: "Ship this version. Anchored in pedagogical action, not probability.",
                                 color: "border-emerald-500/20",
                                 accent: "text-emerald-400",

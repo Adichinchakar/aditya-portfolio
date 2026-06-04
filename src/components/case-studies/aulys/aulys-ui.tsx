@@ -3,316 +3,345 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 
-const GREEN = "#00BC7C"; // Using the color from the user's SVG
+/* ─── Mock Data ────────────────────────────────────────── */
+const MOCK_CODE = `import { useState, useEffect } from 'react';
+import { fetchUserProfile } from '@/lib/api';
 
-function AulysLogo({ className }: { className?: string }) {
+export function UserDashboard({ userId }: { userId: string }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadUser() {
+      // ⚠️ Uncaught TypeError: Cannot read properties of undefined (reading 'avatarUrl')
+      const data = await fetchUserProfile(userId);
+      setUser(data);
+      setLoading(false);
+    }
+    loadUser();
+  }, [userId]);
+
+  if (loading) return <Spinner />;
+
+  return (
+    <div className="flex items-center gap-4">
+      <img src={user.profile.avatarUrl} alt="Avatar" className="w-12 h-12 rounded-full" />
+      <div>
+        <h2 className="text-lg font-bold">{user.name}</h2>
+        <p className="text-gray-500">{user.email}</p>
+      </div>
+    </div>
+  );
+}`;
+
+const FIXED_CODE = `import { useState, useEffect } from 'react';
+import { fetchUserProfile } from '@/lib/api';
+
+export function UserDashboard({ userId }: { userId: string }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadUser() {
+      try {
+        const data = await fetchUserProfile(userId);
+        setUser(data);
+      } catch (error) {
+        console.error("Failed to fetch user:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadUser();
+  }, [userId]);
+
+  if (loading) return <Spinner />;
+  if (!user || !user.profile) return <ErrorState message="User data unavailable" />;
+
+  return (
+    <div className="flex items-center gap-4">
+      <img src={user.profile?.avatarUrl ?? '/default-avatar.png'} alt="Avatar" className="w-12 h-12 rounded-full" />
+      <div>
+        <h2 className="text-lg font-bold">{user.name}</h2>
+        <p className="text-gray-500">{user.email}</p>
+      </div>
+    </div>
+  );
+}`;
+
+/* ─── Components ───────────────────────────────────────── */
+function IDEView() {
     return (
-        <svg viewBox="0 0 128 106" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
-            <path d="M61.6982 10.0812C75.1001 9.44539 75.2754 12.4175 80.8997 23.4662L118 95.5453C112.67 95.6015 106.321 96.0207 101.144 94.9411C97.7722 94.2378 95.4385 88.1796 93.9116 85.1711L87.9193 73.4022L65.0721 28.8272L64.146 27.1631C63.2026 29.2586 61.5496 32.2502 60.4668 34.364L53.124 48.7154L39.1459 75.928C36.683 80.72 32.8562 89.686 30.6221 94.2303C29.591 96.3277 10 95.9782 10 95.9782L47.9697 22.3418C51.9076 14.6116 52.2777 10.9168 61.6982 10.0812Z" fill="currentColor"/>
-            <path d="M50.9006 76.4027C60.5242 76.4027 71.5227 76.4032 81.1464 76.4029C82.3369 79.6171 84.3806 85.878 84.6639 89.358C84.9751 93.1817 83.5523 95.9782 75.6471 95.9782H53.3065C49.1821 95.9782 44.7139 95.9782 40.5895 95.9782C42.8461 90.7806 46.5323 81.6215 48.9746 76.4242L50.9006 76.4027Z" fill="currentColor"/>
-            <path d="M62.6225 54.5018C66.6223 53.6239 70.5664 56.2033 71.4414 60.2695C72.3164 64.3357 69.7923 68.3554 65.7977 69.2575C61.7864 70.1636 57.8144 67.5829 56.9356 63.4994C56.0569 59.4162 58.6058 55.3835 62.6225 54.5018Z" fill="currentColor"/>
-        </svg>
+        <div className="flex h-[500px] bg-[#1e1e1e] rounded-xl border border-[#333] shadow-2xl overflow-hidden font-mono text-sm">
+            {/* Activity Bar */}
+            <div className="w-12 bg-[#333333] flex flex-col items-center py-4 border-r border-[#252526] shrink-0 gap-6">
+                <div className="w-6 h-6 rounded text-gray-400 hover:text-white cursor-pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+                <div className="w-6 h-6 rounded text-gray-400 hover:text-white cursor-pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+                <div className="w-6 h-6 rounded text-gray-400 hover:text-white cursor-pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg></div>
+                <div className="w-6 h-6 rounded text-[#00f0ff] cursor-pointer mt-auto shadow-[0_0_10px_rgba(0,240,255,0.3)]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            </div>
+
+            {/* Sidebar Explorer */}
+            <div className="w-56 bg-[#252526] border-r border-[#333] flex flex-col shrink-0 hidden md:flex">
+                <div className="px-4 py-2 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Explorer</div>
+                <div className="flex-1 overflow-y-auto pb-4">
+                    <div className="px-4 py-1 text-[13px] text-gray-300 hover:bg-[#2a2d2e] cursor-pointer font-bold flex items-center gap-2"><span className="text-gray-500">▼</span> frontend-app</div>
+                    <div className="px-8 py-1 text-[13px] text-gray-400 hover:bg-[#2a2d2e] cursor-pointer">📂 src</div>
+                    <div className="px-12 py-1 text-[13px] text-gray-400 hover:bg-[#2a2d2e] cursor-pointer">📂 components</div>
+                    <div className="px-16 py-1 text-[13px] text-[#00f0ff] bg-[#37373d] cursor-pointer flex items-center gap-2">📄 UserDashboard.tsx</div>
+                    <div className="px-12 py-1 text-[13px] text-gray-400 hover:bg-[#2a2d2e] cursor-pointer">📂 lib</div>
+                    <div className="px-16 py-1 text-[13px] text-gray-400 hover:bg-[#2a2d2e] cursor-pointer">📄 api.ts</div>
+                    <div className="px-8 py-1 text-[13px] text-gray-400 hover:bg-[#2a2d2e] cursor-pointer">📄 package.json</div>
+                </div>
+            </div>
+
+            {/* Editor Area */}
+            <div className="flex-1 bg-[#1e1e1e] flex flex-col min-w-0">
+                <div className="flex border-b border-[#333] bg-[#2d2d2d] shrink-0">
+                    <div className="px-4 py-2 text-[13px] text-white bg-[#1e1e1e] border-t-2 border-[#00f0ff] flex items-center gap-2">
+                        📄 UserDashboard.tsx <span className="text-gray-500 text-xs">x</span>
+                    </div>
+                    <div className="px-4 py-2 text-[13px] text-gray-400 hover:bg-[#1e1e1e] flex items-center gap-2 cursor-pointer">
+                        📄 api.ts <span className="text-gray-500 text-xs">x</span>
+                    </div>
+                </div>
+                <div className="flex-1 overflow-y-auto p-4 text-[13px] leading-relaxed relative">
+                    <pre className="text-[#d4d4d4] font-mono">
+                        {MOCK_CODE.split('\n').map((line, i) => (
+                            <div key={i} className={`flex ${i === 21 ? 'bg-red-500/20 border-l-2 border-red-500' : ''}`}>
+                                <span className="text-[#858585] w-8 shrink-0 select-none text-right pr-4">{i + 1}</span>
+                                <span className={`${i === 21 ? 'text-red-300' : ''}`}>{line}</span>
+                            </div>
+                        ))}
+                    </pre>
+                    {/* Inline error tooltip */}
+                    <div className="absolute top-[320px] left-12 bg-red-950 border border-red-800 rounded shadow-lg p-2 z-10 flex items-start gap-2 max-w-[400px]">
+                        <svg className="w-4 h-4 text-red-500 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        <div>
+                            <div className="text-[12px] font-bold text-red-400">TypeError</div>
+                            <div className="text-[11px] text-red-200">Cannot read properties of undefined (reading 'avatarUrl')</div>
+                            <button className="mt-2 text-[10px] text-[#00f0ff] hover:underline flex items-center gap-1"><svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg> Analyze with Aulys</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Aulys AI Sidebar */}
+            <div className="w-[320px] bg-[#252526] border-l border-[#333] flex flex-col shrink-0">
+                <div className="px-4 py-3 border-b border-[#333] flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <div className="w-4 h-4 text-[#00f0ff]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg></div>
+                        <span className="text-[12px] font-bold text-white uppercase tracking-wider">Aulys AI</span>
+                    </div>
+                    <div className="w-4 h-4 rounded text-gray-400 hover:text-white cursor-pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+                </div>
+                
+                <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
+                    <div className="bg-[#1e1e1e] border border-[#333] rounded-md p-3 shadow-sm">
+                        <div className="flex justify-between items-center mb-2">
+                            <span className="text-[11px] text-red-400 font-bold uppercase tracking-widest">Crash Detected</span>
+                            <span className="text-[10px] text-gray-500">Just now</span>
+                        </div>
+                        <div className="text-[12px] text-gray-300 leading-snug">
+                            The API response from <code className="bg-[#333] text-[#d4d4d4] px-1 rounded text-[10px]">fetchUserProfile</code> is returning null or missing the <code className="bg-[#333] text-[#d4d4d4] px-1 rounded text-[10px]">profile</code> object, causing a crash on render.
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className="text-[11px] text-gray-400 font-bold uppercase tracking-widest mb-2 px-1">Suggested Fix</div>
+                        <div className="bg-[#1e1e1e] border border-[#333] rounded-md overflow-hidden flex flex-col">
+                            <div className="bg-[#2d2d2d] px-3 py-1.5 flex justify-between items-center border-b border-[#333]">
+                                <span className="text-[11px] text-gray-400 font-mono">UserDashboard.tsx</span>
+                                <div className="flex gap-2">
+                                    <button className="text-[10px] bg-[#333] hover:bg-[#444] text-white px-2 py-0.5 rounded">Diff</button>
+                                </div>
+                            </div>
+                            <div className="p-3 text-[11px] text-[#d4d4d4] overflow-x-auto">
+                                <div className="flex bg-red-950/30 text-red-300"><span className="w-4 select-none">-</span><span>{`if (loading) return <Spinner />;`}</span></div>
+                                <div className="flex bg-green-950/30 text-green-300"><span className="w-4 select-none">+</span><span>{`if (loading) return <Spinner />;`}</span></div>
+                                <div className="flex bg-green-950/30 text-green-300"><span className="w-4 select-none">+</span><span>{`if (!user || !user.profile) return <ErrorState />;`}</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button className="w-full bg-[#00f0ff]/10 hover:bg-[#00f0ff]/20 text-[#00f0ff] border border-[#00f0ff]/30 py-2 rounded-md text-[12px] font-bold transition-colors flex items-center justify-center gap-2">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        Apply Fix
+                    </button>
+                </div>
+            </div>
+        </div>
     );
 }
 
-function Header() {
+function WebDashboard() {
     return (
-        <>
-            <div className="flex items-center justify-between px-3.5 py-2.5 bg-zinc-900 text-white rounded-t-xl">
-                <div className="flex items-center gap-2">
-                    <div className="text-[#00BC7C]">
-                        <AulysLogo className="w-4 h-4" />
+        <div className="flex flex-col h-[500px] bg-[#0d0d10] rounded-xl border border-[#222] shadow-2xl overflow-hidden font-sans text-sm">
+            {/* Header */}
+            <div className="h-14 border-b border-[#222] flex items-center justify-between px-6 bg-[#121215]">
+                <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 text-white font-bold tracking-wide">
+                        <div className="w-5 h-5 text-[#00f0ff]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg></div>
+                        Aulys
                     </div>
-                    <span className="text-[11px] font-medium tracking-wide">Aulys (Beta)</span>
+                    <div className="h-4 w-px bg-[#333]" />
+                    <div className="flex gap-4 text-[13px] font-medium text-gray-400">
+                        <span className="text-white">Issues</span>
+                        <span className="hover:text-white cursor-pointer">Metrics</span>
+                        <span className="hover:text-white cursor-pointer">Deployments</span>
+                    </div>
                 </div>
-                <div className="flex items-center gap-2 text-zinc-400">
-                    <button aria-label="Settings" className="hover:text-white transition-colors">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                    </button>
-                    <button aria-label="Close" className="hover:text-white transition-colors">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                    </button>
-                </div>
-            </div>
-            <div className="flex items-center justify-between px-4 py-3 bg-white border-b border-zinc-100 shadow-sm relative z-10">
                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-[#00BC7C]">
-                        <AulysLogo className="w-5 h-5" />
+                    <div className="bg-[#1e1e24] border border-[#333] text-[12px] text-gray-400 px-3 py-1.5 rounded-md flex items-center gap-2 w-48">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Search...
                     </div>
-                    <div>
-                        <div className="text-sm font-bold text-zinc-900 leading-tight">Aulys</div>
-                        <div className="text-[11px] font-medium text-zinc-600">WCAG 2.2 AA Compliant</div>
-                    </div>
-                </div>
-                <div className="px-2.5 py-1 bg-[#00BC7C] rounded-full">
-                    <span className="text-[10px] font-bold text-emerald-950 tracking-wider">PRO</span>
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-purple-500 to-[#00f0ff] border border-[#222]" />
                 </div>
             </div>
-        </>
-    );
-}
 
-function AuditTab() {
-    return (
-        <div className="flex flex-col h-full bg-white animate-in fade-in duration-300">
-            <div className="px-4 py-3 border-b border-zinc-100 flex items-center justify-between bg-zinc-50/50">
-                <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded border border-zinc-200 bg-white flex items-center justify-center shadow-sm">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-zinc-600">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="3" y1="9" x2="21" y2="9"/>
-                        </svg>
+            {/* Main Content */}
+            <div className="flex-1 flex overflow-hidden">
+                {/* List View */}
+                <div className="w-1/3 border-r border-[#222] bg-[#0d0d10] flex flex-col shrink-0">
+                    <div className="p-4 border-b border-[#222] flex justify-between items-center">
+                        <span className="text-[13px] font-bold text-white">Active Issues</span>
+                        <span className="bg-[#1e1e24] text-gray-400 text-[10px] font-bold px-2 py-0.5 rounded border border-[#333]">3 Unresolved</span>
                     </div>
-                    <div>
-                        <div className="text-sm font-bold text-zinc-800">Aulys Frame</div>
-                        <div className="text-[10px] text-zinc-600 font-medium tracking-wide">FRAME</div>
-                    </div>
-                </div>
-                <button className="w-7 h-7 rounded bg-white border border-zinc-200 shadow-sm flex items-center justify-center hover:bg-zinc-50 hover:border-zinc-300 transition-all text-zinc-600" aria-label="Refresh Scan">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-8.21l5.67-5.67"/></svg>
-                </button>
-            </div>
-
-            <div className="flex-1 pb-4 overflow-y-auto" tabIndex={0}>
-                <div className="p-4">
-                    <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-2 px-2.5 py-1 bg-green-100 rounded-full w-fit">
-                            <span className="text-[11px] font-medium text-green-800">6 active rules</span>
-                        </div>
-                        <div className="text-xs font-semibold text-zinc-800 bg-zinc-100 px-2 py-1 rounded">38 Issues</div>
-                    </div>
-
-                    <div className="space-y-3">
-                        <div className="p-3 rounded-xl border border-zinc-200 bg-white shadow-sm hover:border-red-200 transition-colors cursor-pointer group">
-                            <div className="flex items-center justify-between py-1 mb-2">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                                    <span className="text-xs font-bold text-zinc-600 tracking-wider">CRITICAL</span>
-                                    <span className="text-xs text-zinc-500 font-medium">4/4</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <div className="w-4 h-4 rounded flex items-center justify-center bg-[#00BC7C]">
-                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    </div>
-                                    <span className="text-[11px] font-bold text-[#00BC7C]">Auto-Fix</span>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3 mt-3">
-                                <div className="flex items-center justify-center w-5 h-5 text-zinc-500 mt-0.5">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                                </div>
-                                <div>
-                                    <div className="text-sm font-bold text-zinc-800 leading-tight">Contrast Ratio</div>
-                                    <div className="text-xs text-zinc-600 mt-1 leading-relaxed">Text has insufficient contrast with background (3.2:1 vs 4.5:1 AA).</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="p-3 rounded-xl border border-zinc-200 bg-white shadow-sm hover:border-amber-200 transition-colors cursor-pointer group">
-                            <div className="flex items-center justify-between py-1 mb-2">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                                    <span className="text-xs font-bold text-zinc-600 tracking-wider">IMPORTANT</span>
-                                    <span className="text-xs text-zinc-500 font-medium">2/5</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <div className="w-4 h-4 rounded flex items-center justify-center bg-[#00BC7C]">
-                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    </div>
-                                    <span className="text-[11px] font-bold text-[#00BC7C]">Auto-Fix</span>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-3 mt-3">
-                                <div className="flex items-center justify-center w-5 h-5 text-zinc-500 mt-0.5">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-                                </div>
-                                <div>
-                                    <div className="text-sm font-bold text-zinc-800 leading-tight">Missing Alt Text</div>
-                                    <div className="text-xs text-zinc-600 mt-1 leading-relaxed">Image elements must have descriptive alternative text.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="px-4 mt-2">
-                    <div className="flex items-center justify-between mb-3">
-                        <div className="text-[11px] font-bold text-zinc-600 tracking-wider">RECENT SCANS</div>
-                        <div className="text-[11px] text-zinc-600 font-medium cursor-pointer hover:text-zinc-800 transition-colors">Clear All</div>
-                    </div>
-                    <div className="space-y-2">
+                    <div className="flex-1 overflow-y-auto">
                         {[
-                            { name: "Dashboard Wireframes", date: "2m ago", level: "AA" },
-                            { name: "Login Flow V2", date: "1h ago", level: "AA" },
-                            { name: "Settings Screen", date: "3h ago", level: "A" }
-                        ].map((s, i) => (
-                            <div key={i} className="flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-50 cursor-pointer transition-colors border border-transparent hover:border-zinc-200">
-                                <div className="w-8 h-8 rounded bg-zinc-100 flex items-center justify-center flex-shrink-0 text-zinc-500">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                            { title: "TypeError: Cannot read props", path: "src/components/UserDash...", time: "2m ago", env: "production", hits: "1.2k", active: true },
+                            { title: "Unhandled Rejection (Network)", path: "src/lib/api.ts", time: "1hr ago", env: "staging", hits: "43", active: false },
+                            { title: "React Hook useEffect warning", path: "src/hooks/useAuth.ts", time: "3hr ago", env: "development", hits: "12", active: false },
+                        ].map((issue, i) => (
+                            <div key={i} className={`p-4 border-b border-[#222] cursor-pointer transition-colors ${issue.active ? "bg-[#1e1e24] border-l-2 border-l-red-500" : "hover:bg-[#121215]"}`}>
+                                <div className="flex justify-between items-start mb-1">
+                                    <span className="text-[13px] font-bold text-red-400 truncate pr-2">{issue.title}</span>
+                                    <span className="text-[11px] text-gray-500 shrink-0">{issue.time}</span>
                                 </div>
-                                <div className="flex-1 min-w-0">
-                                    <div className="text-sm font-bold text-zinc-800 truncate mb-0.5">{s.name}</div>
-                                    <div className="flex items-center gap-1.5">
-                                        <span className="text-[11px] font-medium text-zinc-600">{s.date}</span>
-                                        <span className="w-1 h-1 rounded-full bg-zinc-300" />
-                                        <span className="text-[10px] font-bold text-zinc-700 bg-zinc-100 border border-zinc-200 rounded px-1">{s.level}</span>
-                                    </div>
+                                <div className="text-[12px] text-gray-400 font-mono truncate mb-2">{issue.path}</div>
+                                <div className="flex items-center gap-2">
+                                    <span className={`text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded border ${issue.env === 'production' ? 'border-purple-500/30 text-purple-400 bg-purple-500/10' : 'border-[#333] text-gray-500 bg-[#1e1e24]'}`}>{issue.env}</span>
+                                    <span className="text-[11px] text-gray-500 flex items-center gap-1"><svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> {issue.hits} events</span>
                                 </div>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-400"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
-        </div>
-    );
-}
 
-function EmptyTab({ title }: { title: string }) {
-    return (
-        <div className="flex flex-col h-full bg-white items-center justify-center px-6 text-center text-zinc-500 animate-in fade-in duration-300">
-            <div className="w-12 h-12 rounded-2xl bg-zinc-50 border border-zinc-100 flex items-center justify-center mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-zinc-400">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="12" />
-                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-            </div>
-            <h3 className="text-sm font-bold text-zinc-900 mb-1">{title} Module</h3>
-            <p className="text-xs text-zinc-600 leading-relaxed max-w-[200px]">
-                This feature is fully detailed in the case study below.
-            </p>
-        </div>
-    );
-}
+                {/* Detail View */}
+                <div className="flex-1 bg-[#121215] flex flex-col overflow-y-auto">
+                    <div className="p-6 border-b border-[#222]">
+                        <div className="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 className="text-xl font-bold text-white mb-2">TypeError: Cannot read properties of undefined (reading 'avatarUrl')</h2>
+                                <div className="flex items-center gap-3 text-[12px] text-gray-400 font-mono">
+                                    <span className="flex items-center gap-1 text-gray-300"><svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg> src/components/UserDashboard.tsx:21</span>
+                                    <span className="bg-[#222] px-1.5 py-0.5 rounded text-gray-300 border border-[#333]">Node.js 18.x</span>
+                                    <span className="bg-purple-500/10 text-purple-400 px-1.5 py-0.5 rounded border border-purple-500/30">production</span>
+                                </div>
+                            </div>
+                            <div className="flex gap-2 shrink-0">
+                                <button className="bg-[#222] hover:bg-[#333] text-white px-3 py-1.5 text-[12px] font-bold rounded-md border border-[#444] transition-colors">Assign</button>
+                                <button className="bg-white hover:bg-gray-200 text-black px-3 py-1.5 text-[12px] font-bold rounded-md transition-colors flex items-center gap-2"><svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg> AI Root Cause</button>
+                            </div>
+                        </div>
 
-export function AulysUI() {
-    const [activeTab, setActiveTab] = useState("audit");
+                        {/* AI Root Cause Panel */}
+                        <div className="bg-gradient-to-r from-[#00f0ff]/10 to-transparent border border-[#00f0ff]/30 rounded-xl p-4 shadow-inner mb-6 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00f0ff]/10 blur-3xl rounded-full pointer-events-none" />
+                            <div className="flex gap-3 relative z-10">
+                                <div className="w-6 h-6 text-[#00f0ff] shrink-0 mt-0.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                                <div>
+                                    <h3 className="text-[13px] font-bold text-white mb-1.5">AI Analysis</h3>
+                                    <p className="text-[12px] text-gray-300 leading-relaxed max-w-2xl">
+                                        The <code className="bg-[#222] px-1 py-0.5 rounded text-[#00f0ff]">user.profile</code> object is frequently undefined in production because the new <code className="bg-[#222] px-1 py-0.5 rounded text-[#00f0ff]">/api/users/v2</code> endpoint requires an explicit <code className="bg-[#222] px-1 py-0.5 rounded text-[#00f0ff]">?include=profile</code> parameter. 
+                                        This was introduced in commit <a href="#" className="text-blue-400 hover:underline">#a1b2c3d</a> by <strong>Alex M.</strong> 2 days ago.
+                                    </p>
+                                    <div className="mt-4 flex gap-2">
+                                        <button className="bg-[#00f0ff]/20 text-[#00f0ff] border border-[#00f0ff]/40 px-3 py-1.5 text-[11px] font-bold rounded shadow-sm hover:bg-[#00f0ff]/30 transition-colors">View PR #402</button>
+                                        <button className="bg-[#222] text-gray-300 border border-[#333] px-3 py-1.5 text-[11px] font-bold rounded hover:bg-[#333] transition-colors">Generate Fix Patch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    const TABS = [
-        {
-            id: "audit",
-            label: "Audit",
-            icon: ({ className, strokeWidth = 1.5 }: { className?: string, strokeWidth?: number }) => (
-                <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2.5 12l5 5 14-14" />
-                </svg>
-            ),
-        },
-        {
-            id: "tokens",
-            label: "Tokens",
-            icon: ({ className, strokeWidth = 1.5 }: { className?: string, strokeWidth?: number }) => (
-                <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="7" height="7" rx="2" />
-                    <rect x="14" y="3" width="7" height="7" rx="2" />
-                    <rect x="3" y="14" width="7" height="7" rx="2" />
-                    <rect x="14" y="14" width="7" height="7" rx="2" />
-                </svg>
-            ),
-        },
-        {
-            id: "code",
-            label: "Code",
-            icon: ({ className, strokeWidth = 1.5 }: { className?: string, strokeWidth?: number }) => (
-                <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                </svg>
-            ),
-        },
-        {
-            id: "issues",
-            label: "Issues",
-            icon: ({ className, strokeWidth = 1.5 }: { className?: string, strokeWidth?: number }) => (
-                <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="12" />
-                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-            ),
-        },
-        {
-            id: "guide",
-            label: "Guide",
-            icon: ({ className, strokeWidth = 1.5 }: { className?: string, strokeWidth?: number }) => (
-                <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                </svg>
-            ),
-        }
-    ];
-
-    return (
-        <div 
-            className="rounded-xl overflow-hidden flex flex-col flex-shrink-0 border border-zinc-200/50 shadow-2xl relative"
-            style={{ width: 340, height: 680, backgroundColor: "#fff" }}
-        >
-            <Header />
-            
-            <div className="flex-1 relative overflow-hidden bg-white">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeTab}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.2 }}
-                        className="h-full"
-                    >
-                        {activeTab === "audit" ? <AuditTab /> : <EmptyTab title={TABS.find(t => t.id === activeTab)?.label || ""} />}
-                    </motion.div>
-                </AnimatePresence>
-            </div>
-
-            {/* Pointer Icon guiding the user */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 2, duration: 0.5 }}
-                className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none z-50"
-            >
-                <div className="bg-zinc-900 text-white text-[11px] font-semibold px-3 py-1.5 rounded-full shadow-lg mb-2 tracking-wide flex items-center gap-2">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                    </span>
-                    Click tabs to interact
+                        {/* Stack Trace */}
+                        <div>
+                            <h3 className="text-[13px] font-bold text-white mb-3">Stack Trace</h3>
+                            <div className="bg-[#0d0d10] border border-[#222] rounded-lg p-4 font-mono text-[11px] text-gray-400 overflow-x-auto shadow-inner leading-loose">
+                                <div className="text-red-400 mb-2">TypeError: Cannot read properties of undefined (reading 'avatarUrl')</div>
+                                <div className="pl-4 border-l-2 border-red-500/50 text-gray-300 bg-red-950/20 py-1"><span className="text-purple-400">at UserDashboard</span> (src/components/UserDashboard.tsx:21:28)</div>
+                                <div className="pl-4 text-gray-500"><span className="text-purple-400">at renderWithHooks</span> (node_modules/react-dom/cjs/react-dom.development.js:16305:18)</div>
+                                <div className="pl-4 text-gray-500"><span className="text-purple-400">at mountIndeterminateComponent</span> (node_modules/react-dom/cjs/react-dom.development.js:20074:13)</div>
+                                <div className="pl-4 text-gray-500"><span className="text-purple-400">at beginWork</span> (node_modules/react-dom/cjs/react-dom.development.js:21587:16)</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <motion.div
-                    animate={{ y: [0, -8, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#18181b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="drop-shadow-md">
-                        <path d="M22 14a8 8 0 0 1-8 8" />
-                        <path d="M18 11v-1a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
-                        <path d="M14 10V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
-                        <path d="M10 9.5V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v10" />
-                        <path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-                    </svg>
-                </motion.div>
-            </motion.div>
-
-            {/* Bottom Navigation */}
-            <div className="flex items-center justify-between border-t border-zinc-100 bg-white relative z-10 px-2">
-                {TABS.map((tab) => {
-                    const Icon = tab.icon;
-                    const isActive = tab.id === activeTab;
-                    return (
-                        <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            className={`flex-1 flex flex-col items-center gap-1.5 py-3 transition-colors ${
-                                isActive ? "text-[#00BC7C]" : "text-zinc-500 hover:text-zinc-700"
-                            }`}
-                        >
-                            <Icon className="w-5 h-5 mb-0.5" strokeWidth={isActive ? 2.5 : 2} />
-                            <span className="text-[10px] font-medium">{tab.label}</span>
-                        </button>
-                    );
-                })}
             </div>
         </div>
+    );
+}
+
+/* ─── Main Component ───────────────────────────────────── */
+export function AulysUI() {
+    const [view, setView] = useState<"ide" | "dashboard">("ide");
+
+    return (
+        <section className="py-24 px-6 bg-[#050505] relative overflow-hidden">
+            {/* Background Gradients */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00f0ff]/5 rounded-full blur-[120px] pointer-events-none" />
+
+            <div className="container mx-auto max-w-6xl relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
+                >
+                    <div className="max-w-2xl">
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00f0ff]/10 border border-[#00f0ff]/20 text-[#00f0ff] text-[11px] font-black uppercase tracking-[0.2em] mb-6">
+                            04a — Developer Tools
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
+                            Production-Grade Reality
+                        </h2>
+                        <p className="text-lg text-gray-400 font-medium leading-relaxed">
+                            Aulys integrates directly into developers' existing workflows. From IDE extensions to dense web dashboards, the UI is built to handle authentic code traces, git metadata, and complex error logs without simplifying the data.
+                        </p>
+                    </div>
+
+                    <div className="flex bg-[#121215] p-1 rounded-xl border border-[#222]">
+                        <button
+                            onClick={() => setView("ide")}
+                            className={`px-6 py-2.5 rounded-lg text-[13px] font-bold transition-all ${view === "ide" ? "bg-[#222] text-white shadow-md border border-[#333]" : "text-gray-500 hover:text-white"}`}
+                        >
+                            IDE Extension
+                        </button>
+                        <button
+                            onClick={() => setView("dashboard")}
+                            className={`px-6 py-2.5 rounded-lg text-[13px] font-bold transition-all ${view === "dashboard" ? "bg-[#222] text-white shadow-md border border-[#333]" : "text-gray-500 hover:text-white"}`}
+                        >
+                            Web Dashboard
+                        </button>
+                    </div>
+                </motion.div>
+
+                <div className="relative">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={view}
+                            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                            exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                        >
+                            {view === "ide" ? <IDEView /> : <WebDashboard />}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
+        </section>
     );
 }

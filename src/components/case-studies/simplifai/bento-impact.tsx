@@ -155,7 +155,7 @@ export function BentoImpact() {
                         viewport={{ once: true }}
                         className="text-base text-zinc-600 max-w-2xl leading-relaxed"
                     >
-                        The before: enterprise ops managers raised 5+ support tickets per week for routine workflow changes. The after: they configured, monitored, and debugged automations without touching engineering. That shift is what these numbers measure.
+                        The before: enterprise ops managers leaned on recurring support tickets for routine workflow changes. The after: they configured, monitored, and debugged automations without touching engineering. That shift is what these numbers measure.
                     </motion.p>
                 </div>
 
@@ -168,7 +168,7 @@ export function BentoImpact() {
 
                 {/* Methodology note */}
                 <p className="text-xs text-zinc-600 text-center mb-6">
-                    * 40% onboarding time reduction measured via pre/post Maze unmoderated testing (n=47 sessions, Q2–Q3 2022). 73% adoption rate tracked via Mixpanel event analytics comparing 90-day cohorts pre- and post-redesign launch. 28% adoption jump measured within 3 weeks of switching from canvas-first to linear step-builder architecture (Q4 2022 cohort).
+                    * Figures are approximate and directional, drawn from pre/post usability testing and product analytics around the redesign launch.
                 </p>
 
                 {/* Full-width Design System card */}

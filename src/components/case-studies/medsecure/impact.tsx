@@ -8,17 +8,17 @@ import { AnimatedNumber } from "@/components/ui/animated-number";
 const STATS = [
     {
         icon: TrendingDown,
-        value: "34%",
-        label: "Reduction in Medical Errors",
-        desc: "Across pilot hospitals in Delhi NCR and Pune, measured over 6-month trial period.",
+        value: "Major",
+        label: "Projected Reduction in Medical Errors",
+        desc: "Modeled across representative deployment scenarios.",
         color: "text-emerald-400",
         bg: "bg-emerald-500/10",
         featured: true,
     },
     {
         icon: IndianRupee,
-        value: "₹6,200",
-        label: "Average Patient Savings",
+        value: "Lower",
+        label: "Projected Patient Cost",
         desc: "Per year — from eliminated duplicate tests and reduced emergency readmissions.",
         color: "text-amber-400",
         bg: "bg-amber-500/10",
@@ -36,8 +36,8 @@ const STATS = [
     {
         icon: ShieldCheck,
         value: "0",
-        label: "Data Breaches in Pilot",
-        desc: "Zero data breaches across 6-month pilot. Permissioned Hyperledger architecture with no public-facing endpoints.",
+        label: "Public-Facing Endpoints",
+        desc: "Permissioned Hyperledger architecture keeps records off any public network by default.",
         color: "text-violet-400",
         bg: "bg-violet-500/10",
         featured: false,
@@ -60,13 +60,13 @@ export function Impact() {
                         05 — Impact
                     </p>
                     <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-zinc-900 mb-6">
-                        Pilot Results
+                        Projected Impact
                     </h2>
                     <p className="text-xl text-zinc-600 max-w-2xl leading-relaxed">
-                        Tested across 3 hospitals, 2 PHCs, and 1,200 patients over 6 months. Here&apos;s what the data showed.
+                        Modeled against a representative deployment — community health centres and district hospitals. Here&apos;s what the model projects.
                     </p>
                     <p className="text-xs text-zinc-400 mt-3">
-                        * Error rate baseline from 6-month pre-implementation incident logs at each facility; post period Jan–Jun 2024. Patient savings calculated from average duplicate diagnostic costs eliminated per enrolled patient. Pilot conducted independently by partnering healthcare institutions (Delhi NCR &amp; Pune).
+                        * MedSecure is a concept project. Figures are projections modeled from published health-system benchmarks and prototype usability testing — not outcomes from a deployed clinical pilot.
                     </p>
                 </motion.div>
 
@@ -85,9 +85,9 @@ export function Impact() {
                             <div className="text-8xl font-black tracking-tighter text-emerald-400 mb-2">
                                 <AnimatedNumber value={34} />%
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Reduction in Medical Errors</h3>
+                            <h3 className="text-2xl font-bold mb-3">Projected Reduction in Medical Errors</h3>
                             <p className="text-zinc-400 max-w-md leading-relaxed">
-                                Across pilot hospitals in Delhi NCR and Pune. With complete medication history and allergy records available at point-of-care, adverse drug events dropped significantly.
+                                Modeled across representative deployment scenarios. With complete medication history and allergy records available at point-of-care, adverse drug events are projected to drop significantly.
                             </p>
                         </div>
                     </motion.div>
@@ -117,7 +117,7 @@ export function Impact() {
                     >
                         <ShieldCheck className="w-8 h-8 text-emerald-700 mb-6" aria-hidden="true" />
                         <div className="text-5xl font-black text-emerald-900 mb-2 tracking-tight">0</div>
-                        <p className="text-emerald-800 font-medium text-sm">Data breaches recorded across 6-month pilot period. Permissioned Hyperledger architecture with no public-facing endpoints.</p>
+                        <p className="text-emerald-800 font-medium text-sm">Public-facing endpoints in the architecture. A permissioned Hyperledger design keeps records off any public network by default.</p>
                     </motion.div>
 
                     {/* Users addressed */}
@@ -130,9 +130,9 @@ export function Impact() {
                     >
                         <Users className="w-8 h-8 text-amber-700 mb-6" aria-hidden="true" />
                         <div className="text-5xl font-black text-amber-900 mb-2 tracking-tight">
-                            <AnimatedNumber value={1200} />
+                            100%
                         </div>
-                        <p className="text-amber-800 font-medium text-sm">Patients onboarded in 6 months. Zero required in-person enrollment — ABHA ID only.</p>
+                        <p className="text-amber-800 font-medium text-sm">Remote onboarding by design — zero in-person enrollment required, ABHA ID only.</p>
                     </motion.div>
 
                     {/* Languages */}
@@ -164,23 +164,23 @@ export function Impact() {
                                 </div>
                                 <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">Design Failure → Fix</span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">V1 Enrollment Failed 30% of Rural Users. Here's What We Missed.</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4">V1 Enrollment Tripped Up Rural Users. Here's What We Missed.</h3>
                             <p className="text-zinc-300 leading-relaxed mb-6 max-w-3xl">
-                                The initial ABHA enrollment flow assumed reliable OTP delivery via SMS. In the Delhi NCR pilot, ~30% of rural users on BSNL networks couldn't complete first-attempt enrollment — SMS delay averaging 4–8 minutes killed the flow. We had over-indexed on the technical architecture and under-indexed on last-mile connectivity.
+                                The initial ABHA enrollment flow assumed reliable OTP delivery via SMS. In prototype testing with representative rural users, a large share couldn&apos;t complete first-attempt enrollment on low-bandwidth networks — SMS delay killed the flow. The design had over-indexed on the technical architecture and under-indexed on last-mile connectivity.
                             </p>
                             <div className="flex flex-wrap gap-6 items-center">
                                 <div>
-                                    <p className="text-3xl font-black text-red-400">30%</p>
-                                    <p className="text-xs text-zinc-400 font-semibold mt-1">V1 enrollment failure rate<br />(rural BSNL users, Delhi NCR)</p>
+                                    <p className="text-3xl font-black text-red-400">High</p>
+                                    <p className="text-xs text-zinc-400 font-semibold mt-1">V1 enrollment failure<br />(rural, low-bandwidth networks)</p>
                                 </div>
                                 <div className="text-zinc-600 text-2xl font-black">→</div>
                                 <div>
-                                    <p className="text-3xl font-black text-emerald-400">&lt;4%</p>
-                                    <p className="text-xs text-zinc-400 font-semibold mt-1">V2 failure rate after adding<br />QR-scan fallback via PHC kiosks</p>
+                                    <p className="text-3xl font-black text-emerald-400">Minimal</p>
+                                    <p className="text-xs text-zinc-400 font-semibold mt-1">V2 failure after adding<br />QR-scan fallback via PHC kiosks</p>
                                 </div>
                                 <div className="flex-1 min-w-[200px]">
                                     <p className="text-sm text-zinc-400 leading-relaxed border-l border-zinc-700 pl-4">
-                                        V2 added a QR-scan enrollment path at PHC kiosks — no SMS dependency. The fix came from watching one rural patient try to enroll 4 times and give up.
+                                        V2 added a QR-scan enrollment path at PHC kiosks — no SMS dependency. The fix came from watching one rural participant try to enroll several times and give up.
                                     </p>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ export function Impact() {
                         <Award className="w-8 h-8 text-zinc-400 mb-6" aria-hidden="true" />
                         <h3 className="text-2xl font-bold text-zinc-900 mb-4">What&apos;s Next: National Scale</h3>
                         <p className="text-lg text-zinc-600 leading-relaxed mb-6 max-w-3xl">
-                            Pilot feedback confirmed the core thesis — but surface an unexpected insight: rural PHC workers were the primary adoption bottleneck, not patients. Phase 2 focuses on a <strong>PHC Companion App</strong> — an ultra-lightweight offline tool for frontline health workers to onboard and manage village-level records.
+                            Prototype testing confirmed the core thesis — but surfaced an unexpected insight: rural PHC workers were the primary adoption bottleneck, not patients. Phase 2 focuses on a <strong>PHC Companion App</strong> — an ultra-lightweight offline tool for frontline health workers to onboard and manage village-level records.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {["PHC Companion App", "SMS-based OTP Fallback", "State Health Ministry API", "ABHA Deeplink Integration", "Voice Search in Hindi"].map(tag => (

@@ -21,7 +21,7 @@ export function DesignArtifacts() {
                         From Research to High-Fidelity
                     </h2>
                     <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
-                        Three screens that tell the full story — the dashboard that replaced an infinite canvas, the node builder that made AI automation intuitive, and the monitor that gave enterprise teams operational confidence.
+                        Four screens that tell the full story — the dashboard that replaced an infinite canvas, the node builder that made AI automation intuitive, the monitor that gave enterprise teams operational confidence, and the template gallery that solved the blank-canvas problem.
                     </p>
                 </motion.div>
 

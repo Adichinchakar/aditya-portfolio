@@ -19,7 +19,7 @@ export function ConceptValidation() {
                         Concept Validation & Testing
                     </h2>
                     <p className="text-zinc-600 leading-relaxed max-w-2xl text-lg">
-                        We tested our core hypotheses in a 2-week field study in Delhi NCR before writing any production code.
+                        We tested our core hypotheses in a 2-week field study with representative users before writing any production code.
                     </p>
                 </motion.div>
 

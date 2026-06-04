@@ -3,384 +3,222 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 
-const SCREENS = [
-    { id: "org_map", label: "Spatial Org Map", tag: "Home State" },
-    { id: "team_detail", label: "Team Detail", tag: "After Gaze" },
-    { id: "tool_discovery", label: "Tool Discovery", tag: "Step 2 of 5" },
-    { id: "ai_agent", label: "AI Guide — Ava", tag: "Day 1 Session" },
-];
-
-/* ─── Waveform bars helper ───────────────────────────── */
-function Waveform({ color = "#d0bcff", bars = 5, height = 14 }: { color?: string; bars?: number; height?: number }) {
-    const heights = bars === 5 ? [0.4, 0.7, 1, 0.7, 0.4] : [0.3, 0.5, 0.7, 1, 0.7, 0.5, 0.3, 0.5, 0.7];
-    return (
-        <div className="flex items-center gap-[2px]">
-            {heights.slice(0, bars).map((h, i) => (
-                <div key={i} className="w-[2.5px] rounded-full" style={{ height: h * height, background: color, opacity: 0.85 }} />
-            ))}
-        </div>
-    );
-}
-
-/* ─── Screen 1: Spatial Org Map ─────────────────────── */
+/* ─── Screen 1: Spatial Org Directory ────────────────────── */
 export function OrgMapScreen() {
-    const teams = [
-        { name: "Engineering", count: "12 members", x: 50, y: 44, focused: true, color: "#d0bcff" },
-        { name: "Design", count: "8 members", x: 22, y: 28, focused: false, color: "#a78bfa" },
-        { name: "Product", count: "6 members", x: 75, y: 26, focused: false, color: "#818cf8" },
-        { name: "Data", count: "9 members", x: 16, y: 58, focused: false, color: "#7dd3fc" },
-        { name: "DevOps", count: "5 members", x: 82, y: 56, focused: false, color: "#6ee7b7" },
-        { name: "Security", count: "4 members", x: 50, y: 74, focused: false, color: "#fda4af" },
-        { name: "HR Ops", count: "7 members", x: 28, y: 72, focused: false, color: "#fcd34d" },
-        { name: "Finance", count: "11 members", x: 70, y: 72, focused: false, color: "#c084fc" },
+    const employees = [
+        { name: "Rahul Choudhury", role: "Frontend Lead", dept: "Engineering", status: "In a meeting", jira: "ORB-142", tz: "PST", online: true, img: "https://api.dicebear.com/7.x/notionists/svg?seed=Rahul&backgroundColor=e2e8f0" },
+        { name: "Sarah Jenkins", role: "Product Manager", dept: "Product", status: "Focus Mode", jira: "ORB-129", tz: "EST", online: true, img: "https://api.dicebear.com/7.x/notionists/svg?seed=Sarah&backgroundColor=e2e8f0" },
+        { name: "David Kim", role: "Backend Eng", dept: "Engineering", status: "Active", jira: "ORB-144", tz: "PST", online: true, img: "https://api.dicebear.com/7.x/notionists/svg?seed=David&backgroundColor=e2e8f0" },
+        { name: "Elena Rostova", role: "Staff Designer", dept: "Design", status: "Offline", jira: "None", tz: "CET", online: false, img: "https://api.dicebear.com/7.x/notionists/svg?seed=Elena&backgroundColor=e2e8f0" },
+        { name: "Michael Chen", role: "Data Scientist", dept: "Data", status: "Active", jira: "ORB-98", tz: "PST", online: true, img: "https://api.dicebear.com/7.x/notionists/svg?seed=Mike&backgroundColor=e2e8f0" },
     ];
+
     return (
-        <div className="relative w-full h-full overflow-hidden" style={{ background: "linear-gradient(160deg, #0a0a0f 0%, #0e0e0e 60%, #0c0a14 100%)" }}>
-            {/* Layered atmospheric glows */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 50% 44%, rgba(208,188,255,0.13) 0%, transparent 70%)" }} />
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 40% 35% at 80% 18%, rgba(129,140,248,0.10) 0%, transparent 60%)" }} />
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 35% 30% at 18% 65%, rgba(125,211,252,0.07) 0%, transparent 60%)" }} />
-            </div>
+        <div className="relative w-full h-full flex flex-col bg-black/40 overflow-hidden">
+            {/* Atmospheric Background Grid */}
+            <div className="absolute inset-0 z-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,rgba(255,255,255,0.05)_0%,transparent_100%)] z-0 pointer-events-none" />
 
-            {/* Top bar */}
-            <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-8 pt-5 pb-3 z-20">
-                <span className="text-base font-black tracking-[0.15em] uppercase" style={{ color: "#d0bcff", fontFamily: "var(--font-epilogue, var(--font-inter))", textShadow: "0 0 20px rgba(208,188,255,0.4)" }}>
-                    Orbit
-                </span>
-                <span className="text-[9px] font-mono tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>DAY 1 · SESSION 1 OF 4</span>
-                <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}>
-                    <div className="w-2 h-2 rounded-full" style={{ background: "rgba(255,255,255,0.25)" }} />
-                </div>
-            </div>
-
-            {/* SVG connection lines */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" style={{ opacity: 0.18 }}>
-                {teams.filter(t => !t.focused).slice(0, 5).map((t, i) => (
-                    <line key={i}
-                        x1="50%" y1="44%"
-                        x2={`${t.x}%`} y2={`${t.y}%`}
-                        stroke="white" strokeWidth="0.8"
-                        strokeDasharray="3 4"
-                    />
-                ))}
-            </svg>
-
-            {/* Team cards */}
-            {teams.map((card) => (
-                <div
-                    key={card.name}
-                    className="absolute z-10"
-                    style={{
-                        left: `${card.x}%`,
-                        top: `${card.y}%`,
-                        transform: "translate(-50%, -50%)",
-                        width: card.focused ? 148 : 118,
-                        padding: card.focused ? "14px 16px" : "10px 14px",
-                        borderRadius: 16,
-                        background: card.focused
-                            ? "rgba(208,188,255,0.10)"
-                            : "rgba(255,255,255,0.06)",
-                        backdropFilter: "blur(28px)",
-                        WebkitBackdropFilter: "blur(28px)",
-                        border: card.focused
-                            ? `1.5px solid rgba(208,188,255,0.35)`
-                            : "1px solid rgba(255,255,255,0.10)",
-                        boxShadow: card.focused
-                            ? "0 0 32px rgba(208,188,255,0.18), 0 0 8px rgba(208,188,255,0.10), inset 0 1px 0 rgba(255,255,255,0.08)"
-                            : "0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)",
-                        scale: card.focused ? 1 : 1,
-                    }}
-                >
-                    {card.focused && (
-                        <div
-                            className="absolute -top-7 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-[8px] font-bold whitespace-nowrap"
-                            style={{ background: "rgba(208,188,255,0.18)", border: "1px solid rgba(208,188,255,0.35)", color: "#d0bcff", backdropFilter: "blur(12px)" }}
-                        >
-                            Your team
-                        </div>
-                    )}
-                    <div className="flex items-center gap-2 mb-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: card.color + "60", border: `1.5px solid ${card.color}`, boxShadow: `0 0 6px ${card.color}50` }} />
-                        <span className={`font-bold text-white leading-none ${card.focused ? "text-[11px]" : "text-[9px]"}`}>{card.name}</span>
-                    </div>
-                    <span className="text-[8px] font-mono" style={{ color: "rgba(255,255,255,0.35)" }}>{card.count}</span>
-                </div>
-            ))}
-
-            {/* Bottom progress pill */}
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 px-5 py-2.5 rounded-full" style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.10)" }}>
-                <span className="text-[9px] font-mono" style={{ color: "rgba(255,255,255,0.45)" }}>Day 1 Progress</span>
-                <div className="flex gap-1">
-                    {[1,2,3,4,5,6,7].map((n) => (
-                        <div key={n} className="w-1.5 h-1.5 rounded-full" style={{ background: n <= 3 ? "#d0bcff" : "rgba(255,255,255,0.18)", boxShadow: n <= 3 ? "0 0 4px rgba(208,188,255,0.6)" : undefined }} />
-                    ))}
-                </div>
-                <span className="text-[9px] font-bold font-mono" style={{ color: "#d0bcff" }}>3/7</span>
-            </div>
-        </div>
-    );
-}
-
-/* ─── Screen 2: Team Detail ─────────────────────────── */
-function TeamDetailScreen() {
-    return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden" style={{ background: "linear-gradient(160deg, #0a0a0f 0%, #0e0e0e 60%, #0c0a14 100%)" }}>
-            {/* Blurred org map backdrop hints */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 80% 70% at 50% 50%, rgba(208,188,255,0.07) 0%, transparent 70%)", filter: "blur(1px)" }} />
-                {/* Ghost team cards visible in background */}
-                {[
-                    { x: 12, y: 22, w: 80 }, { x: 78, y: 18, w: 72 },
-                    { x: 8, y: 62, w: 76 }, { x: 82, y: 60, w: 68 },
-                    { x: 45, y: 76, w: 80 },
-                ].map((g, i) => (
-                    <div key={i} className="absolute rounded-xl" style={{
-                        left: `${g.x}%`, top: `${g.y}%`,
-                        width: g.w, height: 48,
-                        background: "rgba(255,255,255,0.03)",
-                        border: "1px solid rgba(255,255,255,0.06)",
-                        opacity: 0.5, filter: "blur(1px)",
-                    }} />
-                ))}
-            </div>
-
-            {/* Frosted glass panel */}
-            <div
-                className="relative z-10 w-[420px] rounded-3xl overflow-hidden"
-                style={{
-                    background: "rgba(255,255,255,0.09)",
-                    backdropFilter: "blur(60px)",
-                    WebkitBackdropFilter: "blur(60px)",
-                    border: "1px solid rgba(255,255,255,0.16)",
-                    boxShadow: "0 32px 80px rgba(208,188,255,0.12), 0 8px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.10)",
-                }}
-            >
-                {/* Inner glow top */}
-                <div className="absolute top-0 left-0 right-0 h-24 pointer-events-none" style={{ background: "linear-gradient(180deg, rgba(208,188,255,0.06) 0%, transparent 100%)" }} />
-
-                <div className="relative p-6 flex flex-col gap-5">
-                    {/* Header */}
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-2xl flex items-center justify-center" style={{ background: "rgba(208,188,255,0.15)", border: "1px solid rgba(208,188,255,0.30)", boxShadow: "0 0 12px rgba(208,188,255,0.15)" }}>
-                                <div className="w-3.5 h-3.5 rounded-full" style={{ background: "linear-gradient(135deg, #d0bcff, #8b5cf6)" }} />
-                            </div>
-                            <div>
-                                <p className="text-base font-black text-white leading-none" style={{ fontFamily: "var(--font-epilogue, var(--font-inter))" }}>Engineering</p>
-                                <p className="text-[9px] font-mono mt-0.5" style={{ color: "rgba(255,255,255,0.40)" }}>12 members · 3 squads</p>
-                            </div>
-                        </div>
-                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-[11px]" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.30)" }}>×</div>
-                    </div>
-
-                    {/* Avatar row */}
-                    <div className="flex gap-3">
-                        {[
-                            { initials: "RC", label: "Your buddy", highlight: true },
-                            { initials: "AL", label: "Ana L.", highlight: false },
-                            { initials: "PK", label: "Priya K.", highlight: false },
-                            { initials: "JM", label: "Jamie M.", highlight: false },
-                            { initials: "+8", label: "more", highlight: false },
-                        ].map((av, i) => (
-                            <div key={i} className="flex flex-col items-center gap-1.5 flex-1">
-                                <div
-                                    className="w-10 h-10 rounded-full flex items-center justify-center text-[10px] font-bold text-white"
-                                    style={{
-                                        background: av.highlight ? "linear-gradient(135deg, #9b87f5, #6366f1)" : "linear-gradient(135deg, rgba(139,92,246,0.5), rgba(99,102,241,0.5))",
-                                        border: av.highlight ? "2px solid rgba(208,188,255,0.70)" : "1.5px solid rgba(255,255,255,0.12)",
-                                        boxShadow: av.highlight ? "0 0 14px rgba(208,188,255,0.35), 0 0 4px rgba(208,188,255,0.20)" : undefined,
-                                    }}
-                                >
-                                    {av.initials}
-                                </div>
-                                <span className="text-[7px] font-medium leading-none text-center" style={{ color: av.highlight ? "#d0bcff" : "rgba(255,255,255,0.35)" }}>{av.label}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* AI suggestion */}
-                    <div className="flex items-center gap-3 px-4 py-3 rounded-2xl" style={{ background: "rgba(208,188,255,0.08)", border: "1px solid rgba(208,188,255,0.22)", backdropFilter: "blur(12px)" }}>
-                        <Waveform color="#d0bcff" bars={5} height={16} />
-                        <p className="text-[9px] leading-snug flex-1" style={{ color: "rgba(255,255,255,0.80)" }}>
-                            Suggested intro: message Rahul about your setup call
-                        </p>
-                        <div className="px-3 py-1.5 rounded-full text-[8px] font-bold whitespace-nowrap" style={{ background: "rgba(208,188,255,0.18)", border: "1px solid rgba(208,188,255,0.35)", color: "#d0bcff" }}>
-                            Send intro
-                        </div>
-                    </div>
-
-                    {/* How this team works */}
+            {/* Spatial Top Chrome */}
+            <div className="px-8 py-6 flex items-center justify-between z-10">
+                <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 backdrop-blur-md flex items-center justify-center text-white font-black tracking-widest text-[10px]">ORB</div>
                     <div>
-                        <p className="text-[8px] font-mono font-bold uppercase tracking-widest mb-2.5" style={{ color: "rgba(255,255,255,0.28)" }}>How this team works</p>
-                        <div className="flex flex-wrap gap-2">
-                            {["Async-first", "Weekly sync Tues", "Slack #eng-general"].map((tag) => (
-                                <span key={tag} className="px-3 py-1.5 rounded-full text-[8px] font-medium" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.55)" }}>
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
+                        <h2 className="text-[18px] font-bold text-white tracking-tight leading-none mb-1">Global Directory</h2>
+                        <div className="text-[11px] font-mono text-white/50 tracking-widest uppercase">142 Employees Online</div>
                     </div>
+                </div>
+                <div className="flex gap-3">
+                    <div className="relative">
+                        <svg className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="text" placeholder="Search by name, role, skill..." className="w-64 pl-9 pr-3 py-2 bg-white/5 border border-white/10 rounded-full text-[12px] text-white focus:outline-none focus:bg-white/10 backdrop-blur-md transition-colors" />
+                    </div>
+                    <button className="px-4 py-2 bg-white/10 border border-white/20 text-white rounded-full text-[12px] font-bold backdrop-blur-md hover:bg-white/20 transition-colors flex items-center gap-2">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                        Filter
+                    </button>
                 </div>
             </div>
-        </div>
-    );
-}
 
-/* ─── Screen 3: Tool Discovery ──────────────────────── */
-function ToolDiscoveryScreen() {
-    const tools = [
-        { name: "Slack", letter: "S", bg: "#4A154B", active: true },
-        { name: "Jira", letter: "J", bg: "#0052CC", active: false },
-        { name: "Figma", letter: "F", bg: "#F24E1E", active: false },
-        { name: "GitHub", letter: "G", bg: "#21262d", active: false },
-        { name: "Notion", letter: "N", bg: "#191919", active: false },
-        { name: "Workday", letter: "W", bg: "#1f3047", active: false },
-    ];
-
-    return (
-        <div className="relative w-full h-full flex flex-col overflow-hidden" style={{ background: "linear-gradient(160deg, #0a0a0f 0%, #0e0e0e 60%, #0c0a14 100%)" }}>
-            {/* Atmospherics */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 50% at 50% 50%, rgba(208,188,255,0.09) 0%, transparent 70%)" }} />
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 40% 30% at 20% 80%, rgba(74,21,75,0.12) 0%, transparent 55%)" }} />
-            </div>
-
-            <div className="relative z-10 flex flex-col h-full px-7 py-6 gap-5">
-                {/* AI voice bar */}
-                <div className="flex items-center gap-4 px-6 py-4 rounded-full" style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(28px)", border: "1px solid rgba(255,255,255,0.10)", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)" }}>
-                    <Waveform color="#d0bcff" bars={7} height={16} />
-                    <p className="text-[10px] flex-1" style={{ color: "rgba(255,255,255,0.75)" }}>
-                        Your primary tools are ready. Start with Slack — your team is active now.
-                    </p>
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: "#d0bcff", boxShadow: "0 0 6px rgba(208,188,255,0.8)" }} />
-                </div>
-
-                {/* Tool dock — fills most of the space */}
-                <div
-                    className="flex-1 flex items-center justify-center px-4 rounded-3xl"
-                    style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.07)", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)" }}
-                >
-                    <div className="flex gap-3 w-full py-4">
-                        {tools.map((tool) => (
-                            <div
-                                key={tool.name}
-                                className="flex flex-col items-center gap-3 flex-1 py-5 rounded-2xl"
-                                style={{
-                                    background: tool.active ? `${tool.bg}ee` : "rgba(255,255,255,0.06)",
-                                    backdropFilter: "blur(20px)",
-                                    border: tool.active ? "1.5px solid rgba(208,188,255,0.40)" : "1px solid rgba(255,255,255,0.08)",
-                                    boxShadow: tool.active ? "0 0 24px rgba(208,188,255,0.18), 0 0 6px rgba(74,21,75,0.30), inset 0 1px 0 rgba(255,255,255,0.10)" : "inset 0 1px 0 rgba(255,255,255,0.04)",
-                                }}
-                            >
-                                <div className="w-10 h-10 rounded-2xl flex items-center justify-center text-[13px] font-bold text-white" style={{ background: tool.bg, boxShadow: tool.active ? `0 4px 12px ${tool.bg}90` : undefined }}>
-                                    {tool.letter}
-                                </div>
-                                <span className="text-[8px] font-medium text-center leading-tight" style={{ color: tool.active ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.45)" }}>
-                                    {tool.name}
-                                </span>
-                                {tool.active && (
-                                    <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#d0bcff", boxShadow: "0 0 6px rgba(208,188,255,0.8)" }} />
-                                )}
-                            </div>
-                        ))}
+            {/* Dense Data Table (Spatial Glass Style) */}
+            <div className="flex-1 px-8 pb-8 z-10 overflow-hidden flex flex-col">
+                <div className="bg-white/5 border border-white/10 rounded-[24px] backdrop-blur-[60px] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.2)] flex-1 flex flex-col overflow-hidden">
+                    
+                    {/* Table Header */}
+                    <div className="grid grid-cols-[minmax(200px,1fr)_120px_160px_140px_100px] gap-4 px-6 py-4 border-b border-white/10 bg-black/20 text-[10px] font-bold uppercase tracking-widest text-white/40">
+                        <div>Employee</div>
+                        <div>Department</div>
+                        <div>Current Status</div>
+                        <div>Active Ticket</div>
+                        <div>Local Time</div>
                     </div>
-                </div>
 
-                {/* Step progress */}
-                <div className="flex justify-center">
-                    <div className="flex items-center gap-3 px-5 py-2.5 rounded-full" style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                        <span className="text-[9px] font-mono" style={{ color: "rgba(255,255,255,0.40)" }}>Tool Setup</span>
-                        <div className="flex gap-1">
-                            {[1,2,3,4,5].map((n) => (
-                                <div key={n} className="w-1.5 h-1.5 rounded-full" style={{ background: n <= 2 ? "#d0bcff" : "rgba(255,255,255,0.18)", boxShadow: n <= 2 ? "0 0 4px rgba(208,188,255,0.6)" : undefined }} />
-                            ))}
-                        </div>
-                        <span className="text-[9px] font-bold font-mono" style={{ color: "#d0bcff" }}>Step 2 of 5</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-/* ─── Screen 4: AI Agent ─────────────────────────────── */
-function AIAgentScreen() {
-    const messages = [
-        { type: "ai", text: "Welcome to Orbit, Priya. I'm Ava, your spatial guide. Look at the Engineering cluster when you're ready." },
-        { type: "system", text: "Gaze detected — Engineering cluster · 2.3s dwell" },
-        { type: "ai", text: "That's your core team. Rahul is your buddy. Want me to surface his intro message?" },
-        { type: "user", text: "Yes please" },
-        { type: "ai", text: "Intro sent to Rahul. Look around — Design cluster to your left works closely with Engineering." },
-        { type: "system", text: "Navigating to Design cluster…" },
-    ];
-
-    return (
-        <div className="relative w-full h-full flex flex-col overflow-hidden" style={{ background: "linear-gradient(160deg, #0a0a0f 0%, #0e0e0e 55%, #0c0b16 100%)" }}>
-            {/* Atmospherics */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 45% at 30% 25%, rgba(139,92,246,0.10) 0%, transparent 65%)" }} />
-                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 50% 40% at 70% 75%, rgba(208,188,255,0.06) 0%, transparent 60%)" }} />
-            </div>
-
-            <div className="relative z-10 flex flex-col h-full px-7 py-5 gap-4">
-                {/* Ava header */}
-                <div className="flex items-center gap-3 pb-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                    <div className="relative flex-shrink-0">
-                        <div className="w-10 h-10 rounded-full" style={{ background: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 60%, #4338ca 100%)", boxShadow: "0 0 18px rgba(139,92,246,0.40)" }} />
-                        <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center" style={{ background: "#0e0e0e", borderColor: "#0e0e0e" }}>
-                            <div className="w-2 h-2 rounded-full bg-emerald-400" style={{ boxShadow: "0 0 5px rgba(52,211,153,0.7)" }} />
-                        </div>
-                    </div>
-                    <div>
-                        <p className="text-sm font-bold text-white leading-none">AI Guide — Ava</p>
-                        <p className="text-[8px] font-mono mt-0.5" style={{ color: "rgba(255,255,255,0.35)" }}>Active Listening</p>
-                    </div>
-                    <div className="ml-auto px-2.5 py-1 rounded-full text-[8px] font-mono font-bold" style={{ background: "rgba(208,188,255,0.10)", border: "1px solid rgba(208,188,255,0.20)", color: "#d0bcff" }}>
-                        Day 1 · Session 1
-                    </div>
-                </div>
-
-                {/* Conversation thread */}
-                <div className="flex flex-col gap-3 flex-1 overflow-hidden justify-center">
-                    {messages.map((msg, i) => (
-                        <div key={i} className={`flex ${msg.type === "user" ? "justify-end" : msg.type === "system" ? "justify-center" : "justify-start"}`}>
-                            {msg.type === "system" ? (
-                                <div className="flex items-center gap-2 px-3 py-1 rounded-full" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
-                                    <div className="w-1 h-1 rounded-full" style={{ background: "rgba(255,255,255,0.25)" }} />
-                                    <span className="text-[8px] font-mono italic" style={{ color: "rgba(255,255,255,0.30)" }}>{msg.text}</span>
-                                </div>
-                            ) : msg.type === "user" ? (
-                                <div
-                                    className="px-4 py-2.5 rounded-2xl text-[10px] leading-snug max-w-[55%]"
-                                    style={{ background: "rgba(208,188,255,0.14)", border: "1px solid rgba(208,188,255,0.25)", color: "rgba(255,255,255,0.90)", backdropFilter: "blur(16px)" }}
-                                >
-                                    {msg.text}
-                                </div>
-                            ) : (
-                                <div className="flex items-start gap-2.5 max-w-[80%]">
-                                    <div className="w-5 h-5 rounded-full flex-shrink-0 mt-0.5" style={{ background: "linear-gradient(135deg, #8b5cf6, #6366f1)", boxShadow: "0 0 8px rgba(139,92,246,0.35)" }} />
-                                    <div
-                                        className="px-4 py-2.5 rounded-2xl text-[10px] leading-relaxed"
-                                        style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(28px)", border: "1px solid rgba(255,255,255,0.11)", color: "rgba(255,255,255,0.80)", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06)" }}
-                                    >
-                                        {msg.text}
+                    {/* Table Body */}
+                    <div className="flex-1 overflow-y-auto">
+                        {employees.map((emp, i) => (
+                            <div key={i} className="grid grid-cols-[minmax(200px,1fr)_120px_160px_140px_100px] gap-4 px-6 py-4 border-b border-white/5 hover:bg-white/5 transition-colors items-center group cursor-pointer">
+                                
+                                {/* Employee Col */}
+                                <div className="flex items-center gap-3">
+                                    <div className="relative">
+                                        <div className="w-10 h-10 rounded-full bg-white/10 overflow-hidden border border-white/20 shadow-inner">
+                                            <img src={emp.img} alt={emp.name} className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-[#1a1a1a] ${emp.online ? "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" : "bg-white/20"}`} />
+                                    </div>
+                                    <div>
+                                        <div className="text-[13px] font-bold text-white group-hover:text-[#00f0ff] transition-colors">{emp.name}</div>
+                                        <div className="text-[11px] text-white/50">{emp.role}</div>
                                     </div>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {/* Dept Col */}
+                                <div>
+                                    <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-[10px] font-bold text-white/70">
+                                        {emp.dept}
+                                    </span>
+                                </div>
+
+                                {/* Status Col */}
+                                <div className="flex items-center gap-2">
+                                    {emp.status === "In a meeting" && <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 10l3 3 3-3"/></svg>}
+                                    {emp.status === "Focus Mode" && <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>}
+                                    {emp.status === "Active" && <svg className="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>}
+                                    {emp.status === "Offline" && <svg className="w-4 h-4 text-white/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>}
+                                    <span className={`text-[12px] font-medium ${emp.status === "Offline" ? "text-white/30" : "text-white/80"}`}>{emp.status}</span>
+                                </div>
+
+                                {/* Jira Col */}
+                                <div>
+                                    {emp.jira !== "None" ? (
+                                        <div className="flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded w-fit">
+                                            <div className="w-3 h-3 rounded-sm bg-blue-500 flex items-center justify-center text-[8px] text-white font-black">J</div>
+                                            <span className="text-[11px] font-mono text-blue-300">{emp.jira}</span>
+                                        </div>
+                                    ) : (
+                                        <span className="text-[11px] text-white/30 italic">No active task</span>
+                                    )}
+                                </div>
+
+                                {/* TZ Col */}
+                                <div className="text-[12px] font-mono text-white/60">
+                                    {emp.tz}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* Voice input bar */}
-                <div
-                    className="flex items-center gap-4 px-5 py-3 rounded-full"
-                    style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(28px)", border: "1px solid rgba(255,255,255,0.10)", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)" }}
-                >
-                    <Waveform color="#d0bcff" bars={9} height={14} />
-                    <span className="text-[9px] flex-1" style={{ color: "rgba(255,255,255,0.22)" }}>Speak or wait for Ava…</span>
-                    <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: "rgba(208,188,255,0.15)", border: "1px solid rgba(208,188,255,0.25)" }}>
-                        <div className="w-2 h-2 rounded-full" style={{ background: "#d0bcff" }} />
+                {/* Spatial Floating Toolbar */}
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-2 px-3 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-3xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.3)]">
+                    <button className="px-4 py-1.5 rounded-full bg-white text-black text-[11px] font-bold shadow-[0_0_15px_rgba(255,255,255,0.5)]">Directory</button>
+                    <button className="px-4 py-1.5 rounded-full text-white/50 hover:text-white hover:bg-white/10 text-[11px] font-bold transition-colors">Org Chart (3D)</button>
+                    <button className="px-4 py-1.5 rounded-full text-white/50 hover:text-white hover:bg-white/10 text-[11px] font-bold transition-colors">Activity Map</button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/* ─── Screen 2: Spatial AI Assistant ─────────────────── */
+function AIAssistantScreen() {
+    return (
+        <div className="relative w-full h-full flex flex-col bg-black/40 overflow-hidden justify-center items-center">
+            {/* Ambient Lighting */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[100px] pointer-events-none z-0" />
+            
+            {/* Glass Modal */}
+            <div className="relative z-10 w-[600px] bg-white/10 border border-white/20 rounded-[32px] backdrop-blur-[80px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.3)] overflow-hidden flex flex-col">
+                <div className="px-6 py-4 border-b border-white/10 bg-white/5 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-[#00f0ff] p-[1px] shadow-[0_0_20px_rgba(0,240,255,0.3)]">
+                            <div className="w-full h-full bg-black/50 rounded-full backdrop-blur-sm flex items-center justify-center">
+                                <div className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+                            </div>
+                        </div>
+                        <span className="text-[13px] font-bold text-white tracking-wide">Ava — Workspace Intelligence</span>
+                    </div>
+                    <div className="flex gap-2">
+                        <div className="w-3 h-3 rounded-full bg-white/20 shadow-inner" />
+                        <div className="w-3 h-3 rounded-full bg-white/20 shadow-inner" />
+                        <div className="w-3 h-3 rounded-full bg-white/20 shadow-inner" />
+                    </div>
+                </div>
+
+                <div className="p-6 flex flex-col gap-5">
+                    {/* User Message */}
+                    <div className="flex items-start gap-4 justify-end">
+                        <div className="px-4 py-3 bg-white/10 border border-white/20 rounded-2xl rounded-tr-sm text-[13px] text-white/90 backdrop-blur-md shadow-sm max-w-[80%] leading-relaxed font-medium">
+                            I need to schedule a design sync with Elena, but she's in CET. When is the best time tomorrow for both of us, assuming I'm in PST?
+                        </div>
+                    </div>
+
+                    {/* System Tool Execution */}
+                    <div className="flex items-center gap-3 justify-center my-2">
+                        <div className="px-3 py-1.5 bg-black/40 border border-white/10 rounded-full text-[10px] font-mono text-white/40 uppercase tracking-widest flex items-center gap-2">
+                            <svg className="w-3 h-3 animate-spin text-[#00f0ff]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                            Querying Calendars (Exchange API)
+                        </div>
+                    </div>
+
+                    {/* AI Response */}
+                    <div className="flex items-start gap-4">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-[#00f0ff] p-[1px] shrink-0 mt-1">
+                            <div className="w-full h-full bg-black/50 rounded-full flex items-center justify-center">
+                                <div className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-3 max-w-[85%]">
+                            <div className="px-4 py-3 bg-white/5 border border-white/10 rounded-2xl rounded-tl-sm text-[13px] text-white/90 backdrop-blur-md shadow-sm leading-relaxed font-medium">
+                                Elena's calendar is open tomorrow between <strong>8:00 AM - 10:00 AM PST</strong> (which is 5:00 PM - 7:00 PM her time in CET).
+                            </div>
+                            
+                            {/* Realistic UI Card within AI Chat */}
+                            <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-md flex flex-col gap-3">
+                                <div className="text-[11px] font-bold text-white/50 uppercase tracking-widest">Suggested Slots (Tomorrow)</div>
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex items-center justify-between p-2 rounded-lg hover:bg-white/10 border border-transparent hover:border-white/20 transition-colors cursor-pointer group">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
+                                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                            </div>
+                                            <div>
+                                                <div className="text-[12px] font-bold text-white">8:30 AM - 9:00 AM PST</div>
+                                                <div className="text-[11px] text-white/50">Both available</div>
+                                            </div>
+                                        </div>
+                                        <button className="px-3 py-1.5 bg-white text-black text-[10px] font-bold rounded shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">Schedule</button>
+                                    </div>
+                                    <div className="flex items-center justify-between p-2 rounded-lg hover:bg-white/10 border border-transparent hover:border-white/20 transition-colors cursor-pointer group">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
+                                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                            </div>
+                                            <div>
+                                                <div className="text-[12px] font-bold text-white">9:00 AM - 9:30 AM PST</div>
+                                                <div className="text-[11px] text-white/50">Both available</div>
+                                            </div>
+                                        </div>
+                                        <button className="px-3 py-1.5 bg-white text-black text-[10px] font-bold rounded shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">Schedule</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Input Area */}
+                <div className="p-4 border-t border-white/10 bg-black/20">
+                    <div className="relative flex items-center">
+                        <div className="absolute left-4 flex gap-1 items-end h-4">
+                            <div className="w-1 bg-[#00f0ff] rounded-full animate-[pulse_1s_ease-in-out_infinite]" style={{ height: "40%" }} />
+                            <div className="w-1 bg-[#00f0ff] rounded-full animate-[pulse_1.2s_ease-in-out_infinite]" style={{ height: "100%" }} />
+                            <div className="w-1 bg-[#00f0ff] rounded-full animate-[pulse_0.8s_ease-in-out_infinite]" style={{ height: "60%" }} />
+                        </div>
+                        <input type="text" placeholder="Speak or type a command..." className="w-full bg-white/5 border border-white/10 rounded-full pl-12 pr-12 py-3 text-[13px] text-white focus:outline-none focus:bg-white/10 backdrop-blur-md transition-colors" />
+                        <button className="absolute right-2 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -388,123 +226,80 @@ function AIAgentScreen() {
     );
 }
 
-const SCREEN_COMPONENTS: Record<string, React.FC> = {
-    org_map: OrgMapScreen,
-    team_detail: TeamDetailScreen,
-    tool_discovery: ToolDiscoveryScreen,
-    ai_agent: AIAgentScreen,
-};
-
-/* ─── Main export ──────────────────────────────────────── */
+/* ─── Main Component ───────────────────────────────────── */
 export function OrbitUI() {
-    const [active, setActive] = useState("org_map");
-    const ActiveScreen = SCREEN_COMPONENTS[active];
+    const [view, setView] = useState<"directory" | "ai">("directory");
 
     return (
-        <section className="py-24 px-6 bg-[#0e0e0e] relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-transparent to-[#d0bcff]/15" aria-hidden="true" />
+        <section className="py-24 px-6 bg-[#000000] relative overflow-hidden">
+            {/* Ambient Background Light */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-6xl relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-12"
+                    className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
                 >
-                    <p className="text-[10px] font-bold text-[#d0bcff] uppercase tracking-[0.25em] mb-5">
-                        04b — Product UI
-                    </p>
-                    <h2
-                        className="text-4xl md:text-6xl font-black tracking-[-0.04em] leading-[0.95] text-white mb-4 uppercase"
-                        style={{ fontFamily: "var(--font-epilogue, var(--font-inter))" }}
-                    >
-                        The product, in space.
-                    </h2>
-                    <p className="text-lg text-[#adaaaa] max-w-2xl leading-relaxed">
-                        Four key states of the Orbit visionOS interface — designed for spatial computing&apos;s gaze, pinch, and voice interaction model.
-                    </p>
-                </motion.div>
-
-                {/* Tab bar */}
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="flex flex-wrap gap-2 mb-5"
-                >
-                    {SCREENS.map((s) => (
-                        <button
-                            key={s.id}
-                            onClick={() => setActive(s.id)}
-                            className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200"
-                            style={{
-                                background: active === s.id ? "rgba(208,188,255,0.10)" : "rgba(255,255,255,0.04)",
-                                border: active === s.id ? "1px solid rgba(208,188,255,0.28)" : "1px solid rgba(255,255,255,0.07)",
-                                color: active === s.id ? "#d0bcff" : "rgba(255,255,255,0.40)",
-                                boxShadow: active === s.id ? "0 0 16px rgba(208,188,255,0.08)" : undefined,
-                            }}
-                        >
-                            {s.label}
-                            <span
-                                className="px-1.5 py-0.5 rounded text-[8px] font-mono font-bold tracking-widest uppercase"
-                                style={{
-                                    background: active === s.id ? "rgba(208,188,255,0.15)" : "rgba(255,255,255,0.05)",
-                                    color: active === s.id ? "#d0bcff" : "rgba(255,255,255,0.22)",
-                                }}
-                            >
-                                {s.tag}
-                            </span>
-                        </button>
-                    ))}
-                </motion.div>
-
-                {/* visionOS window frame */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.15 }}
-                    className="relative rounded-3xl overflow-hidden"
-                    style={{
-                        border: "1px solid rgba(255,255,255,0.08)",
-                        boxShadow: "0 48px 120px rgba(208,188,255,0.07), 0 16px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(208,188,255,0.03)",
-                    }}
-                >
-                    {/* Window chrome */}
-                    <div
-                        className="flex items-center justify-between px-6 py-3.5"
-                        style={{
-                            background: "rgba(255,255,255,0.04)",
-                            backdropFilter: "blur(20px)",
-                            borderBottom: "1px solid rgba(255,255,255,0.06)",
-                        }}
-                    >
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-full" style={{ background: "rgba(208,188,255,0.40)", boxShadow: "0 0 6px rgba(208,188,255,0.30)" }} />
-                            <div className="w-3 h-3 rounded-full" style={{ background: "rgba(255,255,255,0.12)" }} />
-                            <div className="w-3 h-3 rounded-full" style={{ background: "rgba(255,255,255,0.12)" }} />
+                    <div className="max-w-2xl">
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-[11px] font-black uppercase tracking-[0.2em] mb-6 backdrop-blur-md">
+                            04e — Spatial Workspace
                         </div>
-                        <span className="text-[9px] font-mono uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.20)" }}>
-                            Orbit · visionOS · {SCREENS.find(s => s.id === active)?.label}
-                        </span>
-                        <div className="w-16" />
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
+                            Production-Grade Reality
+                        </h2>
+                        <p className="text-lg text-white/50 font-medium leading-relaxed">
+                            Moving beyond abstract floating concepts, this iteration grounds the visionOS experience with authentic, highly-dense enterprise data. It features real Jira integration badges, complex multi-column layouts, and a sophisticated AI scheduling interface that renders interactive components directly inside the spatial chat.
+                        </p>
                     </div>
 
-                    {/* Screen */}
-                    <div className="relative" style={{ height: 440 }}>
+                    <div className="flex bg-white/5 p-1 rounded-xl border border-white/10 backdrop-blur-md">
+                        <button
+                            onClick={() => setView("directory")}
+                            className={`px-6 py-2.5 rounded-lg text-[13px] font-bold transition-all ${view === "directory" ? "bg-white/10 text-white shadow-sm border border-white/20" : "text-white/50 hover:text-white"}`}
+                        >
+                            Global Directory
+                        </button>
+                        <button
+                            onClick={() => setView("ai")}
+                            className={`px-6 py-2.5 rounded-lg text-[13px] font-bold transition-all ${view === "ai" ? "bg-white/10 text-white shadow-sm border border-white/20" : "text-white/50 hover:text-white"}`}
+                        >
+                            Ava Assistant
+                        </button>
+                    </div>
+                </motion.div>
+
+                {/* visionOS Environment Frame */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <div className="relative w-full overflow-x-auto pb-6 -mx-6 px-6 sm:mx-0 sm:px-0">
+                        <div className="min-w-[900px] relative rounded-[40px] overflow-hidden bg-white/5 backdrop-blur-3xl"
+                            style={{
+                                border: "1px solid rgba(255,255,255,0.15)",
+                                boxShadow: "0 60px 140px -20px rgba(0,0,0,1), 0 0 40px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 0 20px rgba(255,255,255,0.05)",
+                            }}
+                        >
+                            {/* Screen Viewport */}
+                            <div className="relative h-[640px] w-full bg-gradient-to-br from-[#111] to-[#000]">
                         <AnimatePresence mode="wait">
                             <motion.div
-                                key={active}
-                                initial={{ opacity: 0, scale: 0.985, y: 8 }}
-                                animate={{ opacity: 1, scale: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.985, y: -8 }}
-                                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                                key={view}
+                                initial={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
+                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                                exit={{ opacity: 0, scale: 1.02, filter: "blur(10px)" }}
+                                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                                 className="absolute inset-0"
                             >
-                                <ActiveScreen />
+                                {view === "directory" ? <OrgMapScreen /> : <AIAssistantScreen />}
                             </motion.div>
                         </AnimatePresence>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

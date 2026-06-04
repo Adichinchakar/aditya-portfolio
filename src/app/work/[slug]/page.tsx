@@ -14,7 +14,7 @@ const CASE_STUDIES = {
     "simplifai": {
         component: SimplifaiPage,
         title: "Simplifai Workflow Engine — Case Study | Aditya Chinchakar",
-        description: "Node-based visual builder for complex enterprise AI automations. Redesigned the core automation engine, reducing onboarding time by 40% and increasing user adoption by 73%.",
+        description: "Node-based visual builder for complex enterprise AI automations. Redesigned the core automation engine, materially reducing onboarding time and driving a step-change in user adoption.",
     },
     "aulys": {
         component: AulysPage,
@@ -29,7 +29,7 @@ const CASE_STUDIES = {
     "medsecure": {
         component: MedSecurePage,
         title: "MedSecure Blockchain Medical Records — Case Study | Aditya Chinchakar",
-        description: "Blockchain medical records platform giving every Indian patient a sovereign health identity. Reduced medical errors by 34% in pilot hospitals.",
+        description: "Concept for a blockchain medical-records platform giving every Indian patient a sovereign health identity. Projected to meaningfully reduce avoidable medical errors.",
     },
     "nexus-banking": {
         component: NexusBankingPage,
@@ -39,7 +39,7 @@ const CASE_STUDIES = {
     "infosys": {
         component: InfosysPage,
         title: "Infosys × Imagine Learning — Case Study | Aditya Chinchakar",
-        description: "GenAI-powered assessment tools for enterprise-scale educational platforms. Designed rubric generators and recommendation engines serving 5+ product teams, cutting assessment time by 70%.",
+        description: "GenAI-powered assessment tools for enterprise-scale educational platforms. Designed rubric generators and recommendation engines serving multiple product teams, materially cutting assessment time.",
     },
     "orbit": {
         component: OrbitPage,

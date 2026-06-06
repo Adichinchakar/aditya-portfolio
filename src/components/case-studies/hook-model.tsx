@@ -122,11 +122,6 @@ export function HookModel({
                         <div className="text-[10px] text-zinc-600 italic">Loads the next trigger</div>
                     </div>
                 </div>
-
-                {/* Loop arrow — decorative text on desktop */}
-                <p className="mt-6 text-center text-[10px] text-zinc-600 font-mono tracking-widest uppercase">
-                    Investment → Trigger → Action → Reward → Investment · · · Hook Model by Nir Eyal
-                </p>
             </div>
         </section>
     );

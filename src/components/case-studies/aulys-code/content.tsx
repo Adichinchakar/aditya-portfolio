@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { HookModel } from "@/components/case-studies/hook-model";
 
-const GITHUB_URL = "https://github.com/Adichinchakar/aulys-code-extension";
+const GITHUB_URL = "https://github.com/Adichinchakar/aulys-code-extension-showcase";
 
 /* ── Hero ─────────────────────────────────────────────────────────── */
 

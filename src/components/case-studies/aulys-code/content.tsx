@@ -14,6 +14,9 @@ import {
     ServerCog,
     ShieldCheck,
     Github,
+    Package,
+    Figma,
+    GitPullRequest,
 } from "lucide-react";
 import { HookModel } from "@/components/case-studies/hook-model";
 
@@ -219,8 +222,8 @@ const FEATURES = [
     },
     {
         icon: Terminal,
-        title: "CLI for CI",
-        body: "A companion CLI scans a project headlessly and reports violations by rule and file, so the same engine that lints in the editor can gate a pull request in continuous integration.",
+        title: "CLI for CI — shipped",
+        body: "A companion CLI (live on npm as `aulys`) runs the same engine headlessly and gates pull requests. It emits SARIF, so violations surface inline in the PR like a security finding, plus a one-line GitHub Action.",
     },
 ];
 
@@ -292,6 +295,55 @@ function Architecture() {
     );
 }
 
+/* ── Ecosystem ────────────────────────────────────────────────────── */
+
+const PIPELINE = [
+    { icon: Figma, stage: "Design", surface: "Aulys for Figma", note: "Catch it in the mockup" },
+    { icon: Code2, stage: "Code", surface: "Aulys for VS Code", note: "Catch it as you type" },
+    { icon: GitPullRequest, stage: "CI", surface: "Aulys CLI", note: "Gate it before it ships" },
+];
+
+function Ecosystem() {
+    return (
+        <Section index="04" label="The Ecosystem" title="One engine, every stage you build.">
+            <p className="text-zinc-600 leading-relaxed font-medium mb-8 max-w-3xl">
+                The VS Code extension was never the whole product — it&apos;s one surface of a shared
+                WCAG engine. The CLI now ships that same engine into CI (live on npm as{" "}
+                <span className="font-mono text-sm text-zinc-800">aulys</span>), so accessibility is
+                enforced at every stage a team builds, not just in one developer&apos;s editor.
+            </p>
+
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-900 p-5 mb-8 font-mono text-[13px] text-zinc-300 max-w-xl">
+                <div className="text-zinc-500"># enforce WCAG in CI — same rules as the editor</div>
+                <div><span className="text-blue-400">npm</span> i -g aulys</div>
+                <div><span className="text-blue-400">aulys</span> lint ./src --fail-on serious</div>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-5">
+                {PIPELINE.map((p, i) => (
+                    <div key={p.surface} className="relative rounded-2xl border border-zinc-200 bg-white p-6">
+                        <div className="flex items-center gap-2 mb-3">
+                            <div className="inline-flex p-2 rounded-lg bg-blue-500/10">
+                                <p.icon className="w-4 h-4 text-blue-600" aria-hidden="true" />
+                            </div>
+                            <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-blue-600">
+                                0{i + 1} · {p.stage}
+                            </span>
+                        </div>
+                        <h3 className="text-base font-bold text-zinc-900 tracking-tight">{p.surface}</h3>
+                        <p className="text-sm text-zinc-600 leading-relaxed mt-1">{p.note}</p>
+                    </div>
+                ))}
+            </div>
+
+            <p className="text-sm text-zinc-500 mt-6 max-w-3xl">
+                Fix it in the mockup, again in the editor, and one last time before it merges — so
+                inaccessible markup never reaches a user.
+            </p>
+        </Section>
+    );
+}
+
 /* ── Engineering quality ──────────────────────────────────────────── */
 
 const QUALITY = [
@@ -302,7 +354,7 @@ const QUALITY = [
 
 function Quality() {
     return (
-        <Section index="04" label="Engineering" title="A linter you trust has to be tested like one.">
+        <Section index="05" label="Engineering" title="A linter you trust has to be tested like one.">
             <div className="grid sm:grid-cols-3 gap-5">
                 {QUALITY.map((q) => (
                     <div key={q.value} className="rounded-2xl border border-zinc-200 bg-white p-6">
@@ -320,7 +372,7 @@ function Quality() {
 
 function Reflection() {
     return (
-        <Section index="05" label="Reflection" title="The boundary was the product decision.">
+        <Section index="06" label="Reflection" title="The boundary was the product decision.">
             <div className="space-y-4 text-zinc-600 leading-relaxed font-medium max-w-3xl">
                 <p>
                     The temptation in an extension is to let the webview reach for convenience and blur the
@@ -366,6 +418,7 @@ export default function AulysCodePage() {
             />
             <Features />
             <Architecture />
+            <Ecosystem />
             <Quality />
             <Reflection />
         </div>

@@ -13,6 +13,11 @@ export const CASE_STUDIES = [
         description: "Intelligent layout and design compliance automation tool for Figma.",
     },
     {
+        slug: "aulys-code",
+        title: "Aulys Code",
+        description: "VS Code extension flagging WCAG violations inline as you type, with one-click AI fixes.",
+    },
+    {
         slug: "simplifai",
         title: "Simplifai Workflow Engine",
         description: "Node-based visual builder for complex enterprise AI automations.",

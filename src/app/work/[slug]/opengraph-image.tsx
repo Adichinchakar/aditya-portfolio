@@ -25,6 +25,13 @@ const CASE_STUDIES: Record<string, {
         metric: "500+ frames · under 10 seconds",
         accent: "#10b981",
     },
+    "aulys-code": {
+        title: "Code Accessibility Extension",
+        company: "Aulys Code",
+        category: "VS Code Extension · WCAG · AI",
+        metric: "Real-time WCAG in the IDE",
+        accent: "#3b82f6",
+    },
     "simplifai-design-system": {
         title: "Design System",
         company: "Simplifai",

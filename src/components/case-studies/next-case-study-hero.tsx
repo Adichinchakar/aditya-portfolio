@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 const SLUG_COLORS: Record<string, string> = {
     "simplifai-design-system": "bg-indigo-500/20",
     "aulys": "bg-emerald-500/20",
+    "aulys-code": "bg-blue-500/20",
     "simplifai": "bg-purple-500/20",
     "medsecure": "bg-blue-500/20",
     "nexus-banking": "bg-amber-500/20",

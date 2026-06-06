@@ -5,6 +5,7 @@ const BASE_URL = "https://adityachinchakar.com";
 const CASE_STUDY_SLUGS = [
     "simplifai",
     "aulys",
+    "aulys-code",
     "simplifai-design-system",
     "medsecure",
     "nexus-banking",

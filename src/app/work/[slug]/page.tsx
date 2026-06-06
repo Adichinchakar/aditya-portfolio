@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import SimplifaiPage from "@/components/case-studies/simplifai/content";
 import AulysPage from "@/components/case-studies/aulys/content";
+import AulysCodePage from "@/components/case-studies/aulys-code/content";
 import SimplifaiDesignSystemPage from "@/components/case-studies/simplifai-design-system/content";
 import MedSecurePage from "@/components/case-studies/medsecure/content";
 import NexusBankingPage from "@/components/case-studies/nexus-banking/content";
@@ -20,6 +21,11 @@ const CASE_STUDIES = {
         component: AulysPage,
         title: "Aulys Accessibility Engine — Case Study | Aditya Chinchakar",
         description: "AI-powered Figma plugin for WCAG 2.2 compliance automation. Designed and built solo — 500+ frames scanned, under 10 seconds per document.",
+    },
+    "aulys-code": {
+        component: AulysCodePage,
+        title: "Aulys Code — VS Code Accessibility Extension | Aditya Chinchakar",
+        description: "A VS Code extension that flags WCAG violations inline as you type, explains them in plain English, and fixes them in one click. Built solo across a three-workspace monorepo with an AI backend.",
     },
     "simplifai-design-system": {
         component: SimplifaiDesignSystemPage,

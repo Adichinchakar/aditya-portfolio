@@ -358,6 +358,71 @@ function ProjectIllustration({ slug }: { slug: string }) {
                     </div>
                 </div>
             );
+        case "aulys-code":
+            return (
+                <div className="absolute inset-0 flex items-center justify-center bg-blue-50/50 overflow-hidden group-hover:bg-blue-100/40 transition-colors duration-1000">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_60%)]" aria-hidden="true" />
+                    <div className="absolute inset-0 opacity-[0.04] group-hover:opacity-[0.07] transition-opacity duration-700" style={{ backgroundImage: 'linear-gradient(rgba(37,99,235,1) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} aria-hidden="true" />
+
+                    {/* Editor window with an inline accessibility diagnostic */}
+                    <div className="relative w-72 h-56 bg-zinc-900 rounded-2xl border border-white/10 shadow-[0_20px_50px_rgba(29,78,216,0.18)] flex flex-col overflow-hidden transition-all duration-700 group-hover:scale-105 group-hover:shadow-[0_24px_60px_rgba(29,78,216,0.28)]">
+                        {/* Title bar */}
+                        <div className="h-9 border-b border-white/5 flex items-center px-4 gap-2 flex-shrink-0">
+                            <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
+                            <span className="ml-2 text-[11px] font-mono text-zinc-500">Dashboard.tsx</span>
+                        </div>
+
+                        {/* Code body */}
+                        <div className="flex-1 p-4 font-mono text-[11px] leading-relaxed relative">
+                            <div className="flex gap-3">
+                                <span className="text-zinc-600 select-none">1</span>
+                                <span className="text-zinc-500">return (</span>
+                            </div>
+
+                            {/* The flagged line with an animated wavy underline */}
+                            <div className="flex gap-3 relative">
+                                <span className="text-zinc-600 select-none">2</span>
+                                <span className="relative text-zinc-300">
+                                    &lt;img src=<span className="text-blue-400">&quot;/logo.png&quot;</span> /&gt;
+                                    {/* Wavy squiggle — draws in on hover */}
+                                    <span
+                                        className="absolute left-0 -bottom-1 h-[6px] w-0 group-hover:w-full transition-all duration-700 delay-200"
+                                        style={{
+                                            backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6'><path d='M0 5 Q1.5 1 3 5 T6 5' stroke='%23f43f5e' fill='none' stroke-width='1'/></svg>\")",
+                                            backgroundRepeat: "repeat-x",
+                                        }}
+                                        aria-hidden="true"
+                                    />
+                                </span>
+                            </div>
+
+                            <div className="flex gap-3">
+                                <span className="text-zinc-600 select-none">3</span>
+                                <span className="text-zinc-500">)</span>
+                                {/* Blinking caret */}
+                                <span className="w-[2px] h-4 bg-blue-400 animate-pulse" aria-hidden="true" />
+                            </div>
+
+                            {/* Diagnostic + Quick Fix chip — slides up on hover */}
+                            <div className="absolute left-4 right-4 bottom-3 rounded-lg border border-rose-500/30 bg-rose-500/10 backdrop-blur-sm p-2.5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 delay-300">
+                                <div className="text-[9px] font-bold uppercase tracking-widest text-rose-300 mb-1.5">
+                                    WCAG 1.1.1 · Missing alt text
+                                </div>
+                                <div className="flex gap-2">
+                                    <span className="inline-flex items-center gap-1 rounded-md bg-blue-500/20 border border-blue-400/30 px-2 py-0.5 text-[9px] font-semibold text-blue-200">
+                                        ⚡ Quick Fix
+                                    </span>
+                                    <span className="inline-flex items-center gap-1 rounded-md bg-white/5 border border-white/10 px-2 py-0.5 text-[9px] font-semibold text-zinc-300">
+                                        Ask Aulys AI
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
         default:
             return (
                 <div className="absolute inset-0 flex items-center justify-center bg-zinc-100">

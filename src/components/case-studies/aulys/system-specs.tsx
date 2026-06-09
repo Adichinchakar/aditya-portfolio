@@ -34,14 +34,18 @@ export function SystemSpecs() {
                     viewport={{ once: true }}
                     className="mb-12"
                 >
-                    <p className="text-xs font-mono font-bold text-blue-500 uppercase tracking-[0.2em] mb-4">
-                        04 — Architecture
+                    <p className="text-xs font-mono font-bold text-amber-700 uppercase tracking-[0.2em] mb-4">
+                        04 — Phase 2 Architecture
                     </p>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold mb-5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500" aria-hidden="true" />
+                        Planned — Phase 2 platform in development, not yet shipped
+                    </div>
                     <h2 className="text-2xl font-bold font-mono tracking-tight text-zinc-900 mb-4 uppercase">
-                        System Specifications
+                        Platform Architecture
                     </h2>
                     <p className="text-zinc-600 max-w-xl">
-                        A distributed architecture designed for high-concurrency accessibility auditing and real-time design validation. Each choice was made deliberately.
+                        The shipped product is the Figma plugin (Phase 1). This is the architecture I&apos;ve designed for the Phase 2 CI/CD platform — currently in development. Each choice was made deliberately, not yet battle-tested in production.
                     </p>
                 </motion.div>
 

@@ -14,14 +14,14 @@ export function DesignArtifacts() {
                     viewport={{ once: true }}
                     className="mb-12"
                 >
-                    <p className="text-xs font-mono font-bold text-emerald-600 uppercase tracking-[0.2em] mb-4">
+                    <p className="text-xs font-mono font-bold text-emerald-700 uppercase tracking-[0.2em] mb-4">
                         03.5 — Plugin Interface
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
                         Production UI
                     </h2>
                     <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
-                        Three panels from the live Aulys plugin — the WCAG audit checklist, the color blindness simulator, and the scan history that tracks compliance over time.
+                        Five panels from the live Aulys plugin — the severity-tiered audit, the screen-reader preview, the color-blindness simulator, the scan history, and the compliance settings.
                     </p>
                 </motion.div>
 

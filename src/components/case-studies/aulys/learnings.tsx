@@ -12,7 +12,7 @@ export function Learnings() {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <p className="text-xs font-mono font-bold text-blue-500 uppercase tracking-[0.2em] mb-4">
+                    <p className="text-xs font-mono font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">
                         06 — Reflection
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
@@ -27,7 +27,7 @@ export function Learnings() {
                     {[
                         {
                             icon: BookOpen,
-                            color: "text-blue-500",
+                            color: "text-blue-600",
                             bg: "bg-blue-500/10",
                             label: "Design Constraint",
                             heading: "Figma plugin API shapes every interaction decision",
@@ -35,15 +35,15 @@ export function Learnings() {
                         },
                         {
                             icon: Wrench,
-                            color: "text-amber-500",
+                            color: "text-amber-700",
                             bg: "bg-amber-500/10",
                             label: "What didn't work",
                             heading: "V1 had drag-to-reorder violations — too complex",
-                            body: "The first violations list let users drag-and-drop to reprioritize issues. In beta testing with junior designers (primary target users), this interaction pattern caused confusion — they expected the list to be sorted by severity, not be a task manager. Removed it in v2 and defaulted to severity-ordered, read-only grouping. Fix rate improved."
+                            body: "The first violations list let users drag-and-drop to reprioritize issues. In beta testing with junior designers (primary target users), this interaction pattern caused confusion — they expected the list to be sorted by severity, not be a task manager. Removed it in v2 and defaulted to severity-ordered, read-only grouping — and testers stopped asking 'what do I fix first?'"
                         },
                         {
                             icon: Compass,
-                            color: "text-purple-500",
+                            color: "text-purple-600",
                             bg: "bg-purple-500/10",
                             label: "Next time",
                             heading: "Design decisions need to be documented as they happen",
@@ -78,7 +78,10 @@ export function Learnings() {
                     <p className="text-xl font-bold max-w-2xl leading-relaxed mb-4">
                         Aulys is still evolving. The CI/CD platform is in active development — and with 30 beta designers giving live feedback, it&apos;s going in the right direction.
                     </p>
-                    <p className="text-sm text-zinc-600 max-w-2xl leading-relaxed">
+                    <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed mb-4">
+                        Solo doesn&apos;t mean in a vacuum. I ran a structured feedback loop with 30 beta designers — triaging conflicting requests, deciding what to build and what to refuse (the drag-to-reorder removal above came straight from that loop). Reconciling real user signal against a clear product thesis is the same judgment a design lead exercises with a team.
+                    </p>
+                    <p className="text-sm text-zinc-400 max-w-2xl leading-relaxed">
                         What Aulys proved: a solo designer-founder, using AI tools for execution, can ship a real accessibility product with real users — in less time than most teams take to write a PRD. The constraint wasn&apos;t capability. It was knowing exactly what problem to solve and refusing to scope-creep past it.
                     </p>
                 </motion.div>

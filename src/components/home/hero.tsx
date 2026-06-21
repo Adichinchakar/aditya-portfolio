@@ -276,32 +276,26 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.24, ease: "easeOut" }}
                         className="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-1"
                     >
-                        <Magnetic strength={0.25}>
-                            <Link
-                                href="/work"
-                                className="px-7 py-3.5 rounded-full bg-zinc-900 text-white font-semibold flex items-center gap-2 hover:bg-zinc-700 active:scale-[0.97] transition-all shadow-md group"
-                            >
-                                See the work
-                                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                        </Magnetic>
-                        <Magnetic strength={0.25}>
-                            <button
-                                onClick={() => setIsContactSheetOpen(true)}
-                                className="px-7 py-3.5 rounded-full bg-white text-zinc-900 font-semibold flex items-center gap-2 border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:scale-[0.97] transition-all"
-                            >
-                                Let&apos;s talk
-                            </button>
-                        </Magnetic>
-                        <Magnetic strength={0.25}>
-                            <Link
-                                href="/compatibility"
-                                className="px-7 py-3.5 rounded-full bg-white border-zinc-200 text-zinc-900 font-semibold flex items-center gap-2 shadow-sm border active:scale-[0.97] transition-all relative overflow-hidden hover:bg-zinc-50 hover:border-zinc-300 group"
-                            >
-                                <Sparkles className="w-4 h-4 transition-colors text-zinc-400 group-hover:text-indigo-500" />
-                                AI Match
-                            </Link>
-                        </Magnetic>
+                        <Link
+                            href="/work"
+                            className="px-7 py-3.5 rounded-full bg-zinc-900 text-white font-semibold flex items-center gap-2 hover:bg-zinc-700 active:scale-[0.97] transition-all shadow-md group"
+                        >
+                            See the work
+                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <button
+                            onClick={() => setIsContactSheetOpen(true)}
+                            className="px-7 py-3.5 rounded-full bg-white text-zinc-900 font-semibold flex items-center gap-2 border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 active:scale-[0.97] transition-all"
+                        >
+                            Let&apos;s talk
+                        </button>
+                        <Link
+                            href="/compatibility"
+                            className="px-7 py-3.5 rounded-full bg-white border-zinc-200 text-zinc-900 font-semibold flex items-center gap-2 shadow-sm border active:scale-[0.97] transition-all relative overflow-hidden hover:bg-zinc-50 hover:border-zinc-300 group"
+                        >
+                            <Sparkles className="w-4 h-4 transition-colors text-zinc-400 group-hover:text-indigo-500" />
+                            AI Match
+                        </Link>
                     </motion.div>
                 </div>
 

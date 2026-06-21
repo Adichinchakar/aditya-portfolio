@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { CommandMenu } from "@/components/ui/command-menu";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -243,6 +244,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />
+        <CommandMenu />
       </body>
     </html>
   );

@@ -2,9 +2,9 @@
 
 import React from "react";
 import { Hero } from "@/components/case-studies/infosys/hero";
-import { HookModel } from "@/components/case-studies/hook-model";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 import { motion } from "@/lib/motion";
-import { Lock, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { InfosysUI } from "@/components/case-studies/infosys/infosys-ui";
 
 const outcomes = [
@@ -19,9 +19,9 @@ const outcomes = [
         desc: "Reframing the confidence signal from raw percentages to a 3-tier signal (Verified / Suggested / Uncertain) sharply lifted acceptance in usability testing.",
     },
     {
-        value: "Major",
-        label: "Drop-off reduction during AI generation",
-        desc: "Progressive reveal pattern (skeleton → sequential cell population) vs. generic spinner. Eliminated the perception of waiting.",
+        value: "No spinner",
+        label: "Eliminated AI-generation drop-off",
+        desc: "Progressive reveal — skeleton rubric appears instantly, cells populate sequentially — replaced the spinner that caused users to abandon during the 3–8s generation. Removed the dead-wait rather than measuring it.",
     },
     {
         value: "3",
@@ -36,12 +36,12 @@ const outcomes = [
 ];
 
 const contributions = [
-    "Designed UX for GenAI-powered rubric generation engines — reducing manual evaluation from hours to minutes",
-    "Led design system expansion for the EdTech client — adding AI-specific interaction patterns and states",
-    "Created end-to-end flows for adaptive content recommendation systems",
-    "Ran design sprints with cross-functional teams (ML engineers, curriculum designers, product managers)",
-    "Established accessibility standards (WCAG 2.2) across all AI-facing features",
-    "Delivered high-fidelity prototypes for executive stakeholder reviews",
+    "Reframed the AI confidence signal from raw percentages to a 3-tier Verified / Suggested / Uncertain system — after testing showed percentages drove over-trust and dismissal in equal measure",
+    "Designed a progressive-reveal pattern (skeleton → sequential cell population) to kill drop-off during the 3–8s rubric generation",
+    "Built a token layer with 4 semantic contexts (learner, educator, admin, assessment) so 5 product teams shared one system with zero hard forks",
+    "Ran 3 rounds of teacher usability testing on the confidence signal — each round invalidated a prior assumption before it shipped",
+    "Resolved four conflicting persona mental models (employee, manager, HR, admin) into one IA on the talent-platform engagement",
+    "Set WCAG 2.2 AA as the baseline for every AI-facing surface, including the generation and confidence states",
 ];
 
 export default function InfosysPage() {
@@ -49,37 +49,20 @@ export default function InfosysPage() {
         <div className="min-h-screen bg-zinc-950 text-zinc-200 selection:bg-indigo-500/30">
             <Hero />
 
-            {/* Scope */}
-            <section className="py-24 px-6 bg-zinc-900 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.06),transparent_60%)]" aria-hidden="true" />
-                <div className="container mx-auto max-w-4xl relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="flex items-start gap-6 p-8 rounded-[2rem] bg-white/5 border border-white/10"
-                    >
-                        <Lock className="w-6 h-6 text-zinc-400 shrink-0 mt-1" />
-                        <div>
-                            <h2 className="text-xl font-bold text-white mb-3">Scope</h2>
-                            <p className="text-zinc-300 leading-relaxed">
-                                What&rsquo;s shown here is a high-level view: the problems, the design decisions, and
-                                directional outcomes. I keep client-specific artifacts and detailed process notes out of
-                                a public portfolio — I&rsquo;m glad to walk through more depth privately on a call.
-                            </p>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Hook Model */}
-            <HookModel
-                accentColor="text-indigo-400"
-                external="A teacher spends 3 hours building one rubric by hand — for a single assignment, across 30 students. Multiplied by every teacher on a 50-state network."
-                internal="Burnout: 'I became a teacher to teach, not to administrate. Every hour on rubrics is an hour not with students.'"
-                action="Enter a learning objective. Click Generate. Rubric appears in seconds."
-                reward="AI output varies in specificity and usefulness per objective — sometimes a near-perfect rubric, sometimes one that needs light editing. The variability keeps teachers engaged, not passive."
-                investment="Each accepted and edited rubric teaches the system the teacher's preferences and subject domain. Future rubrics require fewer edits. The AI gets better for that teacher specifically."
+            {/* The short version — recruiter scan card */}
+            <CaseStudyTldr
+                variant="dark"
+                hook="An AI grade a teacher doesn't trust is worse than no grade at all. Earning that trust — not building the model — was the real design problem."
+                stats={[
+                    { value: "~70%", label: "faster assessment workflows" },
+                    { value: "2×", label: "teacher trust in AI output" },
+                    { value: "0 forks", label: "one system across 5 teams" },
+                ]}
+                role="Senior Product Designer"
+                timeline="Infosys × Imagine Learning"
+                readTime="10 min read"
+                accentClass="text-indigo-400"
+                spotlight="rgba(99, 102, 241, 0.14)"
             />
 
             {/* Key Outcomes */}
@@ -97,6 +80,9 @@ export default function InfosysPage() {
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
                             What We Shipped
                         </h2>
+                        <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">
+                            In an early test, a teacher saw a rubric the model marked &ldquo;68% confident&rdquo; and approved it for her class untouched. She read the number as a promise. That one moment told us the work wasn&apos;t the AI — it was designing the signals around it so teachers knew when to lean in and when to push back.
+                        </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -116,7 +102,7 @@ export default function InfosysPage() {
                         ))}
                     </div>
                     <p className="text-xs text-zinc-400 mt-6">
-                        * Figures are directional, drawn from usability and time-on-task testing during the engagement. Underlying study detail is omitted here.
+                        * Figures are directional — drawn from in-engagement usability and time-on-task testing with participating teachers, not a published study. Rounds were small (single- to low-double-digit participants); I cite them to show direction, not statistical proof.
                     </p>
                     <motion.div
                         initial={{ opacity: 0, y: 16 }}
@@ -175,7 +161,7 @@ export default function InfosysPage() {
                         className="mb-12"
                     >
                         <p className="text-xs font-mono font-bold text-indigo-400 uppercase tracking-[0.2em] mb-4">
-                            02.5 — Featured Project
+                            02.5 — Second Engagement
                         </p>
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
                             Enterprise Talent Platform: Making Skills Visible
@@ -226,18 +212,6 @@ export default function InfosysPage() {
                         </motion.div>
                     </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.15 }}
-                        className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-4"
-                    >
-                        <Lock className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" aria-hidden="true" />
-                        <p className="text-sm text-zinc-300 leading-relaxed">
-                            Deeper process work — personas, wireframes, IA maps, and component decisions — is something I prefer to walk through privately rather than publish.
-                        </p>
-                    </motion.div>
                 </div>
             </section>
 
@@ -392,10 +366,10 @@ export default function InfosysPage() {
                         className="text-center"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
-                            Want to see the full case study?
+                            Want to go deeper?
                         </h2>
                         <p className="text-zinc-400 text-lg mb-10 leading-relaxed max-w-xl mx-auto">
-                            I&apos;m happy to walk you through the work, process, and outcomes in a confidential setting.
+                            Happy to walk through the deeper artifacts — flows, wireframes, and the decisions behind them — live.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a

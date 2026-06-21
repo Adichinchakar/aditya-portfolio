@@ -8,6 +8,7 @@ import { BentoImpact } from "@/components/case-studies/simplifai/bento-impact";
 import { UserPersonaInteractive } from "@/components/case-studies/simplifai/user-persona-interactive";
 import { IATree } from "@/components/case-studies/simplifai/ia-tree";
 import { Hero } from "@/components/case-studies/simplifai/hero";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 import { ProblemStatement } from "@/components/case-studies/simplifai/problem-statement";
 import { DesignProcess } from "@/components/case-studies/simplifai/design-process";
 import { DesignArtifacts } from "@/components/case-studies/simplifai/design-artifacts";
@@ -75,6 +76,21 @@ export default function SimplifaiPage() {
             {/* Hero */}
             <Hero />
 
+            {/* The short version — recruiter scan card */}
+            <CaseStudyTldr
+                hook="When an automation fails at 2am, who does the ops manager call — and what do they even look at? I redesigned Simplifai so the answer stopped being 'a developer.'"
+                stats={[
+                    { value: "73%", label: "workflow completion rate" },
+                    { value: "42%", label: "faster dev cycles" },
+                    { value: "5+", label: "enterprise clients shipped" },
+                ]}
+                role="Product Design & UX Lead"
+                timeline="2021 – 2023 · B2B SaaS"
+                readTime="8 min read"
+                accentClass="text-purple-700"
+                spotlight="rgba(168, 85, 247, 0.10)"
+            />
+
             {/* Problem Statement */}
             <ProblemStatement />
 
@@ -118,28 +134,28 @@ export default function SimplifaiPage() {
                             {
                                 num: "01",
                                 heading: "Weekly design crits",
-                                body: "Ran structured critique sessions with 3 product designers and 2 frontend engineers every Thursday. Introduced a feedback rubric (usability, visual hierarchy, accessibility, business alignment) that reduced revision cycles from 3+ rounds to an average of 1.4.",
+                                body: "Ran a standing Thursday critique with 3 designers and 2 frontend engineers. A simple feedback rubric cut revision cycles from 3+ rounds to 1.4.",
                                 color: "text-purple-600",
                                 bg: "bg-purple-50",
                             },
                             {
                                 num: "02",
                                 heading: "Mentored a junior designer",
-                                body: "Paired with a junior UX designer joining the team in Q2 2022. Set a structured 60-day onboarding plan covering Simplifai's design system, design token discipline, and usability testing methodologies. They shipped their first solo feature within 10 weeks.",
+                                body: "Built a 60-day onboarding plan for the junior UX designer who joined in Q2 2022. They shipped their first solo feature within 10 weeks.",
                                 color: "text-blue-600",
                                 bg: "bg-blue-50",
                             },
                             {
                                 num: "03",
                                 heading: "Stakeholder alignment process",
-                                body: "Presented design decisions monthly to the VP of Product and CTO using structured decision logs — a one-page doc covering: problem, options considered, decision made, and success metric. Eliminated the most common stakeholder change requests by building alignment before high-fidelity.",
+                                body: "Took design decisions to the VP of Product and CTO monthly as one-page decision logs: problem, options, call, success metric. Most change requests got resolved before high-fidelity.",
                                 color: "text-emerald-600",
                                 bg: "bg-emerald-50",
                             },
                             {
                                 num: "04",
                                 heading: "Established the first design system",
-                                body: "Initiated and built the Simplifai component library from scratch (no prior system existed). Defined a semantic token architecture, authored contribution guidelines, and ran a 2-day design system workshop with the engineering team to drive adoption. Led to 42% faster dev cycles.",
+                                body: "Built Simplifai's component library from nothing — semantic tokens, contribution rules, a 2-day workshop to drive adoption. Dev cycles got 42% faster.",
                                 color: "text-amber-600",
                                 bg: "bg-amber-50",
                             },

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Chinchakar — Senior Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,800;1,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08101E; --bg-elev:#0D1826; --bg-card:#0F1C2E;
+  --ink:#EAE8F4; --ink-dim:#7A7898; --ink-faint:#3A384E;
+  --violet:#7C3AED; --violet-bright:#9B5CFF; --violet-dim:rgba(124,58,237,.14);
+  --line:rgba(234,232,244,.08); --line-strong:rgba(234,232,244,.16);
+  --display:'Plus Jakarta Sans',sans-serif; --mono:'DM Mono',monospace;
+  --maxw:1240px; --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--display);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--violet);color:#fff}
+@media(hover:hover)and(pointer:fine){body.c-on,body.c-on a,body.c-on button{cursor:none}}
+:focus-visible{outline:2px solid var(--violet-bright);outline-offset:3px}
+
+/* cursor */
+.cur{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--violet-bright);opacity:.7;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),background .3s,opacity .3s}
+.cur.grow{width:80px;height:80px;background:var(--violet-dim);opacity:1}
+@media(hover:none),(pointer:coarse){.cur{display:none}}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.5rem,5vw,3.5rem)}
+
+/* reveal */
+.fade{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem clamp(1.5rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between;transition:background .4s}
+.nav.sc{background:rgba(8,16,30,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:.04em;display:flex;align-items:center;gap:.3rem}
+.logo .dot{width:7px;height:7px;background:var(--violet-bright);border-radius:50%;display:inline-block}
+.nl{display:flex;gap:2.5rem;list-style:none}
+.nl a{font-size:.88rem;font-weight:500;color:var(--ink-dim);transition:color .2s}
+.nl a:hover{color:var(--violet-bright)}
+.bg2{display:none;width:28px;height:20px;flex-direction:column;gap:5px}
+.bg2 span{height:1.5px;background:var(--ink);transition:transform .35s,opacity .25s}
+.bg2.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.bg2.open span:nth-child(2){opacity:0}
+.bg2.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mm2{position:fixed;inset:0;z-index:110;background:var(--bg-elev);display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,8vw,5rem);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.mm2.open{opacity:1;visibility:visible}
+.mm2 a{font-size:clamp(2.5rem,10vw,5rem);font-weight:800;display:block;line-height:1.05;transition:color .2s}
+.mm2 a:hover{color:var(--violet-bright)}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:6rem 0 4rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-20%;right:-10%;width:60%;height:100%;background:radial-gradient(circle at 60% 50%,rgba(124,58,237,.15),transparent 65%);pointer-events:none}
+.hero-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--violet-bright);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
+.hero-tag::before{content:"";width:24px;height:1px;background:var(--violet-bright)}
+.hero-h{font-size:clamp(3.5rem,9vw,8rem);font-weight:800;line-height:.9;letter-spacing:-.025em;margin-bottom:2rem;max-width:16ch}
+.hero-h em{font-style:italic;color:var(--violet-bright)}
+.hero-sub{font-size:1.05rem;font-weight:300;color:var(--ink-dim);max-width:50ch;margin-bottom:2.5rem;line-height:1.7}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .25s var(--ease),background .2s,color .2s,box-shadow .25s;border-radius:3px}
+.btn-v{background:var(--violet);color:#fff;padding:.85rem 1.6rem}
+.btn-v:hover{background:var(--violet-bright);transform:translateY(-2px);box-shadow:0 8px 30px rgba(124,58,237,.4)}
+.btn-o{border:1.5px solid var(--line-strong);color:var(--ink-dim);padding:.82rem 1.6rem}
+.btn-o:hover{border-color:var(--violet-bright);color:var(--violet-bright);transform:translateY(-2px)}
+
+/* big stats row */
+.hero-stats{display:flex;gap:0;border-top:1px solid var(--line)}
+.hs{padding:1.8rem 3rem 1.8rem 0;border-right:1px solid var(--line);margin-right:3rem}
+.hs:last-child{border-right:none;margin-right:0}
+.hv{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;line-height:1;letter-spacing:-.02em}
+.hv .u{color:var(--violet-bright)}
+.hk{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.4rem}
+
+/* work — magnetic cards */
+.work{padding:clamp(5rem,10vh,9rem) 0;border-top:1px solid var(--line)}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
+.stag{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--violet-bright)}
+.shead{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1;margin-top:.5rem;letter-spacing:-.01em}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.mcard{
+  background:var(--bg-card);border:1px solid var(--line);border-radius:12px;
+  padding:2rem;display:flex;flex-direction:column;gap:1rem;
+  transform-style:preserve-3d;perspective:600px;
+  transition:border-color .3s,box-shadow .3s;will-change:transform;
+  position:relative;overflow:hidden;
+}
+.mcard::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--violet),transparent);opacity:0;transition:opacity .3s}
+.mcard:hover::before{opacity:1}
+.mcard:hover{border-color:rgba(124,58,237,.4);box-shadow:0 20px 60px rgba(124,58,237,.15)}
+.mcard.big{grid-column:span 2}
+.card-cover{height:140px;border-radius:8px;margin-bottom:.5rem;position:relative;overflow:hidden}
+.mcard.big .card-cover{height:200px}
+.cc1{background:radial-gradient(140% 140% at 20% 20%,#1e3a0e,#0a1205)}
+.cc2{background:radial-gradient(140% 140% at 20% 20%,#1a2535,#06101e)}
+.cc3{background:radial-gradient(140% 140% at 20% 20%,#2a1e0a,#110805)}
+.cc4{background:radial-gradient(140% 140% at 20% 20%,#0e2820,#05100d)}
+.cc5{background:radial-gradient(140% 140% at 20% 20%,#1e102a,#0a0612)}
+.cc6{background:radial-gradient(140% 140% at 20% 20%,#2a1810,#100804)}
+.cn{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);letter-spacing:.08em}
+.ct{font-size:1.35rem;font-weight:800;line-height:1.05;letter-spacing:-.01em}
+.mcard.big .ct{font-size:1.8rem}
+.cm{font-family:var(--mono);font-size:.82rem;color:var(--violet-bright);letter-spacing:.04em}
+.crl{font-size:.82rem;color:var(--ink-dim);font-weight:400}
+.rtag{display:inline-block;margin-top:.3rem;font-size:.7rem;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid var(--line);color:var(--ink-faint);border-radius:50px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.mcard:hover .rtag{opacity:1;transform:none}
+.mcard a.stretch{position:absolute;inset:0}
+
+/* about */
+.about{background:var(--bg-elev);padding:clamp(5rem,10vh,9rem) 0;border-top:1px solid var(--line)}
+.ag{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center}
+.apull{font-size:clamp(1.8rem,4vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-.015em}
+.apull em{font-style:italic;color:var(--violet-bright)}
+.abio p{color:var(--ink-dim);font-weight:300;line-height:1.75;margin-bottom:1.4rem}
+.abio strong{color:var(--ink);font-weight:600}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.pill{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:.38rem .8rem;border:1px solid var(--line);color:var(--ink-dim);border-radius:50px;transition:border-color .2s,color .2s}
+.pill:hover{border-color:var(--violet-bright);color:var(--violet-bright)}
+
+/* metrics */
+.metrics{padding:clamp(4rem,8vh,7rem) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.mc{padding:2.5rem 2rem;border-right:1px solid var(--line);text-align:center;position:relative}
+.mc:last-child{border-right:none}
+.mc::after{content:"";position:absolute;bottom:0;left:50%;width:0;height:2px;background:var(--violet-bright);transform:translateX(-50%);transition:width .7s var(--ease)}
+.mc.in::after{width:60%}
+.mn{font-size:clamp(3rem,6vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-.02em}
+.mn .u{color:var(--violet-bright)}
+.ml{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);margin-top:.6rem}
+
+/* aulys */
+.aulys{padding:clamp(5rem,10vh,9rem) 0}
+.aulys-card{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:clamp(2.5rem,5vw,4.5rem);position:relative;overflow:hidden}
+.aulys-card::before{content:"";position:absolute;top:-30%;right:-5%;width:50%;height:140%;background:radial-gradient(circle,rgba(124,58,237,.18),transparent 65%);pointer-events:none}
+.atag{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--violet-bright);margin-bottom:1.2rem}
+.atitle{font-size:clamp(2.2rem,4.5vw,4rem);font-weight:800;line-height:.95;letter-spacing:-.02em;margin-bottom:1rem;max-width:18ch}
+.atitle em{font-style:italic;color:var(--violet-bright)}
+.adesc{color:var(--ink-dim);font-weight:300;max-width:52ch;margin-bottom:2.5rem;line-height:1.7}
+.aulys-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.compare{border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative;z-index:1}
+.crow{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.crow:last-child{border-bottom:none}
+.cc2{padding:.85rem 1rem;font-size:.88rem;border-right:1px solid var(--line)}
+.cc2:last-child{border-right:none}
+.ch2{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);background:rgba(255,255,255,.02)}
+.ch2.own{color:var(--violet-bright);background:var(--violet-dim)}
+.cf2{color:var(--ink);font-weight:500}
+.cv2{font-family:var(--mono);color:var(--violet-bright);font-weight:700}
+.cx2{font-family:var(--mono);color:var(--ink-faint)}
+.co2{background:var(--violet-dim)}
+
+/* contact */
+.contact{padding:clamp(5rem,12vh,10rem) 0;border-top:1px solid var(--line);text-align:center}
+.csub{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:1.5rem}
+.cmail{font-size:clamp(2rem,5.5vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-.02em;display:inline-block;transition:color .25s,transform .3s}
+.cmail:hover{color:var(--violet-bright);transform:translateY(-3px)}
+.socs{display:flex;justify-content:center;gap:1rem;margin-top:2.5rem}
+.socs a{width:48px;height:48px;border:1px solid var(--line-strong);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);transition:border-color .2s,color .2s,background .2s}
+.socs a:hover{border-color:var(--violet-bright);color:#fff;background:var(--violet)}
+.socs svg{width:18px;height:18px}
+.badge{margin-top:2.2rem;display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding:.5rem 1rem;border:1px solid var(--line);border-radius:3px}
+.bd{width:7px;height:7px;background:var(--violet-bright);border-radius:50%;animation:bp 2s infinite}
+@keyframes bp{0%,100%{opacity:1}50%{opacity:.2}}
+@media(prefers-reduced-motion:reduce){.bd{animation:none}}
+
+/* footer */
+.ft{padding:1.8rem 0;border-top:1px solid var(--line)}
+.fti{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.5rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fti p{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* ticker */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.9rem 0;overflow:hidden;background:var(--bg-elev)}
+.tt{display:flex;gap:3rem;width:max-content;animation:ti 28s linear infinite}
+.ticker:hover .tt{animation-play-state:paused}
+@keyframes ti{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tt{animation:none}}
+.ti{font-family:var(--mono);font-size:.8rem;font-weight:500;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;gap:3rem;white-space:nowrap}
+.ti::after{content:"◆";font-size:.4rem;color:var(--violet-bright)}
+
+@media(max-width:860px){
+  .nl{display:none}.bg2{display:flex}
+  .bento{grid-template-columns:1fr}
+  .mcard.big{grid-column:span 1}
+  .ag{grid-template-columns:1fr}
+  .mg{grid-template-columns:1fr 1fr}
+  .mc{border-bottom:1px solid var(--line)}
+  .aulys-grid{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;gap:1rem;border-top:none}
+  .hs{border-right:none;border-bottom:1px solid var(--line);padding:1rem 0;margin-right:0}
+}
+@media(max-width:560px){.mg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="cur" id="cur" aria-hidden="true"></div>
+
+<header>
+<nav class="nav" id="nav2">
+  <a href="#top" class="logo">AC <span class="dot"></span></a>
+  <ul class="nl">
+    <li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#aulys">Aulys</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="bg2" id="bg2" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm2" id="mm2">
+  <a href="#work">Work</a><a href="#about">About</a><a href="#aulys">Aulys</a><a href="#contact">Contact</a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hh2">
+  <div class="wrap">
+    <p class="hero-tag fade">Aditya Chinchakar · Pune, India</p>
+    <h1 class="hero-h fade" id="hh2">I design products that <em>think.</em></h1>
+    <p class="hero-sub fade">Senior Product Designer — AI tools, design systems, and accessible software built with the precision of an engineer.</p>
+    <div class="hero-cta fade">
+      <a href="#work" class="btn btn-v">See My Work</a>
+      <a href="#aulys" class="btn btn-o">View Aulys →</a>
+    </div>
+    <div class="hero-stats fade">
+      <div class="hs"><div class="hv"><span class="count" data-count="42" data-suffix="%">42<span class="u">%</span></span></div><div class="hk">Dev cycle faster</div></div>
+      <div class="hs"><div class="hv"><span class="count" data-count="73" data-suffix="%">73<span class="u">%</span></span></div><div class="hk">Adoption increase</div></div>
+      <div class="hs"><div class="hv"><span class="count" data-count="9" data-suffix="+">9<span class="u">+</span></span></div><div class="hk">Years</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="tt" id="tt2"><span class="ti">Infosys</span><span class="ti">Simplifai</span><span class="ti">Imagine Learning</span><span class="ti">Keywordio</span><span class="ti">Aulys</span><span class="ti">WCAG 2.2</span><span class="ti">Design Systems</span><span class="ti">AI UX</span></div>
+</div>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sh fade"><div><p class="stag">Selected Work</p><h2 class="shead">Six products.</h2></div><p style="color:var(--ink-dim);max-width:28ch;font-weight:300">AI tooling, SaaS, healthtech, design systems.</p></div>
+    <div class="bento">
+      <article class="mcard big fade" data-mcard><div class="card-cover cc1" aria-hidden="true"></div><span class="cn">01</span><h3 class="ct">Aulys</h3><p class="cm">42% faster dev cycle</p><p class="crl">Founding Designer</p><span class="rtag">AI Accessibility</span><a class="stretch" href="#aulys" aria-label="Aulys"></a></article>
+      <article class="mcard fade" data-mcard><div class="card-cover cc2" aria-hidden="true"></div><span class="cn">02</span><h3 class="ct">Simplifai Workflow</h3><p class="cm">73% adoption</p><p class="crl">Product Designer</p><span class="rtag">Enterprise SaaS</span><a class="stretch" href="#work" aria-label="Simplifai Workflow"></a></article>
+      <article class="mcard fade" data-mcard><div class="card-cover cc3" aria-hidden="true"></div><span class="cn">03</span><h3 class="ct">Simplifai Design System</h3><p class="cm">40+ components</p><p class="crl">Design Systems Lead</p><span class="rtag">Design Systems</span><a class="stretch" href="#work" aria-label="Design System"></a></article>
+      <article class="mcard fade" data-mcard><div class="card-cover cc4" aria-hidden="true"></div><span class="cn">04</span><h3 class="ct">MedSecure</h3><p class="cm">70% faster</p><p class="crl">Product Designer</p><span class="rtag">HealthTech</span><a class="stretch" href="#work" aria-label="MedSecure"></a></article>
+      <article class="mcard fade" data-mcard><div class="card-cover cc5" aria-hidden="true"></div><span class="cn">05</span><h3 class="ct">Nexus Fintech</h3><p class="cm">Strategy + Vision</p><p class="crl">Lead Designer</p><span class="rtag">FinTech</span><a class="stretch" href="#work" aria-label="Nexus"></a></article>
+      <article class="mcard fade" data-mcard><div class="card-cover cc6" aria-hidden="true"></div><span class="cn">06</span><h3 class="ct">Infosys × Imagine Learning</h3><p class="cm">4-persona EdTech</p><p class="crl">Senior Designer</p><span class="rtag">EdTech</span><a class="stretch" href="#work" aria-label="Infosys"></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap ag">
+    <blockquote class="apull fade">I build the <em>infrastructure</em> that makes the next ten screens faster.</blockquote>
+    <div class="abio fade">
+      <p><strong>9+ years</strong> across Infosys, Simplifai, and Keywordio — enterprise SaaS, design systems, and accessible software.</p>
+      <p>Built <strong>Aulys</strong> solo — AI accessibility Figma plugin + SaaS. <strong>30+ beta users.</strong> Based in Pune. Open to UAE from Aug 2026.</p>
+      <div class="pills"><span class="pill">Product Design</span><span class="pill">Design Systems</span><span class="pill">AI / UX</span><span class="pill">WCAG 2.2 AA</span><span class="pill">Figma</span><span class="pill">Prototyping</span><span class="pill">Research</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="metrics" aria-label="Metrics">
+  <div class="wrap mg">
+    <div class="mc fade"><div class="mn"><span class="count" data-count="42" data-suffix="%">0<span class="u">%</span></span></div><p class="ml">Faster dev cycle</p></div>
+    <div class="mc fade"><div class="mn"><span class="count" data-count="73" data-suffix="%">0<span class="u">%</span></span></div><p class="ml">Adoption increase</p></div>
+    <div class="mc fade"><div class="mn"><span class="count" data-count="70" data-suffix="%">0<span class="u">%</span></span></div><p class="ml">Faster assessments</p></div>
+    <div class="mc fade"><div class="mn"><span class="count" data-count="30" data-suffix="+">0<span class="u">+</span></span></div><p class="ml">Beta users</p></div>
+  </div>
+</section>
+
+<section class="aulys" id="aulys">
+  <div class="wrap">
+    <div class="aulys-card aulys-grid fade">
+      <div>
+        <p class="atag">Aulys · The Flagship</p>
+        <h2 class="atitle">Accessibility that <em>fixes itself.</em></h2>
+        <p class="adesc">Most tools flag issues. Aulys uses AI to understand intent and apply the fix — in Figma, then in production. Solo-built, 30+ beta users.</p>
+        <a href="mailto:adichinchakar@gmail.com?subject=Aulys beta" class="btn btn-v">Join the beta →</a>
+      </div>
+      <div class="compare fade" role="table">
+        <div class="crow"><div class="cc2 ch2 cf2">Capability</div><div class="cc2 ch2 own">Aulys</div><div class="cc2 ch2">Stark</div><div class="cc2 ch2">Axe</div></div>
+        <div class="crow"><div class="cc2 cf2">AI-directed fixes</div><div class="cc2 co2 cv2">YES</div><div class="cc2 cx2">—</div><div class="cc2 cx2">—</div></div>
+        <div class="crow"><div class="cc2 cf2">Figma + production SaaS</div><div class="cc2 co2 cv2">BOTH</div><div class="cc2 cx2">Plugin</div><div class="cc2 cx2">CI/dev</div></div>
+        <div class="crow"><div class="cc2 cf2">Full WCAG 2.2</div><div class="cc2 co2 cv2">YES</div><div class="cc2 cx2">Partial</div><div class="cc2 cx2">Partial</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="csub fade">Have a product worth building well?</p>
+    <a href="mailto:adichinchakar@gmail.com" class="cmail fade">adichinchakar@gmail.com</a>
+    <div class="socs fade">
+      <a href="https://www.linkedin.com/in/adityachinchakar" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5v15.5H.25V8zm7.5 0h4.31v2.12h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9v8.82h-4.5v-7.82c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.13v7.95h-4.5V8z"/></svg></a>
+      <a href="https://github.com/Adichinchakar" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg></a>
+    </div>
+    <p class="badge fade"><span class="bd" aria-hidden="true"></span>Open to UAE relocation · Available Aug 2026</p>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="fti">
+    <span style="font-weight:800;font-size:1.1rem">AC</span>
+    <p>Designed &amp; built by Aditya Chinchakar · 2026</p>
+    <p>Pune, India</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var R=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var F=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+/* cursor */
+var cur=document.getElementById('cur');
+var mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
+if(F){
+  document.body.classList.add('c-on');
+  window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
+  (function loop(){
+    cx+=(mx-cx)*0.13;cy+=(my-cy)*0.13;
+    cur.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button').forEach(function(el){
+    el.addEventListener('mouseenter',function(){cur.classList.add('grow');});
+    el.addEventListener('mouseleave',function(){cur.classList.remove('grow');});
+  });
+}
+
+/* magnetic tilt */
+if(F && !R){
+  document.querySelectorAll('[data-mcard]').forEach(function(card){
+    card.addEventListener('mousemove',function(e){
+      var r=card.getBoundingClientRect();
+      var cx2=(e.clientX-r.left)/r.width-.5;
+      var cy2=(e.clientY-r.top)/r.height-.5;
+      card.style.transform='perspective(700px) rotateY('+(cx2*14)+'deg) rotateX('+(-cy2*10)+'deg) scale(1.02)';
+    });
+    card.addEventListener('mouseleave',function(){
+      card.style.transform='perspective(700px) rotateY(0) rotateX(0) scale(1)';
+    });
+  });
+}
+
+/* nav */
+var nav=document.getElementById('nav2');
+window.addEventListener('scroll',function(){nav.classList.toggle('sc',scrollY>40);},{passive:true});
+
+/* ticker */
+var tt=document.getElementById('tt2');if(tt)tt.innerHTML+=tt.innerHTML;
+
+/* reveal */
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.fade,.mc').forEach(function(el){ro.observe(el);});
+
+/* count */
+var co=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;
+  var el=e.target,t=+el.dataset.count,s=el.dataset.suffix||'';
+  co.unobserve(el);
+  if(R){el.innerHTML=t+'<span class="u">'+s+'</span>';return;}
+  var st=null;
+  function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/1100,1),eq=1-Math.pow(1-p,3);el.innerHTML=Math.round(eq*t)+'<span class="u">'+s+'</span>';if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+});},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){co.observe(el);});
+
+/* burger */
+var bg=document.getElementById('bg2'),mm=document.getElementById('mm2');
+function sM(o){bg.classList.toggle('open',o);mm.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+bg.addEventListener('click',function(){sM(!mm.classList.contains('open'));});
+mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){sM(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mm.classList.contains('open'))sM(false);});
+})();
+</script>
+</body>
+</html>

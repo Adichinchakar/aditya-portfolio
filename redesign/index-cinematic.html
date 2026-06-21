@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Chinchakar — Senior Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --w:#FAFAF7; --w2:#F2F1EE; --w3:#E8E6E1;
+  --ink:#0D0C0A; --ink-dim:#6A6860; --ink-faint:#B8B6B0;
+  --coral:#FF3B5C; --coral-dim:rgba(255,59,92,.10);
+  --line:rgba(13,12,10,.10); --line-strong:rgba(13,12,10,.20);
+  --display:'Fraunces',Georgia,serif; --sans:'DM Sans',sans-serif; --mono:'DM Mono',monospace;
+  --maxw:1280px; --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--w);color:var(--ink);font-family:var(--sans);overflow-x:hidden;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--coral);color:#fff}
+@media(hover:hover)and(pointer:fine){body.c-on,body.c-on a,body.c-on button{cursor:none}}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+
+/* cursor */
+.cur3{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;width:14px;height:14px;border-radius:50%;background:var(--coral);transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:width .25s var(--ease),height .25s var(--ease)}
+.cur3.grow{width:60px;height:60px}
+@media(hover:none),(pointer:coarse){.cur3{display:none}}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.5rem,5vw,3.5rem)}
+
+/* clip wipe: diagonal */
+.wipe3{clip-path:polygon(0 0,0 0,0 100%,0 100%);transition:clip-path 1s var(--ease)}
+.wipe3.in{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.rise3{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rise3.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.wipe3,.rise3{clip-path:none!important;opacity:1!important;transform:none!important;transition:none!important}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem clamp(1.5rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between;transition:background .4s}
+.nav.sc{background:rgba(250,250,247,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.logo3{font-family:var(--display);font-weight:900;font-size:1.4rem;font-style:italic;letter-spacing:-.02em}
+.logo3 span{color:var(--coral)}
+.nl3{display:flex;gap:2.5rem;list-style:none}
+.nl3 a{font-size:.88rem;font-weight:500;color:var(--ink-dim);transition:color .2s}
+.nl3 a:hover{color:var(--coral)}
+.bg3{display:none;width:28px;height:20px;flex-direction:column;gap:5px}
+.bg3 span{height:1.5px;background:var(--ink);transition:transform .35s,opacity .25s}
+.bg3.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.bg3.open span:nth-child(2){opacity:0}
+.bg3.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mm3{position:fixed;inset:0;z-index:110;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,8vw,5rem);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.mm3.open{opacity:1;visibility:visible}
+.mm3 a{font-family:var(--display);font-size:clamp(2.5rem,10vw,5rem);font-weight:900;font-style:italic;color:var(--w);display:block;line-height:1.05;transition:color .2s}
+.mm3 a:hover{color:var(--coral)}
+
+/* hero — split */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;padding-top:4.5rem;border-bottom:2px solid var(--ink)}
+.hero-l{display:flex;flex-direction:column;justify-content:flex-end;padding:3rem clamp(1.5rem,5vw,3.5rem) 3rem clamp(1.5rem,5vw,3.5rem);border-right:1px solid var(--line-strong);position:relative}
+.hero-l::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--coral)}
+.hero-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:1.5rem;display:flex;align-items:center;gap:.7rem}
+.hero-eyebrow::before{content:"";width:20px;height:1px;background:var(--coral)}
+.hero-name{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(4rem,9vw,8.5rem);line-height:.88;letter-spacing:-.03em;margin-bottom:1.8rem}
+.hero-desc{font-size:1rem;font-weight:300;color:var(--ink-dim);max-width:44ch;margin-bottom:2.5rem;line-height:1.72}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:500;font-size:.92rem;transition:transform .25s var(--ease),background .2s,color .2s,box-shadow .25s}
+.btn-c{background:var(--coral);color:#fff;padding:.85rem 1.6rem}
+.btn-c:hover{background:#ff5571;transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,59,92,.3)}
+.btn-out{border:1.5px solid var(--line-strong);color:var(--ink-dim);padding:.82rem 1.6rem}
+.btn-out:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-2px)}
+.hero-r{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:3rem clamp(1.5rem,5vw,3.5rem);background:var(--ink);position:relative;overflow:hidden}
+.hero-r::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 40% 60%,rgba(255,59,92,.12),transparent 65%)}
+.big-num{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(6rem,17vw,16rem);line-height:.85;letter-spacing:-.04em;color:var(--w);position:relative;z-index:1}
+.big-num .u{color:var(--coral)}
+.big-label{font-family:var(--mono);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,250,247,.45);margin-top:1rem;position:relative;z-index:1}
+.hero-mini-stats{display:flex;gap:3rem;margin-top:3rem;position:relative;z-index:1}
+.hms .v{font-family:var(--display);font-weight:700;font-size:2rem;color:var(--w);line-height:1}
+.hms .v .u2{color:var(--coral)}
+.hms .k{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,250,247,.35);margin-top:.3rem}
+
+/* ticker */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.9rem 0;overflow:hidden;background:var(--w2)}
+.ttr{display:flex;gap:3rem;width:max-content;animation:tck 28s linear infinite}
+.ticker:hover .ttr{animation-play-state:paused}
+@keyframes tck{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ttr{animation:none}}
+.ti3{font-family:var(--display);font-size:1.2rem;font-weight:700;font-style:italic;color:var(--ink-faint);display:inline-flex;align-items:center;gap:3rem;white-space:nowrap}
+.ti3::after{content:"✦";font-size:.5rem;color:var(--coral);font-style:normal}
+
+/* work */
+.work{padding:clamp(5rem,10vh,9rem) 0}
+.sh3{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
+.stag3{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--coral)}
+.shead3{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);font-weight:900;font-style:italic;line-height:1;margin-top:.5rem;letter-spacing:-.02em}
+/* cinematic work cards */
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.wcard{border:1px solid var(--line);background:var(--w2);overflow:hidden;position:relative;display:flex;flex-direction:column;transition:border-color .3s}
+.wcard:hover{border-color:var(--coral)}
+.wcard.span2{grid-column:span 2}
+.wcard-cover{height:220px;overflow:hidden;position:relative}
+.wcard.span2 .wcard-cover{height:340px}
+.wcard-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(13,12,10,.6) 100%)}
+.wcc1{background:linear-gradient(135deg,#c8a848 0%,#6a5020 100%)}
+.wcc2{background:linear-gradient(135deg,#3860a0 0%,#1a2848 100%)}
+.wcc3{background:linear-gradient(135deg,#90783c 0%,#403020 100%)}
+.wcc4{background:linear-gradient(135deg,#285840 0%,#0e2018 100%)}
+.wcc5{background:linear-gradient(135deg,#782060 0%,#301028 100%)}
+.wcc6{background:linear-gradient(135deg,#904830 0%,#401810 100%)}
+.wcard-body{padding:1.5rem}
+.wcn{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);letter-spacing:.08em}
+.wct{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(1.4rem,2.5vw,2rem);line-height:1;letter-spacing:-.02em;margin:.4rem 0}
+.wcm{font-family:var(--mono);font-size:.82rem;color:var(--coral);letter-spacing:.04em}
+.wrl3{font-size:.82rem;color:var(--ink-dim)}
+.rtag3{display:inline-block;margin-top:.6rem;font-size:.7rem;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid var(--line);color:var(--ink-faint);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.wcard:hover .rtag3{opacity:1;transform:none}
+.wcard a.stretch{position:absolute;inset:0}
+
+/* about — dark section */
+.about{background:var(--ink);color:var(--w);padding:clamp(5rem,10vh,9rem) 0;border-top:2px solid var(--coral)}
+.ag3{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(3rem,7vw,7rem);align-items:center}
+.apull3{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(2.2rem,5vw,4.5rem);line-height:.95;letter-spacing:-.025em}
+.apull3 em{font-style:normal;color:var(--coral)}
+.abio3 p{color:rgba(250,250,247,.6);font-weight:300;line-height:1.75;margin-bottom:1.4rem}
+.abio3 strong{color:var(--w);font-weight:500}
+.pills3{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.pill3{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:.38rem .8rem;border:1px solid rgba(250,250,247,.15);color:rgba(250,250,247,.45);transition:border-color .2s,color .2s}
+.pill3:hover{border-color:var(--coral);color:var(--coral)}
+
+/* metrics */
+.metrics{border-bottom:1px solid var(--line)}
+.mg3{display:grid;grid-template-columns:repeat(4,1fr);border-left:2px solid var(--coral)}
+.mc3{padding:3rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.mc3:last-child{border-right:none}
+.mn3{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(3rem,6vw,5rem);line-height:1;letter-spacing:-.025em}
+.mn3 .u{color:var(--coral)}
+.ml3{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);margin-top:.7rem}
+
+/* aulys */
+.aulys{padding:clamp(5rem,10vh,9rem) 0;border-top:1px solid var(--line)}
+.aulys-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:start}
+.atag3{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--coral);margin-bottom:1.2rem}
+.atitle3{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(2.5rem,5vw,5rem);line-height:.9;letter-spacing:-.025em;margin-bottom:1.2rem}
+.atitle3 em{font-style:normal;color:var(--coral)}
+.adesc3{color:var(--ink-dim);font-weight:300;max-width:44ch;line-height:1.72;margin-bottom:2rem}
+.compare3{border:1px solid var(--line);overflow:hidden}
+.crow3{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.crow3:last-child{border-bottom:none}
+.cc3{padding:.85rem 1rem;font-size:.88rem;border-right:1px solid var(--line)}
+.cc3:last-child{border-right:none}
+.ch3{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);background:var(--w2)}
+.ch3.own{color:var(--coral);background:var(--coral-dim)}
+.cf3{color:var(--ink);font-weight:500}
+.cv3{font-family:var(--mono);color:var(--coral);font-weight:700}
+.cx3{font-family:var(--mono);color:var(--ink-faint)}
+.co3{background:var(--coral-dim)}
+
+/* contact */
+.contact{padding:clamp(5rem,12vh,10rem) 0;border-top:2px solid var(--coral)}
+.ct3{text-align:center}
+.csub3{font-family:var(--mono);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:1.5rem}
+.cmail3{font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(2rem,6vw,5rem);line-height:1;letter-spacing:-.025em;display:inline-block;transition:color .25s,transform .3s}
+.cmail3:hover{color:var(--coral);transform:translateY(-3px)}
+.socs3{display:flex;justify-content:center;gap:1rem;margin-top:2.5rem}
+.socs3 a{width:48px;height:48px;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);transition:border-color .2s,color .2s,background .2s}
+.socs3 a:hover{border-color:var(--coral);color:#fff;background:var(--coral)}
+.socs3 svg{width:18px;height:18px}
+.badge3{margin-top:2.2rem;display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding:.5rem 1rem;border:1px solid var(--line)}
+.bd3{width:7px;height:7px;background:var(--coral);border-radius:50%;animation:bp3 2s infinite}
+@keyframes bp3{0%,100%{opacity:1}50%{opacity:.2}}
+@media(prefers-reduced-motion:reduce){.bd3{animation:none}}
+
+/* footer */
+.ft3{padding:1.8rem 0;border-top:1px solid var(--line);background:var(--w2)}
+.fti3{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.5rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fti3 p{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.fti3 .lg{font-family:var(--display);font-weight:900;font-style:italic;font-size:1.2rem}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-l{border-right:none;border-bottom:1px solid var(--line)}
+  .hero-r{padding:3rem clamp(1.5rem,5vw,3.5rem)}
+  .ag3,.aulys-inner{grid-template-columns:1fr}
+  .wgrid{grid-template-columns:1fr}
+  .wcard.span2{grid-column:span 1}
+  .mg3{grid-template-columns:1fr 1fr;border-left:none;border-top:2px solid var(--coral)}
+  .mc3{border-bottom:1px solid var(--line)}
+  .nl3{display:none}.bg3{display:flex}
+}
+@media(max-width:560px){.mg3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="cur3" id="cur3" aria-hidden="true"></div>
+
+<header>
+<nav class="nav" id="nav3">
+  <a href="#top" class="logo3">AC<span>.</span></a>
+  <ul class="nl3">
+    <li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#aulys">Aulys</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="bg3" id="bg3" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm3" id="mm3">
+  <a href="#work">Work</a><a href="#about">About</a><a href="#aulys">Aulys</a><a href="#contact">Contact</a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hh3">
+  <div class="hero-l">
+    <p class="hero-eyebrow rise3">Aditya Chinchakar · Pune, India</p>
+    <h1 class="hero-name wipe3" id="hh3">I design products that think.</h1>
+    <p class="hero-desc rise3">Senior Product Designer — AI tools, design systems, accessible software. Built with the precision of an engineer, the instincts of a founder.</p>
+    <div class="hero-cta rise3">
+      <a href="#work" class="btn btn-c">See My Work</a>
+      <a href="#aulys" class="btn btn-out">Aulys →</a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="big-num wipe3"><span class="count" data-count="42" data-suffix="%">42<span class="u">%</span></span></div>
+    <p class="big-label rise3">Faster dev cycle — Aulys</p>
+    <div class="hero-mini-stats rise3">
+      <div class="hms"><div class="v"><span class="count" data-count="73" data-suffix="%">73<span class="u2">%</span></span></div><div class="k">Adoption</div></div>
+      <div class="hms"><div class="v"><span class="count" data-count="30" data-suffix="+">30<span class="u2">+</span></span></div><div class="k">Beta users</div></div>
+      <div class="hms"><div class="v">9<span class="u2" style="color:var(--coral)">+</span></div><div class="k">Years</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ttr" id="ttr3"><span class="ti3">Infosys</span><span class="ti3">Simplifai</span><span class="ti3">Imagine Learning</span><span class="ti3">Keywordio</span><span class="ti3">Aulys</span><span class="ti3">WCAG 2.2</span><span class="ti3">Design Systems</span><span class="ti3">AI UX</span></div>
+</div>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sh3 rise3"><div><p class="stag3">Selected Work</p><h2 class="shead3">Six products, one through-line.</h2></div><p style="color:var(--ink-dim);max-width:28ch;font-weight:300">AI tooling, SaaS, healthtech, design systems.</p></div>
+    <div class="wgrid">
+      <article class="wcard span2 wipe3"><div class="wcard-cover wcc1" aria-hidden="true"></div><div class="wcard-body"><span class="wcn">01</span><h3 class="wct">Aulys</h3><p class="wcm">42% faster dev cycle</p><p class="wrl3">Founding Designer · AI Accessibility Plugin + SaaS</p><span class="rtag3">Featured</span></div><a class="stretch" href="#aulys" aria-label="Aulys"></a></article>
+      <article class="wcard rise3"><div class="wcard-cover wcc2" aria-hidden="true"></div><div class="wcard-body"><span class="wcn">02</span><h3 class="wct">Simplifai Workflow</h3><p class="wcm">73% adoption increase</p><p class="wrl3">Product Designer</p><span class="rtag3">Enterprise SaaS</span></div><a class="stretch" href="#work" aria-label="Simplifai"></a></article>
+      <article class="wcard rise3"><div class="wcard-cover wcc3" aria-hidden="true"></div><div class="wcard-body"><span class="wcn">03</span><h3 class="wct">Simplifai Design System</h3><p class="wcm">40+ components</p><p class="wrl3">Design Systems Lead</p><span class="rtag3">Design Systems</span></div><a class="stretch" href="#work" aria-label="Design System"></a></article>
+      <article class="wcard rise3"><div class="wcard-cover wcc4" aria-hidden="true"></div><div class="wcard-body"><span class="wcn">04</span><h3 class="wct">MedSecure</h3><p class="wcm">70% faster assessments</p><p class="wrl3">Product Designer</p><span class="rtag3">HealthTech</span></div><a class="stretch" href="#work" aria-label="MedSecure"></a></article>
+      <article class="wcard rise3"><div class="wcard-cover wcc5" aria-hidden="true"></div><div class="wcard-body"><span class="wcn">05</span><h3 class="wct">Nexus Fintech</h3><p class="wcm">Strategy + Vision</p><p class="wrl3">Lead Designer</p><span class="rtag3">FinTech</span></div><a class="stretch" href="#work" aria-label="Nexus"></a></article>
+      <article class="wcard rise3"><div class="wcard-cover wcc6" aria-hidden="true"></div><div class="wcard-body"><span class="wcn">06</span><h3 class="wct">Infosys × Imagine Learning</h3><p class="wcm">4-persona EdTech</p><p class="wrl3">Senior Designer</p><span class="rtag3">EdTech</span></div><a class="stretch" href="#work" aria-label="Infosys"></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap ag3">
+    <blockquote class="apull3 wipe3">I build the <em>infrastructure</em> that makes the next ten screens faster.</blockquote>
+    <div class="abio3 rise3">
+      <p><strong>9+ years</strong> across Infosys, Simplifai, and Keywordio — designing enterprise SaaS, design systems, accessible software for teams that ship at scale.</p>
+      <p>Built <strong>Aulys</strong> solo: AI accessibility Figma plugin + SaaS, <strong>30+ beta users</strong>. Pune, India. Open to UAE from Aug 2026.</p>
+      <div class="pills3"><span class="pill3">Product Design</span><span class="pill3">Design Systems</span><span class="pill3">AI / UX</span><span class="pill3">WCAG 2.2 AA</span><span class="pill3">Figma</span><span class="pill3">Prototyping</span><span class="pill3">Research</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="metrics" aria-label="Metrics">
+  <div class="mg3">
+    <div class="mc3 rise3"><div class="mn3"><span class="count" data-count="42" data-suffix="%">0<span class="u">%</span></span></div><p class="ml3">Faster dev cycle</p></div>
+    <div class="mc3 rise3"><div class="mn3"><span class="count" data-count="73" data-suffix="%">0<span class="u">%</span></span></div><p class="ml3">Adoption increase</p></div>
+    <div class="mc3 rise3"><div class="mn3"><span class="count" data-count="70" data-suffix="%">0<span class="u">%</span></span></div><p class="ml3">Faster assessments</p></div>
+    <div class="mc3 rise3"><div class="mn3"><span class="count" data-count="30" data-suffix="+">0<span class="u">+</span></span></div><p class="ml3">Aulys beta users</p></div>
+  </div>
+</section>
+
+<section class="aulys" id="aulys">
+  <div class="wrap aulys-inner">
+    <div class="wipe3">
+      <p class="atag3">Aulys · The Flagship</p>
+      <h2 class="atitle3">Accessibility that <em>fixes itself.</em></h2>
+      <p class="adesc3">Most tools flag issues. Aulys uses AI to understand intent and apply the fix — in Figma, then in production. Solo-built, 30+ beta users.</p>
+      <a href="mailto:adichinchakar@gmail.com?subject=Aulys beta" class="btn btn-c">Join the beta →</a>
+    </div>
+    <div class="rise3">
+      <div class="compare3" role="table">
+        <div class="crow3"><div class="cc3 ch3 cf3">Capability</div><div class="cc3 ch3 own">Aulys</div><div class="cc3 ch3">Stark</div><div class="cc3 ch3">Axe</div></div>
+        <div class="crow3"><div class="cc3 cf3">AI-directed fixes</div><div class="cc3 co3 cv3">YES</div><div class="cc3 cx3">—</div><div class="cc3 cx3">—</div></div>
+        <div class="crow3"><div class="cc3 cf3">Figma + production SaaS</div><div class="cc3 co3 cv3">BOTH</div><div class="cc3 cx3">Plugin</div><div class="cc3 cx3">CI/dev</div></div>
+        <div class="crow3"><div class="cc3 cf3">Full WCAG 2.2</div><div class="cc3 co3 cv3">YES</div><div class="cc3 cx3">Partial</div><div class="cc3 cx3">Partial</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap ct3">
+    <p class="csub3 rise3">Have a product worth building well?</p>
+    <a href="mailto:adichinchakar@gmail.com" class="cmail3 wipe3">adichinchakar@gmail.com</a>
+    <div class="socs3 rise3">
+      <a href="https://www.linkedin.com/in/adityachinchakar" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5v15.5H.25V8zm7.5 0h4.31v2.12h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9v8.82h-4.5v-7.82c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.13v7.95h-4.5V8z"/></svg></a>
+      <a href="https://github.com/Adichinchakar" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg></a>
+    </div>
+    <p class="badge3 rise3"><span class="bd3" aria-hidden="true"></span>Open to UAE relocation · Available Aug 2026</p>
+  </div>
+</section>
+</main>
+
+<footer class="ft3">
+  <div class="fti3">
+    <span class="lg">AC.</span>
+    <p>Designed &amp; built by Aditya Chinchakar · 2026</p>
+    <p>Pune, India</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var R=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var F=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+/* cursor */
+if(F){
+  document.body.classList.add('c-on');
+  var c3=document.getElementById('cur3');
+  var mx=innerWidth/2,my=innerHeight/2;
+  window.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c3.style.transform='translate('+mx+'px,'+my+'px) translate(-50%,-50%)';});
+  document.querySelectorAll('a,button').forEach(function(el){
+    el.addEventListener('mouseenter',function(){c3.classList.add('grow');});
+    el.addEventListener('mouseleave',function(){c3.classList.remove('grow');});
+  });
+}
+
+/* nav */
+var n3=document.getElementById('nav3');
+window.addEventListener('scroll',function(){n3.classList.toggle('sc',scrollY>40);},{passive:true});
+
+/* ticker */
+var tt3=document.getElementById('ttr3');if(tt3)tt3.innerHTML+=tt3.innerHTML;
+
+/* reveal */
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.wipe3,.rise3').forEach(function(el){ro.observe(el);});
+
+/* count */
+var co=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;
+  var el=e.target,t=+el.dataset.count,s=el.dataset.suffix||'';
+  co.unobserve(el);
+  if(R){el.innerHTML=t+'<span class="u">'+s+'</span>';return;}
+  var st=null;
+  function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/1100,1),eq=1-Math.pow(1-p,3);el.innerHTML=Math.round(eq*t)+'<span class="u">'+s+'</span>';if(p<1)requestAnimationFrame(step);}
+  requestAnimationFrame(step);
+});},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){co.observe(el);});
+
+/* burger */
+var bg3=document.getElementById('bg3'),mm3=document.getElementById('mm3');
+function sM3(o){bg3.classList.toggle('open',o);mm3.classList.toggle('open',o);bg3.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+bg3.addEventListener('click',function(){sM3(!mm3.classList.contains('open'));});
+mm3.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){sM3(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mm3.classList.contains('open'))sM3(false);});
+})();
+</script>
+</body>
+</html>

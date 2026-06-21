@@ -1,6 +1,7 @@
 "use client";
 
 import { Hero } from "./hero";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 import { Setup } from "./setup";
 import { TheProblem } from "./the-problem";
 import { Insight } from "./insight";
@@ -69,6 +70,22 @@ export default function NexusBankingPage() {
     return (
         <article className="min-h-screen bg-zinc-50 selection:bg-blue-500/30">
             <Hero />
+
+            {/* The short version — recruiter scan card */}
+            <CaseStudyTldr
+                hook="You open your banking app at 11pm to move money before a payment clears. First you scroll past crypto, travel perks, and 40 features you'll never touch. That friction is a design problem with a design fix."
+                stats={[
+                    { value: "2×", label: "projected task completion speed" },
+                    { value: "3", label: "Tier-1 neobanks audited" },
+                    { value: "Self-led", label: "unsolicited UX strategy" },
+                ]}
+                role="UX Strategist & Product Designer"
+                timeline="Unsolicited UX Strategy · FinTech"
+                readTime="7 min read"
+                accentClass="text-blue-700"
+                spotlight="rgba(59, 130, 246, 0.10)"
+            />
+
             <ExecutiveSummary items={summaryItems} />
             <Setup />
             <TheProblem />

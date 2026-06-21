@@ -1,0 +1,416 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AdityaChinchakar" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e6]:
+        - link "Live Plugin" [ref=e7] [cursor=pointer]:
+          - /url: https://aulys-app.vercel.app/
+          - generic [ref=e11]: Live Plugin
+          - img [ref=e12]
+        - link "Work" [ref=e14] [cursor=pointer]:
+          - /url: /work
+        - link "Writing" [ref=e15] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e16] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e17]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - link "Back to Case Studies" [ref=e22] [cursor=pointer]:
+          - /url: /work
+          - img [ref=e23]
+          - generic [ref=e25]: Back to Case Studies
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: Enterprise · Fortune 500 · Senior Product Designer
+            - 'heading "Infosys: Enterprise UX at 500K Scale." [level=1] [ref=e32]':
+              - text: "Infosys:"
+              - text: Enterprise UX
+              - text: at 500K Scale.
+            - paragraph [ref=e33]: "Two flagship products. One challenge: designing for hundreds of thousands of users with competing needs, constrained tech, and stakeholders at every layer of a Fortune Global 500 organisation."
+            - generic [ref=e34]:
+              - paragraph [ref=e37]: "Enterprise talent platform — An internal marketplace matching a global workforce to projects across delivery units, geographies, and skill domains. Multi-persona: employee, manager, HR, admin."
+              - paragraph [ref=e40]: GenAI for EdTech — AI rubric engines and adaptive recommendation UX for K-12 education at scale.
+            - generic [ref=e41]:
+              - generic [ref=e42]: Senior Product Designer
+              - generic [ref=e43]: 2023 – Present
+              - generic [ref=e44]: Infosys · Fortune Global 500
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - paragraph [ref=e49]: Selected work shown. I’m happy to walk through the deeper process and artifacts on a call.
+          - generic "Key outcomes" [ref=e50]:
+            - generic [ref=e52]:
+              - heading "Key Outcomes" [level=2] [ref=e54]
+              - generic [ref=e58]:
+                - generic [ref=e60]:
+                  - generic [ref=e61]: ~70%
+                  - generic [ref=e62]: Faster Assessment
+                  - generic [ref=e63]: vs. manual baseline
+                - generic [ref=e65]:
+                  - generic [ref=e66]: 5+
+                  - generic [ref=e67]: Product Teams
+                  - generic [ref=e68]: Design system served
+                - generic [ref=e70]:
+                  - generic [ref=e71]: "3"
+                  - generic [ref=e72]: AI Tools Shipped
+                  - generic [ref=e73]: In production
+                - generic [ref=e75]:
+                  - generic [ref=e76]: Multi
+                  - generic [ref=e77]: Persona Scope
+                  - generic [ref=e78]: Employee · Manager · HR
+      - generic [ref=e82]:
+        - img [ref=e83]
+        - generic [ref=e86]:
+          - heading "Scope" [level=2] [ref=e87]
+          - paragraph [ref=e88]: "What’s shown here is a high-level view: the problems, the design decisions, and directional outcomes. I keep client-specific artifacts and detailed process notes out of a public portfolio — I’m glad to walk through more depth privately on a call."
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - paragraph [ref=e92]: Hook Model — Nir Eyal
+          - heading "Why They Came Back" [level=2] [ref=e93]
+          - paragraph [ref=e94]: Great product design doesn't just solve a problem once — it builds a loop that keeps users returning. Here's the behavioral architecture behind this product.
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - generic [ref=e98]: "01"
+              - generic [ref=e99]: Trigger
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e102]: External
+                - paragraph [ref=e103]: A teacher spends 3 hours building one rubric by hand — for a single assignment, across 30 students. Multiplied by every teacher on a 50-state network.
+              - generic [ref=e104]:
+                - generic [ref=e105]: Internal
+                - paragraph [ref=e106]: "Burnout: 'I became a teacher to teach, not to administrate. Every hour on rubrics is an hour not with students.'"
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic [ref=e109]: "02"
+              - generic [ref=e110]: Action
+            - generic [ref=e111]:
+              - generic [ref=e112]: Simplest behavior
+              - paragraph [ref=e113]: Enter a learning objective. Click Generate. Rubric appears in seconds.
+            - generic [ref=e114]: Friction removed by design
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e117]: "03"
+              - generic [ref=e118]: Variable Reward
+            - generic [ref=e119]:
+              - generic [ref=e120]: Unpredictable outcome
+              - paragraph [ref=e121]: AI output varies in specificity and usefulness per objective — sometimes a near-perfect rubric, sometimes one that needs light editing. The variability keeps teachers engaged, not passive.
+            - generic [ref=e122]: Variability drives return visits
+          - generic [ref=e123]:
+            - generic [ref=e124]:
+              - generic [ref=e125]: "04"
+              - generic [ref=e126]: Investment
+            - generic [ref=e127]:
+              - generic [ref=e128]: What raises switching cost
+              - paragraph [ref=e129]: Each accepted and edited rubric teaches the system the teacher's preferences and subject domain. Future rubrics require fewer edits. The AI gets better for that teacher specifically.
+            - generic [ref=e130]: Loads the next trigger
+        - paragraph [ref=e131]: Investment → Trigger → Action → Reward → Investment · · · Hook Model by Nir Eyal
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - paragraph [ref=e135]: 01 — Outcomes
+          - heading "What We Shipped" [level=2] [ref=e136]
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e139]: ~70%
+            - heading "Faster assessment workflows" [level=3] [ref=e140]
+            - paragraph [ref=e141]: AI rubric engine vs. a manual baseline, measured in a pre/post time-on-task study with participating teachers.
+          - generic [ref=e142]:
+            - generic [ref=e143]: Acceptance roughly doubled
+            - heading "Teacher trust in AI output" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Reframing the confidence signal from raw percentages to a 3-tier signal (Verified / Suggested / Uncertain) sharply lifted acceptance in usability testing.
+          - generic [ref=e146]:
+            - generic [ref=e147]: Major
+            - heading "Drop-off reduction during AI generation" [level=3] [ref=e148]
+            - paragraph [ref=e149]: Progressive reveal pattern (skeleton → sequential cell population) vs. generic spinner. Eliminated the perception of waiting.
+          - generic [ref=e150]:
+            - generic [ref=e151]: "3"
+            - heading "AI tools shipped to production" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Including GenAI rubric generators, adaptive recommendation engine UX, and feedback tools.
+          - generic [ref=e154]:
+            - generic [ref=e155]: "0"
+            - heading "Design system forks across 5 teams" [level=3] [ref=e156]
+            - paragraph [ref=e157]: Token layer with 4 semantic contexts (learner, educator, admin, assessment) — one system, zero hard forks.
+        - paragraph [ref=e158]: "* Figures are directional, drawn from usability and time-on-task testing during the engagement. Underlying study detail is omitted here."
+        - paragraph [ref=e160]: Certificate of Recognition — from the client’s executive sponsor, for AI tool delivery across the product suite.
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - paragraph [ref=e164]: 02 — Contributions
+          - heading "What I Did" [level=2] [ref=e165]
+        - list [ref=e166]:
+          - listitem [ref=e167]:
+            - generic [ref=e168]: "01"
+            - paragraph [ref=e169]: Designed UX for GenAI-powered rubric generation engines — reducing manual evaluation from hours to minutes
+          - listitem [ref=e170]:
+            - generic [ref=e171]: "02"
+            - paragraph [ref=e172]: Led design system expansion for the EdTech client — adding AI-specific interaction patterns and states
+          - listitem [ref=e173]:
+            - generic [ref=e174]: "03"
+            - paragraph [ref=e175]: Created end-to-end flows for adaptive content recommendation systems
+          - listitem [ref=e176]:
+            - generic [ref=e177]: "04"
+            - paragraph [ref=e178]: Ran design sprints with cross-functional teams (ML engineers, curriculum designers, product managers)
+          - listitem [ref=e179]:
+            - generic [ref=e180]: "05"
+            - paragraph [ref=e181]: Established accessibility standards (WCAG 2.2) across all AI-facing features
+          - listitem [ref=e182]:
+            - generic [ref=e183]: "06"
+            - paragraph [ref=e184]: Delivered high-fidelity prototypes for executive stakeholder reviews
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - paragraph [ref=e189]: 02.5 — Featured Project
+          - 'heading "Enterprise Talent Platform: Making Skills Visible" [level=2] [ref=e190]'
+          - paragraph [ref=e191]:
+            - text: A large services organisation rarely has a talent shortage — it has a talent
+            - emphasis [ref=e192]: visibility
+            - text: "problem. Project managers can't find people with the right skills because those people are invisible: siloed inside delivery units, tagged by role title, not actual capability."
+        - generic [ref=e193]:
+          - generic [ref=e194]:
+            - paragraph [ref=e195]: The Problem
+            - paragraph [ref=e196]: A project manager in Bangalore needs someone with React + financial domain experience available in 3 weeks. That person exists in Mumbai. There is no system that surfaces them. The PM posts the role externally instead.
+            - paragraph [ref=e197]: "This happens thousands of times a year — not from lack of talent, but from a design problem: the internal talent system was built for HR record-keeping, not for managers who think in terms of skills, availability, and project fit."
+          - generic [ref=e198]:
+            - paragraph [ref=e199]: The Design Challenge
+            - paragraph [ref=e200]: "Four personas. One system. Completely different mental models:"
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - generic [ref=e203]: Employee
+                - paragraph [ref=e204]: Career visibility — I want the right projects to find me
+              - generic [ref=e205]:
+                - generic [ref=e206]: Manager
+                - paragraph [ref=e207]: Skill search — I need to staff a project in 72 hours
+              - generic [ref=e208]:
+                - generic [ref=e209]: HR
+                - paragraph [ref=e210]: Compliance + bench visibility — who is unallocated right now?
+              - generic [ref=e211]:
+                - generic [ref=e212]: Admin
+                - paragraph [ref=e213]: Data integrity — are skill tags accurate and auditable?
+        - generic [ref=e214]:
+          - img [ref=e215]
+          - paragraph [ref=e218]: Deeper process work — personas, wireframes, IA maps, and component decisions — is something I prefer to walk through privately rather than publish.
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - paragraph [ref=e223]: 03 — Design Challenges
+          - heading "The Hard Problems" [level=2] [ref=e224]
+          - paragraph [ref=e225]: Three design tensions from the GenAI EdTech engagement.
+        - generic [ref=e226]:
+          - generic [ref=e227]:
+            - heading "AI Confidence ≠ User Trust" [level=3] [ref=e228]
+            - paragraph [ref=e229]: The rubric engine outputs confidence scores, but showing raw percentages caused teachers to either over-trust (80% feels like a guarantee) or dismiss (60% feels unreliable). Designed a 3-tier signal system (Verified / Suggested / Uncertain) that anchored decisions in pedagogical context, not probability.
+            - generic [ref=e230]:
+              - paragraph [ref=e231]: Outcome
+              - paragraph [ref=e232]: Teacher acceptance of AI output roughly doubled in usability testing.
+          - generic [ref=e233]:
+            - heading "GenAI Latency UX" [level=3] [ref=e234]
+            - paragraph [ref=e235]: "Rubric generation takes 3-8 seconds — far longer than users expect from 'AI'. A generic spinner caused drop-off. Designed a progressive reveal: skeleton rubric structure appears immediately, then cells populate sequentially, creating a perception of real-time generation."
+            - generic [ref=e236]:
+              - paragraph [ref=e237]: Outcome
+              - paragraph [ref=e238]: Drop-off during generation fell sharply.
+          - generic [ref=e239]:
+            - heading "One system, five teams" [level=3] [ref=e240]
+            - paragraph [ref=e241]: Five product teams had divergent component needs — elementary literacy, middle-school math, special ed, teacher dashboards, admin tools. Designed a token layer with 4 semantic contexts (learner, educator, admin, assessment) that let the same components adapt across surfaces.
+            - generic [ref=e242]:
+              - paragraph [ref=e243]: Outcome
+              - paragraph [ref=e244]: Unified system with zero hard forks across 5 products.
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - paragraph [ref=e248]: 03 — Work Samples
+          - heading "The Product We Built" [level=2] [ref=e249]
+          - paragraph [ref=e250]: High-fidelity screens from the AI tooling suite.
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - generic [ref=e254]:
+                - generic [ref=e260]: app.example-edtech.com/rubric-generator
+                - generic [ref=e261]: AI Rubric Generator
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - generic [ref=e264]:
+                    - generic [ref=e265]: Learning objective
+                    - generic [ref=e266]: Analyse how an author develops theme in a literary text.
+                  - generic [ref=e267]:
+                    - generic [ref=e268]: Grade band
+                    - generic [ref=e269]:
+                      - generic [ref=e270]: 6–8
+                      - generic [ref=e271]: 9–10
+                      - generic [ref=e272]: 11–12
+                  - button "Generate rubric" [ref=e273]:
+                    - img [ref=e274]
+                    - text: Generate rubric
+                - generic [ref=e276]:
+                  - generic [ref=e277]:
+                    - generic [ref=e278]: Generated rubric
+                    - generic [ref=e279]:
+                      - generic [ref=e280]: Verified
+                      - generic [ref=e282]: Suggested
+                      - generic [ref=e284]: Uncertain
+                  - generic [ref=e286]:
+                    - generic [ref=e287]:
+                      - generic [ref=e288]: Criteria
+                      - generic [ref=e289]: Exemplary
+                      - generic [ref=e290]: Proficient
+                      - generic [ref=e291]: Developing
+                    - generic [ref=e292]:
+                      - generic [ref=e293]: Thesis & Claim
+                      - generic [ref=e294]:
+                        - paragraph [ref=e295]: Insightful, arguable thesis
+                        - generic [ref=e296]: Verified
+                      - generic [ref=e298]:
+                        - paragraph [ref=e299]: Clear, defensible claim
+                        - generic [ref=e300]: Verified
+                      - generic [ref=e302]:
+                        - paragraph [ref=e303]: Claim present but vague
+                        - generic [ref=e304]: Suggested
+                    - generic [ref=e306]:
+                      - generic [ref=e307]: Use of Evidence
+                      - generic [ref=e308]:
+                        - paragraph [ref=e309]: Integrates apt textual evidence
+                        - generic [ref=e310]: Verified
+                      - generic [ref=e312]:
+                        - paragraph [ref=e313]: Relevant evidence, some gaps
+                        - generic [ref=e314]: Suggested
+                      - generic [ref=e316]:
+                        - paragraph [ref=e317]: Evidence thin or unlinked
+                        - generic [ref=e318]: Suggested
+                    - generic [ref=e320]:
+                      - generic [ref=e321]: Analysis & Reasoning
+                      - generic [ref=e322]:
+                        - paragraph [ref=e323]: Explains how evidence proves claim
+                        - generic [ref=e324]: Suggested
+                      - generic [ref=e326]:
+                        - paragraph [ref=e327]: Some analytical reasoning
+                        - generic [ref=e328]: Suggested
+                      - generic [ref=e330]:
+                        - paragraph [ref=e331]: Mostly summary, little analysis
+                        - generic [ref=e332]: Uncertain
+                  - paragraph [ref=e334]: Each cell carries a confidence signal — teachers approve Verified cells fast and review Uncertain ones, instead of trusting a single opaque percentage.
+            - paragraph [ref=e335]: AI Rubric Generator — generates assessment criteria from a learning objective in seconds, each cell carrying a confidence signal. Conceptual reconstruction of the shipped UX.
+          - generic [ref=e336]:
+            - generic [ref=e337]:
+              - generic [ref=e338]:
+                - generic [ref=e344]: app.example-edtech.com/recommendations
+                - generic [ref=e345]: Adaptive Recommendations
+              - generic [ref=e346]:
+                - generic [ref=e347]:
+                  - generic [ref=e348]:
+                    - generic [ref=e349]: "28"
+                    - generic [ref=e350]: Students
+                  - generic [ref=e351]:
+                    - generic [ref=e352]: "3"
+                    - generic [ref=e353]: Skill gaps flagged
+                  - generic [ref=e354]:
+                    - generic [ref=e355]: 92%
+                    - generic [ref=e356]: On-track this unit
+                - generic [ref=e357]: Per-student recommendations
+                - generic [ref=e358]:
+                  - generic [ref=e359]:
+                    - generic [ref=e360]: AS
+                    - generic [ref=e362]: A. Sharma
+                    - generic [ref=e365]:
+                      - generic [ref=e366]: gap
+                      - generic [ref=e367]: Inference
+                    - generic [ref=e368]: Close-reading set · 3 passages
+                    - img [ref=e369]
+                  - generic [ref=e371]:
+                    - generic [ref=e372]: MO
+                    - generic [ref=e374]: M. Okafor
+                    - generic [ref=e377]:
+                      - generic [ref=e378]: gap
+                      - generic [ref=e379]: Citing evidence
+                    - generic [ref=e380]: Evidence-tagging practice
+                    - img [ref=e381]
+                  - generic [ref=e383]:
+                    - generic [ref=e384]: LC
+                    - generic [ref=e386]: L. Chen
+                    - generic [ref=e389]:
+                      - generic [ref=e390]: gap
+                      - generic [ref=e391]: Theme analysis
+                    - generic [ref=e392]: Guided theme walkthrough
+                    - img [ref=e393]
+                - paragraph [ref=e395]:
+                  - text: The engine surfaces the
+                  - emphasis [ref=e396]: next best action
+                  - text: per student from ML-identified skill gaps — the teacher stays in control of what to assign.
+            - paragraph [ref=e397]: Adaptive Recommendation Engine — surfaces the next best action per student from ML-identified skill gaps. Conceptual reconstruction of the shipped UX.
+      - generic [ref=e399]:
+        - generic [ref=e400]:
+          - paragraph [ref=e401]: 04 — Design Iterations
+          - heading "How the AI Confidence Signal Evolved" [level=2] [ref=e402]
+          - paragraph [ref=e403]: 3 rounds of internal testing with teachers before the confidence signal shipped. Each round invalidated a prior assumption.
+        - generic [ref=e404]:
+          - generic [ref=e405]:
+            - generic [ref=e406]:
+              - generic [ref=e407]: Round 1
+              - generic [ref=e408]: Raw percentage (68% confident)
+            - generic [ref=e409]:
+              - generic [ref=e410]: Finding
+              - paragraph [ref=e411]: Teachers over-trusted 80%+ scores as guarantees; dismissed 60%- scores entirely. Binary thinking, not probabilistic.
+            - generic [ref=e412]:
+              - generic [ref=e413]: Decision
+              - paragraph [ref=e414]: Drop percentages. Switch to qualitative signals.
+          - generic [ref=e415]:
+            - generic [ref=e416]:
+              - generic [ref=e417]: Round 2
+              - generic [ref=e418]: Traffic-light system (Red / Amber / Green)
+            - generic [ref=e419]:
+              - generic [ref=e420]: Finding
+              - paragraph [ref=e421]: Green triggered rubber-stamping — teachers stopped reading the rubric text. 'Green means approve' was too automatic.
+            - generic [ref=e422]:
+              - generic [ref=e423]: Decision
+              - paragraph [ref=e424]: Remove green. Reframe as signal, not verdict.
+          - generic [ref=e425]:
+            - generic [ref=e426]:
+              - generic [ref=e427]: Round 3
+              - generic [ref=e428]: 3-tier signal (Verified / Suggested / Uncertain)
+            - generic [ref=e429]:
+              - generic [ref=e430]: Finding
+              - paragraph [ref=e431]: Teachers engaged differently at each tier — Verified rubrics were approved far faster; Uncertain triggered review. Acceptance roughly doubled.
+            - generic [ref=e432]:
+              - generic [ref=e433]: Decision
+              - paragraph [ref=e434]: Ship this version. Anchored in pedagogical action, not probability.
+      - generic [ref=e437]:
+        - heading "Want to see the full case study?" [level=2] [ref=e438]
+        - paragraph [ref=e439]: I'm happy to walk you through the work, process, and outcomes in a confidential setting.
+        - generic [ref=e440]:
+          - link "Contact for Full Walkthrough" [ref=e441] [cursor=pointer]:
+            - /url: mailto:adichinchakar@gmail.com
+            - img [ref=e442]
+            - text: Contact for Full Walkthrough
+          - link "Connect on LinkedIn" [ref=e445] [cursor=pointer]:
+            - /url: https://linkedin.com/in/adityachinchakar
+            - img [ref=e446]
+            - text: Connect on LinkedIn
+    - generic [ref=e450]:
+      - generic [ref=e454]:
+        - generic [ref=e455]: Up Next
+        - link "Orbit Continue Reading" [ref=e456] [cursor=pointer]:
+          - /url: /work/orbit
+          - heading "Orbit" [level=2] [ref=e457]
+          - generic [ref=e458]:
+            - text: Continue Reading
+            - img [ref=e459]
+      - link "View All Projects" [ref=e462] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e463]
+        - generic [ref=e465]: View All Projects
+  - contentinfo [ref=e466]:
+    - generic [ref=e467]:
+      - paragraph [ref=e468]:
+        - generic [ref=e469]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e470]:
+        - link "GitHub Profile" [ref=e471] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e472]
+        - link "LinkedIn Profile" [ref=e475] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e476]
+        - link "Send email to adichinchakar@gmail.com" [ref=e480] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com
+  - button "Open Next.js Dev Tools" [ref=e486] [cursor=pointer]:
+    - img [ref=e487]
+  - alert [ref=e490]

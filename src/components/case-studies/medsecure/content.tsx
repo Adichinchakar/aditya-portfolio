@@ -5,6 +5,7 @@ import { motion } from "@/lib/motion";
 import { AlertTriangle, Lightbulb } from "lucide-react";
 import { DecisionCallout } from "@/components/ui/decision-callout";
 import { Hero } from "@/components/case-studies/medsecure/hero";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 import { TheCrisis } from "@/components/case-studies/medsecure/the-crisis";
 import { Personas } from "@/components/case-studies/medsecure/personas";
 import { DesignArtifacts } from "@/components/case-studies/medsecure/design-artifacts";
@@ -95,6 +96,22 @@ export default function MedSecurePage() {
     return (
         <div className="min-h-screen bg-zinc-50 text-zinc-800 selection:bg-[#005EB8]/30">
             <Hero />
+
+            {/* The short version — recruiter scan card */}
+            <CaseStudyTldr
+                hook="A heart attack patient reaches the ER and the doctor knows nothing about them — no allergies, no history. 60 seconds to make a life-or-death call, blind. MedSecure is the record that travels with the patient instead."
+                stats={[
+                    { value: "30→<4%", label: "enrollment failure, V1 to V2" },
+                    { value: "8", label: "languages, fully offline-capable" },
+                    { value: "<60s", label: "to pull a full record at the bedside" },
+                ]}
+                role="Lead Product Designer · 0→1 concept"
+                timeline="2023 · Healthcare · India"
+                readTime="6 min read"
+                accentClass="text-blue-700"
+                spotlight="rgba(0, 94, 184, 0.10)"
+            />
+
             <ExecutiveSummary items={summaryItems} />
             <TheCrisis />
 

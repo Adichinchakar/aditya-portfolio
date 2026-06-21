@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#353436",
+            "primary-fixed-dim": "#cdbdff",
+            "on-error": "#690005",
+            "on-secondary-fixed": "#00105c",
+            "on-secondary-container": "#a8b4ff",
+            "on-primary-fixed-variant": "#4f00d0",
+            "error": "#ffb4ab",
+            "on-primary": "#370096",
+            "on-primary-fixed": "#20005f",
+            "on-primary-container": "#845aff",
+            "on-tertiary-fixed": "#1a1c1c",
+            "tertiary-fixed": "#e2e2e2",
+            "surface": "#131314",
+            "on-tertiary": "#2f3131",
+            "surface-container-high": "#2a2a2b",
+            "secondary": "#bac3ff",
+            "surface-container-lowest": "#0e0e0f",
+            "inverse-on-surface": "#313031",
+            "on-surface-variant": "#c7c6ca",
+            "on-error-container": "#ffdad6",
+            "error-container": "#93000a",
+            "tertiary-container": "#090b0c",
+            "surface-tint": "#cdbdff",
+            "primary": "#cdbdff",
+            "surface-container-low": "#1c1b1c",
+            "secondary-fixed-dim": "#bac3ff",
+            "on-background": "#e5e2e3",
+            "inverse-primary": "#6833ea",
+            "on-surface": "#e5e2e3",
+            "tertiary-fixed-dim": "#c6c6c6",
+            "primary-fixed": "#e8deff",
+            "on-secondary": "#08218a",
+            "inverse-surface": "#e5e2e3",
+            "surface-container": "#201f20",
+            "on-tertiary-container": "#797a7a",
+            "outline-variant": "#46464a",
+            "surface-bright": "#3a393a",
+            "secondary-fixed": "#dee0ff",
+            "on-tertiary-fixed-variant": "#454747",
+            "primary-container": "#0e0034",
+            "surface-dim": "#131314",
+            "tertiary": "#c6c6c6",
+            "surface-container-highest": "#353436",
+            "background": "#131314",
+            "on-secondary-fixed-variant": "#293ca0",
+            "outline": "#919094",
+            "secondary-container": "#2c3ea3"
+          },
+          fontFamily: {
+            "headline": ["Epilogue"],
+            "body": ["Inter"],
+            "label": ["Space Grotesk"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(53, 52, 54, 0.4);
+      backdrop-filter: blur(24px);
+    }
+    .ghost-border {
+      border: 1px solid rgba(145, 144, 148, 0.15);
+    }
+    .obsidian-gradient {
+      background: radial-gradient(circle at top right, rgba(205, 189, 255, 0.05), transparent 40%),
+                  radial-gradient(circle at bottom left, rgba(186, 195, 255, 0.03), transparent 40%);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-primary-container">
+<!-- Shared Component: TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131314]/40 backdrop-blur-3xl border-b border-[#353436]/15 shadow-[0_64px_64px_-12px_rgba(229,226,227,0.08)]">
+<div class="flex justify-between items-center px-12 h-20 w-full">
+<div class="text-xl font-bold tracking-tighter text-[#e5e2e3] font-headline uppercase">ORBIT</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#e5e2e3] border-b border-[#cdbdff] pb-1 font-['Epilogue'] tracking-tight text-sm font-medium transition-colors duration-300" href="#">Case Studies</a>
+<a class="text-[#c7c6ca] hover:text-[#cdbdff] transition-colors duration-300 font-['Epilogue'] tracking-tight text-sm font-medium" href="#">Solutions</a>
+<a class="text-[#c7c6ca] hover:text-[#cdbdff] transition-colors duration-300 font-['Epilogue'] tracking-tight text-sm font-medium" href="#">Platform</a>
+</div>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 rounded-md font-medium text-sm active:scale-95 transition-transform">Connect</button>
+</div>
+</nav>
+<main class="obsidian-gradient min-h-screen pt-40 pb-32">
+<!-- Problem Section Header -->
+<section class="px-12 max-w-screen-2xl mx-auto mb-24">
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-8">
+<span class="font-label text-primary tracking-[0.2em] text-xs font-bold mb-6 block uppercase">01 — PROBLEM</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[0.95] mb-12">
+            $1.3T problem hiding in onboarding.
+          </h1>
+</div>
+<div class="col-span-12 lg:col-span-4 lg:pt-20">
+<div class="flex flex-col">
+<span class="font-headline text-8xl font-black text-primary-fixed-dim leading-none mb-2">1.3T</span>
+<p class="font-label text-on-surface-variant text-sm uppercase tracking-widest leading-relaxed">
+              The annual productivity cost of context overload in high-fidelity spatial industries.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Asset Break -->
+<section class="px-12 max-w-screen-2xl mx-auto mb-24">
+<div class="relative h-[400px] w-full overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="Abstract futuristic technical schematic with dark purple glowing lines and complex geometric patterns on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjIUn7TNEKFaE6rizRw6zcSkglAcCTxvqkVZRhSIdn3yR3VLBJXaaWJhINx6tPm4bzkY9ILgYPIAW41-zmpFnfmIj-r179hLasuvCEYFKpxg2g5HBw8YUASDtcGcgb9rawWJ5-UEBmcOA3MVGVfGVDWIQTzhHafhAJWN9cFXVX2NDRBZsn9dR1Qpkk_yfVYIpGph9THGFv2pGzO33NrM8aIpPIpl2ux4zH4-6fGhOGgMB1GuInLXRTv9IKGkeiKIcasz3IwT8alj31"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+</section>
+<!-- Mid Section: 3-column Grid -->
+<section class="px-12 max-w-screen-2xl mx-auto mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-card ghost-border p-10 flex flex-col items-start gap-6 group hover:bg-surface-container-high transition-all duration-500">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-container text-primary rounded-lg">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-xl font-bold text-on-surface">Context Overload</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+              New hires lose months of productivity navigating complex spatial environments without an intuitive frame of reference.
+            </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card ghost-border p-10 flex flex-col items-start gap-6 group hover:bg-surface-container-high transition-all duration-500">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container text-secondary rounded-lg">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-xl font-bold text-on-surface">Tool Fragmentation</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+              Legacy onboarding tools fail to bridge the gap between physical and digital workspace, creating silos of technical knowledge.
+            </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card ghost-border p-10 flex flex-col items-start gap-6 group hover:bg-surface-container-high transition-all duration-500">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-container text-primary rounded-lg">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">view_in_ar</span>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-xl font-bold text-on-surface">No Spatial Awareness</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+              Traditional 2D learning models cannot convey the complexity of 3D spatial workflows required for modern industrial operation.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Quote -->
+<section class="px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-12">
+<div class="col-span-12 lg:col-start-4 lg:col-span-9 border-l-4 border-primary pl-12 py-4">
+<blockquote class="font-headline text-3xl md:text-5xl font-bold text-on-surface tracking-tight leading-tight mb-8 italic">
+            "The missing link in enterprise spatial adoption isn't hardware — it's the <span class="text-primary-fixed-dim">cognitive bridge</span> that collapses during the first 90 days."
+          </blockquote>
+<cite class="font-label text-on-surface-variant text-xs uppercase tracking-[0.3em] font-medium block">
+            — Orbit Spatial Whitepaper, 2024
+          </cite>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-[#131314] border-t border-[#353436]/15 w-full py-16">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-[#e5e2e3] font-bold text-lg tracking-tighter uppercase font-headline">ORBIT</span>
+<p class="text-[10px] text-[#c7c6ca] font-['Space_Grotesk'] uppercase tracking-widest mt-2">© 2024 Orbit Spatial Systems. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#c7c6ca] hover:text-[#cdbdff] underline-offset-4 hover:underline transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#c7c6ca] hover:text-[#cdbdff] underline-offset-4 hover:underline transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#c7c6ca] hover:text-[#cdbdff] underline-offset-4 hover:underline transition-all duration-300" href="#">Security</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#c7c6ca] hover:text-[#cdbdff] underline-offset-4 hover:underline transition-all duration-300" href="#">Cookie Settings</a>
+</div>
+</div>
+</footer>
+</body></html>

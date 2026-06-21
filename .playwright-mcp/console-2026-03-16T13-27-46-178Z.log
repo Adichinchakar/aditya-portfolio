@@ -1,0 +1,49 @@
+[     571ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <motion.div initial={{opacity:0,y:30}} animate={{opacity:0,y:30}} transition={{type:"spring", ...}} ...>
+      <div className="bg-white/4..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+        <div>
+        <div className="grid grid-...">
+          <div>
+          <div className="min-h-[300...">
+            <div>
+            <div className="p-4 overfl...">
+              <AnimatePresence mode="wait">
+                <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                  <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                    <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                      <motion.pre initial={{opacity:0,x:20}} animate={{opacity:1,x:0}} exit={{opacity:0,x:-20}} ...>
+                        <pre className="text-[13px..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div>
+                          <div className="flex hover...">
+                            <span>
+                            <span
+                              dangerouslySetInnerHTML={{
++                               __html: "        <motion.button "
+-                               __html: "        <motion.button <=\"\" span=\"\"></motion.button>"
+                              }}
+                              className="text-zinc-300"
+                            >
+                          ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127

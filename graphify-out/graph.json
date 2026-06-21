@@ -1,0 +1,2992 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "id": "eslint_config_mjs",
+      "community": 59,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "fix_eslint.js",
+      "file_type": "code",
+      "source_file": "fix_eslint.js",
+      "source_location": "L1",
+      "id": "fix_eslint_js",
+      "community": 60,
+      "norm_label": "fix_eslint.js"
+    },
+    {
+      "label": "gen_ui_screens.py",
+      "file_type": "code",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L1",
+      "id": "gen_ui_screens_py",
+      "community": 4,
+      "norm_label": "gen_ui_screens.py"
+    },
+    {
+      "label": "call_stitch()",
+      "file_type": "code",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L7",
+      "id": "portfolio_website_gen_ui_screens_call_stitch",
+      "community": 4,
+      "norm_label": "call_stitch()"
+    },
+    {
+      "label": "get_screen()",
+      "file_type": "code",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L15",
+      "id": "portfolio_website_gen_ui_screens_get_screen",
+      "community": 4,
+      "norm_label": "get_screen()"
+    },
+    {
+      "label": "download()",
+      "file_type": "code",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L24",
+      "id": "portfolio_website_gen_ui_screens_download",
+      "community": 4,
+      "norm_label": "download()"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "next-env.d.ts",
+      "source_location": "L1",
+      "id": "next_env_d_ts",
+      "community": 61,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L1",
+      "id": "next_config_ts",
+      "community": 62,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "parse.js",
+      "file_type": "code",
+      "source_file": "parse.js",
+      "source_location": "L1",
+      "id": "parse_js",
+      "community": 63,
+      "norm_label": "parse.js"
+    },
+    {
+      "label": "playwright.config.ts",
+      "file_type": "code",
+      "source_file": "playwright.config.ts",
+      "source_location": "L1",
+      "id": "playwright_config_ts",
+      "community": 64,
+      "norm_label": "playwright.config.ts"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config_mjs",
+      "community": 65,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "legacy_nextjs\\next-env.d.ts",
+      "source_location": "L1",
+      "id": "legacy_nextjs_next_env_d_ts",
+      "community": 66,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\layout.tsx",
+      "source_location": "L1",
+      "id": "src_app_layout_tsx",
+      "community": 15,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "src\\app\\layout.tsx",
+      "source_location": "L206",
+      "id": "app_layout_rootlayout",
+      "community": 15,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "opengraph-image.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\opengraph-image.tsx",
+      "source_location": "L1",
+      "id": "src_app_opengraph_image_tsx",
+      "community": 67,
+      "norm_label": "opengraph-image.tsx"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_page_tsx",
+      "community": 16,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "src\\app\\page.tsx",
+      "source_location": "L12",
+      "id": "app_page_home",
+      "community": 16,
+      "norm_label": "home()"
+    },
+    {
+      "label": "robots.ts",
+      "file_type": "code",
+      "source_file": "src\\app\\robots.ts",
+      "source_location": "L1",
+      "id": "src_app_robots_ts",
+      "community": 17,
+      "norm_label": "robots.ts"
+    },
+    {
+      "label": "robots()",
+      "file_type": "code",
+      "source_file": "src\\app\\robots.ts",
+      "source_location": "L3",
+      "id": "app_robots_robots",
+      "community": 17,
+      "norm_label": "robots()"
+    },
+    {
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "src\\app\\sitemap.ts",
+      "source_location": "L1",
+      "id": "src_app_sitemap_ts",
+      "community": 18,
+      "norm_label": "sitemap.ts"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "src\\app\\sitemap.ts",
+      "source_location": "L23",
+      "id": "app_sitemap_sitemap",
+      "community": 18,
+      "norm_label": "sitemap()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\about\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_about_page_tsx",
+      "community": 19,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "AboutPage()",
+      "file_type": "code",
+      "source_file": "src\\app\\about\\page.tsx",
+      "source_location": "L63",
+      "id": "about_page_aboutpage",
+      "community": 19,
+      "norm_label": "aboutpage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\resume\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_resume_page_tsx",
+      "community": 20,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Resume()",
+      "file_type": "code",
+      "source_file": "src\\app\\resume\\page.tsx",
+      "source_location": "L17",
+      "id": "resume_page_resume",
+      "community": 20,
+      "norm_label": "resume()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\layout.tsx",
+      "source_location": "L1",
+      "id": "src_app_work_layout_tsx",
+      "community": 21,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "WorkLayout()",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\layout.tsx",
+      "source_location": "L13",
+      "id": "work_layout_worklayout",
+      "community": 21,
+      "norm_label": "worklayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_work_page_tsx",
+      "community": 6,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "ProjectCard()",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\page.tsx",
+      "source_location": "L97",
+      "id": "work_page_projectcard",
+      "community": 6,
+      "norm_label": "projectcard()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\page.tsx",
+      "source_location": "L116",
+      "id": "work_page_cn",
+      "community": 6,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "opengraph-image.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\[slug]\\opengraph-image.tsx",
+      "source_location": "L1",
+      "id": "src_app_work_slug_opengraph_image_tsx",
+      "community": 68,
+      "norm_label": "opengraph-image.tsx"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\[slug]\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_work_slug_page_tsx",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "generateMetadata()",
+      "file_type": "code",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L493",
+      "id": "slug_page_generatemetadata",
+      "community": 1,
+      "norm_label": "generatemetadata()"
+    },
+    {
+      "label": "CaseStudyPage()",
+      "file_type": "code",
+      "source_file": "src\\app\\work\\[slug]\\page.tsx",
+      "source_location": "L72",
+      "id": "slug_page_casestudypage",
+      "community": 1,
+      "norm_label": "casestudypage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\writing\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_writing_page_tsx",
+      "community": 69,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L1",
+      "id": "src_app_writing_slug_page_tsx",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L489",
+      "id": "slug_page_generatestaticparams",
+      "community": 1,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "renderSection()",
+      "file_type": "code",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L510",
+      "id": "slug_page_rendersection",
+      "community": 1,
+      "norm_label": "rendersection()"
+    },
+    {
+      "label": "WritingPostPage()",
+      "file_type": "code",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L562",
+      "id": "slug_page_writingpostpage",
+      "community": 1,
+      "norm_label": "writingpostpage()"
+    },
+    {
+      "label": "next-case-study-hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\next-case-study-hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_next_case_study_hero_tsx",
+      "community": 22,
+      "norm_label": "next-case-study-hero.tsx"
+    },
+    {
+      "label": "NextCaseStudyHero()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\next-case-study-hero.tsx",
+      "source_location": "L9",
+      "id": "case_studies_next_case_study_hero_nextcasestudyhero",
+      "community": 22,
+      "norm_label": "nextcasestudyhero()"
+    },
+    {
+      "label": "next-case-study.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\next-case-study.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_next_case_study_tsx",
+      "community": 70,
+      "norm_label": "next-case-study.tsx"
+    },
+    {
+      "label": "aulys-ui.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\aulys-ui.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_aulys_ui_tsx",
+      "community": 71,
+      "norm_label": "aulys-ui.tsx"
+    },
+    {
+      "label": "bento-impact.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\bento-impact.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_bento_impact_tsx",
+      "community": 72,
+      "norm_label": "bento-impact.tsx"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_content_tsx",
+      "community": 23,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "AulysPage()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\content.tsx",
+      "source_location": "L14",
+      "id": "aulys_content_aulyspage",
+      "community": 23,
+      "norm_label": "aulyspage()"
+    },
+    {
+      "label": "design-artifacts.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\design-artifacts.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_design_artifacts_tsx",
+      "community": 24,
+      "norm_label": "design-artifacts.tsx"
+    },
+    {
+      "label": "DesignArtifacts()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\design-artifacts.tsx",
+      "source_location": "L5",
+      "id": "aulys_design_artifacts_designartifacts",
+      "community": 24,
+      "norm_label": "designartifacts()"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_hero_tsx",
+      "community": 25,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\hero.tsx",
+      "source_location": "L26",
+      "id": "aulys_hero_handlemousemove",
+      "community": 25,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "insight.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\insight.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_insight_tsx",
+      "community": 73,
+      "norm_label": "insight.tsx"
+    },
+    {
+      "label": "learnings.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\learnings.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_learnings_tsx",
+      "community": 74,
+      "norm_label": "learnings.tsx"
+    },
+    {
+      "label": "problem-statement.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\problem-statement.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_problem_statement_tsx",
+      "community": 75,
+      "norm_label": "problem-statement.tsx"
+    },
+    {
+      "label": "system-specs.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\system-specs.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_system_specs_tsx",
+      "community": 26,
+      "norm_label": "system-specs.tsx"
+    },
+    {
+      "label": "SystemSpecs()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\system-specs.tsx",
+      "source_location": "L27",
+      "id": "aulys_system_specs_systemspecs",
+      "community": 26,
+      "norm_label": "systemspecs()"
+    },
+    {
+      "label": "the-story.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\the-story.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_the_story_tsx",
+      "community": 76,
+      "norm_label": "the-story.tsx"
+    },
+    {
+      "label": "wcag-badge.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\aulys\\wcag-badge.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_aulys_wcag_badge_tsx",
+      "community": 77,
+      "norm_label": "wcag-badge.tsx"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\infosys\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_infosys_content_tsx",
+      "community": 78,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\infosys\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_infosys_hero_tsx",
+      "community": 27,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\infosys\\hero.tsx",
+      "source_location": "L21",
+      "id": "infosys_hero_handlemousemove",
+      "community": 27,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "care-circle.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\care-circle.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_care_circle_tsx",
+      "community": 28,
+      "norm_label": "care-circle.tsx"
+    },
+    {
+      "label": "deriveStatus()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\care-circle.tsx",
+      "source_location": "L67",
+      "id": "medsecure_care_circle_derivestatus",
+      "community": 28,
+      "norm_label": "derivestatus()"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_content_tsx",
+      "community": 29,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "MedSecurePage()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\content.tsx",
+      "source_location": "L36",
+      "id": "medsecure_content_medsecurepage",
+      "community": 29,
+      "norm_label": "medsecurepage()"
+    },
+    {
+      "label": "design-artifacts.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\design-artifacts.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_design_artifacts_tsx",
+      "community": 30,
+      "norm_label": "design-artifacts.tsx"
+    },
+    {
+      "label": "DesignArtifacts()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\design-artifacts.tsx",
+      "source_location": "L5",
+      "id": "medsecure_design_artifacts_designartifacts",
+      "community": 30,
+      "norm_label": "designartifacts()"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_hero_tsx",
+      "community": 79,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "impact.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\impact.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_impact_tsx",
+      "community": 80,
+      "norm_label": "impact.tsx"
+    },
+    {
+      "label": "inclusive-design.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\inclusive-design.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_inclusive_design_tsx",
+      "community": 81,
+      "norm_label": "inclusive-design.tsx"
+    },
+    {
+      "label": "journey-map.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\journey-map.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_journey_map_tsx",
+      "community": 82,
+      "norm_label": "journey-map.tsx"
+    },
+    {
+      "label": "live-transaction.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\live-transaction.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_live_transaction_tsx",
+      "community": 7,
+      "norm_label": "live-transaction.tsx"
+    },
+    {
+      "label": "handleStart()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\live-transaction.tsx",
+      "source_location": "L43",
+      "id": "medsecure_live_transaction_handlestart",
+      "community": 7,
+      "norm_label": "handlestart()"
+    },
+    {
+      "label": "handleReset()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\live-transaction.tsx",
+      "source_location": "L49",
+      "id": "medsecure_live_transaction_handlereset",
+      "community": 7,
+      "norm_label": "handlereset()"
+    },
+    {
+      "label": "medsecure-ui.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "community": 0,
+      "norm_label": "medsecure-ui.tsx"
+    },
+    {
+      "label": "DropletIcon()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L11",
+      "id": "medsecure_medsecure_ui_dropleticon",
+      "community": 0,
+      "norm_label": "dropleticon()"
+    },
+    {
+      "label": "PillIcon()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L20",
+      "id": "medsecure_medsecure_ui_pillicon",
+      "community": 0,
+      "norm_label": "pillicon()"
+    },
+    {
+      "label": "ScanIcon()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L30",
+      "id": "medsecure_medsecure_ui_scanicon",
+      "community": 0,
+      "norm_label": "scanicon()"
+    },
+    {
+      "label": "SyringeIcon()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L42",
+      "id": "medsecure_medsecure_ui_syringeicon",
+      "community": 0,
+      "norm_label": "syringeicon()"
+    },
+    {
+      "label": "NavHome()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L56",
+      "id": "medsecure_medsecure_ui_navhome",
+      "community": 0,
+      "norm_label": "navhome()"
+    },
+    {
+      "label": "NavFile()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L72",
+      "id": "medsecure_medsecure_ui_navfile",
+      "community": 0,
+      "norm_label": "navfile()"
+    },
+    {
+      "label": "NavShield()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L85",
+      "id": "medsecure_medsecure_ui_navshield",
+      "community": 0,
+      "norm_label": "navshield()"
+    },
+    {
+      "label": "NavPerson()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L98",
+      "id": "medsecure_medsecure_ui_navperson",
+      "community": 0,
+      "norm_label": "navperson()"
+    },
+    {
+      "label": "personas.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\personas.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_personas_tsx",
+      "community": 83,
+      "norm_label": "personas.tsx"
+    },
+    {
+      "label": "stitch-uis.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\stitch-uis.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_stitch_uis_tsx",
+      "community": 84,
+      "norm_label": "stitch-uis.tsx"
+    },
+    {
+      "label": "technical-architecture.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\technical-architecture.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_technical_architecture_tsx",
+      "community": 85,
+      "norm_label": "technical-architecture.tsx"
+    },
+    {
+      "label": "the-crisis.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\medsecure\\the-crisis.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_medsecure_the_crisis_tsx",
+      "community": 86,
+      "norm_label": "the-crisis.tsx"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_content_tsx",
+      "community": 31,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "NexusBankingPage()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\content.tsx",
+      "source_location": "L11",
+      "id": "nexus_banking_content_nexusbankingpage",
+      "community": 31,
+      "norm_label": "nexusbankingpage()"
+    },
+    {
+      "label": "final-design.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\final-design.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_final_design_tsx",
+      "community": 87,
+      "norm_label": "final-design.tsx"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_hero_tsx",
+      "community": 32,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\hero.tsx",
+      "source_location": "L26",
+      "id": "nexus_banking_hero_handlemousemove",
+      "community": 32,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "intent-architecture.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\intent-architecture.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_intent_architecture_tsx",
+      "community": 88,
+      "norm_label": "intent-architecture.tsx"
+    },
+    {
+      "label": "nexus-ui.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\nexus-ui.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_nexus_ui_tsx",
+      "community": 8,
+      "norm_label": "nexus-ui.tsx"
+    },
+    {
+      "label": "BrowserFrame()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\nexus-ui.tsx",
+      "source_location": "L6",
+      "id": "nexus_banking_nexus_ui_browserframe",
+      "community": 8,
+      "norm_label": "browserframe()"
+    },
+    {
+      "label": "Callout()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\nexus-ui.tsx",
+      "source_location": "L32",
+      "id": "nexus_banking_nexus_ui_callout",
+      "community": 8,
+      "norm_label": "callout()"
+    },
+    {
+      "label": "results.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\results.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_results_tsx",
+      "community": 33,
+      "norm_label": "results.tsx"
+    },
+    {
+      "label": "Results()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\results.tsx",
+      "source_location": "L5",
+      "id": "nexus_banking_results_results",
+      "community": 33,
+      "norm_label": "results()"
+    },
+    {
+      "label": "setup.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\setup.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_setup_tsx",
+      "community": 34,
+      "norm_label": "setup.tsx"
+    },
+    {
+      "label": "Setup()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\setup.tsx",
+      "source_location": "L4",
+      "id": "nexus_banking_setup_setup",
+      "community": 34,
+      "norm_label": "setup()"
+    },
+    {
+      "label": "the-problem.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\the-problem.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_nexus_banking_the_problem_tsx",
+      "community": 89,
+      "norm_label": "the-problem.tsx"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_content_tsx",
+      "community": 35,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "OrbitPage()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\content.tsx",
+      "source_location": "L13",
+      "id": "orbit_content_orbitpage",
+      "community": 35,
+      "norm_label": "orbitpage()"
+    },
+    {
+      "label": "design-artifacts.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\design-artifacts.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_design_artifacts_tsx",
+      "community": 90,
+      "norm_label": "design-artifacts.tsx"
+    },
+    {
+      "label": "design-decisions.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\design-decisions.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_design_decisions_tsx",
+      "community": 91,
+      "norm_label": "design-decisions.tsx"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_hero_tsx",
+      "community": 92,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "insight.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\insight.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_insight_tsx",
+      "community": 93,
+      "norm_label": "insight.tsx"
+    },
+    {
+      "label": "learnings.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\learnings.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_learnings_tsx",
+      "community": 94,
+      "norm_label": "learnings.tsx"
+    },
+    {
+      "label": "orbit-ui.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\orbit-ui.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_orbit_ui_tsx",
+      "community": 95,
+      "norm_label": "orbit-ui.tsx"
+    },
+    {
+      "label": "outcomes.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\outcomes.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_outcomes_tsx",
+      "community": 96,
+      "norm_label": "outcomes.tsx"
+    },
+    {
+      "label": "problem-statement.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\orbit\\problem-statement.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_orbit_problem_statement_tsx",
+      "community": 97,
+      "norm_label": "problem-statement.tsx"
+    },
+    {
+      "label": "bento-impact.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\bento-impact.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_bento_impact_tsx",
+      "community": 36,
+      "norm_label": "bento-impact.tsx"
+    },
+    {
+      "label": "BentoCard()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\bento-impact.tsx",
+      "source_location": "L50",
+      "id": "simplifai_bento_impact_bentocard",
+      "community": 36,
+      "norm_label": "bentocard()"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_content_tsx",
+      "community": 37,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\content.tsx",
+      "source_location": "L74",
+      "id": "simplifai_content_handlemousemove",
+      "community": 37,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "design-artifacts.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\design-artifacts.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_artifacts_tsx",
+      "community": 38,
+      "norm_label": "design-artifacts.tsx"
+    },
+    {
+      "label": "DesignArtifacts()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\design-artifacts.tsx",
+      "source_location": "L5",
+      "id": "simplifai_design_artifacts_designartifacts",
+      "community": 38,
+      "norm_label": "designartifacts()"
+    },
+    {
+      "label": "design-process.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\design-process.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_process_tsx",
+      "community": 98,
+      "norm_label": "design-process.tsx"
+    },
+    {
+      "label": "flow-preview.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "community": 2,
+      "norm_label": "flow-preview.tsx"
+    },
+    {
+      "label": "nodePos()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L95",
+      "id": "simplifai_flow_preview_nodepos",
+      "community": 2,
+      "norm_label": "nodepos()"
+    },
+    {
+      "label": "centerOf()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L100",
+      "id": "simplifai_flow_preview_centerof",
+      "community": 2,
+      "norm_label": "centerof()"
+    },
+    {
+      "label": "getNode()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L105",
+      "id": "simplifai_flow_preview_getnode",
+      "community": 2,
+      "norm_label": "getnode()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L179",
+      "id": "simplifai_flow_preview_cn",
+      "community": 2,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_hero_tsx",
+      "community": 39,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\hero.tsx",
+      "source_location": "L25",
+      "id": "simplifai_hero_handlemousemove",
+      "community": 39,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "ia-tree.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\ia-tree.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_ia_tree_tsx",
+      "community": 40,
+      "norm_label": "ia-tree.tsx"
+    },
+    {
+      "label": "toggle()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\ia-tree.tsx",
+      "source_location": "L93",
+      "id": "simplifai_ia_tree_toggle",
+      "community": 40,
+      "norm_label": "toggle()"
+    },
+    {
+      "label": "problem-statement.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\problem-statement.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_problem_statement_tsx",
+      "community": 99,
+      "norm_label": "problem-statement.tsx"
+    },
+    {
+      "label": "simplifai-ui.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\simplifai-ui.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_simplifai_ui_tsx",
+      "community": 41,
+      "norm_label": "simplifai-ui.tsx"
+    },
+    {
+      "label": "BrowserFrame()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\simplifai-ui.tsx",
+      "source_location": "L6",
+      "id": "simplifai_simplifai_ui_browserframe",
+      "community": 41,
+      "norm_label": "browserframe()"
+    },
+    {
+      "label": "system-specs.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\system-specs.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_system_specs_tsx",
+      "community": 100,
+      "norm_label": "system-specs.tsx"
+    },
+    {
+      "label": "technical-evolution.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\technical-evolution.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_technical_evolution_tsx",
+      "community": 101,
+      "norm_label": "technical-evolution.tsx"
+    },
+    {
+      "label": "user-persona-ia.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\user-persona-ia.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_user_persona_ia_tsx",
+      "community": 102,
+      "norm_label": "user-persona-ia.tsx"
+    },
+    {
+      "label": "user-persona-interactive.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai\\user-persona-interactive.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_user_persona_interactive_tsx",
+      "community": 103,
+      "norm_label": "user-persona-interactive.tsx"
+    },
+    {
+      "label": "atomic-explorer.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\atomic-explorer.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_atomic_explorer_tsx",
+      "community": 42,
+      "norm_label": "atomic-explorer.tsx"
+    },
+    {
+      "label": "MoleculePreview()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\atomic-explorer.tsx",
+      "source_location": "L102",
+      "id": "simplifai_design_system_atomic_explorer_moleculepreview",
+      "community": 42,
+      "norm_label": "moleculepreview()"
+    },
+    {
+      "label": "component-playground.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\component-playground.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_component_playground_tsx",
+      "community": 104,
+      "norm_label": "component-playground.tsx"
+    },
+    {
+      "label": "component-redlines.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\component-redlines.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_component_redlines_tsx",
+      "community": 105,
+      "norm_label": "component-redlines.tsx"
+    },
+    {
+      "label": "content.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\content.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_content_tsx",
+      "community": 43,
+      "norm_label": "content.tsx"
+    },
+    {
+      "label": "SimplifaiDesignSystemPage()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\content.tsx",
+      "source_location": "L15",
+      "id": "simplifai_design_system_content_simplifaidesignsystempage",
+      "community": 43,
+      "norm_label": "simplifaidesignsystempage()"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_hero_tsx",
+      "community": 44,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\hero.tsx",
+      "source_location": "L7",
+      "id": "simplifai_design_system_hero_hero",
+      "community": 44,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "problem-context.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\problem-context.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_problem_context_tsx",
+      "community": 106,
+      "norm_label": "problem-context.tsx"
+    },
+    {
+      "label": "system-governance.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\system-governance.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_system_governance_tsx",
+      "community": 45,
+      "norm_label": "system-governance.tsx"
+    },
+    {
+      "label": "MetricCard()",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\system-governance.tsx",
+      "source_location": "L54",
+      "id": "simplifai_design_system_system_governance_metriccard",
+      "community": 45,
+      "norm_label": "metriccard()"
+    },
+    {
+      "label": "system-preview.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\system-preview.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_system_preview_tsx",
+      "community": 107,
+      "norm_label": "system-preview.tsx"
+    },
+    {
+      "label": "technical-evolution.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\technical-evolution.tsx",
+      "source_location": "L1",
+      "id": "src_components_case_studies_simplifai_design_system_technical_evolution_tsx",
+      "community": 108,
+      "norm_label": "technical-evolution.tsx"
+    },
+    {
+      "label": "about.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\about.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_about_tsx",
+      "community": 109,
+      "norm_label": "about.tsx"
+    },
+    {
+      "label": "aulys-showcase.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\aulys-showcase.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_aulys_showcase_tsx",
+      "community": 110,
+      "norm_label": "aulys-showcase.tsx"
+    },
+    {
+      "label": "component-lab.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\component-lab.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_component_lab_tsx",
+      "community": 9,
+      "norm_label": "component-lab.tsx"
+    },
+    {
+      "label": "highlightCode()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\component-lab.tsx",
+      "source_location": "L99",
+      "id": "home_component_lab_highlightcode",
+      "community": 9,
+      "norm_label": "highlightcode()"
+    },
+    {
+      "label": "escapeLine()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\component-lab.tsx",
+      "source_location": "L116",
+      "id": "home_component_lab_escapeline",
+      "community": 9,
+      "norm_label": "escapeline()"
+    },
+    {
+      "label": "contact.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\contact.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_contact_tsx",
+      "community": 46,
+      "norm_label": "contact.tsx"
+    },
+    {
+      "label": "handleCopy()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\contact.tsx",
+      "source_location": "L16",
+      "id": "home_contact_handlecopy",
+      "community": 46,
+      "norm_label": "handlecopy()"
+    },
+    {
+      "label": "dynamic-island.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\dynamic-island.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_dynamic_island_tsx",
+      "community": 111,
+      "norm_label": "dynamic-island.tsx"
+    },
+    {
+      "label": "experience.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\experience.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_experience_tsx",
+      "community": 47,
+      "norm_label": "experience.tsx"
+    },
+    {
+      "label": "ExperienceListCard()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\experience.tsx",
+      "source_location": "L80",
+      "id": "home_experience_experiencelistcard",
+      "community": 47,
+      "norm_label": "experiencelistcard()"
+    },
+    {
+      "label": "hero.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_hero_tsx",
+      "community": 5,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "RoleMatcher()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L114",
+      "id": "home_hero_rolematcher",
+      "community": 5,
+      "norm_label": "rolematcher()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L136",
+      "id": "home_hero_cn",
+      "community": 5,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L227",
+      "id": "home_hero_handlemousemove",
+      "community": 5,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "payment-card.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\payment-card.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_payment_card_tsx",
+      "community": 10,
+      "norm_label": "payment-card.tsx"
+    },
+    {
+      "label": "handlePay()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\payment-card.tsx",
+      "source_location": "L11",
+      "id": "home_payment_card_handlepay",
+      "community": 10,
+      "norm_label": "handlepay()"
+    },
+    {
+      "label": "reset()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\payment-card.tsx",
+      "source_location": "L17",
+      "id": "home_payment_card_reset",
+      "community": 10,
+      "norm_label": "reset()"
+    },
+    {
+      "label": "selected-work.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\selected-work.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_selected_work_tsx",
+      "community": 11,
+      "norm_label": "selected-work.tsx"
+    },
+    {
+      "label": "WorkCard()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\selected-work.tsx",
+      "source_location": "L103",
+      "id": "home_selected_work_workcard",
+      "community": 11,
+      "norm_label": "workcard()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\selected-work.tsx",
+      "source_location": "L123",
+      "id": "home_selected_work_cn",
+      "community": 11,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "simplifai-showcase.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\simplifai-showcase.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_simplifai_showcase_tsx",
+      "community": 112,
+      "norm_label": "simplifai-showcase.tsx"
+    },
+    {
+      "label": "skills.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\skills.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_skills_tsx",
+      "community": 12,
+      "norm_label": "skills.tsx"
+    },
+    {
+      "label": "SkillCard()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\skills.tsx",
+      "source_location": "L56",
+      "id": "home_skills_skillcard",
+      "community": 12,
+      "norm_label": "skillcard()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\skills.tsx",
+      "source_location": "L73",
+      "id": "home_skills_cn",
+      "community": 12,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "smart-button.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_smart_button_tsx",
+      "community": 3,
+      "norm_label": "smart-button.tsx"
+    },
+    {
+      "label": "handleMouseMove()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L18",
+      "id": "home_smart_button_handlemousemove",
+      "community": 3,
+      "norm_label": "handlemousemove()"
+    },
+    {
+      "label": "handleMouseLeave()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L27",
+      "id": "home_smart_button_handlemouseleave",
+      "community": 3,
+      "norm_label": "handlemouseleave()"
+    },
+    {
+      "label": "handleClick()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L32",
+      "id": "home_smart_button_handleclick",
+      "community": 3,
+      "norm_label": "handleclick()"
+    },
+    {
+      "label": "handleReset()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L43",
+      "id": "home_smart_button_handlereset",
+      "community": 3,
+      "norm_label": "handlereset()"
+    },
+    {
+      "label": "social-proof.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\social-proof.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_social_proof_tsx",
+      "community": 113,
+      "norm_label": "social-proof.tsx"
+    },
+    {
+      "label": "testimonials.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\testimonials.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_testimonials_tsx",
+      "community": 114,
+      "norm_label": "testimonials.tsx"
+    },
+    {
+      "label": "work.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\work.tsx",
+      "source_location": "L1",
+      "id": "src_components_home_work_tsx",
+      "community": 48,
+      "norm_label": "work.tsx"
+    },
+    {
+      "label": "Work()",
+      "file_type": "code",
+      "source_file": "src\\components\\home\\work.tsx",
+      "source_location": "L37",
+      "id": "home_work_work",
+      "community": 48,
+      "norm_label": "work()"
+    },
+    {
+      "label": "footer.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\footer.tsx",
+      "source_location": "L1",
+      "id": "src_components_layout_footer_tsx",
+      "community": 49,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\footer.tsx",
+      "source_location": "L4",
+      "id": "layout_footer_footer",
+      "community": 49,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "header.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L1",
+      "id": "src_components_layout_header_tsx",
+      "community": 50,
+      "norm_label": "header.tsx"
+    },
+    {
+      "label": "handleScroll()",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L22",
+      "id": "layout_header_handlescroll",
+      "community": 50,
+      "norm_label": "handlescroll()"
+    },
+    {
+      "label": "motion-section.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\motion-section.tsx",
+      "source_location": "L1",
+      "id": "src_components_layout_motion_section_tsx",
+      "community": 51,
+      "norm_label": "motion-section.tsx"
+    },
+    {
+      "label": "MotionSection()",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\motion-section.tsx",
+      "source_location": "L12",
+      "id": "layout_motion_section_motionsection",
+      "community": 51,
+      "norm_label": "motionsection()"
+    },
+    {
+      "label": "smooth-scroll.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\smooth-scroll.tsx",
+      "source_location": "L1",
+      "id": "src_components_layout_smooth_scroll_tsx",
+      "community": 52,
+      "norm_label": "smooth-scroll.tsx"
+    },
+    {
+      "label": "SmoothScroll()",
+      "file_type": "code",
+      "source_file": "src\\components\\layout\\smooth-scroll.tsx",
+      "source_location": "L7",
+      "id": "layout_smooth_scroll_smoothscroll",
+      "community": 52,
+      "norm_label": "smoothscroll()"
+    },
+    {
+      "label": "ExperienceBlock.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\ExperienceBlock.tsx",
+      "source_location": "L1",
+      "id": "src_components_resume_experienceblock_tsx",
+      "community": 53,
+      "norm_label": "experienceblock.tsx"
+    },
+    {
+      "label": "ExperienceBlock()",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\ExperienceBlock.tsx",
+      "source_location": "L14",
+      "id": "resume_experienceblock_experienceblock",
+      "community": 53,
+      "norm_label": "experienceblock()"
+    },
+    {
+      "label": "ResumePage.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\ResumePage.tsx",
+      "source_location": "L1",
+      "id": "src_components_resume_resumepage_tsx",
+      "community": 13,
+      "norm_label": "resumepage.tsx"
+    },
+    {
+      "label": "fadeUpProps()",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\ResumePage.tsx",
+      "source_location": "L17",
+      "id": "resume_resumepage_fadeupprops",
+      "community": 13,
+      "norm_label": "fadeupprops()"
+    },
+    {
+      "label": "SectionLabel()",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\ResumePage.tsx",
+      "source_location": "L23",
+      "id": "resume_resumepage_sectionlabel",
+      "community": 13,
+      "norm_label": "sectionlabel()"
+    },
+    {
+      "label": "SkillList.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\SkillList.tsx",
+      "source_location": "L1",
+      "id": "src_components_resume_skilllist_tsx",
+      "community": 54,
+      "norm_label": "skilllist.tsx"
+    },
+    {
+      "label": "SkillList()",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\SkillList.tsx",
+      "source_location": "L11",
+      "id": "resume_skilllist_skilllist",
+      "community": 54,
+      "norm_label": "skilllist()"
+    },
+    {
+      "label": "StickyDownload.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\StickyDownload.tsx",
+      "source_location": "L1",
+      "id": "src_components_resume_stickydownload_tsx",
+      "community": 55,
+      "norm_label": "stickydownload.tsx"
+    },
+    {
+      "label": "StickyDownload()",
+      "file_type": "code",
+      "source_file": "src\\components\\resume\\StickyDownload.tsx",
+      "source_location": "L10",
+      "id": "resume_stickydownload_stickydownload",
+      "community": 55,
+      "norm_label": "stickydownload()"
+    },
+    {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\button.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_button_tsx",
+      "community": 115,
+      "norm_label": "button.tsx"
+    },
+    {
+      "label": "card.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\card.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_card_tsx",
+      "community": 116,
+      "norm_label": "card.tsx"
+    },
+    {
+      "label": "contact-sheet.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\contact-sheet.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_contact_sheet_tsx",
+      "community": 56,
+      "norm_label": "contact-sheet.tsx"
+    },
+    {
+      "label": "handleKeyDown()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\contact-sheet.tsx",
+      "source_location": "L30",
+      "id": "ui_contact_sheet_handlekeydown",
+      "community": 56,
+      "norm_label": "handlekeydown()"
+    },
+    {
+      "label": "mockup-frame.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\mockup-frame.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_mockup_frame_tsx",
+      "community": 14,
+      "norm_label": "mockup-frame.tsx"
+    },
+    {
+      "label": "MockupFrame()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\mockup-frame.tsx",
+      "source_location": "L15",
+      "id": "ui_mockup_frame_mockupframe",
+      "community": 14,
+      "norm_label": "mockupframe()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\mockup-frame.tsx",
+      "source_location": "L31",
+      "id": "ui_mockup_frame_cn",
+      "community": 14,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "text-reveal.tsx",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\text-reveal.tsx",
+      "source_location": "L1",
+      "id": "src_components_ui_text_reveal_tsx",
+      "community": 57,
+      "norm_label": "text-reveal.tsx"
+    },
+    {
+      "label": "TextReveal()",
+      "file_type": "code",
+      "source_file": "src\\components\\ui\\text-reveal.tsx",
+      "source_location": "L14",
+      "id": "ui_text_reveal_textreveal",
+      "community": 57,
+      "norm_label": "textreveal()"
+    },
+    {
+      "label": "resume.ts",
+      "file_type": "code",
+      "source_file": "src\\data\\resume.ts",
+      "source_location": "L1",
+      "id": "src_data_resume_ts",
+      "community": 117,
+      "norm_label": "resume.ts"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src\\lib\\utils.ts",
+      "source_location": "L1",
+      "id": "src_lib_utils_ts",
+      "community": 58,
+      "norm_label": "utils.ts"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src\\lib\\utils.ts",
+      "source_location": "L4",
+      "id": "lib_utils_cn",
+      "community": 58,
+      "norm_label": "cn()"
+    },
+    {
+      "label": "accessibility.spec.ts",
+      "file_type": "code",
+      "source_file": "tests\\accessibility.spec.ts",
+      "source_location": "L1",
+      "id": "tests_accessibility_spec_ts",
+      "community": 118,
+      "norm_label": "accessibility.spec.ts"
+    },
+    {
+      "label": "home.spec.ts",
+      "file_type": "code",
+      "source_file": "tests\\home.spec.ts",
+      "source_location": "L1",
+      "id": "tests_home_spec_ts",
+      "community": 119,
+      "norm_label": "home.spec.ts"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "gen_ui_screens_py",
+      "_tgt": "portfolio_website_gen_ui_screens_call_stitch",
+      "source": "gen_ui_screens_py",
+      "target": "portfolio_website_gen_ui_screens_call_stitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "gen_ui_screens_py",
+      "_tgt": "portfolio_website_gen_ui_screens_get_screen",
+      "source": "gen_ui_screens_py",
+      "target": "portfolio_website_gen_ui_screens_get_screen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "gen_ui_screens.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "gen_ui_screens_py",
+      "_tgt": "portfolio_website_gen_ui_screens_download",
+      "source": "gen_ui_screens_py",
+      "target": "portfolio_website_gen_ui_screens_download",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\layout.tsx",
+      "source_location": "L206",
+      "weight": 1.0,
+      "_src": "src_app_layout_tsx",
+      "_tgt": "app_layout_rootlayout",
+      "source": "src_app_layout_tsx",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "src_app_page_tsx",
+      "_tgt": "app_page_home",
+      "source": "src_app_page_tsx",
+      "target": "app_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\robots.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_app_robots_ts",
+      "_tgt": "app_robots_robots",
+      "source": "src_app_robots_ts",
+      "target": "app_robots_robots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\sitemap.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "src_app_sitemap_ts",
+      "_tgt": "app_sitemap_sitemap",
+      "source": "src_app_sitemap_ts",
+      "target": "app_sitemap_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\about\\page.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_src": "src_app_about_page_tsx",
+      "_tgt": "about_page_aboutpage",
+      "source": "src_app_about_page_tsx",
+      "target": "about_page_aboutpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\resume\\page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "src_app_resume_page_tsx",
+      "_tgt": "resume_page_resume",
+      "source": "src_app_resume_page_tsx",
+      "target": "resume_page_resume",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\work\\layout.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "src_app_work_layout_tsx",
+      "_tgt": "work_layout_worklayout",
+      "source": "src_app_work_layout_tsx",
+      "target": "work_layout_worklayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\work\\page.tsx",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_src": "src_app_work_page_tsx",
+      "_tgt": "work_page_projectcard",
+      "source": "src_app_work_page_tsx",
+      "target": "work_page_projectcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\work\\page.tsx",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_src": "src_app_work_page_tsx",
+      "_tgt": "work_page_cn",
+      "source": "src_app_work_page_tsx",
+      "target": "work_page_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\work\\[slug]\\page.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "src_app_work_slug_page_tsx",
+      "_tgt": "slug_page_generatemetadata",
+      "source": "src_app_work_slug_page_tsx",
+      "target": "slug_page_generatemetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\work\\[slug]\\page.tsx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_src": "src_app_work_slug_page_tsx",
+      "_tgt": "slug_page_casestudypage",
+      "source": "src_app_work_slug_page_tsx",
+      "target": "slug_page_casestudypage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L493",
+      "weight": 1.0,
+      "_src": "src_app_writing_slug_page_tsx",
+      "_tgt": "slug_page_generatemetadata",
+      "source": "slug_page_generatemetadata",
+      "target": "src_app_writing_slug_page_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L489",
+      "weight": 1.0,
+      "_src": "src_app_writing_slug_page_tsx",
+      "_tgt": "slug_page_generatestaticparams",
+      "source": "src_app_writing_slug_page_tsx",
+      "target": "slug_page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L510",
+      "weight": 1.0,
+      "_src": "src_app_writing_slug_page_tsx",
+      "_tgt": "slug_page_rendersection",
+      "source": "src_app_writing_slug_page_tsx",
+      "target": "slug_page_rendersection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\app\\writing\\[slug]\\page.tsx",
+      "source_location": "L562",
+      "weight": 1.0,
+      "_src": "src_app_writing_slug_page_tsx",
+      "_tgt": "slug_page_writingpostpage",
+      "source": "src_app_writing_slug_page_tsx",
+      "target": "slug_page_writingpostpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\next-case-study-hero.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_next_case_study_hero_tsx",
+      "_tgt": "case_studies_next_case_study_hero_nextcasestudyhero",
+      "source": "src_components_case_studies_next_case_study_hero_tsx",
+      "target": "case_studies_next_case_study_hero_nextcasestudyhero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\aulys\\content.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_aulys_content_tsx",
+      "_tgt": "aulys_content_aulyspage",
+      "source": "src_components_case_studies_aulys_content_tsx",
+      "target": "aulys_content_aulyspage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\aulys\\design-artifacts.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_aulys_design_artifacts_tsx",
+      "_tgt": "aulys_design_artifacts_designartifacts",
+      "source": "src_components_case_studies_aulys_design_artifacts_tsx",
+      "target": "aulys_design_artifacts_designartifacts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\aulys\\hero.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_aulys_hero_tsx",
+      "_tgt": "aulys_hero_handlemousemove",
+      "source": "src_components_case_studies_aulys_hero_tsx",
+      "target": "aulys_hero_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\aulys\\system-specs.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_aulys_system_specs_tsx",
+      "_tgt": "aulys_system_specs_systemspecs",
+      "source": "src_components_case_studies_aulys_system_specs_tsx",
+      "target": "aulys_system_specs_systemspecs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\infosys\\hero.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_infosys_hero_tsx",
+      "_tgt": "infosys_hero_handlemousemove",
+      "source": "src_components_case_studies_infosys_hero_tsx",
+      "target": "infosys_hero_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\care-circle.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_care_circle_tsx",
+      "_tgt": "medsecure_care_circle_derivestatus",
+      "source": "src_components_case_studies_medsecure_care_circle_tsx",
+      "target": "medsecure_care_circle_derivestatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\content.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_content_tsx",
+      "_tgt": "medsecure_content_medsecurepage",
+      "source": "src_components_case_studies_medsecure_content_tsx",
+      "target": "medsecure_content_medsecurepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\design-artifacts.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_design_artifacts_tsx",
+      "_tgt": "medsecure_design_artifacts_designartifacts",
+      "source": "src_components_case_studies_medsecure_design_artifacts_tsx",
+      "target": "medsecure_design_artifacts_designartifacts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\live-transaction.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_live_transaction_tsx",
+      "_tgt": "medsecure_live_transaction_handlestart",
+      "source": "src_components_case_studies_medsecure_live_transaction_tsx",
+      "target": "medsecure_live_transaction_handlestart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\live-transaction.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_live_transaction_tsx",
+      "_tgt": "medsecure_live_transaction_handlereset",
+      "source": "src_components_case_studies_medsecure_live_transaction_tsx",
+      "target": "medsecure_live_transaction_handlereset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_dropleticon",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_dropleticon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_pillicon",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_pillicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_scanicon",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_scanicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_syringeicon",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_syringeicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_navhome",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_navhome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_navfile",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_navfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_navshield",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_navshield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\medsecure\\medsecure-ui.tsx",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "_tgt": "medsecure_medsecure_ui_navperson",
+      "source": "src_components_case_studies_medsecure_medsecure_ui_tsx",
+      "target": "medsecure_medsecure_ui_navperson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\content.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_nexus_banking_content_tsx",
+      "_tgt": "nexus_banking_content_nexusbankingpage",
+      "source": "src_components_case_studies_nexus_banking_content_tsx",
+      "target": "nexus_banking_content_nexusbankingpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\hero.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_nexus_banking_hero_tsx",
+      "_tgt": "nexus_banking_hero_handlemousemove",
+      "source": "src_components_case_studies_nexus_banking_hero_tsx",
+      "target": "nexus_banking_hero_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\nexus-ui.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_nexus_banking_nexus_ui_tsx",
+      "_tgt": "nexus_banking_nexus_ui_browserframe",
+      "source": "src_components_case_studies_nexus_banking_nexus_ui_tsx",
+      "target": "nexus_banking_nexus_ui_browserframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\nexus-ui.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_nexus_banking_nexus_ui_tsx",
+      "_tgt": "nexus_banking_nexus_ui_callout",
+      "source": "src_components_case_studies_nexus_banking_nexus_ui_tsx",
+      "target": "nexus_banking_nexus_ui_callout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\results.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_nexus_banking_results_tsx",
+      "_tgt": "nexus_banking_results_results",
+      "source": "src_components_case_studies_nexus_banking_results_tsx",
+      "target": "nexus_banking_results_results",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\nexus-banking\\setup.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_nexus_banking_setup_tsx",
+      "_tgt": "nexus_banking_setup_setup",
+      "source": "src_components_case_studies_nexus_banking_setup_tsx",
+      "target": "nexus_banking_setup_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\orbit\\content.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_orbit_content_tsx",
+      "_tgt": "orbit_content_orbitpage",
+      "source": "src_components_case_studies_orbit_content_tsx",
+      "target": "orbit_content_orbitpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\bento-impact.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_bento_impact_tsx",
+      "_tgt": "simplifai_bento_impact_bentocard",
+      "source": "src_components_case_studies_simplifai_bento_impact_tsx",
+      "target": "simplifai_bento_impact_bentocard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\content.tsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_content_tsx",
+      "_tgt": "simplifai_content_handlemousemove",
+      "source": "src_components_case_studies_simplifai_content_tsx",
+      "target": "simplifai_content_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\design-artifacts.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_design_artifacts_tsx",
+      "_tgt": "simplifai_design_artifacts_designartifacts",
+      "source": "src_components_case_studies_simplifai_design_artifacts_tsx",
+      "target": "simplifai_design_artifacts_designartifacts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "_tgt": "simplifai_flow_preview_nodepos",
+      "source": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "target": "simplifai_flow_preview_nodepos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "_tgt": "simplifai_flow_preview_centerof",
+      "source": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "target": "simplifai_flow_preview_centerof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L105",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "_tgt": "simplifai_flow_preview_getnode",
+      "source": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "target": "simplifai_flow_preview_getnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L179",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "_tgt": "simplifai_flow_preview_cn",
+      "source": "src_components_case_studies_simplifai_flow_preview_tsx",
+      "target": "simplifai_flow_preview_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\flow-preview.tsx",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_src": "simplifai_flow_preview_centerof",
+      "_tgt": "simplifai_flow_preview_nodepos",
+      "source": "simplifai_flow_preview_nodepos",
+      "target": "simplifai_flow_preview_centerof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\hero.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_hero_tsx",
+      "_tgt": "simplifai_hero_handlemousemove",
+      "source": "src_components_case_studies_simplifai_hero_tsx",
+      "target": "simplifai_hero_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\ia-tree.tsx",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_ia_tree_tsx",
+      "_tgt": "simplifai_ia_tree_toggle",
+      "source": "src_components_case_studies_simplifai_ia_tree_tsx",
+      "target": "simplifai_ia_tree_toggle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai\\simplifai-ui.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_simplifai_ui_tsx",
+      "_tgt": "simplifai_simplifai_ui_browserframe",
+      "source": "src_components_case_studies_simplifai_simplifai_ui_tsx",
+      "target": "simplifai_simplifai_ui_browserframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\atomic-explorer.tsx",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_design_system_atomic_explorer_tsx",
+      "_tgt": "simplifai_design_system_atomic_explorer_moleculepreview",
+      "source": "src_components_case_studies_simplifai_design_system_atomic_explorer_tsx",
+      "target": "simplifai_design_system_atomic_explorer_moleculepreview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\content.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_design_system_content_tsx",
+      "_tgt": "simplifai_design_system_content_simplifaidesignsystempage",
+      "source": "src_components_case_studies_simplifai_design_system_content_tsx",
+      "target": "simplifai_design_system_content_simplifaidesignsystempage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\hero.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_design_system_hero_tsx",
+      "_tgt": "simplifai_design_system_hero_hero",
+      "source": "src_components_case_studies_simplifai_design_system_hero_tsx",
+      "target": "simplifai_design_system_hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\case-studies\\simplifai-design-system\\system-governance.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_src": "src_components_case_studies_simplifai_design_system_system_governance_tsx",
+      "_tgt": "simplifai_design_system_system_governance_metriccard",
+      "source": "src_components_case_studies_simplifai_design_system_system_governance_tsx",
+      "target": "simplifai_design_system_system_governance_metriccard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\component-lab.tsx",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_src": "src_components_home_component_lab_tsx",
+      "_tgt": "home_component_lab_highlightcode",
+      "source": "src_components_home_component_lab_tsx",
+      "target": "home_component_lab_highlightcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\component-lab.tsx",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_src": "src_components_home_component_lab_tsx",
+      "_tgt": "home_component_lab_escapeline",
+      "source": "src_components_home_component_lab_tsx",
+      "target": "home_component_lab_escapeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\contact.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "src_components_home_contact_tsx",
+      "_tgt": "home_contact_handlecopy",
+      "source": "src_components_home_contact_tsx",
+      "target": "home_contact_handlecopy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\experience.tsx",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "src_components_home_experience_tsx",
+      "_tgt": "home_experience_experiencelistcard",
+      "source": "src_components_home_experience_tsx",
+      "target": "home_experience_experiencelistcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "src_components_home_hero_tsx",
+      "_tgt": "home_hero_rolematcher",
+      "source": "src_components_home_hero_tsx",
+      "target": "home_hero_rolematcher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L202",
+      "weight": 1.0,
+      "_src": "src_components_home_hero_tsx",
+      "_tgt": "home_hero_cn",
+      "source": "src_components_home_hero_tsx",
+      "target": "home_hero_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\hero.tsx",
+      "source_location": "L227",
+      "weight": 1.0,
+      "_src": "src_components_home_hero_tsx",
+      "_tgt": "home_hero_handlemousemove",
+      "source": "src_components_home_hero_tsx",
+      "target": "home_hero_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\payment-card.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "src_components_home_payment_card_tsx",
+      "_tgt": "home_payment_card_handlepay",
+      "source": "src_components_home_payment_card_tsx",
+      "target": "home_payment_card_handlepay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\payment-card.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "src_components_home_payment_card_tsx",
+      "_tgt": "home_payment_card_reset",
+      "source": "src_components_home_payment_card_tsx",
+      "target": "home_payment_card_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\selected-work.tsx",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_src": "src_components_home_selected_work_tsx",
+      "_tgt": "home_selected_work_workcard",
+      "source": "src_components_home_selected_work_tsx",
+      "target": "home_selected_work_workcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\selected-work.tsx",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_src": "src_components_home_selected_work_tsx",
+      "_tgt": "home_selected_work_cn",
+      "source": "src_components_home_selected_work_tsx",
+      "target": "home_selected_work_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\skills.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "src_components_home_skills_tsx",
+      "_tgt": "home_skills_skillcard",
+      "source": "src_components_home_skills_tsx",
+      "target": "home_skills_skillcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\skills.tsx",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "src_components_home_skills_tsx",
+      "_tgt": "home_skills_cn",
+      "source": "src_components_home_skills_tsx",
+      "target": "home_skills_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "src_components_home_smart_button_tsx",
+      "_tgt": "home_smart_button_handlemousemove",
+      "source": "src_components_home_smart_button_tsx",
+      "target": "home_smart_button_handlemousemove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "src_components_home_smart_button_tsx",
+      "_tgt": "home_smart_button_handlemouseleave",
+      "source": "src_components_home_smart_button_tsx",
+      "target": "home_smart_button_handlemouseleave",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "src_components_home_smart_button_tsx",
+      "_tgt": "home_smart_button_handleclick",
+      "source": "src_components_home_smart_button_tsx",
+      "target": "home_smart_button_handleclick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\smart-button.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "src_components_home_smart_button_tsx",
+      "_tgt": "home_smart_button_handlereset",
+      "source": "src_components_home_smart_button_tsx",
+      "target": "home_smart_button_handlereset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\home\\work.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "src_components_home_work_tsx",
+      "_tgt": "home_work_work",
+      "source": "src_components_home_work_tsx",
+      "target": "home_work_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\footer.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "src_components_layout_footer_tsx",
+      "_tgt": "layout_footer_footer",
+      "source": "src_components_layout_footer_tsx",
+      "target": "layout_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\header.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "src_components_layout_header_tsx",
+      "_tgt": "layout_header_handlescroll",
+      "source": "src_components_layout_header_tsx",
+      "target": "layout_header_handlescroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\motion-section.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "src_components_layout_motion_section_tsx",
+      "_tgt": "layout_motion_section_motionsection",
+      "source": "src_components_layout_motion_section_tsx",
+      "target": "layout_motion_section_motionsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\layout\\smooth-scroll.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "src_components_layout_smooth_scroll_tsx",
+      "_tgt": "layout_smooth_scroll_smoothscroll",
+      "source": "src_components_layout_smooth_scroll_tsx",
+      "target": "layout_smooth_scroll_smoothscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\resume\\ExperienceBlock.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "src_components_resume_experienceblock_tsx",
+      "_tgt": "resume_experienceblock_experienceblock",
+      "source": "src_components_resume_experienceblock_tsx",
+      "target": "resume_experienceblock_experienceblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\resume\\ResumePage.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "src_components_resume_resumepage_tsx",
+      "_tgt": "resume_resumepage_fadeupprops",
+      "source": "src_components_resume_resumepage_tsx",
+      "target": "resume_resumepage_fadeupprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\resume\\ResumePage.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "src_components_resume_resumepage_tsx",
+      "_tgt": "resume_resumepage_sectionlabel",
+      "source": "src_components_resume_resumepage_tsx",
+      "target": "resume_resumepage_sectionlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\resume\\SkillList.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "src_components_resume_skilllist_tsx",
+      "_tgt": "resume_skilllist_skilllist",
+      "source": "src_components_resume_skilllist_tsx",
+      "target": "resume_skilllist_skilllist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\resume\\StickyDownload.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_src": "src_components_resume_stickydownload_tsx",
+      "_tgt": "resume_stickydownload_stickydownload",
+      "source": "src_components_resume_stickydownload_tsx",
+      "target": "resume_stickydownload_stickydownload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\contact-sheet.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "src_components_ui_contact_sheet_tsx",
+      "_tgt": "ui_contact_sheet_handlekeydown",
+      "source": "src_components_ui_contact_sheet_tsx",
+      "target": "ui_contact_sheet_handlekeydown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\mockup-frame.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "src_components_ui_mockup_frame_tsx",
+      "_tgt": "ui_mockup_frame_mockupframe",
+      "source": "src_components_ui_mockup_frame_tsx",
+      "target": "ui_mockup_frame_mockupframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\mockup-frame.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "src_components_ui_mockup_frame_tsx",
+      "_tgt": "ui_mockup_frame_cn",
+      "source": "src_components_ui_mockup_frame_tsx",
+      "target": "ui_mockup_frame_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\components\\ui\\text-reveal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "src_components_ui_text_reveal_tsx",
+      "_tgt": "ui_text_reveal_textreveal",
+      "source": "src_components_ui_text_reveal_tsx",
+      "target": "ui_text_reveal_textreveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\lib\\utils.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "src_lib_utils_ts",
+      "_tgt": "lib_utils_cn",
+      "source": "src_lib_utils_ts",
+      "target": "lib_utils_cn",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

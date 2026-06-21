@@ -1,0 +1,52 @@
+[     819ms] Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <div className="container ...">
+      <div>
+      <motion.div initial={{opacity:0,y:30}} animate={{opacity:0,y:30}} transition={{type:"spring", ...}} ...>
+        <div className="bg-white/4..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+          <div>
+          <div className="grid grid-...">
+            <div>
+            <div className="min-h-[300...">
+              <div>
+              <div className="p-4 overfl...">
+                <AnimatePresence mode="wait">
+                  <PresenceChild isPresent={true} initial={undefined} custom={undefined} presenceAffectsLayout={true} ...>
+                    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                        <motion.pre initial={{opacity:0,x:20}} animate={{opacity:1,x:0}} exit={{opacity:0,x:-20}} ...>
+                          <pre className="text-[13px..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div className="flex hover...">
+                              <span>
+                              <span
+                                dangerouslySetInnerHTML={{
++                                 __html: "<span class=<span class=\"text-orange-300\">\"text-purple-400\"</span>>func..."
+-                                 __html: "<span class=\"&lt;span\">\"text-purple-400\"</span>&gt;function"
+                                }}
+                                className="text-zinc-300"
+                              >
+-                             {" SmartButton() {"}
+                            ...
+
+    at throwOnHydrationMismatch (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:3348:56)
+    at popHydrationState (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:3433:13)
+    at completeWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:6934:25)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:965:74)
+    at completeUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:9627:23)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:9564:28)
+    at workLoopConcurrentByScheduler (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:9558:58)
+    at renderRootConcurrent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:9541:71)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:9068:150)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_a0e4c7b4._.js:2647:64)

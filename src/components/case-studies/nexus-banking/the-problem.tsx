@@ -81,7 +81,7 @@ export function TheProblem() {
                             Grocery spending cash and a fluctuating crypto portfolio render at the same visual weight. Users who open the app to check their balance are interrupted by market tickers. The IA conflates two fundamentally different user intents — daily liquidity management and wealth generation — into a single undifferentiated surface.
                         </p>
                         <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-sm italic text-zinc-500">
-                            The fix isn't removing features — it's routing users to the right context before showing them anything. Intent-first navigation over feature-first navigation.
+                            The fix was never about removing features. It was routing users to the right context before showing them anything: intent-first navigation instead of feature-first.
                         </div>
                     </motion.div>
                 </div>

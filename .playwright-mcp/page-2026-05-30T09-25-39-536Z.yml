@@ -1,0 +1,205 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - navigation "Primary" [ref=e2]:
+      - link "Aditya Chinchakar — home" [ref=e3]:
+        - /url: "#top"
+        - text: AC
+      - button "Open menu" [ref=e4]
+  - main [ref=e8]:
+    - region "I d e s i g n p r o d u c t s t h a t t h i n k ." [ref=e9]:
+      - generic:
+        - generic: DESIGNER
+        - generic: BUILDER
+        - generic: FOUNDER
+      - generic [ref=e10]:
+        - paragraph [ref=e11]: Aditya Chinchakar · Pune, India
+        - heading "I d e s i g n p r o d u c t s t h a t t h i n k ." [level=1] [ref=e12]:
+          - generic [ref=e13]: I
+          - generic [ref=e15]: d
+          - generic [ref=e16]: e
+          - generic [ref=e17]: s
+          - generic [ref=e18]: i
+          - generic [ref=e19]: g
+          - generic [ref=e20]: "n"
+          - generic [ref=e22]: p
+          - generic [ref=e23]: r
+          - generic [ref=e24]: o
+          - generic [ref=e25]: d
+          - generic [ref=e26]: u
+          - generic [ref=e27]: c
+          - generic [ref=e28]: t
+          - generic [ref=e29]: s
+          - generic [ref=e31]: t
+          - generic [ref=e32]: h
+          - generic [ref=e33]: a
+          - generic [ref=e34]: t
+          - emphasis [ref=e36]:
+            - generic [ref=e37]: t
+          - emphasis [ref=e38]:
+            - generic [ref=e39]: h
+          - emphasis [ref=e40]:
+            - generic [ref=e41]: i
+          - emphasis [ref=e42]:
+            - generic [ref=e43]: "n"
+          - emphasis [ref=e44]:
+            - generic [ref=e45]: k
+          - emphasis [ref=e46]:
+            - generic [ref=e47]: .
+        - paragraph [ref=e48]: Senior Product Designer · AI Tools · Design Systems · Accessibility
+        - generic [ref=e49]:
+          - link "See My Work" [ref=e50]:
+            - /url: "#work"
+          - link "View Aulys →" [ref=e51]:
+            - /url: "#aulys"
+      - generic [ref=e52]: Scroll
+    - generic [ref=e54]:
+      - generic [ref=e55]: Infosys ✦
+      - generic [ref=e56]: Simplifai ✦
+      - generic [ref=e57]: Imagine Learning ✦
+      - generic [ref=e58]: Keywordio ✦
+      - generic [ref=e59]: Aulys ✦
+      - generic [ref=e60]: WCAG 2.2 ✦
+      - generic [ref=e61]: Design Systems ✦
+      - generic [ref=e62]: AI UX ✦
+      - generic [ref=e63]: Infosys ✦
+      - generic [ref=e64]: Simplifai ✦
+      - generic [ref=e65]: Imagine Learning ✦
+      - generic [ref=e66]: Keywordio ✦
+      - generic [ref=e67]: Aulys ✦
+      - generic [ref=e68]: WCAG 2.2 ✦
+      - generic [ref=e69]: Design Systems ✦
+      - generic [ref=e70]: AI UX ✦
+    - 'region "Six products, one through-line: systems." [ref=e71]':
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - paragraph [ref=e75]: Selected Work
+            - 'heading "Six products, one through-line: systems." [level=2] [ref=e76]':
+              - text: Six products,
+              - text: "one through-line: systems."
+          - paragraph [ref=e77]: Case studies spanning AI tooling, enterprise SaaS, healthtech, and design infrastructure.
+        - generic [ref=e78]:
+          - article [ref=e79]:
+            - generic [ref=e81]: "01"
+            - heading "Aulys" [level=3] [ref=e82]
+            - paragraph [ref=e83]: 42% faster dev cycle · AI accessibility plugin + SaaS
+            - generic [ref=e84]: Founding Designer
+            - link "Aulys case study" [ref=e85]:
+              - /url: "#aulys"
+          - article [ref=e86]:
+            - generic [ref=e88]: "02"
+            - heading "Simplifai Workflow" [level=3] [ref=e89]
+            - paragraph [ref=e90]: 73% adoption increase
+            - generic [ref=e91]: Product Designer
+            - link "Simplifai Workflow case study" [ref=e92]:
+              - /url: "#work"
+          - article [ref=e93]:
+            - generic [ref=e95]: "03"
+            - heading "Simplifai Design System" [level=3] [ref=e96]
+            - paragraph [ref=e97]: Single source of truth, 40+ components
+            - generic [ref=e98]: Design Systems Lead
+            - link "Simplifai Design System case study" [ref=e99]:
+              - /url: "#work"
+          - article [ref=e100]:
+            - generic [ref=e102]: "04"
+            - heading "MedSecure" [level=3] [ref=e103]
+            - paragraph [ref=e104]: 70% faster assessments
+            - generic [ref=e105]: Product Designer
+            - link "MedSecure case study" [ref=e106]:
+              - /url: "#work"
+          - article [ref=e107]:
+            - generic [ref=e109]: "05"
+            - heading "Nexus Fintech" [level=3] [ref=e110]
+            - paragraph [ref=e111]: Banking concept · strategy & vision
+            - generic [ref=e112]: Lead Product Designer
+            - link "Nexus Fintech case study" [ref=e113]:
+              - /url: "#work"
+          - article [ref=e114]:
+            - generic [ref=e116]: "06"
+            - heading "Infosys × Imagine Learning" [level=3] [ref=e117]
+            - paragraph [ref=e118]: TalentBridge · 4-persona EdTech platform
+            - generic [ref=e119]: Senior Designer
+            - link "Infosys and Imagine Learning case study" [ref=e120]:
+              - /url: "#work"
+    - region "I don't just ship screens. I build the infrastructure that makes the next ten screens faster." [ref=e121]:
+      - generic [ref=e122]:
+        - blockquote [ref=e123]:
+          - text: I don't just ship screens. I build the
+          - emphasis [ref=e124]: infrastructure
+          - text: that makes the next ten screens faster.
+        - generic [ref=e125]:
+          - paragraph [ref=e126]:
+            - strong [ref=e127]: 9+ years
+            - text: across Infosys, Simplifai, and Keywordio — designing enterprise SaaS, design systems, and accessible software for teams that ship at scale.
+          - paragraph [ref=e128]:
+            - text: I built
+            - strong [ref=e129]: Aulys
+            - text: "solo: an AI-powered accessibility Figma plugin and SaaS with"
+            - strong [ref=e130]: 30+ beta users
+            - text: ", directing the engineering myself. Based in Pune, open to UAE relocation from August 2026."
+          - generic [ref=e131]:
+            - generic [ref=e132]: Product Design
+            - generic [ref=e133]: Design Systems
+            - generic [ref=e134]: AI / UX
+            - generic [ref=e135]: WCAG 2.2 AA
+            - generic [ref=e136]: Figma
+            - generic [ref=e137]: Design Tokens
+            - generic [ref=e138]: Prototyping
+            - generic [ref=e139]: Research
+            - generic [ref=e140]: Front-end
+    - region "Impact metrics" [ref=e141]:
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]: 0%
+          - paragraph [ref=e145]: Faster dev cycle
+        - generic [ref=e146]:
+          - generic [ref=e147]: 0%
+          - paragraph [ref=e148]: Adoption increase
+        - generic [ref=e149]:
+          - generic [ref=e150]: 0%
+          - paragraph [ref=e151]: Faster assessments
+        - generic [ref=e152]:
+          - generic [ref=e153]: 0+
+          - paragraph [ref=e154]: Aulys beta users
+    - region "Accessibility that fixes itself." [ref=e155]:
+      - generic [ref=e157]:
+        - paragraph [ref=e158]: Aulys · The flagship
+        - heading "Accessibility that fixes itself." [level=2] [ref=e159]:
+          - text: Accessibility that
+          - emphasis [ref=e160]: fixes itself.
+        - paragraph [ref=e161]: Most a11y tools tell you what's broken. Aulys uses AI to understand intent and apply the fix — directly in Figma, then continuously in production via SaaS. Built solo, validated with 30+ beta users.
+        - table "Aulys compared to Stark, Able, and Axe" [ref=e162]:
+          - columnheader "Aulys" [ref=e163]
+          - columnheader "Stark" [ref=e164]
+          - columnheader "Axe" [ref=e165]
+          - cell "AI-directed fixes (not just flags)" [ref=e166]
+          - cell "Yes" [ref=e167]
+          - cell "—" [ref=e168]
+          - cell "—" [ref=e169]
+          - cell "Figma plugin + production SaaS" [ref=e170]
+          - cell "Both" [ref=e171]
+          - cell "Plugin" [ref=e172]
+          - cell "CI/dev" [ref=e173]
+          - cell "Full WCAG 2.2 coverage" [ref=e174]
+          - cell "Yes" [ref=e175]
+          - cell "Partial" [ref=e176]
+          - cell "Partial" [ref=e177]
+        - link "Join the beta →" [ref=e178]:
+          - /url: mailto:adichinchakar@gmail.com?subject=Aulys%20beta%20access
+    - region "Have a product worth building well?" [ref=e179]:
+      - generic [ref=e180]:
+        - heading "Have a product worth building well?" [level=2] [ref=e181]
+        - link "adichinchakar@gmail.com" [ref=e182]:
+          - /url: mailto:adichinchakar@gmail.com
+        - generic [ref=e183]:
+          - link "LinkedIn" [ref=e184]:
+            - /url: https://www.linkedin.com/in/adityachinchakar
+            - img [ref=e185]
+          - link "GitHub" [ref=e187]:
+            - /url: https://github.com/Adichinchakar
+            - img [ref=e188]
+        - paragraph [ref=e190]: Open to UAE relocation · Available Aug 2026
+  - contentinfo [ref=e192]:
+    - paragraph [ref=e194]:
+      - generic [ref=e195]: AC
+      - text: Designed & built by Aditya Chinchakar · 2026

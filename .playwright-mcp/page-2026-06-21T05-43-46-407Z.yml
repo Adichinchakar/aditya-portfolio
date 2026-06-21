@@ -1,0 +1,579 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "AdityaChinchakar" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e7]:
+        - link "Live Plugin" [ref=e8] [cursor=pointer]:
+          - /url: https://www.figma.com/community/plugin/1571488947872228693
+          - generic [ref=e12]: Live Plugin
+          - img [ref=e13]
+        - link "Work" [ref=e15] [cursor=pointer]:
+          - /url: /work
+        - link "Now" [ref=e16] [cursor=pointer]:
+          - /url: /now
+        - link "Writing" [ref=e17] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e18] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e19]
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - button "Available August 2026 · Open globally" [ref=e28] [cursor=pointer]:
+              - generic [ref=e32]: Available August 2026 · Open globally
+              - img [ref=e33]
+            - heading "Most designers hand off. I ship the whole thing ." [level=1] [ref=e35]:
+              - text: Most designers hand off.
+              - text: I ship
+              - generic [ref=e36]:
+                - text: the whole thing
+                - img [ref=e37]
+              - text: .
+            - paragraph [ref=e39]: I take AI products from idea to shipped — the design, the AI-directed build, and the real users. Founder of Aulys. Previously Infosys.
+            - generic [ref=e40]:
+              - generic [ref=e41]: WCAG 2.2 into Figma
+              - generic [ref=e43]: 70% faster grading
+              - generic [ref=e45]: 5 teams, one system
+            - generic [ref=e46]:
+              - button "Let's Talk" [ref=e48]:
+                - text: Let's Talk
+                - img [ref=e49]
+              - link "View Resume" [ref=e52] [cursor=pointer]:
+                - /url: /resume
+            - paragraph [ref=e53]: 9+ years · 10+ products shipped · 0→1 product builder
+          - 'generic "Live demo: Aulys scanning a design for accessibility issues" [ref=e55]':
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e64]: Aulys
+                  - generic [ref=e65]: WCAG 2.2 AA
+                - generic [ref=e66]: scanning…
+              - generic [ref=e69]:
+                - generic [ref=e70]:
+                  - generic [ref=e71]:
+                    - img [ref=e73]
+                    - generic [ref=e75]: Color contrast
+                  - generic [ref=e76]: AA pass
+                - generic [ref=e77]:
+                  - generic [ref=e78]:
+                    - generic [ref=e79]:
+                      - img [ref=e81]
+                      - img [ref=e85]
+                    - generic [ref=e87]: Button · “Continue”
+                  - generic [ref=e88]: "2.4 : 1"
+                - generic [ref=e89]:
+                  - generic [ref=e90]:
+                    - generic [ref=e91]:
+                      - img [ref=e93]
+                      - img [ref=e97]
+                    - generic [ref=e99]: Hero image
+                  - generic [ref=e100]: no alt text
+                - generic [ref=e101]:
+                  - generic [ref=e102]:
+                    - img [ref=e104]
+                    - generic [ref=e106]: Touch targets
+                  - generic [ref=e107]: 44px ✓
+              - generic [ref=e108]:
+                - generic [ref=e109]: 2 issues found
+                - generic [ref=e110]:
+                  - text: One-click fix
+                  - img [ref=e111]
+        - generic [ref=e116]:
+          - generic [ref=e122]: Open to Roles
+          - generic [ref=e123]:
+            - button "Founding Designer" [pressed] [ref=e124]:
+              - img [ref=e125]
+              - text: Founding Designer
+            - button "Lead Designer" [ref=e127]:
+              - img [ref=e128]
+              - text: Lead Designer
+            - button "Staff Designer" [ref=e132]:
+              - img [ref=e133]
+              - text: Staff Designer
+            - button "Head of Design" [ref=e136]:
+              - img [ref=e137]
+              - text: Head of Design
+          - generic [ref=e139]:
+            - img [ref=e141]
+            - paragraph [ref=e143]: Built Aulys 0→1. Solo designer, zero funding.
+            - paragraph [ref=e144]: I took Aulys from idea to 30 live users — designed the product, directed the AI-assisted build, shipped the Figma plugin, ran the beta. 6 months. No team. No funding. That kind of ownership shapes how I work inside a team too.
+            - generic [ref=e145]:
+              - generic [ref=e146]: 0→1 Product
+              - generic [ref=e147]: Figma Plugin API
+              - generic [ref=e148]: AI-Directed Build
+            - link "Aulys → 500+ Frames Scanned Under 10 Seconds" [ref=e149] [cursor=pointer]:
+              - /url: /work/aulys
+              - text: Aulys → 500+ Frames Scanned Under 10 Seconds
+              - img [ref=e150]
+        - generic [ref=e154]:
+          - generic [ref=e155]: Design Systems Architecture
+          - generic [ref=e157]: Product Strategy
+          - generic [ref=e159]: 0→1 Product Building
+          - generic [ref=e161]: Design Leadership
+          - generic [ref=e163]: AI Product Design
+          - generic [ref=e165]: User Research & Strategy
+          - generic [ref=e167]: Stakeholder Management
+          - generic [ref=e169]: WCAG 2.2 Accessibility
+          - generic [ref=e171]: React + Next.js
+          - generic [ref=e173]: GenAI Workflows
+          - generic [ref=e175]: Design Operations
+          - generic [ref=e177]: Roadmapping
+          - generic [ref=e179]: Cross-functional Teams
+          - generic [ref=e181]: Figma Expert
+          - generic [ref=e183]: Systems Thinking
+          - generic [ref=e185]: Rapid Prototyping
+          - generic [ref=e187]: Design Systems Architecture
+          - generic [ref=e189]: Product Strategy
+          - generic [ref=e191]: 0→1 Product Building
+          - generic [ref=e193]: Design Leadership
+          - generic [ref=e195]: AI Product Design
+          - generic [ref=e197]: User Research & Strategy
+          - generic [ref=e199]: Stakeholder Management
+          - generic [ref=e201]: WCAG 2.2 Accessibility
+          - generic [ref=e203]: React + Next.js
+          - generic [ref=e205]: GenAI Workflows
+          - generic [ref=e207]: Design Operations
+          - generic [ref=e209]: Roadmapping
+          - generic [ref=e211]: Cross-functional Teams
+          - generic [ref=e213]: Figma Expert
+          - generic [ref=e215]: Systems Thinking
+          - generic [ref=e217]: Rapid Prototyping
+          - generic [ref=e219]: Design Systems Architecture
+          - generic [ref=e221]: Product Strategy
+          - generic [ref=e223]: 0→1 Product Building
+          - generic [ref=e225]: Design Leadership
+          - generic [ref=e227]: AI Product Design
+          - generic [ref=e229]: User Research & Strategy
+          - generic [ref=e231]: Stakeholder Management
+          - generic [ref=e233]: WCAG 2.2 Accessibility
+          - generic [ref=e235]: React + Next.js
+          - generic [ref=e237]: GenAI Workflows
+          - generic [ref=e239]: Design Operations
+          - generic [ref=e241]: Roadmapping
+          - generic [ref=e243]: Cross-functional Teams
+          - generic [ref=e245]: Figma Expert
+          - generic [ref=e247]: Systems Thinking
+          - generic [ref=e249]: Rapid Prototyping
+          - generic [ref=e251]: Design Systems Architecture
+          - generic [ref=e253]: Product Strategy
+          - generic [ref=e255]: 0→1 Product Building
+          - generic [ref=e257]: Design Leadership
+          - generic [ref=e259]: AI Product Design
+          - generic [ref=e261]: User Research & Strategy
+          - generic [ref=e263]: Stakeholder Management
+          - generic [ref=e265]: WCAG 2.2 Accessibility
+          - generic [ref=e267]: React + Next.js
+          - generic [ref=e269]: GenAI Workflows
+          - generic [ref=e271]: Design Operations
+          - generic [ref=e273]: Roadmapping
+          - generic [ref=e275]: Cross-functional Teams
+          - generic [ref=e277]: Figma Expert
+          - generic [ref=e279]: Systems Thinking
+          - generic [ref=e281]: Rapid Prototyping
+      - generic [ref=e284]:
+        - generic [ref=e285]:
+          - heading "Case Studies" [level=2] [ref=e286]:
+            - generic [ref=e287]: Case Studies
+            - generic [ref=e288]:
+              - generic [ref=e290]: Case
+              - generic [ref=e292]: Studies
+          - generic [ref=e293]: (04)
+        - generic [ref=e294]:
+          - link [ref=e296] [cursor=pointer]:
+            - /url: /work/aulys
+            - article [ref=e297]:
+              - generic [ref=e298]:
+                - generic [ref=e299]:
+                  - generic [ref=e300]: "01"
+                  - img [ref=e302]
+                - generic [ref=e305]:
+                  - paragraph [ref=e306]: AI / ML
+                  - heading "Aulys" [level=2] [ref=e307]
+                  - paragraph [ref=e308]: I found out 96% of the web fails accessibility — then built a Figma plugin that scans 500 layers in under 10 seconds and tells you exactly what to fix.
+                  - generic [ref=e309]:
+                    - generic [ref=e310]:
+                      - generic [ref=e311]: Role
+                      - generic [ref=e312]: Design Engineer
+                    - generic [ref=e313]:
+                      - generic [ref=e314]: Impact
+                      - generic [ref=e315]: WCAG 2.2 AAA Compliance
+                - generic [ref=e316]:
+                  - generic [ref=e317]: AI Agent
+                  - generic [ref=e318]: Figma Plugin
+                  - generic [ref=e319]: Typescript
+              - generic [ref=e326]:
+                - img [ref=e333]
+                - generic [ref=e337]: AULYS
+          - link [ref=e339] [cursor=pointer]:
+            - /url: /work/aulys-code
+            - article [ref=e340]:
+              - generic [ref=e341]:
+                - generic [ref=e342]:
+                  - generic [ref=e343]: "02"
+                  - img [ref=e345]
+                - generic [ref=e348]:
+                  - paragraph [ref=e349]: AI / ML
+                  - heading "Aulys Code" [level=2] [ref=e350]
+                  - paragraph [ref=e351]: Accessibility audits live too late — after code ships. So I built a VS Code extension that flags WCAG violations inline as you type, explains them in plain English, and fixes them in one click.
+                  - generic [ref=e352]:
+                    - generic [ref=e353]:
+                      - generic [ref=e354]: Role
+                      - generic [ref=e355]: Design Engineer
+                    - generic [ref=e356]:
+                      - generic [ref=e357]: Impact
+                      - generic [ref=e358]: Real-time WCAG in the IDE
+                - generic [ref=e359]:
+                  - generic [ref=e360]: VS Code Extension
+                  - generic [ref=e361]: AI Agent
+                  - generic [ref=e362]: Typescript
+              - generic [ref=e367]:
+                - generic [ref=e373]: Dashboard.tsx
+                - generic [ref=e374]:
+                  - generic [ref=e375]:
+                    - generic [ref=e376]: "1"
+                    - generic [ref=e377]: return (
+                  - generic [ref=e378]:
+                    - generic [ref=e379]: "2"
+                    - generic [ref=e380]: <img src="/logo.png" />
+                  - generic [ref=e382]:
+                    - generic [ref=e383]: "3"
+                    - generic [ref=e384]: )
+                  - generic [ref=e385]:
+                    - generic [ref=e386]: WCAG 1.1.1 · Missing alt text
+                    - generic [ref=e387]:
+                      - img [ref=e388]
+                      - text: Quick Fix
+          - link [ref=e392] [cursor=pointer]:
+            - /url: /work/simplifai
+            - article [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - generic [ref=e396]: "03"
+                  - img [ref=e398]
+                - generic [ref=e401]:
+                  - paragraph [ref=e402]: Enterprise
+                  - heading "Simplifai Workflow Engine" [level=2] [ref=e403]
+                  - paragraph [ref=e404]: Enterprise teams were building AI workflows in spreadsheets. I redesigned the entire product experience — adoption went from stuck to 73% in one quarter.
+                  - generic [ref=e405]:
+                    - generic [ref=e406]:
+                      - generic [ref=e407]: Role
+                      - generic [ref=e408]: Lead Product Designer
+                    - generic [ref=e409]:
+                      - generic [ref=e410]: Impact
+                      - generic [ref=e411]: 73% increase in completion rate
+                - generic [ref=e412]:
+                  - generic [ref=e413]: Node Builder
+                  - generic [ref=e414]: UX Strategy
+                  - generic [ref=e415]: Enterprise
+              - img [ref=e421]
+          - link [ref=e436] [cursor=pointer]:
+            - /url: /work/infosys
+            - article [ref=e437]:
+              - generic [ref=e438]:
+                - generic [ref=e439]:
+                  - generic [ref=e440]: "04"
+                  - img [ref=e442]
+                - generic [ref=e445]:
+                  - paragraph [ref=e446]: AI / ML
+                  - heading "Talentbridge" [level=2] [ref=e447]
+                  - paragraph [ref=e448]: Led the 0-1 design of an enterprise AI workbench. Built the component library from scratch while designing workflows for data scientists.
+                  - generic [ref=e449]:
+                    - generic [ref=e450]:
+                      - generic [ref=e451]: Role
+                      - generic [ref=e452]: Senior Product Designer
+                    - generic [ref=e453]:
+                      - generic [ref=e454]: Impact
+                      - generic [ref=e455]: Adopted by 500+ data scientists
+                - generic [ref=e456]:
+                  - generic [ref=e457]: Design System
+                  - generic [ref=e458]: AI Platform
+                  - generic [ref=e459]: B2B
+        - link "View All Work" [ref=e480] [cursor=pointer]:
+          - /url: /work
+          - generic [ref=e481]: View All Work
+          - img [ref=e483]
+      - generic [ref=e487]:
+        - generic [ref=e489]:
+          - img [ref=e490]
+          - text: Philosophy
+        - generic [ref=e492]:
+          - generic [ref=e494]:
+            - heading "Why I Build." [level=2] [ref=e495]
+            - generic [ref=e496]:
+              - paragraph [ref=e497]:
+                - text: Most designers stop at handoff.
+                - generic [ref=e498]: I stay until it ships — writing code, running research, and making decisions no one else wants to make.
+              - paragraph [ref=e499]: I've taken three products from zero to live users — alone. Not because I had to, but because I wanted to know what it actually takes. That shapes every design decision I make in a team.
+              - generic [ref=e500]:
+                - button "Let's Talk" [ref=e501]:
+                  - text: Let's Talk
+                  - img [ref=e502]
+                - link "View Resume" [ref=e504] [cursor=pointer]:
+                  - /url: /resume
+                  - text: View Resume
+                  - img [ref=e505]
+          - generic [ref=e507]:
+            - generic [ref=e508]:
+              - generic [ref=e509]:
+                - generic [ref=e510]: 34%
+                - generic [ref=e511]: Projected Medical-Error Reduction
+                - generic [ref=e512]: MedSecure · concept projection
+              - generic [ref=e513]:
+                - generic [ref=e514]: 70%
+                - generic [ref=e515]: Faster Assessment Cycles
+                - generic [ref=e516]: GenAI EdTech · usability testing
+              - generic [ref=e517]:
+                - generic [ref=e518]: 73%
+                - generic [ref=e519]: User Adoption Increase
+                - generic [ref=e520]: Simplifai · product analytics
+              - generic [ref=e521]:
+                - generic [ref=e522]: $250K+
+                - generic [ref=e523]: ADA Litigation Risk Addressed
+                - generic [ref=e524]: Per client · DOJ consent decree baseline
+            - generic [ref=e525]:
+              - generic [ref=e526]: Currently
+              - generic [ref=e527]:
+                - generic [ref=e528]:
+                  - img [ref=e530]
+                  - generic [ref=e532]:
+                    - paragraph [ref=e533]: Building
+                    - link "Aulys — WCAG 2.2 Figma plugin ↗" [ref=e534] [cursor=pointer]:
+                      - /url: /work/aulys
+                - generic [ref=e535]:
+                  - img [ref=e537]
+                  - generic [ref=e539]:
+                    - paragraph [ref=e540]: Reading
+                    - paragraph [ref=e541]: The Alignment Problem — Brian Christian
+                - generic [ref=e542]:
+                  - img [ref=e544]
+                  - generic [ref=e546]:
+                    - paragraph [ref=e547]: Exploring
+                    - paragraph [ref=e548]: AI-native UX patterns & agent interfaces
+      - region "Client testimonials" [ref=e550]:
+        - generic [ref=e551]:
+          - generic [ref=e552]:
+            - img [ref=e553]
+            - text: Social Proof
+          - heading "What They Say About The Work" [level=2] [ref=e556]
+          - paragraph [ref=e557]: From CDO, PM, and delivery leads who shipped with me
+        - generic [ref=e559]:
+          - generic [ref=e560]:
+            - generic [ref=e561]:
+              - generic [ref=e562]: DL
+              - generic [ref=e563]:
+                - paragraph [ref=e564]: Senior Delivery Manager
+                - paragraph [ref=e565]: Delivery Leadership • Fortune 500 IT Services
+            - generic [ref=e566]:
+              - img [ref=e567]
+              - paragraph [ref=e570]: “Aditya doesn't just design; he solves business problems. His AI tooling work measurably cut the time our teams spent on assessment workflows.”
+          - generic [ref=e571]:
+            - generic [ref=e572]:
+              - generic [ref=e573]: CD
+              - generic [ref=e574]:
+                - paragraph [ref=e575]: Chief Digital Officer
+                - paragraph [ref=e576]: Product & Design • US K-12 EdTech
+            - generic [ref=e577]:
+              - img [ref=e578]
+              - paragraph [ref=e581]: “Aditya is a strong design contributor, advancing our design system, ensuring consistency, and bringing ideas to life. His extensive Figma expertise has helped the team upskill.”
+          - generic [ref=e582]:
+            - generic [ref=e583]:
+              - generic [ref=e584]: RK
+              - generic [ref=e585]:
+                - paragraph [ref=e586]: Rishikesh Kulkarni
+                - paragraph [ref=e587]: Product Manager • Simplifai
+            - generic [ref=e588]:
+              - img [ref=e589]
+              - paragraph [ref=e592]: “Aditya managed the end-to-end design for our Automation Product with precision and creativity. His contributions to the Design System were instrumental in enhancing consistency.”
+          - generic [ref=e593]:
+            - generic [ref=e594]:
+              - generic [ref=e595]: AB
+              - generic [ref=e596]:
+                - paragraph [ref=e597]: Anushka Bennur
+                - paragraph [ref=e598]: Product Designer • Simplifai
+            - generic [ref=e599]:
+              - img [ref=e600]
+              - paragraph [ref=e603]: “His UX skills are truly outstanding, with a deep understanding of user behaviour and a knack for crafting intuitive, seamless experiences. An invaluable asset to any team!”
+          - generic [ref=e604]:
+            - generic [ref=e605]:
+              - generic [ref=e606]: CL
+              - generic [ref=e607]:
+                - paragraph [ref=e608]: Campaign Lead
+                - paragraph [ref=e609]: Motion & Brand • Global Energy Major
+            - generic [ref=e610]:
+              - img [ref=e611]
+              - paragraph [ref=e614]: “His motion design work directly contributed to a measurable lift in customer inquiries and engagement.”
+          - generic [ref=e615]:
+            - generic [ref=e616]:
+              - generic [ref=e617]: DL
+              - generic [ref=e618]:
+                - paragraph [ref=e619]: Senior Delivery Manager
+                - paragraph [ref=e620]: Delivery Leadership • Fortune 500 IT Services
+            - generic [ref=e621]:
+              - img [ref=e622]
+              - paragraph [ref=e625]: “Aditya doesn't just design; he solves business problems. His AI tooling work measurably cut the time our teams spent on assessment workflows.”
+          - generic [ref=e626]:
+            - generic [ref=e627]:
+              - generic [ref=e628]: CD
+              - generic [ref=e629]:
+                - paragraph [ref=e630]: Chief Digital Officer
+                - paragraph [ref=e631]: Product & Design • US K-12 EdTech
+            - generic [ref=e632]:
+              - img [ref=e633]
+              - paragraph [ref=e636]: “Aditya is a strong design contributor, advancing our design system, ensuring consistency, and bringing ideas to life. His extensive Figma expertise has helped the team upskill.”
+          - generic [ref=e637]:
+            - generic [ref=e638]:
+              - generic [ref=e639]: RK
+              - generic [ref=e640]:
+                - paragraph [ref=e641]: Rishikesh Kulkarni
+                - paragraph [ref=e642]: Product Manager • Simplifai
+            - generic [ref=e643]:
+              - img [ref=e644]
+              - paragraph [ref=e647]: “Aditya managed the end-to-end design for our Automation Product with precision and creativity. His contributions to the Design System were instrumental in enhancing consistency.”
+          - generic [ref=e648]:
+            - generic [ref=e649]:
+              - generic [ref=e650]: AB
+              - generic [ref=e651]:
+                - paragraph [ref=e652]: Anushka Bennur
+                - paragraph [ref=e653]: Product Designer • Simplifai
+            - generic [ref=e654]:
+              - img [ref=e655]
+              - paragraph [ref=e658]: “His UX skills are truly outstanding, with a deep understanding of user behaviour and a knack for crafting intuitive, seamless experiences. An invaluable asset to any team!”
+          - generic [ref=e659]:
+            - generic [ref=e660]:
+              - generic [ref=e661]: CL
+              - generic [ref=e662]:
+                - paragraph [ref=e663]: Campaign Lead
+                - paragraph [ref=e664]: Motion & Brand • Global Energy Major
+            - generic [ref=e665]:
+              - img [ref=e666]
+              - paragraph [ref=e669]: “His motion design work directly contributed to a measurable lift in customer inquiries and engagement.”
+      - generic [ref=e672]:
+        - generic [ref=e673]:
+          - generic [ref=e674]:
+            - img [ref=e675]
+            - text: Interactive Demo
+          - heading "Engineered Micro-interactions" [level=2] [ref=e679]
+          - paragraph [ref=e680]: Great design is not just how it looks, but how it feels.
+        - generic [ref=e681]:
+          - generic [ref=e682]:
+            - button "Smart Button" [ref=e683]: Smart Button
+            - button "Dynamic Island" [ref=e685]
+            - button "Payment Card" [ref=e686]
+          - generic [ref=e687]:
+            - generic [ref=e688]:
+              - generic [ref=e689]:
+                - img [ref=e690]
+                - text: Click to interact
+              - generic [ref=e693]:
+                - button "Deploy Project" [ref=e695]: Deploy Project
+                - button "Reset":
+                  - img
+                  - text: Reset
+            - generic [ref=e697]:
+              - generic [ref=e703]: SmartButton.tsx
+              - generic [ref=e705]:
+                - generic [ref=e706]:
+                  - generic [ref=e707]: "1"
+                  - generic [ref=e708]: "\"text-purple-400\">function SmartButton() {"
+                - generic [ref=e709]:
+                  - generic [ref=e710]: "2"
+                  - generic [ref=e711]: "\"text-purple-400\">const [status, setStatus] = \"text-yellow-300\">useState(\"idle\");"
+                - generic [ref=e713]: "3"
+                - generic [ref=e715]:
+                  - generic [ref=e716]: "4"
+                  - generic [ref=e717]: "\"text-purple-400\">const handleClick = () => {"
+                - generic [ref=e718]:
+                  - generic [ref=e719]: "5"
+                  - generic [ref=e720]: setStatus("loading");
+                - generic [ref=e721]:
+                  - generic [ref=e722]: "6"
+                  - generic [ref=e723]: setTimeout(() => setStatus("success"), 2000);
+                - generic [ref=e724]:
+                  - generic [ref=e725]: "7"
+                  - generic [ref=e726]: "};"
+                - generic [ref=e728]: "8"
+                - generic [ref=e730]:
+                  - generic [ref=e731]: "9"
+                  - generic [ref=e732]: "\"text-purple-400\">return ("
+                - generic [ref=e733]:
+                  - generic [ref=e734]: "10"
+                  - generic [ref=e735]: <"text-green-400">AnimatePresence mode="wait">
+                - generic [ref=e736]:
+                  - generic [ref=e737]: "11"
+                  - generic [ref=e738]: "{status === \"idle\" && ("
+                - generic [ref=e739]:
+                  - generic [ref=e740]: "12"
+                  - generic [ref=e741]: <"text-green-400">motion.button
+                - generic [ref=e742]:
+                  - generic [ref=e743]: "13"
+                  - generic [ref=e744]: layoutId="button"
+                - generic [ref=e745]:
+                  - generic [ref=e746]: "14"
+                  - generic [ref=e747]: "onClick={handleClick}"
+                - generic [ref=e748]:
+                  - generic [ref=e749]: "15"
+                  - generic [ref=e750]: ">"
+                - generic [ref=e751]:
+                  - generic [ref=e752]: "16"
+                  - generic [ref=e753]: Deploy Project
+                - generic [ref=e754]:
+                  - generic [ref=e755]: "17"
+                  - generic [ref=e756]: </"text-green-400">motion.button>
+                - generic [ref=e757]:
+                  - generic [ref=e758]: "18"
+                  - generic [ref=e759]: ")}"
+                - generic [ref=e760]:
+                  - generic [ref=e761]: "19"
+                  - generic [ref=e762]: "{/* Loading & Success States... */}"
+                - generic [ref=e763]:
+                  - generic [ref=e764]: "20"
+                  - generic [ref=e765]: </"text-green-400">AnimatePresence>
+                - generic [ref=e766]:
+                  - generic [ref=e767]: "21"
+                  - generic [ref=e768]: );
+                - generic [ref=e769]:
+                  - generic [ref=e770]: "22"
+                  - generic [ref=e771]: "}"
+      - generic [ref=e775]:
+        - heading "Let's build something great." [level=2] [ref=e776]:
+          - generic [ref=e777]: Let's build something great.
+          - generic [ref=e778]:
+            - generic [ref=e780]: Let's
+            - generic [ref=e782]: build
+            - generic [ref=e784]: something
+            - generic [ref=e786]: great.
+        - paragraph [ref=e787]: Available August 2026 · Open to remote Lead, Staff Designer, Head of Design, and Founding Designer roles worldwide. If you're building something ambitious and care about craft, I'd love to talk.
+        - button "Get in Touch" [ref=e789]
+        - generic [ref=e791]:
+          - button "Copy email address to clipboard" [ref=e792]:
+            - generic [ref=e793]: adichinchakar@gmail.com
+            - img [ref=e795]
+          - generic [ref=e798]:
+            - link "GitHub" [ref=e799] [cursor=pointer]:
+              - /url: https://github.com/Adichinchakar
+              - img [ref=e800]
+            - link "LinkedIn" [ref=e803] [cursor=pointer]:
+              - /url: https://linkedin.com/in/adityachinchakar
+              - img [ref=e804]
+  - contentinfo [ref=e808]:
+    - generic [ref=e809]:
+      - paragraph [ref=e810]:
+        - generic [ref=e811]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e812]:
+        - link "GitHub Profile" [ref=e813] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e814]
+        - link "LinkedIn Profile" [ref=e817] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e818]
+        - link "Send email to adichinchakar@gmail.com" [ref=e822] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com

@@ -45,9 +45,9 @@ export function ProblemStatement() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-base text-zinc-600 font-medium mb-8"
+                    className="text-base text-zinc-600 font-medium mb-8 max-w-2xl"
                 >
-                    Simplifai is an Oslo-based AI automation company. I joined as their first and only designer.
+                    An invoice automation fails overnight. The ops manager who relies on it can&apos;t read the workflow, can&apos;t see what broke, and can&apos;t fix it without filing a ticket and waiting three days. That was Simplifai, an Oslo-based AI automation company, when I joined as their first and only designer.
                 </motion.p>
 
                 {/* Section Label */}
@@ -170,9 +170,9 @@ export function ProblemStatement() {
                                 <Lightbulb className="w-5 h-5 text-purple-600" />
                                 <p className="text-xs font-bold text-purple-600 uppercase tracking-widest">The Deep Insight</p>
                             </div>
-                            <h3 className="text-xl font-bold text-zinc-900 mb-3">The mental model was broken, not just the UI.</h3>
+                            <h3 className="text-xl font-bold text-zinc-900 mb-3">The mental model was broken.</h3>
                             <p className="text-zinc-700 leading-relaxed text-sm">
-                                We didn't need to simplify a developer tool for business users. We needed to <em>re-architect</em> the system to map directly to how operations teams already mapped their processes (whiteboards, flowcharts, step-by-step instructions) rather than how code executes.
+                                Simplifying a developer tool wouldn&apos;t help if it still asked business users to think like developers. The system had to map to how operations teams already plan their work on whiteboards and flowcharts, not to how code executes.
                             </p>
                         </div>
                     </div>

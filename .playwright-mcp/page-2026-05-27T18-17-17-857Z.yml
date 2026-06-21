@@ -1,0 +1,756 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AdityaChinchakar" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e6]:
+        - link "Live Plugin" [ref=e7] [cursor=pointer]:
+          - /url: https://aulys-app.vercel.app/
+          - generic [ref=e11]: Live Plugin
+          - img [ref=e12]
+        - link "Work" [ref=e14] [cursor=pointer]:
+          - /url: /work
+        - link "Writing" [ref=e15] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e16] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e17]
+  - main [ref=e18]:
+    - main [ref=e19]:
+      - generic [ref=e20]:
+        - link "Back to Case Studies" [ref=e23] [cursor=pointer]:
+          - /url: /work
+          - img [ref=e24]
+          - generic [ref=e26]: Back to Case Studies
+        - generic [ref=e28]:
+          - generic [ref=e29]: Design System · Case Study
+          - heading "Simplifai Design System" [level=1] [ref=e33]:
+            - text: Simplifai
+            - text: Design System
+          - paragraph [ref=e34]: Scaling AI-native interfaces with a semantic token architecture and a token-driven Figma → React sync pipeline — one library serving 5 product teams.
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: 01 — Before State
+          - heading "What We Were Working With" [level=2] [ref=e39]
+          - paragraph [ref=e40]: Fragmented design across 5+ products, each team writing components independently, zero token alignment.
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - paragraph [ref=e43]: 5+
+            - paragraph [ref=e44]: Product teams with conflicting patterns
+          - generic [ref=e45]:
+            - paragraph [ref=e46]: "3"
+            - paragraph [ref=e47]: Separate design files with no shared library
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: "0"
+            - paragraph [ref=e50]: Shared components pre-system
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: ~14d
+            - paragraph [ref=e53]: Avg. time to deliver one new component
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - img [ref=e57]
+              - generic [ref=e59]: Before
+            - list [ref=e60]:
+              - listitem [ref=e61]:
+                - generic [ref=e62]: ✕
+                - text: Inconsistent spacing — each team used different scale
+              - listitem [ref=e63]:
+                - generic [ref=e64]: ✕
+                - text: Duplicated components across 5+ product files
+              - listitem [ref=e65]:
+                - generic [ref=e66]: ✕
+                - text: Zero shared design tokens or color variables
+              - listitem [ref=e67]:
+                - generic [ref=e68]: ✕
+                - text: ~14 days average to deliver a new component
+              - listitem [ref=e69]:
+                - generic [ref=e70]: ✕
+                - text: Dev handoff required manual re-specification every sprint
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - generic [ref=e76]: After
+            - list [ref=e77]:
+              - listitem [ref=e78]:
+                - generic [ref=e79]: ✓
+                - text: Single source of truth — one Figma library
+              - listitem [ref=e80]:
+                - generic [ref=e81]: ✓
+                - text: "Semantic token layer: color, spacing, radius, type"
+              - listitem [ref=e82]:
+                - generic [ref=e83]: ✓
+                - text: 42% faster product iteration cycles
+              - listitem [ref=e84]:
+                - generic [ref=e85]: ✓
+                - text: Token-driven Figma → React sync via Style Dictionary + auto-generated PRs
+              - listitem [ref=e86]:
+                - generic [ref=e87]: ✓
+                - text: Design and engineering speaking the same language
+      - generic [ref=e89]:
+        - paragraph [ref=e90]: 02 — System Anatomy
+        - heading "The Design System" [level=2] [ref=e91]
+        - paragraph [ref=e92]: Color tokens, type scale, and components — from a single Figma library that eliminated 3 separate design files and 5 teams working in silos.
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - paragraph [ref=e95]: Color Tokens
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e100]:
+                  - generic [ref=e101]: Primary
+                  - generic [ref=e102]: interactive.primary
+                  - generic [ref=e103]: "#7C3AED"
+                - generic [ref=e106]:
+                  - generic [ref=e107]: Secondary
+                  - generic [ref=e108]: interactive.secondary
+                  - generic [ref=e109]: "#4338CA"
+                - generic [ref=e112]:
+                  - generic [ref=e113]: Success
+                  - generic [ref=e114]: feedback.success
+                  - generic [ref=e115]: "#059669"
+                - generic [ref=e118]:
+                  - generic [ref=e119]: Warning
+                  - generic [ref=e120]: feedback.warning
+                  - generic [ref=e121]: "#D97706"
+                - generic [ref=e124]:
+                  - generic [ref=e125]: Error
+                  - generic [ref=e126]: feedback.error
+                  - generic [ref=e127]: "#DC2626"
+                - generic [ref=e130]:
+                  - generic [ref=e131]: Surface
+                  - generic [ref=e132]: surface.default
+                  - generic [ref=e133]: "#F4F4F5"
+              - generic [ref=e134]: 42 tokens across 6 categories · Figma Variables + CSS custom properties + Tailwind config
+          - generic [ref=e135]:
+            - paragraph [ref=e136]: Type Scale
+            - generic [ref=e137]:
+              - generic [ref=e138]:
+                - generic [ref=e139]: Style
+                - generic [ref=e140]: Size / REM
+                - generic [ref=e141]: Weight
+                - generic [ref=e142]: Sample
+              - generic [ref=e143]:
+                - generic [ref=e144]: Display
+                - generic [ref=e145]: 48px / 3rem
+                - generic [ref=e146]: 700 / 1.1
+                - generic [ref=e147]: Aa
+              - generic [ref=e148]:
+                - generic [ref=e149]: Heading 1
+                - generic [ref=e150]: 36px / 2.25rem
+                - generic [ref=e151]: 700 / 1.2
+                - generic [ref=e152]: Aa
+              - generic [ref=e153]:
+                - generic [ref=e154]: Heading 2
+                - generic [ref=e155]: 24px / 1.5rem
+                - generic [ref=e156]: 600 / 1.3
+                - generic [ref=e157]: Aa
+              - generic [ref=e158]:
+                - generic [ref=e159]: Body Large
+                - generic [ref=e160]: 18px / 1.125rem
+                - generic [ref=e161]: 400 / 1.6
+                - generic [ref=e162]: Aa
+              - generic [ref=e163]:
+                - generic [ref=e164]: Body
+                - generic [ref=e165]: 16px / 1rem
+                - generic [ref=e166]: 400 / 1.6
+                - generic [ref=e167]: Aa
+              - generic [ref=e168]:
+                - generic [ref=e169]: Caption
+                - generic [ref=e170]: 12px / 0.75rem
+                - generic [ref=e171]: 500 / 1.4
+                - generic [ref=e172]: Aa
+          - generic [ref=e173]:
+            - paragraph [ref=e174]: Components
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e177]: Button — 4 Variants
+                - generic [ref=e178]:
+                  - button "Primary" [ref=e179]
+                  - button "Secondary" [ref=e180]
+                  - button "Ghost" [ref=e181]
+                  - button "Destructive" [ref=e182]
+              - generic [ref=e183]:
+                - generic [ref=e184]: Input — 4 States
+                - generic [ref=e185]:
+                  - generic [ref=e186]:
+                    - generic [ref=e187]: Default
+                    - generic [ref=e188]: Enter value...
+                  - generic [ref=e189]:
+                    - generic [ref=e190]: Focus
+                    - generic [ref=e191]: Enter value...
+                  - generic [ref=e192]:
+                    - generic [ref=e193]: Error
+                    - generic [ref=e194]: Invalid input
+                    - generic [ref=e195]: This field is required
+                  - generic [ref=e196]:
+                    - generic [ref=e197]: Disabled
+                    - generic [ref=e198]: Disabled
+              - generic [ref=e199]:
+                - generic [ref=e200]: Badge — Status Variants
+                - generic [ref=e201]:
+                  - generic [ref=e202]: Active
+                  - generic [ref=e203]: Pending
+                  - generic [ref=e204]: Error
+                  - generic [ref=e205]: Draft
+                  - generic [ref=e206]: New
+              - generic [ref=e207]: 28 components · Atomic design structure · Auto-layout + tokenized · 42% dev iteration improvement
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - img [ref=e212]
+            - text: Atomic Design System
+          - heading "Built from the ground up, one atom at a time." [level=2] [ref=e216]:
+            - text: Built from the ground up,
+            - text: one atom at a time.
+          - paragraph [ref=e217]: Every decision is deliberate. Every token reusable. Explore how we went from raw values to full product surfaces.
+        - generic [ref=e218]:
+          - generic [ref=e219]:
+            - button "Atoms 67 tokens The indivisible primitives — cannot be broken further. Every pixel decision starts here." [ref=e220]:
+              - img [ref=e222]
+              - generic [ref=e226]:
+                - generic [ref=e227]:
+                  - generic [ref=e228]: Atoms
+                  - generic [ref=e229]: 67 tokens
+                - paragraph [ref=e230]: The indivisible primitives — cannot be broken further. Every pixel decision starts here.
+              - img [ref=e231]
+            - button "Molecules 34 components Purposeful groups of atoms that serve one clear function. Reusable, predictable." [ref=e233]:
+              - img [ref=e235]
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - generic [ref=e242]: Molecules
+                  - generic [ref=e243]: 34 components
+                - paragraph [ref=e244]: Purposeful groups of atoms that serve one clear function. Reusable, predictable.
+            - button "Organisms 21 sections Complex, self-contained UI sections composed from molecules. The product surfaces." [ref=e245]:
+              - img [ref=e247]
+              - generic [ref=e251]:
+                - generic [ref=e252]:
+                  - generic [ref=e253]: Organisms
+                  - generic [ref=e254]: 21 sections
+                - paragraph [ref=e255]: Complex, self-contained UI sections composed from molecules. The product surfaces.
+            - generic [ref=e256]:
+              - img [ref=e257]
+              - paragraph [ref=e261]: A single token change cascades to 2,400+ instances across the product.
+          - generic [ref=e262]:
+            - generic [ref=e268]: design-system / atoms
+            - generic [ref=e270]:
+              - generic [ref=e274]:
+                - generic [ref=e275]: Brand Purple
+                - generic [ref=e276]: "--color-brand"
+                - generic [ref=e277]: "#7C3AED"
+              - generic [ref=e281]:
+                - generic [ref=e282]: Text Primary
+                - generic [ref=e283]: "--color-text"
+                - generic [ref=e284]: "#18181B"
+              - generic [ref=e288]:
+                - generic [ref=e289]: Radius MD
+                - generic [ref=e290]: "--radius-md"
+                - generic [ref=e291]: 8px
+              - generic [ref=e298]:
+                - generic [ref=e299]: Space 4
+                - generic [ref=e300]: "--space-4"
+                - generic [ref=e301]: 16px
+              - generic [ref=e302]:
+                - generic [ref=e304]: Ag
+                - generic [ref=e305]:
+                  - generic [ref=e306]: Font Weight
+                  - generic [ref=e307]: "--font-bold"
+                  - generic [ref=e308]: "700"
+              - generic [ref=e312]:
+                - generic [ref=e313]: Shadow SM
+                - generic [ref=e314]: "--shadow-sm"
+                - generic [ref=e315]: 0 1px 3px
+      - generic [ref=e317]:
+        - generic [ref=e318]:
+          - generic [ref=e319]:
+            - img [ref=e320]
+            - text: Token Architecture
+          - heading "One change. Everywhere, instantly." [level=2] [ref=e326]:
+            - text: One change.
+            - text: Everywhere, instantly.
+          - paragraph [ref=e327]: Click any token or component below to trace its connections through the system. This is how a rebrand takes 4 minutes, not 4 weeks.
+        - generic [ref=e329]:
+          - generic [ref=e330]:
+            - generic [ref=e331]: Primitive Tokens
+            - generic [ref=e332]:
+              - 'button "purple-600 #7C3AED" [ref=e333]':
+                - generic [ref=e336]:
+                  - generic [ref=e337]: purple-600
+                  - generic [ref=e338]: "#7C3AED"
+              - 'button "zinc-50 #FAFAFA" [ref=e339]':
+                - generic [ref=e342]:
+                  - generic [ref=e343]: zinc-50
+                  - generic [ref=e344]: "#FAFAFA"
+              - 'button "zinc-900 #18181B" [ref=e345]':
+                - generic [ref=e348]:
+                  - generic [ref=e349]: zinc-900
+                  - generic [ref=e350]: "#18181B"
+              - button "font-black 900" [ref=e351]:
+                - img [ref=e353]
+                - generic [ref=e355]:
+                  - generic [ref=e356]: font-black
+                  - generic [ref=e357]: "900"
+              - button "text-sm 14px" [ref=e358]:
+                - img [ref=e360]
+                - generic [ref=e362]:
+                  - generic [ref=e363]: text-sm
+                  - generic [ref=e364]: 14px
+              - button "space-4 16px" [ref=e365]:
+                - img [ref=e367]
+                - generic [ref=e370]:
+                  - generic [ref=e371]: space-4
+                  - generic [ref=e372]: 16px
+              - button "rounded-lg 8px" [ref=e373]:
+                - img [ref=e375]
+                - generic [ref=e378]:
+                  - generic [ref=e379]: rounded-lg
+                  - generic [ref=e380]: 8px
+          - img [ref=e382]
+          - generic [ref=e384]:
+            - generic [ref=e385]: Semantic Tokens
+            - generic [ref=e386]:
+              - generic [ref=e387]:
+                - img [ref=e389]
+                - generic [ref=e392]:
+                  - generic [ref=e393]: bg.interactive
+                  - generic [ref=e394]: Button bg
+              - generic [ref=e395]:
+                - img [ref=e397]
+                - generic [ref=e400]:
+                  - generic [ref=e401]: bg.surface
+                  - generic [ref=e402]: Card bg
+              - generic [ref=e403]:
+                - img [ref=e405]
+                - generic [ref=e408]:
+                  - generic [ref=e409]: text.primary
+                  - generic [ref=e410]: Heading text
+              - generic [ref=e411]:
+                - img [ref=e413]
+                - generic [ref=e416]:
+                  - generic [ref=e417]: text.secondary
+                  - generic [ref=e418]: Body copy
+              - generic [ref=e419]:
+                - img [ref=e421]
+                - generic [ref=e424]:
+                  - generic [ref=e425]: space.section
+                  - generic [ref=e426]: Layout gap
+              - generic [ref=e427]:
+                - img [ref=e429]
+                - generic [ref=e432]:
+                  - generic [ref=e433]: radius.ui
+                  - generic [ref=e434]: Corner radius
+          - img [ref=e436]
+          - generic [ref=e438]:
+            - generic [ref=e439]: Components
+            - generic [ref=e440]:
+              - button "Button 3 tokens" [ref=e441]:
+                - generic [ref=e442]: Button
+                - generic [ref=e443]: 3 tokens
+              - button "Card 3 tokens" [ref=e444]:
+                - generic [ref=e445]: Card
+                - generic [ref=e446]: 3 tokens
+              - button "Input 3 tokens" [ref=e447]:
+                - generic [ref=e448]: Input
+                - generic [ref=e449]: 3 tokens
+              - button "Badge 3 tokens" [ref=e450]:
+                - generic [ref=e451]: Badge
+                - generic [ref=e452]: 3 tokens
+              - button "Sidebar 2 tokens" [ref=e453]:
+                - generic [ref=e454]: Sidebar
+                - generic [ref=e455]: 2 tokens
+      - generic [ref=e457]:
+        - generic [ref=e458]:
+          - generic [ref=e459]:
+            - img [ref=e460]
+            - text: Interactive Playground
+          - heading "Tweak the knobs. Watch the system flex." [level=2] [ref=e465]:
+            - text: Tweak the knobs.
+            - text: Watch the system flex.
+          - paragraph [ref=e466]: Every control here maps to a real token group. Theme, density, and radius all cascade from a single source of truth.
+        - generic [ref=e467]:
+          - generic [ref=e468]:
+            - generic [ref=e469]:
+              - generic [ref=e470]: Theme --color-scheme
+              - generic [ref=e471]:
+                - button "Light" [ref=e472]:
+                  - img [ref=e473]
+                  - text: Light
+                - button "Dark" [ref=e479]:
+                  - img [ref=e480]
+                  - text: Dark
+            - generic [ref=e482]:
+              - generic [ref=e483]: Density --space-scale
+              - generic [ref=e484]:
+                - button "Comfortable" [ref=e485]:
+                  - img [ref=e486]
+                  - text: Comfortable
+                - button "Compact" [ref=e487]:
+                  - img [ref=e488]
+                  - text: Compact
+            - generic [ref=e493]:
+              - generic [ref=e494]: Border Radius --radius
+              - generic [ref=e495]:
+                - button "none" [ref=e496]
+                - button "sm" [ref=e497]
+                - button "lg" [ref=e498]
+                - button "full" [ref=e499]
+            - generic [ref=e500]:
+              - generic [ref=e501]: Active Token Set
+              - generic [ref=e502]:
+                - generic [ref=e503]:
+                  - generic [ref=e504]: "color-scheme:"
+                  - generic [ref=e505]: light
+                - generic [ref=e506]:
+                  - generic [ref=e507]: "space-scale:"
+                  - generic [ref=e508]: 1.0×
+                - generic [ref=e509]:
+                  - generic [ref=e510]: "radius:"
+                  - generic [ref=e511]: "--radius-lg"
+          - generic [ref=e513]:
+            - generic [ref=e514]:
+              - generic [ref=e515]:
+                - img [ref=e517]
+                - generic [ref=e519]: Simplifai
+              - generic [ref=e520]:
+                - img [ref=e521]
+                - img [ref=e524]
+            - generic [ref=e528]:
+              - generic [ref=e529]:
+                - generic [ref=e530]:
+                  - generic [ref=e531]: "24"
+                  - generic [ref=e532]: Flows
+                - generic [ref=e533]:
+                  - generic [ref=e534]: 4.1k
+                  - generic [ref=e535]: Runs
+                - generic [ref=e536]:
+                  - generic [ref=e537]: 99.9%
+                  - generic [ref=e538]: Uptime
+              - generic [ref=e539]:
+                - generic [ref=e540]:
+                  - generic [ref=e541]: Recent Flows
+                  - img [ref=e542]
+                - generic [ref=e546]:
+                  - generic [ref=e547]:
+                    - generic [ref=e549]: Lead Qualification
+                    - generic [ref=e552]: Active
+                  - generic [ref=e553]:
+                    - generic [ref=e555]: Invoice Processing
+                    - generic [ref=e558]: Paused
+              - generic [ref=e559]:
+                - button "New Flow" [ref=e560]
+                - button "Export" [ref=e561]
+      - generic [ref=e563]:
+        - generic [ref=e564]:
+          - generic [ref=e565]:
+            - img [ref=e566]
+            - text: Redlines & Specs
+          - heading "Designed to spec. Built to precision." [level=2] [ref=e572]:
+            - text: Designed to spec.
+            - text: Built to precision.
+          - paragraph [ref=e573]: Every component is a precise assembly of tokens. Hover the node in inspect mode to reveal its full token specification.
+        - generic [ref=e574]:
+          - generic [ref=e575]:
+            - generic [ref=e576]:
+              - button "Preview" [ref=e577]
+              - button "Inspect" [ref=e578]:
+                - img [ref=e579]
+                - text: Inspect
+            - generic [ref=e587]:
+              - generic [ref=e588]:
+                - generic [ref=e589]:
+                  - img [ref=e591]
+                  - generic [ref=e593]:
+                    - heading "Text Analysis" [level=3] [ref=e594]
+                    - paragraph [ref=e595]: v2.1.0 • Stable
+                - generic [ref=e596]: Active
+              - generic [ref=e597]:
+                - generic [ref=e598]:
+                  - generic [ref=e599]: NLP
+                  - generic [ref=e600]: Sentiment
+                  - generic [ref=e601]: Real-time
+                - generic [ref=e603]:
+                  - generic [ref=e604]: Input Tokens
+                  - generic [ref=e605]: 4.2k / 10k
+              - generic [ref=e608]:
+                - button "Settings" [ref=e609]
+                - button "Run Model" [ref=e610]
+          - generic [ref=e611]:
+            - generic [ref=e612]:
+              - generic [ref=e613]:
+                - img [ref=e614]
+                - text: Token Specification
+              - generic [ref=e616]:
+                - img [ref=e617]
+                - paragraph [ref=e619]: Switch to Inspect Mode
+            - generic [ref=e621]:
+              - img [ref=e623]
+              - generic [ref=e626]:
+                - heading "WCAG 2.2 AAA Compliant" [level=4] [ref=e627]
+                - paragraph [ref=e628]: Automated checks ensure 4.5:1 contrast and 44px touch targets on all interactive elements.
+            - generic [ref=e630]:
+              - img [ref=e632]
+              - generic [ref=e634]:
+                - heading "Development Velocity" [level=4] [ref=e635]
+                - generic [ref=e636]: 42% faster
+                - paragraph [ref=e637]: Reduction in UI dev time after implementing the tokenized system.
+      - generic [ref=e639]:
+        - generic [ref=e640]:
+          - generic [ref=e641]:
+            - img [ref=e642]
+            - text: System Specs
+          - heading "Engineered, not just designed" [level=2] [ref=e645]
+          - paragraph [ref=e646]: The Simplifai Design System was built with semantic design tokens synced directly from Figma to React — creating a single source of truth across design and code.
+        - generic [ref=e647]:
+          - generic [ref=e648]:
+            - img [ref=e650]
+            - generic [ref=e654]:
+              - generic [ref=e655]: 120+
+              - generic [ref=e656]: Components built
+          - generic [ref=e657]:
+            - img [ref=e659]
+            - generic [ref=e665]:
+              - generic [ref=e666]: "8"
+              - generic [ref=e667]: Token categories
+          - generic [ref=e668]:
+            - img [ref=e670]
+            - generic [ref=e672]:
+              - generic [ref=e673]: "12"
+              - generic [ref=e674]: Type scales
+          - generic [ref=e675]:
+            - img [ref=e677]
+            - generic [ref=e679]:
+              - generic [ref=e680]: "24"
+              - generic [ref=e681]: Layout patterns
+        - generic [ref=e682]:
+          - generic [ref=e683]:
+            - generic [ref=e688]: tokens.css
+            - generic [ref=e689]:
+              - generic [ref=e690]:
+                - generic [ref=e693]: "--color-primary"
+                - generic [ref=e694]: "#6366f1"
+              - generic [ref=e695]:
+                - generic [ref=e698]: "--color-accent"
+                - generic [ref=e699]: "#8b5cf6"
+              - generic [ref=e700]:
+                - generic [ref=e703]: "--color-surface"
+                - generic [ref=e704]: "#f4f4f5"
+              - generic [ref=e705]:
+                - generic [ref=e706]:
+                  - generic [ref=e708]: R
+                  - generic [ref=e709]: "--radius-md"
+                - generic [ref=e710]: 12px
+              - generic [ref=e711]:
+                - generic [ref=e712]:
+                  - generic [ref=e714]: R
+                  - generic [ref=e715]: "--radius-xl"
+                - generic [ref=e716]: 24px
+              - generic [ref=e717]:
+                - generic [ref=e718]:
+                  - generic [ref=e720]: F
+                  - generic [ref=e721]: "--font-sans"
+                - generic [ref=e722]: Inter, system-ui
+              - generic [ref=e723]:
+                - generic [ref=e724]:
+                  - generic [ref=e726]: S
+                  - generic [ref=e727]: "--shadow-card"
+                - generic [ref=e728]: 0 4px 20px rgb(0,0,0,0.06)
+          - generic [ref=e729]:
+            - paragraph [ref=e730]: Component Annotation
+            - generic [ref=e732]:
+              - generic [ref=e734]: "border-radius: var(--radius-md)"
+              - generic [ref=e736]:
+                - generic [ref=e738]: :focus-visible ring
+                - button "Start Automation" [ref=e740]
+                - generic [ref=e743]: var(--color-primary)
+              - generic [ref=e747]: WCAG 2.2 AA — 7.2:1 contrast
+            - generic [ref=e749]:
+              - generic [ref=e750]:
+                - generic [ref=e751]: Height
+                - generic [ref=e752]: 44px
+              - generic [ref=e753]:
+                - generic [ref=e754]: Padding
+                - generic [ref=e755]: 12px 24px
+              - generic [ref=e756]:
+                - generic [ref=e757]: Font weight
+                - generic [ref=e758]: "600"
+        - generic [ref=e759]:
+          - generic [ref=e760]:
+            - img [ref=e761]
+            - text: WCAG 2.2 AA
+          - generic [ref=e764]:
+            - img [ref=e765]
+            - text: Framer Motion animated
+          - generic [ref=e767]:
+            - img [ref=e768]
+            - text: Figma → React tokens
+          - generic [ref=e772]:
+            - img [ref=e773]
+            - text: 100% TypeScript
+      - generic [ref=e777]:
+        - generic [ref=e778]:
+          - generic [ref=e779]:
+            - img [ref=e780]
+            - text: Governance & Impact
+          - heading "A system is only as good as its adoption." [level=2] [ref=e783]:
+            - text: A system is only as good
+            - text: as its adoption.
+          - paragraph [ref=e784]: I led both the design and the cultural change — introducing governance processes that turned sporadic UI effort into a disciplined, high-velocity product engine.
+        - generic [ref=e785]:
+          - generic [ref=e786]:
+            - img [ref=e788]
+            - generic [ref=e791]: +20%
+            - generic [ref=e792]: Client satisfaction
+            - paragraph [ref=e793]: Through visual consistency alone across 50+ product screens.
+          - generic [ref=e795]:
+            - img [ref=e797]
+            - generic [ref=e800]: 3wks → 5d
+            - generic [ref=e801]: Review cycle time
+            - paragraph [ref=e802]: Standardized tokens eliminated redundant design debates.
+          - generic [ref=e804]:
+            - img [ref=e806]
+            - generic [ref=e811]: 0 → 120+
+            - generic [ref=e812]: Reusable components
+            - paragraph [ref=e813]: Built from scratch to cover every AI-native surface.
+          - generic [ref=e815]:
+            - img [ref=e817]
+            - generic [ref=e822]: 5 designers
+            - generic [ref=e823]: Team led & mentored
+            - paragraph [ref=e824]: Cross-functional alignment from product to engineering.
+        - generic [ref=e826]:
+          - generic [ref=e827]:
+            - img [ref=e829]
+            - generic [ref=e833]:
+              - heading "The \"Sync\" Workflow" [level=3] [ref=e834]
+              - paragraph [ref=e835]: Bidirectional Figma ↔ React handoff, automated end-to-end
+          - generic [ref=e836]:
+            - generic [ref=e837]:
+              - generic [ref=e838]:
+                - img [ref=e840]
+                - generic [ref=e842]:
+                  - generic [ref=e843]: Figma token update
+                  - generic [ref=e844]: Designer edits --color.brand
+              - generic [ref=e845]:
+                - img [ref=e847]
+                - generic [ref=e849]:
+                  - generic [ref=e850]: Style Dictionary
+                  - generic [ref=e851]: Transforms to CSS, JS, iOS, Android
+              - generic [ref=e852]:
+                - img [ref=e854]
+                - generic [ref=e856]:
+                  - generic [ref=e857]: Auto-generated PR
+                  - generic [ref=e858]: Pushed to github.com/simplifai/ui
+              - generic [ref=e859]:
+                - img [ref=e861]
+                - generic [ref=e863]:
+                  - generic [ref=e864]: CI Review
+                  - generic [ref=e865]: Automated visual regression tests pass
+              - generic [ref=e866]:
+                - img [ref=e868]
+                - generic [ref=e870]:
+                  - generic [ref=e871]: Production merge
+                  - generic [ref=e872]: All 120+ components updated instantly
+            - img [ref=e875]
+            - generic [ref=e878]:
+              - generic [ref=e879]:
+                - img [ref=e881]
+                - generic [ref=e887]: Figma
+              - generic [ref=e890]:
+                - img [ref=e892]
+                - generic [ref=e895]: React
+          - generic [ref=e896]:
+            - generic [ref=e897]:
+              - generic [ref=e898]: < 1 sprint
+              - generic [ref=e899]: Time to adopt
+              - generic [ref=e900]: For new devs to be productive
+            - generic [ref=e901]:
+              - generic [ref=e902]: 0 regressions
+              - generic [ref=e903]: Visual regression
+              - generic [ref=e904]: Across 6 months post-launch
+            - generic [ref=e905]:
+              - generic [ref=e906]: +42%
+              - generic [ref=e907]: Dev velocity
+              - generic [ref=e908]: Faster UI build time — measured vs. pre-system sprint velocity (avg over 4 sprints)
+      - generic [ref=e910]:
+        - generic [ref=e911]:
+          - generic [ref=e912]:
+            - img [ref=e913]
+            - text: The Challenge
+          - heading "The gap between spec and production." [level=2] [ref=e915]:
+            - text: The gap between
+            - text: spec and production.
+          - paragraph [ref=e916]: A design system is only as strong as its enforcement. Even the best-documented system drifts when developers are under pressure.
+        - generic [ref=e917]:
+          - generic [ref=e918]:
+            - generic [ref=e919]:
+              - generic [ref=e920]: Design System Spec
+              - heading "The “Ideal” State" [level=3] [ref=e924]
+              - paragraph [ref=e925]:
+                - text: We built a robust system. Tokens were defined, guidelines were clear, and the Figma library was pristine.
+                - text: "Yet, as we scaled, I noticed a recurring pattern: implementation drift."
+            - generic [ref=e926]:
+              - generic [ref=e928]:
+                - generic [ref=e929]: bg-blue-600
+                - generic [ref=e930]: text-white
+                - generic [ref=e931]: h-11
+              - generic [ref=e932]:
+                - button "Confirm Action" [ref=e933]
+                - generic [ref=e934]:
+                  - img [ref=e935]
+                  - generic [ref=e937]: WCAG AAA Compliant
+          - generic [ref=e938]:
+            - generic [ref=e939]:
+              - generic [ref=e940]:
+                - img [ref=e941]
+                - text: Production Reality
+              - heading "The gap between design intent and product reality." [level=3] [ref=e943]
+              - paragraph [ref=e944]:
+                - text: Small deviations—a hex code here, a hardcoded margin there—were breaking accessibility silently.
+                - text: "This realization sparked a question: What if the product could govern its own quality?"
+            - generic [ref=e947]:
+              - button "Confirm Action !" [ref=e948]:
+                - text: Confirm Action
+                - generic:
+                  - generic: "!"
+              - generic [ref=e949]:
+                - generic [ref=e950]:
+                  - img [ref=e951]
+                  - text: Contrast Violation
+                - paragraph [ref=e954]: Ratio is 3.1:1. Expected 4.5:1 (AA).
+        - generic [ref=e955]:
+          - blockquote [ref=e956]: “A design system is only as strong as its enforcement. Aulys is the automated layer of that enforcement.”
+          - link "See How I Built Aulys" [ref=e957] [cursor=pointer]:
+            - /url: /work/aulys
+            - text: See How I Built Aulys
+            - img [ref=e958]
+          - paragraph [ref=e960]: Continue the journey
+    - generic [ref=e961]:
+      - generic [ref=e966]:
+        - generic [ref=e967]: Up Next
+        - link "MedSecure Continue Reading" [ref=e968] [cursor=pointer]:
+          - /url: /work/medsecure
+          - heading "MedSecure" [level=2] [ref=e969]
+          - generic [ref=e970]:
+            - text: Continue Reading
+            - img [ref=e971]
+      - link "View All Projects" [ref=e974] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e975]
+        - generic [ref=e977]: View All Projects
+  - contentinfo [ref=e978]:
+    - generic [ref=e979]:
+      - paragraph [ref=e980]:
+        - generic [ref=e981]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e982]:
+        - link "GitHub Profile" [ref=e983] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e984]
+        - link "LinkedIn Profile" [ref=e987] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e988]
+        - link "Send email to adichinchakar@gmail.com" [ref=e992] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com
+  - button "Open Next.js Dev Tools" [ref=e998] [cursor=pointer]:
+    - img [ref=e999]

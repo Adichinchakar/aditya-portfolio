@@ -28,14 +28,14 @@ export function TheInsight() {
                         02 — The Insight
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
-                        The Real Blocker Wasn&apos;t Awareness.{" "}
-                        <span className="text-zinc-600">It Was Friction.</span>
+                        Every Fix Meant Leaving Figma{" "}
+                        <span className="text-zinc-600">Seven Times.</span>
                     </h2>
                     <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl mb-4">
-                        Designers I spoke to already <em>knew</em> WCAG mattered. What they lacked was a tool that surfaced problems <strong className="text-zinc-700">inside their existing workflow</strong> — not as an afterthought.
+                        The designers I spoke to already <em>knew</em> WCAG mattered. What they didn&apos;t have was a tool that caught problems <strong className="text-zinc-700">inside the file they were already working in</strong>.
                     </p>
                     <p className="text-base text-zinc-600 leading-relaxed max-w-2xl">
-                        I mapped the journey from "designer spots accessibility issue" to "issue gets fixed." There were <strong>7 steps and 3 tool-switches</strong> — browser DevTools, external contrast checker, WCAG documentation, back to Figma. Every switch was a dropout point. The fix wasn't better tooling. It was <em>fewer tools</em>.
+                        So I mapped what it actually took to fix one contrast issue, start to finish. Seven steps. Three of them meant leaving Figma — DevTools, a separate contrast checker, then the WCAG spec to be sure. Every switch was a place to give up, and people did.
                     </p>
                 </motion.div>
 

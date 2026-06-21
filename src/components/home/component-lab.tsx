@@ -123,7 +123,7 @@ export function ComponentLab() {
 
 
   return (
-    <section className="py-14 px-6 relative overflow-hidden bg-zinc-50/50" ref={ref}>
+    <section className="py-10 md:py-14 px-6 relative overflow-hidden bg-zinc-50/50" ref={ref}>
       {/* Premium background effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
@@ -190,7 +190,7 @@ export function ComponentLab() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
             {/* Live Playground */}
-            <div className="min-h-[300px] relative rounded-2xl bg-zinc-50/50 border border-zinc-200/60 overflow-hidden flex flex-col items-center justify-center p-6 pattern-dots pattern-zinc-200 pattern-bg-transparent pattern-size-4 pattern-opacity-100">
+            <div className="min-h-[250px] md:min-h-[300px] relative rounded-2xl bg-zinc-50/50 border border-zinc-200/60 overflow-hidden flex flex-col items-center justify-center p-6 pattern-dots pattern-zinc-200 pattern-bg-transparent pattern-size-4 pattern-opacity-100">
               <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/80 border border-zinc-200 text-xs font-medium text-zinc-400 shadow-sm backdrop-blur-md">
                 <MousePointer2 className="w-3 h-3" />
                 Click to interact
@@ -211,7 +211,7 @@ export function ComponentLab() {
             </div>
 
             {/* Syntax-highlighted code block */}
-            <div className="min-h-[300px] rounded-2xl bg-[#0d1117] border border-zinc-800/80 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.25)] flex flex-col pt-1">
+            <div className="min-h-[250px] md:min-h-[300px] rounded-2xl bg-[#0d1117] border border-zinc-800/80 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.25)] flex flex-col pt-1">
               {/* Fake titlebar */}
               <div className="flex items-center gap-2 px-5 py-3.5 bg-[#0d1117] border-b border-zinc-800/80 shrink-0">
                 <div className="w-3 h-3 rounded-full bg-zinc-700/60" />

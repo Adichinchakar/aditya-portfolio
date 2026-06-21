@@ -1,0 +1,406 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AdityaChinchakar" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e6]:
+        - link "Live Plugin" [ref=e7] [cursor=pointer]:
+          - /url: https://aulys-app.vercel.app/
+          - generic [ref=e11]: Live Plugin
+          - img [ref=e12]
+        - link "Work" [ref=e14] [cursor=pointer]:
+          - /url: /work
+        - link "Writing" [ref=e15] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e16] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e17]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - link "Case Studies" [ref=e22] [cursor=pointer]:
+          - /url: /work
+          - img [ref=e23]
+          - generic [ref=e25]: Case Studies
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - 'generic "Case study type: Spatial UX, Concept, Apple Vision Pro" [ref=e28]':
+              - generic [ref=e32]: Spatial UX · Concept · Apple Vision Pro
+            - generic [ref=e33]:
+              - heading "Orbit:" [level=1] [ref=e34]
+              - paragraph [ref=e35]: Spatial onboarding for the enterprise.
+            - paragraph [ref=e36]: New enterprise hires lose 3–6 months of productivity to context overload. Orbit is an AI agent-guided onboarding experience on Apple Vision Pro — collapsing weeks of context-building into hours through spatial mapping, gaze navigation, and progressive disclosure.
+            - generic [ref=e37]:
+              - generic [ref=e38]: Lead Designer · Speculative Concept
+              - generic [ref=e39]: "2025"
+          - generic "Projected impact metrics for Orbit" [ref=e40]:
+            - generic [ref=e42]:
+              - heading "Projected Impact" [level=2] [ref=e44]
+              - generic [ref=e49]:
+                - generic [ref=e50]:
+                  - generic [ref=e51]: 60%
+                  - generic [ref=e52]: Productivity Gain
+                - generic [ref=e54]:
+                  - generic [ref=e55]: 40%
+                  - generic [ref=e56]: Fewer IT Tickets
+                - generic [ref=e58]:
+                  - generic [ref=e59]: 3h
+                  - generic [ref=e60]: Onboarding (vs 3 wks)
+                - generic [ref=e62]:
+                  - generic [ref=e63]: visionOS
+                  - generic [ref=e64]: Native Platform
+              - generic [ref=e70]: Enterprise Standard V.01
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e74]: 01 — Problem
+          - heading "The $1.3T problem hiding in onboarding." [level=2] [ref=e75]:
+            - text: The $1.3T problem
+            - text: hiding in onboarding.
+          - generic [ref=e76]:
+            - generic [ref=e77]: $1.3T
+            - generic [ref=e78]: lost annually to poor employee onboarding — Gallup, 2023
+          - paragraph [ref=e79]: "Enterprise organisations spend thousands per hire on onboarding that still fails where it matters: inside the new hire's mental model of how the org actually works. The problem isn't information volume. It's spatial disorientation — new hires cannot see the map."
+        - generic [ref=e80]:
+          - paragraph [ref=e81]: The business frame
+          - paragraph [ref=e82]:
+            - text: A new enterprise hire reaching full productivity in week 3 instead of month 4 represents
+            - strong [ref=e83]: 30+ recoverable working days
+            - text: per person. At a 500-person annual intake, that compounds to a measurable revenue line — not a HR metric.
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - img [ref=e87]
+            - heading "Context overload" [level=3] [ref=e91]
+            - paragraph [ref=e92]: New hires are flooded with wikis, decks, org charts, Slack channels, and Notion pages on day one. The information exists. The structure does not. Context without spatial anchoring doesn't stick.
+          - generic [ref=e94]:
+            - img [ref=e96]
+            - heading "Tool fragmentation" [level=3] [ref=e98]
+            - paragraph [ref=e99]: The average enterprise employee uses 9.4 SaaS tools daily. New hires must context-switch between HRIS, Slack, Jira, Confluence, and email — before they understand what any of it is for.
+          - generic [ref=e101]:
+            - img [ref=e103]
+            - heading "No spatial awareness" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Org charts are static, flat, and abstract. New hires cannot feel where they sit in the organisation, who the real decision-makers are, or how teams connect. This takes 3–6 months to build informally.
+        - generic [ref=e108]:
+          - paragraph [ref=e109]: Problem statement
+          - paragraph [ref=e110]: Enterprise new hires are given a flood of information with no spatial structure to anchor it. The result is 3–6 months of below-capacity contribution, avoidable IT overhead, and talent attrition from disengagement — all traceable to a failure of context delivery on day one.
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - paragraph [ref=e115]: 02 — Research & Insight
+          - heading "Three perspectives. One broken system." [level=2] [ref=e116]:
+            - text: Three perspectives.
+            - text: One broken system.
+          - paragraph [ref=e117]: Synthesised from secondary research, published enterprise HR studies, and domain expertise. No primary user interviews — this is a speculative concept grounded in published evidence.
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - img [ref=e122]
+              - generic [ref=e127]:
+                - paragraph [ref=e128]: New Hire
+                - paragraph [ref=e129]: Priya, Software Engineer
+                - paragraph [ref=e130]: "Core pain: Overwhelm"
+            - blockquote [ref=e131]: “I have 47 unread Slack messages, a 90-page onboarding deck, and zero idea who actually makes decisions around here.”
+            - paragraph [ref=e132]: "Insight: Context without spatial structure doesn't reduce overwhelm — it amplifies it. Priya can find information. She can't find her place."
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - img [ref=e136]
+              - generic [ref=e140]:
+                - paragraph [ref=e141]: HR Ops
+                - paragraph [ref=e142]: Marcus, People Ops Lead
+                - paragraph [ref=e143]: "Core pain: Scaling pain"
+            - blockquote [ref=e144]: “We're onboarding 80 people a quarter. Our buddy system doesn't scale and our wiki is 4 years out of date.”
+            - paragraph [ref=e145]: "Insight: HR teams know the current process fails at scale but cannot personalise onboarding without a 10× headcount increase."
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - img [ref=e149]
+              - generic [ref=e152]:
+                - paragraph [ref=e153]: IT Admin
+                - paragraph [ref=e154]: Lan, IT Operations
+                - paragraph [ref=e155]: "Core pain: Device fleet management"
+            - blockquote [ref=e156]: “I spend two days per new hire on setup tickets. Half of them are basic things — app access, VPN config, printer setup.”
+            - paragraph [ref=e157]: "Insight: IT overhead in week one is largely a context problem, not a technical one. New hires raise tickets because they don't know what they have access to."
+        - generic [ref=e158]:
+          - paragraph [ref=e159]: Key insight from secondary research
+          - paragraph [ref=e160]: Spatial memory retention is significantly higher in 3D environments vs flat screens.
+          - paragraph [ref=e161]: Research in cognitive science and spatial learning (including studies at Stanford's Virtual Human Interaction Lab) consistently shows that people navigate, recall, and build mental models more effectively in three-dimensional space. Our brains evolved to understand place. Enterprise onboarding ignores this completely.
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - paragraph [ref=e165]: The bet
+            - paragraph [ref=e166]: Spatial org map on day one
+            - paragraph [ref=e167]: A 3D, navigable map of the organisation — teams, tools, key people, and workflows — delivered spatially in visionOS collapses 3 weeks of informal context-building into 3 hours.
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: The mechanism
+            - paragraph [ref=e170]: AI agent as guide, not chatbot
+            - paragraph [ref=e171]: A voice-first AI agent walks new hires through their spatial environment proactively — surfacing what they need before they know to ask. Not a search interface. A guide.
+          - generic [ref=e172]:
+            - paragraph [ref=e173]: The constraint
+            - paragraph [ref=e174]: Progressive disclosure, not info dump
+            - paragraph [ref=e175]: Orbit reveals depth planes of information on demand, tied to gaze focus and session progress. Context is earned, not front-loaded — preventing the overwhelm that makes flat onboarding fail.
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: 03 — Design Decisions
+          - heading "Five decisions that defined the spatial UX." [level=2] [ref=e181]:
+            - text: Five decisions that
+            - text: defined the spatial UX.
+          - paragraph [ref=e182]: Every design decision is a trade-off. Here are the five that most significantly shaped what Orbit is — and what it deliberately chose not to be.
+        - generic [ref=e183]:
+          - generic [ref=e185]:
+            - img [ref=e187]
+            - generic [ref=e190]:
+              - generic [ref=e192]: "01"
+              - heading "Gaze + pinch over controller input for primary navigation." [level=3] [ref=e193]
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - paragraph [ref=e196]: We chose
+                  - paragraph [ref=e197]: Gaze + pinch (visionOS native)
+                - generic [ref=e198]:
+                  - paragraph [ref=e199]: Over
+                  - paragraph [ref=e200]: Controller-based cursor navigation
+              - paragraph [ref=e201]: "Controller navigation imports the mental model of a mouse — a flat-screen metaphor that undermines the spatial premise of Orbit. Gaze + pinch is how visionOS was designed to be navigated: effortless, hands-free between actions, and mapped directly to where a user's attention already is. For enterprise onboarding, reducing motor overhead matters — new hires are cognitively loaded on day one. The interaction model should disappear into the experience."
+          - generic [ref=e203]:
+            - img [ref=e205]
+            - generic [ref=e208]:
+              - generic [ref=e210]: "02"
+              - heading "Voice-first AI agent over traditional UI menus for guidance." [level=3] [ref=e211]
+              - generic [ref=e212]:
+                - generic [ref=e213]:
+                  - paragraph [ref=e214]: We chose
+                  - paragraph [ref=e215]: Proactive voice-first AI agent
+                - generic [ref=e216]:
+                  - paragraph [ref=e217]: Over
+                  - paragraph [ref=e218]: Menu-driven navigation with optional AI assistant
+              - paragraph [ref=e219]: A menu-driven UI externalises the cognitive work of knowing what to explore next. It assumes the user knows what questions to ask — which a day-one hire definitionally does not. A proactive voice-first agent surfaces the right context at the right moment, guided by session state, gaze history, and role-based onboarding paths. The agent doesn't answer questions. It anticipates them.
+          - generic [ref=e221]:
+            - img [ref=e223]
+            - generic [ref=e227]:
+              - generic [ref=e229]: "03"
+              - heading "Progressive disclosure in 3D depth planes over flat menu hierarchy." [level=3] [ref=e230]
+              - generic [ref=e231]:
+                - generic [ref=e232]:
+                  - paragraph [ref=e233]: We chose
+                  - paragraph [ref=e234]: Depth-plane disclosure (foreground → mid → background)
+                - generic [ref=e235]:
+                  - paragraph [ref=e236]: Over
+                  - paragraph [ref=e237]: Flat hierarchical menu navigation
+              - paragraph [ref=e238]: "Flat menus map poorly to spatial environments — they force the user to mentally translate a 2D hierarchy into a 3D space they're already inhabiting. Depth planes use the Z-axis as a semantic layer: foreground is your immediate context, mid-ground is your department, background is the wider org. Depth is not decorative — it is the information architecture."
+          - generic [ref=e240]:
+            - img [ref=e242]
+            - generic [ref=e245]:
+              - generic [ref=e247]: "04"
+              - heading "Enforced 60° FOV comfort zone over full spatial freedom." [level=3] [ref=e248]
+              - generic [ref=e249]:
+                - generic [ref=e250]:
+                  - paragraph [ref=e251]: We chose
+                  - paragraph [ref=e252]: 60° FOV constraint for all primary interaction zones
+                - generic [ref=e253]:
+                  - paragraph [ref=e254]: Over
+                  - paragraph [ref=e255]: Unconstrained spatial UI across full 180° field of view
+              - paragraph [ref=e256]: Apple's visionOS HIG specifies that placing interactive elements beyond 60° from centre gaze creates physical discomfort and forces excessive head movement. Unconstrained spatial UI would be visually impressive in a demo and exhausting in a real onboarding session lasting 2–3 hours. Orbit enforces the 60° comfort zone strictly for all primary interactions, reserving peripheral space for ambient environmental information only. Ergonomics is not a constraint — it is a feature.
+          - generic [ref=e258]:
+            - img [ref=e260]
+            - generic [ref=e266]:
+              - generic [ref=e268]: "05"
+              - heading "Motion sensitivity toggle + dwell time customisation built to spec." [level=3] [ref=e269]
+              - generic [ref=e270]:
+                - generic [ref=e271]:
+                  - paragraph [ref=e272]: We chose
+                  - paragraph [ref=e273]: Full visionOS accessibility API integration
+                - generic [ref=e274]:
+                  - paragraph [ref=e275]: Over
+                  - paragraph [ref=e276]: Defer accessibility to post-launch iteration
+              - paragraph [ref=e277]: Vestibular disorders affect approximately 35% of adults over 40. Enterprise workforces skew older than consumer apps. A spatial experience with unchecked motion can trigger dizziness, nausea, or disorientation in a meaningful proportion of any enterprise deployment. Motion sensitivity toggle and dwell time customisation are first-class features in Orbit — not post-launch additions. Accessibility is not a checkbox at the end of the design process.
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - paragraph [ref=e282]: 04 — Artefacts
+          - heading "What got made." [level=2] [ref=e283]
+          - paragraph [ref=e284]: Five design artefacts that translate the concept into concrete deliverables — each described in production-ready detail for Figma implementation.
+        - generic [ref=e285]:
+          - generic [ref=e287]:
+            - img [ref=e289]
+            - generic [ref=e293]:
+              - paragraph [ref=e294]: Journey Map
+              - heading "Spatial user journey map" [level=3] [ref=e295]
+              - paragraph [ref=e296]: A non-linear journey map plotted across four onboarding sessions (Day 1, Week 1, Week 2, Month 1), tracking spatial awareness, cognitive load, AI agent touchpoints, and emotional state. Depth notation shows when information is revealed in the foreground vs mid-ground plane — reflecting the actual disclosure model rather than a linear page flow.
+              - generic [ref=e298]: Connects to Decision 03 — Progressive disclosure
+          - generic [ref=e300]:
+            - img [ref=e302]
+            - generic [ref=e305]:
+              - paragraph [ref=e306]: IA / Structure
+              - heading "3D information architecture diagram" [level=3] [ref=e307]
+              - paragraph [ref=e308]: "A depth-annotated IA diagram showing how content is distributed across Orbit's three spatial planes. Foreground: personal context (my team, my tools, today's focus). Mid-ground: department context. Background: organisational context. Each plane has a defined interaction grammar — foreground uses gaze + pinch, mid-ground uses dwell, background uses AI agent-initiated disclosure."
+              - generic [ref=e310]: Connects to Decisions 03 + 04 — Depth planes + FOV constraint
+          - generic [ref=e312]:
+            - img [ref=e314]
+            - generic [ref=e316]:
+              - paragraph [ref=e317]: UI Screens
+              - heading "Vision Pro UI screens (4 key states)" [level=3] [ref=e318]
+              - paragraph [ref=e319]: "Four production-ready visionOS screens: (1) Spatial Org Map home state — floating team cards in a constellation within the 60° comfort zone. (2) Team Detail panel — mid-ground slides forward with role cards and AI-suggested introductions. (3) Tool Discovery panel — 3D dock of enterprise tools with contextual tooltips. (4) Day 1 Checklist — ambient floating checklist in far-left peripheral zone."
+              - generic [ref=e321]: Connects to all five design decisions
+          - generic [ref=e323]:
+            - img [ref=e325]
+            - generic [ref=e327]:
+              - paragraph [ref=e328]: Conversation Design
+              - heading "AI agent conversation flow" [level=3] [ref=e329]
+              - paragraph [ref=e330]: "A branching conversation flow for the Orbit AI agent across the Day 1 session. Key moments: welcome + spatial orientation (no menu required), first gaze event detection triggering proactive context injection, error-graceful fallbacks when gaze is ambiguous, and the transition from guided to autonomous navigation at session end. Role-parameterised: an engineer and an account manager receive different first-hour disclosure paths."
+              - generic [ref=e332]: Connects to Decision 02 — Voice-first AI agent
+          - generic [ref=e334]:
+            - img [ref=e336]
+            - generic [ref=e340]:
+              - paragraph [ref=e341]: Wireframe
+              - heading "Depth plane wireframe concept" [level=3] [ref=e342]
+              - paragraph [ref=e343]: A low-fidelity wireframe annotated with depth plane distances (in metres from eye position), interaction grammar per plane, and motion vectors for transitions between foreground, mid-ground, and background states. Includes a reduced-motion variant showing the accessibility path — all transitions replaced with cross-fades and static position changes, no parallax or scaling effects.
+              - generic [ref=e345]: Connects to Decisions 04 + 05 — FOV constraint + accessibility
+      - generic [ref=e348]:
+        - generic [ref=e349]:
+          - paragraph [ref=e350]: 04b — Product UI
+          - heading "The product, in space." [level=2] [ref=e351]
+          - paragraph [ref=e352]: Four key states of the Orbit visionOS interface — designed for spatial computing's gaze, pinch, and voice interaction model.
+        - generic [ref=e353]:
+          - button "Spatial Org Map Home State" [ref=e354]:
+            - text: Spatial Org Map
+            - generic [ref=e355]: Home State
+          - button "Team Detail After Gaze" [ref=e356]:
+            - text: Team Detail
+            - generic [ref=e357]: After Gaze
+          - button "Tool Discovery Step 2 of 5" [ref=e358]:
+            - text: Tool Discovery
+            - generic [ref=e359]: Step 2 of 5
+          - button "AI Guide — Ava Day 1 Session" [ref=e360]:
+            - text: AI Guide — Ava
+            - generic [ref=e361]: Day 1 Session
+        - generic [ref=e362]:
+          - generic [ref=e368]: Orbit · visionOS · Spatial Org Map
+          - generic [ref=e371]:
+            - generic [ref=e372]:
+              - generic [ref=e373]: Orbit
+              - generic [ref=e374]: DAY 1 · SESSION 1 OF 4
+            - img
+            - generic [ref=e377]:
+              - generic [ref=e378]: Your team
+              - generic [ref=e381]: Engineering
+              - text: 12 members
+            - generic [ref=e382]:
+              - generic [ref=e385]: Design
+              - text: 8 members
+            - generic [ref=e386]:
+              - generic [ref=e389]: Product
+              - text: 6 members
+            - generic [ref=e390]:
+              - generic [ref=e393]: Data
+              - text: 9 members
+            - generic [ref=e394]:
+              - generic [ref=e397]: DevOps
+              - text: 5 members
+            - generic [ref=e398]:
+              - generic [ref=e401]: Security
+              - text: 4 members
+            - generic [ref=e402]:
+              - generic [ref=e405]: HR Ops
+              - text: 7 members
+            - generic [ref=e406]:
+              - generic [ref=e409]: Finance
+              - text: 11 members
+            - generic [ref=e410]:
+              - generic [ref=e411]: Day 1 Progress
+              - generic [ref=e420]: 3/7
+      - generic [ref=e423]:
+        - generic [ref=e424]:
+          - paragraph [ref=e425]: 05 — Projected Outcomes
+          - heading "The business case in numbers." [level=2] [ref=e426]:
+            - text: The business case
+            - text: in numbers.
+          - paragraph [ref=e427]: Projected metrics modelled from published enterprise onboarding benchmarks and spatial learning research. These represent the hypothesis Orbit is designed to validate.
+        - generic [ref=e428]:
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - img [ref=e432]
+              - generic [ref=e435]: Primary metric
+            - generic [ref=e436]:
+              - generic [ref=e437]: 60%
+              - paragraph [ref=e438]: Reduction in time-to-full-productivity
+              - paragraph [ref=e439]: "Modelled from Gallup data on onboarding effectiveness. Baseline: month 4. Orbit target: month 1.5."
+          - generic [ref=e440]:
+            - img [ref=e442]
+            - generic [ref=e444]:
+              - generic [ref=e445]: 40%
+              - paragraph [ref=e446]: Fewer IT support tickets in week one
+          - generic [ref=e447]:
+            - img [ref=e449]
+            - generic [ref=e451]:
+              - generic [ref=e452]: "+28"
+              - paragraph [ref=e453]: Projected onboarding NPS lift
+          - generic [ref=e454]:
+            - img [ref=e456]
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - text: 3h
+                - generic [ref=e463]: vs
+                - text: 3w
+              - paragraph [ref=e464]: Context-building time, drastically reduced
+          - generic [ref=e466]:
+            - paragraph [ref=e467]: How the ROI case closes
+            - paragraph [ref=e468]:
+              - text: At a 500-person annual hire rate and a fully-loaded cost of $120k per employee, a 60% reduction in ramp time represents approximately
+              - strong [ref=e469]: $18M in recovered annual productivity
+              - text: . Device fleet cost for a Vision Pro deployment (~$3.5M hardware + implementation) has a sub-12-month payback period — before accounting for IT ticket reduction, reduced attrition, or HR time savings. The business case closes on productivity alone.
+            - generic [ref=e470]:
+              - generic [ref=e471]: "Year 1: +12%"
+              - generic [ref=e472]: "Year 2: +24%"
+      - generic [ref=e475]:
+        - generic [ref=e476]:
+          - paragraph [ref=e477]: 06 — Reflection
+          - heading "What I'd do differently." [level=2] [ref=e478]
+          - paragraph [ref=e479]: Speculative work earns credibility through honest self-assessment. Here is what I'd validate, what I'd cut, and what designing for a genuinely new modality taught me.
+        - generic [ref=e480]:
+          - generic [ref=e481]:
+            - img [ref=e483]
+            - generic [ref=e485]:
+              - paragraph [ref=e486]: What I'd validate first
+              - paragraph [ref=e487]: The 3-hour context claim
+              - paragraph [ref=e488]: "The core value proposition — spatial context in 3 hours vs 3 weeks — is the hypothesis everything else rests on. Before building further, I'd run a constrained usability study: two cohorts of enterprise new hires, one through a spatial visionOS prototype, one through standard wiki + Slack onboarding. Measuring time to first correct answer on 10 org-structure questions and self-reported confidence would either validate the bet or force a fundamental reframe. No amount of design quality makes the wrong bet right."
+          - generic [ref=e489]:
+            - img [ref=e491]
+            - generic [ref=e497]:
+              - paragraph [ref=e498]: What I'd cut in V2
+              - paragraph [ref=e499]: The background org plane
+              - paragraph [ref=e500]: The three-plane information architecture is conceptually clean but the background plane — full org structure, cross-functional dependencies — is informationally dense for day one. In V2 I'd make it exclusively available from week two onward, unlocked by session completion milestones. This tightens progressive disclosure further and removes the risk of Orbit recreating the information overload it was designed to solve. Depth is only valuable if the content behind it earns the user's attention.
+          - generic [ref=e501]:
+            - img [ref=e503]
+            - generic [ref=e506]:
+              - paragraph [ref=e507]: What I learned
+              - paragraph [ref=e508]: Spatial UX has no inherited grammar
+              - paragraph [ref=e509]: "Every medium I've designed for — web, mobile, plugin — has an interaction grammar users bring with them. visionOS does not. This means every interaction needs to be taught, not assumed. It surfaced a principle I want to carry forward: when you are designing for a new modality, the onboarding of the onboarding tool is itself a design problem. Orbit would need a 5-minute spatial tutorial before the spatial org map. The meta-layer is not a nice-to-have."
+        - generic [ref=e510]:
+          - paragraph [ref=e511]: Why this work exists
+          - paragraph [ref=e512]: Orbit is a bet that spatial computing will reshape how enterprise knowledge is delivered — and that the designers who understand that modality now will define what it becomes.
+          - paragraph [ref=e513]: This is speculative work — deliberately so. The best time to think carefully about a new interaction paradigm is before the market forces you to think fast. Orbit is that thinking, made concrete.
+    - generic [ref=e514]:
+      - generic [ref=e519]:
+        - generic [ref=e520]: Up Next
+        - link "Aulys Accessibility Continue Reading" [ref=e521] [cursor=pointer]:
+          - /url: /work/aulys
+          - heading "Aulys Accessibility" [level=2] [ref=e522]
+          - generic [ref=e523]:
+            - text: Continue Reading
+            - img [ref=e524]
+      - link "View All Projects" [ref=e527] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e528]
+        - generic [ref=e530]: View All Projects
+  - contentinfo [ref=e531]:
+    - generic [ref=e532]:
+      - paragraph [ref=e533]:
+        - generic [ref=e534]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e535]:
+        - link "GitHub Profile" [ref=e536] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e537]
+        - link "LinkedIn Profile" [ref=e540] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e541]
+        - link "Send email to adichinchakar@gmail.com" [ref=e545] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com
+  - button "Open Next.js Dev Tools" [ref=e551] [cursor=pointer]:
+    - img [ref=e552]

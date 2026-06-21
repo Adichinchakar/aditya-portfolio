@@ -41,10 +41,10 @@ export function ProblemContext() {
                         01 — Before State
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
-                        What We Were Working With
+                        Five Teams, Five Different Buttons.
                     </h2>
                     <p className="text-xl text-zinc-700 leading-relaxed max-w-2xl">
-                        Fragmented design across 5+ products, each team writing components independently, zero token alignment.
+                        The same button existed five ways across five products. Every team rebuilt components from scratch, nothing shared a token, and each new feature widened the gap. The cracks were in the UI, but the cause was structural.
                     </p>
                 </motion.div>
 

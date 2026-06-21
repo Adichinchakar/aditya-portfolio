@@ -1,9 +1,65 @@
 "use client";
 
 import { motion } from "@/lib/motion";
+import { Wand2 } from "lucide-react";
 
 function ProjectIllustration({ slug }: { slug: string }) {
     switch (slug) {
+        case "aulys-code":
+            return (
+                <div className="absolute inset-0 flex items-center justify-center bg-blue-50/50 overflow-hidden group-hover:bg-blue-100/40 transition-colors duration-1000">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_60%)]" aria-hidden="true" />
+                    <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(59,130,246,0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.18) 1px, transparent 1px)', backgroundSize: '40px 40px' }} aria-hidden="true" />
+
+                    {/* Faux VS Code editor — mirrors the case-study hero */}
+                    <div className="relative w-72 h-56 bg-zinc-900 rounded-2xl border border-white/10 shadow-xl flex flex-col overflow-hidden transition-all duration-700 group-hover:scale-105 group-hover:shadow-2xl">
+                        {/* Title bar */}
+                        <div className="h-9 border-b border-white/5 bg-zinc-900/80 flex items-center px-4 gap-2">
+                            <div className="flex gap-1.5" aria-hidden="true">
+                                <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
+                                <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
+                                <div className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
+                            </div>
+                            <span className="ml-1 text-[10px] font-mono text-zinc-500">Dashboard.tsx</span>
+                        </div>
+
+                        {/* Code body */}
+                        <div className="relative flex-1 p-4 font-mono text-[11px] leading-relaxed">
+                            {/* Always-on scan sweep */}
+                            <div className="pointer-events-none absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-blue-400/10 to-transparent animate-[scan_3s_ease-in-out_infinite]" aria-hidden="true" />
+
+                            <div className="flex gap-3">
+                                <span className="text-zinc-600 w-3">1</span>
+                                <span className="text-zinc-500">return (</span>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-zinc-600 w-3">2</span>
+                                <span className="relative">
+                                    <span className="text-rose-300/90 underline decoration-wavy decoration-rose-400/70 underline-offset-4">
+                                        &lt;img src=&quot;/logo.png&quot; /&gt;
+                                    </span>
+                                    {/* Blinking caret */}
+                                    <span className="absolute -right-2 top-0 w-[2px] h-4 bg-blue-400 animate-pulse" aria-hidden="true" />
+                                </span>
+                            </div>
+                            <div className="flex gap-3">
+                                <span className="text-zinc-600 w-3">3</span>
+                                <span className="text-zinc-500">)</span>
+                            </div>
+
+                            {/* Diagnostic chip — slides in on hover */}
+                            <div className="mt-4 rounded-lg border border-rose-500/30 bg-rose-500/10 p-2.5 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-200">
+                                <div className="text-[9px] font-bold uppercase tracking-widest text-rose-300 mb-1.5">
+                                    WCAG 1.1.1 · Missing alt text
+                                </div>
+                                <span className="inline-flex items-center gap-1 rounded-md bg-blue-500/20 border border-blue-400/30 px-2 py-0.5 text-[9px] font-semibold text-blue-200">
+                                    <Wand2 className="w-2.5 h-2.5" aria-hidden="true" /> Quick Fix
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
         case "aulys":
             return (
                 <div className="absolute inset-0 flex items-center justify-center bg-[#0a0a0c] overflow-hidden">
@@ -54,19 +110,19 @@ function ProjectIllustration({ slug }: { slug: string }) {
                     
                     <div className="relative w-full h-full flex items-center justify-center">
                         {/* Background SVG connections */}
-                        <svg className="absolute inset-0 w-full h-full" fill="none">
-                            <path d="M 30% 50% C 50% 50%, 50% 30%, 70% 30%" className="stroke-orange-500/10 stroke-2" />
-                            <path d="M 30% 50% C 50% 50%, 50% 70%, 70% 70%" className="stroke-orange-500/10 stroke-2" />
-                            <path d="M 70% 30% L 85% 30%" className="stroke-orange-500/10 stroke-2" />
-                            <path d="M 70% 70% L 85% 70%" className="stroke-orange-500/10 stroke-2" />
+                        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none">
+                            <path d="M 30 50 C 50 50, 50 30, 70 30" className="stroke-orange-500/10 stroke-[0.5]" />
+                            <path d="M 30 50 C 50 50, 50 70, 70 70" className="stroke-orange-500/10 stroke-[0.5]" />
+                            <path d="M 70 30 L 85 30" className="stroke-orange-500/10 stroke-[0.5]" />
+                            <path d="M 70 70 L 85 70" className="stroke-orange-500/10 stroke-[0.5]" />
                             
                             {/* Animated pulses */}
-                            <path d="M 30% 50% C 50% 50%, 50% 30%, 70% 30%" className="stroke-orange-400 stroke-2 opacity-0 group-hover:opacity-100 group-hover:animate-[dash_2s_linear_infinite]" strokeDasharray="20 100" />
-                            <path d="M 30% 50% C 50% 50%, 50% 70%, 70% 70%" className="stroke-orange-400 stroke-2 opacity-0 group-hover:opacity-100 group-hover:animate-[dash_2s_linear_infinite] [animation-delay:1s]" strokeDasharray="20 100" />
+                            <path d="M 30 50 C 50 50, 50 30, 70 30" className="stroke-orange-400 stroke-[0.5] opacity-0 group-hover:opacity-100 group-hover:animate-[dash_2s_linear_infinite]" strokeDasharray="5 20" />
+                            <path d="M 30 50 C 50 50, 50 70, 70 70" className="stroke-orange-400 stroke-[0.5] opacity-0 group-hover:opacity-100 group-hover:animate-[dash_2s_linear_infinite] [animation-delay:1s]" strokeDasharray="5 20" />
                             
                             {/* Connection lines */}
-                            <path d="M 30% 50% C 50% 50%, 50% 30%, 70% 30%" className="stroke-orange-400/50 stroke-[3px] stroke-dasharray-[1000] stroke-dashoffset-[1000] group-hover:stroke-dashoffset-[0] transition-all duration-[1500ms] ease-in-out" />
-                            <path d="M 30% 50% C 50% 50%, 50% 70%, 70% 70%" className="stroke-orange-400/50 stroke-[3px] stroke-dasharray-[1000] stroke-dashoffset-[1000] group-hover:stroke-dashoffset-[0] transition-all duration-[1500ms] ease-in-out delay-150" />
+                            <path d="M 30 50 C 50 50, 50 30, 70 30" className="stroke-orange-400/50 stroke-[1px] stroke-dasharray-[1000] stroke-dashoffset-[1000] group-hover:stroke-dashoffset-[0] transition-all duration-[1500ms] ease-in-out" />
+                            <path d="M 30 50 C 50 50, 50 70, 70 70" className="stroke-orange-400/50 stroke-[1px] stroke-dasharray-[1000] stroke-dashoffset-[1000] group-hover:stroke-dashoffset-[0] transition-all duration-[1500ms] ease-in-out delay-150" />
                         </svg>
 
                         {/* Trigger Node */}

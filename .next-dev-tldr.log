@@ -1,0 +1,110 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://100.79.197.17:3000
+- Environments: .env.local
+✓ Ready in 1950ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Admin\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Admin\Desktop\Portfolio Website\package-lock.json
+
+
+[browser] ./Desktop/Portfolio Website/src/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module './PnpPlugin'
+Require stack:
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\ResolverFactory.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\@tailwindcss\node\dist\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\@tailwindcss\postcss\dist\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\chunks\[root-of-the-server]__0b75ylh._.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\chunks\[turbopack]_runtime.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)]
+    [at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)]
+    [at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)]
+    [at Module._load (node:internal/modules/cjs/loader:1227:37)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:328:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1504:12)]
+    [at require (node:internal/modules/helpers:152:16)]
+    [at Object.<anonymous> (C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\ResolverFactory.js:28:19)]
+    [at Module._compile (node:internal/modules/cjs/loader:1761:14)]
+
+Import trace:
+  Client Component Browser:
+    ./Desktop/Portfolio Website/src/app/globals.css [Client Component Browser]
+    ./Desktop/Portfolio Website/src/app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2774:21)
+    at processMessage (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2835:28)
+    at <unknown> (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2680:13)
+    at WebSocket.handleMessage (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2325:17) (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2774:21)
+[browser] ./Desktop/Portfolio Website/src/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module './PnpPlugin'
+Require stack:
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\ResolverFactory.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\@tailwindcss\node\dist\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\@tailwindcss\postcss\dist\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\chunks\[root-of-the-server]__0b75ylh._.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\chunks\[turbopack]_runtime.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)]
+    [at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)]
+    [at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)]
+    [at Module._load (node:internal/modules/cjs/loader:1227:37)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:328:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1504:12)]
+    [at require (node:internal/modules/helpers:152:16)]
+    [at Object.<anonymous> (C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\ResolverFactory.js:28:19)]
+    [at Module._compile (node:internal/modules/cjs/loader:1761:14)]
+
+Import trace:
+  Client Component Browser:
+    ./Desktop/Portfolio Website/src/app/globals.css [Client Component Browser]
+    ./Desktop/Portfolio Website/src/app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2774:21)
+    at processMessage (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2835:28)
+    at <unknown> (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2680:13)
+    at WebSocket.handleMessage (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2325:17) (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2774:21)
+[browser] ./Desktop/Portfolio Website/src/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module './PnpPlugin'
+Require stack:
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\ResolverFactory.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\@tailwindcss\node\dist\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\node_modules\@tailwindcss\postcss\dist\index.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\chunks\[root-of-the-server]__0b75ylh._.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\chunks\[turbopack]_runtime.js
+- C:\Users\Admin\Desktop\Portfolio Website\.next\dev\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)]
+    [at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)]
+    [at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)]
+    [at Module._load (node:internal/modules/cjs/loader:1227:37)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:328:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1504:12)]
+    [at require (node:internal/modules/helpers:152:16)]
+    [at Object.<anonymous> (C:\Users\Admin\Desktop\Portfolio Website\node_modules\enhanced-resolve\lib\ResolverFactory.js:28:19)]
+    [at Module._compile (node:internal/modules/cjs/loader:1761:14)]
+
+Import trace:
+  Client Component Browser:
+    ./Desktop/Portfolio Website/src/app/globals.css [Client Component Browser]
+    ./Desktop/Portfolio Website/src/app/layout.tsx [Server Component] 
+    at handleErrors (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2774:21)
+    at processMessage (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2835:28)
+    at <unknown> (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2680:13)
+    at WebSocket.handleMessage (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2325:17) (file://C:/Users/Admin/Desktop/Portfolio Website/.next/dev/static/chunks/08j5_next_dist_client_0j.ve4s._.js:2774:21)
+○ Compiling / ...
+ GET /health 404 in 7.6s (next.js: 6.9s, application-code: 639ms)
+ GET / 200 in 7.6s (next.js: 7.4s, application-code: 254ms)
+ GET /work/aulys 200 in 8.7s (next.js: 8.5s, application-code: 235ms)
+ GET /work/aulys 200 in 5.2s (next.js: 5.0s, application-code: 243ms)
+ GET /work/aulys 200 in 92ms (next.js: 26ms, application-code: 66ms)
+[browser] Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly. (<anonymous>)

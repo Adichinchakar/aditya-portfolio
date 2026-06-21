@@ -25,7 +25,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                 <article
                     onMouseMove={handleMouseMove}
                     className={cn(
-                        "relative h-full overflow-hidden rounded-[2rem] border transition-all duration-700 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] min-h-[400px] flex flex-col md:flex-row items-stretch",
+                        "relative h-full overflow-hidden rounded-[2rem] border transition-all duration-700 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] min-h-[400px] flex flex-col-reverse md:flex-row items-stretch",
                         project.highlight 
                             ? "bg-zinc-950 border-white/10 group-hover:border-[#00BC7C]/40" 
                             : "bg-white/40 backdrop-blur-xl border-white/40 group-hover:bg-white/60",
@@ -90,7 +90,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                     </div>
                     
                     {/* Graphic Side */}
-                    <div className={cn("relative overflow-hidden transition-colors flex-shrink-0", project.highlight ? "hidden md:flex flex-1 border-l border-white/5" : "h-64 md:h-auto md:w-5/12 lg:w-1/2 border-t md:border-t-0 md:border-l border-white/40 bg-white/30")}>
+                    <div className={cn("relative overflow-hidden transition-colors flex-shrink-0", project.highlight ? "hidden md:flex flex-1 border-l border-white/5" : "h-64 sm:h-72 md:h-auto md:w-5/12 lg:w-1/2 border-b md:border-b-0 md:border-l border-white/40 bg-white/30")}>
                         <ProjectIllustration slug={project.slug} />
                     </div>
                 </article>

@@ -1,10 +1,9 @@
 import OpenAI from 'openai';
 import { withFallback } from '../utils/errorHandler';
 
-// Initialize the OpenAI client for NVIDIA NIM
 const ai = new OpenAI({
-  baseURL: 'https://integrate.api.nvidia.com/v1',
-  apiKey: process.env.NVIDIA_API_KEY
+  baseURL: 'https://api.groq.com/openai/v1',
+  apiKey: process.env.GROQ_API_KEY,
 });
 
 export interface AnalysisResult {
@@ -14,7 +13,6 @@ export interface AnalysisResult {
   justification: string;
 }
 
-// System prompt for the Analyzer Agent
 const ANALYZER_PROMPT = `
 You are an Elite AI Systems Architect and Senior Product Engineer acting as 'The Analyzer'.
 Your task is to perform a deep, qualitative, and personalized analysis of a Job Description (JD)
@@ -34,6 +32,32 @@ You MUST output a valid JSON object with the exact following schema and nothing 
 }
 `;
 
+function extractJSON(text: string): string {
+  // Extract the first {...} block — handles prose before/after JSON and markdown wrappers
+  const match = text.match(/\{[\s\S]*\}/);
+  if (match) return match[0];
+  return text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+}
+
+function validateResult(parsed: unknown): AnalysisResult {
+  if (
+    typeof parsed !== 'object' || parsed === null ||
+    typeof (parsed as any).match_score !== 'number' ||
+    !Array.isArray((parsed as any).strengths) ||
+    !Array.isArray((parsed as any).gaps) ||
+    typeof (parsed as any).justification !== 'string'
+  ) {
+    throw new Error('Analyzer returned malformed JSON structure.');
+  }
+  const p = parsed as any;
+  return {
+    match_score: Math.min(100, Math.max(0, Math.round(p.match_score))),
+    strengths: p.strengths.filter((s: unknown) => typeof s === 'string' && s.trim()),
+    gaps: p.gaps.filter((g: unknown) => typeof g === 'string' && g.trim()),
+    justification: String(p.justification).trim(),
+  };
+}
+
 export async function analyzeJobDescription(jdText: string, portfolioContext: string): Promise<AnalysisResult> {
   const prompt = `
 ### Job Description
@@ -45,37 +69,25 @@ ${portfolioContext}
 Analyze the Job Description against the Portfolio Context and generate the JSON response.
 `;
 
-  // Define the primary function using NVIDIA NIM (Minimax)
   const primaryFn = async () => {
     const response = await ai.chat.completions.create({
-      model: 'minimaxai/minimax-m2.7',
+      model: 'llama-3.3-70b-versatile',
       messages: [
         { role: 'system', content: ANALYZER_PROMPT },
         { role: 'user', content: prompt }
       ],
       temperature: 0.2,
-      max_tokens: 4096,
+      max_tokens: 800,
     });
 
     const text = response.choices[0]?.message?.content;
-    if (!text) {
-      throw new Error("Analyzer returned empty response.");
-    }
-    
-    // Strip markdown formatting if the model wraps it in \`\`\`json
-    const cleanedText = text.replace(/^\`\`\`json/m, '').replace(/^\`\`\`/m, '').trim();
+    if (!text) throw new Error('Analyzer returned empty response.');
 
-    return JSON.parse(cleanedText) as AnalysisResult;
+    return validateResult(JSON.parse(extractJSON(text)));
   };
 
-  const secondaryFn = async () => {
-    console.log("Simulating fallback to secondary provider...");
-    return {
-      match_score: 50,
-      strengths: ["Fallback provider used - partial match"],
-      gaps: ["Could not fully analyze due to primary provider failure"],
-      justification: "Primary API failed, this is a fallback response."
-    };
+  const secondaryFn = async (): Promise<AnalysisResult> => {
+    throw new Error('Primary AI provider failed. Please try again later.');
   };
 
   return withFallback(primaryFn, secondaryFn, 'Agent A: Analyzer');

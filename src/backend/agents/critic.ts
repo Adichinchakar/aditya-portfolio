@@ -2,10 +2,9 @@ import OpenAI from 'openai';
 import { AnalysisResult } from './analyzer';
 import { withFallback } from '../utils/errorHandler';
 
-// Initialize the OpenAI client for NVIDIA NIM
 const ai = new OpenAI({
-  baseURL: 'https://integrate.api.nvidia.com/v1',
-  apiKey: process.env.NVIDIA_API_KEY
+  baseURL: 'https://api.groq.com/openai/v1',
+  apiKey: process.env.GROQ_API_KEY,
 });
 
 export interface ValidationResult {
@@ -34,6 +33,24 @@ Output a valid JSON object with the exact following schema and nothing else:
 }
 `;
 
+function extractJSON(text: string): string {
+  const match = text.match(/\{[\s\S]*\}/);
+  if (match) return match[0];
+  return text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+}
+
+function validateResult(parsed: unknown): ValidationResult {
+  if (
+    typeof parsed !== 'object' || parsed === null ||
+    typeof (parsed as any).isValid !== 'boolean' ||
+    typeof (parsed as any).feedback !== 'string'
+  ) {
+    throw new Error('Critic returned malformed JSON structure.');
+  }
+  const p = parsed as any;
+  return { isValid: p.isValid, feedback: String(p.feedback).trim() };
+}
+
 export async function validateAnalysis(jdText: string, portfolioContext: string, draft: AnalysisResult): Promise<ValidationResult> {
   const prompt = `
 ### Job Description
@@ -50,28 +67,25 @@ Evaluate the Draft Analysis.
 
   const primaryFn = async () => {
     const response = await ai.chat.completions.create({
-      model: 'minimaxai/minimax-m2.7',
+      model: 'llama-3.3-70b-versatile',
       messages: [
         { role: 'system', content: CRITIC_PROMPT },
         { role: 'user', content: prompt }
       ],
       temperature: 0.2,
-      max_tokens: 4096,
+      max_tokens: 256,
     });
 
     const text = response.choices[0]?.message?.content;
-    if (!text) {
-      throw new Error("Critic returned empty response.");
-    }
+    if (!text) throw new Error('Critic returned empty response.');
 
-    // Strip markdown formatting if the model wraps it in \`\`\`json
-    const cleanedText = text.replace(/^\`\`\`json/m, '').replace(/^\`\`\`/m, '').trim();
-
-    return JSON.parse(cleanedText) as ValidationResult;
+    return validateResult(JSON.parse(extractJSON(text)));
   };
 
-  const secondaryFn = async () => {
-    return { isValid: true, feedback: "Approved by fallback provider" };
+  // If critic itself fails, auto-approve the draft rather than killing the whole workflow
+  const secondaryFn = async (): Promise<ValidationResult> => {
+    console.warn('[Agent B] Critic unavailable — auto-approving draft.');
+    return { isValid: true, feedback: 'Critic unavailable — proceeding with unvalidated draft.' };
   };
 
   return withFallback(primaryFn, secondaryFn, 'Agent B: Critic');

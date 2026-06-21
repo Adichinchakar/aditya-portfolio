@@ -2,7 +2,7 @@ import { analyzeJobDescription, AnalysisResult } from './analyzer';
 import { validateAnalysis } from './critic';
 import { supabase } from '../config/supabase';
 
-const MAX_RETRIES = 2;
+const MAX_RETRIES = 1;
 
 export async function runCompatibilityEngine(
   jdText: string, 

@@ -101,7 +101,7 @@ export const resumeData = {
         {
             company: "Windows Film Production",
             role: "Motion Graphic Designer",
-            period: "Jun 2017 — Jul 2018",
+            period: "Jun 2017 — Jul 2019",
             location: "Pune, India",
             highlights: [
                 "Produced motion graphics and animated campaigns for brand storytelling and client presentations.",
@@ -130,5 +130,5 @@ export const resumeData = {
         { name: "AI Associate", issuer: "Salesforce", issued: "Sep 2024", expires: "Sep 2029", credentialId: "4944767" },
         { name: "Uxcel Accessibility Specialist", issuer: "Uxcel" },
     ],
-    pdfUrl: "/Aditya_Chinchakar_Resume.pdf",
+    pdfUrl: "/Aditya_Chinchakar_2026.pdf",
 };

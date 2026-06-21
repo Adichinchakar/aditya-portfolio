@@ -3,6 +3,22 @@ export type DomainFilter = typeof DOMAIN_FILTERS[number];
 
 export const PROJECTS = [
     {
+        slug: "ai-match-engine",
+        domain: "AI / ML" as const,
+        company: "AI Match Engine",
+        description: "Built a fully functional Multi-Agent AI system directly into my portfolio. It reads job descriptions and rigorously debates whether my skills match the role.",
+        tags: ["Multi-Agent AI", "Next.js", "Supabase"],
+        href: "/work/ai-match-engine",
+        spotlight: "rgba(99, 102, 241, 0.12)",
+        border: "group-hover:border-indigo-500/30",
+        accent: "from-[#6366F1] to-[#4F46E5]",
+        accentBg: "bg-[#1E1B4B]",
+        readTime: "4 min read",
+        role: "Design Engineer",
+        metric: "Self-Qualifying Portfolio",
+        highlight: true,
+    },
+    {
         slug: "aulys",
         domain: "AI / ML" as const,
         company: "Aulys",
@@ -16,7 +32,7 @@ export const PROJECTS = [
         readTime: "12 min read",
         role: "Design Engineer",
         metric: "WCAG 2.2 AAA Compliance",
-        highlight: true,
+        highlight: false,
     },
     {
         slug: "aulys-code",

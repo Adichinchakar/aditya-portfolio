@@ -10,8 +10,14 @@ import NexusBankingPage from "@/components/case-studies/nexus-banking/content";
 import InfosysPage from "@/components/case-studies/infosys/content";
 import OrbitPage from "@/components/case-studies/orbit/content";
 import { NextCaseStudyHero } from "@/components/case-studies/next-case-study-hero";
+import AiMatchEnginePage from "@/components/case-studies/ai-match-engine/content";
 
 const CASE_STUDIES = {
+    "ai-match-engine": {
+        component: AiMatchEnginePage,
+        title: "AI Match Engine — Case Study | Aditya Chinchakar",
+        description: "Built a fully functional Multi-Agent AI system directly into my portfolio. It reads job descriptions and rigorously debates whether my skills match the role.",
+    },
     "simplifai": {
         component: SimplifaiPage,
         title: "Simplifai Workflow Engine — Case Study | Aditya Chinchakar",

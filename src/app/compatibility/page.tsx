@@ -14,9 +14,9 @@ export default function CompatibilityPage() {
         {/* Header Section */}
         <header className="flex flex-col items-center text-center gap-6">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-xs font-semibold text-emerald-700">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+            <span aria-label="Currently active" className="relative flex h-2 w-2">
+              <span aria-hidden="true" className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span aria-hidden="true" className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
             Live AI Experiment
           </div>

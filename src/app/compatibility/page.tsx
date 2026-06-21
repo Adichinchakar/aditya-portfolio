@@ -18,15 +18,15 @@ export default function CompatibilityPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
-            Live AI Agent
+            Live AI Experiment
           </div>
           
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-900">
-            Compatibility Engine
+            Evaluate My Profile
           </h1>
           
           <p className="text-lg text-zinc-500 max-w-2xl leading-relaxed">
-            Drop in your Job Description. Two AI agents (an Analyzer and a Critic) will review it against my 9-year portfolio history and generate a brutally honest compatibility score with specific evidence.
+            I built this multi-agent AI system to demonstrate my ability to design and engineer AI products. Paste your Job Description below, and watch the agents brutally evaluate my fit for your role in real-time.
           </p>
         </header>
 

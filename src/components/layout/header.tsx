@@ -10,6 +10,7 @@ import { ContactSheet } from "@/components/ui/contact-sheet";
 const navLinks = [
     { href: "/work", label: "Work" },
     { href: "/now", label: "Now" },
+    { href: "/compatibility", label: "AI Match" },
     { href: "/writing", label: "Writing" },
     { href: "/resume", label: "Resume" },
 ];

@@ -22,17 +22,41 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Job description text is required.' }, { status: 400 });
     }
 
-    // Capture IP address for rate-limiting or basic tracking (respecting PII constraints)
-    // Note: To implement strict rate-limiting, you'd integrate Redis/Upstash here.
     const ip = req.headers.get('x-forwarded-for') || 'unknown';
 
-    // To implement streaming responses for Vercel/Next.js, we would use Server-Sent Events (SSE) 
-    // or the ai-sdk stream. For this implementation using standard Gemini API, we await the result.
-    // If true streaming of the JSON is needed, we'd use streamGenerateContent in analyzer.ts.
-    
-    const result = await runCompatibilityEngine(jdText, PORTFOLIO_CONTEXT, ip);
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        const emitProgress = (message: string) => {
+          const data = JSON.stringify({ type: 'status', message });
+          controller.enqueue(encoder.encode(`data: ${data}\n\n`));
+        };
 
-    return NextResponse.json(result);
+        try {
+          emitProgress('[System] Initializing Compatibility Engine...');
+          
+          const result = await runCompatibilityEngine(jdText, PORTFOLIO_CONTEXT, ip, emitProgress);
+          
+          emitProgress('[System] Analysis Complete.');
+          const finalData = JSON.stringify({ type: 'result', data: result });
+          controller.enqueue(encoder.encode(`data: ${finalData}\n\n`));
+        } catch (err: any) {
+          console.error("[API Analyze Stream Error]:", err);
+          const errorData = JSON.stringify({ type: 'error', message: err.message || 'Analysis failed' });
+          controller.enqueue(encoder.encode(`data: ${errorData}\n\n`));
+        } finally {
+          controller.close();
+        }
+      }
+    });
+
+    return new Response(stream, {
+      headers: {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+      },
+    });
 
   } catch (error: any) {
     console.error("[API Analyze] Error:", error);

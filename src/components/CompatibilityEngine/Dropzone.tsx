@@ -49,12 +49,6 @@ export function Dropzone({ onSubmit, isLoading }: DropzoneProps) {
 
   return (
     <div className="w-full max-w-3xl mx-auto p-6 sm:p-8 bg-white/70 rounded-[2rem] border border-white/60 shadow-[0_8px_40px_-12px_rgb(0,0,0,0.08)] backdrop-blur-xl">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight flex items-center justify-center gap-2">
-          Candidate-Job Compatibility Engine
-        </h2>
-        <p className="text-zinc-500 mt-2 text-sm sm:text-base font-medium">Paste a Job Description to analyze alignment with my 9-year Product Design portfolio.</p>
-      </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div 

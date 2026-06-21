@@ -7,9 +7,6 @@ import { cn } from "@/lib/utils";
 import { ChevronRight, Terminal, Layers, Sparkles, Zap, ArrowUpRight } from "lucide-react";
 import { ContactSheet } from "@/components/ui/contact-sheet";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-const CompatibilityEngine = dynamic(() => import("@/components/CompatibilityEngine/EngineUI"));
 
 // ─── Role Data ───────────────────────────────────────────────────────────────
 
@@ -199,7 +196,6 @@ function RoleMatcher() {
 
 export function Hero() {
     const [isContactSheetOpen, setIsContactSheetOpen] = useState(false);
-    const [isEngineExpanded, setIsEngineExpanded] = useState(false);
     const reduce = useReducedMotion();
 
     return (
@@ -298,49 +294,27 @@ export function Hero() {
                             </button>
                         </Magnetic>
                         <Magnetic strength={0.25}>
-                            <button
-                                onClick={() => setIsEngineExpanded(!isEngineExpanded)}
-                                className={cn(
-                                    "px-7 py-3.5 rounded-full font-semibold flex items-center gap-2 shadow-sm border active:scale-[0.97] transition-all relative overflow-hidden group",
-                                    isEngineExpanded 
-                                        ? "bg-indigo-50 border-indigo-200 text-indigo-700 shadow-indigo-100/50" 
-                                        : "bg-white border-zinc-200 text-zinc-900 hover:bg-zinc-50 hover:border-zinc-300"
-                                )}
+                            <Link
+                                href="/compatibility"
+                                className="px-7 py-3.5 rounded-full bg-white border-zinc-200 text-zinc-900 font-semibold flex items-center gap-2 shadow-sm border active:scale-[0.97] transition-all relative overflow-hidden hover:bg-zinc-50 hover:border-zinc-300 group"
                             >
-                                <Sparkles className={cn("w-4 h-4 transition-colors", isEngineExpanded ? "text-indigo-600" : "text-zinc-400 group-hover:text-indigo-500")} />
+                                <Sparkles className="w-4 h-4 transition-colors text-zinc-400 group-hover:text-indigo-500" />
                                 Check JD Compatibility
-                            </button>
+                            </Link>
                         </Magnetic>
                     </motion.div>
                 </div>
 
-                {/* ── Fold 2 — The Receipt or Compatibility Engine ─────────────────────── */}
+                {/* ── Fold 2 — The Role Matcher ─────────────────────── */}
                 <div className="mt-16 md:mt-20 w-full flex justify-start md:justify-center min-h-[400px]">
-                    <AnimatePresence mode="wait">
-                        {isEngineExpanded ? (
-                            <motion.div
-                                key="engine"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                                className="w-full flex justify-center"
-                            >
-                                <CompatibilityEngine />
-                            </motion.div>
-                        ) : (
-                            <motion.div
-                                key="role-matcher"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 20 }}
-                                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                                className="w-full flex justify-center"
-                            >
-                                <RoleMatcher />
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                        className="w-full flex justify-center"
+                    >
+                        <RoleMatcher />
+                    </motion.div>
                 </div>
             </div>
 

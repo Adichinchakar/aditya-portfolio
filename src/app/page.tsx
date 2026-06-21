@@ -5,7 +5,6 @@ import { MotionSection } from "@/components/layout/motion-section";
 
 const About = dynamic(() => import("@/components/home/about").then((m) => ({ default: m.About })));
 const Testimonials = dynamic(() => import("@/components/home/testimonials").then((m) => ({ default: m.Testimonials })));
-const ComponentLab = dynamic(() => import("@/components/home/component-lab").then((m) => ({ default: m.ComponentLab })));
 const Contact = dynamic(() => import("@/components/home/contact").then((m) => ({ default: m.Contact })));
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <SelectedWork />
       <MotionSection delay={0.1}><About /></MotionSection>
       <MotionSection delay={0.1}><Testimonials /></MotionSection>
-      <MotionSection delay={0.1}><ComponentLab /></MotionSection>
       <MotionSection delay={0.1}><Contact /></MotionSection>
     </div>
   );

@@ -56,48 +56,32 @@ const roles = [
 // Static color maps so Tailwind doesn't purge dynamic class names
 const colorMap = {
     indigo: {
-        bg: "bg-indigo-50/60",
-        border: "border-indigo-100/80",
-        leftBorder: "border-l-indigo-400",
-        text: "text-indigo-700",
-        tag: "bg-indigo-100 text-indigo-700 border-indigo-200",
+        accent: "bg-indigo-500",
+        text: "text-indigo-600",
         tabActive: "bg-indigo-600 text-white shadow-md shadow-indigo-200/50",
-        iconBg: "bg-indigo-100",
-        iconColor: "text-indigo-600",
-        headlineColor: "text-indigo-800",
+        iconBg: "bg-indigo-50",
+        iconColor: "text-indigo-500",
     },
     violet: {
-        bg: "bg-violet-50/60",
-        border: "border-violet-100/80",
-        leftBorder: "border-l-violet-400",
-        text: "text-violet-700",
-        tag: "bg-violet-100 text-violet-700 border-violet-200",
+        accent: "bg-violet-500",
+        text: "text-violet-600",
         tabActive: "bg-violet-600 text-white shadow-md shadow-violet-200/50",
-        iconBg: "bg-violet-100",
-        iconColor: "text-violet-600",
-        headlineColor: "text-violet-800",
+        iconBg: "bg-violet-50",
+        iconColor: "text-violet-500",
     },
     amber: {
-        bg: "bg-amber-50/60",
-        border: "border-amber-100/80",
-        leftBorder: "border-l-amber-400",
-        text: "text-amber-700",
-        tag: "bg-amber-100 text-amber-700 border-amber-200",
+        accent: "bg-amber-500",
+        text: "text-amber-600",
         tabActive: "bg-amber-600 text-white shadow-md shadow-amber-200/50",
-        iconBg: "bg-amber-100",
-        iconColor: "text-amber-600",
-        headlineColor: "text-amber-800",
+        iconBg: "bg-amber-50",
+        iconColor: "text-amber-500",
     },
     emerald: {
-        bg: "bg-emerald-50/60",
-        border: "border-emerald-100/80",
-        leftBorder: "border-l-emerald-400",
-        text: "text-emerald-700",
-        tag: "bg-emerald-100 text-emerald-700 border-emerald-200",
+        accent: "bg-emerald-500",
+        text: "text-emerald-600",
         tabActive: "bg-emerald-600 text-white shadow-md shadow-emerald-200/50",
-        iconBg: "bg-emerald-100",
-        iconColor: "text-emerald-600",
-        headlineColor: "text-emerald-800",
+        iconBg: "bg-emerald-50",
+        iconColor: "text-emerald-500",
     },
 };
 
@@ -113,7 +97,7 @@ function RoleMatcher() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full max-w-2xl"
+            className="w-full"
         >
             <div className="relative bg-white/70 border border-zinc-200/60 rounded-2xl p-5 sm:p-6 backdrop-blur-xl shadow-[0_8px_40px_-12px_rgb(0,0,0,0.08)] overflow-hidden">
 
@@ -137,54 +121,58 @@ function RoleMatcher() {
                     ))}
                 </div>
 
-                {/* Content — left-aligned, scannable */}
+                {/* Content */}
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={role.id}
-                        initial={{ opacity: 0, y: 8 }}
+                        initial={{ opacity: 0, y: 6 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -8 }}
+                        exit={{ opacity: 0, y: -6 }}
                         transition={{ duration: 0.15, ease: "easeOut" }}
-                        className={cn(
-                            "rounded-xl p-4 sm:p-5 border border-l-[3px]",
-                            colors.bg, colors.border, colors.leftBorder
-                        )}
+                        className="rounded-xl border border-zinc-200/70 bg-white relative overflow-hidden"
                     >
-                        {/* Icon + headline */}
-                        <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center mb-3", colors.iconBg)}>
-                            <role.icon className={cn("w-4 h-4", colors.iconColor)} />
+                        {/* Thin colored top accent */}
+                        <div className={cn("absolute inset-x-0 top-0 h-[2px]", colors.accent)} />
+
+                        <div className="p-4 sm:p-5 pt-5 sm:pt-6">
+                            {/* Icon + headline row */}
+                            <div className="flex items-start gap-3 mb-3">
+                                <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5", colors.iconBg)}>
+                                    <role.icon className={cn("w-4 h-4", colors.iconColor)} aria-hidden="true" />
+                                </div>
+                                <p className="text-base sm:text-lg font-bold tracking-tight text-zinc-900 leading-snug">
+                                    {role.headline}
+                                </p>
+                            </div>
+
+                            <p className="text-sm text-zinc-500 leading-relaxed mb-4">
+                                {role.proof}
+                            </p>
+
+                            {/* Tags — neutral */}
+                            <div className="flex flex-wrap gap-1.5 mb-4">
+                                {role.tags.map(tag => (
+                                    <span
+                                        key={tag}
+                                        className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Case study link */}
+                            <Link
+                                href={role.caseStudy.href}
+                                className={cn(
+                                    "inline-flex items-center gap-1.5 text-xs font-semibold hover:underline underline-offset-4 transition-opacity hover:opacity-80",
+                                    colors.text
+                                )}
+                            >
+                                {role.caseStudy.label}
+                                <ArrowUpRight className="w-3.5 h-3.5" />
+                            </Link>
                         </div>
-
-                        <p className={cn("text-base sm:text-lg font-extrabold tracking-tight mb-2", colors.headlineColor)}>
-                            {role.headline}
-                        </p>
-                        <p className="text-sm text-zinc-600 leading-relaxed mb-4 text-left">
-                            {role.proof}
-                        </p>
-
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                            {role.tags.map(tag => (
-                                <span
-                                    key={tag}
-                                    className={cn("px-2 py-0.5 rounded-full text-[11px] font-semibold border", colors.tag)}
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-
-                        {/* Case study link */}
-                        <Link
-                            href={role.caseStudy.href}
-                            className={cn(
-                                "inline-flex items-center gap-1.5 text-xs font-bold hover:underline underline-offset-4 transition-colors",
-                                colors.text
-                            )}
-                        >
-                            {role.caseStudy.label}
-                            <ArrowUpRight className="w-3.5 h-3.5" />
-                        </Link>
                     </motion.div>
                 </AnimatePresence>
             </div>
@@ -300,15 +288,8 @@ export function Hero() {
                 </div>
 
                 {/* ── Fold 2 — The Role Matcher ─────────────────────── */}
-                <div className="mt-16 md:mt-20 w-full flex justify-start md:justify-center min-h-[400px]">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                        className="w-full flex justify-center"
-                    >
-                        <RoleMatcher />
-                    </motion.div>
+                <div className="mt-16 md:mt-20 w-full">
+                    <RoleMatcher />
                 </div>
             </div>
 

@@ -299,7 +299,7 @@ export function Hero() {
                                 className="px-7 py-3.5 rounded-full bg-white border-zinc-200 text-zinc-900 font-semibold flex items-center gap-2 shadow-sm border active:scale-[0.97] transition-all relative overflow-hidden hover:bg-zinc-50 hover:border-zinc-300 group"
                             >
                                 <Sparkles className="w-4 h-4 transition-colors text-zinc-400 group-hover:text-indigo-500" />
-                                Check JD Compatibility
+                                AI Match
                             </Link>
                         </Magnetic>
                     </motion.div>

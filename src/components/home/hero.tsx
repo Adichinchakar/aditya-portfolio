@@ -85,6 +85,169 @@ const colorMap = {
     },
 };
 
+// ─── Code-Based Glassmorphism Illustrations ─────────────────────────────────
+
+function GlassIllustration({ roleId, color }: { roleId: string; color: "emerald" | "indigo" | "violet" | "amber" }) {
+    const isEmerald = color === "emerald";
+    const isIndigo = color === "indigo";
+    const isViolet = color === "violet";
+    const isAmber = color === "amber";
+
+    return (
+        <div className={cn(
+            "relative w-full md:w-[300px] h-[240px] md:h-[260px] flex-shrink-0 flex items-center justify-center overflow-hidden",
+            "bg-gradient-to-br",
+            isEmerald && "from-emerald-50/80 to-green-100/40",
+            isIndigo && "from-indigo-50/80 to-blue-100/40",
+            isViolet && "from-violet-50/80 to-purple-100/40",
+            isAmber && "from-amber-50/80 to-yellow-100/40",
+            "border-b md:border-b-0 md:border-r border-zinc-200/50"
+        )}>
+            {/* Ambient Background Blur for the glass effect to interact with */}
+            <div className={cn(
+                "absolute inset-0 opacity-40 blur-2xl transition-colors duration-700",
+                isEmerald && "bg-emerald-300",
+                isIndigo && "bg-indigo-300",
+                isViolet && "bg-violet-300",
+                isAmber && "bg-amber-300"
+            )} />
+
+            {/* Dynamic Glassmorphic Elements based on role */}
+            <div className="relative z-10 w-full h-full flex items-center justify-center perspective-[1000px]">
+                
+                {isEmerald && (
+                    <motion.div 
+                        initial={{ rotateY: -10, rotateX: 5, y: 10, opacity: 0 }}
+                        animate={{ rotateY: 0, rotateX: 0, y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+                        className="relative w-48 h-32 rounded-xl border border-white/60 bg-white/20 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-3 flex flex-col gap-2"
+                    >
+                        {/* Editor Header */}
+                        <div className="flex gap-1.5 mb-1">
+                            <div className="w-2 h-2 rounded-full bg-rose-400" />
+                            <div className="w-2 h-2 rounded-full bg-amber-400" />
+                            <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                        </div>
+                        {/* Code Lines */}
+                        <motion.div className="w-3/4 h-2 rounded-full bg-emerald-500/20" animate={{ width: ["75%", "80%", "75%"] }} transition={{ duration: 3, repeat: Infinity }} />
+                        <div className="w-1/2 h-2 rounded-full bg-zinc-400/20" />
+                        <div className="w-5/6 h-2 rounded-full bg-emerald-500/20" />
+                        <div className="w-2/3 h-2 rounded-full bg-zinc-400/20" />
+                        
+                        {/* Floating overlay card */}
+                        <motion.div 
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -right-6 -bottom-4 w-24 h-24 rounded-lg border border-white/60 bg-white/30 backdrop-blur-lg shadow-xl p-2"
+                        >
+                            <div className="w-full h-full rounded border border-emerald-200/50 bg-emerald-50/40 flex items-center justify-center">
+                                <motion.div 
+                                    animate={{ scale: [1, 1.1, 1] }} 
+                                    transition={{ duration: 2, repeat: Infinity }}
+                                    className="w-6 h-6 rounded-full bg-emerald-400/80 blur-[1px]" 
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+
+                {isIndigo && (
+                    <motion.div 
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="relative w-48 h-40 flex flex-col gap-3"
+                    >
+                        {/* Component Grid */}
+                        <div className="flex gap-3 h-12">
+                            <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, delay: 0.1 }} className="flex-1 rounded-xl border border-white/60 bg-white/20 backdrop-blur-md shadow-sm p-2 flex items-center justify-center">
+                                <div className="w-full h-4 rounded bg-indigo-500/20" />
+                            </motion.div>
+                            <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, delay: 0.3 }} className="w-12 rounded-xl border border-white/60 bg-white/20 backdrop-blur-md shadow-sm flex items-center justify-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500/30" />
+                            </motion.div>
+                        </div>
+                        <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 4, repeat: Infinity }} className="flex-1 rounded-xl border border-white/60 bg-white/20 backdrop-blur-md shadow-[0_8px_20px_rgb(0,0,0,0.04)] p-3 flex flex-col justify-between">
+                            <div className="w-1/3 h-3 rounded bg-indigo-500/20" />
+                            <div className="space-y-1.5">
+                                <div className="w-full h-2 rounded bg-zinc-400/20" />
+                                <div className="w-4/5 h-2 rounded bg-zinc-400/20" />
+                            </div>
+                            <div className="w-full h-8 rounded-lg bg-indigo-500/70 mt-2 flex items-center justify-center">
+                                <div className="w-1/2 h-2 rounded bg-white/50" />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+
+                {isViolet && (
+                    <div className="relative w-full h-full flex items-center justify-center">
+                        {/* Center Hub */}
+                        <motion.div 
+                            animate={{ scale: [1, 1.05, 1], boxShadow: ["0 0 0 rgba(139,92,246,0)", "0 0 20px rgba(139,92,246,0.2)", "0 0 0 rgba(139,92,246,0)"] }}
+                            transition={{ duration: 3, repeat: Infinity }}
+                            className="absolute z-20 w-14 h-14 rounded-2xl border border-white/60 bg-white/20 backdrop-blur-xl shadow-lg flex items-center justify-center"
+                        >
+                            <div className="w-6 h-6 rounded-lg bg-violet-500/70" />
+                        </motion.div>
+                        
+                        {/* Satellites */}
+                        {[
+                            { r: 0, d: 50, s: 8 },
+                            { r: 72, d: 65, s: 10 },
+                            { r: 144, d: 55, s: 6 },
+                            { r: 216, d: 60, s: 12 },
+                            { r: 288, d: 45, s: 8 }
+                        ].map((sat, i) => (
+                            <motion.div
+                                key={i}
+                                className="absolute z-10 origin-center"
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 25 + i * 5, repeat: Infinity, ease: "linear" }}
+                                style={{ transform: `rotate(${sat.r}deg)` }}
+                            >
+                                <div 
+                                    className="rounded-full border border-violet-300/40 bg-white/40 backdrop-blur-sm"
+                                    style={{ transform: `translateY(-${sat.d}px)`, width: sat.s, height: sat.s }}
+                                />
+                                {/* Connecting line */}
+                                <div className="absolute top-1/2 left-1/2 w-[1px] bg-violet-400/20 origin-top" style={{ height: sat.d, transform: 'translateX(-50%)' }} />
+                            </motion.div>
+                        ))}
+                    </div>
+                )}
+
+                {isAmber && (
+                    <div className="relative w-48 h-40 flex items-center justify-center">
+                        {/* Layered screens ascending */}
+                        {[0, 1, 2].map((i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: i * -12, x: i * 15, opacity: 1 }}
+                                transition={{ duration: 0.6, delay: i * 0.15, type: "spring" }}
+                                className="absolute w-32 h-24 rounded-xl border border-white/60 bg-white/20 backdrop-blur-md shadow-[0_4px_20px_rgb(0,0,0,0.05)] p-2"
+                                style={{ zIndex: i }}
+                            >
+                                <div className="w-full h-full rounded-lg border border-amber-200/40 bg-amber-50/30 flex flex-col justify-between p-2">
+                                    <div className="w-1/2 h-2 rounded bg-amber-500/30" />
+                                    <div className="w-full h-8 rounded border border-amber-300/30 bg-amber-100/40" />
+                                </div>
+                            </motion.div>
+                        ))}
+                        {/* Launch spark */}
+                        <motion.div 
+                            animate={{ y: [0, -70], x: [0, 40], opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5] }}
+                            transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
+                            className="absolute bottom-4 left-0 w-8 h-8 rounded-full bg-gradient-to-t from-amber-400 to-yellow-200 blur-md z-20 pointer-events-none"
+                        />
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+}
+
 // ─── Role Matcher Card ────────────────────────────────────────────────────────
 
 function RoleMatcher() {
@@ -101,8 +264,26 @@ function RoleMatcher() {
         >
             <div className="relative bg-white/70 border border-zinc-200/60 rounded-2xl p-5 sm:p-6 backdrop-blur-xl shadow-[0_8px_40px_-12px_rgb(0,0,0,0.08)] overflow-hidden">
 
+                {/* Ambient background glow per role */}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={`glow-${role.id}`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className={cn(
+                            "absolute -top-20 -right-20 w-60 h-60 rounded-full blur-[100px] pointer-events-none -z-0",
+                            role.color === "emerald" && "bg-emerald-200/30",
+                            role.color === "indigo" && "bg-indigo-200/30",
+                            role.color === "violet" && "bg-violet-200/30",
+                            role.color === "amber" && "bg-amber-200/30"
+                        )}
+                    />
+                </AnimatePresence>
+
                 {/* Role tabs — inverted active state */}
-                <div className="flex flex-nowrap gap-1.5 mb-5 overflow-x-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+                <div className="flex flex-nowrap gap-1.5 mb-5 overflow-x-auto [&::-webkit-scrollbar]:hidden [scrollbar-width:none] relative z-10">
                     {roles.map((r, i) => (
                         <button
                             key={r.id}
@@ -121,57 +302,63 @@ function RoleMatcher() {
                     ))}
                 </div>
 
-                {/* Content */}
+                {/* Content — glass illustration + text layout */}
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={role.id}
-                        initial={{ opacity: 0, y: 6 }}
+                        initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -6 }}
-                        transition={{ duration: 0.15, ease: "easeOut" }}
-                        className="rounded-xl border border-zinc-200/70 bg-white relative overflow-hidden"
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="rounded-xl border border-zinc-200/70 bg-white relative overflow-hidden z-10"
                     >
                         {/* Thin colored top accent */}
                         <div className={cn("absolute inset-x-0 top-0 h-[2px]", colors.accent)} />
 
-                        <div className="p-4 sm:p-5 pt-5 sm:pt-6">
-                            {/* Icon + headline row */}
-                            <div className="flex items-start gap-3 mb-3">
-                                <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5", colors.iconBg)}>
-                                    <role.icon className={cn("w-4 h-4", colors.iconColor)} aria-hidden="true" />
+                        <div className="flex flex-col md:flex-row">
+                            {/* Left — Code-Based Glass Illustration */}
+                            <GlassIllustration roleId={role.id} color={role.color} />
+
+                            {/* Right — Content */}
+                            <div className="p-4 sm:p-5 pt-5 sm:pt-6 flex-1 min-w-0">
+                                {/* Icon + headline row */}
+                                <div className="flex items-start gap-3 mb-3">
+                                    <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5", colors.iconBg)}>
+                                        <role.icon className={cn("w-4 h-4", colors.iconColor)} aria-hidden="true" />
+                                    </div>
+                                    <p className="text-base sm:text-lg font-bold tracking-tight text-zinc-900 leading-snug">
+                                        {role.headline}
+                                    </p>
                                 </div>
-                                <p className="text-base sm:text-lg font-bold tracking-tight text-zinc-900 leading-snug">
-                                    {role.headline}
+
+                                <p className="text-sm text-zinc-500 leading-relaxed mb-4">
+                                    {role.proof}
                                 </p>
+
+                                {/* Tags — neutral */}
+                                <div className="flex flex-wrap gap-1.5 mb-4">
+                                    {role.tags.map(tag => (
+                                        <span
+                                            key={tag}
+                                            className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Case study link */}
+                                <Link
+                                    href={role.caseStudy.href}
+                                    className={cn(
+                                        "inline-flex items-center gap-1.5 text-xs font-semibold hover:underline underline-offset-4 transition-opacity hover:opacity-80",
+                                        colors.text
+                                    )}
+                                >
+                                    {role.caseStudy.label}
+                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                </Link>
                             </div>
-
-                            <p className="text-sm text-zinc-500 leading-relaxed mb-4">
-                                {role.proof}
-                            </p>
-
-                            {/* Tags — neutral */}
-                            <div className="flex flex-wrap gap-1.5 mb-4">
-                                {role.tags.map(tag => (
-                                    <span
-                                        key={tag}
-                                        className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-zinc-100 text-zinc-600 border border-zinc-200"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                            {/* Case study link */}
-                            <Link
-                                href={role.caseStudy.href}
-                                className={cn(
-                                    "inline-flex items-center gap-1.5 text-xs font-semibold hover:underline underline-offset-4 transition-opacity hover:opacity-80",
-                                    colors.text
-                                )}
-                            >
-                                {role.caseStudy.label}
-                                <ArrowUpRight className="w-3.5 h-3.5" />
-                            </Link>
                         </div>
                     </motion.div>
                 </AnimatePresence>

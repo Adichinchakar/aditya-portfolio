@@ -101,7 +101,7 @@ export function ComponentLab() {
     const hooks = ['useState', 'useEffect', 'useRef'];
     const components = ['motion', 'AnimatePresence'];
 
-    let highlighted = code
+    const highlighted = code
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(new RegExp(`\\b(${keywords.join('|')})\\b`, 'g'), '<span class="text-purple-400">$1</span>')
@@ -118,6 +118,7 @@ export function ComponentLab() {
     activeComponent.code.split('\n').map(escapeLine)
   );
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHighlightedLines(highlightCode(activeComponent.code));
   }, [activeComponent.code]);
 

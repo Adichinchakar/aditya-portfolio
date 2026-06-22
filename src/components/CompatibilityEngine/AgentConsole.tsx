@@ -53,7 +53,7 @@ function getIconForLog(message: string) {
 
 export function AgentConsole({ logs, onAbort }: AgentConsoleProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const startTimeRef = useRef<number>(Date.now());
+  const startTimeRef = useRef<number>(0);
   const [elapsed, setElapsed] = useState(0);
 
   useEffect(() => {

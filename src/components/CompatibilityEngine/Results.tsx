@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { Check, X, Sparkles, Mail, FileText, ArrowUpRight, TrendingUp, AlertTriangle, CheckCircle2, Info, ChevronDown } from 'lucide-react';
 import { AnalysisResult } from '@/backend/agents/analyzer';
+import Link from 'next/link';
 
 interface ResultsProps {
   result: AnalysisResult;
@@ -352,14 +353,14 @@ export function Results({ result }: ResultsProps) {
                 <Mail aria-hidden="true" className="w-4 h-4" />
                 Let's Talk Gaps
               </a>
-              <a
+              <Link
                 href="/work"
                 className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-zinc-100 text-zinc-700 font-semibold rounded-xl hover:bg-zinc-200 transition-colors text-sm"
               >
                 <FileText aria-hidden="true" className="w-4 h-4" />
                 Full Portfolio
                 <ArrowUpRight aria-hidden="true" className="w-3.5 h-3.5 opacity-50" />
-              </a>
+              </Link>
             </div>
           </div>
         </m.div>

@@ -9,6 +9,8 @@ import { ContactSheet } from "@/components/ui/contact-sheet";
 
 const navLinks = [
     { href: "/work", label: "Work" },
+    { href: "/now", label: "Now" },
+    { href: "/compatibility", label: "AI Match" },
     { href: "/writing", label: "Writing" },
     { href: "/resume", label: "Resume" },
 ];
@@ -43,7 +45,7 @@ export function Header() {
                     <nav className="hidden md:flex items-center gap-8">
                         {/* Live Plugin badge */}
                         <Link
-                            href="https://aulys-app.vercel.app/"
+                            href="https://www.figma.com/community/plugin/1571488947872228693"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 hover:border-emerald-300 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 overflow-hidden"
@@ -98,7 +100,7 @@ export function Header() {
                             className="absolute top-full left-0 right-0 bg-background border-b border-zinc-200 p-6 md:hidden flex flex-col gap-4"
                         >
                             <Link
-                                href="https://aulys-app.vercel.app/"
+                                href="https://www.figma.com/community/plugin/1571488947872228693"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-emerald-200 bg-emerald-50 w-fit"

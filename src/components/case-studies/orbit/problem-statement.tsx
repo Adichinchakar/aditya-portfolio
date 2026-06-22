@@ -33,7 +33,7 @@ export function ProblemStatement() {
                     </div>
 
                     <p className="text-lg text-[#adaaaa] leading-relaxed max-w-2xl">
-                        Enterprise organisations spend thousands per hire on onboarding that still fails where it matters: inside the new hire&apos;s mental model of how the org actually works. The problem isn&apos;t information volume. It&apos;s spatial disorientation — new hires cannot see the map.
+                        Enterprise organisations spend thousands per hire on onboarding that still fails where it matters: inside the new hire&apos;s mental model of how the org actually works. Three weeks in, a new engineer can sit in a meeting and not place a single name, project, or past decision. The information all got delivered. None of it had anywhere to stick, because there was never a map to hang it on.
                     </p>
                 </motion.div>
 

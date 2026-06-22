@@ -35,9 +35,9 @@ export function TheStory() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.18 }}
-                        className="text-sm text-zinc-600 max-w-xl mx-auto"
+                        className="text-sm text-zinc-400 max-w-xl mx-auto"
                     >
-                        I directed AI tools for all engineering execution — compressing what would have been a 6-month MVP into 10 weeks. Every product decision, architecture choice, and UX direction was mine. The AI was the builder; I was the product owner.
+                        AI was my builder; I was the product owner. I directed every product, UX, and architecture decision — then validated the output before it shipped. The chunked-traversal call below is one I made and can defend line by line; the AI implemented it. That division compressed a 6-month MVP into 10 weeks.
                     </motion.p>
                 </div>
 

@@ -1,0 +1,590 @@
+
+=== http://localhost:3000/ ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (23)
+      .cursor-default.hover\:text-zinc-700.duration-300:nth-child(1)
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .cursor-default.hover\:text-zinc-700.duration-300:nth-child(3)
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .cursor-default.hover\:text-zinc-700.duration-300:nth-child(5)
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .cursor-default.hover\:text-zinc-700.duration-300:nth-child(7)
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .cursor-default.hover\:text-zinc-700.duration-300:nth-child(9)
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .font-mono.tracking-widest.text-zinc-500
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #71717b, background color: #09090b, font size: 
+      .bg-zinc-950 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #71717b, background color: #09090b, font size: 
+      .bg-zinc-950 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #71717b, background color: #09090b, font size: 
+      a[href$="aulys-code"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-3.font-mono.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="aulys-code"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="aulys-code"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-orange-500\/30 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-3.font-mono.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-orange-500\/30 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-orange-500\/30 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="infosys"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-3.font-mono.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="infosys"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="infosys"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:pr-10.md\:p-12 > .flex-1 > .mb-8.gap-3.flex-col > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .sm\:p-5.min-h-\[130px\].rounded-\[1\.5rem\]:nth-child(1) > .mt-1.text-\[10px\].leading-relaxed
+         » Fix any of the following: Element has insufficient color contrast of 2.57 (foreground color: #9f9fa9, background color: #fdfdfd, font size: 
+      .sm\:p-5.min-h-\[130px\].rounded-\[1\.5rem\]:nth-child(2) > .mt-1.text-\[10px\].leading-relaxed
+         » Fix any of the following: Element has insufficient color contrast of 2.57 (foreground color: #9f9fa9, background color: #fdfdfd, font size: 
+      .sm\:p-5.min-h-\[130px\].rounded-\[1\.5rem\]:nth-child(3) > .mt-1.text-\[10px\].leading-relaxed
+         » Fix any of the following: Element has insufficient color contrast of 2.57 (foreground color: #9f9fa9, background color: #fdfdfd, font size: 
+      .sm\:p-5.min-h-\[130px\].rounded-\[1\.5rem\]:nth-child(4) > .mt-1.text-\[10px\].leading-relaxed
+         » Fix any of the following: Element has insufficient color contrast of 2.57 (foreground color: #9f9fa9, background color: #fdfdfd, font size: 
+      .text-\[10px\].tracking-widest.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 
+      .md\:text-lg.max-w-xl.leading-relaxed
+         » Fix any of the following: Element has insufficient color contrast of 4.4 (foreground color: #71717b, background color: #eff5fd, font size: 1
+
+=== http://localhost:3000/about ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (11)
+      h1 > .text-zinc-400.font-bold
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .tracking-wide.font-mono.mb-8
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .text-emerald-600
+         » Fix any of the following: Element has insufficient color contrast of 3.5 (foreground color: #009966, background color: #fafafa, font size: 1
+      #skills-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      #experience-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .relative:nth-child(1) > .flex-wrap.gap-2.mb-2 > .ml-auto.font-mono.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .relative:nth-child(2) > .flex-wrap.gap-2.mb-2 > .ml-auto.font-mono.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .relative:nth-child(3) > .flex-wrap.gap-2.mb-2 > .ml-auto.font-mono.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .relative:nth-child(4) > .flex-wrap.gap-2.mb-2 > .ml-auto.font-mono.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      #working-with-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      #values-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+
+=== http://localhost:3000/now ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (3)
+      h1 > .text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      a[href$="aulys-app.vercel.app"]
+         » Fix any of the following: Element has insufficient color contrast of 3.5 (foreground color: #009966, background color: #fafafa, font size: 1
+
+=== http://localhost:3000/resume ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (16)
+      .gap-1\.5.text-zinc-400.inline-flex
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .self-center
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      #skills-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      #experience-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .pl-8.last\:pb-0.pb-10:nth-child(1) > .sm\:items-start.sm\:justify-between.gap-1 > .h-fit.mt-0\.5.px-2\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.38 (foreground color: #9f9fa9, background color: #f4f4f5, font size: 
+      .pl-8.last\:pb-0.pb-10:nth-child(2) > .sm\:items-start.sm\:justify-between.gap-1 > .h-fit.mt-0\.5.px-2\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.38 (foreground color: #9f9fa9, background color: #f4f4f5, font size: 
+      .pl-8.last\:pb-0.pb-10:nth-child(3) > .sm\:items-start.sm\:justify-between.gap-1 > .h-fit.mt-0\.5.px-2\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.38 (foreground color: #9f9fa9, background color: #f4f4f5, font size: 
+      .pl-8.last\:pb-0.pb-10:nth-child(4) > .sm\:items-start.sm\:justify-between.gap-1 > .h-fit.mt-0\.5.px-2\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.38 (foreground color: #9f9fa9, background color: #f4f4f5, font size: 
+      .pl-8.last\:pb-0.pb-10:nth-child(5) > .sm\:items-start.sm\:justify-between.gap-1 > .h-fit.mt-0\.5.px-2\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.38 (foreground color: #9f9fa9, background color: #f4f4f5, font size: 
+      #project-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      #education-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .last\:mb-0 > .h-fit.mt-0\.5.px-2\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.38 (foreground color: #9f9fa9, background color: #f4f4f5, font size: 
+      #certs-heading
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .py-2\.5.rounded-xl.px-4:nth-child(1) > .mt-0\.5.text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mt-0\.5.text-zinc-400.text-xs:nth-child(3)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .py-2\.5.rounded-xl.px-4:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+
+=== http://localhost:3000/work ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (23)
+      .text-zinc-500.tracking-widest.font-mono
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #71717b, background color: #09090b, font size: 
+      .gap-3.items-center.flex:nth-child(1) > .tracking-wider.text-zinc-500.w-16
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #71717b, background color: #09090b, font size: 
+      .gap-3.items-center.flex:nth-child(2) > .tracking-wider.text-zinc-500.w-16
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #71717b, background color: #09090b, font size: 
+      a[href$="aulys-code"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="aulys-code"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="aulys-code"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-orange-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-orange-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-orange-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="infosys"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="infosys"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-indigo-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.48 (foreground color: #9f9fa9, background color: #f7f9fc, font size: 
+      .group-hover\:border-indigo-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-indigo-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-violet-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-violet-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-violet-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-emerald-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-emerald-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      .group-hover\:border-emerald-500\/30 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="nexus-banking"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-3
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="nexus-banking"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(1) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+      a[href$="nexus-banking"] > .group-hover\:border-blue-500\/30.group-hover\:bg-white\/60 > .p-7.md\:p-12.md\:pr-10 > .flex-1 > .mb-8.flex-col.gap-3 > .gap-3.items-center.flex:nth-child(2) > .tracking-wider.w-16.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.55 (foreground color: #9f9fa9, background color: #fcfcfc, font size: 
+
+=== http://localhost:3000/writing ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (23)
+      .text-zinc-400.font-bold
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(1) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(1) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(1) > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(2) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(2) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(2) > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(3) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(3) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(3) > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      a[href$="designing-for-bharat"] > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      a[href$="designing-for-bharat"] > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      a[href$="designing-for-bharat"] > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(5) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(5) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(5) > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(6) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(6) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(6) > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(7) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(7) > .sm\:flex-row.sm\:items-start.gap-4 > .min-w-0.flex-1 > .mb-3.gap-2.flex-wrap > .text-zinc-400.text-xs:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .rounded-2xl.p-6.md\:p-8:nth-child(7) > .sm\:flex-row.sm\:items-start.gap-4 > .sm\:flex.w-10.h-10
+         » Fix any of the following: Element has insufficient color contrast of 1.21 (foreground color: #e4e4e7, background color: #fafafa, font size: 
+      .tracking-\[0\.2em\]
+         » Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 
+
+=== http://localhost:3000/work/aulys ===
+violations: 0
+
+=== http://localhost:3000/work/aulys-code ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (1)
+      .p-5 > .text-zinc-500:nth-child(1)
+         » Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 
+
+=== http://localhost:3000/work/simplifai ===
+violations: 5
+  [critical] button-name — Buttons must have discernible text (6)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .flex-1.overflow-hidden.relative > .bottom-4.gap-1.left-4 > .text-slate-400.hover\:bg-slate-50.w-6:nth-child(1)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .flex-1.overflow-hidden.relative > .bottom-4.gap-1.left-4 > .text-slate-400.hover\:bg-slate-50.w-6:nth-child(3)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .h-12.justify-between.border-b > .hover\:text-slate-600.text-slate-400
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .flex-1.overflow-hidden.relative > .bottom-4.gap-1.left-4 > .text-slate-400.hover\:bg-slate-50.w-6:nth-child(1)
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .flex-1.overflow-hidden.relative > .bottom-4.gap-1.left-4 > .text-slate-400.hover\:bg-slate-50.w-6:nth-child(3)
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .h-12.justify-between.border-b > .hover\:text-slate-600.text-slate-400
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (16)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-r.w-64.border-slate-200 > .pb-4.overflow-y-auto.flex-1 > .mt-2.px-1.text-slate-400
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-r.w-64.border-slate-200 > .pb-4.overflow-y-auto.flex-1 > .mt-4.px-1.text-slate-400:nth-child(5)
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-r.w-64.border-slate-200 > .pb-4.overflow-y-auto.flex-1 > .mt-4.px-1.text-slate-400:nth-child(10)
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .font-mono.mb-3.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #52525c, background color: #18181b, font size: 
+      .text-center:nth-child(1) > .font-semibold.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #52525c, background color: #18181b, font size: 
+      .text-center:nth-child(3) > .font-semibold.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #52525c, background color: #18181b, font size: 
+      .text-center:nth-child(5) > .font-semibold.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.29 (foreground color: #52525c, background color: #18181b, font size: 
+      .hover\:border-purple-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-emerald-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-emerald-600.mb-4.font-black
+         » Fix any of the following: Element has insufficient color contrast of 3.56 (foreground color: #009966, background color: #fcfcfc, font size: 
+      .text-amber-600.mb-4.font-black
+         » Fix any of the following: Element has insufficient color contrast of 3.11 (foreground color: #e17100, background color: #fcfcfc, font size: 
+      .text-purple-500.tracking-\[0\.2em\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #ad46ff, background color: #ffffff, font size: 
+      .ml-2
+         » Fix any of the following: Element has insufficient color contrast of 2.24 (foreground color: #52525c, background color: #161b22, font size: 
+      .pl-8:nth-child(7) > .text-zinc-600:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.45 (foreground color: #52525c, background color: #0d1117, font size: 
+      .pl-8:nth-child(8) > .text-zinc-600:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.45 (foreground color: #52525c, background color: #0d1117, font size: 
+  [critical] label — Form elements must have labels (6)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .space-y-1\.5.flex-1.flex-col > textarea
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .grid-cols-2.grid.gap-3 > .space-y-1\.5:nth-child(1) > input[value="500"][type="number"]
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .grid-cols-2.grid.gap-3 > .space-y-1\.5:nth-child(2) > input[value="0.1"][type="number"]
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .space-y-1\.5.flex-1.flex-col > textarea
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .grid-cols-2.grid.gap-3 > .space-y-1\.5:nth-child(1) > input[value="500"][type="number"]
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .grid-cols-2.grid.gap-3 > .space-y-1\.5:nth-child(2) > input[value="0.1"][type="number"]
+  [serious] scrollable-region-focusable — Scrollable region must have keyboard access (2)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-r.w-64.border-slate-200 > .pb-4.overflow-y-auto.flex-1
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-r.w-64.border-slate-200 > .pb-4.overflow-y-auto.flex-1
+  [critical] select-name — Select element must have an accessible name (2)
+      .w-\[850px\] > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .space-y-1\.5:nth-child(2) > select
+      .min-w-\[900px\] > div > .font-sans.shadow-2xl.border-slate-300 > .flex-1.bg-white.relative > .bg-\[\#fafafa\].h-\[600px\].flex > .border-l.z-30.shadow-\[-10px_0_20px_rgba\(0\,0\,0\,0\.03\)\] > .overflow-y-auto.gap-5.p-5 > .space-y-1\.5:nth-child(2) > select
+
+=== http://localhost:3000/work/simplifai-design-system ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (93)
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(1) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(2) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(3) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(4) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(5) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(6) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .pt-4.mt-4.text-\[11px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(1)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(3)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .w-\[900px\] > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-indigo-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-emerald-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mt-1.font-medium
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-purple-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .tracking-\[0\.2em\].text-blue-500.mb-4
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .text-emerald-600.tracking-widest.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 3.54 (foreground color: #009966, background color: #f4fef9, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(1) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(2) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(3) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(4) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(5) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .md\:grid-cols-3.grid-cols-2.grid > .gap-3.items-center.flex:nth-child(6) > .min-w-0 > .text-zinc-400.text-\[10px\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(1) > .p-5.shadow-sm.rounded-2xl > .pt-4.mt-4.text-\[11px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(1)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(2)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(3)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(2) > .shadow-sm.overflow-hidden.rounded-2xl > .border-b.tracking-wider.grid-cols-4 > div:nth-child(4)
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > div:nth-child(2) > .md\:grid-cols-4.grid-cols-2.grid > div:nth-child(1) > .mb-1.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > div:nth-child(2) > .md\:grid-cols-4.grid-cols-2.grid > div:nth-child(2) > .mb-1.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > div:nth-child(2) > .md\:grid-cols-4.grid-cols-2.grid > div:nth-child(3) > .mb-1.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > div:nth-child(2) > .md\:grid-cols-4.grid-cols-2.grid > div:nth-child(3) > .text-\[9px\].text-red-500.mt-0\.5
+         » Fix any of the following: Element has insufficient color contrast of 3.8 (foreground color: #fb2c36, background color: #ffffff, font size: 6
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > div:nth-child(2) > .md\:grid-cols-4.grid-cols-2.grid > div:nth-child(4) > .mb-1.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > div:nth-child(2) > .md\:grid-cols-4.grid-cols-2.grid > div:nth-child(4) > .py-2.px-3.rounded-lg
+         » Fix any of the following: Element has insufficient color contrast of 2.33 (foreground color: #a1a1aa, background color: #f4f4f5, font size: 
+      .max-w-4xl > .space-y-12 > div:nth-child(3) > .space-y-6.p-5.shadow-sm > .pt-2.text-\[11px\].border-t
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .duration-300.border-blue-200.bg-blue-50 > .min-w-0.flex-1 > .leading-relaxed
+         » Fix any of the following: Element has insufficient color contrast of 4.43 (foreground color: #71717b, background color: #eff6ff, font size: 
+      .hover\:bg-white.duration-300.p-5:nth-child(2) > .min-w-0.flex-1 > .mb-1.gap-2.items-center > .py-0\.5.px-2.bg-zinc-100
+         » Fix any of the following: Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 
+      .hover\:bg-white.duration-300.p-5:nth-child(3) > .min-w-0.flex-1 > .mb-1.gap-2.items-center > .py-0\.5.px-2.bg-zinc-100
+         » Fix any of the following: Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 
+      .ml-2.py-1.px-3
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(1) > .text-center > .text-blue-500.mt-0\.5.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(1) > .text-center > .mt-0\.5.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(2) > .text-center > .text-blue-500.mt-0\.5.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(2) > .text-center > .mt-0\.5.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(3) > .text-center > .text-blue-500.mt-0\.5.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(3) > .text-center > .mt-0\.5.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(4) > .text-center > .text-blue-500.mt-0\.5.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(4) > .text-center > .mt-0\.5.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(5) > .text-center > .text-blue-500.mt-0\.5.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(5) > .text-center > .mt-0\.5.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(6) > .text-center > .text-blue-500.mt-0\.5.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .hover\:border-blue-300.hover\:shadow-md.p-4:nth-child(6) > .text-center > .mt-0\.5.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      div:nth-child(1) > .mb-5.tracking-widest.text-center
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(1) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(2) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(3) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(4) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(5) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(6) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-left.hover\:border-zinc-300.p-3:nth-child(7) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mb-5.text-purple-500.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 4.12 (foreground color: #ad46ff, background color: #ffffff, font size: 
+      .bg-purple-50.border-purple-200.p-3:nth-child(1) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.44 (foreground color: #9f9fa9, background color: #faf5ff, font size: 
+      .bg-purple-50.border-purple-200.p-3:nth-child(2) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.44 (foreground color: #9f9fa9, background color: #faf5ff, font size: 
+      .bg-purple-50.border-purple-200.p-3:nth-child(3) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.44 (foreground color: #9f9fa9, background color: #faf5ff, font size: 
+      .bg-purple-50.border-purple-200.p-3:nth-child(4) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.44 (foreground color: #9f9fa9, background color: #faf5ff, font size: 
+      .bg-purple-50.border-purple-200.p-3:nth-child(5) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.44 (foreground color: #9f9fa9, background color: #faf5ff, font size: 
+      .bg-purple-50.border-purple-200.p-3:nth-child(6) > .overflow-hidden > .truncate.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.44 (foreground color: #9f9fa9, background color: #faf5ff, font size: 
+      .mb-5.text-blue-500.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 3.76 (foreground color: #2b7fff, background color: #ffffff, font size: 
+      .p-3\.5.text-left.hover\:border-zinc-300:nth-child(1) > .font-normal.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .p-3\.5.text-left.hover\:border-zinc-300:nth-child(2) > .font-normal.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .p-3\.5.text-left.hover\:border-zinc-300:nth-child(3) > .font-normal.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .p-3\.5.text-left.hover\:border-zinc-300:nth-child(4) > .font-normal.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .p-3\.5.text-left.hover\:border-zinc-300:nth-child(5) > .font-normal.text-zinc-400.text-\[10px\]
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      div:nth-child(1) > label
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      div:nth-child(1) > label > .normal-case.tracking-normal.text-zinc-300
+         » Fix any of the following: Element has insufficient color contrast of 1.41 (foreground color: #d4d4d8, background color: #fafafa, font size: 
+      div:nth-child(2) > label
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      div:nth-child(2) > label > .normal-case.tracking-normal.text-zinc-300
+         » Fix any of the following: Element has insufficient color contrast of 1.41 (foreground color: #d4d4d8, background color: #fafafa, font size: 
+      div:nth-child(3) > label
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      div:nth-child(3) > label > .normal-case.tracking-normal.text-zinc-300
+         » Fix any of the following: Element has insufficient color contrast of 1.41 (foreground color: #d4d4d8, background color: #fafafa, font size: 
+      .pt-2.border-t.border-zinc-200 > .tracking-widest.mb-3.uppercase
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .space-y-2.font-mono.text-xs > .justify-between.flex:nth-child(1) > .text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .space-y-2.font-mono.text-xs > .justify-between.flex:nth-child(2) > .text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .space-y-2.font-mono.text-xs > .justify-between.flex:nth-child(3) > .text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #9f9fa9, background color: #fafafa, font size: 
+      .py-2.justify-between.items-center:nth-child(2) > .py-0\.5.px-2.bg-zinc-100
+         » Fix any of the following: Element has insufficient color contrast of 4.39 (foreground color: #71717b, background color: #f4f4f5, font size: 
+      .shadow-\[0_0_20px_rgba\(99\,102\,241\,0\.35\)\]
+         » Fix any of the following: Element has insufficient color contrast of 4.46 (foreground color: #ffffff, background color: #6366f1, font size: 
+      .mb-8.gap-3.items-center > div:nth-child(2) > .mt-0\.5
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .items-start.gap-3.flex:nth-child(1) > div:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .items-start.gap-3.flex:nth-child(2) > div:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .items-start.gap-3.flex:nth-child(3) > div:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .items-start.gap-3.flex:nth-child(4) > div:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .items-start.gap-3.flex:nth-child(5) > div:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      div:nth-child(1) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mt-8 > div:nth-child(2) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      div:nth-child(3) > .mt-0\.5.text-zinc-400.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+
+=== http://localhost:3000/work/medsecure ===
+violations: 3
+  [critical] aria-required-children — Certain ARIA roles must contain particular children (1)
+      .space-y-3
+  [critical] button-name — Buttons must have discernible text (8)
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(1) > .text-center > .hover\:text-blue-600
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(2) > .text-center > .hover\:text-blue-600
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(3) > .text-center > .hover\:text-blue-600
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(4) > .text-center > .hover\:text-blue-600
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(1) > .text-center > .hover\:text-blue-600
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(2) > .text-center > .hover\:text-blue-600
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(3) > .text-center > .hover\:text-blue-600
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > div:nth-child(2) > .border-slate-200.rounded-xl.overflow-hidden > table > tbody > tr:nth-child(4) > .text-center > .hover\:text-blue-600
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (29)
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .bg-\[\#f8fafc\].border-r.w-64 > .p-5.border-b.border-slate-200 > .text-slate-400.text-\[10px\].tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #90a1b9, background color: #f8fafc, font size: 
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .bg-\[\#f8fafc\].border-r.w-64 > .mt-auto.p-4 > .p-3.border-blue-100.bg-blue-50 > div > .text-blue-600\/80.leading-snug.mt-0\.5
+         » Fix any of the following: Element has insufficient color contrast of 3.49 (foreground color: #417cfc, background color: #eff6ff, font size: 
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > .mb-8 > .grid-cols-4.grid.gap-4 > .p-4.border-slate-200.rounded-xl:nth-child(2) > .items-baseline.gap-1.mb-2 > .text-\[12px\].text-slate-400
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .origin-top-left > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > .mb-8 > .grid-cols-4.grid.gap-4 > .p-4.border-slate-200.rounded-xl:nth-child(3) > .items-baseline.gap-1.mb-2 > .text-\[12px\].text-slate-400
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .hover\:border-blue-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-emerald-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mt-1.text-zinc-400.font-medium
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-purple-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mb-4.text-zinc-500.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .bg-\[\#f8fafc\].border-r.w-64 > .p-5.border-b.border-slate-200 > .text-slate-400.text-\[10px\].tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 2.51 (foreground color: #90a1b9, background color: #f8fafc, font size: 
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .bg-\[\#f8fafc\].border-r.w-64 > .mt-auto.p-4 > .p-3.border-blue-100.bg-blue-50 > div > .text-blue-600\/80.leading-snug.mt-0\.5
+         » Fix any of the following: Element has insufficient color contrast of 3.49 (foreground color: #417cfc, background color: #eff6ff, font size: 
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > .mb-8 > .grid-cols-4.grid.gap-4 > .p-4.border-slate-200.rounded-xl:nth-child(1) > .items-baseline.gap-1.mb-2 > .text-\[12px\].text-slate-400
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > .mb-8 > .grid-cols-4.grid.gap-4 > .p-4.border-slate-200.rounded-xl:nth-child(2) > .items-baseline.gap-1.mb-2 > .text-\[12px\].text-slate-400
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .min-w-\[900px\] > .font-sans.h-\[640px\].shadow-xl > .flex-1.overflow-hidden.flex > .flex-1.flex-col.overflow-hidden > .bg-slate-50\/50.overflow-y-auto.p-8 > .mb-8 > .grid-cols-4.grid.gap-4 > .p-4.border-slate-200.rounded-xl:nth-child(3) > .items-baseline.gap-1.mb-2 > .text-\[12px\].text-slate-400
+         » Fix any of the following: Element has insufficient color contrast of 2.63 (foreground color: #90a1b9, background color: #ffffff, font size: 
+      .gap-1\.5.text-center.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mt-4.text-center.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .py-24:nth-child(11) > .max-w-6xl.container.z-10 > .mb-16:nth-child(1) > .tracking-\[0\.2em\].text-\[\#005EB8\].font-mono
+         » Fix any of the following: Element has insufficient color contrast of 2.77 (foreground color: #005eb8, background color: #18181b, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(1) > .text-\[\#005EB8\]\/40.text-4xl.tracking-tighter
+         » Fix any of the following: Element has insufficient color contrast of 1.39 (foreground color: #0e345a, background color: #18181b, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(1) > .text-zinc-500.font-medium.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(3) > .text-\[\#005EB8\]\/40.text-4xl.tracking-tighter
+         » Fix any of the following: Element has insufficient color contrast of 1.39 (foreground color: #0e345a, background color: #18181b, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(3) > .text-zinc-500.font-medium.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(5) > .text-\[\#005EB8\]\/40.text-4xl.tracking-tighter
+         » Fix any of the following: Element has insufficient color contrast of 1.39 (foreground color: #0c3b68, background color: #142333, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(5) > .text-zinc-500.font-medium.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 3.3 (foreground color: #71717b, background color: #142333, font size: 9
+      .min-w-\[180px\].p-5.text-center:nth-child(7) > .text-\[\#005EB8\]\/40.text-4xl.tracking-tighter
+         » Fix any of the following: Element has insufficient color contrast of 1.39 (foreground color: #0c3b68, background color: #142333, font size: 
+      .min-w-\[180px\].p-5.text-center:nth-child(7) > .text-zinc-500.font-medium.text-xs
+         » Fix any of the following: Element has insufficient color contrast of 3.3 (foreground color: #71717b, background color: #142333, font size: 9
+      .border-\[\#005EB8\]\/20.gap-5.bg-white\/5 > div:nth-child(2) > .font-mono.mb-1.text-zinc-500
+         » Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #71717b, background color: #242426, font size: 9
+      .border-violet-200.gap-5.bg-white\/5 > div:nth-child(2) > .font-mono.mb-1.text-zinc-500
+         » Fix any of the following: Element has insufficient color contrast of 2.86 (foreground color: #71717b, background color: #202e3d, font size: 
+      .gap-5.bg-white\/5.backdrop-blur-sm:nth-child(3) > div:nth-child(2) > .font-mono.mb-1.text-zinc-500
+         » Fix any of the following: Element has insufficient color contrast of 2.89 (foreground color: #71717b, background color: #2f293c, font size: 
+      .border-amber-200.gap-5.bg-white\/5 > div:nth-child(2) > .font-mono.mb-1.text-zinc-500
+         » Fix any of the following: Element has insufficient color contrast of 3.2 (foreground color: #71717b, background color: #242426, font size: 9
+
+=== http://localhost:3000/work/nexus-banking ===
+violations: 1
+  [serious] color-contrast — Elements must meet minimum color contrast ratio thresholds (18)
+      .w-\[900px\] > .w-\[340px\].h-\[720px\].rounded-\[48px\] > .h-full.w-full.z-10 > .font-sans.pt-16.bg-black > .bg-\[\#09090b\].rounded-t-\[32px\].pt-6 > .overflow-y-auto.flex-1.space-y-4 > .cursor-pointer.justify-between.group:nth-child(1) > .gap-3\.5.items-center.flex > div:nth-child(2) > .text-white\/40.text-\[11px\].font-medium
+         » Fix any of the following: Element has insufficient color contrast of 3.74 (foreground color: #6b6b6d, background color: #09090b, font size: 
+      .hover\:border-blue-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-emerald-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .mt-1.font-medium.text-zinc-400
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .hover\:border-purple-300\/50 > .z-10.relative > h4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .pl-4
+         » Fix any of the following: Element has insufficient color contrast of 2.62 (foreground color: #9f9fa9, background color: #ffffff, font size: 
+      .text-zinc-500.text-xs.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 3.9 (foreground color: #71717b, background color: #111113, font size: 9
+      .gap-3 > .text-zinc-500
+         » Fix any of the following: Element has insufficient color contrast of 3.77 (foreground color: #71717b, background color: #151518, font size: 
+      .mb-2.text-zinc-500.tracking-widest
+         » Fix any of the following: Element has insufficient color contrast of 3.77 (foreground color: #71717b, background color: #151518, font size: 
+      .py-8 > div > .w-\[340px\].h-\[720px\].rounded-\[48px\] > .h-full.w-full.z-10 > .font-sans.pt-16.bg-black > .bg-\[\#09090b\].rounded-t-\[32px\].pt-6 > .overflow-y-auto.flex-1.space-y-4 > .cursor-pointer.justify-between.group:nth-child(1) > .gap-3\.5.items-center.flex > div:nth-child(2) > .text-white\/40.text-\[11px\].font-medium
+         » Fix any of the following: Element has insufficient color contrast of 3.74 (foreground color: #6b6b6d, background color: #09090b, font size: 
+      .text-blue-100.mb-8.text-lg
+         » Fix any of the following: Element has insufficient color contrast of 4.29 (foreground color: #dbeafe, background color: #155dfc, font size: 
+      .md\:w-1\/2:nth-child(1) > .text-blue-200
+         » Fix any of the following: Element has insufficient color contrast of 3.68 (foreground color: #bedbff, background color: #155dfc, font size: 
+      .border-white\/20.bg-white\/10.p-6 > h3
+         » Fix any of the following: Element has insufficient color contrast of 4.46 (foreground color: #ffffff, background color: #2c6dfc, font size: 
+      .border-b.pb-4.border-white\/10:nth-child(1) > .text-blue-100.font-medium
+         » Fix any of the following: Element has insufficient color contrast of 3.66 (foreground color: #dbeafe, background color: #2c6dfc, font size: 
+      .border-b.pb-4.border-white\/10:nth-child(2) > .text-blue-100.font-medium
+         » Fix any of the following: Element has insufficient color contrast of 3.66 (foreground color: #dbeafe, background color: #2c6dfc, font size: 
+      .border-b.pb-4.border-white\/10:nth-child(3) > .text-blue-100.font-medium
+         » Fix any of the following: Element has insufficient color contrast of 3.66 (foreground color: #dbeafe, background color: #2c6dfc, font size: 
+      .justify-between.items-center.flex:nth-child(4) > .text-blue-100.font-medium
+         » Fix any of the following: Element has insufficient color contrast of 3.66 (foreground color: #dbeafe, background color: #2c6dfc, font size: 
+      .pt-4
+         » Fix any of the following: Element has insufficient color contrast of 3.14 (foreground color: #bedbff, background color: #2c6dfc, font size: 

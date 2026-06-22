@@ -13,7 +13,7 @@ export function ProblemStatement() {
                     className="mb-16"
                 >
                     {/* Chapter label */}
-                    <p className="text-xs font-mono font-bold text-blue-500 uppercase tracking-[0.2em] mb-4">
+                    <p className="text-xs font-mono font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">
                         01 — Problem
                     </p>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-6">
@@ -33,11 +33,11 @@ export function ProblemStatement() {
                     <div className="flex flex-wrap gap-3">
                         <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-rose-50 border border-rose-200">
                             <span className="text-lg font-black text-rose-700">$250K+</span>
-                            <span className="text-xs text-rose-600 font-semibold leading-snug">avg. ADA lawsuit settlement<br />per incident</span>
+                            <span className="text-xs text-rose-700 font-semibold leading-snug">avg. ADA lawsuit settlement<br />per incident</span>
                         </div>
                         <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-amber-50 border border-amber-200">
                             <span className="text-lg font-black text-amber-700">6×</span>
-                            <span className="text-xs text-amber-600 font-semibold leading-snug">costlier to fix post-launch<br />vs. at design stage</span>
+                            <span className="text-xs text-amber-700 font-semibold leading-snug">costlier to fix post-launch<br />vs. at design stage</span>
                         </div>
                         <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-blue-50 border border-blue-200">
                             <span className="text-lg font-black text-blue-700">4,600+</span>

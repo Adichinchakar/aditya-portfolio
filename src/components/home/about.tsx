@@ -49,7 +49,7 @@ export function About() {
     const [isContactSheetOpen, setIsContactSheetOpen] = useState(false);
 
     return (
-        <section id="about" className="py-24 px-6 relative overflow-hidden" ref={ref}>
+        <section id="about" className="py-16 md:py-24 px-6 relative overflow-hidden" ref={ref}>
             {/* Ambient orbs */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -75,7 +75,7 @@ export function About() {
                             initial={{ opacity: 0, x: -30 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                             transition={{ type: "spring" as const, stiffness: 260, damping: 22 }}
-                            className="w-full flex-1 rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/40 p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.05)] flex flex-col justify-center"
+                            className="w-full flex-1 rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/40 p-6 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.05)] flex flex-col justify-center"
                         >
                             <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black tracking-tighter text-zinc-900 mb-8 leading-[1.1]">
                                 Why I Build.
@@ -104,7 +104,7 @@ export function About() {
                                 >
                                     <button
                                         onClick={() => setIsContactSheetOpen(true)}
-                                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3 md:py-4 rounded-full bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
                                     >
                                         Let's Talk
                                         <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -113,7 +113,7 @@ export function About() {
                                     </button>
                                     <Link
                                         href="/resume"
-                                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-full bg-white text-zinc-900 font-medium hover:bg-zinc-50 border border-zinc-200/80 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 group"
+                                        className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3 md:py-4 rounded-full bg-white text-zinc-900 font-medium hover:bg-zinc-50 border border-zinc-200/80 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 group"
                                     >
                                         View Resume
                                         <svg className="w-4 h-4 text-zinc-500 group-hover:text-zinc-900 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">

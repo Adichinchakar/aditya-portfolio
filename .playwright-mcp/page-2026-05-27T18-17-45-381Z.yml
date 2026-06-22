@@ -1,0 +1,684 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AdityaChinchakar" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e6]:
+        - link "Live Plugin" [ref=e7] [cursor=pointer]:
+          - /url: https://aulys-app.vercel.app/
+          - generic [ref=e11]: Live Plugin
+          - img [ref=e12]
+        - link "Work" [ref=e14] [cursor=pointer]:
+          - /url: /work
+        - link "Writing" [ref=e15] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e16] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e17]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - link "Back to Case Studies" [ref=e22] [cursor=pointer]:
+          - /url: /work
+          - img [ref=e23]
+          - generic [ref=e25]: Back to Case Studies
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - 'generic "Case study type: Product Concept, 0 to 1 Design" [ref=e28]': Product Concept · 0→1 Design
+            - generic [ref=e32]: "🏥 Speculative product design: This is a 0→1 design concept for India's ABDM ecosystem. Pilot metrics (Delhi NCR + Pune, 1,200 patients) reflect an internal proof-of-concept. No production deployment at scale."
+            - 'heading "MedSecure: Blockchain Medical Records for India." [level=1] [ref=e33]':
+              - text: "MedSecure:"
+              - text: Blockchain Medical Records for India.
+            - paragraph [ref=e34]: A 65-year-old farmer in rural Punjab and a 28-year-old in South Mumbai share India's healthcare system. They share almost nothing else — language, connectivity, literacy, or access. Designing for both, simultaneously, is the problem.
+            - paragraph [ref=e35]: MedSecure is a sovereign medical identity for every Indian patient — ABHA ID as the identifier, Hyperledger Fabric for consent and audit, IPFS for off-chain storage. Accessible in 8 languages, usable offline, piloted across 1,200 patients in Delhi NCR and Pune.
+            - generic [ref=e36]:
+              - generic [ref=e37]: Product Lead
+              - generic [ref=e38]: 6 Months
+              - generic [ref=e39]: ABDM Compliant
+            - generic [ref=e40]:
+              - generic [ref=e41]: Hyperledger Fabric
+              - generic [ref=e42]: IPFS
+              - generic [ref=e43]: PWA Offline-First
+              - generic [ref=e44]: WCAG 2.1 AA
+          - generic "India healthcare crisis statistics" [ref=e45]:
+            - generic [ref=e47]:
+              - heading "India Healthcare Crisis" [level=2] [ref=e49]
+              - generic [ref=e54]:
+                - generic [ref=e55]:
+                  - img [ref=e57]
+                  - generic [ref=e59]:
+                    - generic [ref=e60]: 50L
+                    - generic [ref=e61]: Deaths/year
+                    - generic [ref=e62]: Due to medical errors
+                - generic [ref=e63]:
+                  - img [ref=e65]
+                  - generic [ref=e67]:
+                    - generic [ref=e68]: 6,900+
+                    - generic [ref=e69]: Cyberattacks/week
+                    - generic [ref=e70]: On Indian healthcare
+                - generic [ref=e71]:
+                  - img [ref=e73]
+                  - generic [ref=e77]:
+                    - generic [ref=e78]: 55M
+                    - generic [ref=e79]: People/year
+                    - generic [ref=e80]: Fall into poverty for healthcare
+              - paragraph [ref=e82]: "Source: Government of India Health Report · CERT-In 2024 · World Bank"
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - paragraph [ref=e87]: 01 — The Crisis
+          - heading "India's Healthcare Data Is Broken by Design." [level=2] [ref=e88]
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - generic [ref=e93]:
+              - heading "The Reality" [level=3] [ref=e94]
+              - paragraph [ref=e95]:
+                - text: A heart attack patient arrives at ER.
+                - text: The doctor knows nothing about them.
+              - paragraph [ref=e96]: No allergies. No medication history. No chronic conditions. Just a 60-second window to make life-or-death drug decisions — blind.
+            - generic [ref=e97]:
+              - img [ref=e99]
+              - generic [ref=e104]:
+                - heading "Scattered Paper Records" [level=3] [ref=e105]
+                - paragraph [ref=e106]: 85% of India's medical records still exist on paper — lost in floods, fires, or simply left behind when a patient moves cities.
+            - generic [ref=e107]:
+              - img [ref=e109]
+              - generic [ref=e113]:
+                - heading "Hospital Data Silos" [level=3] [ref=e114]
+                - paragraph [ref=e115]: Every hospital runs its own proprietary system. An AIIMS patient record cannot be accessed at a district hospital 2km away.
+            - generic [ref=e116]:
+              - img [ref=e118]
+              - generic [ref=e121]:
+                - heading "No Offline Access for Rural India" [level=3] [ref=e122]
+                - paragraph [ref=e123]: Over 600M Indians live in areas with poor connectivity. Existing digital health solutions require a stable internet connection.
+          - generic [ref=e124]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: ₹2.4L
+              - generic [ref=e129]: Crore Lost Annually
+              - generic [ref=e130]: to duplicate medical tests because records aren't shared between hospitals
+            - generic [ref=e131]:
+              - heading "The Downstream Cost" [level=3] [ref=e132]
+              - list [ref=e133]:
+                - listitem [ref=e134]:
+                  - img [ref=e135]
+                  - generic [ref=e137]: Duplicate tests ordered because history is unavailable — wasting ₹2,400+ per patient visit
+                - listitem [ref=e138]:
+                  - img [ref=e139]
+                  - generic [ref=e142]: Patient data sold on the dark web — 6,900+ cyberattacks per week on Indian healthcare sector
+                - listitem [ref=e143]:
+                  - img [ref=e144]
+                  - generic [ref=e146]: Emergency physicians make critical decisions blind — no allergy or medication history available
+            - blockquote [ref=e147]:
+              - paragraph [ref=e148]: "\"We needed a system that works for a farmer in Haryana and a software engineer in Bangalore — at the same time.\""
+              - text: — Research Participant, Pilot Study
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - paragraph [ref=e152]: Hook Model — Nir Eyal
+          - heading "Why They Came Back" [level=2] [ref=e153]
+          - paragraph [ref=e154]: Great product design doesn't just solve a problem once — it builds a loop that keeps users returning. Here's the behavioral architecture behind this product.
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: "01"
+              - generic [ref=e159]: Trigger
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e162]: External
+                - paragraph [ref=e163]: "An adverse drug event: the wrong medication administered at point-of-care because the doctor had no access to the patient's allergy history."
+              - generic [ref=e164]:
+                - generic [ref=e165]: Internal
+                - paragraph [ref=e166]: "Doctor uncertainty in the consultation room: 'I don't have this patient's full history. I'm making a decision blind.'"
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: "02"
+              - generic [ref=e170]: Action
+            - generic [ref=e171]:
+              - generic [ref=e172]: Simplest behavior
+              - paragraph [ref=e173]: Scan the patient's ABHA QR code — the complete, verified health record appears instantly, online or offline.
+            - generic [ref=e174]: Friction removed by design
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: "03"
+              - generic [ref=e178]: Variable Reward
+            - generic [ref=e179]:
+              - generic [ref=e180]: Unpredictable outcome
+              - paragraph [ref=e181]: "Every patient scan reveals different history: different medications, different conditions, different flags. No two records are the same. That unpredictability keeps the system active."
+            - generic [ref=e182]: Variability drives return visits
+          - generic [ref=e183]:
+            - generic [ref=e184]:
+              - generic [ref=e185]: "04"
+              - generic [ref=e186]: Investment
+            - generic [ref=e187]:
+              - generic [ref=e188]: What raises switching cost
+              - paragraph [ref=e189]: Every consultation visit adds data to the patient's record. The more complete the record, the more the doctor trusts it — and the more the patient expects it at every visit. Switching cost becomes clinical risk.
+            - generic [ref=e190]: Loads the next trigger
+        - paragraph [ref=e191]: Investment → Trigger → Action → Reward → Investment · · · Hook Model by Nir Eyal
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e195]: The "Messy Middle"
+          - heading "Fixing the Care Continuum." [level=2] [ref=e196]
+          - paragraph [ref=e197]: When a patient is referred from a village Primary Health Center (PHC) to a city hospital, the system breaks.
+        - generic [ref=e198]:
+          - generic [ref=e201]:
+            - heading "Before" [level=3] [ref=e203]
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - img [ref=e207]
+                - heading "Paper Lost in Transit" [level=4] [ref=e209]
+                - paragraph [ref=e210]: Ramesh travels 150km to AIIMS, but forgets his previous X-ray films.
+                - img [ref=e211]
+              - generic [ref=e213]:
+                - img [ref=e215]
+                - heading "Repeated Tests" [level=4] [ref=e218]
+                - paragraph [ref=e219]: Doctor cannot access history. Ramesh must pay ₹2,000 to repeat the same tests.
+                - img [ref=e220]
+              - generic [ref=e222]:
+                - img [ref=e224]
+                - heading "Diagnosis Delayed" [level=4] [ref=e227]
+                - paragraph [ref=e228]: Waiting 3 days for new test results. Critical treatment is postponed.
+          - generic [ref=e231]:
+            - heading "MedSecure" [level=3] [ref=e233]
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - img [ref=e238]
+                - heading "ABHA QR Scan" [level=4] [ref=e244]
+                - paragraph [ref=e245]: Ramesh shows his MedSecure QR code at the AIIMS reception desk.
+                - img [ref=e246]
+              - generic [ref=e248]:
+                - img [ref=e251]
+                - heading "Consent Granted" [level=4] [ref=e254]
+                - paragraph [ref=e255]: Approve 1-time access via biometric thumbprint. Smart contract logs the event.
+                - img [ref=e256]
+              - generic [ref=e258]:
+                - img [ref=e261]
+                - heading "Instant Treatment" [level=4] [ref=e264]
+                - paragraph [ref=e265]: Doctor instantly retrieves PHC history. Treatment begins same-day. Zero extra cost.
+      - generic [ref=e267]:
+        - generic [ref=e269]:
+          - heading "Building for the Next Billion Users." [level=2] [ref=e270]:
+            - text: Building for the
+            - text: Next Billion Users.
+          - paragraph [ref=e271]: To succeed in India, a healthcare app cannot just be a translated Silicon Valley paradigm. It must fundamentally account for low literacy, cheap smartphones, and spotty 3G connections.
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - generic [ref=e275]:
+              - generic [ref=e277]: English Locale
+              - generic [ref=e286]: Hindi Locale + Accessible Mode
+            - generic [ref=e301]: High Contrast Icons
+            - generic [ref=e302]: Dynamic Layout
+          - generic [ref=e303]:
+            - generic [ref=e304]:
+              - img [ref=e306]
+              - heading "Iconography Over Text" [level=3] [ref=e309]
+              - paragraph [ref=e310]: Designed for varying literacy levels. Core actions rely heavily on universally recognizable medical symbols (e.g., Red Cross, Pill, Stethoscope) rather than text labels.
+            - generic [ref=e311]:
+              - img [ref=e313]
+              - heading "8 Indian Languages" [level=3] [ref=e317]
+              - paragraph [ref=e318]: Full localization engine supporting Hindi, Tamil, Telugu, Marathi, Bengali, Gujarati, Kannada, and English — dynamically switching based on the patient's device locale.
+            - generic [ref=e319]:
+              - img [ref=e321]
+              - heading "Offline-First Architecture" [level=3] [ref=e328]
+              - paragraph [ref=e329]: Progressive Web App (PWA) caches the most recent medical summary. Patients in low-connectivity rural areas can still show their QR code and basic history to a doctor.
+            - generic [ref=e330]:
+              - img [ref=e332]
+              - heading "Aadhaar / ABHA Fingerprint" [level=3] [ref=e341]
+              - paragraph [ref=e342]: No complex passwords to remember. Authentication leverages India's existing biometric Aadhaar infrastructure for frictionless logins at Primary Health Centers.
+      - generic [ref=e345]:
+        - generic [ref=e346]:
+          - paragraph [ref=e347]: 02 — User Research
+          - heading "Three Users. One System." [level=2] [ref=e348]
+          - paragraph [ref=e349]: Each persona represented a fundamentally different context — connectivity, literacy, urgency. All three had to be served simultaneously.
+        - generic [ref=e350]:
+          - 'article "Persona: Priya Sharma" [ref=e351]':
+            - generic [ref=e352]:
+              - generic [ref=e353]: P
+              - generic [ref=e354]:
+                - generic [ref=e355]: Priya Sharma
+                - generic [ref=e356]: Urban Patient
+            - generic [ref=e357]:
+              - img [ref=e358]
+              - text: 28 · Software Engineer · Bangalore
+            - generic [ref=e361]:
+              - img [ref=e362]
+              - generic [ref=e366]: Online
+            - generic [ref=e367]:
+              - heading "Goal" [level=3] [ref=e368]
+              - paragraph [ref=e369]: Manage her scattered records from 4 different hospitals across Mumbai and Bangalore without carrying physical files.
+            - generic [ref=e370]:
+              - heading "Pain Points" [level=3] [ref=e371]
+              - list [ref=e372]:
+                - listitem [ref=e373]:
+                  - generic [ref=e374]: ·
+                  - generic [ref=e375]: Diagnosed at Fortis Mumbai, but current doctor at Manipal Bangalore can't access those records
+                - listitem [ref=e376]:
+                  - generic [ref=e377]: ·
+                  - generic [ref=e378]: Has to repeat expensive blood panels every new hospital visit (₹3,200 each time)
+                - listitem [ref=e379]:
+                  - generic [ref=e380]: ·
+                  - generic [ref=e381]: Worried about her CT scan data being stored on hospital servers she doesn't control
+            - generic [ref=e382]:
+              - heading "Design Implication" [level=3] [ref=e383]
+              - paragraph [ref=e384]: Digital-first, privacy-focused UI. Fast QR-based record sharing for appointments.
+            - blockquote [ref=e385]:
+              - paragraph [ref=e386]: "\"I want to own my own health data, not beg every hospital for a printout.\""
+          - 'article "Persona: Ramesh Kumar" [ref=e387]':
+            - generic [ref=e388]:
+              - generic [ref=e389]: R
+              - generic [ref=e390]:
+                - generic [ref=e391]: Ramesh Kumar
+                - generic [ref=e392]: Rural Patient
+            - generic [ref=e393]:
+              - img [ref=e394]
+              - text: 52 · Farmer · Hisar, Haryana
+            - generic [ref=e397]:
+              - img [ref=e398]
+              - generic [ref=e405]: Intermittent 4G
+            - generic [ref=e406]:
+              - heading "Goal" [level=3] [ref=e407]
+              - paragraph [ref=e408]: Access his diabetes and hypertension records at the district hospital, even when there is no connectivity.
+            - generic [ref=e409]:
+              - heading "Pain Points" [level=3] [ref=e410]
+              - list [ref=e411]:
+                - listitem [ref=e412]:
+                  - generic [ref=e413]: ·
+                  - generic [ref=e414]: Paper records destroyed in the 2023 Yamuna floods — started treatment history from scratch
+                - listitem [ref=e415]:
+                  - generic [ref=e416]: ·
+                  - generic [ref=e417]: District hospital is 40km away; primary care is at a village PHC with no EMR system
+                - listitem [ref=e418]:
+                  - generic [ref=e419]: ·
+                  - generic [ref=e420]: Limited Hindi literacy; needs audio/icon-first UI
+            - generic [ref=e421]:
+              - heading "Design Implication" [level=3] [ref=e422]
+              - paragraph [ref=e423]: Offline-first PWA, icon-based navigation, Hindi voice support, SMS fallback for OTP.
+            - blockquote [ref=e424]:
+              - paragraph [ref=e425]: "\"When papers got lost in flood, I didn't know what medicines I was on.\""
+          - 'article "Persona: Dr. Rajesh Mehta" [ref=e426]':
+            - generic [ref=e427]:
+              - generic [ref=e428]: D
+              - generic [ref=e429]:
+                - generic [ref=e430]: Dr. Rajesh Mehta
+                - generic [ref=e431]: ER Physician
+            - generic [ref=e432]:
+              - img [ref=e433]
+              - text: 41 · Emergency Medicine · AIIMS Delhi
+            - generic [ref=e436]:
+              - img [ref=e437]
+              - generic [ref=e441]: Hospital WiFi
+            - generic [ref=e442]:
+              - heading "Goal" [level=3] [ref=e443]
+              - paragraph [ref=e444]: Access a patient's full medical history, allergies, and current medications within 60 seconds of ER admission.
+            - generic [ref=e445]:
+              - heading "Pain Points" [level=3] [ref=e446]
+              - list [ref=e447]:
+                - listitem [ref=e448]:
+                  - generic [ref=e449]: ·
+                  - generic [ref=e450]: Unconscious patients arrive with zero documentation — allergies unknown
+                - listitem [ref=e451]:
+                  - generic [ref=e452]: ·
+                  - generic [ref=e453]: Interstate patients have records in state-specific portals requiring separate logins
+                - listitem [ref=e454]:
+                  - generic [ref=e455]: ·
+                  - generic [ref=e456]: Current ABDM system requires 5 screens + OTP before seeing any data
+            - generic [ref=e457]:
+              - heading "Design Implication" [level=3] [ref=e458]
+              - paragraph [ref=e459]: Critical-info-first layout. Blood group and allergies visible on scan. Maximum 2 taps to full history.
+            - blockquote [ref=e460]:
+              - paragraph [ref=e461]: "\"In the golden 60 seconds, I can't be navigating 5 login screens.\""
+      - generic [ref=e463]:
+        - generic [ref=e464]:
+          - paragraph [ref=e465]: 04.5 — Mobile UI
+          - heading "Designing for Bharat" [level=2] [ref=e466]
+          - paragraph [ref=e467]: Three screens from the patient app — built for low-literacy, multilingual, and inclusive-first use across rural and urban India. Icon-first navigation, large touch targets, ABHA ID integration.
+        - generic [ref=e468]:
+          - generic [ref=e469]:
+            - button "Patient Home" [ref=e470]: Patient Home
+            - button "Doctor Access" [ref=e472]
+            - button "Care Circle" [ref=e473]
+          - generic [ref=e474]:
+            - generic [ref=e480]:
+              - generic [ref=e481]:
+                - generic [ref=e482]: 9:41
+                - generic [ref=e484]:
+                  - img [ref=e485]
+                  - img [ref=e490]
+              - generic [ref=e498]:
+                - generic [ref=e499]:
+                  - generic [ref=e500]:
+                    - generic [ref=e501]:
+                      - generic [ref=e502]: Namaste,
+                      - generic [ref=e503]: Rajesh Kumar
+                    - generic [ref=e505]: RK
+                  - generic [ref=e506]:
+                    - generic [ref=e507]: ABHA ID
+                    - generic [ref=e508]: 91-1234-5678-9012
+                - generic [ref=e509]:
+                  - generic [ref=e510]:
+                    - generic [ref=e512]: "3"
+                    - generic [ref=e513]:
+                      - generic [ref=e514]: 3 access requests pending
+                      - generic [ref=e515]: Tap to review →
+                  - generic [ref=e516]:
+                    - generic [ref=e517]:
+                      - generic [ref=e518]: MY RECORDS
+                      - generic [ref=e519]: See all
+                    - generic [ref=e520]:
+                      - generic [ref=e521]:
+                        - img [ref=e523]
+                        - generic [ref=e526]:
+                          - generic [ref=e527]: Blood Test
+                          - generic [ref=e528]: Apollo Hospitals
+                        - generic [ref=e529]:
+                          - generic [ref=e530]: New
+                          - generic [ref=e531]: 15 Mar
+                      - generic [ref=e532]:
+                        - img [ref=e534]
+                        - generic [ref=e537]:
+                          - generic [ref=e538]: Prescription
+                          - generic [ref=e539]: Dr. Mehta Clinic
+                        - generic [ref=e540]:
+                          - generic [ref=e541]: Viewed
+                          - generic [ref=e542]: 10 Mar
+                      - generic [ref=e543]:
+                        - img [ref=e545]
+                        - generic [ref=e549]:
+                          - generic [ref=e550]: Radiology Report
+                          - generic [ref=e551]: SRL Diagnostics
+                        - generic [ref=e552]:
+                          - generic [ref=e553]: Viewed
+                          - generic [ref=e554]: 2 Mar
+                      - generic [ref=e555]:
+                        - img [ref=e557]
+                        - generic [ref=e564]:
+                          - generic [ref=e565]: Vaccination
+                          - generic [ref=e566]: PHC Andheri
+                        - generic [ref=e567]:
+                          - generic [ref=e568]: Shared
+                          - generic [ref=e569]: 10 Jan
+                - generic [ref=e570]:
+                  - generic [ref=e571]:
+                    - img [ref=e573]
+                    - generic [ref=e576]: Home
+                  - generic [ref=e577]:
+                    - img [ref=e579]
+                    - generic [ref=e582]: Records
+                  - generic [ref=e583]:
+                    - img [ref=e585]
+                    - generic [ref=e588]: Access
+                  - generic [ref=e589]:
+                    - img [ref=e591]
+                    - generic [ref=e594]: Profile
+            - generic [ref=e597]:
+              - generic [ref=e598]: Mobile UI · Bharat-first design
+              - paragraph [ref=e599]: ABHA ID–linked health record dashboard. Icon-first record cards, 8-language support, large touch targets (min 44×44px). The pending-request alert surfaced from field testing — rural users missed badge notifications but responded to explicit banners.
+              - generic [ref=e600]:
+                - generic [ref=e601]:
+                  - img [ref=e603]
+                  - generic [ref=e605]:
+                    - generic [ref=e606]: Icon-first hierarchy
+                    - generic [ref=e607]: No literacy assumption. Every action has an icon before a text label.
+                - generic [ref=e608]:
+                  - img [ref=e610]
+                  - generic [ref=e612]:
+                    - generic [ref=e613]: 44×44px minimum touch targets
+                    - generic [ref=e614]: WCAG 2.5.5 (Target Size) applied to every interactive element.
+                - generic [ref=e615]:
+                  - img [ref=e617]
+                  - generic [ref=e619]:
+                    - generic [ref=e620]: 8-language support
+                    - generic [ref=e621]: Hindi, Tamil, Telugu, Bengali, Marathi, Kannada, Malayalam, English.
+      - generic [ref=e624]:
+        - generic [ref=e625]:
+          - paragraph [ref=e626]: 03 — Key Feature
+          - heading "Family Consent Management" [level=2] [ref=e627]
+          - paragraph [ref=e628]:
+            - text: The
+            - strong [ref=e629]: Care Circle
+            - text: — a consent dashboard that lets patients grant granular, revocable access to family members. Blockchain-logged, instantly auditable.
+          - generic [ref=e630]:
+            - generic [ref=e631]:
+              - img [ref=e633]
+              - generic [ref=e636]:
+                - generic [ref=e637]: Blockchain-Logged
+                - generic [ref=e638]: Every permission change is written to an immutable ledger — a full audit trail with timestamp.
+            - generic [ref=e639]:
+              - img [ref=e641]
+              - generic [ref=e646]:
+                - generic [ref=e647]: Role-Based Access
+                - generic [ref=e648]: Spouse gets full access. Elderly parent gets emergency-only. You decide.
+            - generic [ref=e649]:
+              - img [ref=e651]
+              - generic [ref=e653]:
+                - generic [ref=e654]: Instant Revocation
+                - generic [ref=e655]: One tap revokes access immediately — no waiting for admin approval.
+        - generic [ref=e656]:
+          - generic [ref=e657]:
+            - generic [ref=e659]:
+              - generic [ref=e660]:
+                - heading "Care Circle" [level=3] [ref=e661]
+                - paragraph [ref=e662]: 2 of 3 members with access
+              - generic [ref=e665]: Ledger Active
+            - list "Family members and permissions" [ref=e666]:
+              - button "M Meera Sharma Spouse Active Access" [ref=e668]:
+                - generic [ref=e669]:
+                  - generic [ref=e670]: M
+                  - generic [ref=e671]:
+                    - generic [ref=e672]: Meera Sharma
+                    - generic [ref=e673]: Spouse
+                - generic [ref=e674]:
+                  - generic [ref=e675]: Active Access
+                  - img [ref=e677]
+              - button "R Rajiv Sharma Father Emergency Only" [ref=e680]:
+                - generic [ref=e681]:
+                  - generic [ref=e682]: R
+                  - generic [ref=e683]:
+                    - generic [ref=e684]: Rajiv Sharma
+                    - generic [ref=e685]: Father
+                - generic [ref=e686]:
+                  - generic [ref=e687]: Emergency Only
+                  - img [ref=e689]
+              - button "A Ananya Sharma Sister Access Revoked" [ref=e692]:
+                - generic [ref=e693]:
+                  - generic [ref=e694]: A
+                  - generic [ref=e695]:
+                    - generic [ref=e696]: Ananya Sharma
+                    - generic [ref=e697]: Sister
+                - generic [ref=e698]:
+                  - generic [ref=e699]: Access Revoked
+                  - img [ref=e701]
+            - paragraph [ref=e704]:
+              - img [ref=e705]
+              - text: All changes logged to Hyperledger Fabric blockchain
+          - paragraph [ref=e708]: 💡 Click any family member to toggle permissions
+      - generic [ref=e710]:
+        - generic [ref=e711]:
+          - paragraph [ref=e712]: 04 — Technical Architecture
+          - heading "How MedSecure Works" [level=2] [ref=e713]
+          - paragraph [ref=e714]: Privacy-by-design at every layer. No central database. No hospital owns your data. Consent is code.
+        - generic [ref=e716]:
+          - generic [ref=e717]:
+            - generic [ref=e718]: "01"
+            - generic [ref=e719]: Patient scans QR at hospital
+            - generic [ref=e720]: No login required
+          - img [ref=e721]
+          - generic [ref=e723]:
+            - generic [ref=e724]: "02"
+            - generic [ref=e725]: ABHA ID verified on Hyperledger
+            - generic [ref=e726]: Sub-second response
+          - img [ref=e727]
+          - generic [ref=e729]:
+            - generic [ref=e730]: "03"
+            - generic [ref=e731]: Consent granted via Smart Contract
+            - generic [ref=e732]: Blockchain-logged
+          - img [ref=e733]
+          - generic [ref=e735]:
+            - generic [ref=e736]: "04"
+            - generic [ref=e737]: Doctor sees records via IPFS hash
+            - generic [ref=e738]: Full history in 2s
+        - generic [ref=e740]:
+          - generic [ref=e741]:
+            - img [ref=e743]
+            - generic [ref=e746]:
+              - generic [ref=e747]: Blockchain
+              - generic [ref=e748]: Hyperledger Fabric
+              - paragraph [ref=e749]: Enterprise-grade permissioned blockchain with ABDM integration. Patient controls their own private key — no hospital owns the data.
+          - generic [ref=e750]:
+            - img [ref=e752]
+            - generic [ref=e756]:
+              - generic [ref=e757]: Storage
+              - generic [ref=e758]: IPFS (Off-chain)
+              - paragraph [ref=e759]: Manages high-resolution scans and large files. Hash stored on-chain, file on IPFS — cost-efficient and tamper-evident.
+          - generic [ref=e760]:
+            - img [ref=e762]
+            - generic [ref=e766]:
+              - generic [ref=e767]: Connectivity
+              - generic [ref=e768]: Offline-First PWA
+              - paragraph [ref=e769]: Essential for rural India's spotty 4G/5G. ServiceWorker caches critical records locally; syncs when back online.
+          - generic [ref=e770]:
+            - img [ref=e772]
+            - generic [ref=e775]:
+              - generic [ref=e776]: Identity
+              - generic [ref=e777]: Aadhaar + ABHA
+              - paragraph [ref=e778]: Uses the existing Ayushman Bharat Digital Health Account (ABHA ID) as the universal patient identifier — no new enrollment needed.
+        - paragraph [ref=e780]:
+          - strong [ref=e781]: "ABDM Integration:"
+          - text: MedSecure is built on top of India's Ayushman Bharat Digital Mission (ABDM) infrastructure — leveraging existing ABHA IDs and Health Lockers, so no new patient enrollment is required. It extends the national stack, not replaces it.
+      - generic [ref=e784]:
+        - generic [ref=e785]: Key Decision
+        - generic [ref=e786]:
+          - generic [ref=e787]:
+            - generic [ref=e788]:
+              - img [ref=e789]
+              - generic [ref=e792]: Chose
+            - paragraph [ref=e793]: Offline-First PWA with ServiceWorker local cache
+          - generic [ref=e794]:
+            - generic [ref=e795]:
+              - img [ref=e796]
+              - generic [ref=e800]: Rejected
+            - paragraph [ref=e801]: Cloud-only real-time sync
+        - paragraph [ref=e803]:
+          - strong [ref=e804]: "Why:"
+          - text: In the Delhi NCR pilot, ~40% of PHC visits occurred in areas with intermittent 2G/3G. Cloud-only failed silently — doctors saw blank screens mid-consultation. ServiceWorker caches critical records locally and syncs on reconnect, making connectivity a non-blocking constraint instead of a hard dependency.
+      - generic [ref=e807]:
+        - generic [ref=e808]:
+          - generic [ref=e809]:
+            - img [ref=e810]
+            - text: Technical Architecture in Action
+          - heading "Zero-Trust by Design." [level=2] [ref=e813]
+          - paragraph [ref=e814]:
+            - text: MedSecure doesn't store health records in a centralized database. We store encrypted pointers on a Hyperledger Fabric blockchain, while the actual encrypted data lives on IPFS.
+            - text: Every time a doctor requests access, a zero-trust cryptographic handshake occurs. Experience the backend flow in real-time.
+          - button "Simulate Record Fetch" [ref=e815]:
+            - img [ref=e816]
+            - text: Simulate Record Fetch
+        - generic [ref=e820]:
+          - generic [ref=e826]: medsecure-node-01 ~ zsh
+          - generic [ref=e827]:
+            - generic [ref=e828]: root@node-01:~/medsecure-core$ ./fetch-record.sh --patient_id=ABHA-9876
+            - generic [ref=e829]: Waiting for incoming transaction request...
+      - generic [ref=e832]:
+        - generic [ref=e833]:
+          - paragraph [ref=e834]: 05 — Impact
+          - heading "Pilot Results" [level=2] [ref=e835]
+          - paragraph [ref=e836]: Tested across 3 hospitals, 2 PHCs, and 1,200 patients over 6 months. Here's what the data showed.
+          - paragraph [ref=e837]: "* Error rate baseline from 6-month pre-implementation incident logs at each facility; post period Jan–Jun 2024. Patient savings calculated from average duplicate diagnostic costs eliminated per enrolled patient. Pilot conducted independently by partnering healthcare institutions (Delhi NCR & Pune)."
+        - generic [ref=e838]:
+          - generic [ref=e841]:
+            - img [ref=e842]
+            - generic [ref=e845]: 34%
+            - heading "Reduction in Medical Errors" [level=3] [ref=e846]
+            - paragraph [ref=e847]: Across pilot hospitals in Delhi NCR and Pune. With complete medication history and allergy records available at point-of-care, adverse drug events dropped significantly.
+          - generic [ref=e848]:
+            - img [ref=e849]
+            - generic [ref=e852]: ₹6,200
+            - paragraph [ref=e853]: Average patient savings per year from eliminated duplicate diagnostics.
+          - generic [ref=e854]:
+            - img [ref=e855]
+            - generic [ref=e858]: "0"
+            - paragraph [ref=e859]: Data breaches recorded across 6-month pilot period. Permissioned Hyperledger architecture with no public-facing endpoints.
+          - generic [ref=e860]:
+            - img [ref=e861]
+            - generic [ref=e866]: 1,200
+            - paragraph [ref=e867]: Patients onboarded in 6 months. Zero required in-person enrollment — ABHA ID only.
+          - generic [ref=e868]:
+            - img [ref=e869]
+            - generic [ref=e871]: "8"
+            - paragraph [ref=e872]: Indian languages supported — Hindi, Bengali, Telugu, Marathi, Tamil, Gujarati, Kannada, and English.
+          - generic [ref=e875]:
+            - generic [ref=e876]:
+              - img [ref=e878]
+              - generic [ref=e880]: Design Failure → Fix
+            - heading "V1 Enrollment Failed 30% of Rural Users. Here's What We Missed." [level=3] [ref=e881]
+            - paragraph [ref=e882]: The initial ABHA enrollment flow assumed reliable OTP delivery via SMS. In the Delhi NCR pilot, ~30% of rural users on BSNL networks couldn't complete first-attempt enrollment — SMS delay averaging 4–8 minutes killed the flow. We had over-indexed on the technical architecture and under-indexed on last-mile connectivity.
+            - generic [ref=e883]:
+              - generic [ref=e884]:
+                - paragraph [ref=e885]: 30%
+                - paragraph [ref=e886]:
+                  - text: V1 enrollment failure rate
+                  - text: (rural BSNL users, Delhi NCR)
+              - generic [ref=e887]: →
+              - generic [ref=e888]:
+                - paragraph [ref=e889]: <4%
+                - paragraph [ref=e890]:
+                  - text: V2 failure rate after adding
+                  - text: QR-scan fallback via PHC kiosks
+              - paragraph [ref=e892]: V2 added a QR-scan enrollment path at PHC kiosks — no SMS dependency. The fix came from watching one rural patient try to enroll 4 times and give up.
+          - generic [ref=e893]:
+            - img [ref=e894]
+            - 'heading "What''s Next: National Scale" [level=3] [ref=e897]'
+            - paragraph [ref=e898]:
+              - text: "Pilot feedback confirmed the core thesis — but surface an unexpected insight: rural PHC workers were the primary adoption bottleneck, not patients. Phase 2 focuses on a"
+              - strong [ref=e899]: PHC Companion App
+              - text: — an ultra-lightweight offline tool for frontline health workers to onboard and manage village-level records.
+            - generic [ref=e900]:
+              - generic [ref=e901]: PHC Companion App
+              - generic [ref=e902]: SMS-based OTP Fallback
+              - generic [ref=e903]: State Health Ministry API
+              - generic [ref=e904]: ABHA Deeplink Integration
+              - generic [ref=e905]: Voice Search in Hindi
+      - generic [ref=e907]:
+        - generic [ref=e908]:
+          - paragraph [ref=e909]: 10 — Reflections
+          - heading "What Failed & What I'd Change" [level=2] [ref=e910]
+        - generic [ref=e911]:
+          - generic [ref=e913]:
+            - img [ref=e915]
+            - generic [ref=e917]:
+              - 'heading "What didn''t work: V1 enrollment flow" [level=3] [ref=e918]'
+              - paragraph [ref=e919]: The initial ABHA enrollment UX assumed patients had reliable OTP delivery. In the Delhi NCR pilot, ~30% of rural users failed the first enrollment attempt because of SMS delivery delays on BSNL networks. We had over-indexed on the tech architecture and under-indexed on last-mile connectivity constraints. V2 added a QR-scan fallback via PHC kiosks, which cut enrollment failure to under 4%.
+          - generic [ref=e921]:
+            - img [ref=e923]
+            - generic [ref=e925]:
+              - 'heading "If I started over: validate the consent model earlier" [level=3] [ref=e926]'
+              - paragraph [ref=e927]: The family-consent (CareCircle) feature was designed in week 3 and tested only in week 10. In practice, patients had deeply varying expectations about who should control record access — a 65-year-old farmer in Pune vs. a 28-year-old in Delhi. I'd run consent-model interviews in the first research sprint, not the last. This would have surfaced the 'proxy guardian' edge case before it became a pilot pain point.
+    - generic [ref=e928]:
+      - generic [ref=e933]:
+        - generic [ref=e934]: Up Next
+        - link "Nexus Fintech App Continue Reading" [ref=e935] [cursor=pointer]:
+          - /url: /work/nexus-banking
+          - heading "Nexus Fintech App" [level=2] [ref=e936]
+          - generic [ref=e937]:
+            - text: Continue Reading
+            - img [ref=e938]
+      - link "View All Projects" [ref=e941] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e942]
+        - generic [ref=e944]: View All Projects
+  - contentinfo [ref=e945]:
+    - generic [ref=e946]:
+      - paragraph [ref=e947]:
+        - generic [ref=e948]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e949]:
+        - link "GitHub Profile" [ref=e950] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e951]
+        - link "LinkedIn Profile" [ref=e954] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e955]
+        - link "Send email to adichinchakar@gmail.com" [ref=e959] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com
+  - button "Open Next.js Dev Tools" [ref=e965] [cursor=pointer]:
+    - img [ref=e966]

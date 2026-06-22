@@ -1,0 +1,1124 @@
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://100.79.197.17:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 1105ms
+ GET / 200 in 650ms (compile: 338ms, render: 312ms)
+ GET /work 200 in 194ms (compile: 167ms, render: 27ms)
+ GET / 200 in 54ms (compile: 5ms, render: 49ms)
+ GET /work/simplifai 200 in 800ms (compile: 637ms, render: 163ms)
+ GET /work/infosys 200 in 101ms (compile: 22ms, render: 80ms)
+ GET /work/simplifai-design-system 200 in 112ms (compile: 15ms, render: 97ms)
+ GET /work/orbit 200 in 85ms (compile: 15ms, render: 70ms)
+ GET /work/medsecure 200 in 67ms (compile: 14ms, render: 53ms)
+ GET /work/nexus-banking 200 in 71ms (compile: 14ms, render: 56ms)
+ GET /work/aulys 200 in 103ms (compile: 17ms, render: 86ms)
+ GET /work/infosys 200 in 72ms (compile: 14ms, render: 58ms)
+✓ Compiled in 602ms
+✓ Compiled in 417ms
+ GET /work/infosys 200 in 462ms (compile: 184ms, render: 278ms)
+✓ Compiled in 375ms
+ GET /work/medsecure 200 in 464ms (compile: 163ms, render: 302ms)
+✓ Compiled in 269ms
+✓ Compiled in 241ms
+ GET /work/simplifai 200 in 451ms (compile: 165ms, render: 286ms)
+ GET /work/aulys 200 in 116ms (compile: 14ms, render: 101ms)
+ GET /work/nexus-banking 200 in 87ms (compile: 16ms, render: 71ms)
+ GET /work/orbit 200 in 74ms (compile: 14ms, render: 60ms)
+ GET / 200 in 24ms (compile: 5ms, render: 19ms)
+✓ Compiled in 442ms
+✓ Compiled in 427ms
+✓ Compiled in 339ms
+✓ Compiled in 357ms
+✓ Compiled in 400ms
+✓ Compiled in 346ms
+✓ Compiled in 189ms
+ GET /work/nexus-banking 200 in 239ms (compile: 158ms, render: 81ms)
+ GET / 200 in 85ms (compile: 6ms, render: 79ms)
+ GET /work 200 in 38ms (compile: 17ms, render: 21ms)
+ GET /work/simplifai 200 in 44ms (compile: 15ms, render: 29ms)
+ GET /work/simplifai-design-system 200 in 39ms (compile: 14ms, render: 25ms)
+ GET /work/medsecure 200 in 40ms (compile: 14ms, render: 26ms)
+✓ Compiled in 389ms
+✓ Compiled in 460ms
+✓ Compiled in 389ms
+✓ Compiled in 367ms
+✓ Compiled in 368ms
+✓ Compiled in 392ms
+Persisting failed: Unable to write SST file 00003678.sst
+
+Caused by:
+    The system cannot find the path specified. (os error 3)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+✓ Compiled in 250ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+⨯ ./src/components/case-studies/simplifai/hero.tsx:6:1
+Export BrowserFrame doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export BrowserFrame was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-client] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/simplifai/hero.tsx:6:1
+Export BrowserFrame doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export BrowserFrame was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/simplifai/hero.tsx:6:1
+Export FlowBuilder doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export FlowBuilder was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-client] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/simplifai/hero.tsx:6:1
+Export FlowBuilder doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export FlowBuilder was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/orbit/hero.tsx:7:1
+Export OrgMapScreen doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mOrgMapScreen[39m } [36mfrom[39m [32m"./orbit-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mexport[39m [36mfunction[39m [33mHero[39m() {
+ [90m 10 |[39m     [36mreturn[39m ([0m
+
+The export OrgMapScreen was not found in module [project]/src/components/case-studies/orbit/orbit-ui.tsx [app-client] (ecmascript).
+Did you mean to import OrbitUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/orbit/hero.tsx:7:1
+Export OrgMapScreen doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mOrgMapScreen[39m } [36mfrom[39m [32m"./orbit-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mexport[39m [36mfunction[39m [33mHero[39m() {
+ [90m 10 |[39m     [36mreturn[39m ([0m
+
+The export OrgMapScreen was not found in module [project]/src/components/case-studies/orbit/orbit-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import OrbitUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/medsecure/hero.tsx:7:1
+Export PatientHome doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m[33m,[39m [33mShield[39m[33m,[39m [33mAlertTriangle[39m[33m,[39m [33mWifi[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mPatientHome[39m } [36mfrom[39m [32m"./medsecure-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mconst[39m [33mCRISIS_STATS[39m [33m=[39m [
+ [90m 10 |[39m     {[0m
+
+The export PatientHome was not found in module [project]/src/components/case-studies/medsecure/medsecure-ui.tsx [app-client] (ecmascript).
+Did you mean to import MedSecureUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/medsecure/hero.tsx:7:1
+Export PatientHome doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m[33m,[39m [33mShield[39m[33m,[39m [33mAlertTriangle[39m[33m,[39m [33mWifi[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mPatientHome[39m } [36mfrom[39m [32m"./medsecure-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mconst[39m [33mCRISIS_STATS[39m [33m=[39m [
+ [90m 10 |[39m     {[0m
+
+The export PatientHome was not found in module [project]/src/components/case-studies/medsecure/medsecure-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import MedSecureUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RecommendationsScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RecommendationsScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-client] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RecommendationsScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RecommendationsScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RubricGeneratorScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RubricGeneratorScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-client] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RubricGeneratorScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RubricGeneratorScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+thread 'tokio-runtime-worker' (30172) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 176288 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003649.meta
+    1: Unable to open static sorted file 00003647.sst
+    2: The system cannot find the file specified. (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' (58012) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 183661 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003632.meta
+    1: Unable to open static sorted file 00003627.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (51124) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 180109 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003511.meta
+    1: Unable to open static sorted file 00003509.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (39624) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for <DiskFileSystem as FileSystem>::read (TaskId 186324))
+
+Caused by:
+    0: Looking up data for TaskId 186324 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\Admin\AppData\Local\Temp\next-panic-c09ba6295d3112ddf73f158b1e629a7a.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20restore%20task%20data%20%28corrupted%20database%20or%20bug%29%3A%20Meta%20for%20%3CDiskFileSystem%20as%20FileSystem%3E%3A%3Aread%20%28TaskId%20186324%29%29&body=Turbopack%20version%3A%20%6023c46498%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20restore%20task%20data%20%28corrupted%20database%20or%20bug%29%3A%20Meta%20for%20%3CDiskFileSystem%20as%20FileSystem%3E%3A%3Aread%20%28TaskId%20186324%29%29%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+Error [ModuleBuildError]: ./src/components/case-studies/simplifai/hero.tsx:6:1
+Export BrowserFrame doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export BrowserFrame was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-client] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/simplifai/hero.tsx:6:1
+Export BrowserFrame doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export BrowserFrame was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/simplifai/hero.tsx:6:1
+Export FlowBuilder doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export FlowBuilder was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-client] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/simplifai/hero.tsx:6:1
+Export FlowBuilder doesn't exist in target module
+[0m [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mMouseEvent[39m } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m { [33mBrowserFrame[39m[33m,[39m [33mFlowBuilder[39m } [36mfrom[39m [32m"./simplifai-ui"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36mfunction[39m [33mMetricCard[39m({
+ [90m 9 |[39m     icon[33m:[39m [33mIcon[39m[33m,[39m[0m
+
+The export FlowBuilder was not found in module [project]/src/components/case-studies/simplifai/simplifai-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import SimplifaiUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component Browser]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/simplifai/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Client Component SSR]
+    ./src/components/case-studies/simplifai/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/orbit/hero.tsx:7:1
+Export OrgMapScreen doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mOrgMapScreen[39m } [36mfrom[39m [32m"./orbit-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mexport[39m [36mfunction[39m [33mHero[39m() {
+ [90m 10 |[39m     [36mreturn[39m ([0m
+
+The export OrgMapScreen was not found in module [project]/src/components/case-studies/orbit/orbit-ui.tsx [app-client] (ecmascript).
+Did you mean to import OrbitUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/orbit/hero.tsx:7:1
+Export OrgMapScreen doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mOrgMapScreen[39m } [36mfrom[39m [32m"./orbit-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mexport[39m [36mfunction[39m [33mHero[39m() {
+ [90m 10 |[39m     [36mreturn[39m ([0m
+
+The export OrgMapScreen was not found in module [project]/src/components/case-studies/orbit/orbit-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import OrbitUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Client Component Browser]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/orbit/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Client Component SSR]
+    ./src/components/case-studies/orbit/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/medsecure/hero.tsx:7:1
+Export PatientHome doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m[33m,[39m [33mShield[39m[33m,[39m [33mAlertTriangle[39m[33m,[39m [33mWifi[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mPatientHome[39m } [36mfrom[39m [32m"./medsecure-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mconst[39m [33mCRISIS_STATS[39m [33m=[39m [
+ [90m 10 |[39m     {[0m
+
+The export PatientHome was not found in module [project]/src/components/case-studies/medsecure/medsecure-ui.tsx [app-client] (ecmascript).
+Did you mean to import MedSecureUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/medsecure/hero.tsx:7:1
+Export PatientHome doesn't exist in target module
+[0m [90m  5 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m  6 |[39m [36mimport[39m { [33mArrowLeft[39m[33m,[39m [33mShield[39m[33m,[39m [33mAlertTriangle[39m[33m,[39m [33mWifi[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mimport[39m { [33mPatientHome[39m } [36mfrom[39m [32m"./medsecure-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m
+ [90m  9 |[39m [36mconst[39m [33mCRISIS_STATS[39m [33m=[39m [
+ [90m 10 |[39m     {[0m
+
+The export PatientHome was not found in module [project]/src/components/case-studies/medsecure/medsecure-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import MedSecureUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component Browser]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/case-studies/medsecure/hero.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Client Component SSR]
+    ./src/components/case-studies/medsecure/content.tsx [Server Component]
+    ./src/app/work/[slug]/page.tsx [Server Component]
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RecommendationsScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RecommendationsScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-client] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RecommendationsScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RecommendationsScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RubricGeneratorScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RubricGeneratorScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-client] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RubricGeneratorScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RubricGeneratorScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+    at <unknown> (ModuleBuildError: ./src/components/case-studies/simplifai/hero.tsx:6:1)
+    at <unknown> (./src/components/case-studies/simplifai/hero.tsx:6:1)
+    at <unknown> (./src/components/case-studies/simplifai/hero.tsx:6:1)
+    at <unknown> (./src/components/case-studies/simplifai/hero.tsx:6:1)
+    at <unknown> (./src/components/case-studies/orbit/hero.tsx:7:1)
+    at <unknown> (./src/components/case-studies/orbit/hero.tsx:7:1)
+    at <unknown> (./src/components/case-studies/medsecure/hero.tsx:7:1)
+    at <unknown> (./src/components/case-studies/medsecure/hero.tsx:7:1)
+    at <unknown> (./src/components/case-studies/infosys/content.tsx:8:1)
+    ... collapsed 3 duplicate lines matching above 1 lines 3 times...
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+⨯ ./src/components/case-studies/infosys/content.tsx:8:1
+Export RecommendationsScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RecommendationsScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-client] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RecommendationsScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RecommendationsScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RubricGeneratorScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RubricGeneratorScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-client] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+./src/components/case-studies/infosys/content.tsx:8:1
+Export RubricGeneratorScreen doesn't exist in target module
+[0m [90m  6 |[39m [36mimport[39m { motion } [36mfrom[39m [32m"@/lib/motion"[39m[33m;[39m
+ [90m  7 |[39m [36mimport[39m { [33mLock[39m[33m,[39m [33mLinkedin[39m[33m,[39m [33mMail[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { [33mRubricGeneratorScreen[39m[33m,[39m [33mRecommendationsScreen[39m } [36mfrom[39m [32m"@/components/case-studies/infosys/infosys-ui"[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  9 |[39m
+ [90m 10 |[39m [36mconst[39m outcomes [33m=[39m [
+ [90m 11 |[39m     {[0m
+
+The export RubricGeneratorScreen was not found in module [project]/src/components/case-studies/infosys/infosys-ui.tsx [app-ssr] (ecmascript).
+Did you mean to import InfosysUI?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/case-studies/infosys/content.tsx
+    ./src/app/work/[slug]/page.tsx
+
+
+
+thread 'tokio-runtime-worker' (34992) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 219841 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003501.meta
+    1: Unable to open static sorted file 00003499.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (58012) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "EsmAssetReference::get_referenced_asset", global_name: "turbopack-ecmascript@turbopack_ecmascript::references::esm::base::EsmAssetReference::get_referenced_asset", .. }, this: Some(RawVc::TaskCell(219841, "turbopack_ecmascript::references::esm::base::EsmAssetReference#4")), arg: () } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003677.meta
+    1: Unable to open static sorted file 00003672.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (51636) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Data for BeforeResolvePluginCondition::matches (TaskId 322003))
+
+Caused by:
+    0: Looking up data for TaskId 322003 from database failed
+    1: Unable to open static sorted file referenced from 00003665.meta
+    2: Unable to open static sorted file 00003658.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (58012) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for ChunkingContext::chunk_item_id_from_module (TaskId 145472))
+
+Caused by:
+    0: Looking up data for TaskId 145472 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (13980) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 237127 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003641.meta
+    1: Unable to open static sorted file 00003637.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (51124) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "ChunkingContext::chunk_item_id_from_module", global_name: "turbopack-core@turbopack_core::chunk::chunking_context::ChunkingContext::chunk_item_id_from_module", .. }, this: Some(RawVc::TaskCell(116153, "turbopack_browser::chunking_context::BrowserChunkingContext#0")), arg: (Vc(RawVc::TaskCell(204624, "turbopack_ecmascript::side_effect_optimization::facade::module::EcmascriptModuleFacadeModule#0")),) } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003666.meta
+    1: Unable to open static sorted file 00003662.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (30452) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for url_resolve (TaskId 323950))
+
+Caused by:
+    0: Looking up data for TaskId 323950 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (30452) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for url_resolve (TaskId 323950))
+
+Caused by:
+    0: Looking up data for TaskId 323950 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (51124) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "EsmAssetReference::get_referenced_asset", global_name: "turbopack-ecmascript@turbopack_ecmascript::references::esm::base::EsmAssetReference::get_referenced_asset", .. }, this: Some(RawVc::TaskCell(226447, "turbopack_ecmascript::references::esm::base::EsmAssetReference#6")), arg: () } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003677.meta
+    1: Unable to open static sorted file 00003672.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (13980) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "ChunkingContext::chunk_item_id_from_module", global_name: "turbopack-core@turbopack_core::chunk::chunking_context::ChunkingContext::chunk_item_id_from_module", .. }, this: Some(RawVc::TaskCell(116153, "turbopack_browser::chunking_context::BrowserChunkingContext#0")), arg: (Vc(RawVc::TaskCell(204624, "turbopack_ecmascript::side_effect_optimization::facade::module::EcmascriptModuleFacadeModule#0")),) } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003666.meta
+    1: Unable to open static sorted file 00003662.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (13980) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for ResolveOrigin::resolve_options (TaskId 234356))
+
+Caused by:
+    0: Looking up data for TaskId 234356 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (13980) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 257327 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003641.meta
+    1: Unable to open static sorted file 00003637.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (30452) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 259784 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00001192.meta
+    1: Unable to open static sorted file 00001190.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (58012) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "ChunkingContext::chunk_item_id_from_module", global_name: "turbopack-core@turbopack_core::chunk::chunking_context::ChunkingContext::chunk_item_id_from_module", .. }, this: Some(RawVc::TaskCell(116153, "turbopack_browser::chunking_context::BrowserChunkingContext#0")), arg: (Vc(RawVc::TaskCell(204624, "turbopack_ecmascript::side_effect_optimization::facade::module::EcmascriptModuleFacadeModule#0")),) } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003666.meta
+    1: Unable to open static sorted file 00003662.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (51124) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 274271 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00000546.meta
+    1: Unable to open static sorted file 00000541.sst
+    2: The system cannot find the file specified. (os error 2)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (30632) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 259129 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003641.meta
+    1: Unable to open static sorted file 00003637.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (39560) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Data for ReferencedAsset::from_resolve_result (TaskId 305878))
+
+Caused by:
+    0: Looking up data for TaskId 305878 from database failed
+    1: Unable to open static sorted file referenced from 00003665.meta
+    2: Unable to open static sorted file 00003658.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (58048) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "EsmAssetReference::get_referenced_asset", global_name: "turbopack-ecmascript@turbopack_ecmascript::references::esm::base::EsmAssetReference::get_referenced_asset", .. }, this: Some(RawVc::TaskCell(222024, "turbopack_ecmascript::references::esm::base::EsmAssetReference#8")), arg: () } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003666.meta
+    1: Unable to open static sorted file 00003662.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (20804) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Data for <BrowserChunkingContext as ChunkingContext>::is_reference_unused (TaskId 305854))
+
+Caused by:
+    0: Looking up data for TaskId 305854 from database failed
+    1: Unable to open static sorted file referenced from 00003665.meta
+    2: Unable to open static sorted file 00003658.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (58048) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Data for ReferencedAsset::from_resolve_result (TaskId 305878))
+
+Caused by:
+    0: Looking up data for TaskId 305878 from database failed
+    1: Unable to open static sorted file referenced from 00003665.meta
+    2: Unable to open static sorted file 00003658.sst
+    3: The system cannot find the file specified. (os error 2)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (45556) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 107732 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003641.meta
+    1: Unable to open static sorted file 00003637.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (57032) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "<ModuleAssetContext as AssetContext>::resolve_asset", global_name: "turbopack@turbopack::ModuleAssetContext::AssetContext::resolve_asset", .. }, this: Some(RawVc::TaskCell(609, "turbopack::ModuleAssetContext#0")), arg: (FileSystemPath { fs: ResolvedVc(RawVc::TaskCell(8, "turbo_tasks_fs::DiskFileSystem#0")), path: "src/components/home/hero.tsx" }, Vc(RawVc::TaskCell(44665, "turbopack_core::resolve::parse::Request#0")), Vc(RawVc::TaskCell(1909, "turbopack_core::resolve::options::ResolveOptions#0")), EcmaScriptModules(ImportPart(Export("cn")))) } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003666.meta
+    1: Unable to open static sorted file 00003662.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (13980) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for <ModuleAssetContext as AssetContext>::process_resolve_result (TaskId 104285))
+
+Caused by:
+    0: Looking up data for TaskId 104285 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (13980) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for <ModuleAssetContext as AssetContext>::process_resolve_result (TaskId 104285))
+
+Caused by:
+    0: Looking up data for TaskId 104285 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (55528) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for <ModuleAssetContext as AssetContext>::process_resolve_result (TaskId 104285))
+
+Caused by:
+    0: Looking up data for TaskId 104285 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (20804) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for <ModuleAssetContext as AssetContext>::process_resolve_result (TaskId 104285))
+
+Caused by:
+    0: Looking up data for TaskId 104285 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (58048) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 152370 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003511.meta
+    1: Unable to open static sorted file 00003509.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (57972) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "ModuleResolveResult::primary_modules", global_name: "turbopack-core@turbopack_core::resolve::ModuleResolveResult::primary_modules", .. }, this: Some(RawVc::TaskCell(45389, "turbopack_core::resolve::ModuleResolveResult#0")), arg: () } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003631.meta
+    1: Unable to open static sorted file 00003626.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (24548) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 107917 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003649.meta
+    1: Unable to open static sorted file 00003647.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (30844) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Meta for <ModuleAssetContext as AssetContext>::process_resolve_result (TaskId 104285))
+
+Caused by:
+    0: Looking up data for TaskId 104285 from database failed
+    1: Unable to open static sorted file referenced from 00003674.meta
+    2: Unable to open static sorted file 00003669.sst
+    3: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (51124) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "EsmAssetReference::get_referenced_asset", global_name: "turbopack-ecmascript@turbopack_ecmascript::references::esm::base::EsmAssetReference::get_referenced_asset", .. }, this: Some(RawVc::TaskCell(103578, "turbopack_ecmascript::references::esm::base::EsmAssetReference#23")), arg: () } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003677.meta
+    1: Unable to open static sorted file 00003672.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (24548) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "EsmAssetReference::get_referenced_asset", global_name: "turbopack-ecmascript@turbopack_ecmascript::references::esm::base::EsmAssetReference::get_referenced_asset", .. }, this: Some(RawVc::TaskCell(103578, "turbopack_ecmascript::references::esm::base::EsmAssetReference#23")), arg: () } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003677.meta
+    1: Unable to open static sorted file 00003672.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (32476) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 154616 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003501.meta
+    1: Unable to open static sorted file 00003499.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (27300) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:963:22:
+Failed to lookup task type: Looking up task type for TaskId 154627 from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003667.meta
+    1: Unable to open static sorted file 00003661.sst
+    2: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (51636) panicked at C:\actions-runner\_work\next.js\next.js\turbopack\crates\turbo-tasks-backend\src\backend\mod.rs:1354:30:
+Failed to lookup task id: Looking up task id for CachedTaskType { native_fn: NativeFunction { name: "ChunkingContext::chunk_item_id", global_name: "turbopack-core@turbopack_core::chunk::chunking_context::ChunkingContext::chunk_item_id", .. }, this: Some(RawVc::TaskCell(116157, "turbopack_nodejs::chunking_context::NodeJsChunkingContext#0")), arg: (Vc(RawVc::TaskCell(150144, "turbopack_ecmascript::ModuleChunkItem#0")),) } from database failed
+
+Caused by:
+    0: Unable to open static sorted file referenced from 00003666.meta
+    1: Unable to open static sorted file 00003662.sst
+    2: The system cannot find the file specified. (os error 2)
+[?25h

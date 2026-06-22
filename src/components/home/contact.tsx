@@ -20,7 +20,7 @@ export function Contact() {
     }
 
     return (
-        <section id="contact" className="py-24 px-6 relative overflow-hidden">
+        <section id="contact" className="py-16 md:py-24 px-6 relative overflow-hidden">
             {/* Ambient glow orbs */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[150px] pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/8 rounded-full blur-[120px] pointer-events-none" />
@@ -32,10 +32,10 @@ export function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring" as const, stiffness: 240, damping: 22 }}
                     viewport={{ once: true }}
-                    className="rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/50 shadow-[0_20px_60px_rgb(0,0,0,0.08)] p-10 md:p-14 flex flex-col items-center text-center gap-7"
+                    className="rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/50 shadow-[0_20px_60px_rgb(0,0,0,0.08)] p-6 sm:p-10 md:p-14 flex flex-col items-center text-center gap-7"
                 >
                     {/* Heading */}
-                    <TextReveal tag="h2" className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none">
+                    <TextReveal tag="h2" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none">
                         Let's build something great.
                     </TextReveal>
 
@@ -59,7 +59,7 @@ export function Contact() {
                     >
                         <Button
                             size="lg"
-                            className="rounded-full text-xl px-10 py-6 h-auto shadow-lg"
+                            className="rounded-full text-lg px-8 py-4 md:text-xl md:px-10 md:py-6 h-auto shadow-lg"
                             onClick={() => setIsContactSheetOpen(true)}
                         >
                             Get in Touch

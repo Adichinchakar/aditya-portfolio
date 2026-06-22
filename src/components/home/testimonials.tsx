@@ -54,7 +54,7 @@ export function Testimonials() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="py-24 overflow-hidden relative" ref={ref} aria-label="Client testimonials" role="region">
+        <section className="py-16 md:py-24 overflow-hidden relative" ref={ref} aria-label="Client testimonials" role="region">
             {/* Section header */}
             <div className="container mx-auto px-6 mb-10 text-center">
                 <motion.div
@@ -93,7 +93,7 @@ export function Testimonials() {
                     {duplicatedTestimonials.map((t, i) => (
                         <div
                             key={i}
-                            className="w-[320px] md:w-[420px] shrink-0 mx-3 md:mx-4 p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col gap-6 relative overflow-hidden group"
+                            className="w-[280px] sm:w-[320px] md:w-[420px] shrink-0 mx-3 md:mx-4 p-6 md:p-8 rounded-3xl bg-white/70 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 flex flex-col gap-6 relative overflow-hidden group"
                         >
                             {/* Subtle gradient hover effect */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100/40 rounded-full blur-3xl -mr-10 -mt-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

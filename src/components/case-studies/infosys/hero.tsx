@@ -79,25 +79,25 @@ export function Hero() {
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white mb-6 leading-[1.05]">
                             Infosys:<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">
-                                Enterprise UX
+                                GenAI for EdTech
                             </span>
                             <br />
                             <span className="text-zinc-400 font-bold text-4xl sm:text-5xl md:text-6xl">
-                                at 500K Scale.
+                                teachers trust.
                             </span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-zinc-400 max-w-lg mb-3 leading-relaxed font-medium">
-                            Two flagship products. One challenge: designing for hundreds of thousands of users with competing needs, constrained tech, and stakeholders at every layer of a Fortune Global 500 organisation.
+                            Designing AI tooling for K-12 education — where the hard part isn&rsquo;t the model, it&rsquo;s getting teachers to trust its output enough to act on it. Shipped inside a Fortune Global 500 delivery org, with stakeholders at every layer.
                         </p>
                         <div className="space-y-2 mb-6">
                             <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/8">
                                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
-                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">Enterprise talent platform</span> — An internal marketplace matching a global workforce to projects across delivery units, geographies, and skill domains. Multi-persona: employee, manager, HR, admin.</p>
+                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">GenAI for EdTech</span> — AI rubric engines and adaptive recommendation UX for K-12 education. The flagship work on this page: trust, latency, and a design system across five teams.</p>
                             </div>
                             <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/8">
                                 <span className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 shrink-0" />
-                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">GenAI for EdTech</span> — AI rubric engines and adaptive recommendation UX for K-12 education at scale.</p>
+                                <p className="text-sm text-zinc-300 leading-relaxed"><span className="font-bold text-white">Enterprise talent platform</span> — a second engagement: an internal marketplace matching a global workforce to projects across delivery units, geographies, and skill domains.</p>
                             </div>
                         </div>
 
@@ -140,9 +140,9 @@ export function Hero() {
                                 </div>
                                 <div className="grid grid-cols-2 gap-3">
                                     <MetricCard value="~70%" label="Faster Assessment" sub="vs. manual baseline" />
-                                    <MetricCard value="5+" label="Product Teams" sub="Design system served" />
                                     <MetricCard value="3" label="AI Tools Shipped" sub="In production" />
-                                    <MetricCard value="Multi" label="Persona Scope" sub="Employee · Manager · HR" />
+                                    <MetricCard value="0" label="Design-System Forks" sub="across 5 product teams" />
+                                    <MetricCard value="≈2×" label="AI-Output Acceptance" sub="usability testing · directional" />
                                 </div>
                             </div>
                         </div>

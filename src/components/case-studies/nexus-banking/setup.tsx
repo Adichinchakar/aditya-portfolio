@@ -32,7 +32,7 @@ export function Setup() {
 
                     <div className="prose prose-lg text-zinc-600">
                         <p className="lead text-xl text-zinc-800 font-medium mb-6">
-                            In the race to become the ultimate financial "Super-App," Tier-1 Neobanks have aggressively layered crypto, commodities, lifestyle subscriptions, and travel features onto checking account foundations — without restructuring the underlying information architecture to carry that weight.
+                            It&apos;s 11pm and you open your banking app to move money before a payment clears tomorrow. Before you reach &ldquo;Transfer,&rdquo; you scroll past crypto, commodities, travel perks, and a lifestyle subscription you never asked for. Tier-1 neobanks kept layering features onto a checking-account foundation without ever restructuring the architecture underneath to carry the weight.
                         </p>
                         <p className="mb-6">
                             This audit started from a specific hypothesis: <strong className="text-zinc-800">horizontal feature expansion increases cognitive load on primary financial flows</strong>, measurable through task abandonment rate and time-on-task for core actions (balance check, P2P transfer, account freeze resolution). To pressure-test this, I conducted a structured heuristic evaluation of Revolut, Jupiter, and Fi Money against Nielsen's 10 usability principles, supplemented by sentiment analysis across App Store and Trustpilot reviews — categorized by flow type and failure mode.

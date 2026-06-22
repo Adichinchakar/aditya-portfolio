@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ff8eb0",
+              "surface-container-low": "#131313",
+              "primary-fixed-dim": "#a27cff",
+              "on-tertiary-fixed": "#380018",
+              "inverse-primary": "#6e3bd7",
+              "on-surface-variant": "#adaaaa",
+              "on-surface": "#ffffff",
+              "inverse-surface": "#fcf8f8",
+              "primary-fixed": "#ae8dff",
+              "on-primary": "#39008c",
+              "on-background": "#ffffff",
+              "on-tertiary-fixed-variant": "#701039",
+              "secondary-fixed-dim": "#d6d3d7",
+              "surface-container-lowest": "#000000",
+              "on-tertiary": "#6a0934",
+              "outline-variant": "#494847",
+              "tertiary-fixed-dim": "#f67ca3",
+              "surface-dim": "#0e0e0e",
+              "surface-tint": "#ba9eff",
+              "primary-container": "#ae8dff",
+              "tertiary-dim": "#f0779d",
+              "tertiary": "#ff97b5",
+              "on-primary-fixed-variant": "#370086",
+              "on-secondary-fixed-variant": "#5c5b5e",
+              "on-error": "#490013",
+              "on-secondary": "#525155",
+              "error-dim": "#d73357",
+              "on-error-container": "#ffb2b9",
+              "secondary-dim": "#d6d3d7",
+              "error-container": "#a70138",
+              "secondary": "#e4e1e6",
+              "on-tertiary-container": "#59002a",
+              "on-primary-container": "#2b006e",
+              "surface-variant": "#262626",
+              "outline": "#777575",
+              "inverse-on-surface": "#565554",
+              "secondary-fixed": "#e4e1e6",
+              "primary-dim": "#8455ef",
+              "secondary-container": "#47464a",
+              "on-secondary-container": "#d2cfd3",
+              "primary": "#ba9eff",
+              "surface": "#0e0e0e",
+              "background": "#0e0e0e",
+              "error": "#ff6e84",
+              "on-secondary-fixed": "#3f3f42",
+              "surface-bright": "#2c2c2c",
+              "tertiary-container": "#fd81a8",
+              "surface-container": "#1a1919",
+              "surface-container-highest": "#262626",
+              "on-primary-fixed": "#000000",
+              "surface-container-high": "#201f1f"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0e0e0e;
+        color: #ffffff;
+      }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Anchor -->
+<nav class="bg-zinc-950/60 backdrop-blur-xl font-['Epilogue'] tracking-tight font-bold rounded-full mt-4 mx-auto w-[95%] max-w-7xl sticky top-4 z-50 shadow-[0_20px_50px_rgba(57,0,140,0.08)] flex justify-between items-center px-8 py-3">
+<div class="text-2xl font-black tracking-tighter text-zinc-100">Orbit</div>
+<div class="hidden md:flex gap-8">
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-colors hover:scale-[1.02] transition-transform duration-300" href="#">Case Study</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-colors hover:scale-[1.02] transition-transform duration-300" href="#">Solutions</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-colors hover:scale-[1.02] transition-transform duration-300" href="#">Platform</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-colors hover:scale-[1.02] transition-transform duration-300" href="#">Enterprise</a>
+</div>
+<button class="bg-gradient-to-br from-[#ba9eff] to-[#8455ef] text-on-primary px-6 py-2 rounded-full font-bold hover:scale-[1.02] transition-transform duration-300 active:scale-95 duration-200">
+            Get Started
+        </button>
+</nav>
+<main class="max-w-7xl mx-auto px-8 pt-24 pb-32">
+<!-- Section Header -->
+<div class="mb-20">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/15 mb-8">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-primary font-label text-sm font-bold tracking-widest uppercase">05 — Projected Outcomes</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-on-surface">
+                The business case<br/>in numbers.
+            </h1>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Main Hero Card (2 cols) -->
+<div class="md:col-span-2 bg-[#1a1919] rounded-xl p-12 flex flex-col justify-between group hover:scale-[1.01] transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full -mr-20 -mt-20"></div>
+<div>
+<span class="text-primary-fixed-dim font-headline font-black text-9xl tracking-tighter block mb-4">60%</span>
+<h3 class="text-on-surface font-headline text-3xl font-bold leading-tight max-w-md">
+                        Reduction in time-to-full-productivity
+                    </h3>
+</div>
+<div class="mt-12 flex items-end justify-between">
+<p class="text-on-surface-variant text-lg max-w-sm">
+                        Accelerating the onboarding process from weeks to days by synthesizing spatial context.
+                    </p>
+<span class="material-symbols-outlined text-primary-dim text-4xl opacity-50 group-hover:opacity-100 transition-opacity">trending_up</span>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between hover:scale-[1.01] transition-all duration-500">
+<div class="bg-surface-container-low w-12 h-12 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">confirmation_number</span>
+</div>
+<div>
+<div class="text-on-surface font-headline text-6xl font-black mb-2 tracking-tighter">40%</div>
+<p class="text-on-surface-variant font-medium">Reduction in IT support tickets through automated spatial resolution.</p>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between hover:scale-[1.01] transition-all duration-500">
+<div class="bg-surface-container-low w-12 h-12 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary">favorite</span>
+</div>
+<div>
+<div class="text-on-surface font-headline text-6xl font-black mb-2 tracking-tighter">+28</div>
+<p class="text-on-surface-variant font-medium">Net Promoter Score (NPS) improvement across enterprise divisions.</p>
+</div>
+</div>
+<!-- Small Card 3 -->
+<div class="bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between hover:scale-[1.01] transition-all duration-500">
+<div class="bg-surface-container-low w-12 h-12 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<div class="text-on-surface font-headline text-5xl font-black mb-2 tracking-tighter flex items-baseline gap-1">3h <span class="text-lg text-on-surface-variant font-medium">vs</span> 3w</div>
+<p class="text-on-surface-variant font-medium">Drastic reduction in context-building time for new project environments.</p>
+</div>
+</div>
+<!-- ROI Detailed Card (Full width) -->
+<div class="md:col-span-3 bg-white/5 rounded-xl border border-outline-variant/10 p-1 md:p-2">
+<div class="bg-surface-container-low rounded-lg overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<h4 class="text-on-surface font-headline text-2xl font-bold mb-4">Compound Annual ROI Calculation</h4>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            Based on a workforce of 500 engineers, the Orbit deployment projects a total operational saving of $4.2M in the first 18 months, driven by reduced context switching and infrastructure optimization.
+                        </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold text-on-surface tracking-widest uppercase border border-outline-variant/10">Year 1: +12%</div>
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold text-on-surface tracking-widest uppercase border border-outline-variant/10">Year 2: +24%</div>
+</div>
+</div>
+<div class="md:w-1/2 relative min-h-[300px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Abstract 3D visualization of glowing digital data nodes connected by violet light streaks in a dark obsidian void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnO-BmCEje8vawz-oKlTBApHBlg_iiqPMpoYTeVhuqUZL-f5BINnAvOvixJp1JWCDAHUrW79mtCM11t_2fOOVM5XiPKKr_M9wPGjH2egaLir9Cw33VeY9EoFVRJC36CNt-rAqmYBbzkhOf8phGVcFjqb9TzyoJUQV_1X7Z-G1C2LtT-fiDuPZzYCfGmRINS9u4FTQMnAQ2ixUJKtHeZyQPe6woaEfe2xNNf9zmNWHAG5oRx9i8DXqPyyqqWZaQaEJ3xPzEhOYyAnl"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Anchor -->
+<footer class="bg-black w-full border-t border-zinc-800/15">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 font-['Inter'] text-sm tracking-wide">
+<div class="text-lg font-bold text-zinc-500">Orbit</div>
+<div class="flex gap-8 text-zinc-500">
+<a class="hover:text-violet-400 transition-colors opacity-80 hover:opacity-100" href="#">Legal</a>
+<a class="hover:text-violet-400 transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="hover:text-violet-400 transition-colors opacity-80 hover:opacity-100" href="#">Security</a>
+<a class="hover:text-violet-400 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="text-zinc-500">
+                © 2024 Orbit Spatial Systems. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

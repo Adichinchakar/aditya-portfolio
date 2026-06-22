@@ -1,0 +1,536 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - alert [ref=e11]
+  - link "Skip to main content" [ref=e12] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e13]:
+    - generic [ref=e14]:
+      - link "AdityaChinchakar" [ref=e15] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e16]:
+        - link "Live Plugin" [ref=e17] [cursor=pointer]:
+          - /url: https://aulys-app.vercel.app/
+          - generic [ref=e21]: Live Plugin
+          - img [ref=e22]
+        - link "Work" [ref=e24] [cursor=pointer]:
+          - /url: /work
+        - link "Writing" [ref=e25] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e26] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e27]
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e31]:
+        - link "Back to Case Studies" [ref=e32] [cursor=pointer]:
+          - /url: /work
+          - img [ref=e33]
+          - generic [ref=e35]: Back to Case Studies
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - 'generic "Case study type: Figma Plugin, real product, in beta" [ref=e38]': Figma Plugin · Solo Built · Live in Beta
+            - 'heading "Aulys: AI Accessibility, Inside Figma." [level=1] [ref=e42]':
+              - text: "Aulys:"
+              - text: AI Accessibility, Inside Figma.
+            - paragraph [ref=e43]: 96.3% of the web fails basic accessibility. I built Aulys to fix that at the source — a real-time WCAG 2.2 scanner embedded directly in Figma, with AI-powered one-click remediation.
+            - paragraph [ref=e44]: Product strategy, UX, and all decisions are mine. I directed AI tools for execution — compressing a 6-month MVP to 10 weeks without sacrificing depth.
+            - generic [ref=e45]:
+              - generic [ref=e46]: Product Designer · Founder · Solo Builder
+              - generic [ref=e47]: Oct 2024 – Present
+            - link "View Aulys Live Plugin (opens in new tab)" [ref=e48] [cursor=pointer]:
+              - /url: https://aulys-app.vercel.app/
+              - text: View Live Plugin
+              - img [ref=e49]
+          - generic "Plugin beta performance metrics" [ref=e51]:
+            - generic [ref=e53]:
+              - heading "Beta Performance" [level=2] [ref=e55]
+              - generic [ref=e60]:
+                - generic [ref=e62]:
+                  - generic [ref=e63]:
+                    - img [ref=e65]
+                    - generic [ref=e70]: Beta
+                  - generic [ref=e71]: "30"
+                  - generic [ref=e72]: Active testers in beta
+                - generic [ref=e74]:
+                  - generic [ref=e75]:
+                    - img [ref=e77]
+                    - generic [ref=e82]: Scale
+                  - generic [ref=e83]: 500+
+                  - generic [ref=e84]: Frames already scanned
+                - generic [ref=e86]:
+                  - generic [ref=e87]:
+                    - img [ref=e89]
+                    - generic [ref=e91]: Speed
+                  - generic [ref=e92]: <10s
+                  - generic [ref=e93]: Per 500-layer document
+                - generic [ref=e95]:
+                  - generic [ref=e96]:
+                    - img [ref=e98]
+                    - generic [ref=e101]: Coverage
+                  - generic [ref=e102]: WCAG
+                  - generic [ref=e103]: 2.2 AA full · AAA selective
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - paragraph [ref=e107]: 01 — Problem
+          - heading "The Accessibility Crisis" [level=2] [ref=e108]
+          - generic [ref=e109]:
+            - generic [ref=e110]: 96.3%
+            - generic [ref=e111]: of the top 1 million websites fail basic WCAG compliance — WebAIM 2024
+          - paragraph [ref=e112]: Designers want to build inclusively. But for teams working fast in Figma, WCAG compliance sits at the end of the pipeline — expensive, error-prone, and always late.
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: $250K+
+              - generic [ref=e116]:
+                - text: avg. ADA lawsuit settlement
+                - text: per incident
+            - generic [ref=e117]:
+              - generic [ref=e118]: 6×
+              - generic [ref=e119]:
+                - text: costlier to fix post-launch
+                - text: vs. at design stage
+            - generic [ref=e120]:
+              - generic [ref=e121]: 4,600+
+              - generic [ref=e122]:
+                - text: ADA digital accessibility
+                - text: lawsuits filed in 2023
+          - paragraph [ref=e123]: In the UAE, Cabinet Decision No. 11/2023 mandates digital accessibility compliance for government and enterprise platforms — making Aulys directly relevant to teams operating in or entering the UAE market.
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - img [ref=e127]
+            - heading "Human Error at Scale" [level=3] [ref=e129]
+            - paragraph [ref=e130]: Checking contrast ratios, touch targets, and focus indicators manually across hundreds of screens leads to inevitable, costly oversights.
+          - generic [ref=e131]:
+            - img [ref=e133]
+            - heading "No Real-Time Feedback" [level=3] [ref=e135]
+            - paragraph [ref=e136]: Designers have zero visibility into compliance issues while designing. Non-compliant handoffs reach engineering teams with no warning.
+          - generic [ref=e137]:
+            - img [ref=e139]
+            - heading "Reactive, Not Preventive" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Accessibility is tested post-deployment. Finding issues after launch is 6× more expensive than catching them at the design stage.
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - paragraph [ref=e149]: Hook Model — Nir Eyal
+          - heading "Why They Came Back" [level=2] [ref=e150]
+          - paragraph [ref=e151]: Great product design doesn't just solve a problem once — it builds a loop that keeps users returning. Here's the behavioral architecture behind this product.
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: "01"
+              - generic [ref=e156]: Trigger
+            - generic [ref=e157]:
+              - generic [ref=e158]:
+                - generic [ref=e159]: External
+                - paragraph [ref=e160]: 96.3% of the web fails accessibility. A client's shipped design just failed an audit — post-launch.
+              - generic [ref=e161]:
+                - generic [ref=e162]: Internal
+                - paragraph [ref=e163]: "Designer anxiety: 'I'm about to ship something broken and I won't know until it's live and on someone's screen.'"
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - generic [ref=e166]: "02"
+              - generic [ref=e167]: Action
+            - generic [ref=e168]:
+              - generic [ref=e169]: Simplest behavior
+              - paragraph [ref=e170]: One-click scan inside Figma — during the design phase, before handoff ever happens.
+            - generic [ref=e171]: Friction removed by design
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - generic [ref=e174]: "03"
+              - generic [ref=e175]: Variable Reward
+            - generic [ref=e176]:
+              - generic [ref=e177]: Unpredictable outcome
+              - paragraph [ref=e178]: "Results vary per file: some runs surface zero violations (relief), others flag critical contrast failures or missing focus states (urgency to act)."
+            - generic [ref=e179]: Variability drives return visits
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - generic [ref=e182]: "04"
+              - generic [ref=e183]: Investment
+            - generic [ref=e184]:
+              - generic [ref=e185]: What raises switching cost
+              - paragraph [ref=e186]: Each scan trains the designer's eye. Over weeks, they stop making the violations. The tool doesn't just fix problems — it builds intuition.
+            - generic [ref=e187]: Loads the next trigger
+        - paragraph [ref=e188]: Investment → Trigger → Action → Reward → Investment · · · Hook Model by Nir Eyal
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - paragraph [ref=e192]: 02 — The Insight
+          - heading "The Real Blocker Wasn't Awareness. It Was Friction." [level=2] [ref=e193]
+          - paragraph [ref=e194]:
+            - text: Designers I spoke to already
+            - emphasis [ref=e195]: knew
+            - text: WCAG mattered. What they lacked was a tool that surfaced problems
+            - strong [ref=e196]: inside their existing workflow
+            - text: — not as an afterthought.
+          - paragraph [ref=e197]:
+            - text: I mapped the journey from "designer spots accessibility issue" to "issue gets fixed." There were
+            - strong [ref=e198]: 7 steps and 3 tool-switches
+            - text: — browser DevTools, external contrast checker, WCAG documentation, back to Figma. Every switch was a dropout point. The fix wasn't better tooling. It was
+            - emphasis [ref=e199]: fewer tools
+            - text: .
+        - generic [ref=e200]:
+          - img [ref=e201]
+          - blockquote [ref=e205]: “I check contrast in a separate tool, copy values back to Figma, and still miss things — it breaks my flow completely.”
+          - paragraph [ref=e206]: — Recurring sentiment from early user conversations
+        - generic [ref=e207]:
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - img [ref=e210]
+              - generic [ref=e212]: Key Decision
+            - heading "Plugin-first, not a standalone app" [level=3] [ref=e213]
+            - paragraph [ref=e214]: "Embedding the scanner in Figma eliminated context switching — the #1 reason designers ignore accessibility tools."
+          - generic [ref=e215]:
+            - generic [ref=e216]:
+              - img [ref=e217]
+              - generic [ref=e219]: Key Decision
+            - heading "Fix suggestions, not just reports" [level=3] [ref=e220]
+            - paragraph [ref=e221]: Surfacing a problem without a fix creates frustration. Aulys provides AI-powered one-click remediation so designers can act immediately.
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - img [ref=e224]
+              - generic [ref=e226]: Key Trade-off
+            - heading "Figma only, not multi-tool" [level=3] [ref=e227]
+            - paragraph [ref=e228]: I deliberately scoped to Figma for v1 to achieve depth over breadth — full WCAG 2.2 coverage for one platform beats shallow coverage across many.
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - paragraph [ref=e232]: 03 — How I Built It
+          - heading "From Canvas to Cloud" [level=2] [ref=e233]
+          - paragraph [ref=e234]: "I started with a focused Figma Plugin solving a single, painful problem: contrast checking inline. Once beta users validated it, a larger architectural vision took shape."
+          - paragraph [ref=e235]: I directed AI tools for all engineering execution — compressing what would have been a 6-month MVP into 10 weeks. Every product decision, architecture choice, and UX direction was mine. The AI was the builder; I was the product owner.
+        - generic [ref=e237]:
+          - generic [ref=e238]: Key Decision
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - generic [ref=e241]:
+                - img [ref=e242]
+                - generic [ref=e245]: Chose
+              - paragraph [ref=e246]: Chunked traversal — process nodes in batches of 50, yield between batches
+            - generic [ref=e247]:
+              - generic [ref=e248]:
+                - img [ref=e249]
+                - generic [ref=e253]: Rejected
+              - paragraph [ref=e254]: Single-pass full-page scan
+          - paragraph [ref=e256]:
+            - strong [ref=e257]: "Why:"
+            - text: Single-pass blocked Figma's UI thread for 3–4 seconds on complex frames — the canvas froze and users closed the plugin. Chunked approach takes the same total time but stays non-blocking throughout.
+        - generic [ref=e258]:
+          - img [ref=e260]
+          - generic [ref=e262]:
+            - generic [ref=e263]:
+              - img [ref=e265]
+              - generic [ref=e269]: ✓ Live in Beta
+            - 'heading "Phase 1: Figma Plugin" [level=3] [ref=e270]'
+            - paragraph [ref=e271]: A local scanner embedded directly in the Figma canvas. I implemented the Polychrom algorithm for accurate WCAG AAA contrast, text-spacing validation, and AI-powered one-click fixes — all without leaving the design tool.
+            - list [ref=e272]:
+              - listitem [ref=e273]: Interactive visual overlays on the Figma canvas
+              - listitem [ref=e275]: i18n support — RTL and CJK typography
+              - listitem [ref=e277]: Scans 500+ layers in under 10 seconds
+              - listitem [ref=e279]: GPT-4 suggestions for one-click fixes
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - img [ref=e284]
+              - generic [ref=e286]: ⚡ In Development
+            - 'heading "Phase 2: CI/CD SaaS" [level=3] [ref=e287]'
+            - paragraph [ref=e288]: "Beta signal validated a bigger need: teams wanted accessibility checks integrated into their engineering pipeline, not just design. I'm now building a platform using Playwright and axe-core to run scheduled audits and block non-compliant deployments."
+            - list [ref=e289]:
+              - listitem [ref=e290]: Headless browser scanning via Playwright
+              - listitem [ref=e292]: CI/CD pipeline blocking for non-compliant builds
+              - listitem [ref=e294]: Executive compliance dashboards and reports
+              - listitem [ref=e296]: Multi-tenant workspace with SSO (roadmap)
+      - generic [ref=e299]:
+        - generic [ref=e300]:
+          - paragraph [ref=e301]: 03.5 — Plugin Interface
+          - heading "Production UI" [level=2] [ref=e302]
+          - paragraph [ref=e303]: Three panels from the live Aulys plugin — the WCAG audit checklist, the color blindness simulator, and the scan history that tracks compliance over time.
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - img [ref=e308]
+              - generic [ref=e312]: Aulys
+              - generic [ref=e313]: BETA
+            - generic [ref=e314]:
+              - button "Settings" [ref=e315]:
+                - img [ref=e316]
+              - button "Close" [ref=e319]:
+                - img [ref=e320]
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - img [ref=e326]
+              - generic [ref=e330]:
+                - generic [ref=e331]: Dashboard — V2
+                - generic [ref=e332]: Scanned 2m ago · WCAG 2.2 AA
+            - generic [ref=e333]: PRO
+          - generic [ref=e336]:
+            - generic [ref=e337]:
+              - generic [ref=e338]:
+                - img [ref=e339]
+                - generic [ref=e342]:
+                  - generic [ref=e343]: "78"
+                  - generic [ref=e344]: SCORE
+              - generic [ref=e345]:
+                - generic [ref=e346]: Aulys Frame
+                - generic [ref=e347]: 5 issues · 4 auto-fixable
+                - generic [ref=e348]:
+                  - generic [ref=e349]: "2"
+                  - generic [ref=e351]: "2"
+                  - generic [ref=e353]: "1"
+            - generic [ref=e355]:
+              - generic [ref=e356]:
+                - img [ref=e357]
+                - generic [ref=e359]: Fix 4 issues automatically
+              - button "Run" [ref=e360]
+            - generic [ref=e361]:
+              - generic [ref=e362]:
+                - generic [ref=e363]:
+                  - generic [ref=e365]: Critical
+                  - generic [ref=e366]: "2"
+                - generic [ref=e367]:
+                  - button "Text contrast Auto-Fix Body text fails AA against its background (3.2:1, needs 4.5:1). 1.4.3 Contrast (Minimum)" [ref=e368]:
+                    - generic [ref=e369]:
+                      - generic [ref=e370]: Text contrast
+                      - generic [ref=e371]:
+                        - img [ref=e372]
+                        - text: Auto-Fix
+                    - paragraph [ref=e374]: Body text fails AA against its background (3.2:1, needs 4.5:1).
+                    - text: 1.4.3 Contrast (Minimum)
+                  - button "Touch target size Auto-Fix Icon button is 32×32px — below the 44×44px minimum. 2.5.5 Target Size" [ref=e375]:
+                    - generic [ref=e376]:
+                      - generic [ref=e377]: Touch target size
+                      - generic [ref=e378]:
+                        - img [ref=e379]
+                        - text: Auto-Fix
+                    - paragraph [ref=e381]: Icon button is 32×32px — below the 44×44px minimum.
+                    - text: 2.5.5 Target Size
+              - generic [ref=e382]:
+                - generic [ref=e383]:
+                  - generic [ref=e385]: Serious
+                  - generic [ref=e386]: "2"
+                - generic [ref=e387]:
+                  - button "Missing alt text Auto-Fix Image conveys meaning but has no text alternative. 1.1.1 Non-text Content" [ref=e388]:
+                    - generic [ref=e389]:
+                      - generic [ref=e390]: Missing alt text
+                      - generic [ref=e391]:
+                        - img [ref=e392]
+                        - text: Auto-Fix
+                    - paragraph [ref=e394]: Image conveys meaning but has no text alternative.
+                    - text: 1.1.1 Non-text Content
+                  - button "Form field label Input relies on placeholder only — no programmatic label. 3.3.2 Labels or Instructions" [ref=e395]:
+                    - generic [ref=e397]: Form field label
+                    - paragraph [ref=e398]: Input relies on placeholder only — no programmatic label.
+                    - text: 3.3.2 Labels or Instructions
+              - generic [ref=e399]:
+                - generic [ref=e400]:
+                  - generic [ref=e402]: Moderate
+                  - generic [ref=e403]: "1"
+                - button "Heading order Auto-Fix Heading levels skip from h2 to h4 — breaks document outline. 1.3.1 Info and Relationships" [ref=e405]:
+                  - generic [ref=e406]:
+                    - generic [ref=e407]: Heading order
+                    - generic [ref=e408]:
+                      - img [ref=e409]
+                      - text: Auto-Fix
+                  - paragraph [ref=e411]: Heading levels skip from h2 to h4 — breaks document outline.
+                  - text: 1.3.1 Info and Relationships
+          - generic [ref=e412]:
+            - button "Audit" [ref=e413]:
+              - img [ref=e414]
+              - generic [ref=e416]: Audit
+            - button "Tokens" [ref=e417]:
+              - img [ref=e418]
+              - generic [ref=e423]: Tokens
+            - button "Code" [ref=e424]:
+              - img [ref=e425]
+              - generic [ref=e428]: Code
+            - button "Issues" [ref=e429]:
+              - img [ref=e430]
+              - generic [ref=e432]: Issues
+            - button "Guide" [ref=e433]:
+              - img [ref=e434]
+              - generic [ref=e437]: Guide
+      - generic [ref=e439]:
+        - generic [ref=e440]:
+          - paragraph [ref=e441]: 04 — Architecture
+          - heading "System Specifications" [level=2] [ref=e442]
+          - paragraph [ref=e443]: A distributed architecture designed for high-concurrency accessibility auditing and real-time design validation. Each choice was made deliberately.
+        - generic [ref=e444]:
+          - generic [ref=e445]:
+            - heading "Frontend Application" [level=3] [ref=e446]
+            - paragraph [ref=e447]: Next.js 14 for SSR performance; React 18 concurrent features for real-time scan updates.
+            - generic [ref=e448]:
+              - generic [ref=e449]: Next.js 14
+              - generic [ref=e450]: React 18
+              - generic [ref=e451]: Tailwind CSS
+          - generic [ref=e452]:
+            - heading "Backend & Scan Engine" [level=3] [ref=e453]
+            - paragraph [ref=e454]: Playwright over Puppeteer for cross-browser coverage; BullMQ for multi-tenant job prioritization.
+            - generic [ref=e455]:
+              - generic [ref=e456]: Express.js
+              - generic [ref=e457]: Playwright
+              - generic [ref=e458]: axe-core
+              - generic [ref=e459]: BullMQ
+          - generic [ref=e460]:
+            - heading "Infrastructure" [level=3] [ref=e461]
+            - paragraph [ref=e462]: Supabase for instant Postgres + RLS; Redis for scan result caching; Vercel for zero-config deploys.
+            - generic [ref=e463]:
+              - generic [ref=e464]: PostgreSQL (Supabase)
+              - generic [ref=e465]: Redis
+              - generic [ref=e466]: Vercel
+              - generic [ref=e467]: GitHub Actions
+          - generic [ref=e468]:
+            - heading "AI & Integrations" [level=3] [ref=e469]
+            - paragraph [ref=e470]: GPT-4 for remediation suggestions; Figma Plugin API for canvas-level layer traversal.
+            - generic [ref=e471]:
+              - generic [ref=e472]: OpenAI GPT-4
+              - generic [ref=e473]: Figma Plugin API
+              - generic [ref=e474]: Razorpay (India launch)
+      - generic [ref=e476]:
+        - generic [ref=e477]:
+          - paragraph [ref=e478]: 05 — Impact
+          - heading "Early Results" [level=2] [ref=e479]
+          - paragraph [ref=e480]: Aulys is in active beta. Here's what's validated so far — and what's being built next.
+        - generic [ref=e481]:
+          - generic [ref=e484]:
+            - img [ref=e485]
+            - generic [ref=e490]: "30"
+            - heading "Beta Testers Active" [level=3] [ref=e491]
+            - paragraph [ref=e492]: 30 designers are actively testing the plugin, surfacing real-world edge cases across diverse design systems and enterprise-scale Figma files.
+          - generic [ref=e493]:
+            - img [ref=e494]
+            - generic [ref=e499]: 500+
+            - paragraph [ref=e500]: Frames scanned across beta — in under 10 seconds each.
+          - generic [ref=e501]:
+            - img [ref=e502]
+            - generic [ref=e505]: RTL + CJK
+            - paragraph [ref=e506]: Validated multilingual typography support — Arabic, Hebrew, Japanese, and Chinese. An edge case most accessibility tools skip entirely.
+          - generic [ref=e507]:
+            - generic [ref=e508]: "#1"
+            - paragraph [ref=e509]: Most valued feature by beta testers
+            - paragraph [ref=e510]:
+              - text: AI-powered one-click fix suggestions — cited by testers as the feature that made them actually
+              - emphasis [ref=e511]: act
+              - text: on violations rather than log and ignore them.
+          - generic [ref=e512]:
+            - img [ref=e513]
+            - 'heading "What''s Next: CI/CD Platform" [level=3] [ref=e516]'
+            - paragraph [ref=e517]:
+              - text: "Beta feedback made one thing clear: teams want accessibility baked into their"
+              - strong [ref=e518]: deployment pipeline
+              - text: ", not just the design stage. The Phase 2 SaaS platform — currently ~50% built — will integrate Playwright and axe-core to scan live deployments and block non-compliant builds automatically."
+            - generic [ref=e519]:
+              - generic [ref=e520]: GPT-4 Remediation
+              - generic [ref=e521]: Playwright Matrix Testing
+              - generic [ref=e522]: CI/CD Pipeline Blocking
+              - generic [ref=e523]: Enterprise Dashboards
+      - generic [ref=e525]:
+        - generic [ref=e526]:
+          - paragraph [ref=e527]: 06 — Reflection
+          - heading "What I'd Do Differently" [level=2] [ref=e528]
+          - paragraph [ref=e529]: Building a 0→1 product solo — design, engineering, and product — taught me things no spec document ever could.
+        - generic [ref=e530]:
+          - generic [ref=e531]:
+            - img [ref=e533]
+            - generic [ref=e535]: Design Constraint
+            - heading "Figma plugin API shapes every interaction decision" [level=3] [ref=e536]
+            - paragraph [ref=e537]: The plugin runtime has no background threads — every scan must complete synchronously within a 60fps canvas budget. This ruled out streaming results, forced a batch-scan model, and made the progressive reveal of violations (grouped, not streamed) a technical necessity, not just a UX preference.
+          - generic [ref=e538]:
+            - img [ref=e540]
+            - generic [ref=e542]: What didn't work
+            - heading "V1 had drag-to-reorder violations — too complex" [level=3] [ref=e543]
+            - paragraph [ref=e544]: The first violations list let users drag-and-drop to reprioritize issues. In beta testing with junior designers (primary target users), this interaction pattern caused confusion — they expected the list to be sorted by severity, not be a task manager. Removed it in v2 and defaulted to severity-ordered, read-only grouping. Fix rate improved.
+          - generic [ref=e545]:
+            - img [ref=e547]
+            - generic [ref=e550]: Next time
+            - heading "Design decisions need to be documented as they happen" [level=3] [ref=e551]
+            - paragraph [ref=e552]: When context-switching between design and engineering, I lost the rationale for several key UX decisions. I now maintain a lightweight decision log alongside the codebase.
+        - generic [ref=e553]:
+          - paragraph [ref=e554]: Aulys is still evolving. The CI/CD platform is in active development — and with 30 beta designers giving live feedback, it's going in the right direction.
+          - paragraph [ref=e555]: "What Aulys proved: a solo designer-founder, using AI tools for execution, can ship a real accessibility product with real users — in less time than most teams take to write a PRD. The constraint wasn't capability. It was knowing exactly what problem to solve and refusing to scope-creep past it."
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - generic [ref=e560]:
+            - img [ref=e561]
+            - generic [ref=e564]:
+              - paragraph [ref=e565]: WCAG 2.1 AA Compliant
+              - paragraph [ref=e566]: Verified via axe-core automated testing
+          - heading "We build accessible tools. This portfolio proves it." [level=2] [ref=e567]
+          - paragraph [ref=e568]: Aulys is an accessibility tool — so this case study page itself meets WCAG 2.1 AA. Every heading, contrast ratio, focus indicator, and landmark on this page has been audited with axe-core and manually verified.
+          - link "WCAG 2.1 Guidelines reference (opens in new tab)" [ref=e569] [cursor=pointer]:
+            - /url: https://www.w3.org/WAI/WCAG21/quickref/
+            - text: WCAG 2.1 Guidelines
+            - img [ref=e570]
+        - list "WCAG 2.1 AA criteria verified on this page" [ref=e574]:
+          - paragraph [ref=e575]: Verified Criteria
+          - generic [ref=e576]:
+            - listitem [ref=e577]:
+              - generic [ref=e578]:
+                - img [ref=e579]
+                - generic [ref=e582]: Contrast (Minimum)1.4.3
+              - generic [ref=e583]: AA
+            - listitem [ref=e584]:
+              - generic [ref=e585]:
+                - img [ref=e586]
+                - generic [ref=e589]: Resize Text1.4.4
+              - generic [ref=e590]: AA
+            - listitem [ref=e591]:
+              - generic [ref=e592]:
+                - img [ref=e593]
+                - generic [ref=e596]: Keyboard Accessible2.1.1
+              - generic [ref=e597]: A
+            - listitem [ref=e598]:
+              - generic [ref=e599]:
+                - img [ref=e600]
+                - generic [ref=e603]: Bypass Blocks (skip link)2.4.1
+              - generic [ref=e604]: A
+            - listitem [ref=e605]:
+              - generic [ref=e606]:
+                - img [ref=e607]
+                - generic [ref=e610]: Focus Order2.4.3
+              - generic [ref=e611]: A
+            - listitem [ref=e612]:
+              - generic [ref=e613]:
+                - img [ref=e614]
+                - generic [ref=e617]: Focus Visible2.4.7
+              - generic [ref=e618]: AA
+            - listitem [ref=e619]:
+              - generic [ref=e620]:
+                - img [ref=e621]
+                - generic [ref=e624]: Label in Name2.5.3
+              - generic [ref=e625]: A
+            - listitem [ref=e626]:
+              - generic [ref=e627]:
+                - img [ref=e628]
+                - generic [ref=e631]: Language of Page3.1.1
+              - generic [ref=e632]: A
+            - listitem [ref=e633]:
+              - generic [ref=e634]:
+                - img [ref=e635]
+                - generic [ref=e638]: Name, Role, Value4.1.2
+              - generic [ref=e639]: A
+          - generic [ref=e640]:
+            - generic [ref=e641]: Tested with axe-core + Playwright
+            - generic [ref=e642]: ✓ 0 violations
+    - generic [ref=e643]:
+      - generic [ref=e648]:
+        - generic [ref=e649]: Up Next
+        - link "Simplifai Workflow Engine Continue Reading" [ref=e650] [cursor=pointer]:
+          - /url: /work/simplifai
+          - heading "Simplifai Workflow Engine" [level=2] [ref=e651]
+          - generic [ref=e652]:
+            - text: Continue Reading
+            - img [ref=e653]
+      - link "View All Projects" [ref=e656] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e657]
+        - generic [ref=e659]: View All Projects
+  - contentinfo [ref=e660]:
+    - generic [ref=e661]:
+      - paragraph [ref=e662]:
+        - generic [ref=e663]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e664]:
+        - link "GitHub Profile" [ref=e665] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e666]
+        - link "LinkedIn Profile" [ref=e669] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e670]
+        - link "Send email to adichinchakar@gmail.com" [ref=e674] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com

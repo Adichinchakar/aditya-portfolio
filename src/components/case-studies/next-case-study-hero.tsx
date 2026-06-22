@@ -163,11 +163,11 @@ export function NextCaseStudyHero({ currentSlug }: { currentSlug: string }) {
                         </motion.h2>
                     </div>
                     <div className="hidden md:flex items-center gap-4">
-                        <button onClick={scrollLeft} className="p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-md cursor-pointer outline-none focus:ring-2 focus:ring-white/20">
-                            <ChevronLeft className="w-5 h-5" />
+                        <button onClick={scrollLeft} aria-label="Scroll to previous case studies" className="p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-md cursor-pointer outline-none focus:ring-2 focus:ring-white/20">
+                            <ChevronLeft className="w-5 h-5" aria-hidden="true" />
                         </button>
-                        <button onClick={scrollRight} className="p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-md cursor-pointer outline-none focus:ring-2 focus:ring-white/20">
-                            <ChevronRight className="w-5 h-5" />
+                        <button onClick={scrollRight} aria-label="Scroll to next case studies" className="p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-md cursor-pointer outline-none focus:ring-2 focus:ring-white/20">
+                            <ChevronRight className="w-5 h-5" aria-hidden="true" />
                         </button>
                     </div>
                 </div>

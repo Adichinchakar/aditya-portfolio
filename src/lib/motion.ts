@@ -14,6 +14,7 @@ export {
     useMotionTemplate,
     useSpring,
     useTransform,
+    useReducedMotion,
     useInView,
     useScroll,
     MotionConfig,

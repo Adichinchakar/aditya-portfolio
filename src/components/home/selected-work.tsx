@@ -13,14 +13,14 @@ export function SelectedWork({ title = "Case Studies", excludeHref }: { title?: 
         : PROJECTS.slice(0, 4);
 
     return (
-        <section id="work" className="py-24 px-6 relative overflow-hidden bg-zinc-50">
+        <section id="work" className="py-16 md:py-24 px-6 relative overflow-hidden bg-zinc-50">
             {/* Background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto max-w-6xl space-y-12 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end border-b border-zinc-200/60 pb-8 gap-4">
-                    <TextReveal tag="h2" className="text-4xl md:text-5xl font-black tracking-tighter">
+                    <TextReveal tag="h2" className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter">
                         {title}
                     </TextReveal>
                     <span className="font-mono text-zinc-600 font-bold hidden sm:block tracking-widest text-sm">(0{displayedWorks.length})</span>

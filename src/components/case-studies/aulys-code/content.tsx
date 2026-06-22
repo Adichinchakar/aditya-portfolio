@@ -19,6 +19,7 @@ import {
     GitPullRequest,
 } from "lucide-react";
 import { HookModel } from "@/components/case-studies/hook-model";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 
 const GITHUB_URL = "https://github.com/Adichinchakar/aulys-code-extension-showcase";
 
@@ -407,6 +408,19 @@ export default function AulysCodePage() {
     return (
         <div className="min-h-screen bg-zinc-50 text-zinc-800 selection:bg-blue-500/30">
             <Hero />
+            <CaseStudyTldr
+                hook="Accessibility audits run too late — after the code ships. So I moved them into the editor, flagging WCAG violations live as you type."
+                stats={[
+                    { value: "0s", label: "between the mistake and the warning" },
+                    { value: "1-click", label: "fixes, or AI with the snippet loaded" },
+                    { value: "3", label: "workspaces: host, webview, backend" },
+                ]}
+                role="Design Engineer · Founder · Solo Builder"
+                timeline="Aulys Accessibility Ecosystem"
+                readTime="9 min read"
+                accentClass="text-blue-700"
+                spotlight="rgba(59, 130, 246, 0.10)"
+            />
             <Problem />
             <HookModel
                 accentColor="text-blue-400"

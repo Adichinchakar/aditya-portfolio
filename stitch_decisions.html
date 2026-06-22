@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;800&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#370086",
+              "error-container": "#a70138",
+              "on-secondary-fixed-variant": "#69379c",
+              "on-surface-variant": "#adaaaa",
+              "primary-container": "#ae8dff",
+              "surface-tint": "#ba9eff",
+              "surface-container-low": "#131313",
+              "on-primary-container": "#2b006e",
+              "on-primary": "#39008c",
+              "tertiary": "#ff97b5",
+              "surface-container-high": "#201f1f",
+              "surface-bright": "#2c2c2c",
+              "on-tertiary": "#6a0934",
+              "surface-container-lowest": "#000000",
+              "tertiary-fixed-dim": "#f67ca3",
+              "surface-container-highest": "#262626",
+              "inverse-surface": "#fcf8f8",
+              "secondary-fixed": "#e4c6ff",
+              "on-background": "#ffffff",
+              "error": "#ff6e84",
+              "on-primary-fixed": "#000000",
+              "surface": "#0e0e0e",
+              "inverse-on-surface": "#565554",
+              "primary-fixed-dim": "#a27cff",
+              "surface-dim": "#0e0e0e",
+              "on-secondary-fixed": "#4b147d",
+              "on-surface": "#ffffff",
+              "on-tertiary-container": "#59002a",
+              "error-dim": "#d73357",
+              "surface-variant": "#262626",
+              "secondary-dim": "#bb87f1",
+              "primary-fixed": "#ae8dff",
+              "outline-variant": "#494847",
+              "background": "#0e0e0e",
+              "on-secondary": "#390068",
+              "on-secondary-container": "#e3c4ff",
+              "on-error": "#490013",
+              "inverse-primary": "#6e3bd7",
+              "surface-container": "#1a1919",
+              "primary": "#ba9eff",
+              "secondary-fixed-dim": "#dab4ff",
+              "tertiary-fixed": "#ff8eb0",
+              "secondary-container": "#5e2c91",
+              "primary-dim": "#8455ef",
+              "on-tertiary-fixed-variant": "#701039",
+              "tertiary-dim": "#f0779d",
+              "outline": "#777575",
+              "on-error-container": "#ffb2b9",
+              "secondary": "#c08cf7",
+              "tertiary-container": "#fd81a8",
+              "on-tertiary-fixed": "#380018"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(38, 38, 38, 0.4);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(186, 158, 255, 0.1);
+        }
+        .obsidian-glow {
+            box-shadow: 0 0 32px rgba(139, 92, 246, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/40 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full shadow-[0_0_32px_rgba(139,92,246,0.08)]">
+<div class="text-2xl font-bold tracking-tight text-white font-headline">Orbit</div>
+<div class="hidden md:flex gap-8 items-center font-headline tracking-tighter font-medium">
+<a class="text-violet-400 border-b-2 border-violet-500 pb-1 hover:text-violet-300 transition-colors duration-300" href="#">Case Study</a>
+<a class="text-neutral-400 hover:text-violet-300 transition-colors duration-300" href="#">Solutions</a>
+<a class="text-neutral-400 hover:text-violet-300 transition-colors duration-300" href="#">Platform</a>
+</div>
+<button class="bg-primary text-on-primary-fixed px-6 py-2 rounded-full font-headline font-bold scale-95 active:opacity-80 transition-transform">
+            Get Started
+        </button>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-20">
+<div class="flex items-center gap-4 mb-6">
+<span class="font-label text-xs tracking-[0.2em] text-primary bg-primary/10 px-3 py-1 rounded-full uppercase">03 — Design Decisions</span>
+<div class="h-[1px] w-12 bg-outline-variant/30"></div>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold leading-tight tracking-tighter max-w-3xl">
+                Five decisions that defined the <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-dim">spatial UX.</span>
+</h1>
+</div>
+<!-- Decision Cards Stack -->
+<div class="space-y-8">
+<!-- Decision 01 -->
+<div class="glass-card obsidian-glow rounded-xl p-8 md:p-12 transition-all hover:translate-x-2 border-l-4 border-l-primary/50">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<span class="font-label text-4xl font-bold text-outline-variant/40">01</span>
+</div>
+<div class="flex-grow space-y-6">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Gaze+pinch vs controller</h2>
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-1.5 rounded-full text-sm font-bold tracking-tight">We chose Gaze+pinch</span>
+<span class="text-on-surface-variant text-sm line-through decoration-error/50">Over Controllers</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                            Eye-tracking precision for natural selection allows for a reduced barrier between thought and action. By eliminating physical peripherals, we enable a more visceral connection to the digital environment, leveraging innate human motor skills.
+                        </p>
+</div>
+<div class="hidden lg:block w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract 3D visualization of glowing eye-tracking lines converging on a central floating node with soft violet bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQy8Mj6JD3MNhtaiSNzj45BHZVovG8R9Ep7E-7wiOiCI40AIvl_EPPoX-5-EXq_PLkfrSx3Xo5dLQvIJWGw5ytnxbR4FFmO8VwbC-Tu_N-linWCyC42i7MM-rKMwCCulWyev_qSPPapnjE2UetI3D-JnN_mVJ4hsKSpApoYAFx1IBP5fPhzEhJSNR4RLmg5rXs0uvy8s00yFS_ZyxOWv3ZMZuZbKIfna9O1_mXIGB3eHS4Y7i6iBJKDMhtqMhU7-kQBXEEFd48rgc"/>
+</div>
+</div>
+</div>
+<!-- Decision 02 -->
+<div class="glass-card obsidian-glow rounded-xl p-8 md:p-12 transition-all hover:translate-x-2 border-l-4 border-l-primary/50">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<span class="font-label text-4xl font-bold text-outline-variant/40">02</span>
+</div>
+<div class="flex-grow space-y-6">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Voice AI vs menus</h2>
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-1.5 rounded-full text-sm font-bold tracking-tight">We chose Voice AI</span>
+<span class="text-on-surface-variant text-sm line-through decoration-error/50">Over Hierarchical Menus</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                            Intent-driven interaction reduces cognitive load by removing the need to navigate complex directory structures. Users simply speak their objective, and Orbit's semantic engine manifests the required interface contextually.
+                        </p>
+</div>
+<div class="hidden lg:block w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-60" data-alt="Dynamic 3D soundwave ripple effect in violet and deep charcoal, representing voice interface activation in a spatial void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGylWI9A0Pgvzg6E5DJ4IbfXumcss23E61b4-Nnef-QA6GsUfeTGCmxqSZsDpDRT2hx3vK0tS8LSPRkfi6irOzF8J0HOctE1xRkIEjInCGUpDPfgUdmOuvFJf_I6yaOl8dsGYAxrXDE6O1Qf_kVNF5Md68l1_Qjr0-45Zeymvjj2NGvSxgB7oaHeMAvJuHmK0el0ASkEMe84198kIv8LfoGydaLx9qENa8tlM2IaIIX6tp2pdVjxQCrMsyDZAJyWrW9gEVG9dFvIWu"/>
+</div>
+</div>
+</div>
+<!-- Decision 03 -->
+<div class="glass-card obsidian-glow rounded-xl p-8 md:p-12 transition-all hover:translate-x-2 border-l-4 border-l-primary/50">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<span class="font-label text-4xl font-bold text-outline-variant/40">03</span>
+</div>
+<div class="flex-grow space-y-6">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Depth planes vs flat hierarchy</h2>
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-1.5 rounded-full text-sm font-bold tracking-tight">We chose Depth planes</span>
+<span class="text-on-surface-variant text-sm line-through decoration-error/50">Over Flat 2D Layouts</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                            Z-axis separation for clearer spatial focus allows users to stack information chronologically and contextually. This mimics physical desk space, utilizing peripheral depth to keep secondary tasks present but non-intrusive.
+                        </p>
+</div>
+<div class="hidden lg:block w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-60" data-alt="Minimalist architectural rendering of stacked semi-transparent dark glass planes with subtle violet edge lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH7ICxV8MldbFv8zocx55TPjDqioIge6vobOdOCHir3SQVIDivZl0tZIuDlwsO4ML8AdJ8tZW_pHMilgeuJX92e1l3vEKpBcpsgnYvD7jWaTZ4L9xOhypopvZCMVpzrZIMzuqyn1J62aGwDBXVi1Vae7Lj4dRvIW9bSo5FrTT1_kQBp9TH3HNvHVdT9x6EGzyBnkWGDnS2WZ7FPEerObrLarYsspYtVfr6lxZj9ok1_qC31ruTumu6rcZTA4xJ9abKiS5lz9HNhCQL"/>
+</div>
+</div>
+</div>
+<!-- Decision 04 -->
+<div class="glass-card obsidian-glow rounded-xl p-8 md:p-12 transition-all hover:translate-x-2 border-l-4 border-l-primary/50">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<span class="font-label text-4xl font-bold text-outline-variant/40">04</span>
+</div>
+<div class="flex-grow space-y-6">
+<h2 class="font-headline text-3xl font-bold tracking-tight">60 FOV constraint</h2>
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-1.5 rounded-full text-sm font-bold tracking-tight">We chose Optimized Density</span>
+<span class="text-on-surface-variant text-sm line-through decoration-error/50">Over Ultra-wide Clutter</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                            Optimizing information density for current hardware by focusing on the "Active Window." We designed for the 60-degree Field of View to prevent neck fatigue and ensure all critical UI is always within the primary ocular sweet spot.
+                        </p>
+</div>
+<div class="hidden lg:block w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-60" data-alt="Technical schematic showing a golden-ratio inspired viewing cone against a dark orbital background with violet data points" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzgG1-WogGl9BAj8nDdQaWdmKjUFuzWyg5iqRHlUNsrYm1VzvoGheYn3ozQ8zyabfNnwTPD32JIBLzIgm7P8nJXPR5znVKea2mdCVxjB1V4_XseSyaPyHfv55cVCsFptpy1MCg-GOe-e4xLLpRie82WBMcX-xhtuztO9WDa0sOHLNEq7yFaF5kF4dKMzUFzKBKZ3sMrV2mQ7YGXQMXp421RKFhHtVEfLWOlNZ0Dr_hug7ngr7kkbjKOMy6erl_PVlEBScHAJEsNLDB"/>
+</div>
+</div>
+</div>
+<!-- Decision 05 -->
+<div class="glass-card obsidian-glow rounded-xl p-8 md:p-12 transition-all hover:translate-x-2 border-l-4 border-l-primary/50">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<span class="font-label text-4xl font-bold text-outline-variant/40">05</span>
+</div>
+<div class="flex-grow space-y-6">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Accessibility toggle</h2>
+<div class="flex flex-wrap items-center gap-4">
+<span class="bg-primary text-on-primary-fixed px-4 py-1.5 rounded-full text-sm font-bold tracking-tight">We chose Adaptive Input</span>
+<span class="text-on-surface-variant text-sm line-through decoration-error/50">Over Fixed Modalities</span>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                            Universal design from the start. We integrated high-contrast modes, alternative gesture sets, and assistive haptic cues into the core OS rather than as an afterthought, ensuring Orbit is usable for everyone from day one.
+                        </p>
+</div>
+<div class="hidden lg:block w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-60" data-alt="Sophisticated network of interlocking spheres and lines representing universal connectivity in a deep violet and black void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOzEmBUO9S4j5u9-hVfznk7vhEzUUfhvdpzBOuCasfmR4kVWOaKIctCt0a51uZLNVEyQbmYSOI0D9YgwUG0aX62AOfw15Xz5N8GT8W01eLL3A-DuKd03hOjDuDTNyiZkqNJPbCu_4FbnGC-m1hVoV7ZXk2xpkSIzdVv52f1xl0xbX8KfFESfmvU9UNDeaJqg9htZyFbPRMUdWPiiDN4VAV0LbahYxjRwBEiP5AAgfjX_OGZrmcRxZ4RksPXWwPsR77KdOhxV9iNPcN"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Next Step CTA -->
+<div class="mt-32 p-12 rounded-xl bg-gradient-to-br from-surface-container-low to-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-8 border border-outline-variant/10">
+<div>
+<h3 class="font-headline text-3xl font-bold mb-2">Ready to experience these decisions?</h3>
+<p class="text-on-surface-variant">Step into the Orbit spatial environment and feel the difference.</p>
+</div>
+<button class="bg-primary text-on-primary-fixed px-10 py-4 rounded-full font-headline font-extrabold flex items-center gap-3 transition-transform hover:scale-105 active:scale-95">
+                Launch Simulator
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-neutral-950 flex flex-col md:flex-row justify-between items-center border-t border-neutral-800/20 font-body text-sm tracking-wide">
+<div class="text-lg font-black text-white mb-6 md:mb-0 font-headline">Orbit</div>
+<div class="flex gap-8 mb-6 md:mb-0">
+<a class="text-neutral-500 hover:text-violet-400 transition-all" href="#">Privacy Policy</a>
+<a class="text-neutral-500 hover:text-violet-400 transition-all" href="#">Terms of Service</a>
+<a class="text-neutral-500 hover:text-violet-400 transition-all" href="#">Security</a>
+</div>
+<div class="text-neutral-500">© 2024 Orbit Spatial Computing. All rights reserved.</div>
+</footer>
+</body></html>

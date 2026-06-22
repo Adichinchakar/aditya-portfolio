@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Chinchakar — Senior Product Designer · AI Tools · Design Systems</title>
+<meta name="description" content="Aditya Chinchakar designs products that think. Senior Product Designer building AI tools, design systems, and accessible software. Creator of Aulys.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+<style>
+/* ============ LIGHT TOKENS ============ */
+:root{
+  --bg:#F7F3ED; --bg-elev:#EDE8DF; --bg-card:#F0EBE3;
+  --ink:#1C1813; --ink-dim:#6B645C; --ink-faint:#B0A99F;
+  --amber:#9A6C18; --amber-bright:#B8840E; --amber-soft:rgba(154,108,24,.12);
+  --line:rgba(28,24,19,.10); --line-strong:rgba(28,24,19,.20);
+  --maxw:1200px;
+  --display:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --pad:clamp(5rem,12vh,9rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ============ RESET ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-weight:400; line-height:1.6; overflow-x:hidden;
+  font-size:clamp(1rem,.95rem + .2vw,1.0625rem);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--amber);color:#fff}
+
+@media (hover:hover) and (pointer:fine){
+  body.cursor-on, body.cursor-on a, body.cursor-on button{cursor:none}
+}
+
+:focus-visible{outline:2px solid var(--amber-bright);outline-offset:3px;border-radius:2px}
+
+/* ============ GRAIN ============ */
+.grain{
+  position:fixed; inset:0; z-index:9998; pointer-events:none;
+  opacity:.03; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ CUSTOM CURSOR ============ */
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%}
+.cur-dot{width:7px;height:7px;background:var(--ink);transform:translate(-50%,-50%)}
+.cur-ring{
+  width:36px;height:36px;border:1.5px solid rgba(28,24,19,.35);
+  transform:translate(-50%,-50%);
+  transition:width .25s var(--ease),height .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease);
+}
+.cur-ring.grow{width:60px;height:60px;background:var(--amber-soft);border-color:var(--amber)}
+@media (hover:none),(pointer:coarse){.cur-dot,.cur-ring{display:none}}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+section{position:relative}
+.eyebrow{
+  font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--amber);display:inline-flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--amber);opacity:.7}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1.25rem,5vw,3rem);
+  background:rgba(247,243,237,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .4s,background .4s;
+}
+.nav.scrolled{border-bottom-color:var(--line);background:rgba(247,243,237,.9)}
+.monogram{
+  font-family:var(--display);font-weight:700;font-size:1.4rem;letter-spacing:.02em;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:42px;height:42px;border:1px solid var(--line-strong);border-radius:50%;
+  transition:border-color .3s,color .3s;
+}
+.monogram:hover{border-color:var(--amber);color:var(--amber)}
+.nav-links{display:flex;gap:2.4rem;align-items:center;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--ink-dim);position:relative;transition:color .3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--amber);transition:width .35s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+.burger{display:none;width:30px;height:20px;position:relative;z-index:120}
+.burger span{position:absolute;left:0;width:100%;height:2px;background:var(--ink);transition:transform .4s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:0}.burger span:nth-child(2){top:9px}.burger span:nth-child(3){top:18px}
+.burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:110;background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+  opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--display);font-size:2.4rem;color:var(--ink)}
+.mobile-menu a:hover{color:var(--amber)}
+
+/* ============ HERO ============ */
+.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:6rem}
+.hero-ghost{
+  position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;justify-content:center;
+  gap:.5vh;pointer-events:none;user-select:none;will-change:transform;
+}
+.hero-ghost span{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(4rem,17vw,15rem);line-height:.9;letter-spacing:-.02em;
+  color:transparent;-webkit-text-stroke:1px rgba(28,24,19,.09);white-space:nowrap;
+}
+.hero-ghost span:nth-child(even){padding-left:12vw}
+.hero-inner{position:relative;z-index:2}
+.hero h1{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(3rem,8vw,6.5rem);line-height:1.02;letter-spacing:-.015em;
+  max-width:14ch;
+}
+.hero h1 .ch{display:inline-block;white-space:pre;opacity:0;transform:translateY(.7em) rotate(4deg);
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.hero h1 .ch.lit{opacity:1;transform:none}
+.hero h1 em{font-style:italic;color:var(--amber)}
+@media (prefers-reduced-motion:reduce){.hero h1 .ch{opacity:1;transform:none}}
+.hero-sub{margin-top:1.8rem;font-size:clamp(1rem,1.5vw,1.2rem);color:var(--ink-dim);font-weight:300;letter-spacing:.01em}
+.hero-cta{margin-top:2.8rem;display:flex;gap:1rem;flex-wrap:wrap}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.95rem 1.7rem;border-radius:50px;font-weight:500;font-size:.95rem;
+  transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s,box-shadow .3s;
+}
+.btn-solid{background:var(--amber);color:#fff;box-shadow:0 4px 20px rgba(154,108,24,.25)}
+.btn-solid:hover{background:var(--amber-bright);transform:translateY(-3px);box-shadow:0 8px 28px rgba(154,108,24,.35)}
+.btn-ghost{border:1.5px solid var(--line-strong);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-3px)}
+.scroll-hint{position:absolute;bottom:2.2rem;left:clamp(1.25rem,5vw,3rem);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:.6rem}
+.scroll-hint::after{content:"";width:34px;height:1px;background:var(--ink-faint);animation:slide 1.8s var(--ease) infinite}
+@keyframes slide{0%{transform:scaleX(.3);transform-origin:left;opacity:.4}50%{transform:scaleX(1);opacity:1}100%{transform:scaleX(.3);transform-origin:right;opacity:.4}}
+@media (prefers-reduced-motion:reduce){.scroll-hint::after{animation:none}}
+
+/* ============ MARQUEE ============ */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.6rem 0;overflow:hidden;background:var(--bg-elev)}
+.marquee-track{display:flex;gap:3.5rem;width:max-content;animation:march 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes march{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+.marquee-item{font-family:var(--display);font-size:1.5rem;font-weight:600;color:var(--ink-dim);display:inline-flex;align-items:center;gap:3.5rem;white-space:nowrap}
+.marquee-item::after{content:"✦";color:var(--amber);font-size:.9rem;font-family:var(--sans)}
+
+/* ============ WORK / BENTO ============ */
+.work{padding:var(--pad) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+.sec-head h2{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:600;letter-spacing:-.01em;line-height:1.05}
+.sec-head p{color:var(--ink-dim);max-width:30ch}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem;grid-auto-rows:240px}
+.card{
+  position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:1.6rem;
+  grid-column:span 2;
+  transition:transform .45s var(--ease),border-color .45s,box-shadow .45s;
+  isolation:isolate; background:var(--bg-card);
+}
+.card:hover{transform:translateY(-6px);border-color:var(--amber);box-shadow:0 16px 40px rgba(28,24,19,.10)}
+.card .cover{position:absolute;inset:0;z-index:-1;transition:transform .6s var(--ease)}
+.card:hover .cover{transform:scale(1.06)}
+/* light cards: gradient fades to off-white not black */
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 25%,rgba(240,235,227,.92) 80%)}
+.card.feat{grid-column:span 4;grid-row:span 2}
+.card .num{position:absolute;top:1.4rem;left:1.6rem;font-family:var(--display);font-size:.95rem;color:var(--ink-faint)}
+.card h3{font-family:var(--display);font-weight:600;font-size:1.4rem;line-height:1.1;margin-bottom:.4rem;color:var(--ink)}
+.card.feat h3{font-size:clamp(1.8rem,3vw,2.6rem)}
+.card .metric{font-size:.92rem;color:var(--amber);font-weight:500}
+.role-tag{
+  display:inline-block;margin-top:.9rem;align-self:flex-start;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  padding:.4rem .8rem;border:1px solid var(--line-strong);border-radius:50px;
+  color:var(--ink-dim);background:rgba(247,243,237,.85);backdrop-filter:blur(4px);
+  opacity:0;transform:translateY(10px);transition:opacity .4s var(--ease),transform .4s var(--ease);
+}
+.card:hover .role-tag,.card:focus-within .role-tag{opacity:1;transform:none}
+.card a.stretch{position:absolute;inset:0;z-index:1}
+
+/* light covers — muted pastel-ish tints */
+.cov-aulys{background:radial-gradient(120% 130% at 20% 10%,#e8d5aa 0%,#d6bf8a 40%,#c8ae70 100%)}
+.cov-1{background:linear-gradient(135deg,#c4cdd8 0%,#adb8c4 60%,#9aa8b8 100%)}
+.cov-2{background:linear-gradient(120deg,#d8cfa8 0%,#c8bd90 60%,#b8ab78 100%)}
+.cov-3{background:linear-gradient(150deg,#a8c4bc 0%,#90b0a8 60%,#7a9e94 100%)}
+.cov-4{background:linear-gradient(135deg,#c8b0bc 0%,#b89aac 60%,#a8889c 100%)}
+.cov-5{background:linear-gradient(120deg,#d0c4a4 0%,#c0b08c 60%,#b09e78 100%)}
+
+/* ============ ABOUT ============ */
+.about{padding:var(--pad) 0;border-top:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.pull{font-family:var(--display);font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.18;font-weight:400;letter-spacing:-.005em}
+.pull em{font-style:italic;color:var(--amber)}
+.about-bio p{color:var(--ink-dim);margin-bottom:1.6rem}
+.about-bio strong{color:var(--ink);font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:.55rem}
+.pill{font-size:.8rem;padding:.45rem .9rem;border:1px solid var(--line);border-radius:50px;color:var(--ink-dim);background:var(--bg-card);transition:border-color .3s,color .3s,background .3s}
+.pill:hover{border-color:var(--amber);color:var(--amber);background:var(--amber-soft)}
+
+/* ============ METRICS ============ */
+.metrics{background:var(--bg-elev);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(3.5rem,8vh,6rem) 0}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.metric-cell{text-align:center}
+.metric-num{font-family:var(--display);font-weight:700;font-size:clamp(3rem,7vw,5.5rem);line-height:1;color:var(--ink);letter-spacing:-.02em}
+.metric-num .u{color:var(--amber)}
+.metric-label{margin-top:.8rem;font-size:.85rem;color:var(--ink-dim);letter-spacing:.02em}
+
+/* ============ AULYS BLOCK ============ */
+.aulys{padding:var(--pad) 0}
+.aulys-card{
+  background:var(--bg-card);
+  border:1px solid var(--line-strong);border-radius:28px;
+  padding:clamp(2rem,5vw,4rem);position:relative;overflow:hidden;
+  box-shadow:0 8px 40px rgba(28,24,19,.07);
+}
+.aulys-card::before{content:"";position:absolute;top:-40%;right:-10%;width:55%;height:160%;background:radial-gradient(circle,rgba(154,108,24,.10),transparent 65%);pointer-events:none}
+.aulys-tag{font-family:var(--display);font-size:clamp(1.8rem,4vw,3rem);font-weight:600;max-width:18ch;line-height:1.1;margin:1.2rem 0 .8rem}
+.aulys-tag em{font-style:italic;color:var(--amber)}
+.aulys-lead{color:var(--ink-dim);max-width:52ch}
+.compare{margin:2.8rem 0;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative;z-index:1;background:#fff}
+.compare>div{padding:1rem 1.1rem;border-bottom:1px solid var(--line);font-size:.9rem}
+.compare .ch{font-weight:700;background:rgba(28,24,19,.02);color:var(--ink-faint);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.compare .ch.own{color:var(--amber);background:var(--amber-soft)}
+.compare .feature{color:var(--ink);font-weight:500}
+.compare .own{background:var(--amber-soft)}
+.compare .yes{color:var(--amber);font-weight:600}
+.compare .no{color:var(--ink-faint)}
+.compare>div:nth-last-child(-n+4){border-bottom:none}
+
+/* ============ CONTACT ============ */
+.contact{padding:var(--pad) 0;text-align:center;border-top:1px solid var(--line)}
+.contact h2{font-family:var(--display);font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:400;color:var(--ink-dim);margin-bottom:1.5rem}
+.mail{font-family:var(--display);font-weight:600;font-size:clamp(2.2rem,8vw,5.5rem);line-height:1.05;letter-spacing:-.02em;display:inline-block;transition:color .3s,transform .3s var(--ease)}
+.mail:hover{color:var(--amber);transform:translateY(-3px)}
+.socials{display:flex;gap:1.2rem;justify-content:center;margin-top:2.5rem}
+.socials a{width:50px;height:50px;border:1.5px solid var(--line-strong);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);transition:border-color .3s,color .3s,transform .3s,background .3s}
+.socials a:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-3px);background:var(--amber-soft)}
+.socials svg{width:20px;height:20px}
+.badge{margin-top:2.5rem;display:inline-flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--ink-dim);padding:.55rem 1.1rem;border:1px solid var(--line);border-radius:50px;background:var(--bg-card)}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(154,108,24,.4);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(154,108,24,.4)}70%{box-shadow:0 0 0 10px rgba(154,108,24,0)}100%{box-shadow:0 0 0 0 rgba(154,108,24,0)}}
+@media (prefers-reduced-motion:reduce){.badge .dot{animation:none}}
+
+/* ============ FOOTER ============ */
+.footer{padding:2.5rem 0;border-top:1px solid var(--line);text-align:center;background:var(--bg-elev)}
+.footer p{font-size:.85rem;color:var(--ink-faint);display:inline-flex;align-items:center;gap:.7rem;justify-content:center;flex-wrap:wrap}
+.footer .mg{font-family:var(--display);font-weight:700;color:var(--ink-dim)}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:768px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .bento{grid-template-columns:1fr;grid-auto-rows:200px}
+  .card,.card.feat{grid-column:1/-1;grid-row:auto}
+  .role-tag{opacity:1;transform:none}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .metrics-grid{grid-template-columns:repeat(2,1fr);gap:2.5rem 1rem}
+  .compare{grid-template-columns:1fr;border:none}
+  .compare>div{border:1px solid var(--line);border-radius:8px;margin-bottom:-1px}
+  .compare .ch:first-child{display:none}
+  .hero-ghost span:nth-child(even){padding-left:4vw}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header>
+<nav class="nav" id="nav" aria-label="Primary">
+  <a href="#top" class="monogram" aria-label="Aditya Chinchakar — home">AC</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#aulys">Aulys</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#aulys">Aulys</a>
+  <a href="#contact">Contact</a>
+</div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-ghost" aria-hidden="true" id="ghost">
+    <span>DESIGNER</span>
+    <span>BUILDER</span>
+    <span>FOUNDER</span>
+  </div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow reveal">Aditya Chinchakar · Pune, India</p>
+    <h1 id="hero-h" data-stagger>I design products that <em>think.</em></h1>
+    <p class="hero-sub reveal">Senior Product Designer · AI Tools · Design Systems · Accessibility</p>
+    <div class="hero-cta reveal">
+      <a href="#work" class="btn btn-solid">See My Work</a>
+      <a href="#aulys" class="btn btn-ghost">View Aulys &rarr;</a>
+    </div>
+  </div>
+  <span class="scroll-hint" aria-hidden="true">Scroll</span>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="track">
+    <span class="marquee-item">Infosys</span><span class="marquee-item">Simplifai</span><span class="marquee-item">Imagine Learning</span><span class="marquee-item">Keywordio</span><span class="marquee-item">Aulys</span><span class="marquee-item">WCAG 2.2</span><span class="marquee-item">Design Systems</span><span class="marquee-item">AI UX</span>
+  </div>
+</div>
+
+<!-- ============ WORK ============ -->
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2 id="work-h" style="margin-top:1rem">Six products,<br>one through-line: systems.</h2>
+      </div>
+      <p>Case studies spanning AI tooling, enterprise SaaS, healthtech, and design infrastructure.</p>
+    </div>
+
+    <div class="bento">
+      <article class="card feat reveal">
+        <span class="cover cov-aulys" aria-hidden="true"></span>
+        <span class="num">01</span>
+        <h3>Aulys</h3>
+        <p class="metric">42% faster dev cycle · AI accessibility plugin + SaaS</p>
+        <span class="role-tag">Founding Designer</span>
+        <a class="stretch" href="#aulys" aria-label="Aulys case study"></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="cover cov-1" aria-hidden="true"></span>
+        <span class="num">02</span>
+        <h3>Simplifai Workflow</h3>
+        <p class="metric">73% adoption increase</p>
+        <span class="role-tag">Product Designer</span>
+        <a class="stretch" href="#work" aria-label="Simplifai Workflow case study"></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="cover cov-2" aria-hidden="true"></span>
+        <span class="num">03</span>
+        <h3>Simplifai Design System</h3>
+        <p class="metric">Single source of truth, 40+ components</p>
+        <span class="role-tag">Design Systems Lead</span>
+        <a class="stretch" href="#work" aria-label="Simplifai Design System case study"></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="cover cov-3" aria-hidden="true"></span>
+        <span class="num">04</span>
+        <h3>MedSecure</h3>
+        <p class="metric">70% faster assessments</p>
+        <span class="role-tag">Product Designer</span>
+        <a class="stretch" href="#work" aria-label="MedSecure case study"></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="cover cov-4" aria-hidden="true"></span>
+        <span class="num">05</span>
+        <h3>Nexus Fintech</h3>
+        <p class="metric">Banking concept · strategy &amp; vision</p>
+        <span class="role-tag">Lead Product Designer</span>
+        <a class="stretch" href="#work" aria-label="Nexus Fintech case study"></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="cover cov-5" aria-hidden="true"></span>
+        <span class="num">06</span>
+        <h3>Infosys × Imagine Learning</h3>
+        <p class="metric">TalentBridge · 4-persona EdTech platform</p>
+        <span class="role-tag">Senior Designer</span>
+        <a class="stretch" href="#work" aria-label="Infosys and Imagine Learning case study"></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <blockquote class="pull reveal" id="about-h">
+      I don't just ship screens. I build the <em>infrastructure</em> that makes the next ten screens faster.
+    </blockquote>
+    <div class="about-bio reveal">
+      <p><strong>9+ years</strong> across Infosys, Simplifai, and Keywordio — designing enterprise SaaS, design systems, and accessible software for teams that ship at scale.</p>
+      <p>I built <strong>Aulys</strong> solo: an AI-powered accessibility Figma plugin and SaaS with <strong>30+ beta users</strong>, directing the engineering myself. Based in Pune, open to UAE relocation from August 2026.</p>
+      <div class="pills">
+        <span class="pill">Product Design</span><span class="pill">Design Systems</span><span class="pill">AI / UX</span><span class="pill">WCAG 2.2 AA</span><span class="pill">Figma</span><span class="pill">Design Tokens</span><span class="pill">Prototyping</span><span class="pill">Research</span><span class="pill">Front-end</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METRICS ============ -->
+<section class="metrics" aria-label="Impact metrics">
+  <div class="wrap metrics-grid">
+    <div class="metric-cell reveal"><div class="metric-num" data-count="42" data-suffix="%">0<span class="u">%</span></div><p class="metric-label">Faster dev cycle</p></div>
+    <div class="metric-cell reveal"><div class="metric-num" data-count="73" data-suffix="%">0<span class="u">%</span></div><p class="metric-label">Adoption increase</p></div>
+    <div class="metric-cell reveal"><div class="metric-num" data-count="70" data-suffix="%">0<span class="u">%</span></div><p class="metric-label">Faster assessments</p></div>
+    <div class="metric-cell reveal"><div class="metric-num" data-count="30" data-suffix="+">0<span class="u">+</span></div><p class="metric-label">Aulys beta users</p></div>
+  </div>
+</section>
+
+<!-- ============ AULYS ============ -->
+<section class="aulys" id="aulys" aria-labelledby="aulys-h">
+  <div class="wrap">
+    <div class="aulys-card reveal">
+      <p class="eyebrow">Aulys · The flagship</p>
+      <h2 class="aulys-tag" id="aulys-h">Accessibility that <em>fixes itself.</em></h2>
+      <p class="aulys-lead">Most a11y tools tell you what's broken. Aulys uses AI to understand intent and apply the fix — directly in Figma, then continuously in production via SaaS. Built solo, validated with 30+ beta users.</p>
+
+      <div class="compare" role="table" aria-label="Aulys compared to Stark, Able, and Axe">
+        <div class="ch feature" role="columnheader">Capability</div>
+        <div class="ch own" role="columnheader">Aulys</div>
+        <div class="ch" role="columnheader">Stark</div>
+        <div class="ch" role="columnheader">Axe</div>
+
+        <div class="feature" role="cell">AI-directed fixes (not just flags)</div>
+        <div class="own yes" role="cell">Yes</div>
+        <div class="no" role="cell">—</div>
+        <div class="no" role="cell">—</div>
+
+        <div class="feature" role="cell">Figma plugin + production SaaS</div>
+        <div class="own yes" role="cell">Both</div>
+        <div class="no" role="cell">Plugin</div>
+        <div class="no" role="cell">CI/dev</div>
+
+        <div class="feature" role="cell">Full WCAG 2.2 coverage</div>
+        <div class="own yes" role="cell">Yes</div>
+        <div class="no" role="cell">Partial</div>
+        <div class="no" role="cell">Partial</div>
+      </div>
+
+      <a href="mailto:adichinchakar@gmail.com?subject=Aulys%20beta%20access" class="btn btn-solid">Join the beta &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h" class="reveal">Have a product worth building well?</h2>
+    <a href="mailto:adichinchakar@gmail.com" class="mail reveal">adichinchakar@gmail.com</a>
+    <div class="socials reveal">
+      <a href="https://www.linkedin.com/in/adityachinchakar" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5v15.5H.25V8zm7.5 0h4.31v2.12h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9v8.82h-4.5v-7.82c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.13v7.95h-4.5V8z"/></svg>
+      </a>
+      <a href="https://github.com/Adichinchakar" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+      </a>
+    </div>
+    <p class="badge reveal"><span class="dot" aria-hidden="true"></span>Open to UAE relocation · Available Aug 2026</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <p><span class="mg">AC</span> Designed &amp; built by Aditya Chinchakar · 2026</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---- Hero stagger ---- */
+  var h1 = document.querySelector('[data-stagger]');
+  if(h1){
+    var nodes = Array.prototype.slice.call(h1.childNodes);
+    h1.innerHTML = '';
+    var idx = 0;
+    nodes.forEach(function(node){
+      if(node.nodeType === 3){
+        node.textContent.split('').forEach(function(c){
+          var s = document.createElement('span');
+          s.className='ch'; s.textContent = c===' '?' ':c;
+          s.style.transitionDelay = (idx*0.03)+'s'; idx++;
+          h1.appendChild(s);
+        });
+      } else {
+        node.textContent.split('').forEach(function(c){
+          var s = document.createElement('span');
+          s.className='ch'; s.textContent = c===' '?' ':c;
+          s.style.transitionDelay = (idx*0.03)+'s'; idx++;
+          var em = document.createElement('em'); em.appendChild(s);
+          h1.appendChild(em);
+        });
+      }
+    });
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        document.querySelectorAll('.ch').forEach(function(c){c.classList.add('lit');});
+      });
+    });
+  }
+
+  /* ---- Custom cursor ---- */
+  if(fine){
+    document.body.classList.add('cursor-on');
+    var dot = document.querySelector('.cur-dot'),
+        ring = document.querySelector('.cur-ring');
+    var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+    window.addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate('+mx+'px,'+my+'px) translate(-50%,-50%)';
+    });
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform='translate('+rx+'px,'+ry+'px) translate(-50%,-50%)';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a,button,.card').forEach(function(el){
+      el.addEventListener('mouseenter',function(){ring.classList.add('grow');});
+      el.addEventListener('mouseleave',function(){ring.classList.remove('grow');});
+    });
+  }
+
+  /* ---- Nav scrolled state ---- */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 30); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* ---- Hero parallax ---- */
+  var ghost = document.getElementById('ghost');
+  if(ghost && !reduce){
+    var ticking=false;
+    window.addEventListener('scroll',function(){
+      if(!ticking){
+        requestAnimationFrame(function(){
+          ghost.style.transform='translateY('+(window.scrollY*0.25)+'px)';
+          ticking=false;
+        });
+        ticking=true;
+      }
+    },{passive:true});
+  }
+
+  /* ---- Marquee duplicate ---- */
+  var track = document.getElementById('track');
+  if(track){ track.innerHTML += track.innerHTML; }
+
+  /* ---- Reveal observer ---- */
+  var revObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); revObs.unobserve(en.target); }
+    });
+  },{threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){revObs.observe(el);});
+
+  /* ---- Count-up ---- */
+  var countObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var el = en.target, target = +el.dataset.count, suffix = el.dataset.suffix||'';
+      countObs.unobserve(el);
+      if(reduce){ el.innerHTML = target + '<span class="u">'+suffix+'</span>'; return; }
+      var start = null, dur = 1300;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts-start)/dur,1);
+        var eased = 1-Math.pow(1-p,3);
+        el.innerHTML = Math.round(eased*target) + '<span class="u">'+suffix+'</span>';
+        if(p<1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){countObs.observe(el);});
+
+  /* ---- Hamburger ---- */
+  var burger = document.getElementById('burger'),
+      menu = document.getElementById('mobileMenu');
+  function setMenu(open){
+    burger.classList.toggle('open',open);
+    menu.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    document.body.style.overflow = open?'hidden':'';
+  }
+  burger.addEventListener('click',function(){ setMenu(!menu.classList.contains('open')); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){setMenu(false);}); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && menu.classList.contains('open')) setMenu(false); });
+})();
+</script>
+</body>
+</html>

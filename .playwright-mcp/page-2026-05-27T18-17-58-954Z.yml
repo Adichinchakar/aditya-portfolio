@@ -1,0 +1,388 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "AdityaChinchakar" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e6]:
+        - link "Live Plugin" [ref=e7] [cursor=pointer]:
+          - /url: https://aulys-app.vercel.app/
+          - generic [ref=e11]: Live Plugin
+          - img [ref=e12]
+        - link "Work" [ref=e14] [cursor=pointer]:
+          - /url: /work
+        - link "Writing" [ref=e15] [cursor=pointer]:
+          - /url: /writing
+        - link "Resume" [ref=e16] [cursor=pointer]:
+          - /url: /resume
+        - button "Let's Talk" [ref=e17]
+  - main [ref=e18]:
+    - article [ref=e19]:
+      - generic [ref=e21]:
+        - link "Back to Case Studies" [ref=e22] [cursor=pointer]:
+          - /url: /work
+          - img [ref=e23]
+          - generic [ref=e25]: Back to Case Studies
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - 'generic "Case study type: Strategy Case Study · Conceptual" [ref=e28]': UX Audit · Speculative Design
+            - generic [ref=e32]: "⚡ Strategic deep-dive: This is an unsolicited UX audit and architectural proposal for Tier-1 Neobanks. No production deployment. Metrics shown are strategic targets, not validated outcomes."
+            - 'heading "Nexus: Intent-Led FinTech." [level=1] [ref=e33]':
+              - text: "Nexus:"
+              - text: Intent-Led FinTech.
+            - paragraph [ref=e34]: "A heuristic audit of Tier-1 Neobanks. The core finding: horizontal feature expansion increases cognitive load on primary financial flows — and that's a design problem with a design solution."
+            - generic [ref=e35]:
+              - generic [ref=e36]: Principal Product Designer
+              - generic [ref=e37]: 2024 Strategy Case
+          - generic "Strategic KPI Targets" [ref=e38]:
+            - generic [ref=e40]:
+              - heading "Strategic KPI Targets" [level=2] [ref=e42]
+              - generic [ref=e46]:
+                - generic [ref=e48]:
+                  - generic [ref=e49]:
+                    - img [ref=e51]
+                    - generic [ref=e53]: Trust
+                  - generic [ref=e54]: "-25%"
+                  - generic [ref=e55]: Support Ticket Volume
+                - generic [ref=e57]:
+                  - generic [ref=e58]:
+                    - img [ref=e60]
+                    - generic [ref=e62]: Velocity
+                  - generic [ref=e63]: +40%
+                  - generic [ref=e64]: Primary Flow Completion Rate
+                - generic [ref=e66]:
+                  - generic [ref=e67]:
+                    - img [ref=e69]
+                    - generic [ref=e74]: Cognitive
+                  - generic [ref=e75]: "-60%"
+                  - generic [ref=e76]: UI Complexity Score
+                - generic [ref=e78]:
+                  - generic [ref=e79]:
+                    - img [ref=e81]
+                    - generic [ref=e84]: Business
+                  - generic [ref=e85]: LTV
+                  - generic [ref=e86]: Increased Retention Rate
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]: Role
+            - generic [ref=e93]: Principal Product Designer
+          - generic [ref=e94]:
+            - generic [ref=e95]: Focus
+            - generic [ref=e96]: UX Strategy, Systems Architecture, Consumer Trust
+          - generic [ref=e97]:
+            - generic [ref=e98]: Target
+            - generic [ref=e99]: Tier-1 Neobanks (e.g., Revolut, Robinhood)
+        - heading "The \"Super-App\" Paradox" [level=2] [ref=e100]
+        - generic [ref=e101]:
+          - paragraph [ref=e102]: In the race to become the ultimate financial "Super-App," Tier-1 Neobanks have aggressively layered crypto, commodities, lifestyle subscriptions, and travel features onto checking account foundations — without restructuring the underlying information architecture to carry that weight.
+          - paragraph [ref=e103]:
+            - text: "This audit started from a specific hypothesis:"
+            - strong [ref=e104]: horizontal feature expansion increases cognitive load on primary financial flows
+            - text: ", measurable through task abandonment rate and time-on-task for core actions (balance check, P2P transfer, account freeze resolution). To pressure-test this, I conducted a structured heuristic evaluation of Revolut, Jupiter, and Fi Money against Nielsen's 10 usability principles, supplemented by sentiment analysis across App Store and Trustpilot reviews — categorized by flow type and failure mode."
+          - paragraph [ref=e105]: "The pattern was consistent: support ticket spikes correlate with feature launches, not outages. Users aren't failing because the product is broken — they're failing because the navigation model no longer matches their intent."
+          - paragraph [ref=e106]: "Methodology note: This is an unsolicited competitive audit. Validation would require instrumented A/B testing in production — estimated feasibility: 8-week sprint with analytics infrastructure in place."
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - 'heading "The UX Audit: Signal vs. Noise" [level=2] [ref=e110]'
+          - paragraph [ref=e111]: Heuristic evaluation against Nielsen's 10 principles surfaced three compounding failure modes — each solvable at the design layer, independent of backend reliability.
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - img [ref=e115]
+            - heading "Crisis UX Failure" [level=3] [ref=e117]
+            - paragraph [ref=e118]: Account freezes from over-sensitive fraud models drop users into a generic support bot with no status visibility, no ETA, and no escalation path. This is a solvable UX problem — not a trust problem. The product works; the crisis flow doesn't.
+            - generic [ref=e119]: "\"Your account is frozen. We'll get back to you.\" — with zero queue time, zero human ETA, zero card status shown."
+          - generic [ref=e120]:
+            - img [ref=e122]
+            - heading "Architectural Bloat" [level=3] [ref=e126]
+            - paragraph [ref=e127]: "Checking accounts, high-yield vaults, and volatile crypto coexist in a single scrolling \"Hub\" with no visual hierarchy between them. Each new feature launch appends to the bottom — never restructures the top. This is an IA problem with a measurable cost: task abandonment on primary flows increases with every non-core feature added to the home screen."
+            - generic [ref=e128]: "Heuristic #8 (Aesthetic minimalism): \"Every extra unit of information competes with the relevant units of information and diminishes their relative visibility.\""
+          - generic [ref=e129]:
+            - img [ref=e131]
+            - heading "Flattened Intent Hierarchy" [level=3] [ref=e134]
+            - paragraph [ref=e135]: Grocery spending cash and a fluctuating crypto portfolio render at the same visual weight. Users who open the app to check their balance are interrupted by market tickers. The IA conflates two fundamentally different user intents — daily liquidity management and wealth generation — into a single undifferentiated surface.
+            - generic [ref=e136]: The fix isn't removing features — it's routing users to the right context before showing them anything. Intent-first navigation over feature-first navigation.
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]: Strategic Pivot
+          - heading "\"Intent-Led\" Architecture" [level=2] [ref=e141]
+          - paragraph [ref=e142]: "To resolve these systemic issues, we must reject the \"kitchen sink\" dashboard. The UX strategy pivots to an architecture that respects the user's cognitive load and prioritizes absolute transparency through three core pillars:"
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - img [ref=e147]
+              - heading "1. Dynamic Routing" [level=3] [ref=e151]
+            - generic [ref=e152]:
+              - paragraph [ref=e153]: "Instead of a static modular grid, the home screen must adapt to the user's primary \"velocity\". We bifurcate the IA into two distinct ecosystem layers:"
+              - generic [ref=e154]:
+                - generic [ref=e155]:
+                  - heading "Daily Velocity" [level=4] [ref=e156]
+                  - paragraph [ref=e157]: Checking, cards, P2P transfers. Minimalist, high contrast, zero promotional banners — optimized for sub-30-second task completion.
+                - generic [ref=e158]:
+                  - heading "Wealth Layer" [level=4] [ref=e159]
+                  - paragraph [ref=e160]: Vaults, equities, crypto. Denser chart layouts with explicit risk labels — never co-mingled with daily liquid funds in the same balance total.
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - img [ref=e164]
+              - heading "2. High-Fidelity Crisis UX" [level=3] [ref=e167]
+            - generic [ref=e168]:
+              - paragraph [ref=e169]: Redesigning the support flow specifically for anxiety reduction and complete transparency. A user with frozen funds should never see an ad for airport lounge access.
+              - generic [ref=e170]:
+                - generic [ref=e171]:
+                  - img [ref=e172]
+                  - generic [ref=e174]: The "Crisis Node"
+                - paragraph [ref=e175]: "\"Your account is locked for a security review. A specialized agent [Avatar] will review this. Current queue time: ~14 minutes. Your physical card auto-declines are active for safety.\""
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - img [ref=e179]
+              - heading "3. Progressive Disclosure" [level=3] [ref=e188]
+            - generic [ref=e189]:
+              - paragraph [ref=e190]: Stop throwing features at the user; let them pull what they need. Empower users to curate their own financial dashboard.
+              - list [ref=e191]:
+                - listitem [ref=e192]:
+                  - generic [ref=e195]: Allow users to "pin" their top 3–4 core modules to the primary view.
+                - listitem [ref=e196]:
+                  - generic [ref=e199]: Archive the rest in a deep, categorized "Discover" section — surfaced by behavior, not homepage real estate.
+                - listitem [ref=e200]:
+                  - generic [ref=e203]: "Directional target: −60% UI complexity score (Figma token audit method)."
+              - generic [ref=e204]:
+                - strong [ref=e205]: "Design tension acknowledged:"
+                - text: Progressive disclosure reduces promotional surface area — a real business constraint. The hypothesis is that reduced bounce on primary flows raises LTV more than cross-sell impressions on a cluttered home screen. This would need revenue modeling to validate before shipping.
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - heading "Visualizing the Solution" [level=2] [ref=e209]
+          - paragraph [ref=e210]: High-fidelity structural concepts demonstrating the "Intent-Led" redesign in practice.
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - heading "1. The Bifurcated Home" [level=3] [ref=e214]
+            - list [ref=e215]:
+              - listitem [ref=e216]: Massive, clean numerical display of fiat balance.
+              - listitem [ref=e218]: Physical toggle to switch environment from "Spend" to "Invest".
+              - listitem [ref=e220]: Bottom nav reduced from 5 items to 3.
+          - generic [ref=e222]:
+            - heading "2. The Action Drawer" [level=3] [ref=e224]
+            - list [ref=e225]:
+              - listitem [ref=e226]: Swipe up reveals curated, search-driven action menu.
+              - listitem [ref=e228]: Replaces static, overwhelming grid of icons.
+              - listitem [ref=e230]: Focus on high-legibility text and fast hit-targets.
+          - generic [ref=e232]:
+            - heading "3. The Crisis Node" [level=3] [ref=e234]
+            - list [ref=e235]:
+              - listitem [ref=e236]: Live progress bar showing internal review steps.
+              - listitem [ref=e238]: Prominent "Emergency Cash Release" feature.
+              - listitem [ref=e240]: Stripped of all promotional/upsell UI elements.
+      - generic [ref=e244]:
+        - generic [ref=e245]:
+          - paragraph [ref=e246]: 02 — Design Audit
+          - heading "The Super-App Paradox" [level=2] [ref=e247]
+          - paragraph [ref=e248]: "Tier-1 neobanks added features in place of trust. A cognitive load audit across 14 core flows — mapped against Nielsen heuristics and competitor teardowns of Revolut, Jupiter, and Fi Money — revealed a single root cause: no hierarchy of intent."
+        - generic [ref=e249]:
+          - generic [ref=e251]:
+            - generic [ref=e252]: Before — V1 Super-App
+            - generic [ref=e254]:
+              - generic [ref=e261]: neobank.app/dashboard
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - generic [ref=e264]: Home⬤
+                  - generic [ref=e265]: Send Money⬤
+                  - generic [ref=e266]: Cards
+                  - generic [ref=e267]: Invest
+                  - generic [ref=e268]: Loans
+                  - generic [ref=e269]: Insurance
+                  - generic [ref=e270]: Offers
+                  - generic [ref=e271]: Rewards
+                  - generic [ref=e272]: Cashback
+                  - generic [ref=e273]: Support
+                  - generic [ref=e274]: Profile
+                  - generic [ref=e275]: KYC
+                - generic [ref=e276]:
+                  - generic [ref=e277]:
+                    - generic [ref=e278]: Total Available Balance
+                    - generic [ref=e279]: ₹84,230.50
+                    - generic [ref=e280]: Last updated 2 min ago · Acc No. ··5821
+                    - generic [ref=e281]:
+                      - generic [ref=e282]: Send Money
+                      - generic [ref=e283]: Add Money
+                      - generic [ref=e284]: Pay Bills
+                      - generic [ref=e285]: Request
+                  - generic [ref=e286]:
+                    - generic [ref=e287]:
+                      - generic [ref=e288]: Cashback
+                      - generic [ref=e289]: ₹240
+                    - generic [ref=e290]:
+                      - generic [ref=e291]: Offers!
+                      - generic [ref=e292]: 14 live
+                    - generic [ref=e293]:
+                      - generic [ref=e294]: Credit Score
+                      - generic [ref=e295]: "748"
+                  - generic [ref=e296]:
+                    - generic [ref=e297]: Loans
+                    - generic [ref=e298]: View →
+                  - generic [ref=e299]:
+                    - generic [ref=e300]: Insurance
+                    - generic [ref=e301]: View →
+                  - generic [ref=e302]:
+                    - generic [ref=e303]: Investments
+                    - generic [ref=e304]: View →
+                  - generic [ref=e305]:
+                    - generic [ref=e306]: Spends Tracker
+                    - generic [ref=e307]: View →
+                  - generic [ref=e308]:
+                    - generic [ref=e309]: EMI Manager
+                    - generic [ref=e310]: View →
+                  - generic [ref=e311]:
+                    - generic [ref=e312]: Utility Bills
+                    - generic [ref=e313]: View →
+                  - generic [ref=e314]:
+                    - generic [ref=e315]: FD / RD
+                    - generic [ref=e316]: View →
+                  - generic [ref=e317]:
+                    - generic [ref=e318]: Mutual Funds
+                    - generic [ref=e319]: View →
+                  - generic [ref=e320]:
+                    - generic [ref=e321]: Gold Savings
+                    - generic [ref=e322]: View →
+                - generic [ref=e323]:
+                  - generic [ref=e324]: 12 nav items above the fold — avg 62ms decision latency
+                  - generic [ref=e326]: 4 competing CTAs — Send Money takes 8+ taps to complete
+                  - generic [ref=e328]: 9 widgets — visual noise index 0.87 (Figma audit)
+                  - generic [ref=e330]: No trust signals — missing RBI badge & encryption indicator
+          - generic [ref=e333]:
+            - generic [ref=e334]: After — Trust-First Redesign
+            - generic [ref=e336]:
+              - generic [ref=e343]: neobank.app/home
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - generic [ref=e346]:
+                    - generic [ref=e347]: Home
+                    - generic [ref=e348]: Money
+                    - generic [ref=e349]: Cards
+                    - generic [ref=e350]: Invest
+                  - generic [ref=e351]: AC
+                - generic [ref=e352]:
+                  - generic [ref=e353]: Good morning, Aditya ☀️
+                  - generic [ref=e356]:
+                    - generic [ref=e357]: Total Balance
+                    - generic [ref=e358]: ₹84,230
+                    - generic [ref=e361]: +₹2,400 this month · On track
+                  - generic [ref=e362] [cursor=pointer]: Send Money
+                  - generic [ref=e363]:
+                    - generic [ref=e364]:
+                      - generic [ref=e365]: +
+                      - generic [ref=e366]: Add Money
+                    - generic [ref=e367]:
+                      - generic [ref=e368]: ⚡
+                      - generic [ref=e369]: Pay Bills
+                    - generic [ref=e370]:
+                      - generic [ref=e371]: ↗
+                      - generic [ref=e372]: Invest
+                    - generic [ref=e373]:
+                      - generic [ref=e374]: ⋯
+                      - generic [ref=e375]: More
+                  - generic [ref=e376]:
+                    - img [ref=e378]
+                    - generic [ref=e381]:
+                      - generic [ref=e382]: RBI Regulated · DICGC Insured
+                      - generic [ref=e383]: Deposits insured up to ₹5 Lakh · 256-bit AES
+                  - generic [ref=e384]: Recent
+                  - generic [ref=e385]:
+                    - generic [ref=e386]:
+                      - generic [ref=e387]: S
+                      - generic [ref=e388]:
+                        - generic [ref=e389]: Swiggy
+                        - generic [ref=e390]: Food delivery
+                    - generic [ref=e391]: −₹340
+                  - generic [ref=e392]:
+                    - generic [ref=e393]:
+                      - generic [ref=e394]: ₹
+                      - generic [ref=e395]:
+                        - generic [ref=e396]: Salary Credit
+                        - generic [ref=e397]: HDFC Payroll
+                    - generic [ref=e398]: +₹52,000
+                  - generic [ref=e399]:
+                    - generic [ref=e400]:
+                      - generic [ref=e401]: "N"
+                      - generic [ref=e402]:
+                        - generic [ref=e403]: Netflix
+                        - generic [ref=e404]: Subscription
+                    - generic [ref=e405]: −₹649
+                - generic [ref=e406]:
+                  - generic [ref=e407]: "4 nav items — decision latency: 62ms → 18ms (heuristic)"
+                  - generic [ref=e409]: 1 primary CTA — Send Money in 3 taps vs. 8+ in V1
+                  - generic [ref=e411]: −60% visual token count vs. V1 (Figma token audit)
+                  - generic [ref=e413]: Trust signal above the fold — regulatory badge visible without scroll
+        - generic [ref=e415]:
+          - generic [ref=e416]:
+            - generic [ref=e417]: −25%
+            - generic [ref=e418]: Support ticket volume
+            - generic [ref=e419]: Directional target · Trust hypothesis
+          - generic [ref=e420]:
+            - generic [ref=e421]: +40%
+            - generic [ref=e422]: Task completion speed
+            - generic [ref=e423]: Directional target · Velocity hypothesis
+          - generic [ref=e424]:
+            - generic [ref=e425]: −60%
+            - generic [ref=e426]: Visual token count
+            - generic [ref=e427]: Measured via Figma token audit
+          - generic [ref=e428]:
+            - generic [ref=e429]: 4 → 1
+            - generic [ref=e430]: CTAs on home screen
+            - generic [ref=e431]: Direct reduction · V1 → V2 baseline
+      - generic [ref=e435]:
+        - generic [ref=e436]:
+          - heading "Strategic Takeaway & Hypothesis" [level=2] [ref=e437]
+          - paragraph [ref=e438]: Feature velocity is not the same as product value. Every feature added to a home screen is a tax on the user's attention — and attention is the scarcest resource in a daily banking app.
+          - paragraph [ref=e439]: "The core finding: cognitive overload in primary financial flows is a design problem with a design solution. Intent-led architecture — routing users to the right context before surfacing options — reduces abandonment without removing features. The hypothesis is that completion rates on core flows are a stronger predictor of 12-month retention than cross-sell engagement rate."
+        - generic [ref=e441]:
+          - heading "Strategic KPI Targets (Hypothesis)" [level=3] [ref=e442]
+          - generic [ref=e443]:
+            - generic [ref=e444]:
+              - generic [ref=e445]: Support Ticket Volume
+              - generic [ref=e446]:
+                - text: "-25%"
+                - img [ref=e447]
+            - generic [ref=e450]:
+              - generic [ref=e451]: Primary Flow Completion Rate
+              - generic [ref=e452]:
+                - text: +40%
+                - img [ref=e453]
+            - generic [ref=e456]:
+              - generic [ref=e457]: UI Complexity Score
+              - generic [ref=e458]:
+                - text: "-60%"
+                - img [ref=e459]
+            - generic [ref=e462]:
+              - generic [ref=e463]: Retention Rate
+              - generic [ref=e464]: ↑ Directional Est.
+          - paragraph [ref=e465]: "* These are directional targets derived from industry benchmarks and competitive analysis. Validation would require A/B testing in production."
+    - generic [ref=e466]:
+      - generic [ref=e471]:
+        - generic [ref=e472]: Up Next
+        - link "Infosys × Imagine Learning Continue Reading" [ref=e473] [cursor=pointer]:
+          - /url: /work/infosys
+          - heading "Infosys × Imagine Learning" [level=2] [ref=e474]
+          - generic [ref=e475]:
+            - text: Continue Reading
+            - img [ref=e476]
+      - link "View All Projects" [ref=e479] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e480]
+        - generic [ref=e482]: View All Projects
+  - contentinfo [ref=e483]:
+    - generic [ref=e484]:
+      - paragraph [ref=e485]:
+        - generic [ref=e486]: AC
+        - text: © 2026 Aditya Chinchakar. Built with Next.js, Tailwind, and Agentic AI.
+      - navigation [ref=e487]:
+        - link "GitHub Profile" [ref=e488] [cursor=pointer]:
+          - /url: https://github.com/Adichinchakar
+          - img [ref=e489]
+        - link "LinkedIn Profile" [ref=e492] [cursor=pointer]:
+          - /url: https://linkedin.com/in/adityachinchakar
+          - img [ref=e493]
+        - link "Send email to adichinchakar@gmail.com" [ref=e497] [cursor=pointer]:
+          - /url: mailto:adichinchakar@gmail.com
+          - text: adichinchakar@gmail.com
+  - button "Open Next.js Dev Tools" [ref=e503] [cursor=pointer]:
+    - img [ref=e504]

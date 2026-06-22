@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Hero } from "@/components/case-studies/simplifai-design-system/hero";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 import { ProblemContext } from "@/components/case-studies/simplifai-design-system/problem-context";
 import { SystemPreview } from "@/components/case-studies/simplifai-design-system/system-preview";
 import { AtomicExplorer } from "@/components/case-studies/simplifai-design-system/atomic-explorer";
@@ -71,6 +72,22 @@ export default function SimplifaiDesignSystemPage() {
     return (
         <main className="bg-zinc-50 min-h-screen">
             <Hero />
+
+            {/* The short version — recruiter scan card */}
+            <CaseStudyTldr
+                hook="Five product teams shipping five different-looking products. I built the one system that made them agree — without a single hard fork."
+                stats={[
+                    { value: "40%", label: "less front-end build time" },
+                    { value: "5→1", label: "teams on one shared library" },
+                    { value: "60+", label: "components, zero hard forks" },
+                ]}
+                role="Design Systems Lead"
+                timeline="2022 · Enterprise SaaS"
+                readTime="15 min read"
+                accentClass="text-indigo-700"
+                spotlight="rgba(99, 102, 241, 0.10)"
+            />
+
             <ExecutiveSummary items={summaryItems} />
             <ProblemContext />
             <section className="py-20 px-6 bg-zinc-50">

@@ -47,7 +47,7 @@ export function BentoImpact() {
                     >
                         <LayoutGrid className="w-8 h-8 text-blue-100 mb-6" aria-hidden="true" />
                         <div className="text-5xl font-black mb-2 tracking-tighter">500+</div>
-                        <p className="text-blue-100 font-medium">Frames scanned across beta — in under 10 seconds each.</p>
+                        <p className="text-blue-50 font-medium">Frames scanned across beta — in under 10 seconds each.</p>
                     </motion.div>
 
                     {/* i18n */}

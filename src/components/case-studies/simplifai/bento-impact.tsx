@@ -55,7 +55,7 @@ const cards = [
         hoverBorder: "hover:border-emerald-300/60",
         metric: "28%",
         metricSub: "Adoption Jump from One Architecture Decision",
-        note: "Switching canvas-first to linear step-builder wasn't a feature — it was a structural insight. Architecture is UX.",
+        note: "Switching from a canvas to a linear step-builder looked like a feature tweak. It was really a structural call. Architecture is UX.",
         decorIcon: Trophy,
     },
 ];

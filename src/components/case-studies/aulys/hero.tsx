@@ -103,7 +103,7 @@ export function Hero() {
                             96.3% of the web fails basic accessibility. I built Aulys to fix that at the source — a real-time WCAG 2.2 scanner embedded directly in Figma, with AI-powered one-click remediation.
                         </p>
                         <p className="text-sm text-zinc-600 max-w-lg mb-6 leading-relaxed">
-                            Product strategy, UX, and all decisions are mine. I directed AI tools for execution — compressing a 6-month MVP to 10 weeks without sacrificing depth.
+                            I owned product strategy, UX, and every design decision. AI was my builder — I scoped each feature, specced the behavior, and QA&apos;d every output against WCAG before it shipped. That compressed a 6-month MVP into 10 weeks.
                         </p>
 
                         {/* Role + timeline strip */}

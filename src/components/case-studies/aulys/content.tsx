@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Hero } from "@/components/case-studies/aulys/hero";
+import { CaseStudyTldr } from "@/components/case-studies/case-study-tldr";
 import { ProblemStatement } from "@/components/case-studies/aulys/problem-statement";
 import { HookModel } from "@/components/case-studies/hook-model";
 import { TheInsight } from "@/components/case-studies/aulys/insight";
@@ -17,6 +18,21 @@ export default function AulysPage() {
         <div className="min-h-screen bg-zinc-50 text-zinc-800 selection:bg-blue-500/30">
             {/* Hero */}
             <Hero />
+
+            {/* The short version — recruiter scan card */}
+            <CaseStudyTldr
+                hook="96.3% of the web fails accessibility. I built the tool that catches it before launch — inside Figma."
+                stats={[
+                    { value: "<10s", label: "to scan a 500-layer file" },
+                    { value: "7→1", label: "steps to fix a violation" },
+                    { value: "10 wks", label: "solo, from zero to live beta" },
+                ]}
+                role="Product Designer · Founder · Solo Builder"
+                timeline="Oct 2024 – Present"
+                readTime="12 min read"
+                accentClass="text-blue-700"
+                spotlight="rgba(59, 130, 246, 0.10)"
+            />
 
             {/* 01 — Problem */}
             <ProblemStatement />

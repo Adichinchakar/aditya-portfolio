@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Chinchakar — Senior Product Designer</title>
+<meta name="description" content="Aditya Chinchakar. Senior Product Designer. AI tools, design systems, accessibility. Creator of Aulys.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,800;1,800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#F5F4EF; --bg-alt:#EDECE6; --ink:#0A0A08; --ink-dim:#5A5955;
+  --ink-faint:#A8A7A2; --red:#C8231A; --red-soft:rgba(200,35,26,.08);
+  --line:#0A0A08; --line-thin:rgba(10,10,8,.14);
+  --display:'Barlow Condensed',sans-serif;
+  --sans:'DM Sans',sans-serif;
+  --mono:'DM Mono',monospace;
+  --maxw:1280px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+/* ============ RESET ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden;font-size:1rem;line-height:1.55}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--red);color:#fff}
+
+@media (hover:hover) and (pointer:fine){
+  body.cursor-on,body.cursor-on a,body.cursor-on button{cursor:none}
+}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ============ CUSTOM CURSOR ============ */
+.cur-dot{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;width:10px;height:10px;background:var(--red);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+.cur-dot.grow{width:40px;height:40px;background:transparent;border:1.5px solid var(--red);border-radius:50%}
+@media (hover:none),(pointer:coarse){.cur-dot{display:none}}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.5rem,5vw,3.5rem)}
+.rule{width:100%;height:1px;background:var(--line)}
+.rule-red{width:100%;height:2px;background:var(--red)}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:var(--maxw);margin:0 auto;
+  padding:.85rem clamp(1.5rem,5vw,3.5rem);
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem;
+}
+.nav-left{display:flex;align-items:center;gap:2.5rem}
+.monogram{font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:.04em;line-height:1}
+.nav-label{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.nav-links{display:flex;gap:2rem;align-items:center;list-style:none;justify-content:flex-end}
+.nav-links a{font-size:.88rem;font-weight:500;letter-spacing:.04em;color:var(--ink-dim);position:relative;transition:color .2s}
+.nav-links a:hover{color:var(--red)}
+.nav-year{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);letter-spacing:.1em}
+.burger{display:none;width:28px;height:18px;position:relative;z-index:120}
+.burger span{position:absolute;left:0;width:100%;height:1.5px;background:var(--ink);transition:transform .35s var(--ease),opacity .25s}
+.burger span:nth-child(1){top:0}.burger span:nth-child(2){top:8px}.burger span:nth-child(3){top:16px}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:0;z-index:110;background:var(--ink);
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;
+  padding:clamp(2rem,8vw,5rem);
+  opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;
+}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{font-family:var(--display);font-size:clamp(3rem,12vw,6rem);font-weight:800;color:var(--bg);line-height:1;display:block;transition:color .2s}
+.mobile-menu a:hover{color:var(--red)}
+.mobile-menu .m-label{font-family:var(--mono);font-size:.75rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem}
+
+/* ============ HERO ============ */
+.hero{padding-top:4.5rem;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;border-bottom:1px solid var(--line)}
+.hero-top{padding:clamp(3rem,8vh,7rem) 0 2rem}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:end}
+.hero-name{
+  font-family:var(--display);font-weight:800;font-size:clamp(5rem,14vw,13rem);
+  line-height:.88;letter-spacing:-.01em;text-transform:uppercase;
+}
+.hero-name .block{display:block}
+.hero-name .block-red{display:block;color:var(--red)}
+.hero-right{padding-left:clamp(1.5rem,4vw,4rem);border-left:1px solid var(--line)}
+.hero-title{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,2.5vw,2.2rem);letter-spacing:.02em;text-transform:uppercase;color:var(--ink-dim);line-height:1.15;margin-bottom:1.5rem}
+.hero-desc{font-size:1rem;color:var(--ink-dim);max-width:40ch;font-weight:300;line-height:1.65;margin-bottom:2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:500;font-size:.92rem;letter-spacing:.02em;transition:transform .25s var(--ease),background .2s,color .2s}
+.btn-solid{background:var(--ink);color:var(--bg);padding:.8rem 1.5rem}
+.btn-solid:hover{background:var(--red);transform:translateY(-2px)}
+.btn-outline{border:1.5px solid var(--line);padding:.78rem 1.5rem}
+.btn-outline:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
+.hero-bottom{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0;border-top:1px solid var(--line-thin)}
+.hero-meta{display:flex;gap:3rem}
+.hero-meta-item{display:flex;flex-direction:column;gap:.2rem}
+.hero-meta-item .val{font-family:var(--display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--ink)}
+.hero-meta-item .val .u{color:var(--red)}
+.hero-meta-item .key{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.hero-scroll{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:.8rem}
+.hero-scroll::after{content:"";width:40px;height:1px;background:var(--red)}
+
+/* ============ WORK INDEX ============ */
+.work{padding:clamp(4rem,9vh,8rem) 0}
+.sec-label{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem}
+.work-table{border-top:1px solid var(--line)}
+.work-row{
+  display:grid;grid-template-columns:3.5rem 1fr 14rem 10rem 8rem;
+  gap:1.5rem;align-items:center;
+  padding:1.3rem 0;border-bottom:1px solid var(--line-thin);
+  transition:background .2s;cursor:pointer;position:relative;
+}
+.work-row:hover{background:var(--red-soft)}
+.work-row:hover .wn{color:var(--red)}
+.work-row:hover .wt{color:var(--red)}
+.work-row:hover .arrow{opacity:1;transform:translateX(0)}
+.wn{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint);letter-spacing:.08em;font-weight:500;transition:color .2s}
+.wt{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,2.2vw,1.9rem);text-transform:uppercase;letter-spacing:.01em;line-height:1;transition:color .2s}
+.wr{font-size:.82rem;color:var(--ink-dim);font-weight:400}
+.wm{font-family:var(--mono);font-size:.82rem;color:var(--red);font-weight:500;letter-spacing:.04em}
+.wy{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint)}
+.arrow{opacity:0;transform:translateX(-8px);transition:opacity .3s var(--ease),transform .3s var(--ease);font-size:1.2rem;color:var(--red);position:absolute;right:0}
+.work-row a.stretch{position:absolute;inset:0}
+
+/* ============ FEATURED ============ */
+.featured{padding:0 0 clamp(4rem,9vh,8rem)}
+.feat-grid{display:grid;grid-template-columns:2fr 1fr;gap:1px;border:1px solid var(--line);background:var(--line)}
+.feat-card{background:var(--bg);padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between;min-height:340px;position:relative;overflow:hidden;transition:background .3s}
+.feat-card:hover{background:var(--ink)}
+.feat-card:hover .fc-title,.feat-card:hover .fc-num,.feat-card:hover .fc-role{color:var(--bg)}
+.feat-card:hover .fc-metric{color:var(--red)}
+.feat-card:hover .fc-arrow{color:var(--red)}
+.feat-card:hover .fc-cover{opacity:.12}
+.fc-cover{position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none}
+.cov-aulys{background:linear-gradient(135deg,#8B6914 0%,#4A3508 100%)}
+.cov-1{background:linear-gradient(135deg,#1a2535 0%,#0d1218 100%)}
+.cov-2{background:linear-gradient(135deg,#2a1e0a 0%,#160f05 100%)}
+.fc-num{font-family:var(--mono);font-size:.75rem;color:var(--ink-faint);letter-spacing:.1em;transition:color .3s}
+.fc-title{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3vw,2.8rem);text-transform:uppercase;letter-spacing:.01em;line-height:1;margin-top:auto;transition:color .3s}
+.fc-role{font-family:var(--mono);font-size:.75rem;color:var(--ink-dim);letter-spacing:.08em;text-transform:uppercase;margin-top:.6rem;transition:color .3s}
+.fc-metric{font-family:var(--display);font-weight:600;font-size:1.1rem;color:var(--red);margin-top:.4rem;transition:color .3s}
+.fc-arrow{font-size:2rem;align-self:flex-end;color:transparent;transition:color .3s}
+.feat-stack{display:flex;flex-direction:column;gap:1px}
+.feat-stack .feat-card{min-height:0;flex:1}
+
+/* ============ ABOUT ============ */
+.about{background:var(--ink);color:var(--bg);padding:clamp(4rem,9vh,8rem) 0;border-top:2px solid var(--red)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.about-left{}
+.about-kicker{font-family:var(--mono);font-size:.72rem;color:var(--red);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.5rem}
+.about-pull{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,4rem);text-transform:uppercase;line-height:.95;letter-spacing:-.01em}
+.about-pull em{font-style:italic;font-weight:800;color:var(--red)}
+.about-right{border-left:1px solid rgba(245,244,239,.12);padding-left:clamp(2rem,5vw,4rem)}
+.about-bio{font-size:1rem;color:rgba(245,244,239,.65);line-height:1.7;margin-bottom:2rem;font-weight:300}
+.about-bio strong{color:var(--bg);font-weight:500}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{font-size:.78rem;padding:.35rem .8rem;border:1px solid rgba(245,244,239,.2);color:rgba(245,244,239,.55);letter-spacing:.04em;transition:border-color .2s,color .2s}
+.pill:hover{border-color:var(--red);color:var(--red)}
+
+/* ============ METRICS ============ */
+.metrics{border-bottom:1px solid var(--line)}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--line)}
+.metric-cell{padding:3rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line-thin);position:relative}
+.metric-cell::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--red);transition:width .6s var(--ease)}
+.metric-cell.in::before{width:100%}
+.metric-num{font-family:var(--display);font-weight:800;font-size:clamp(3rem,6vw,5rem);line-height:1;letter-spacing:-.01em}
+.metric-num .u{color:var(--red)}
+.metric-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-top:.7rem}
+
+/* ============ AULYS ============ */
+.aulys{padding:clamp(4rem,9vh,8rem) 0;border-bottom:1px solid var(--line)}
+.aulys-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.aulys-left{}
+.aulys-kicker{font-family:var(--mono);font-size:.72rem;color:var(--red);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.2rem}
+.aulys-title{font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,5vw,5rem);text-transform:uppercase;line-height:.92;letter-spacing:-.01em;margin-bottom:1.5rem}
+.aulys-title em{font-style:italic;color:var(--red)}
+.aulys-desc{color:var(--ink-dim);font-weight:300;line-height:1.7;margin-bottom:2rem;max-width:44ch}
+.aulys-right{}
+.compare{border:1px solid var(--line);width:100%}
+.compare-row{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;border-bottom:1px solid var(--line-thin)}
+.compare-row:last-child{border-bottom:none}
+.compare-cell{padding:.85rem 1rem;font-size:.88rem;border-right:1px solid var(--line-thin)}
+.compare-cell:last-child{border-right:none}
+.compare-head{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);background:var(--bg-alt)}
+.compare-head.own{color:var(--red);background:var(--red-soft)}
+.compare-feat{font-weight:500;color:var(--ink)}
+.compare-own{background:var(--red-soft)}
+.compare-yes{color:var(--red);font-weight:700;font-family:var(--mono)}
+.compare-no{color:var(--ink-faint);font-family:var(--mono)}
+
+/* ============ CONTACT ============ */
+.contact{padding:clamp(5rem,12vh,10rem) 0;border-top:2px solid var(--red)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.contact-left .label{margin-bottom:1.2rem}
+.contact-mail{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.5vw,3.2rem);text-transform:uppercase;letter-spacing:-.01em;display:block;line-height:1;transition:color .25s}
+.contact-mail:hover{color:var(--red)}
+.contact-right{text-align:right}
+.socials{display:flex;gap:1rem;justify-content:flex-end;margin-bottom:1.5rem}
+.socials a{width:46px;height:46px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);transition:border-color .2s,color .2s,background .2s}
+.socials a:hover{border-color:var(--red);color:var(--bg);background:var(--red)}
+.socials svg{width:18px;height:18px}
+.badge{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.72rem;color:var(--ink-dim);letter-spacing:.08em;text-transform:uppercase;padding:.55rem 1rem;border:1px solid var(--line-thin)}
+.badge .dot{width:7px;height:7px;background:var(--red);flex-shrink:0;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.badge .dot{animation:none}}
+
+/* ============ FOOTER ============ */
+.footer{border-top:1px solid var(--line);background:var(--bg-alt)}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:1.2rem clamp(1.5rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.footer p{font-family:var(--mono);font-size:.72rem;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase}
+.footer .mg{font-family:var(--display);font-weight:800;font-size:1.1rem;color:var(--ink)}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-right{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:2rem;margin-top:2rem}
+  .feat-grid{grid-template-columns:1fr}
+  .about-grid,.aulys-inner,.contact-inner{grid-template-columns:1fr}
+  .about-right{border-left:none;border-top:1px solid rgba(245,244,239,.12);padding-left:0;padding-top:2rem;margin-top:2rem}
+  .contact-right{text-align:left}
+  .socials{justify-content:flex-start}
+  .metrics-grid{grid-template-columns:repeat(2,1fr)}
+  .work-row{grid-template-columns:3rem 1fr auto}
+  .wr,.wy{display:none}
+}
+@media (max-width:600px){
+  .nav-inner{grid-template-columns:1fr auto}
+  .nav-year{display:none}
+  .nav-links{display:none}
+  .burger{display:block}
+  .work-row{grid-template-columns:2.5rem 1fr}
+  .wm{display:none}
+  .metrics-grid{grid-template-columns:1fr 1fr}
+  .compare-row{grid-template-columns:1fr}
+  .compare-head:not(.own):not(.compare-feat){display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="cur-dot" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header>
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="#top" class="monogram" aria-label="Aditya Chinchakar home">AC</a>
+      <span class="nav-label">Senior Product Designer</span>
+    </div>
+    <span class="nav-year label">2026</span>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#aulys">Aulys</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <span class="m-label">Navigation</span>
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#aulys">Aulys</a>
+  <a href="#contact">Contact</a>
+</div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="hero-grid">
+        <h1 id="hero-h" class="hero-name">
+          <span class="block">ADITYA</span>
+          <span class="block">CHIN-</span>
+          <span class="block-red">CHAKAR.</span>
+        </h1>
+        <div class="hero-right reveal">
+          <p class="hero-title">Senior Product Designer<br>AI Tools · Design Systems<br>Accessibility</p>
+          <p class="hero-desc">I don't just ship screens. I build the infrastructure that makes the next ten screens faster — and the products that reason about themselves.</p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-solid">See My Work</a>
+            <a href="#aulys" class="btn btn-outline">Aulys &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rule-red"></div>
+  <div class="wrap">
+    <div class="hero-bottom">
+      <div class="hero-meta">
+        <div class="hero-meta-item reveal">
+          <span class="val"><span class="count" data-count="42" data-suffix="%">0<span class="u">%</span></span></span>
+          <span class="key">Dev cycle faster</span>
+        </div>
+        <div class="hero-meta-item reveal">
+          <span class="val"><span class="count" data-count="73" data-suffix="%">0<span class="u">%</span></span></span>
+          <span class="key">Adoption increase</span>
+        </div>
+        <div class="hero-meta-item reveal">
+          <span class="val"><span class="count" data-count="9" data-suffix="+">0<span class="u">+</span></span></span>
+          <span class="key">Years experience</span>
+        </div>
+      </div>
+      <span class="hero-scroll" aria-hidden="true">Scroll</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK INDEX ============ -->
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="sec-label reveal">
+      <span class="label" id="work-h">Selected Work</span>
+      <span class="label">6 Projects</span>
+    </div>
+    <div class="work-table" role="list">
+
+      <div class="work-row reveal" role="listitem">
+        <span class="wn">01</span>
+        <span class="wt">Aulys</span>
+        <span class="wr">Founding Designer</span>
+        <span class="wm">42% faster dev cycle</span>
+        <span class="wy">2023–24</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#aulys" aria-label="Aulys — AI accessibility plugin"></a>
+      </div>
+
+      <div class="work-row reveal" role="listitem">
+        <span class="wn">02</span>
+        <span class="wt">Simplifai Workflow</span>
+        <span class="wr">Product Designer</span>
+        <span class="wm">73% adoption increase</span>
+        <span class="wy">2022–23</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#work" aria-label="Simplifai Workflow Engine"></a>
+      </div>
+
+      <div class="work-row reveal" role="listitem">
+        <span class="wn">03</span>
+        <span class="wt">Simplifai Design System</span>
+        <span class="wr">Design Systems Lead</span>
+        <span class="wm">40+ components</span>
+        <span class="wy">2021–22</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#work" aria-label="Simplifai Design System"></a>
+      </div>
+
+      <div class="work-row reveal" role="listitem">
+        <span class="wn">04</span>
+        <span class="wt">MedSecure</span>
+        <span class="wr">Product Designer</span>
+        <span class="wm">70% faster assessments</span>
+        <span class="wy">2022</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#work" aria-label="MedSecure health platform"></a>
+      </div>
+
+      <div class="work-row reveal" role="listitem">
+        <span class="wn">05</span>
+        <span class="wt">Nexus Fintech</span>
+        <span class="wr">Lead Product Designer</span>
+        <span class="wm">Strategy + Vision</span>
+        <span class="wy">2023</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#work" aria-label="Nexus Fintech banking concept"></a>
+      </div>
+
+      <div class="work-row reveal" role="listitem">
+        <span class="wn">06</span>
+        <span class="wt">Infosys × Imagine Learning</span>
+        <span class="wr">Senior Designer</span>
+        <span class="wm">4-persona EdTech</span>
+        <span class="wy">2019–21</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#work" aria-label="Infosys TalentBridge for Imagine Learning"></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED ============ -->
+<section class="featured" aria-label="Featured case studies">
+  <div class="wrap">
+    <div class="feat-grid reveal">
+      <article class="feat-card">
+        <span class="fc-cover cov-aulys" aria-hidden="true"></span>
+        <span class="fc-num">01 — FEATURED</span>
+        <div>
+          <h3 class="fc-title">Aulys</h3>
+          <p class="fc-role">Founding Designer · AI Accessibility</p>
+          <p class="fc-metric">42% faster dev cycle</p>
+        </div>
+        <span class="fc-arrow" aria-hidden="true">&rarr;</span>
+        <a class="stretch" href="#aulys" aria-label="Aulys full case study"></a>
+      </article>
+      <div class="feat-stack">
+        <article class="feat-card">
+          <span class="fc-cover cov-1" aria-hidden="true"></span>
+          <span class="fc-num">02</span>
+          <div>
+            <h3 class="fc-title">Simplifai</h3>
+            <p class="fc-role">Product Designer</p>
+            <p class="fc-metric">73% adoption</p>
+          </div>
+          <span class="fc-arrow" aria-hidden="true">&rarr;</span>
+          <a class="stretch" href="#work" aria-label="Simplifai Workflow case study"></a>
+        </article>
+        <article class="feat-card">
+          <span class="fc-cover cov-2" aria-hidden="true"></span>
+          <span class="fc-num">04</span>
+          <div>
+            <h3 class="fc-title">MedSecure</h3>
+            <p class="fc-role">Product Designer</p>
+            <p class="fc-metric">70% faster</p>
+          </div>
+          <span class="fc-arrow" aria-hidden="true">&rarr;</span>
+          <a class="stretch" href="#work" aria-label="MedSecure case study"></a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div class="about-left reveal">
+      <p class="about-kicker">About</p>
+      <blockquote class="about-pull" id="about-h">
+        I BUILD THE<br><em>INFRA-<br>STRUCTURE</em><br>FIRST.
+      </blockquote>
+    </div>
+    <div class="about-right reveal">
+      <p class="about-bio"><strong>9+ years</strong> across Infosys, Simplifai, and Keywordio — designing enterprise SaaS, design systems, and accessible software for teams that ship at scale.</p>
+      <p class="about-bio">I built <strong>Aulys</strong> solo: an AI-powered accessibility Figma plugin and SaaS with <strong>30+ beta users</strong>, directing the engineering myself. Based in Pune. Open to UAE relocation from August 2026.</p>
+      <div class="pills">
+        <span class="pill">Product Design</span><span class="pill">Design Systems</span><span class="pill">AI / UX</span><span class="pill">WCAG 2.2 AA</span><span class="pill">Figma</span><span class="pill">Design Tokens</span><span class="pill">Prototyping</span><span class="pill">Research</span><span class="pill">Front-end</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METRICS ============ -->
+<section aria-label="Impact metrics">
+  <div class="metrics-grid reveal">
+    <div class="metric-cell reveal">
+      <div class="metric-num"><span class="count" data-count="42" data-suffix="%">0<span class="u">%</span></span></div>
+      <p class="metric-label">Faster dev cycle</p>
+    </div>
+    <div class="metric-cell reveal">
+      <div class="metric-num"><span class="count" data-count="73" data-suffix="%">0<span class="u">%</span></span></div>
+      <p class="metric-label">Adoption increase</p>
+    </div>
+    <div class="metric-cell reveal">
+      <div class="metric-num"><span class="count" data-count="70" data-suffix="%">0<span class="u">%</span></span></div>
+      <p class="metric-label">Faster assessments</p>
+    </div>
+    <div class="metric-cell reveal">
+      <div class="metric-num"><span class="count" data-count="30" data-suffix="+">0<span class="u">+</span></span></div>
+      <p class="metric-label">Aulys beta users</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AULYS ============ -->
+<section class="aulys" id="aulys" aria-labelledby="aulys-h">
+  <div class="wrap aulys-inner">
+    <div class="aulys-left reveal">
+      <p class="aulys-kicker">Aulys · The Flagship</p>
+      <h2 class="aulys-title" id="aulys-h">ACCESS-<br>IBILITY<br>THAT<br><em>FIXES<br>ITSELF.</em></h2>
+      <p class="aulys-desc">Most a11y tools flag issues. Aulys uses AI to understand design intent and apply the fix — in Figma, then in production. Built solo, 30+ beta users.</p>
+      <a href="mailto:adichinchakar@gmail.com?subject=Aulys%20beta%20access" class="btn btn-solid">Join the beta &rarr;</a>
+    </div>
+    <div class="aulys-right reveal">
+      <div class="compare" role="table" aria-label="Aulys versus Stark and Axe">
+        <div class="compare-row">
+          <div class="compare-cell compare-head compare-feat">Capability</div>
+          <div class="compare-cell compare-head own">Aulys</div>
+          <div class="compare-cell compare-head">Stark</div>
+          <div class="compare-cell compare-head">Axe</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell compare-feat">AI-directed fixes</div>
+          <div class="compare-cell compare-own compare-yes">YES</div>
+          <div class="compare-cell compare-no">—</div>
+          <div class="compare-cell compare-no">—</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell compare-feat">Figma + production SaaS</div>
+          <div class="compare-cell compare-own compare-yes">BOTH</div>
+          <div class="compare-cell compare-no">Plugin</div>
+          <div class="compare-cell compare-no">CI/dev</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell compare-feat">Full WCAG 2.2 coverage</div>
+          <div class="compare-cell compare-own compare-yes">YES</div>
+          <div class="compare-cell compare-no">Partial</div>
+          <div class="compare-cell compare-no">Partial</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap contact-inner">
+    <div class="contact-left reveal">
+      <p class="label" id="contact-h" style="margin-bottom:1.2rem">Get in touch</p>
+      <a href="mailto:adichinchakar@gmail.com" class="contact-mail">adichinchakar<br>@gmail.com</a>
+    </div>
+    <div class="contact-right reveal">
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/adityachinchakar" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5v15.5H.25V8zm7.5 0h4.31v2.12h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9v8.82h-4.5v-7.82c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.13v7.95h-4.5V8z"/></svg>
+        </a>
+        <a href="https://github.com/Adichinchakar" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+        </a>
+      </div>
+      <p class="badge"><span class="dot" aria-hidden="true"></span>Open to UAE &nbsp;·&nbsp; Available Aug 2026</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="mg">AC</span>
+    <p>Designed &amp; built by Aditya Chinchakar &nbsp;·&nbsp; 2026</p>
+    <p>Pune, India</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* ---- Custom cursor ---- */
+  if(fine){
+    document.body.classList.add('cursor-on');
+    var dot = document.querySelector('.cur-dot');
+    var mx=innerWidth/2,my=innerHeight/2;
+    window.addEventListener('mousemove',function(e){
+      mx=e.clientX; my=e.clientY;
+      dot.style.transform='translate('+mx+'px,'+my+'px) translate(-50%,-50%)';
+    });
+    document.querySelectorAll('a,button,.work-row,.feat-card').forEach(function(el){
+      el.addEventListener('mouseenter',function(){dot.classList.add('grow');});
+      el.addEventListener('mouseleave',function(){dot.classList.remove('grow');});
+    });
+  }
+
+  /* ---- Nav scrolled ---- */
+  var nav = document.querySelector('.nav');
+  window.addEventListener('scroll',function(){
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  },{passive:true});
+
+  /* ---- Reveal ---- */
+  var revObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); revObs.unobserve(en.target); }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){revObs.observe(el);});
+
+  /* ---- Count-up ---- */
+  var countObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var el = en.target, target = +el.dataset.count, suffix = el.dataset.suffix||'';
+      countObs.unobserve(el);
+      if(reduce){ el.innerHTML = target+'<span class="u">'+suffix+'</span>'; return; }
+      var start=null, dur=1200;
+      function step(ts){
+        if(!start) start=ts;
+        var p=Math.min((ts-start)/dur,1), e=1-Math.pow(1-p,3);
+        el.innerHTML = Math.round(e*target)+'<span class="u">'+suffix+'</span>';
+        if(p<1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.count').forEach(function(el){countObs.observe(el);});
+
+  /* ---- Hamburger ---- */
+  var burger=document.getElementById('burger'), menu=document.getElementById('mobileMenu');
+  function setMenu(open){
+    burger.classList.toggle('open',open);
+    menu.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    document.body.style.overflow=open?'hidden':'';
+  }
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'));});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open'))setMenu(false);});
+})();
+</script>
+</body>
+</html>

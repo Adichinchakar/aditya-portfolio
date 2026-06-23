@@ -1,4 +1,5 @@
 import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
 import { AnalysisResult } from './analyzer';
 import { withFallback } from '../utils/errorHandler';
 
@@ -82,11 +83,33 @@ Evaluate the Draft Analysis.
     return validateResult(JSON.parse(extractJSON(text)));
   };
 
-  // If critic itself fails, auto-approve the draft rather than killing the whole workflow
   const secondaryFn = async (): Promise<ValidationResult> => {
-    console.warn('[Agent B] Critic unavailable — auto-approving draft.');
-    return { isValid: true, feedback: 'Critic unavailable — proceeding with unvalidated draft.' };
+    console.warn('[Agent B] Critic primary provider failed. Switching to Gemini fallback...');
+    try {
+      const geminiApiKey = process.env.GEMINI_API_KEY;
+      if (!geminiApiKey) throw new Error('GEMINI_API_KEY not found in environment.');
+      
+      const geminiAi = new GoogleGenAI({ apiKey: geminiApiKey });
+      const response = await geminiAi.models.generateContent({
+        model: 'gemini-2.5-pro',
+        contents: [
+          { role: 'user', parts: [{ text: CRITIC_PROMPT + '\n\n' + prompt }] }
+        ],
+        config: {
+          temperature: 0.2,
+          maxOutputTokens: 256,
+        }
+      });
+      
+      const text = response.text;
+      if (!text) throw new Error('Gemini returned empty response.');
+      return validateResult(JSON.parse(extractJSON(text)));
+    } catch (e) {
+      console.warn('[Agent B] Critic fallback also failed. Auto-approving draft.');
+      return { isValid: true, feedback: 'Critic unavailable — proceeding with unvalidated draft.' };
+    }
   };
 
   return withFallback(primaryFn, secondaryFn, 'Agent B: Critic');
 }
+

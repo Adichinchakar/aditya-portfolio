@@ -431,7 +431,7 @@ export function Hero() {
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-[-0.035em] text-zinc-900 leading-[1.05] max-w-3xl"
                     >
                         I design AI products{" "}
-                        <span className="text-zinc-400">and ship them to production.</span>
+                        <span className="text-blue-500">and ship them to production.</span>
                     </motion.h1>
 
                     {/* Subline — earned credibility, not adjectives */}

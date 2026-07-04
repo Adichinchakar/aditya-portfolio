@@ -49,3 +49,11 @@ legacy_nextjs/.next
 secret/
 key/
 *.py
+
+# local experiments — never deploy
+public/hero-mockups/
+hero-mockups/
+public/illustrations/
+.playwright-mcp/
+mock1.jpeg
+mock2.jpeg

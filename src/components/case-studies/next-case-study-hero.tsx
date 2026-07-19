@@ -16,6 +16,7 @@ const SLUG_COLORS: Record<string, string> = {
     "nexus-banking": "bg-amber-500/20",
     "infosys": "bg-violet-500/20",
     "orbit": "bg-rose-500/20",
+    "ai-match-engine": "bg-indigo-500/20",
 };
 
 function ParallaxCard({ study, scrollRef, onClick }: { study: any, scrollRef: React.RefObject<HTMLDivElement | null>, onClick: (e: React.MouseEvent) => void }) {
@@ -48,6 +49,11 @@ function ParallaxCard({ study, scrollRef, onClick }: { study: any, scrollRef: Re
                 style={{ x: contentX }}
                 className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent z-10"
             >
+                {study.conceptual && (
+                    <span className="self-start px-2 py-0.5 mb-3 rounded-full border border-amber-400/40 bg-amber-400/10 text-[11px] font-bold uppercase tracking-wider text-amber-300">
+                        Concept
+                    </span>
+                )}
                 <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight text-white/90 group-hover:text-white transition-colors">
                     {study.title}
                 </h3>

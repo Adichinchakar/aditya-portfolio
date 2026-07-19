@@ -28,10 +28,10 @@ function AnimatedCounter({ value, isInView }: { value: string; isInView: boolean
 }
 
 const stats = [
-    { value: "34%", label: "Projected Medical-Error Reduction", sub: "MedSecure · concept projection" },
-    { value: "70%", label: "Faster Assessment Cycles", sub: "GenAI EdTech · usability testing" },
-    { value: "73%", label: "User Adoption Increase", sub: "Simplifai · product analytics" },
-    { value: "$250K+", label: "ADA Litigation Risk Addressed", sub: "Per client · DOJ consent decree baseline" },
+    { value: "73%", label: "Adoption After Workflow Redesign", sub: "Simplifai · was stalled; product analytics, one quarter" },
+    { value: "70%", label: "Faster Teacher Assessments", sub: "Enterprise EdTech · GenAI rubric tooling, usability-tested" },
+    { value: "40%", label: "Less Front-End Build Time", sub: "Simplifai design system · 60+ components, 5 teams" },
+    { value: "3", label: "Products Shipped 0→1, Solo, With AI", sub: "Aulys · Aulys Code · AI Match Engine — live users" },
 ];
 
 const cardVariants = {
@@ -86,14 +86,7 @@ export function About() {
                                     <span className="text-zinc-900 font-bold bg-blue-500/10 px-2 py-0.5 rounded-md inline-block mt-1">
                                         I stay until it ships — writing code, running research, and making decisions no one else wants to make.
                                     </span>
-                                </p>
-                                <p>
-                                    I&apos;ve taken three products from zero to live users —{" "}
-                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">alone</span>.
-                                    {" "}Not because I had to, but because I wanted to know what it actually takes.
-                                    That shapes every{" "}
-                                    <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded-md">design decision</span>{" "}
-                                    I make in a team.
+                                    {" "}That&apos;s how three products went from zero to live users with me as the only designer — and it shapes every decision I make inside a team.
                                 </p>
 
                                 <motion.div
@@ -140,7 +133,7 @@ export function About() {
                                 >
                                     <span className="text-3xl sm:text-4xl font-black tracking-tighter text-zinc-900"><AnimatedCounter value={stat.value} isInView={isInView} /></span>
                                     <span className="text-xs font-bold text-zinc-800 mt-1.5 leading-snug">{stat.label}</span>
-                                    <span className="text-[10px] text-zinc-400 font-medium mt-1 leading-relaxed">{stat.sub}</span>
+                                    <span className="text-[10px] text-zinc-600 font-medium mt-1 leading-relaxed">{stat.sub}</span>
                                 </motion.div>
                             ))}
                         </div>

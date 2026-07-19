@@ -27,6 +27,7 @@ export default function AulysPage() {
                     { value: "7→1", label: "steps to fix a violation" },
                     { value: "10 wks", label: "solo, from zero to live beta" },
                 ]}
+                contribution="everything — research, product design, plugin engineering, and the live beta program."
                 role="Product Designer · Founder · Solo Builder"
                 timeline="Oct 2024 – Present"
                 readTime="12 min read"

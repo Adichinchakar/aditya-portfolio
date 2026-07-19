@@ -415,6 +415,7 @@ export default function AulysCodePage() {
                     { value: "1-click", label: "fixes, or AI with the snippet loaded" },
                     { value: "3", label: "workspaces: host, webview, backend" },
                 ]}
+                contribution="everything — extension architecture, diagnostics UX, webview UI, and all the TypeScript."
                 role="Design Engineer · Founder · Solo Builder"
                 timeline="Aulys Accessibility Ecosystem"
                 readTime="9 min read"

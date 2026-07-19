@@ -3,6 +3,7 @@
 import { MouseEvent } from "react";
 import { motion } from "@/lib/motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PROJECTS } from "@/data/projects";
@@ -43,7 +44,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                     <div className="relative z-10 flex-1 flex flex-col gap-6 p-7 md:p-12 md:pr-10">
                         {/* Top row */}
                         <div className="flex justify-between items-start mb-2">
-                            <span className="text-sm font-bold font-mono tracking-widest text-zinc-400">
+                            <span className="text-sm font-bold font-mono tracking-widest text-zinc-600">
                                 {String(index + 1).padStart(2, "0")}
                             </span>
                             <div className={cn("w-10 h-10 rounded-full flex items-center justify-center shadow-sm backdrop-blur-md transform group-hover:scale-110 transition-all duration-500", project.highlight ? "bg-indigo-50 border border-indigo-100 group-hover:bg-indigo-100 group-hover:border-indigo-200" : "bg-white/70 border border-white/80")}>
@@ -53,9 +54,16 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
 
                         {/* Content */}
                         <div className="flex-1">
-                            <p className="text-xs font-mono font-bold uppercase tracking-widest mb-3 text-zinc-500">
-                                {project.domain}
-                            </p>
+                            <div className="flex items-center gap-2.5 mb-3">
+                                <p className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-500">
+                                    {project.domain}
+                                </p>
+                                {project.conceptual && (
+                                    <span className="px-2 py-0.5 rounded-full border border-amber-300 bg-amber-50 text-[11px] font-bold uppercase tracking-wider text-amber-800">
+                                        Concept
+                                    </span>
+                                )}
+                            </div>
                             <h2 className={cn("text-3xl md:text-4xl font-black tracking-tight mb-4 transition-colors", project.highlight ? "text-zinc-900 group-hover:text-indigo-950" : "text-zinc-800 group-hover:text-zinc-950")}>
                                 {project.company}
                             </h2>
@@ -66,11 +74,11 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                             {/* Impact Info */}
                             <div className="flex flex-col gap-3 mb-8">
                                 <div className="flex items-center gap-3">
-                                    <span className="text-xs font-bold uppercase tracking-wider w-16 text-zinc-400">Role</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider w-16 text-zinc-600">Role</span>
                                     <span className="text-sm font-semibold text-zinc-700">{project.role}</span>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <span className="text-xs font-bold uppercase tracking-wider w-16 text-zinc-400">Impact</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider w-16 text-zinc-600">{project.conceptual ? "Projected" : "Impact"}</span>
                                     <span className={cn("text-sm border px-2.5 py-1 rounded-md font-bold backdrop-blur-sm shadow-sm", "border-zinc-200 bg-white/50 text-zinc-800")}>{project.metric}</span>
                                 </div>
                             </div>
@@ -91,7 +99,18 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
                     
                     {/* Graphic Side */}
                     <div className={cn("relative overflow-hidden transition-colors flex-shrink-0", project.highlight ? "hidden md:flex flex-1 border-l border-indigo-50/50" : "h-64 sm:h-72 md:h-auto md:w-5/12 lg:w-1/2 border-b md:border-b-0 md:border-l border-white/40 bg-white/30")}>
-                        <ProjectIllustration slug={project.slug} />
+                        {project.image ? (
+                            <Image
+                                src={project.image.src}
+                                alt={project.image.alt}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                quality={90}
+                                className="object-cover"
+                            />
+                        ) : (
+                            <ProjectIllustration slug={project.slug} />
+                        )}
                     </div>
                 </article>
             </Link>

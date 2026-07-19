@@ -82,6 +82,8 @@ export default function OrbitPage() {
                     { value: "$1.3T", label: "lost to poor onboarding yearly" },
                     { value: "30+ days", label: "productivity recovered per hire" },
                 ]}
+                badge="Self-initiated concept"
+                contribution="solo exploration — spatial interaction model, prototypes, and the onboarding flow."
                 role="Lead Spatial Designer"
                 timeline="2024 · Apple Vision Pro"
                 readTime="5 min read"

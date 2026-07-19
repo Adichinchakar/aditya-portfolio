@@ -57,8 +57,8 @@ export default function NowPage() {
                             <div>
                                 <h2 className="text-lg font-bold text-zinc-900 mb-2">Career Focus</h2>
                                 <p className="text-zinc-600 leading-relaxed mb-4">
-                                    I am currently serving my notice period at Infosys (ending August 2026). My primary focus right now is interviewing for my next big role.
-                                </p>
+                                                                    I am actively interviewing for my next big role. I can start immediately after August 2026 — conversations should start now.
+                                                                </p>
                                 <ul className="list-disc list-inside text-zinc-600 space-y-1.5 marker:text-zinc-400">
                                     <li>Targeting <strong className="text-zinc-900">Founding Designer</strong>, <strong className="text-zinc-900">Staff Product Designer</strong>, <strong className="text-zinc-900">Lead Product Designer</strong>, or <strong className="text-zinc-900">Senior Product Designer</strong> positions.</li>
                                     <li>Particularly interested in AI-native products, Developer Tools, or highly technical B2B SaaS.</li>

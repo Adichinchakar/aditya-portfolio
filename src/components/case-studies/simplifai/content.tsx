@@ -84,6 +84,7 @@ export default function SimplifaiPage() {
                     { value: "42%", label: "faster dev cycles" },
                     { value: "5+", label: "enterprise clients shipped" },
                 ]}
+                contribution="led product design end-to-end — research, workflow redesign, and rollout with engineering."
                 role="Product Design & UX Lead"
                 timeline="2021 – 2023 · B2B SaaS"
                 readTime="8 min read"

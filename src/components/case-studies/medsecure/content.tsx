@@ -105,6 +105,8 @@ export default function MedSecurePage() {
                     { value: "8", label: "languages, fully offline-capable" },
                     { value: "<60s", label: "to pull a full record at the bedside" },
                 ]}
+                badge="Self-initiated concept"
+                contribution="solo concept — research, service design, and every screen. Outcomes are projected, not shipped."
                 role="Lead Product Designer · 0→1 concept"
                 timeline="2023 · Healthcare · India"
                 readTime="6 min read"

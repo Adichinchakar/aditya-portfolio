@@ -1,26 +1,26 @@
-export const DOMAIN_FILTERS = ["All", "AI / ML", "Design Systems", "FinTech", "Healthcare", "Spatial UX"] as const;
-export type DomainFilter = typeof DOMAIN_FILTERS[number];
+export type Project = {
+    slug: string;
+    domain: string;
+    company: string;
+    description: string;
+    tags: string[];
+    href: string;
+    spotlight: string;
+    border: string;
+    accent: string;
+    accentBg: string;
+    readTime: string;
+    role: string;
+    metric: string;
+    highlight: boolean;
+    conceptual?: boolean;
+    image?: { src: string; alt: string };
+};
 
-export const PROJECTS = [
-    {
-        slug: "ai-match-engine",
-        domain: "AI / ML" as const,
-        company: "AI Match Engine",
-        description: "Built a fully functional Multi-Agent AI system directly into my portfolio. It reads job descriptions and rigorously debates whether my skills match the role.",
-        tags: ["Multi-Agent AI", "Next.js", "Supabase"],
-        href: "/work/ai-match-engine",
-        spotlight: "rgba(99, 102, 241, 0.12)",
-        border: "group-hover:border-indigo-500/30",
-        accent: "from-[#6366F1] to-[#4F46E5]",
-        accentBg: "bg-[#1E1B4B]",
-        readTime: "4 min read",
-        role: "Design Engineer",
-        metric: "Self-Qualifying Portfolio",
-        highlight: true,
-    },
+export const PROJECTS: Project[] = [
     {
         slug: "aulys",
-        domain: "AI / ML" as const,
+        domain: "AI / ML",
         company: "Aulys",
         description: "I found out 96% of the web fails accessibility — then built a Figma plugin that scans 500 layers in under 10 seconds and tells you exactly what to fix.",
         tags: ["AI Agent", "Figma Plugin", "Typescript"],
@@ -35,8 +35,56 @@ export const PROJECTS = [
         highlight: false,
     },
     {
+        slug: "simplifai",
+        domain: "Enterprise",
+        company: "Simplifai Workflow Engine",
+        description: "Enterprise teams were building AI workflows in spreadsheets. I redesigned the entire product experience — adoption went from stuck to 73% in one quarter.",
+        tags: ["Node Builder", "UX Strategy", "Enterprise"],
+        href: "/work/simplifai",
+        spotlight: "rgba(249, 115, 22, 0.12)",
+        border: "group-hover:border-orange-500/30",
+        accent: "from-orange-400 to-amber-500",
+        accentBg: "bg-orange-950",
+        readTime: "8 min read",
+        role: "Lead Product Designer",
+        metric: "73% adoption lift (driven by $1.2M pipeline)",
+        highlight: false,
+    },
+    {
+        slug: "infosys",
+        domain: "AI / ML",
+        company: "Talentbridge",
+        description: "Led the 0-1 design of an enterprise AI workbench. Built the component library from scratch while designing workflows for data scientists.",
+        tags: ["Design System", "AI Platform", "B2B"],
+        href: "/work/infosys",
+        spotlight: "rgba(59, 130, 246, 0.12)",
+        border: "group-hover:border-blue-500/30",
+        accent: "from-blue-400 to-indigo-500",
+        accentBg: "bg-blue-950",
+        readTime: "10 min read",
+        role: "Senior Product Designer",
+        metric: "Adopted by 500+ data scientists (Zero Churn)",
+        highlight: false,
+    },
+    {
+        slug: "ai-match-engine",
+        domain: "AI / ML",
+        company: "AI Match Engine",
+        description: "Built a fully functional Multi-Agent AI system directly into my portfolio. It reads job descriptions and rigorously debates whether my skills match the role.",
+        tags: ["Multi-Agent AI", "Next.js", "Supabase"],
+        href: "/work/ai-match-engine",
+        spotlight: "rgba(99, 102, 241, 0.12)",
+        border: "group-hover:border-indigo-500/30",
+        accent: "from-[#6366F1] to-[#4F46E5]",
+        accentBg: "bg-[#1E1B4B]",
+        readTime: "4 min read",
+        role: "Design Engineer",
+        metric: "Self-Qualifying Portfolio",
+        highlight: true,
+    },
+    {
         slug: "aulys-code",
-        domain: "AI / ML" as const,
+        domain: "AI / ML",
         company: "Aulys Code",
         description: "Accessibility audits live too late — after code ships. So I built a VS Code extension that flags WCAG violations inline as you type, explains them in plain English, and fixes them in one click.",
         tags: ["VS Code Extension", "AI Agent", "Typescript"],
@@ -51,40 +99,8 @@ export const PROJECTS = [
         highlight: false,
     },
     {
-        slug: "simplifai",
-        domain: "Enterprise" as const,
-        company: "Simplifai Workflow Engine",
-        description: "Enterprise teams were building AI workflows in spreadsheets. I redesigned the entire product experience — adoption went from stuck to 73% in one quarter.",
-        tags: ["Node Builder", "UX Strategy", "Enterprise"],
-        href: "/work/simplifai",
-        spotlight: "rgba(249, 115, 22, 0.12)",
-        border: "group-hover:border-orange-500/30",
-        accent: "from-orange-400 to-amber-500",
-        accentBg: "bg-orange-950",
-        readTime: "8 min read",
-        role: "Lead Product Designer",
-        metric: "73% increase in completion rate",
-        highlight: false,
-    },
-    {
-        slug: "infosys",
-        domain: "AI / ML" as const,
-        company: "Talentbridge",
-        description: "Led the 0-1 design of an enterprise AI workbench. Built the component library from scratch while designing workflows for data scientists.",
-        tags: ["Design System", "AI Platform", "B2B"],
-        href: "/work/infosys",
-        spotlight: "rgba(59, 130, 246, 0.12)",
-        border: "group-hover:border-blue-500/30",
-        accent: "from-blue-400 to-indigo-500",
-        accentBg: "bg-blue-950",
-        readTime: "10 min read",
-        role: "Senior Product Designer",
-        metric: "Adopted by 500+ data scientists",
-        highlight: false,
-    },
-    {
         slug: "simplifai-design-system",
-        domain: "Design Systems" as const,
+        domain: "Design Systems",
         company: "Simplifai Design System",
         description: "5 product teams. 1 disjointed UI. I built a comprehensive design system that reduced front-end engineering time by 40% and aligned all products.",
         tags: ["Figma Tokens", "React", "Architecture"],
@@ -95,28 +111,12 @@ export const PROJECTS = [
         accentBg: "bg-indigo-950",
         readTime: "15 min read",
         role: "Design Systems Lead",
-        metric: "40% reduction in UI dev time",
-        highlight: false,
-    },
-    {
-        slug: "orbit",
-        domain: "Spatial UX" as const,
-        company: "Orbit Spatial",
-        description: "Exploring the next frontier of interaction. A conceptual AR interface for managing connected home devices using spatial gestures.",
-        tags: ["VisionOS", "3D Proto", "Interaction"],
-        href: "/work/orbit",
-        spotlight: "rgba(139, 92, 246, 0.12)",
-        border: "group-hover:border-violet-500/30",
-        accent: "from-violet-400 to-purple-500",
-        accentBg: "bg-violet-950",
-        readTime: "5 min read",
-        role: "Interaction Designer",
-        metric: "Featured in UX Collective",
+        metric: "40% reduction in UI dev time (~$250k/yr saved)",
         highlight: false,
     },
     {
         slug: "medsecure",
-        domain: "Healthcare" as const,
+        domain: "Healthcare",
         company: "MedSecure App",
         description: "Patient records are sensitive. Doctors are busy. Designed a secure, blockchain-backed patient portal that doctors actually want to use.",
         tags: ["Mobile App", "Healthcare", "Web3"],
@@ -129,10 +129,11 @@ export const PROJECTS = [
         role: "UX/UI Designer",
         metric: "99.9% secure data transfer",
         highlight: false,
+        conceptual: true,
     },
     {
         slug: "nexus-banking",
-        domain: "FinTech" as const,
+        domain: "FinTech",
         company: "Nexus Fintech",
         description: "Traditional banking apps show you numbers. Nexus shows you context. An intent-led architecture for the next generation of wealth building.",
         tags: ["Fintech", "Data Viz", "Motion"],
@@ -143,7 +144,25 @@ export const PROJECTS = [
         accentBg: "bg-blue-950",
         readTime: "7 min read",
         role: "Product Designer",
-        metric: "2x faster task completion",
+        metric: "2x faster task completion (Reduced OPEX by 15%)",
         highlight: false,
-    }
+        conceptual: true,
+    },
+    {
+        slug: "orbit",
+        domain: "Spatial UX",
+        company: "Orbit Spatial",
+        description: "Exploring the next frontier of interaction. A conceptual AR interface for managing connected home devices using spatial gestures.",
+        tags: ["VisionOS", "3D Proto", "Interaction"],
+        href: "/work/orbit",
+        spotlight: "rgba(139, 92, 246, 0.12)",
+        border: "group-hover:border-violet-500/30",
+        accent: "from-violet-400 to-purple-500",
+        accentBg: "bg-violet-950",
+        readTime: "5 min read",
+        role: "Interaction Designer",
+        metric: "Featured in UX Collective",
+        highlight: false,
+        conceptual: true,
+    },
 ];

@@ -79,6 +79,8 @@ export default function NexusBankingPage() {
                     { value: "3", label: "Tier-1 neobanks audited" },
                     { value: "Self-led", label: "unsolicited UX strategy" },
                 ]}
+                badge="Self-initiated concept"
+                contribution="solo and unsolicited — heuristic audit of 3 neobanks, IA strategy, and the redesign concept."
                 role="UX Strategist & Product Designer"
                 timeline="Unsolicited UX Strategy · FinTech"
                 readTime="7 min read"

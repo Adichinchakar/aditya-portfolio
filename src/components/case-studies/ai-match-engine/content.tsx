@@ -22,6 +22,7 @@ export default function AiMatchEnginePage() {
                     { value: "<15s", label: "Analysis Time" },
                     { value: "Live", label: "Production Deployment" },
                 ]}
+                contribution="end-to-end — agent architecture, prompt design, UI, and the production Next.js code."
                 role="Design Engineer"
                 timeline="3 Days"
                 readTime="4 min read"
@@ -115,7 +116,45 @@ export default function AiMatchEnginePage() {
                     </div>
                 </motion.section>
 
-                {/* 4. Outcome */}
+                {/* 4. Designing for AI Failure */}
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="mb-32"
+                >
+                    <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-8 text-zinc-900">
+                        Designing for AI Failure
+                    </h2>
+                    <div className="prose prose-zinc prose-lg max-w-3xl mb-12">
+                        <p>
+                            AI is probabilistic—meaning hallucinations and edge cases are inevitable. I design for failure states first.
+                            The Engine includes a strict <strong>Confidence Threshold (95%)</strong>. If the Critic agent detects ambiguity or the score falls below the threshold, the system gracefully degrades to a Human-in-the-Loop (HITL) fallback: <em>"This JD is complex. Let's schedule a call to clarify."</em>
+                        </p>
+                    </div>
+                </motion.section>
+
+                {/* 5. The Data Flywheel */}
+                <motion.section
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="mb-32"
+                >
+                    <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-8 text-zinc-900">
+                        The Data Flywheel
+                    </h2>
+                    <div className="prose prose-zinc prose-lg max-w-3xl">
+                        <p>
+                            A true enterprise AI product gets better with use. I built a data architecture that captures implicit and explicit feedback. When recruiters provide a "Thumbs Up/Down" on the generated match synthesis, that signal is written back to Supabase. This creates a <strong>Data Flywheel</strong>, allowing me to fine-tune the system's accuracy over time while simultaneously tracking market demand for my skills.
+                        </p>
+                        <p className="text-sm text-zinc-500 italic mt-4">
+                            * Note on Multimodal Readiness: The entire agentic backend is decoupled from the Next.js frontend, meaning this engine is ready to plug into Voice (e.g. OpenAI Realtime API) or ambient interfaces when the time comes.
+                        </p>
+                    </div>
+                </motion.section>
+
+                {/* 6. Outcome */}
                 <motion.section
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

@@ -36,7 +36,7 @@ export function Contact() {
                 >
                     {/* Heading */}
                     <TextReveal tag="h2" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none">
-                        Let's build something great.
+                        Hiring a senior designer who ships?
                     </TextReveal>
 
                     {/* Sub text */}
@@ -47,7 +47,7 @@ export function Contact() {
                         viewport={{ once: true }}
                         className="text-base md:text-lg text-zinc-500 max-w-xl font-medium leading-relaxed"
                     >
-                        Available August 2026 · Open to remote Lead, Staff Designer, Head of Design, and Founding Designer roles worldwide. If you're building something ambitious and care about craft, I'd love to talk.
+                        Interviewing now for Lead, Staff, and Founding Designer roles · joining from August 2026, remote-friendly worldwide. If you're building something ambitious and care about craft, I'd love to talk.
                     </motion.p>
 
                     {/* CTA Button */}

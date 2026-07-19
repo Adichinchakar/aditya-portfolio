@@ -171,10 +171,17 @@ export function AgentConsole({ logs, onAbort }: AgentConsoleProps) {
           <p className="text-[11px] text-zinc-500 leading-snug line-clamp-2">
             {agents.a.lastMsg}
           </p>
-          <div className={`mt-2.5 text-[9px] font-mono font-bold uppercase tracking-wider ${
-            agents.a.state === 'active' ? 'text-indigo-500' : agents.a.state === 'done' ? 'text-emerald-500' : 'text-zinc-300'
-          }`}>
-            {agents.a.label}
+          <div className="mt-2.5 flex items-center justify-between">
+            <div className={`text-[9px] font-mono font-bold uppercase tracking-wider ${
+              agents.a.state === 'active' ? 'text-indigo-500' : agents.a.state === 'done' ? 'text-emerald-500' : 'text-zinc-300'
+            }`}>
+              {agents.a.label}
+            </div>
+            <div className={`text-[8px] font-mono font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-sm ${
+              agents.a.state === 'done' ? 'bg-emerald-100/50 text-emerald-600' : 'bg-zinc-100 text-zinc-400'
+            }`}>
+              Conf: &gt;95%
+            </div>
           </div>
         </div>
 
@@ -206,10 +213,17 @@ export function AgentConsole({ logs, onAbort }: AgentConsoleProps) {
           <p className="text-[11px] text-zinc-500 leading-snug line-clamp-2">
             {agents.b.lastMsg}
           </p>
-          <div className={`mt-2.5 text-[9px] font-mono font-bold uppercase tracking-wider ${
-            agents.b.state === 'active' ? 'text-violet-500' : agents.b.state === 'done' ? 'text-emerald-500' : 'text-zinc-300'
-          }`}>
-            {agents.b.label}
+          <div className="mt-2.5 flex items-center justify-between">
+            <div className={`text-[9px] font-mono font-bold uppercase tracking-wider ${
+              agents.b.state === 'active' ? 'text-violet-500' : agents.b.state === 'done' ? 'text-emerald-500' : 'text-zinc-300'
+            }`}>
+              {agents.b.label}
+            </div>
+            <div className={`text-[8px] font-mono font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-sm ${
+              agents.b.state === 'active' ? 'bg-rose-100/50 text-rose-600' : 'bg-zinc-100 text-zinc-400'
+            }`}>
+              HITL Fallback: Ready
+            </div>
           </div>
         </div>
       </div>

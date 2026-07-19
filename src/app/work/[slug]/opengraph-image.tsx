@@ -43,7 +43,7 @@ const CASE_STUDIES: Record<string, {
         title: "Medical Records Platform",
         company: "MedSecure",
         category: "Blockchain · Healthcare · ABDM",
-        metric: "34% fewer medical errors in pilot",
+        metric: "Concept · projected impact",
         accent: "#3b82f6",
     },
     "nexus-banking": {

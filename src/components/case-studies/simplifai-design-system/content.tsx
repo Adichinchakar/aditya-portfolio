@@ -81,6 +81,7 @@ export default function SimplifaiDesignSystemPage() {
                     { value: "5→1", label: "teams on one shared library" },
                     { value: "60+", label: "components, zero hard forks" },
                 ]}
+                contribution="built the system solo — token architecture, 60+ components, documentation — then drove adoption across 5 teams."
                 role="Design Systems Lead"
                 timeline="2022 · Enterprise SaaS"
                 readTime="15 min read"

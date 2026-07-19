@@ -25,6 +25,10 @@ export interface CaseStudyTldrProps {
     spotlight?: string;
     /** "light" for light pages, "dark" for dark-themed studies (e.g. Infosys). */
     variant?: "light" | "dark";
+    /** One explicit line of personal ownership, e.g. "My part: end-to-end — research, IA, UI, and the production TypeScript." */
+    contribution?: string;
+    /** Small pill above the hook, e.g. "Self-initiated concept". */
+    badge?: string;
 }
 
 export function CaseStudyTldr({
@@ -36,6 +40,8 @@ export function CaseStudyTldr({
     accentClass,
     spotlight = "rgba(0,0,0,0.05)",
     variant = "light",
+    contribution,
+    badge,
 }: CaseStudyTldrProps) {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -84,9 +90,21 @@ export function CaseStudyTldr({
                     />
 
                     <div className="relative z-10">
-                        <span className={cn("text-xs font-mono font-bold uppercase tracking-[0.2em]", t.label)}>
-                            The short version
-                        </span>
+                        <div className="flex flex-wrap items-center gap-3">
+                            <span className={cn("text-xs font-mono font-bold uppercase tracking-[0.2em]", t.label)}>
+                                The short version
+                            </span>
+                            {badge && (
+                                <span className={cn(
+                                    "px-2 py-0.5 rounded-full border text-[11px] font-bold uppercase tracking-wider",
+                                    dark
+                                        ? "border-amber-400/40 bg-amber-400/10 text-amber-300"
+                                        : "border-amber-300 bg-amber-50 text-amber-800"
+                                )}>
+                                    {badge}
+                                </span>
+                            )}
+                        </div>
 
                         <p className={cn("mt-4 text-2xl sm:text-3xl font-semibold leading-snug tracking-tight max-w-3xl", t.hook)}>
                             {hook}
@@ -102,6 +120,13 @@ export function CaseStudyTldr({
                                 </div>
                             ))}
                         </div>
+
+                        {contribution && (
+                            <p className={cn("mt-6 text-sm leading-relaxed max-w-2xl", t.metaText)}>
+                                <span className={cn("font-semibold", t.metaRole)}>My part:</span>{" "}
+                                {contribution}
+                            </p>
+                        )}
 
                         <div className={cn("mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm", t.metaText)}>
                             <span className={cn("font-semibold", t.metaRole)}>{role}</span>

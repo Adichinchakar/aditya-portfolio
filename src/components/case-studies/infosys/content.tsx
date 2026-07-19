@@ -58,6 +58,7 @@ export default function InfosysPage() {
                     { value: "2×", label: "teacher trust in AI output" },
                     { value: "0 forks", label: "one system across 5 teams" },
                 ]}
+                contribution="design lead for the assessment workbench — trust patterns, information architecture, and the shared component library across 5 product teams."
                 role="Senior Product Designer"
                 timeline="Infosys × Imagine Learning"
                 readTime="10 min read"

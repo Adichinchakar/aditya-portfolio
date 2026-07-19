@@ -1,15 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "@/lib/motion";
-import { cn } from "@/lib/utils";
+import { motion } from "@/lib/motion";
 import { TextReveal } from "@/components/ui/text-reveal";
-import { PROJECTS, DomainFilter, DOMAIN_FILTERS } from "@/data/projects";
+import { PROJECTS } from "@/data/projects";
 import { ProjectCard } from "@/components/work/project-card";
 
 export default function WorkIndex() {
-    const [activeFilter, setActiveFilter] = useState<DomainFilter>("All");
-    const filtered = activeFilter === "All" ? PROJECTS : PROJECTS.filter(p => p.domain === activeFilter);
+    const shipped = PROJECTS.filter((p) => !p.conceptual);
+    const explorations = PROJECTS.filter((p) => p.conceptual);
 
     return (
         <div className="min-h-screen bg-zinc-50 pt-32 pb-24 relative overflow-hidden">
@@ -25,7 +23,7 @@ export default function WorkIndex() {
                         Selected Work
                     </TextReveal>
                     <span className="font-mono text-zinc-600 font-bold hidden sm:block tracking-widest text-sm">
-                        (0{filtered.length})
+                        (0{shipped.length})
                     </span>
                 </div>
 
@@ -33,51 +31,33 @@ export default function WorkIndex() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.05 }}
-                    className="text-lg text-zinc-500 leading-relaxed font-medium mb-8 max-w-2xl"
+                    className="text-lg text-zinc-600 leading-relaxed font-medium mb-12 max-w-2xl"
                 >
-                    Products, tools, and strategic case studies — spanning design systems, AI tooling, healthcare, and fintech.
+                    Real products with real outcomes — shipped across AI tooling, enterprise SaaS, and design systems.
                 </motion.p>
 
-                {/* Domain filter tabs */}
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
-                    className="flex flex-wrap gap-2 mb-10"
-                    role="group"
-                    aria-label="Filter by domain"
-                >
-                    {DOMAIN_FILTERS.map((filter) => (
-                        <button
-                            key={filter}
-                            onClick={() => setActiveFilter(filter)}
-                            aria-pressed={activeFilter === filter}
-                            className={cn(
-                                "px-4 py-1.5 rounded-full text-sm font-semibold border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
-                                activeFilter === filter
-                                    ? "bg-zinc-900 text-white border-zinc-900"
-                                    : "bg-white text-zinc-600 border-zinc-200 hover:border-zinc-400 hover:text-zinc-900"
-                            )}
-                        >
-                            {filter}
-                        </button>
+                <div className="flex flex-col gap-8">
+                    {shipped.map((project, index) => (
+                        <ProjectCard key={project.slug} project={project} index={index} />
                     ))}
-                </motion.div>
+                </div>
 
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeFilter}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.15 }}
-                        className="flex flex-col gap-8"
-                    >
-                        {filtered.map((project, index) => (
+                {/* Explorations — self-initiated concept work */}
+                <div className="mt-24">
+                    <div className="border-b border-zinc-200/60 pb-6 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-black tracking-tighter text-zinc-900">
+                            Explorations
+                        </h2>
+                    </div>
+                    <p className="text-base text-zinc-600 leading-relaxed font-medium mb-10 max-w-2xl">
+                        Self-initiated concept work — strategy and interaction studies, not shipped products.
+                    </p>
+                    <div className="flex flex-col gap-8">
+                        {explorations.map((project, index) => (
                             <ProjectCard key={project.slug} project={project} index={index} />
                         ))}
-                    </motion.div>
-                </AnimatePresence>
+                    </div>
+                </div>
             </div>
         </div>
     );

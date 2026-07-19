@@ -6,7 +6,7 @@ import { ProjectCard } from "@/components/work/project-card";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export function SelectedWork({ title = "Case Studies", excludeHref }: { title?: string; excludeHref?: string }) {
+export function SelectedWork({ title = "Selected Work", excludeHref }: { title?: string; excludeHref?: string }) {
     // Show top 4 projects by default, unless excluded
     const displayedWorks = excludeHref 
         ? PROJECTS.filter(w => w.href !== excludeHref).slice(0, 4) 
@@ -25,6 +25,10 @@ export function SelectedWork({ title = "Case Studies", excludeHref }: { title?: 
                     </TextReveal>
                     <span className="font-mono text-zinc-600 font-bold hidden sm:block tracking-widest text-sm">(0{displayedWorks.length})</span>
                 </div>
+
+                <p className="text-lg text-zinc-600 leading-relaxed font-medium max-w-2xl -mt-4">
+                    Real products, real outcomes — six shipped case studies, four up front.
+                </p>
 
                 <div className="flex flex-col gap-8">
                     {displayedWorks.map((project, index) => (
